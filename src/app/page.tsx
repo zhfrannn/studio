@@ -5,6 +5,7 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
+  CardFooter,
   CardTitle,
 } from '@/components/ui/card';
 import StoryCard from '@/components/story-card';
@@ -351,7 +352,7 @@ export default function Home() {
         </div>
       </MotionWrapper>
 
-      <MotionWrapper as="section" className="container mx-auto px-4">
+      <MotionWrapper as="section" id="share-story" className="container mx-auto px-4">
         <div className="mx-auto mb-12 max-w-3xl space-y-2 text-center">
           <h2 className="font-headline text-3xl md:text-4xl">
             Bagikan Ceritamu

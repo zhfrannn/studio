@@ -1,0 +1,262 @@
+'use client';
+
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Plus,
+  X,
+  MessageCircle,
+  Share2,
+  BookOpen,
+  Bot,
+  Send,
+  User,
+  Loader2,
+} from 'lucide-react';
+import { Button } from './ui/button';
+import Link from 'next/link';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from './ui/card';
+import { Input } from './ui/input';
+import { ScrollArea } from './ui/scroll-area';
+import { askSiagaBot, AskSiagaBotOutput } from '@/ai/flows/ask-siaga-bot';
+import { cn } from '@/lib/utils';
+import MotionWrapper from './motion-wrapper';
+
+type Message = {
+  role: 'user' | 'bot';
+  text: string;
+  storySuggestion?: AskSiagaBotOutput['storySuggestion'];
+};
+
+export default function ChatbotFab() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isChatOpen, setIsChatOpen] = useState(false);
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [input, setInput] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const openChat = () => {
+    setIsOpen(false);
+    setIsChatOpen(true);
+    if (messages.length === 0) {
+      setMessages([
+        {
+          role: 'bot',
+          text: 'Halo! Saya Siaga-Bot, asisten AI Anda untuk edukasi kebencanaan. Apa yang ingin Anda ketahui tentang kesiapsiagaan bencana, kearifan lokal, atau perdamaian di Aceh?',
+        },
+      ]);
+    }
+  };
+  const closeChat = () => setIsChatOpen(false);
+
+  const handleSend = async () => {
+    if (!input.trim()) return;
+
+    const userMessage: Message = { role: 'user', text: input };
+    setMessages(prev => [...prev, userMessage]);
+    setInput('');
+    setIsLoading(true);
+
+    try {
+      const botResponse = await askSiagaBot({ question: input });
+      const botMessage: Message = {
+        role: 'bot',
+        text: botResponse.answer,
+        storySuggestion: botResponse.storySuggestion,
+      };
+      setMessages(prev => [...prev, botMessage]);
+    } catch (error) {
+      const errorMessage: Message = {
+        role: 'bot',
+        text: 'Maaf, terjadi kesalahan saat memproses permintaan Anda. Silakan coba lagi.',
+      };
+      setMessages(prev => [...prev, errorMessage]);
+      console.error('Error asking Siaga-Bot:', error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  return (
+    <>
+      <div className="fixed bottom-6 right-6 z-50">
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              className="mb-4 flex flex-col items-end gap-3"
+            >
+              <Button
+                variant="secondary"
+                className="h-auto w-auto rounded-full p-4 shadow-lg"
+                onClick={openChat}
+              >
+                <Bot className="mr-2" />
+                Tanya Siaga-Bot
+              </Button>
+              <Button
+                variant="secondary"
+                className="h-auto w-auto rounded-full p-4 shadow-lg"
+                asChild
+              >
+                <Link href="/explore">
+                  <BookOpen className="mr-2" /> Jelajahi Cerita
+                </Link>
+              </Button>
+              <Button
+                variant="default"
+                className="h-auto w-auto rounded-full bg-blue-500 p-4 text-white shadow-lg hover:bg-blue-600"
+                asChild
+              >
+                <Link href="/#share-story">
+                  <Share2 className="mr-2" /> Bagikan Cerita
+                </Link>
+              </Button>
+            </motion.div>
+          )}
+        </AnimatePresence>
+        <Button
+          onClick={toggleMenu}
+          className="h-16 w-16 rounded-full bg-primary shadow-lg"
+        >
+          <AnimatePresence initial={false}>
+            <motion.div
+              key={isOpen ? 'x' : 'plus'}
+              initial={{ rotate: -90, opacity: 0, scale: 0.5 }}
+              animate={{ rotate: 0, opacity: 1, scale: 1 }}
+              exit={{ rotate: 90, opacity: 0, scale: 0.5 }}
+              transition={{ duration: 0.2 }}
+            >
+              {isOpen ? <X size={28} /> : <Plus size={28} />}
+            </motion.div>
+          </AnimatePresence>
+        </Button>
+      </div>
+
+      <AnimatePresence>
+        {isChatOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: 50, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 50, scale: 0.9 }}
+            className="fixed bottom-6 right-6 z-40 sm:bottom-8 sm:right-8"
+          >
+            <Card className="flex h-[70vh] w-[90vw] flex-col shadow-2xl sm:w-[400px]">
+              <CardHeader className="flex flex-row items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <Bot className="h-8 w-8 text-primary" />
+                  <div>
+                    <CardTitle>Siaga-Bot</CardTitle>
+                    <CardDescription>Asisten Kebencanaan Anda</CardDescription>
+                  </div>
+                </div>
+                <Button variant="ghost" size="icon" onClick={closeChat}>
+                  <X className="h-4 w-4" />
+                </Button>
+              </CardHeader>
+              <CardContent className="flex-grow overflow-hidden">
+                <ScrollArea className="h-full pr-4">
+                  <div className="space-y-4">
+                    {messages.map((message, index) => (
+                      <div
+                        key={index}
+                        className={cn(
+                          'flex items-start gap-3',
+                          message.role === 'user'
+                            ? 'flex-row-reverse'
+                            : 'flex-row'
+                        )}
+                      >
+                        <span
+                          className={cn(
+                            'flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full',
+                            message.role === 'user'
+                              ? 'bg-primary text-primary-foreground'
+                              : 'bg-muted'
+                          )}
+                        >
+                          {message.role === 'user' ? (
+                            <User size={16} />
+                          ) : (
+                            <Bot size={16} />
+                          )}
+                        </span>
+                        <div
+                          className={cn(
+                            'max-w-[80%] rounded-lg p-3 text-sm',
+                            message.role === 'user'
+                              ? 'bg-primary text-primary-foreground'
+                              : 'bg-muted'
+                          )}
+                        >
+                          <p className="whitespace-pre-wrap">{message.text}</p>
+                          {message.storySuggestion && (
+                            <Card className="mt-3">
+                              <CardHeader className="p-3">
+                                <CardDescription>
+                                  Baca cerita terkait:
+                                </CardDescription>
+                                <CardTitle className="text-base">
+                                  <Link
+                                    href={`/story/${message.storySuggestion.id}`}
+                                    className="hover:underline"
+                                    onClick={() => setIsChatOpen(false)}
+                                  >
+                                    {message.storySuggestion.title}
+                                  </Link>
+                                </CardTitle>
+                              </CardHeader>
+                            </Card>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                    {isLoading && (
+                      <div className="flex flex-row items-start gap-3">
+                         <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-muted">
+                            <Bot size={16} />
+                        </span>
+                        <div className="max-w-[80%] rounded-lg bg-muted p-3 text-sm">
+                           <Loader2 className="h-5 w-5 animate-spin" />
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </ScrollArea>
+              </CardContent>
+              <CardFooter>
+                <form
+                  onSubmit={e => {
+                    e.preventDefault();
+                    handleSend();
+                  }}
+                  className="flex w-full items-center gap-2"
+                >
+                  <Input
+                    value={input}
+                    onChange={e => setInput(e.target.value)}
+                    placeholder="Tanya tentang bencana..."
+                    disabled={isLoading}
+                  />
+                  <Button type="submit" size="icon" disabled={isLoading}>
+                    <Send className="h-4 w-4" />
+                  </Button>
+                </form>
+              </CardFooter>
+            </Card>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
+}

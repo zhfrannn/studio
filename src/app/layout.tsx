@@ -4,6 +4,7 @@ import { Toaster } from '@/components/ui/toaster';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import { ThemeProvider } from '@/components/theme-provider';
+import ChatbotFab from '@/components/chatbot-fab';
 
 export const metadata: Metadata = {
   title: 'Aceh Voice',
@@ -42,6 +43,7 @@ export default function RootLayout({
             <main className="flex-grow">{children}</main>
             <Footer />
           </div>
+          <ChatbotFab />
           <Toaster />
         </ThemeProvider>
       </body>
