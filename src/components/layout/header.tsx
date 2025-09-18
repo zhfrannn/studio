@@ -2,8 +2,8 @@
 
 import Link from 'next/link';
 import WaveMascot from '@/components/icons/wave-mascot';
-import ShareStoryModal from '../share-story-modal';
 import ThemeToggle from './theme-toggle';
+import { Button } from '../ui/button';
 
 const Header = () => {
   return (
@@ -30,7 +30,9 @@ const Header = () => {
           </Link>
         </nav>
         <div className="flex flex-1 items-center justify-end gap-4">
-          <ShareStoryModal />
+           <Button asChild>
+              <Link href="/share-story">Bagikan Ceritamu</Link>
+           </Button>
           <ThemeToggle />
         </div>
       </div>

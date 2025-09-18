@@ -118,7 +118,7 @@ export default function ChatbotFab() {
                 className="h-auto w-auto rounded-full bg-blue-500 p-4 text-white shadow-lg hover:bg-blue-600"
                 asChild
               >
-                <Link href="/#share-story">
+                <Link href="/share-story">
                   <Share2 className="mr-2" /> Bagikan Cerita
                 </Link>
               </Button>

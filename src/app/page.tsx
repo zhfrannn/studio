@@ -404,8 +404,10 @@ export default function Home() {
             Pengalaman Anda sangat berarti. Bantu membangun memori kolektif dan
             ketahanan Aceh.
           </p>
+           <Button asChild size="lg">
+              <Link href="/share-story">Mulai Berbagi Sekarang</Link>
+            </Button>
         </div>
-        <ShareStoryForm />
       </MotionWrapper>
 
       <MotionWrapper as="section" className="container mx-auto px-4 text-center">

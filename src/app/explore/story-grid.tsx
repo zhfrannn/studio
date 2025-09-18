@@ -167,7 +167,7 @@ export default function StoryGrid({ allStories }: StoryGridProps) {
                 Help preserve Aceh's collective memory by sharing your experience.
               </p>
               <Button asChild>
-                <Link href="/#share-story">
+                <Link href="/share-story">
                   <Share className="mr-2 h-4 w-4" />
                   Contribute
                 </Link>
