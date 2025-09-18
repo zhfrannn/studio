@@ -167,6 +167,49 @@ export default function Home() {
           </MotionWrapper>
         </div>
       </MotionWrapper>
+      
+      <MotionWrapper as="section" className="container mx-auto px-4">
+        <div className="overflow-hidden rounded-xl border bg-card shadow-lg">
+          <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
+            <div className="space-y-6 p-8 md:p-12">
+              <h2 className="font-headline text-3xl md:text-4xl">Mengapa Ini Penting</h2>
+              <p className="text-muted-foreground">
+                "Suara Samudra" bukan hanya tentang SOP bencana. Ini tentang melestarikan memori kolektif, memperkuat rasa memiliki, dan membangun ketahanan serta komunikasi perdamaian yang relevan dengan konteks di Aceh pasca-tsunami dan pasca-konflik.
+              </p>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-blue-500" />
+                  <p className="text-muted-foreground">
+                    Melawan misinformasi melalui narasi lokal yang dikurasi dan diperiksa faktanya
+                  </p>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-blue-500" />
+                  <p className="text-muted-foreground">
+                    Mengintegrasikan kearifan lokal (Smong, gotong royong) dengan ilmu bencana modern
+                  </p>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-blue-500" />
+                  <p className="text-muted-foreground">
+                    Mendukung penyembuhan melalui refleksi terpandu dan dialog komunitas
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div className="relative min-h-[300px] md:min-h-full">
+              <Image
+                src="https://picsum.photos/seed/why-matters/800/600"
+                alt="Community gathering discussing disaster preparedness"
+                fill
+                className="object-cover"
+                data-ai-hint="community gathering"
+              />
+            </div>
+          </div>
+        </div>
+      </MotionWrapper>
+
 
       <MotionWrapper as="section" className="container mx-auto space-y-12 px-4">
         <div className="mx-auto max-w-2xl space-y-2 text-center">
