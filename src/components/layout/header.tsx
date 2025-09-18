@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import WaveMascot from '@/components/icons/wave-mascot';
 import ShareStoryModal from '../share-story-modal';
+import ThemeToggle from './theme-toggle';
 
 const Header = () => {
   return (
@@ -25,6 +26,7 @@ const Header = () => {
         </nav>
         <div className="flex flex-1 items-center justify-end gap-4">
           <ShareStoryModal />
+          <ThemeToggle />
         </div>
       </div>
     </header>

@@ -17,43 +17,64 @@ export default function Home() {
 
   return (
     <div className="space-y-16 pb-24 md:space-y-24">
-      <section className="container mx-auto px-4 pt-12 md:pt-20">
-        <div className="grid items-center gap-8 md:grid-cols-2">
-          <div className="space-y-4">
-            <h1 className="font-headline text-4xl tracking-tight text-foreground md:text-6xl">
-              Suara Ketahanan, Gema Kebijaksanaan
-            </h1>
-            <p className="text-lg text-muted-foreground">
-              Menjelajahi kearifan lokal, kesiapsiagaan bencana, dan perdamaian
-              di Aceh melalui cerita yang dihidupkan oleh teknologi AI.
-            </p>
-            <div className="flex gap-4 pt-4">
-              <Button asChild size="lg">
-                <Link href="/explore">
-                  Jelajahi Cerita <ArrowRight />
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg">
-                <Link href="/eduboard">Tentang EduBoard</Link>
-              </Button>
+      <section className="relative overflow-hidden bg-background pt-20 md:pt-32">
+        <div className="container mx-auto px-4">
+          <div className="relative z-10 grid items-center gap-12 pb-20 text-center md:grid-cols-2 md:pb-32 md:text-left">
+            <div className="space-y-6">
+              <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground md:text-6xl">
+                Suara Ketahanan, Gema Kebijaksanaan
+              </h1>
+              <p className="text-lg text-muted-foreground md:text-xl">
+                Menjelajahi kearifan lokal, kesiapsiagaan bencana, dan perdamaian
+                di Aceh melalui cerita yang dihidupkan oleh teknologi AI.
+              </p>
+              <div className="flex flex-col gap-4 pt-4 sm:flex-row sm:justify-center md:justify-start">
+                <Button asChild size="lg">
+                  <Link href="/explore">
+                    Jelajahi Cerita <ArrowRight />
+                  </Link>
+                </Button>
+                <Button asChild variant="secondary" size="lg">
+                  <Link href="/eduboard">Tentang EduBoard</Link>
+                </Button>
+              </div>
+            </div>
+            <div className="relative mx-auto h-[300px] w-[300px] md:h-[400px] md:w-[400px]">
+              <Image
+                src="https://picsum.photos/seed/hero-1/400/400"
+                alt="Floating island with a tree"
+                width={400}
+                height={400}
+                className="animate-float rounded-full object-cover shadow-2xl"
+                data-ai-hint="floating island"
+              />
+               <Image
+                src="https://picsum.photos/seed/hero-2/150/150"
+                alt="Small floating rock"
+                width={150}
+                height={150}
+                className="absolute -bottom-10 -right-10 hidden animate-float-delay-1 rounded-full object-cover shadow-lg lg:block"
+                 data-ai-hint="floating rock"
+              />
+               <Image
+                src="https://picsum.photos/seed/hero-3/100/100"
+                alt="Another small floating rock"
+                width={100}
+                height={100}
+                className="absolute -top-10 -left-10 hidden animate-float-delay-2 rounded-full object-cover shadow-md lg:block"
+                data-ai-hint="small rock"
+              />
             </div>
           </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-xl shadow-2xl">
+        </div>
+        <div className="absolute inset-0 z-0 opacity-10 dark:opacity-20">
             <Image
-              src={featuredStory.media.featuredImage}
-              alt={featuredStory.title}
+              src="https://picsum.photos/seed/bg/1920/1080"
+              alt="Abstract background"
               fill
               className="object-cover"
-              data-ai-hint={featuredStory.media.featuredImageHint}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-            <div className="absolute bottom-0 left-0 p-6">
-              <h3 className="font-headline text-2xl text-white">
-                {featuredStory.title}
-              </h3>
-              <p className="text-white/80">{featuredStory.author}</p>
-            </div>
-          </div>
+              data-ai-hint="abstract waves"
+              />
         </div>
       </section>
 
