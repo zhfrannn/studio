@@ -11,9 +11,27 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { Label } from '@/components/ui/label';
-import { Switch } from '@/components/ui/switch';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from '@/components/ui/pagination';
+import { Map, MapPin, Search, Plus, Share } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
+import Link from 'next/link';
+import { Card } from '@/components/ui/card';
 
 interface StoryGridProps {
   allStories: Story[];
@@ -24,84 +42,183 @@ const allThemes: StoryTheme[] = [
   'Local Wisdom',
   'Peacebuilding',
 ];
+const allLocations = [...new Set(stories.map(s => s.location.name))];
+const ITEMS_PER_PAGE = 5; // 5 stories + 1 share card = 6 items per row
 
 export default function StoryGrid({ allStories }: StoryGridProps) {
   const [selectedTheme, setSelectedTheme] = useState<string>('all');
-  const [mediaFilters, setMediaFilters] = useState({
-    video: false,
-    comic: false,
-    quiz: false,
-  });
+  const [selectedLocation, setSelectedLocation] = useState<string>('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
 
   const filteredStories = allStories.filter(story => {
-    if (selectedTheme !== 'all' && !story.aiThemes.includes(selectedTheme as StoryTheme)) {
-      return false;
-    }
-    return true;
+    const themeMatch =
+      selectedTheme === 'all' || story.aiThemes.includes(selectedTheme as StoryTheme);
+    const locationMatch =
+      selectedLocation === 'all' || story.location.name === selectedLocation;
+    const searchMatch =
+      searchTerm.trim() === '' ||
+      story.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      story.summary.toLowerCase().includes(searchTerm.toLowerCase());
+    return themeMatch && locationMatch && searchMatch;
   });
+
+  const totalPages = Math.ceil(filteredStories.length / ITEMS_PER_PAGE);
+  const paginatedStories = filteredStories.slice(
+    (currentPage - 1) * ITEMS_PER_PAGE,
+    currentPage * ITEMS_PER_PAGE
+  );
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    window.scrollTo(0, 0); // Scroll to top on page change
+  };
 
   return (
     <div className="space-y-8">
-      <div className="grid items-start gap-8 lg:grid-cols-3">
-        <div className="h-full overflow-hidden rounded-xl border shadow-lg lg:col-span-1">
-          <InteractiveMap stories={allStories} />
-        </div>
-        <div className="rounded-xl border bg-card p-6 lg:col-span-2">
-          <h3 className="mb-4 font-headline text-lg">Filter Cerita</h3>
-          <div className="grid items-center gap-4 md:grid-cols-2">
-            <div>
-              <Label htmlFor="theme-filter">Filter berdasarkan Tema</Label>
-              <Select value={selectedTheme} onValueChange={setSelectedTheme}>
-                <SelectTrigger id="theme-filter" className="w-full">
-                  <SelectValue placeholder="Semua Tema" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">Semua Tema</SelectItem>
-                  {allThemes.map(theme => (
-                    <SelectItem key={theme} value={theme}>
-                      {theme}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
-            <div className="space-y-2">
-              <Label>Filter berdasarkan Media</Label>
-              <div className="flex items-center gap-4">
-                <div className="flex items-center space-x-2">
-                  <Switch id="video-filter" disabled />
-                  <Label htmlFor="video-filter" className="text-muted-foreground">Video</Label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Switch id="comic-filter" disabled />
-                  <Label htmlFor="comic-filter" className="text-muted-foreground">Komik</Label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Switch id="quiz-filter" disabled />
-                  <Label htmlFor="quiz-filter" className="text-muted-foreground">Kuis</Label>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      {/* Filters */}
+      <div className="mb-8 flex flex-wrap items-center justify-center gap-4 rounded-lg border bg-card p-4 shadow-sm">
+        <Select value={selectedTheme} onValueChange={setSelectedTheme}>
+          <SelectTrigger className="w-full sm:w-auto sm:min-w-[180px]">
+            <SelectValue placeholder="All Story Types" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">All Story Types</SelectItem>
+            {allThemes.map(theme => (
+              <SelectItem key={theme} value={theme}>
+                {theme}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+        <Select value={selectedLocation} onValueChange={setSelectedLocation}>
+          <SelectTrigger className="w-full sm:w-auto sm:min-w-[180px]">
+            <SelectValue placeholder="All Locations" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">All Locations</SelectItem>
+            {allLocations.map(loc => (
+              <SelectItem key={loc} value={loc}>
+                {loc}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+        <Input
+          type="text"
+          placeholder="Search stories..."
+          className="w-full sm:w-auto sm:flex-grow"
+          value={searchTerm}
+          onChange={e => setSearchTerm(e.target.value)}
+        />
+        <Button className="w-full sm:w-auto">
+          <Search className="mr-2 h-4 w-4" />
+          Search
+        </Button>
       </div>
 
+      {/* Story Map */}
+      <Accordion type="single" collapsible className="w-full">
+        <AccordionItem value="item-1" className="rounded-lg border">
+          <AccordionTrigger className="rounded-lg bg-card px-6 py-4 font-headline text-lg hover:no-underline">
+            <div className="flex items-center gap-2">
+              <MapPin className="h-5 w-5 text-primary" /> Story Map
+            </div>
+          </AccordionTrigger>
+          <AccordionContent className="border-t">
+            <div className="h-[500px] w-full">
+              <InteractiveMap stories={allStories} />
+            </div>
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
+
+      {/* Story Grid */}
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <AnimatePresence>
-          {filteredStories.map(story => (
+          {paginatedStories.map((story, i) => (
             <motion.div
               key={story.id}
               layout
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.3, delay: i * 0.05 }}
             >
               <StoryCard story={story} />
             </motion.div>
           ))}
+           {currentPage === totalPages && (
+             <motion.div
+              layout
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.3, delay: paginatedStories.length * 0.05 }}
+            >
+            <Card className="flex h-full flex-col items-center justify-center rounded-xl border-2 border-dashed bg-transparent p-6 text-center transition-all hover:border-primary hover:bg-muted/50">
+              <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-muted">
+                <Plus className="h-8 w-8 text-muted-foreground" />
+              </div>
+              <h3 className="mb-2 font-headline text-xl">Share Your Story</h3>
+              <p className="mb-4 text-sm text-muted-foreground">
+                Help preserve Aceh's collective memory by sharing your experience.
+              </p>
+              <Button asChild>
+                <Link href="/#share-story">
+                  <Share className="mr-2 h-4 w-4" />
+                  Contribute
+                </Link>
+              </Button>
+            </Card>
+             </motion.div>
+           )}
         </AnimatePresence>
       </div>
+
+       {/* Pagination */}
+      {totalPages > 1 && (
+        <Pagination>
+          <PaginationContent>
+            <PaginationItem>
+              <PaginationPrevious
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (currentPage > 1) handlePageChange(currentPage - 1);
+                }}
+                aria-disabled={currentPage === 1}
+                className={currentPage === 1 ? 'pointer-events-none opacity-50' : ''}
+              />
+            </PaginationItem>
+            {[...Array(totalPages)].map((_, i) => (
+              <PaginationItem key={i}>
+                <PaginationLink
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handlePageChange(i + 1);
+                  }}
+                  isActive={currentPage === i + 1}
+                >
+                  {i + 1}
+                </PaginationLink>
+              </PaginationItem>
+            ))}
+            <PaginationItem>
+              <PaginationNext
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (currentPage < totalPages) handlePageChange(currentPage + 1);
+                }}
+                aria-disabled={currentPage === totalPages}
+                className={currentPage === totalPages ? 'pointer-events-none opacity-50' : ''}
+              />
+            </PaginationItem>
+          </PaginationContent>
+        </Pagination>
+      )}
     </div>
   );
 }
