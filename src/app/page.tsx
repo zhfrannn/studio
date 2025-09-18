@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import StoryCard from '@/components/story-card';
 import { stories } from '@/lib/data';
 import Link from 'next/link';
@@ -9,6 +9,7 @@ import {
   BookOpen,
   Lightbulb,
   MessageCircle,
+  CheckCircle,
 } from 'lucide-react';
 import InteractiveMap from '@/components/interactive-map';
 
@@ -48,15 +49,15 @@ export default function Home() {
                 className="animate-float rounded-full object-cover shadow-2xl"
                 data-ai-hint="floating island"
               />
-               <Image
+              <Image
                 src="https://picsum.photos/seed/hero-2/150/150"
                 alt="Small floating rock"
                 width={150}
                 height={150}
                 className="absolute -bottom-10 -right-10 hidden animate-float-delay-1 rounded-full object-cover shadow-lg lg:block"
-                 data-ai-hint="floating rock"
+                data-ai-hint="floating rock"
               />
-               <Image
+              <Image
                 src="https://picsum.photos/seed/hero-3/100/100"
                 alt="Another small floating rock"
                 width={100}
@@ -68,60 +69,72 @@ export default function Home() {
           </div>
         </div>
         <div className="absolute inset-0 z-0 opacity-10 dark:opacity-20">
-            <Image
-              src="https://picsum.photos/seed/bg/1920/1080"
-              alt="Abstract background"
-              fill
-              className="object-cover"
-              data-ai-hint="abstract waves"
-              />
+          <Image
+            src="https://picsum.photos/seed/bg/1920/1080"
+            alt="Abstract background"
+            fill
+            className="object-cover"
+            data-ai-hint="abstract waves"
+          />
         </div>
       </section>
 
       <section className="container mx-auto px-4">
-        <div className="mx-auto mb-12 max-w-2xl space-y-2 text-center">
+        <div className="mx-auto mb-12 max-w-3xl space-y-2 text-center">
           <h2 className="font-headline text-3xl md:text-4xl">
-            Bagaimana Ini Bekerja?
+            Cara Kerjanya
           </h2>
           <p className="text-muted-foreground">
-            Tiga langkah sederhana untuk mengubah cerita menjadi media
-            pembelajaran yang interaktif dan berdampak.
+            Arsitektur tiga lapis yang mengubah cerita pribadi menjadi alat
+            edukasi yang kuat.
           </p>
         </div>
-        <div className="grid gap-8 text-center md:grid-cols-3">
-          <Card className="p-6">
-            <CardContent className="flex flex-col items-center gap-4">
-              <div className="rounded-full bg-primary/10 p-4">
-                <MessageCircle className="h-8 w-8 text-primary" />
+        <div className="grid gap-8 text-left md:grid-cols-3">
+          <Card>
+            <CardHeader className="flex-row items-start gap-4 space-y-0">
+              <div className="rounded-lg bg-blue-100 p-3 dark:bg-blue-900/30">
+                <MessageCircle className="h-6 w-6 text-blue-600 dark:text-blue-400" />
               </div>
-              <h3 className="font-headline text-xl">1. Kumpulkan Cerita</h3>
+              <div className="space-y-1">
+                <CardTitle className="text-lg">1. Pengumpulan Cerita</CardTitle>
+              </div>
+            </CardHeader>
+            <CardContent>
               <p className="text-muted-foreground">
-                Cerita dikumpulkan dari masyarakat melalui WhatsApp dan
-                fasilitator muda.
+                Warga berbagi pengalaman melalui WhatsApp. Duta muda membantu
+                merekam cerita dari para tetua.
               </p>
             </CardContent>
           </Card>
-          <Card className="p-6">
-            <CardContent className="flex flex-col items-center gap-4">
-              <div className="rounded-full bg-primary/10 p-4">
-                <Lightbulb className="h-8 w-8 text-primary" />
+          <Card>
+            <CardHeader className="flex-row items-start gap-4 space-y-0">
+              <div className="rounded-lg bg-green-100 p-3 dark:bg-green-900/30">
+                <Lightbulb className="h-6 w-6 text-green-600 dark:text-green-400" />
               </div>
-              <h3 className="font-headline text-xl">2. Proses dengan AI</h3>
+              <div className="space-y-1">
+                <CardTitle className="text-lg">2. Pemrosesan AI</CardTitle>
+              </div>
+            </CardHeader>
+            <CardContent>
               <p className="text-muted-foreground">
-                AI menganalisis, memberi tema, dan mengubah cerita menjadi
-                video, komik, dan kuis.
+                AI menganalisis, menerjemahkan, dan memetakan cerita ke modul
+                edukasi sambil melestarikan konteks budaya.
               </p>
             </CardContent>
           </Card>
-          <Card className="p-6">
-            <CardContent className="flex flex-col items-center gap-4">
-              <div className="rounded-full bg-primary/10 p-4">
-                <BookOpen className="h-8 w-8 text-primary" />
+          <Card>
+            <CardHeader className="flex-row items-start gap-4 space-y-0">
+              <div className="rounded-lg bg-purple-100 p-3 dark:bg-purple-900/30">
+                <BookOpen className="h-6 w-6 text-purple-600 dark:text-purple-400" />
               </div>
-              <h3 className="font-headline text-xl">3. Belajar & Sebarkan</h3>
+              <div className="space-y-1">
+                <CardTitle className="text-lg">3. Pembelajaran Komunitas</CardTitle>
+              </div>
+            </CardHeader>
+            <CardContent>
               <p className="text-muted-foreground">
-                Konten interaktif dibagikan melalui website ini dan EduBoard
-                fisik di komunitas.
+                Cerita menjadi komik interaktif, audio, dan EduBoard fisik di
+                ruang komunitas di seluruh Aceh.
               </p>
             </CardContent>
           </Card>
@@ -129,28 +142,89 @@ export default function Home() {
       </section>
 
       <section className="container mx-auto px-4">
-        <div className="mx-auto mb-12 max-w-2xl space-y-2 text-center">
-          <h2 className="font-headline text-3xl md:text-4xl">Arsip Cerita</h2>
+        <Card className="overflow-hidden">
+          <div className="grid md:grid-cols-2">
+            <div className="order-2 space-y-4 p-8 md:order-1">
+              <h3 className="font-headline text-2xl">Mengapa Ini Penting</h3>
+              <p className="text-muted-foreground">
+                "Suara Samudra" bukan hanya tentang SOP bencana. Ini tentang
+                melestarikan memori kolektif, memperkuat rasa memiliki, dan
+                membangun ketahanan serta komunikasi perdamaian.
+              </p>
+              <ul className="space-y-3 pt-2">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
+                  <span className="text-muted-foreground">
+                    Melawan misinformasi melalui narasi lokal yang dikurasi dan
+                    diperiksa faktanya.
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
+                  <span className="text-muted-foreground">
+                    Mengintegrasikan kearifan lokal (Smong, gotong royong)
+                    dengan ilmu bencana modern.
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
+                  <span className="text-muted-foreground">
+                    Mendukung penyembuhan melalui refleksi terpandu dan dialog
+                    komunitas.
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <div className="order-1 aspect-video md:order-2 md:aspect-auto">
+              <Image
+                src="https://picsum.photos/seed/community/800/600"
+                alt="Community gathering"
+                width={800}
+                height={600}
+                className="h-full w-full object-cover"
+                data-ai-hint="community discussion"
+              />
+            </div>
+          </div>
+        </Card>
+      </section>
+
+      <section className="container mx-auto space-y-12 px-4">
+        <div className="mx-auto max-w-2xl space-y-2 text-center">
+          <h2 className="font-headline text-3xl md:text-4xl">
+            Explore Stories
+          </h2>
           <p className="text-muted-foreground">
-            Jelajahi galeri cerita dari berbagai wilayah di Aceh. Klik peta atau
-            filter berdasarkan tema.
+            Personal narratives from tsunami survivors, recovery workers, and
+            peace builders.
           </p>
         </div>
-
-        <div className="grid gap-8 lg:grid-cols-3">
-          <div className="overflow-hidden rounded-xl border shadow-lg lg:col-span-1">
+        <div className="rounded-xl border shadow-lg">
+          <div className="h-[500px] w-full">
             <InteractiveMap />
           </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:col-span-2">
-            {stories.slice(0, 2).map(story => (
+          <div className="border-t p-4 text-center">
+            <p className="text-sm text-muted-foreground">
+              Click on markers to view stories from different regions
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <h3 className="mb-8 text-center font-headline text-2xl md:text-3xl">
+            Featured Stories
+          </h3>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {stories.slice(0, 3).map(story => (
               <StoryCard key={story.id} story={story} />
             ))}
           </div>
         </div>
-        <div className="mt-12 text-center">
-          <Button asChild size="lg" variant="secondary">
+
+        <div className="text-center">
+          <Button asChild size="lg">
             <Link href="/explore">
-              Lihat Semua Cerita <ArrowRight />
+              Load More Stories <ArrowRight />
             </Link>
           </Button>
         </div>
