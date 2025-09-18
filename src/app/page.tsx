@@ -180,7 +180,7 @@ export default function Home() {
         </div>
         <div className="rounded-xl border shadow-lg">
           <div className="h-[500px] w-full">
-            <InteractiveMap />
+            <InteractiveMap stories={stories} />
           </div>
           <div className="border-t p-4 text-center">
             <p className="text-sm text-muted-foreground">

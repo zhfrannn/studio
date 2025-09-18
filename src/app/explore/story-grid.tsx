@@ -44,7 +44,7 @@ export default function StoryGrid({ allStories }: StoryGridProps) {
     <div className="space-y-8">
       <div className="grid items-start gap-8 lg:grid-cols-3">
         <div className="h-full overflow-hidden rounded-xl border shadow-lg lg:col-span-1">
-          <InteractiveMap />
+          <InteractiveMap stories={allStories} />
         </div>
         <div className="rounded-xl border bg-card p-6 lg:col-span-2">
           <h3 className="mb-4 font-headline text-lg">Filter Cerita</h3>
