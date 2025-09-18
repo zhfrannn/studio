@@ -26,7 +26,7 @@ const StoryCard = ({ story }: StoryCardProps) => {
 
   return (
     <Link href={`/story/${story.id}`} className="group block h-full">
-      <Card className="flex h-full flex-col overflow-hidden transition-all duration-300 hover:shadow-xl">
+      <Card className="flex h-full flex-col overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
         <div className={`relative h-32 w-full ${themeColor}`}>
           {/* You can add a placeholder icon or pattern here */}
         </div>

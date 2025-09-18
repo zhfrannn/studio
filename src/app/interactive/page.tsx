@@ -28,6 +28,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import WaveIcon from '@/components/icons/wave-icon';
 import { cn } from '@/lib/utils';
+import MotionWrapper from '@/components/motion-wrapper';
 
 const leaderboardData = [
   { name: 'Tsunami Expert', score: '30/30', rank: 1, initial: 'TE' },
@@ -103,7 +104,7 @@ const getThemeIcon = (theme?: string) => {
 export default function InteractiveLearningHub() {
   return (
     <div className="space-y-16 py-12 md:space-y-24">
-      <div className="container mx-auto px-4">
+      <MotionWrapper className="container mx-auto px-4">
         <div className="mb-12 text-center">
           <h1 className="font-headline text-4xl md:text-5xl">
             Interactive Learning Hub
@@ -117,52 +118,54 @@ export default function InteractiveLearningHub() {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-start">
           <main className="col-span-1 space-y-8 lg:col-span-2">
             {/* Disaster Preparedness Quiz */}
-            <Card className="w-full overflow-hidden">
-              <CardHeader>
-                <div className="flex items-center justify-between">
-                  <CardTitle className="flex items-center gap-2">
-                    <ClipboardList className="h-6 w-6 text-primary" />
-                    Disaster Preparedness Quiz
-                  </CardTitle>
-                  <div className="flex items-center gap-2">
-                    <span className="text-xs text-muted-foreground">
-                      Progress: 25%
-                    </span>
-                    <Progress value={25} className="w-24" />
+            <MotionWrapper>
+              <Card className="w-full overflow-hidden">
+                <CardHeader>
+                  <div className="flex items-center justify-between">
+                    <CardTitle className="flex items-center gap-2">
+                      <ClipboardList className="h-6 w-6 text-primary" />
+                      Disaster Preparedness Quiz
+                    </CardTitle>
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs text-muted-foreground">
+                        Progress: 25%
+                      </span>
+                      <Progress value={25} className="w-24" />
+                    </div>
                   </div>
-                </div>
-                <CardDescription>
-                  Welcome to the Interactive Disaster Preparedness Quiz! Test your
-                  knowledge about tsunami warnings, community response, and
-                  traditional wisdom like Smong. Click "Start Quiz" to begin your
-                  learning journey.
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="flex flex-col items-center justify-center bg-muted/40 py-12 text-center">
-                <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-primary/20">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/30">
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      className="h-12 w-12 rounded-full bg-white text-primary shadow-lg hover:bg-white"
-                    >
-                      <Film className="h-6 w-6" />
-                    </Button>
+                  <CardDescription>
+                    Welcome to the Interactive Disaster Preparedness Quiz! Test your
+                    knowledge about tsunami warnings, community response, and
+                    traditional wisdom like Smong. Click "Start Quiz" to begin your
+                    learning journey.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="flex flex-col items-center justify-center bg-muted/40 py-12 text-center">
+                  <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-primary/20">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/30">
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        className="h-12 w-12 rounded-full bg-white text-primary shadow-lg hover:bg-white"
+                      >
+                        <Film className="h-6 w-6" />
+                      </Button>
+                    </div>
                   </div>
-                </div>
-                <h3 className="mb-2 text-xl font-semibold">
-                  Ready to Test Your Knowledge?
-                </h3>
-                <p className="mb-6 max-w-sm text-sm text-muted-foreground">
-                  Learn about disaster preparedness through interactive scenarios
-                  based on real stories from Aceh.
-                </p>
-                <Button size="lg">Start Quiz</Button>
-              </CardContent>
-            </Card>
+                  <h3 className="mb-2 text-xl font-semibold">
+                    Ready to Test Your Knowledge?
+                  </h3>
+                  <p className="mb-6 max-w-sm text-sm text-muted-foreground">
+                    Learn about disaster preparedness through interactive scenarios
+                    based on real stories from Aceh.
+                  </p>
+                  <Button size="lg">Start Quiz</Button>
+                </CardContent>
+              </Card>
+            </MotionWrapper>
 
             {/* Educational Videos */}
-            <section>
+            <MotionWrapper as="section">
               <div className="mb-6">
                 <h2 className="flex items-center gap-3 font-headline text-3xl">
                   <Film className="h-8 w-8 text-red-500" />
@@ -174,128 +177,136 @@ export default function InteractiveLearningHub() {
                 </p>
               </div>
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                {stories.slice(0, 3).map(story => (
-                  <Card key={story.id} className="overflow-hidden">
-                    <div className="relative aspect-video bg-muted">
-                      <Image
-                        src={story.media.featuredImage}
-                        alt={story.title}
-                        fill
-                        className="object-cover"
-                        data-ai-hint={story.media.featuredImageHint}
-                      />
-                      <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-                        <Button
-                          variant="ghost"
-                          size="icon"
-                          className="h-12 w-12 rounded-full bg-white/80 text-primary shadow-lg hover:bg-white"
+                {stories.slice(0, 3).map((story, i) => (
+                  <MotionWrapper key={story.id} delay={i * 0.1}>
+                    <Card className="overflow-hidden">
+                      <div className="relative aspect-video bg-muted">
+                        <Image
+                          src={story.media.featuredImage}
+                          alt={story.title}
+                          fill
+                          className="object-cover"
+                          data-ai-hint={story.media.featuredImageHint}
+                        />
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            className="h-12 w-12 rounded-full bg-white/80 text-primary shadow-lg hover:bg-white"
+                          >
+                            <Film className="h-6 w-6" />
+                          </Button>
+                        </div>
+                        <Badge
+                          variant="secondary"
+                          className="absolute left-2 top-2"
                         >
-                          <Film className="h-6 w-6" />
-                        </Button>
+                          {story.aiThemes[0]}
+                        </Badge>
                       </div>
-                      <Badge
-                        variant="secondary"
-                        className="absolute left-2 top-2"
-                      >
-                        {story.aiThemes[0]}
-                      </Badge>
-                    </div>
-                    <CardHeader>
-                      <CardTitle className="text-lg">{story.title}</CardTitle>
-                      <CardDescription className="line-clamp-2">
-                        {story.summary}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardFooter className="flex justify-between text-xs text-muted-foreground">
-                      <p>5 min</p>
-                      <Button variant="secondary" size="sm" asChild>
-                        <Link href={`/story/${story.id}`}>Watch</Link>
-                      </Button>
-                    </CardFooter>
-                  </Card>
+                      <CardHeader>
+                        <CardTitle className="text-lg">{story.title}</CardTitle>
+                        <CardDescription className="line-clamp-2">
+                          {story.summary}
+                        </CardDescription>
+                      </CardHeader>
+                      <CardFooter className="flex justify-between text-xs text-muted-foreground">
+                        <p>5 min</p>
+                        <Button variant="secondary" size="sm" asChild>
+                          <Link href={`/story/${story.id}`}>Watch</Link>
+                        </Button>
+                      </CardFooter>
+                    </Card>
+                  </MotionWrapper>
                 ))}
-                <Card className="flex flex-col items-center justify-center border-2 border-dashed bg-transparent p-6 text-center">
-                  <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-muted">
-                    <Plus className="h-8 w-8 text-muted-foreground" />
-                  </div>
-                  <h3 className="mb-1 font-semibold">View All Videos</h3>
-                  <p className="mb-4 text-sm text-muted-foreground">
-                    Explore our complete collection of educational content
-                  </p>
-                  <Button variant="outline" asChild>
-                    <Link href="/explore">Browse All</Link>
-                  </Button>
-                </Card>
+                <MotionWrapper delay={0.3}>
+                  <Card className="flex h-full min-h-[200px] flex-col items-center justify-center border-2 border-dashed bg-transparent p-6 text-center">
+                    <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-muted">
+                      <Plus className="h-8 w-8 text-muted-foreground" />
+                    </div>
+                    <h3 className="mb-1 font-semibold">View All Videos</h3>
+                    <p className="mb-4 text-sm text-muted-foreground">
+                      Explore our complete collection of educational content
+                    </p>
+                    <Button variant="outline" asChild>
+                      <Link href="/explore">Browse All</Link>
+                    </Button>
+                  </Card>
+                </MotionWrapper>
               </div>
-            </section>
+            </MotionWrapper>
           </main>
 
           <aside className="col-span-1 space-y-8">
             {/* Leaderboard */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Trophy className="h-5 w-5 text-yellow-500" />
-                  Leaderboard
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                {leaderboardData.map((item, index) => (
-                  <div
-                    key={item.name}
-                    className={`flex items-center gap-4 rounded-lg p-2 ${
-                      index === 0 ? 'bg-yellow-100/50 dark:bg-yellow-900/20' : ''
-                    }`}
-                  >
-                    <Avatar className="h-8 w-8 text-xs">
-                      <AvatarFallback
-                        className={
-                          index === 0
-                            ? 'bg-yellow-500 text-white'
-                            : 'bg-muted-foreground/20'
-                        }
-                      >
-                        {item.initial}
-                      </AvatarFallback>
-                    </Avatar>
-                    <span className="flex-grow font-medium">{item.name}</span>
-                    <span className="font-semibold">{item.score}</span>
-                  </div>
-                ))}
-                <Separator />
-                <Button variant="outline" className="w-full">
-                  View Full Leaderboard
-                </Button>
-              </CardContent>
-            </Card>
+            <MotionWrapper delay={0.1}>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Trophy className="h-5 w-5 text-yellow-500" />
+                    Leaderboard
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  {leaderboardData.map((item, index) => (
+                    <div
+                      key={item.name}
+                      className={`flex items-center gap-4 rounded-lg p-2 ${
+                        index === 0 ? 'bg-yellow-100/50 dark:bg-yellow-900/20' : ''
+                      }`}
+                    >
+                      <Avatar className="h-8 w-8 text-xs">
+                        <AvatarFallback
+                          className={
+                            index === 0
+                              ? 'bg-yellow-500 text-white'
+                              : 'bg-muted-foreground/20'
+                          }
+                        >
+                          {item.initial}
+                        </AvatarFallback>
+                      </Avatar>
+                      <span className="flex-grow font-medium">{item.name}</span>
+                      <span className="font-semibold">{item.score}</span>
+                    </div>
+                  ))}
+                  <Separator />
+                  <Button variant="outline" className="w-full">
+                    View Full Leaderboard
+                  </Button>
+                </CardContent>
+              </Card>
+            </MotionWrapper>
 
             {/* Achievement Badges */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Award className="h-5 w-5 text-green-500" />
-                  Achievement Badges
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="grid grid-cols-3 gap-4">
-                {achievementBadges.map(badge => (
-                  <div
-                    key={badge.name}
-                    className="flex flex-col items-center gap-2 rounded-lg bg-muted/40 p-3 text-center"
-                  >
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-background text-primary">
-                      {badge.icon}
+            <MotionWrapper delay={0.2}>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Award className="h-5 w-5 text-green-500" />
+                    Achievement Badges
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="grid grid-cols-3 gap-4">
+                  {achievementBadges.map(badge => (
+                    <div
+                      key={badge.name}
+                      className="flex flex-col items-center gap-2 rounded-lg bg-muted/40 p-3 text-center"
+                    >
+                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-background text-primary">
+                        {badge.icon}
+                      </div>
+                      <span className="text-xs font-medium">{badge.name}</span>
                     </div>
-                    <span className="text-xs font-medium">{badge.name}</span>
-                  </div>
-                ))}
-              </CardContent>
-            </Card>
+                  ))}
+                </CardContent>
+              </Card>
+            </MotionWrapper>
           </aside>
         </div>
-      </div>
+      </MotionWrapper>
 
-      <section className="container mx-auto px-4">
+      <MotionWrapper as="section" className="container mx-auto px-4">
         <div className="mb-12 text-center">
           <h2 className="flex items-center justify-center gap-3 font-headline text-3xl md:text-4xl">
             <BookOpen className="h-8 w-8 text-primary" />
@@ -307,44 +318,46 @@ export default function InteractiveLearningHub() {
           </p>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {comicData.map(comic => (
-            <Card
-              key={comic.title}
-              className="group flex flex-col overflow-hidden text-center"
-            >
-              <CardContent
-                className={cn(
-                  'flex flex-grow flex-col items-center justify-center p-6',
-                  comic.color
-                )}
+          {comicData.map((comic, i) => (
+            <MotionWrapper key={comic.title} delay={i * 0.1}>
+              <Card
+                key={comic.title}
+                className="group flex flex-col overflow-hidden text-center"
               >
-                <div className={cn('mb-4', comic.textColor)}>
-                  {comic.icon}
-                </div>
-                <h3 className={cn('font-semibold', comic.textColor)}>
-                  {comic.subtitle}
-                </h3>
-              </CardContent>
-              <CardHeader className="flex-grow p-6">
-                <CardTitle className="text-lg">{comic.title}</CardTitle>
-                <CardDescription>{comic.description}</CardDescription>
-              </CardHeader>
-              <CardFooter className="p-6 pt-0">
-                <Button
+                <CardContent
                   className={cn(
-                    'w-full text-white',
-                    comic.buttonColor
+                    'flex flex-grow flex-col items-center justify-center p-6',
+                    comic.color
                   )}
                 >
-                  Read Comic
-                </Button>
-              </CardFooter>
-            </Card>
+                  <div className={cn('mb-4', comic.textColor)}>
+                    {comic.icon}
+                  </div>
+                  <h3 className={cn('font-semibold', comic.textColor)}>
+                    {comic.subtitle}
+                  </h3>
+                </CardContent>
+                <CardHeader className="flex-grow p-6">
+                  <CardTitle className="text-lg">{comic.title}</CardTitle>
+                  <CardDescription>{comic.description}</CardDescription>
+                </CardHeader>
+                <CardFooter className="p-6 pt-0">
+                  <Button
+                    className={cn(
+                      'w-full text-white',
+                      comic.buttonColor
+                    )}
+                  >
+                    Read Comic
+                  </Button>
+                </CardFooter>
+              </Card>
+            </MotionWrapper>
           ))}
         </div>
-      </section>
+      </MotionWrapper>
 
-      <section className="container mx-auto px-4">
+      <MotionWrapper as="section" className="container mx-auto px-4">
         <div className="mb-12 text-center">
           <h2 className="flex items-center justify-center gap-3 font-headline text-3xl md:text-4xl">
             <ClipboardList className="h-8 w-8 text-primary" />
@@ -355,43 +368,47 @@ export default function InteractiveLearningHub() {
           </p>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {quickAccessStories.map(story => (
-            <Card key={story.id} className="p-6">
-              <div className="mb-4 flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-muted">
-                  {getThemeIcon(story.aiThemes[0])}
+          {quickAccessStories.map((story, i) => (
+            <MotionWrapper key={story.id} delay={i * 0.1}>
+              <Card className="p-6">
+                <div className="mb-4 flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-muted">
+                    {getThemeIcon(story.aiThemes[0])}
+                  </div>
+                  <div>
+                    <h3 className="font-semibold">{story.title}</h3>
+                    <Badge variant="outline">{story.aiThemes[0]}</Badge>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-semibold">{story.title}</h3>
-                  <Badge variant="outline">{story.aiThemes[0]}</Badge>
-                </div>
-              </div>
-              <p className="mb-4 text-sm text-muted-foreground">
-                Complete story with video, comic, and interactive quiz.
-              </p>
-              <Link
-                href={`/story/${story.id}`}
-                className="group flex items-center text-sm font-semibold text-primary"
-              >
-                View Full Story{' '}
-                <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </Card>
+                <p className="mb-4 text-sm text-muted-foreground">
+                  Complete story with video, comic, and interactive quiz.
+                </p>
+                <Link
+                  href={`/story/${story.id}`}
+                  className="group flex items-center text-sm font-semibold text-primary"
+                >
+                  View Full Story{' '}
+                  <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </Card>
+            </MotionWrapper>
           ))}
-          <Card className="flex flex-col items-center justify-center border-2 border-dashed bg-transparent p-6 text-center">
-            <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-muted">
-              <Plus className="h-8 w-8 text-muted-foreground" />
-            </div>
-            <h3 className="mb-1 font-semibold">Explore All Stories</h3>
-            <p className="mb-4 text-sm text-muted-foreground">
-              Discover more stories from Aceh's journey of resilience.
-            </p>
-            <Button variant="outline" asChild>
-              <Link href="/explore">View All Stories</Link>
-            </Button>
-          </Card>
+          <MotionWrapper delay={0.3}>
+            <Card className="flex h-full min-h-[160px] flex-col items-center justify-center border-2 border-dashed bg-transparent p-6 text-center">
+              <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-muted">
+                <Plus className="h-8 w-8 text-muted-foreground" />
+              </div>
+              <h3 className="mb-1 font-semibold">Explore All Stories</h3>
+              <p className="mb-4 text-sm text-muted-foreground">
+                Discover more stories from Aceh's journey of resilience.
+              </p>
+              <Button variant="outline" asChild>
+                <Link href="/explore">View All Stories</Link>
+              </Button>
+            </Card>
+          </MotionWrapper>
         </div>
-      </section>
+      </MotionWrapper>
     </div>
   );
 }
