@@ -1,6 +1,12 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
 import StoryCard from '@/components/story-card';
 import { stories } from '@/lib/data';
 import Link from 'next/link';
@@ -10,8 +16,17 @@ import {
   Lightbulb,
   MessageCircle,
   CheckCircle,
+  Film,
+  RefreshCw,
+  Download,
+  Play,
+  Share2,
 } from 'lucide-react';
 import InteractiveMap from '@/components/interactive-map';
+import { Progress } from '@/components/ui/progress';
+import { Badge } from '@/components/ui/badge';
+import ShareStoryForm from '@/components/share-story-form';
+import { Separator } from '@/components/ui/separator';
 
 export default function Home() {
   const featuredStory = stories[0];
@@ -141,62 +156,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container mx-auto px-4">
-        <Card className="overflow-hidden">
-          <div className="grid md:grid-cols-2">
-            <div className="order-2 space-y-4 p-8 md:order-1">
-              <h3 className="font-headline text-2xl">Mengapa Ini Penting</h3>
-              <p className="text-muted-foreground">
-                "Suara Samudra" bukan hanya tentang SOP bencana. Ini tentang
-                melestarikan memori kolektif, memperkuat rasa memiliki, dan
-                membangun ketahanan serta komunikasi perdamaian.
-              </p>
-              <ul className="space-y-3 pt-2">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
-                  <span className="text-muted-foreground">
-                    Melawan misinformasi melalui narasi lokal yang dikurasi dan
-                    diperiksa faktanya.
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
-                  <span className="text-muted-foreground">
-                    Mengintegrasikan kearifan lokal (Smong, gotong royong)
-                    dengan ilmu bencana modern.
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
-                  <span className="text-muted-foreground">
-                    Mendukung penyembuhan melalui refleksi terpandu dan dialog
-                    komunitas.
-                  </span>
-                </li>
-              </ul>
-            </div>
-            <div className="order-1 aspect-video md:order-2 md:aspect-auto">
-              <Image
-                src="https://picsum.photos/seed/community/800/600"
-                alt="Community gathering"
-                width={800}
-                height={600}
-                className="h-full w-full object-cover"
-                data-ai-hint="community discussion"
-              />
-            </div>
-          </div>
-        </Card>
-      </section>
-
       <section className="container mx-auto space-y-12 px-4">
         <div className="mx-auto max-w-2xl space-y-2 text-center">
           <h2 className="font-headline text-3xl md:text-4xl">
-            Explore Stories
+            Jelajahi Cerita
           </h2>
           <p className="text-muted-foreground">
-            Personal narratives from tsunami survivors, recovery workers, and
-            peace builders.
+            Narasi personal dari penyintas tsunami, pekerja pemulihan, dan
+            pembangun perdamaian.
           </p>
         </div>
         <div className="rounded-xl border shadow-lg">
@@ -205,14 +172,14 @@ export default function Home() {
           </div>
           <div className="border-t p-4 text-center">
             <p className="text-sm text-muted-foreground">
-              Click on markers to view stories from different regions
+              Klik pada penanda untuk melihat cerita dari berbagai daerah.
             </p>
           </div>
         </div>
 
         <div>
           <h3 className="mb-8 text-center font-headline text-2xl md:text-3xl">
-            Featured Stories
+            Cerita Unggulan
           </h3>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {stories.slice(0, 3).map(story => (
@@ -224,9 +191,170 @@ export default function Home() {
         <div className="text-center">
           <Button asChild size="lg">
             <Link href="/explore">
-              Load More Stories <ArrowRight />
+              Muat Lebih Banyak Cerita <ArrowRight />
             </Link>
           </Button>
+        </div>
+      </section>
+
+      <section className="container mx-auto px-4">
+        <div className="mx-auto mb-12 max-w-3xl space-y-2 text-center">
+          <h2 className="font-headline text-3xl md:text-4xl">
+            Pembelajaran Interaktif
+          </h2>
+          <p className="text-muted-foreground">
+            Alami cerita melalui berbagai format menarik.
+          </p>
+        </div>
+
+        <div className="grid gap-8 lg:grid-cols-2">
+          <Card className="flex flex-col">
+            <CardHeader className="flex flex-row items-start gap-4">
+              <BookOpen className="mt-1 h-6 w-6 text-primary" />
+              <div>
+                <CardTitle>Komik Digital</CardTitle>
+                <CardDescription>
+                  Cerita diubah menjadi narasi visual yang menjaga kebenaran
+                  emosional.
+                </CardDescription>
+              </div>
+            </CardHeader>
+            <CardContent className="flex-grow space-y-4">
+              <div className="aspect-video w-full overflow-hidden rounded-lg bg-muted">
+                <Image
+                  src="https://picsum.photos/seed/comic-placeholder/800/450"
+                  width={800}
+                  height={450}
+                  alt="Digital Comic Placeholder"
+                  className="h-full w-full object-cover"
+                  data-ai-hint="comic illustration"
+                />
+              </div>
+              <Button variant="outline">
+                Lihat Komik <ArrowRight />
+              </Button>
+            </CardContent>
+          </Card>
+          <Card className="flex flex-col">
+            <CardHeader className="flex flex-row items-start gap-4">
+              <Film className="mt-1 h-6 w-6 text-primary" />
+              <div>
+                <CardTitle>Video Edukasi</CardTitle>
+                <CardDescription>
+                  Narasi orang pertama dihidupkan dengan suara dan suasana Aceh.
+                </CardDescription>
+              </div>
+            </CardHeader>
+            <CardContent className="flex-grow space-y-4">
+              <div className="flex aspect-video w-full items-center justify-center rounded-lg bg-muted p-4">
+                <div className="w-full text-center">
+                  <p className="text-sm font-semibold">Manusia Aceh</p>
+                  <div className="my-4 h-8 w-full animate-pulse rounded-full bg-primary/20" />
+                  <p className="text-xs text-muted-foreground">
+                    audio visual placeholder
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-center gap-2">
+                <Button>
+                  <Play /> Putar
+                </Button>
+                <Button variant="outline">
+                  <Download /> Unduh
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+        <div className="mt-8">
+          <Card>
+            <CardHeader className="flex-row items-start gap-4">
+              <RefreshCw className="mt-1 h-6 w-6 text-primary" />
+              <div>
+                <CardTitle>Simulasi Ketahanan</CardTitle>
+                <CardDescription>
+                  Uji pemahaman Anda melalui simulasi berbasis cerita.
+                </CardDescription>
+              </div>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="space-y-2">
+                <p className="text-sm font-medium">Progres</p>
+                <Progress value={25} />
+              </div>
+              <Button variant="outline">
+                <RefreshCw /> Mulai Ulang
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <section className="container mx-auto px-4">
+        <div className="relative overflow-hidden rounded-xl bg-blue-600 text-white">
+          <Image
+            src="https://picsum.photos/seed/eduboard-bg/1200/400"
+            alt="Abstract background for eduboard"
+            fill
+            className="object-cover opacity-20"
+            data-ai-hint="abstract pattern"
+          />
+          <div className="relative grid items-center gap-8 p-12 md:grid-cols-2">
+            <div className="space-y-4">
+              <h2 className="font-headline text-3xl md:text-4xl">
+                Community EduBoards
+              </h2>
+              <p>
+                Papan interaktif fisik dipasang di ruang komunitas (masjid,
+                sekolah, warung kopi) yang menjembatani arsip digital melalui
+                kode QR dan tag NFC.
+              </p>
+              <div className="flex flex-wrap gap-2 pt-2">
+                <Badge variant="secondary">Kutipan Harian</Badge>
+                <Badge variant="secondary">Kuis Mini</Badge>
+                <Badge variant="secondary">Garis Waktu</Badge>
+                <Badge variant="secondary">Tips Harian</Badge>
+              </div>
+              <Button variant="secondary" asChild className="mt-4">
+                <Link href="/eduboard">
+                  Lihat Desain EduBoard <ArrowRight />
+                </Link>
+              </Button>
+            </div>
+            <div className="relative hidden h-64 md:block">
+              <Image
+                src="https://picsum.photos/seed/eduboard-main/500/400"
+                alt="EduBoard visualization"
+                fill
+                className="rounded-lg object-cover shadow-lg"
+                data-ai-hint="information board"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="container mx-auto px-4">
+        <div className="mx-auto mb-12 max-w-3xl space-y-2 text-center">
+          <h2 className="font-headline text-3xl md:text-4xl">
+            Bagikan Ceritamu
+          </h2>
+          <p className="text-muted-foreground">
+            Pengalaman Anda sangat berarti. Bantu membangun memori kolektif dan
+            ketahanan Aceh.
+          </p>
+        </div>
+        <ShareStoryForm />
+      </section>
+
+      <section className="container mx-auto px-4 text-center">
+        <Separator className="mx-auto mb-8 w-1/2" />
+        <p className="font-semibold text-muted-foreground">Didukung oleh</p>
+        <div className="mt-4 flex flex-wrap items-center justify-center gap-8 opacity-60">
+          {/* Placeholder for supporter logos */}
+          <p>Logo 1</p>
+          <p>Logo 2</p>
+          <p>Logo 3</p>
         </div>
       </section>
     </div>

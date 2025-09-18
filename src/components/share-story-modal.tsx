@@ -14,9 +14,9 @@ import WaveMascot from './icons/wave-mascot';
 
 const ShareStoryModal = () => {
   const whatsappMessage = encodeURIComponent(
-    'Halo Wave of Voices, saya ingin berbagi cerita...'
+    'Halo Aceh Voice, saya ingin berbagi cerita...'
   );
-  const whatsappUrl = `https://wa.me/?text=${whatsappMessage}`;
+  const whatsappUrl = `https://wa.me/6285296443101?text=${whatsappMessage}`;
 
   return (
     <Dialog>
