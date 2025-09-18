@@ -42,7 +42,7 @@ const allThemes: StoryTheme[] = [
   'Local Wisdom',
   'Peacebuilding',
 ];
-const allLocations = [...new Set(stories.map(s => s.location.name))];
+
 const ITEMS_PER_PAGE = 5; // 5 stories + 1 share card = 6 items per row
 
 export default function StoryGrid({ allStories }: StoryGridProps) {
@@ -50,6 +50,8 @@ export default function StoryGrid({ allStories }: StoryGridProps) {
   const [selectedLocation, setSelectedLocation] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
+  
+  const allLocations = [...new Set(allStories.map(s => s.location.name))];
 
   const filteredStories = allStories.filter(story => {
     const themeMatch =
