@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import WaveMascot from '@/components/icons/wave-mascot';
 import ShareStoryModal from '../share-story-modal';
@@ -19,6 +21,9 @@ const Header = () => {
           </Link>
           <Link href="/explore" className="transition-colors hover:text-primary">
             Jelajahi
+          </Link>
+          <Link href="/interactive" className="transition-colors hover:text-primary">
+            Interaktif
           </Link>
           <Link href="/eduboard" className="transition-colors hover:text-primary">
             EduBoard
