@@ -71,7 +71,6 @@ const askSiagaBotPrompt = ai.definePrompt({
 
   User Question: {{{question}}}
   `,
-  model: 'googleai/gemini-pro',
 });
 
 const askSiagaBotFlow = ai.defineFlow(
