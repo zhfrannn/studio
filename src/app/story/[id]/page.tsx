@@ -22,7 +22,7 @@ import {
   Puzzle,
   PlayCircle,
   Info,
-  Run,
+  ChevronsUp,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -50,7 +50,7 @@ const comicData = [
     textColor: 'text-red-800 dark:text-red-200',
   },
   {
-    icon: <Run className="h-10 w-10" />,
+    icon: <ChevronsUp className="h-10 w-10" />,
     title: 'Run to the Hills!',
     quote: '“Don’t think, don’t pack - just run to high ground!”',
     gradient:
