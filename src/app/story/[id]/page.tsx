@@ -11,21 +11,70 @@ import {
   CardDescription,
 } from '@/components/ui/card';
 import {
-  Film,
-  BookText,
-  Puzzle,
+  BookOpenText,
   Calendar,
+  Waves,
+  Mountain,
+  Siren,
   User,
+  Trees,
+  PersonStanding,
+  Puzzle,
   PlayCircle,
   Info,
+  Run,
 } from 'lucide-react';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel';
+import { cn } from '@/lib/utils';
+
+const comicData = [
+  {
+    icon: <Trees className="h-10 w-10" />,
+    title: 'Under the Banyan Tree',
+    quote:
+      '“Grandmother taught us the ancient warnings under the old banyan tree...”',
+    gradient: 'from-green-200 to-green-100 dark:from-green-900/70 dark:to-green-800/70',
+    textColor: 'text-green-800 dark:text-green-200',
+  },
+  {
+    icon: <Waves className="h-10 w-10" />,
+    title: 'Reading the Sea',
+    quote: '“The sea is like a person with moods - learn to read its signs...”',
+    gradient: 'from-blue-200 to-blue-100 dark:from-blue-900/70 dark:to-blue-800/70',
+    textColor: 'text-blue-800 dark:text-blue-200',
+  },
+  {
+    icon: <Siren className="h-10 w-10" />,
+    title: 'The Warning Signs',
+    quote: '“When the earth shakes and the sea retreats...”',
+    gradient: 'from-red-200 to-red-100 dark:from-red-900/70 dark:to-red-800/70',
+    textColor: 'text-red-800 dark:text-red-200',
+  },
+  {
+    icon: <Run className="h-10 w-10" />,
+    title: 'Run to the Hills!',
+    quote: '“Don’t think, don’t pack - just run to high ground!”',
+    gradient:
+      'from-yellow-200 to-yellow-100 dark:from-yellow-900/70 dark:to-yellow-800/70',
+    textColor: 'text-yellow-800 dark:text-yellow-200',
+  },
+  {
+    icon: <Mountain className="h-10 w-10" />,
+    title: 'Safe on High Ground',
+    quote: '“Stay until the sea has been calm for many hours...”',
+    gradient:
+      'from-purple-200 to-purple-100 dark:from-purple-900/70 dark:to-purple-800/70',
+    textColor: 'text-purple-800 dark:text-purple-200',
+  },
+  {
+    icon: <PersonStanding className="h-10 w-10" />,
+    title: 'Passing It On',
+    quote: '“Now I teach the next generation the wisdom of Smong...”',
+    gradient:
+      'from-indigo-200 to-indigo-100 dark:from-indigo-900/70 dark:to-indigo-800/70',
+    textColor: 'text-indigo-800 dark:text-indigo-200',
+  },
+];
+
 
 export default function StoryDetailPage({ params }: { params: { id: string } }) {
   const story = stories.find(s => s.id === params.id);
@@ -60,7 +109,7 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
           </div>
         </div>
 
-        <div className="space-y-12">
+        <div className="space-y-16">
           <section>
             <Card>
               <CardHeader>
@@ -116,8 +165,57 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
           </section>
 
           <section>
+            <div className="mb-8 text-center">
+              <h2 className="mb-2 flex items-center justify-center gap-3 font-headline text-3xl">
+                <BookOpenText /> Digital Comic: The Wisdom of Smong
+              </h2>
+              <p className="text-muted-foreground">
+                See how traditional knowledge passes from generation to
+                generation
+              </p>
+            </div>
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {comicData.map((panel, index) => (
+                <Card key={index} className="flex flex-col overflow-hidden">
+                  <CardContent
+                    className={cn(
+                      'flex flex-grow flex-col items-center justify-center p-6 text-center',
+                      panel.textColor
+                    )}
+                  >
+                    <div
+                      className={cn(
+                        'flex h-48 w-full flex-col items-center justify-center rounded-lg bg-gradient-to-br p-4',
+                        panel.gradient
+                      )}
+                    >
+                      {panel.icon}
+                      <h3 className="mt-4 font-semibold">{panel.title}</h3>
+                    </div>
+                  </CardContent>
+                  <CardFooter
+                    className={cn(
+                      'flex min-h-[70px] items-center justify-center p-4 pt-0',
+                      panel.textColor
+                    )}
+                  >
+                    <p
+                      className={cn(
+                        'rounded-lg bg-white/60 p-2 text-center text-xs dark:bg-black/20',
+                        panel.textColor
+                      )}
+                    >
+                      {panel.quote}
+                    </p>
+                  </CardFooter>
+                </Card>
+              ))}
+            </div>
+          </section>
+
+          <section>
             <h2 className="mb-4 flex items-center gap-2 font-headline text-2xl">
-              <BookText /> Narasi Lengkap
+              <BookOpenText /> Narasi Lengkap
             </h2>
             <Card>
               <CardContent className="p-6">
@@ -126,38 +224,6 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
                     {story.fullText}
                   </p>
                 </div>
-              </CardContent>
-            </Card>
-          </section>
-
-          <section>
-            <h2 className="mb-4 flex items-center gap-2 font-headline text-2xl">
-              <BookText /> Komik Digital
-            </h2>
-            <Card>
-              <CardContent className="p-6">
-                <Carousel className="w-full">
-                  <CarouselContent>
-                    {Array.from({ length: 5 }).map((_, index) => (
-                      <CarouselItem key={index}>
-                        <div className="relative aspect-video overflow-hidden rounded-lg bg-muted">
-                          <Image
-                            src={`https://picsum.photos/seed/${story.id}-${index}/800/450`}
-                            alt={`Comic page ${index + 1}`}
-                            fill
-                            className="object-cover"
-                            data-ai-hint="comic illustration"
-                          />
-                          <div className="absolute bottom-2 right-2 rounded-md bg-background/80 px-2 py-1 text-xs text-foreground">
-                            Page {index + 1}
-                          </div>
-                        </div>
-                      </CarouselItem>
-                    ))}
-                  </CarouselContent>
-                  <CarouselPrevious className="hidden sm:flex" />
-                  <CarouselNext className="hidden sm:flex" />
-                </Carousel>
               </CardContent>
             </Card>
           </section>
