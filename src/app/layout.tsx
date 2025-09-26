@@ -8,7 +8,7 @@ import ChatbotFab from '@/components/chatbot-fab';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 export const metadata: Metadata = {
-  title: 'Aceh Voice',
+  title: 'Wave of Voice',
   description:
     'A platform for sharing stories of resilience, wisdom, and peace from Aceh.',
 };

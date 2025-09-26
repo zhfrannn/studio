@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
           <div className="flex items-center gap-2">
             <WaveMascot className="h-8 w-8 text-primary" />
-            <span className="font-headline text-xl font-bold">Aceh Voice</span>
+            <span className="font-headline text-xl font-bold">Wave of Voice</span>
           </div>
           <nav className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground md:gap-6">
             <Link href="/" className="hover:text-primary">
@@ -28,7 +28,7 @@ const Footer = () => {
             </Link>
           </nav>
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Aceh Voice. All Rights Reserved.
+            &copy; {new Date().getFullYear()} Wave of Voice. All Rights Reserved.
           </p>
         </div>
       </div>

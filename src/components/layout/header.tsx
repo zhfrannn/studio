@@ -12,7 +12,7 @@ const Header = () => {
         <Link href="/" className="mr-8 flex items-center gap-2">
           <WaveMascot className="h-8 w-8 text-primary" />
           <span className="font-headline text-xl font-bold text-foreground">
-            Aceh Voice
+            Wave of Voice
           </span>
         </Link>
         <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
