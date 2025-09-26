@@ -2,8 +2,23 @@ import { notFound } from 'next/navigation';
 import { stories } from '@/lib/data';
 import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
-import { Card, CardContent } from '@/components/ui/card';
-import { Film, BookText, Puzzle, Calendar, User } from 'lucide-react';
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from '@/components/ui/card';
+import {
+  Film,
+  BookText,
+  Puzzle,
+  Calendar,
+  User,
+  PlayCircle,
+  Info,
+} from 'lucide-react';
 import {
   Carousel,
   CarouselContent,
@@ -47,36 +62,33 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
 
         <div className="space-y-12">
           <section>
-            <h2 className="mb-4 flex items-center gap-2 font-headline text-2xl">
-              <Film /> Video Edukasi
-            </h2>
             <Card>
-              <CardContent className="p-2">
+              <CardHeader>
+                <div className="flex items-start gap-4">
+                  <PlayCircle className="h-8 w-8 flex-shrink-0 text-yellow-500" />
+                  <div>
+                    <CardTitle className="text-2xl">
+                      Video Edukasi: Sistem Pengetahuan Tradisional
+                    </CardTitle>
+                    <CardDescription>
+                      Temukan bagaimana sistem pengetahuan adat melengkapi ilmu
+                      pengetahuan modern dalam kesiapsiagaan bencana.
+                    </CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent className="px-6 pt-0">
                 {story.id === 'smong-selamat-dari-lautan' ? (
                   <div
+                    className="relative w-full overflow-hidden rounded-lg"
                     style={{
-                      position: 'relative',
-                      width: '100%',
-                      height: 0,
-                      paddingTop: '56.2500%',
-                      paddingBottom: 0,
+                      paddingTop: '56.25%',
                       boxShadow: '0 2px 8px 0 rgba(63,69,81,0.16)',
-                      overflow: 'hidden',
-                      borderRadius: '8px',
                     }}
                   >
                     <iframe
                       loading="lazy"
-                      style={{
-                        position: 'absolute',
-                        width: '100%',
-                        height: '100%',
-                        top: 0,
-                        left: 0,
-                        border: 'none',
-                        padding: 0,
-                        margin: 0,
-                      }}
+                      className="absolute top-0 left-0 h-full w-full border-0"
                       src="https://www.canva.com/design/DAGy2A4uKKg/oKxoc_2wvJT-q7amzHQQWA/watch?embed"
                       allowFullScreen
                       allow="fullscreen"
@@ -90,6 +102,16 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
                   </div>
                 )}
               </CardContent>
+              <CardFooter>
+                <div className="flex w-full items-start gap-3 rounded-lg bg-yellow-50 p-4 dark:bg-yellow-900/20">
+                  <Info className="h-5 w-5 flex-shrink-0 text-yellow-600 dark:text-yellow-400" />
+                  <p className="text-sm text-yellow-800 dark:text-yellow-300">
+                    Video ini mengeksplorasi bagaimana sistem pengetahuan
+                    tradisional seperti Smong bekerja bersama sistem peringatan
+                    dini modern untuk melindungi masyarakat.
+                  </p>
+                </div>
+              </CardFooter>
             </Card>
           </section>
 
