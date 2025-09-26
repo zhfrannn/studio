@@ -25,6 +25,7 @@ import {
   ChevronsUp,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import InteractiveQuiz from '@/components/interactive-quiz';
 
 const comicData = [
   {
@@ -229,16 +230,22 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
           </section>
 
           <section>
-            <h2 className="mb-4 flex items-center gap-2 font-headline text-2xl">
-              <Puzzle /> Kuis Interaktif
-            </h2>
-            <Card>
-              <CardContent className="p-6 text-center">
-                <p className="text-muted-foreground">
-                  Placeholder for a gamified quiz to test understanding.
-                </p>
-              </CardContent>
-            </Card>
+            {story.id === 'smong-selamat-dari-lautan' ? (
+               <InteractiveQuiz />
+            ) : (
+            <>
+              <h2 className="mb-4 flex items-center gap-2 font-headline text-2xl">
+                <Puzzle /> Kuis Interaktif
+              </h2>
+              <Card>
+                <CardContent className="p-6 text-center">
+                  <p className="text-muted-foreground">
+                    Placeholder for a gamified quiz to test understanding.
+                  </p>
+                </CardContent>
+              </Card>
+             </>
+            )}
           </section>
         </div>
       </div>
