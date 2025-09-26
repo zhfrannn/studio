@@ -30,6 +30,7 @@ import ShareStoryForm from '@/components/share-story-form';
 import { Separator } from '@/components/ui/separator';
 import MotionWrapper from '@/components/motion-wrapper';
 import SplitText from '@/components/ui/split-text';
+import LogoLoop from '@/components/ui/logo-loop';
 
 export default function Home() {
   const featuredStory = stories[0];
@@ -423,29 +424,29 @@ export default function Home() {
       <MotionWrapper as="section" className="container mx-auto px-4 text-center">
         <Separator className="mx-auto mb-8 w-1/2" />
         <p className="font-semibold text-muted-foreground">Didukung oleh</p>
-        <div className="mt-4 flex flex-wrap items-center justify-center gap-8 opacity-60">
-          <Image
-            src="https://firebasestorage.googleapis.com/v0/b/firebase-studio-bots.appspot.com/o/imagereader%2Fomni-studio-box%2F09a96f13-7eda-4d1a-ac5d-4f11e9f0868f?alt=media&token=e1f76d91-3720-4355-9017-802c0182834b"
-            alt="Universitas Syiah Kuala Logo"
-            width={120}
-            height={120}
-            className="h-20 w-auto"
-          />
-          <Image
-            src="https://firebasestorage.googleapis.com/v0/b/firebase-studio-bots.appspot.com/o/imagereader%2Fomni-studio-box%2F09a96f13-7eda-4d1a-ac5d-4f11e9f0868f?alt=media&token=e1f76d91-3720-4355-9017-802c0182834b"
-            alt="Universitas Syiah Kuala Logo"
-            width={120}
-            height={120}
-            className="h-20 w-auto"
-          />
-          <Image
-            src="https://firebasestorage.googleapis.com/v0/b/firebase-studio-bots-dev.appspot.com/o/imagereader%2Fomni-studio-box%2F1bc132b3-57a4-44a3-8a85-e11516e45f94?alt=media&token=40422c54-4740-424a-aa47-493a7a9a149c"
-            alt="Universitas Syiah Kuala Logo"
-            width={120}
-            height={120}
-            className="h-20 w-auto"
-          />
-        </div>
+        <LogoLoop>
+            <Image
+              src="https://firebasestorage.googleapis.com/v0/b/firebase-studio-bots.appspot.com/o/imagereader%2Fomni-studio-box%2F09a96f13-7eda-4d1a-ac5d-4f11e9f0868f?alt=media&token=e1f76d91-3720-4355-9017-802c0182834b"
+              alt="Universitas Syiah Kuala Logo"
+              width={120}
+              height={120}
+              className="h-20 w-auto"
+            />
+            <Image
+              src="https://firebasestorage.googleapis.com/v0/b/firebase-studio-bots.appspot.com/o/imagereader%2Fomni-studio-box%2F09a96f13-7eda-4d1a-ac5d-4f11e9f0868f?alt=media&token=e1f76d91-3720-4355-9017-802c0182834b"
+              alt="Universitas Syiah Kuala Logo"
+              width={120}
+              height={120}
+              className="h-20 w-auto"
+            />
+            <Image
+              src="https://firebasestorage.googleapis.com/v0/b/firebase-studio-bots-dev.appspot.com/o/imagereader%2Fomni-studio-box%2F1bc132b3-57a4-44a3-8a85-e11516e45f94?alt=media&token=40422c54-4740-424a-aa47-493a7a9a149c"
+              alt="Universitas Syiah Kuala Logo"
+              width={120}
+              height={120}
+              className="h-20 w-auto"
+            />
+        </LogoLoop>
       </MotionWrapper>
     </div>
   );

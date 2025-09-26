@@ -86,3 +86,36 @@
 .split-text-container {
   text-wrap: balance;
 }
+
+/* LogoLoop styles */
+.logo-loop-container {
+  @apply relative mt-8 flex overflow-hidden opacity-60;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+
+.logo-loop-content {
+  @apply flex flex-shrink-0 items-center justify-around gap-16;
+  animation: logo-scroll 40s linear infinite;
+}
+
+@keyframes logo-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
