@@ -29,6 +29,7 @@ import { Badge } from '@/components/ui/badge';
 import ShareStoryForm from '@/components/share-story-form';
 import { Separator } from '@/components/ui/separator';
 import MotionWrapper from '@/components/motion-wrapper';
+import SplitText from '@/components/ui/split-text';
 
 export default function Home() {
   const featuredStory = stories[0];
@@ -102,9 +103,10 @@ export default function Home() {
 
       <MotionWrapper as="section" className="container mx-auto px-4">
         <div className="mx-auto mb-12 max-w-3xl space-y-2 text-center">
-          <h2 className="font-headline text-3xl md:text-4xl">
-            Cara Kerjanya
-          </h2>
+          <SplitText
+            text="Cara Kerjanya"
+            className="font-headline text-3xl md:text-4xl"
+          />
           <p className="text-muted-foreground">
             Arsitektur tiga lapis yang mengubah cerita pribadi menjadi alat
             edukasi yang kuat.
@@ -172,9 +174,12 @@ export default function Home() {
         <div className="overflow-hidden rounded-xl border bg-card shadow-lg">
           <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
             <div className="space-y-6 p-8 md:p-12">
-              <h2 className="font-headline text-3xl md:text-4xl">Mengapa Ini Penting</h2>
+              <SplitText
+                text="Mengapa Ini Penting"
+                className="font-headline text-3xl md:text-4xl"
+              />
               <p className="text-muted-foreground">
-                "Suara Samudra" bukan hanya tentang SOP bencana. Ini tentang melestarikan memori kolektif, memperkuat rasa memiliki, dan membangun ketahanan serta komunikasi perdamaian yang relevan dengan konteks di Aceh pasca-tsunami dan pasca-konflik.
+                "Wave of Voice" bukan hanya tentang SOP bencana. Ini tentang melestarikan memori kolektif, memperkuat rasa memiliki, dan membangun ketahanan serta komunikasi perdamaian yang relevan dengan konteks di Aceh pasca-tsunami dan pasca-konflik.
               </p>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
@@ -213,9 +218,10 @@ export default function Home() {
 
       <MotionWrapper as="section" className="container mx-auto space-y-12 px-4">
         <div className="mx-auto max-w-2xl space-y-2 text-center">
-          <h2 className="font-headline text-3xl md:text-4xl">
-            Jelajahi Cerita
-          </h2>
+          <SplitText
+            text="Jelajahi Cerita"
+            className="font-headline text-3xl md:text-4xl"
+          />
           <p className="text-muted-foreground">
             Narasi personal dari penyintas tsunami, pekerja pemulihan, dan
             pembangun perdamaian.
@@ -233,9 +239,10 @@ export default function Home() {
         </div>
 
         <div>
-          <h3 className="mb-8 text-center font-headline text-2xl md:text-3xl">
-            Cerita Unggulan
-          </h3>
+           <SplitText
+            text="Cerita Unggulan"
+            className="mb-8 text-center font-headline text-2xl md:text-3xl"
+            />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {stories.slice(0, 3).map((story, i) => (
               <MotionWrapper key={story.id} delay={i * 0.1}>
@@ -256,9 +263,10 @@ export default function Home() {
 
       <MotionWrapper as="section" className="container mx-auto px-4">
         <div className="mx-auto mb-12 max-w-3xl space-y-2 text-center">
-          <h2 className="font-headline text-3xl md:text-4xl">
-            Pembelajaran Interaktif
-          </h2>
+          <SplitText
+            text="Pembelajaran Interaktif"
+            className="font-headline text-3xl md:text-4xl"
+          />
           <p className="text-muted-foreground">
             Alami cerita melalui berbagai format menarik.
           </p>
@@ -362,9 +370,10 @@ export default function Home() {
           />
           <div className="relative grid items-center gap-8 p-12 md:grid-cols-2">
             <MotionWrapper className="space-y-4" delay={0.1}>
-              <h2 className="font-headline text-3xl md:text-4xl">
-                Community EduBoards
-              </h2>
+              <SplitText
+                text="Community EduBoards"
+                className="font-headline text-3xl md:text-4xl"
+              />
               <p>
                 Papan interaktif fisik dipasang di ruang komunitas (masjid,
                 sekolah, warung kopi) yang menjembatani arsip digital melalui
@@ -397,9 +406,10 @@ export default function Home() {
 
       <MotionWrapper as="section" id="share-story" className="container mx-auto px-4">
         <div className="mx-auto mb-12 max-w-3xl space-y-2 text-center">
-          <h2 className="font-headline text-3xl md:text-4xl">
-            Bagikan Ceritamu
-          </h2>
+          <SplitText
+            text="Bagikan Ceritamu"
+            className="font-headline text-3xl md:text-4xl"
+          />
           <p className="text-muted-foreground">
             Pengalaman Anda sangat berarti. Bantu membangun memori kolektif dan
             ketahanan Aceh.
