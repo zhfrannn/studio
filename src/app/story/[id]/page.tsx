@@ -52,11 +52,43 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
             </h2>
             <Card>
               <CardContent className="p-2">
-                <div className="flex aspect-video items-center justify-center rounded-lg bg-muted">
-                  <p className="text-muted-foreground">
-                    Video player placeholder
-                  </p>
-                </div>
+                {story.id === 'smong-selamat-dari-lautan' ? (
+                  <div
+                    style={{
+                      position: 'relative',
+                      width: '100%',
+                      height: 0,
+                      paddingTop: '56.2500%',
+                      paddingBottom: 0,
+                      boxShadow: '0 2px 8px 0 rgba(63,69,81,0.16)',
+                      overflow: 'hidden',
+                      borderRadius: '8px',
+                    }}
+                  >
+                    <iframe
+                      loading="lazy"
+                      style={{
+                        position: 'absolute',
+                        width: '100%',
+                        height: '100%',
+                        top: 0,
+                        left: 0,
+                        border: 'none',
+                        padding: 0,
+                        margin: 0,
+                      }}
+                      src="https://www.canva.com/design/DAGy2A4uKKg/oKxoc_2wvJT-q7amzHQQWA/watch?embed"
+                      allowFullScreen
+                      allow="fullscreen"
+                    ></iframe>
+                  </div>
+                ) : (
+                  <div className="flex aspect-video items-center justify-center rounded-lg bg-muted">
+                    <p className="text-muted-foreground">
+                      Video player placeholder
+                    </p>
+                  </div>
+                )}
               </CardContent>
             </Card>
           </section>
