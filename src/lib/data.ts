@@ -50,22 +50,6 @@ export const stories: Story[] = [
     status: 'published',
   },
   {
-    id: 'pasar-terapung-ilmu-dagang',
-    title: 'Pasar Terapung dan Ilmu Dagang Leluhur',
-    author: 'Nek Maryam, Aceh Singkil',
-    location: { name: 'Aceh Singkil', lat: 2.28, lng: 97.77 },
-    summary:
-      'Kisah tentang tradisi perdagangan di pasar terapung yang mengajarkan nilai-nilai kejujuran, kerja keras, dan adaptasi ekonomi dari generasi ke generasi.',
-    fullText:
-      'Sejak saya kecil, sungai adalah hidup kami. Ayah saya adalah seorang pedagang di pasar terapung. Ia mengajari saya segalanya: bagaimana memilih hasil bumi terbaik, bagaimana menawar dengan sopan, dan yang terpenting, bagaimana menjaga kepercayaan. "Kepercayaan lebih berharga dari emas," katanya. Di atas perahu-perahu kecil, kami tidak hanya menjual barang, kami membangun hubungan. Kini, zaman telah berubah. Tapi nilai-nilai itu tetap kami pegang. Kami belajar menggunakan teknologi untuk menjual hasil panen, tapi kami tidak pernah melupakan pentingnya tatap muka dan kejujuran. Pasar terapung mungkin terlihat kuno, tapi di dalamnya tersimpan ilmu ekonomi yang tak lekang oleh waktu.',
-    aiThemes: ['Local Wisdom'],
-    media: {
-      featuredImage: 'https://picsum.photos/seed/4/800/600',
-      featuredImageHint: 'local market',
-    },
-    status: 'published',
-  },
-  {
     id: 'lumbung-padi-komunal',
     title: 'Lumbung Padi Komunal: Gotong Royong Hadapi Paceklik',
     author: 'Pak Giman, Gayo Lues',
@@ -78,6 +62,54 @@ export const stories: Story[] = [
     media: {
       featuredImage: 'https://picsum.photos/seed/5/800/600',
       featuredImageHint: 'mountain village',
+    },
+    status: 'published',
+  },
+  {
+    id: 'bah-tangse-belajar-dari-air-bah',
+    title: 'Bah Tangse: Belajar dari Air Bah',
+    author: 'Komunitas Tangse, Pidie',
+    location: { name: 'Pidie', lat: 5.37, lng: 95.96 },
+    summary:
+      'Mengenang banjir bandang "Bah Tangse" di Pidie sebagai pelajaran berharga tentang pentingnya menjaga kelestarian hutan dan mengenali tanda-tanda alam.',
+    fullText:
+      'Orang-orang tua di Tangse selalu mengingatkan kami, "jaga gunong, gunong jaga tanyoe" (jaga gunung, gunung jaga kita). Tapi kami sempat lalai. Hutan di hulu sungai banyak yang ditebang. Suatu malam di tahun 2011, hujan turun tanpa henti. Air sungai Krueng Tangse meluap dengan cepat, membawa kayu-kayu gelondongan besar. Air bah itu dahsyat, menghanyutkan rumah dan jembatan. Kami semua panik. Itu adalah pelajaran yang sangat mahal. Sejak saat itu, kami bekerja sama menghijaukan kembali area hulu. Kami belajar bahwa bencana tidak datang tiba-tiba, seringkali ada andil manusia di dalamnya. Menjaga alam adalah cara terbaik untuk menjaga hidup kami.',
+    aiThemes: ['Disaster Preparedness', 'Local Wisdom'],
+    media: {
+      featuredImage: 'https://picsum.photos/seed/6/800/600',
+      featuredImageHint: 'raging river',
+    },
+    status: 'published',
+  },
+  {
+    id: 'api-di-bukit-barisan',
+    title: 'Api di Bukit Barisan',
+    author: 'Masyarakat Peduli Api, Aceh Tengah',
+    location: { name: 'Aceh Tengah', lat: 4.62, lng: 96.85 },
+    summary:
+      'Kisah perjuangan Masyarakat Peduli Api di dataran tinggi Gayo dalam mencegah dan memadamkan kebakaran hutan, melindungi ekosistem Leuser yang berharga.',
+    fullText:
+      'Setiap musim kemarau, hati kami selalu was-was. Hutan pinus di sekitar kami ini indah, tapi juga sangat rentan terbakar. Sedikit saja percikan api, bisa menjadi bencana besar. Kami membentuk kelompok "Masyarakat Peduli Api". Kami berpatroli secara sukarela, membuat sekat bakar, dan yang terpenting, memberikan penyuluhan kepada warga agar tidak membuka lahan dengan cara membakar. Ini bukan pekerjaan pemerintah, ini adalah tanggung jawab kami bersama. Hutan ini adalah sumber air kami, rumah bagi satwa liar, dan warisan untuk anak cucu kami. Memadamkan api sebelum membesar adalah cara kami membangun perdamaian dengan alam.',
+    aiThemes: ['Disaster Preparedness', 'Peacebuilding'],
+    media: {
+      featuredImage: 'https://picsum.photos/seed/7/800/600',
+      featuredImageHint: 'forest fire',
+    },
+    status: 'published',
+  },
+  {
+    id: 'kopi-gayo-aroma-perdamaian',
+    title: 'Kopi Gayo: Aroma Perdamaian',
+    author: 'Petani Kopi, Bener Meriah',
+    location: { name: 'Bener Meriah', lat: 4.72, lng: 96.86 },
+    summary:
+      'Bagaimana kebun kopi di Bener Meriah yang sempat ditinggalkan karena konflik, kini menjadi motor penggerak ekonomi dan simbol harapan baru bagi masyarakat.',
+    fullText:
+      'Dulu di masa konflik, banyak dari kami yang terpaksa meninggalkan kebun kopi. Kebun-kebun itu telantar, ditumbuhi semak belukar. Setelah damai, kami kembali. Memulainya lagi dari nol sangat berat. Tapi, kami melihat harapan pada biji-biji kopi ini. Kami bekerja keras, belajar teknik menanam yang lebih baik, dan membangun koperasi bersama. Perlahan tapi pasti, kopi Gayo mulai dikenal dunia. Aroma kopi yang kami olah setiap pagi bukan hanya aroma minuman, tapi juga aroma perdamaian dan kerja keras. Kebun kopi ini telah menyatukan kami kembali, memberikan pekerjaan, dan memungkinkan kami menyekolahkan anak-anak. Kopi telah menyembuhkan luka kami.',
+    aiThemes: ['Peacebuilding', 'Local Wisdom'],
+    media: {
+      featuredImage: 'https://picsum.photos/seed/8/800/600',
+      featuredImageHint: 'coffee beans',
     },
     status: 'published',
   },
