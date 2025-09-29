@@ -113,4 +113,132 @@ export const stories: Story[] = [
     },
     status: 'published',
   },
+  {
+    id: 'pemuda-penjaga-adat',
+    title: 'Pemuda Penjaga Adat',
+    author: 'Sanggar Seni Seudati, Pidie',
+    location: { name: 'Pidie', lat: 5.37, lng: 95.96 },
+    summary:
+      'Sekelompok pemuda di Pidie menghidupkan kembali tari Seudati sebagai cara untuk menjauhkan anak muda dari kekerasan dan memperkuat identitas budaya pasca-konflik.',
+    fullText:
+      'Setelah perdamaian, banyak anak muda yang kehilangan arah. Energi mereka yang besar terkadang tersalurkan ke hal-hal negatif. Kami, beberapa pemuda yang lebih tua, merasa harus melakukan sesuatu. Kami memutuskan untuk menghidupkan kembali sanggar tari Seudati. Tarian ini bukan sekadar gerakan, tapi juga mengajarkan disiplin, kerja sama tim, dan berisi syair-syair nasihat. Awalnya tidak mudah menarik minat mereka. Tapi dengan kesabaran, sanggar kami mulai ramai. Energi mereka kini tersalurkan untuk melestarikan budaya. Melalui tarian, kami membangun jembatan antar desa dan menciptakan ruang yang aman bagi pemuda untuk berekspresi secara positif.',
+    aiThemes: ['Peacebuilding', 'Local Wisdom'],
+    media: {
+      featuredImage: 'https://picsum.photos/seed/9/800/600',
+      featuredImageHint: 'traditional dance',
+    },
+    status: 'published',
+  },
+  {
+    id: 'perempuan-penganyam-harapan',
+    title: 'Perempuan Penganyam Harapan',
+    author: 'Kelompok Kerajinan Ibu, Aceh Besar',
+    location: { name: 'Aceh Besar', lat: 5.37, lng: 95.52 },
+    summary:
+      'Kisah para janda korban tsunami yang bangkit dari keterpurukan dengan membentuk kelompok kerajinan anyaman, menciptakan kemandirian ekonomi dan ruang penyembuhan.',
+    fullText:
+      'Tsunami merenggut suami dan rumah kami. Kami ditinggalkan dengan duka dan ketidakpastian. Untuk bertahan hidup, kami mulai berkumpul dan melakukan apa yang kami bisa: menganyam. Kami menggunakan daun pandan yang tumbuh melimpah di sekitar kami. Sambil menganyam, kami berbagi cerita, saling menguatkan. Anyaman ini bukan sekadar tikar atau tas, ini adalah terapi bagi kami. Perlahan, produk kami mulai dikenal. Pesanan datang, dan kami mendapatkan penghasilan sendiri. Kami tidak lagi hanya korban, kami adalah penyintas yang berdaya. Kelompok ini menjadi keluarga baru kami, tempat kami menenun kembali harapan untuk masa depan.',
+    aiThemes: ['Peacebuilding', 'Local Wisdom'],
+    media: {
+      featuredImage: 'https://picsum.photos/seed/10/800/600',
+      featuredImageHint: 'woven crafts',
+    },
+    status: 'published',
+  },
+  {
+    id: 'arsitektur-rumah-panggung',
+    title: 'Rumah Panggung: Belajar dari Nenek Moyang',
+    author: 'Arsitek Komunitas, Banda Aceh',
+    location: { name: 'Banda Aceh', lat: 5.55, lng: 95.32 },
+    summary:
+      'Menggali kembali kearifan arsitektur tradisional Aceh, Rumoh Aceh, sebagai inspirasi untuk membangun rumah yang lebih tahan gempa dan adaptif terhadap lingkungan.',
+    fullText:
+      'Saat gempa dan tsunami menghancurkan begitu banyak bangunan modern, kami melihat banyak Rumoh Aceh (rumah tradisional Aceh) yang masih berdiri kokoh. Ini membuka mata kami. Arsitektur nenek moyang kita ternyata luar biasa. Rumah panggung dengan konstruksi kayu yang fleksibel mampu meredam guncangan gempa. Kolong di bawah rumah tidak hanya berfungsi sebagai ruang serbaguna, tetapi juga memberikan jalan bagi air jika terjadi banjir atau genangan. Kami mulai mengadvokasikan dan membangun kembali rumah dengan mengadaptasi prinsip-prinsip Rumoh Aceh. Ini bukan tentang kembali ke masa lalu, tapi mengambil pelajaran terbaik dari masa lalu untuk membangun masa depan yang lebih aman.',
+    aiThemes: ['Local Wisdom', 'Disaster Preparedness'],
+    media: {
+      featuredImage: 'https://picsum.photos/seed/11/800/600',
+      featuredImageHint: 'traditional house',
+    },
+    status: 'published',
+  },
+  {
+    id: 'seni-melawan-trauma',
+    title: 'Seni Melawan Trauma',
+    author: 'Komunitas Mural, Banda Aceh',
+    location: { name: 'Banda Aceh', lat: 5.55, lng: 95.32 },
+    summary:
+      'Bagaimana para seniman muda di Banda Aceh menggunakan mural dan seni jalanan untuk mengubah dinding-dinding bekas tsunami menjadi kanvas harapan dan ingatan kolektif.',
+    fullText:
+      'Banda Aceh pasca-tsunami penuh dengan dinding-dinding bisu yang menjadi saksi tragedi. Suasananya terasa berat. Sebagai seniman, kami merasa terpanggil untuk melakukan sesuatu. Kami mulai melukis mural di dinding-dinding publik. Bukan untuk menghapus ingatan, tapi untuk memberinya warna baru. Kami melukis tentang harapan, ketahanan, kebersamaan, dan keindahan Aceh. Proses melukis bersama ini menjadi terapi bagi kami dan juga masyarakat. Anak-anak ikut bergabung. Dinding yang dulu suram kini menjadi galeri terbuka yang menceritakan kisah kebangkitan kami. Seni menjadi cara kami menyembuhkan luka kota dan jiwa kami.',
+    aiThemes: ['Peacebuilding'],
+    media: {
+      featuredImage: 'https://picsum.photos/seed/12/800/600',
+      featuredImageHint: 'street art mural',
+    },
+    status: 'published',
+  },
+  {
+    id: 'nelayan-dan-tanda-alam',
+    title: 'Kearifan Nelayan dan Tanda-tanda Alam',
+    author: 'Pak Hamdan, Pelabuhan Lampulo',
+    location: { name: 'Banda Aceh', lat: 5.55, lng: 95.32 },
+    summary:
+      'Kisah nelayan tradisional di Banda Aceh yang mengandalkan pengetahuan turun-temurun tentang rasi bintang, angin, dan perilaku ikan untuk melaut dengan aman.',
+    fullText:
+      'Kami para nelayan tidak punya GPS canggih. Kompas kami adalah langit dan laut itu sendiri. Ayah saya mengajari saya cara membaca rasi bintang Orion, atau "Bintang Tiga" seperti yang kami sebut, untuk mengetahui arah pulang. Kami tahu kapan waktu ikan berkumpul hanya dengan melihat warna air dan jenis burung yang terbang di atasnya. Jika lumba-lumba berenang mendekati pantai, itu pertanda cuaca akan buruk. Pengetahuan ini tidak ada di buku, ini diwariskan dari ayah ke anak, dari satu generasi nelayan ke generasi berikutnya. Ini adalah ilmu kehidupan yang membuat kami bisa bersahabat dengan lautan.',
+    aiThemes: ['Local Wisdom'],
+    media: {
+      featuredImage: 'https://picsum.photos/seed/13/800/600',
+      featuredImageHint: 'fishing boats',
+    },
+    status: 'published',
+  },
+  {
+    id: 'sumur-tua-sumber-kehidupan',
+    title: 'Sumur Tua, Sumber Kehidupan Saat Kekeringan',
+    author: 'Warga Desa Blang, Aceh Utara',
+    location: { name: 'Aceh Utara', lat: 5.01, lng: 97.23 },
+    summary:
+      'Kisah tentang bagaimana sebuah sumur tua warisan leluhur menjadi satu-satunya sumber air yang bertahan saat desa dilanda kekeringan panjang.',
+    fullText:
+      'Musim kemarau tahun itu sangat panjang. Sungai mengering, sumur-sumur modern kami pun ikut kering. Kami mulai putus asa. Lalu seorang tetua desa teringat akan sebuah sumur tua yang sudah lama tidak digunakan di pinggir hutan. Sumur itu dibangun dengan cincin batu dan ditutupi oleh pohon besar. Dengan ragu, kami membersihkannya. Ajaib, di dasarnya masih ada air yang jernih dan tidak pernah kering! Ternyata, leluhur kami membangun sumur itu tepat di atas mata air yang besar. Sumur tua itu menyelamatkan desa kami. Kami belajar bahwa teknologi modern tidak selalu lebih baik. Ada kearifan dalam peninggalan masa lalu yang harus kami jaga.',
+    aiThemes: ['Local Wisdom', 'Disaster Preparedness'],
+    media: {
+      featuredImage: 'https://picsum.photos/seed/14/800/600',
+      featuredImageHint: 'old well',
+    },
+    status: 'published',
+  },
+  {
+    id: 'ilmu-falak-di-pesantren',
+    title: 'Ilmu Falak di Dayah: Navigasi Lautan dan Langit',
+    author: 'Tengku Abdullah, Samalanga',
+    location: { name: 'Bireuen', lat: 5.2, lng: 96.7 },
+    summary:
+      'Mengungkap bagaimana pesantren (dayah) di Aceh tidak hanya mengajarkan ilmu agama, tetapi juga ilmu falak (astronomi) yang digunakan nelayan untuk navigasi.',
+    fullText:
+      'Banyak yang mengira dayah hanya tempat belajar Al-Quran. Tapi sejak dulu, kami juga mempelajari Ilmu Falak. Kami menghitung posisi bintang untuk menentukan awal bulan puasa, dan juga arah kiblat. Ternyata, ilmu yang sama juga sangat bermanfaat bagi para nelayan di pesisir. Para santri yang pulang ke kampungnya sering menjadi rujukan. Mereka bisa memberitahu kapan pasang surut tertinggi, atau di mana posisi bintang utara. Ada hubungan erat antara langit dan laut, antara ilmu agama dan ilmu kehidupan. Di sini, kami belajar bahwa semua ilmu berasal dari Tuhan dan bisa dimanfaatkan untuk kebaikan bersama, baik di darat maupun di lautan.',
+    aiThemes: ['Local Wisdom'],
+    media: {
+      featuredImage: 'https://picsum.photos/seed/15/800/600',
+      featuredImageHint: 'starry night',
+    },
+    status: 'published',
+  },
+  {
+    id: 'pasar-sebagai-ruang-sosial',
+    title: 'Pasar Pagi: Lebih dari Sekadar Jual Beli',
+    author: 'Ibu Aminah, Pedagang Pasar Peunayong',
+    location: { name: 'Banda Aceh', lat: 5.55, lng: 95.32 },
+    summary:
+      'Pasar tradisional bukan hanya tempat transaksi ekonomi, tetapi juga jantung sosial komunitas, tempat informasi disebarkan dan ikatan sosial diperkuat.',
+    fullText:
+      'Saya sudah berdagang di pasar ini sejak muda. Bagi kami, pasar bukan hanya tempat mencari uang. Di sinilah kami bertemu teman, bertukar kabar, dan berbagi cerita. Jika ada kabar tentang akan ada bantuan, atau lowongan kerja, informasi itu menyebar cepat di pasar. Bahkan saat ada isu-isu yang meresahkan, kami bisa saling menenangkan di sini. Pasar adalah barometer sosial. Dari obrolan di warung kopi pasar, kita bisa tahu apa yang sedang dirasakan masyarakat. Menjaga pasar tradisional tetap hidup sama dengan menjaga denyut nadi komunitas kami.',
+    aiThemes: ['Local Wisdom', 'Peacebuilding'],
+    media: {
+      featuredImage: 'https://picsum.photos/seed/16/800/600',
+      featuredImageHint: 'traditional market',
+    },
+    status: 'published',
+  },
 ];
