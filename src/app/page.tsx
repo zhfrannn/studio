@@ -22,6 +22,7 @@ import {
   Download,
   Play,
   Share2,
+  Puzzle,
 } from 'lucide-react';
 import InteractiveMap from '@/components/interactive-map';
 import { Progress } from '@/components/ui/progress';
@@ -263,102 +264,58 @@ export default function Home() {
       </MotionWrapper>
 
       <MotionWrapper as="section" className="container mx-auto px-4">
-        <div className="mx-auto mb-12 max-w-3xl space-y-2 text-center">
-          <SplitText
-            text="Pembelajaran Interaktif"
-            className="font-headline text-3xl md:text-4xl"
-          />
-          <p className="text-muted-foreground">
-            Alami cerita melalui berbagai format menarik.
-          </p>
-        </div>
+      <div className="mx-auto mb-12 max-w-3xl space-y-2 text-center">
+        <SplitText
+          text="Pembelajaran Interaktif"
+          className="font-headline text-3xl md:text-4xl"
+        />
+        <p className="text-muted-foreground">
+          Alami cerita melalui berbagai format menarik yang dirancang untuk
+          memperdalam pemahaman dan keterlibatan Anda.
+        </p>
+      </div>
 
-        <div className="grid gap-8 lg:grid-cols-2">
-          <MotionWrapper delay={0.1}>
-            <Card className="flex flex-col">
-              <CardHeader className="flex flex-row items-start gap-4">
-                <BookOpen className="mt-1 h-6 w-6 text-primary" />
-                <div>
-                  <CardTitle>Komik Digital</CardTitle>
-                  <CardDescription>
-                    Cerita diubah menjadi narasi visual yang menjaga kebenaran
-                    emosional.
-                  </CardDescription>
-                </div>
-              </CardHeader>
-              <CardContent className="flex-grow space-y-4">
-                <div className="aspect-video w-full overflow-hidden rounded-lg bg-muted">
-                  <Image
-                    src="https://picsum.photos/seed/comic-placeholder/800/450"
-                    width={800}
-                    height={450}
-                    alt="Digital Comic Placeholder"
-                    className="h-full w-full object-cover"
-                    data-ai-hint="comic illustration"
-                  />
-                </div>
-                <Button variant="outline">
-                  Lihat Komik <ArrowRight />
-                </Button>
-              </CardContent>
-            </Card>
-          </MotionWrapper>
-          <MotionWrapper delay={0.2}>
-            <Card className="flex flex-col">
-              <CardHeader className="flex flex-row items-start gap-4">
-                <Film className="mt-1 h-6 w-6 text-primary" />
-                <div>
-                  <CardTitle>Video Edukasi</CardTitle>
-                  <CardDescription>
-                    Narasi orang pertama dihidupkan dengan suara dan suasana Aceh.
-                  </CardDescription>
-                </div>
-              </CardHeader>
-              <CardContent className="flex-grow space-y-4">
-                <div className="flex aspect-video w-full items-center justify-center rounded-lg bg-muted p-4">
-                  <div className="w-full text-center">
-                    <p className="text-sm font-semibold">Manusia Aceh</p>
-                    <div className="my-4 h-8 w-full animate-pulse rounded-full bg-primary/20" />
-                    <p className="text-xs text-muted-foreground">
-                      audio visual placeholder
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Button>
-                    <Play /> Putar
-                  </Button>
-                  <Button variant="outline">
-                    <Download /> Unduh
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          </MotionWrapper>
-        </div>
-        <MotionWrapper className="mt-8" delay={0.3}>
-          <Card>
-            <CardHeader className="flex-row items-start gap-4">
-              <RefreshCw className="mt-1 h-6 w-6 text-primary" />
+      <Card className="overflow-hidden">
+        <div className="grid md:grid-cols-2">
+          <CardContent className="space-y-6 p-8 md:p-12">
+            <div className="flex items-start gap-4">
+              <div className="mt-1 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                <Puzzle className="h-6 w-6 text-primary" />
+              </div>
               <div>
-                <CardTitle>Simulasi Ketahanan</CardTitle>
-                <CardDescription>
-                  Uji pemahaman Anda melalui simulasi berbasis cerita.
-                </CardDescription>
+                <h3 className="font-headline text-xl">
+                  Kuis, Komik & Video
+                </h3>
+                <p className="text-muted-foreground">
+                  Uji pengetahuan Anda dengan kuis, selami narasi visual
+                  dengan komik, dan tonton kisah nyata yang menjadi hidup.
+                </p>
               </div>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="space-y-2">
-                <p className="text-sm font-medium">Progres</p>
-                <Progress value={25} />
-              </div>
-              <Button variant="outline">
-                <RefreshCw /> Mulai Ulang
-              </Button>
-            </CardContent>
-          </Card>
-        </MotionWrapper>
-      </MotionWrapper>
+            </div>
+            <p className="text-muted-foreground">
+              Setiap cerita di platform kami dilengkapi dengan serangkaian alat
+              pembelajaran interaktif. Ini bukan hanya tentang membaca; ini
+              tentang mengalami.
+            </p>
+            <Button asChild size="lg">
+              <Link href="/interactive">
+                Masuk ke Learning Hub
+                <ArrowRight />
+              </Link>
+            </Button>
+          </CardContent>
+          <div className="relative min-h-[300px] bg-muted/50 md:min-h-full">
+            <Image
+              src="https://picsum.photos/seed/interactive-hub/800/600"
+              alt="Interactive Learning Hub Preview"
+              fill
+              className="object-cover"
+              data-ai-hint="learning education"
+            />
+          </div>
+        </div>
+      </Card>
+    </MotionWrapper>
 
       <MotionWrapper as="section" className="container mx-auto px-4">
         <div className="relative overflow-hidden rounded-xl bg-blue-600 text-white">
