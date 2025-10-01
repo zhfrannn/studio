@@ -43,7 +43,7 @@ export default function Home() {
           <div className="relative z-10 grid items-center gap-12 pb-20 text-center md:grid-cols-2 md:pb-32 md:text-left">
             <MotionWrapper>
               <div className="space-y-6">
-                <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground md:text-6xl">
+                <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground md:text-6xl animate-float">
                   Suara Ketahanan, Gema Kebijaksanaan
                 </h1>
                 <p className="text-lg text-muted-foreground md:text-xl">

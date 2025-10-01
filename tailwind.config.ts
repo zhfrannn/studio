@@ -89,8 +89,8 @@ export default {
           },
         },
         'float': {
-          '0%, 100%': { transform: 'translateY(-2%)' },
-          '50%': { transform: 'translateY(2%)' },
+          '0%, 100%': { transform: 'translateY(-3%)' },
+          '50%': { transform: 'translateY(3%)' },
         },
       },
       animation: {
