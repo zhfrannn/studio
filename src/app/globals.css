@@ -119,3 +119,39 @@
     transform: translateX(-100%);
   }
 }
+
+/* Shiny Button Styles */
+@keyframes shiny-button-sheen {
+  0% {
+    transform: translate(-100%, -100%) rotate(45deg);
+  }
+  100% {
+    transform: translate(100%, 100%) rotate(45deg);
+  }
+}
+
+.shiny-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.shiny-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transform: translate(-100%, -100%) rotate(45deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.shiny-button:hover::before {
+  animation: shiny-button-sheen 1s 1;
+}
