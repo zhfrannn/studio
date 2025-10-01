@@ -170,11 +170,10 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
   },
   'bah-tangse-belajar-dari-air-bah': {
     video: {
-      title: 'Video Edukasi: Pelajaran dari Bah Tangse',
-      description: 'Memahami penyebab dan dampak dari banjir bandang serta pentingnya menjaga ekosistem sungai.',
-      embedUrl:
-        'https://www.canva.com/design/DAGy2A4uKKg/oKxoc_2wvJT-q7amzHQQWA/watch?embed', // Placeholder URL
-      info: 'Video ini menggunakan studi kasus Bah Tangse untuk menjelaskan hubungan antara penggundulan hutan di hulu dan meningkatnya risiko banjir bandang di hilir.',
+      title: 'Video Edukasi Akan Segera Hadir!',
+      description: 'Kami sedang mempersiapkan video edukasi yang menarik untuk cerita ini. Nantikan pembaruan dari kami!',
+      embedUrl: '',
+      info: 'Video ini akan menggunakan studi kasus Bah Tangse untuk menjelaskan hubungan antara penggundulan hutan di hulu dan meningkatnya risiko banjir bandang di hilir.',
     },
     comic: {
       title: 'Komik Digital: Saat Sungai Marah',
@@ -269,11 +268,10 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
   },
   'kopi-gayo-aroma-perdamaian': {
     video: {
-      title: 'Video Edukasi: Kopi, Konflik, dan Rekonsiliasi',
-      description: 'Menelusuri bagaimana komoditas kopi menjadi alat pemulihan ekonomi dan perdamaian di dataran tinggi Gayo pasca-konflik.',
-      embedUrl:
-        'https://www.canva.com/design/DAGy2A4uKKg/oKxoc_2wvJT-q7amzHQQWA/watch?embed', // Placeholder URL
-      info: 'Video ini menampilkan wawancara dengan petani kopi Gayo yang menceritakan perjalanan mereka dari masa konflik hingga membangun kembali kehidupan melalui kebun kopi.',
+      title: 'Video Edukasi Akan Segera Hadir!',
+      description: 'Kami sedang mempersiapkan video edukasi yang menarik untuk cerita ini. Nantikan pembaruan dari kami!',
+      embedUrl: '',
+      info: 'Video ini akan menampilkan wawancara dengan petani kopi Gayo yang menceritakan perjalanan mereka dari masa konflik hingga membangun kembali kehidupan melalui kebun kopi.',
     },
     comic: {
       title: 'Komik Digital: Secangkir Harapan',
@@ -362,11 +360,10 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
   },
   'hutan-bakau-penjaga-pantai': {
     video: {
-      title: 'Video Edukasi: Benteng Hijau Pesisir',
-      description: 'Pelajari peran vital hutan bakau sebagai pelindung alami dari abrasi dan badai, serta manfaatnya bagi ekosistem.',
-      embedUrl:
-        'https://www.canva.com/design/DAGy2A4uKKg/oKxoc_2wvJT-q7amzHQQWA/watch?embed', // Placeholder
-      info: 'Video ini menunjukkan bagaimana komunitas di Aceh Jaya berhasil memulihkan garis pantai mereka melalui penanaman kembali hutan bakau.',
+      title: 'Video Edukasi Akan Segera Hadir!',
+      description: 'Kami sedang mempersiapkan video edukasi yang menarik untuk cerita ini. Nantikan pembaruan dari kami!',
+      embedUrl: '',
+      info: 'Video ini akan menunjukkan bagaimana komunitas di Aceh Jaya berhasil memulihkan garis pantai mereka melalui penanaman kembali hutan bakau.',
     },
     comic: {
       title: 'Komik Digital: Akar yang Melindungi',
@@ -455,11 +452,10 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
   },
   'dapur-umum-perdamaian': {
     video: {
-      title: 'Video Edukasi: Memasak Perdamaian',
-      description: 'Saksikan bagaimana makanan dapat menjadi media ampuh untuk rekonsiliasi dan membangun kembali kepercayaan pasca-konflik.',
-      embedUrl:
-        'https://www.canva.com/design/DAGy2A4uKKg/oKxoc_2wvJT-q7amzHQQWA/watch?embed', // Placeholder
-      info: 'Video dokumenter singkat ini meliput kegiatan sehari-hari di Dapur Umum Perdamaian di Bireuen dan wawancara dengan para inisiatornya.',
+      title: 'Video Edukasi Akan Segera Hadir!',
+      description: 'Kami sedang mempersiapkan video edukasi yang menarik untuk cerita ini. Nantikan pembaruan dari kami!',
+      embedUrl: '',
+      info: 'Video dokumenter singkat ini akan meliput kegiatan sehari-hari di Dapur Umum Perdamaian di Bireuen dan wawancara dengan para inisiatornya.',
     },
     comic: {
       title: 'Komik Digital: Resep Rekonsiliasi',
@@ -548,11 +544,10 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
   },
   'lumbung-padi-komunal': {
     video: {
-      title: 'Video Edukasi: Kearifan Lumbung Bersama',
-      description: 'Jelajahi konsep gotong royong dalam ketahanan pangan melalui tradisi lumbung padi komunal di Gayo.',
-      embedUrl:
-        'https://www.canva.com/design/DAGy2A4uKKg/oKxoc_2wvJT-q7amzHQQWA/watch?embed', // Placeholder
-      info: 'Video ini menjelaskan cara kerja lumbung padi komunal sebagai jaring pengaman sosial yang efektif di tingkat masyarakat.',
+      title: 'Video Edukasi Akan Segera Hadir!',
+      description: 'Kami sedang mempersiapkan video edukasi yang menarik untuk cerita ini. Nantikan pembaruan dari kami!',
+      embedUrl: '',
+      info: 'Video ini akan menjelaskan cara kerja lumbung padi komunal sebagai jaring pengaman sosial yang efektif di tingkat masyarakat.',
     },
     comic: {
       title: 'Komik Digital: Butir-Butir Kebersamaan',
@@ -641,11 +636,10 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
   },
   'api-di-bukit-barisan': {
     video: {
-      title: 'Video Edukasi: Penjaga Hutan Leuser',
-      description: 'Melihat lebih dekat perjuangan Masyarakat Peduli Api dalam melindungi ekosistem berharga dari ancaman kebakaran hutan.',
-      embedUrl:
-        'https://www.canva.com/design/DAGy2A4uKKg/oKxoc_2wvJT-q7amzHQQWA/watch?embed', // Placeholder
-      info: 'Video ini menyoroti pentingnya pencegahan dan peran aktif masyarakat dalam mitigasi bencana kebakaran hutan.',
+      title: 'Video Edukasi Akan Segera Hadir!',
+      description: 'Kami sedang mempersiapkan video edukasi yang menarik untuk cerita ini. Nantikan pembaruan dari kami!',
+      embedUrl: '',
+      info: 'Video ini akan menyoroti pentingnya pencegahan dan peran aktif masyarakat dalam mitigasi bencana kebakaran hutan.',
     },
     comic: {
       title: 'Komik Digital: Garis Depan Melawan Api',
@@ -734,10 +728,10 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
   },
   'pemuda-penjaga-adat': {
     video: {
-      title: 'Video Edukasi: Seudati, Tarian Perdamaian',
-      description: 'Lihat bagaimana para pemuda menggunakan seni tari tradisional untuk membangun jembatan perdamaian dan memperkuat identitas budaya.',
+      title: 'Video Edukasi Akan Segera Hadir!',
+      description: 'Kami sedang mempersiapkan video edukasi yang menarik untuk cerita ini. Nantikan pembaruan dari kami!',
       embedUrl: '',
-      info: 'Video ini mendokumentasikan kegiatan sanggar Seudati dan dampaknya terhadap kaum muda di Pidie.',
+      info: 'Video ini akan mendokumentasikan kegiatan sanggar Seudati dan dampaknya terhadap kaum muda di Pidie.',
     },
     comic: {
       title: 'Komik Digital: Langkah Penuh Makna',
@@ -765,7 +759,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
           textColor: 'text-green-800 dark:text-green-200',
         },
         {
-          iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-puzzle"><path d="M19.43 7.53A4.5 4.5 0 0 0 15 6a4.5 4.5 0 0 0-4.43 1.53L10.5 8h.01l.01.01.01.01.01.01h.01l.01.01.01.01h.01l.01.01.01.01h.01l.01.01.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01L12 9.5l.47.47.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01A4.5 4.5 0 0 0 15 18a4.5 4.5 0 0 0 4.43-1.53l.07-.07A4.5 4.5 0 0 0 21 12a4.5 4.5 0 0 0-1.53-3.43l-.07-.07A4.5 4.5 0 0 0 18 6a4.5 4.5 0 0 0-3.43 1.53l-.07.07A4.5 4.5 0 0 0 12 9a4.5 4.5 0 0 0-1.53 3.43l.07.07a4.5 4.5 0 0 0 1.46.93h.01Z"/><path d="M6 15a4.5 4.5 0 0 0 1.53 3.43l.07.07A4.5 4.5 0 0 0 9 21a4.5 4.5 0 0 0 3.43-1.53l.07-.07A4.5 4.5 0 0 0 15 18a4.5 4.5 0 0 0-1.53-3.43l-.07-.07A4.5 4.5 0 0 0 9 12a4.5 4.5 0 0 0-3.43 1.53l-.07.07A4.5 4.5 0 0 0 3 18a4.5 4.5 0 0 0 1.53 3.43l.07.07A4.5 4.5 0 0 0 6 21a4.5 4.5 0 0 0 3.43-1.53l.07-.07A4.5 4.5 0 0 0 12 18a4.5 4.5 0 0 0-1.53-3.43l-.07-.07A4.5 4.5 0 0 0 6 12a4.5 4.5 0 0 0-3.43 1.53L2.5 13.53A4.5 4.5 0 0 1 6 9a4.5 4.5 0 0 1 3.43 1.53l.07.07A4.5 4.5 0 0 1 12 12a4.5 4.5 0 0 1 1.53-3.43l-.07-.07A4.5 4.5 0 0 1 9 6a4.5 4.5 0 0 1-3.43-1.53l-.07.07A4.5 4.5 0 0 1 3 6a4.5 4.5 0 0 1 1.53-3.43l.07.07A4.5 4.5 0 0 1 6 3a4.5 4.5 0 0 1 3.43 1.53l.07.07A4.5 4.5 0 0 1 12 6a4.5 4.5 0 0 1 1.53-3.43L12.5 1.5A4.5 4.5 0 0 0 9 3a4.5 4.5 0 0 0-3.43 1.53L5.5 4.57A4.5 4.5 0 0 0 3 9a4.5 4.5 0 0 0 1.53 3.43l.07.07A4.5 4.5 0 0 0 6 15Z"/></svg>`,
+          iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-puzzle"><path d="M19.43 7.53A4.5 4.5 0 0 0 15 6a4.5 4.5 0 0 0-4.43 1.53L10.5 8h.01l.01.01.01.01.01.01h.01l.01.01.01.01h.01l.01.01.01.01h.01l.01.01.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01L12 9.5l.47.47.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01A4.5 4.5 0 0 0 15 18a4.5 4.5 0 0 0 4.43-1.53l.07-.07A4.5 4.5 0 0 0 21 12a4.5 4.5 0 0 0-1.53-3.43l-.07-.07A4.5 4.5 0 0 0 18 6a4.5 4.5 0 0 0-3.43 1.53l-.07.07A4.5 4.5 0 0 0 12 9a4.5 4.5 0 0 0-1.53 3.43l.07.07a4.5 4.5 0 0 0 1.46.93h.01Z"/><path d="M6 15a4.5 4.5 0 0 0 1.53 3.43l.07.07A4.5 4.5 0 0 0 9 21a4.5 4.5 0 0 0 3.43-1.53l.07-.07A4.5 4.5 0 0 0 15 18a4.5 4.5 0 0 0-1.53-3.43l-.07-.07A4.5 4.5 0 0 0 9 12a4.5 4.5 0 0 0-3.43 1.53l-.07.07A4.5 4.5 0 0 0 3 18a4.5 4.5 0 0 0 1.53 3.43l.07.07A4.5 4.5 0 0 0 6 21a4.5 4.5 0 0 0 3.43-1.53l.07-.07A4.5 4.5 0 0 0 12 18a4.5 4.5 0 0 0-1.53-3.43l-.07-.07A4.5 4.5 0 0 0 6 12a4.5 4.5 0 0 0-3.43 1.53L2.5 13.53A4.5 4.5 0 0 1 6 9a4.5 4.5 0 0 1 3.43 1.53l.07.07A4.5 4.5 0 0 1 12 12a4.5 4.5 0 0 1 1.53-3.43l-.07-.07A4.5 4.5 0 0 1 9 6a4.5 4.5 0 0 1-3.43-1.53l-.07.07A4.5 4.5 0 0 1 3 6a4.5 4.5 0 0 1 1.53-3.43l.07.07A4.5 4.5 0 0 1 6 3a4.5 4.5 0 0 1 3.43 1.53l.07.07A4.5 4.5 0 0 1 12 6a4.5 4.5 0 0 1 1.53-3.43L12.5 1.5A4.5 4.5 0 0 0 9 3a4.5 4.5 0 0 0-3.43 1.53L5.5 4.57A4.5 4.5 0 0 0 3 9a4.5 4.5 0 0 0 1.53 3.43l.07.07A4.5 4.5 0 0 0 6 15Z"/></svg>`,
           title: 'Ruang Aman',
           quote: '“Sanggar menjadi ruang aman bagi pemuda untuk berekspresi secara positif dan kreatif.”',
           gradient: 'from-purple-200 to-purple-100 dark:from-purple-900/70 dark:to-purple-800/70',
@@ -826,10 +820,10 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
   },
   'perempuan-penganyam-harapan': {
     video: {
-      title: 'Video Edukasi: Menenun Kehidupan Baru',
-      description: 'Saksikan kisah inspiratif para perempuan penyintas tsunami yang bangkit melalui kerajinan tangan, menciptakan kemandirian dan komunitas baru.',
+      title: 'Video Edukasi Akan Segera Hadir!',
+      description: 'Kami sedang mempersiapkan video edukasi yang menarik untuk cerita ini. Nantikan pembaruan dari kami!',
       embedUrl: '',
-      info: 'Film dokumenter pendek yang mengikuti perjalanan kelompok penganyam dari duka menjadi berdaya.',
+      info: 'Film dokumenter pendek ini akan mengikuti perjalanan kelompok penganyam dari duka menjadi berdaya.',
     },
     comic: {
       title: 'Komik Digital: Anyaman Asa',
@@ -918,10 +912,10 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
   },
   'arsitektur-rumah-panggung': {
     video: {
-      title: 'Video Edukasi: Membangun dengan Kearifan',
-      description: 'Pelajari bagaimana arsitektur tradisional Rumoh Aceh menawarkan solusi desain yang tahan gempa dan adaptif terhadap iklim.',
+      title: 'Video Edukasi Akan Segera Hadir!',
+      description: 'Kami sedang mempersiapkan video edukasi yang menarik untuk cerita ini. Nantikan pembaruan dari kami!',
       embedUrl: '',
-      info: 'Video ini membandingkan desain Rumoh Aceh dengan bangunan modern dan menyoroti prinsip-prinsip rekayasa jenius di dalamnya.',
+      info: 'Video ini akan membandingkan desain Rumoh Aceh dengan bangunan modern dan menyoroti prinsip-prinsip rekayasa jenius di dalamnya.',
     },
     comic: {
       title: 'Komik Digital: Tiang yang Kokoh',
@@ -1010,10 +1004,10 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
   },
   'seni-melawan-trauma': {
     video: {
-      title: 'Video Edukasi: Dinding yang Bercerita',
-      description: 'Saksikan bagaimana seni mural mengubah wajah kota Banda Aceh dan menjadi bagian dari proses penyembuhan trauma kolektif.',
+      title: 'Video Edukasi Akan Segera Hadir!',
+      description: 'Kami sedang mempersiapkan video edukasi yang menarik untuk cerita ini. Nantikan pembaruan dari kami!',
       embedUrl: '',
-      info: 'Video ini menampilkan karya-karya seniman mural di Banda Aceh dan wawancara tentang kekuatan seni sebagai media terapi.',
+      info: 'Video ini akan menampilkan karya-karya seniman mural di Banda Aceh dan wawancara tentang kekuatan seni sebagai media terapi.',
     },
     comic: {
       title: 'Komik Digital: Kanvas Harapan',
@@ -1102,10 +1096,10 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
   },
   'nelayan-dan-tanda-alam': {
     video: {
-      title: 'Video Edukasi: Kompas Langit dan Laut',
-      description: 'Jelajahi bagaimana nelayan tradisional Aceh menggunakan kearifan turun-temurun untuk bernavigasi dan memastikan keselamatan di laut.',
+      title: 'Video Edukasi Akan Segera Hadir!',
+      description: 'Kami sedang mempersiapkan video edukasi yang menarik untuk cerita ini. Nantikan pembaruan dari kami!',
       embedUrl: '',
-      info: 'Video ini mendokumentasikan pengetahuan para nelayan tentang rasi bintang, angin, dan perilaku biota laut sebagai pemandu mereka.',
+      info: 'Video ini akan mendokumentasikan pengetahuan para nelayan tentang rasi bintang, angin, dan perilaku biota laut sebagai pemandu mereka.',
     },
     comic: {
       title: 'Komik Digital: Peta Warisan',
@@ -1194,10 +1188,10 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
   },
   'sumur-tua-sumber-kehidupan': {
     video: {
-      title: 'Video Edukasi: Kearifan Air di Bawah Tanah',
-      description: 'Kisah tentang bagaimana sebuah sumur peninggalan leluhur menjadi penyelamat saat kekeringan melanda.',
+      title: 'Video Edukasi Akan Segera Hadir!',
+      description: 'Kami sedang mempersiapkan video edukasi yang menarik untuk cerita ini. Nantikan pembaruan dari kami!',
       embedUrl: '',
-      info: 'Video ini mengeksplorasi pentingnya menjaga sumber-sumber air tradisional dan kearifan leluhur dalam menentukan lokasinya.',
+      info: 'Video ini akan mengeksplorasi pentingnya menjaga sumber-sumber air tradisional dan kearifan leluhur dalam menentukan lokasinya.',
     },
     comic: {
       title: 'Komik Digital: Air Mata Air',
@@ -1225,7 +1219,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
           textColor: 'text-green-800 dark:text-green-200',
         },
         {
-          iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-droplets"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.7-3.12l-1.1-1.1c-.4-.4-.6-.9-.6-1.4V4.5c0-1.1.9-2 2-2s2 .9 2 2v.1c0 .5-.2 1-.6 1.4l-1.1 1.1C11.27 8 11 9.1 11 10.25c0 2.2 1.8 4.05 4 4.05s4-1.83 4-4.05c0-1.16-.57-2.26-1.7-3.12l-1.1-1.1c-.4-.4-.6-.9-.6-1.4V4.5c0-1.1.9-2 2-2s2 .9 2 2v.1c0 .5-.2 1-.6 1.4l-1.1 1.1c-1.13.86-1.7 1.96-1.7 3.12C19 14.47 17.2 16.3 15 16.3"/><path d="m5 18 1.8-1.8"/><path d="m2.1 12.9 1.8 1.8"/><path d="M19 18l-1.8-1.8"/><path d="m21.9 12.9-1.8 1.8"/></svg>`,
+          iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-droplets"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.7-3.12l-1.1-1.1c-.4-.4-.6-.9-.6-1.4V4.5c0-1.1.9-2 2-2s2 .9 2 2v.1c0 .5-.2 1-.6 1.4l-1.1 1.1c-1.13.86-1.7 1.96-1.7 3.12C19 14.47 17.2 16.3 15 16.3"/><path d="m5 18 1.8-1.8"/><path d="m2.1 12.9 1.8 1.8"/><path d="M19 18l-1.8-1.8"/><path d="m21.9 12.9-1.8 1.8"/></svg>`,
           title: 'Keajaiban Muncul',
           quote: '“Ajaib! Di dasarnya masih ada air jernih yang seakan tak pernah habis!”',
           gradient: 'from-blue-300 to-blue-200 dark:from-blue-800 dark:to-blue-700',
@@ -1286,10 +1280,10 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
   },
   'ilmu-falak-di-pesantren': {
     video: {
-      title: 'Video Edukasi: Langit Sebagai Peta',
-      description: 'Mengungkap peran penting Ilmu Falak (astronomi) yang diajarkan di dayah-dayah Aceh untuk kehidupan sehari-hari dan navigasi laut.',
+      title: 'Video Edukasi Akan Segera Hadir!',
+      description: 'Kami sedang mempersiapkan video edukasi yang menarik untuk cerita ini. Nantikan pembaruan dari kami!',
       embedUrl: '',
-      info: 'Video ini menjelaskan bagaimana ilmu agama dan sains saling melengkapi dalam tradisi intelektual Aceh.',
+      info: 'Video ini akan menjelaskan bagaimana ilmu agama dan sains saling melengkapi dalam tradisi intelektual Aceh.',
     },
     comic: {
       title: 'Komik Digital: Santri Penunjuk Arah',
@@ -1378,10 +1372,10 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
   },
   'pasar-sebagai-ruang-sosial': {
     video: {
-      title: 'Video Edukasi: Jantung Denyut Komunitas',
-      description: 'Selami peran pasar tradisional di Aceh yang lebih dari sekadar pusat ekonomi, melainkan sebagai ruang sosial yang vital.',
+      title: 'Video Edukasi Akan Segera Hadir!',
+      description: 'Kami sedang mempersiapkan video edukasi yang menarik untuk cerita ini. Nantikan pembaruan dari kami!',
       embedUrl: '',
-      info: 'Video ini menangkap suasana dan interaksi sosial di Pasar Peunayong, menunjukkan bagaimana informasi dan kohesi sosial terjalin.',
+      info: 'Video ini akan menangkap suasana dan interaksi sosial di Pasar Peunayong, menunjukkan bagaimana informasi dan kohesi sosial terjalin.',
     },
     comic: {
       title: 'Komik Digital: Kabar dari Warung Kopi',
