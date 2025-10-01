@@ -155,7 +155,7 @@ ${story}`;
         </div>
       </MotionWrapper>
 
-      <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
+      <div className="grid gap-12 lg:grid-cols-2 lg:items-start rounded-2xl">
         {/* Kolom Kiri: Form */}
         <MotionWrapper delay={0.1}>
           <Card className="lg:sticky lg:top-24">

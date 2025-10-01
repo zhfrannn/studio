@@ -110,7 +110,7 @@ export default function InteractiveLearningHub() {
 
   return (
     <div className="space-y-16 py-12 md:space-y-24">
-      <MotionWrapper className="container mx-auto px-4">
+      <MotionWrapper className="container mx-auto px-4 rounded-2xl">
         <div className="mb-12 text-center">
           <h1 className="font-headline text-4xl md:text-5xl">
             Interactive Learning Hub
@@ -312,7 +312,7 @@ export default function InteractiveLearningHub() {
         </div>
       </MotionWrapper>
 
-      <MotionWrapper as="section" className="container mx-auto px-4">
+      <MotionWrapper as="section" className="container mx-auto px-4 rounded-2xl">
         <div className="mb-12 text-center">
           <h2 className="flex items-center justify-center gap-3 font-headline text-3xl md:text-4xl">
             <BookOpen className="h-8 w-8 text-primary" />
@@ -363,7 +363,7 @@ export default function InteractiveLearningHub() {
         </div>
       </MotionWrapper>
 
-      <MotionWrapper as="section" className="container mx-auto px-4">
+      <MotionWrapper as="section" className="container mx-auto px-4 rounded-2xl">
         <div className="mb-12 text-center">
           <h2 className="flex items-center justify-center gap-3 font-headline text-3xl md:text-4xl">
             <ClipboardList className="h-8 w-8 text-primary" />

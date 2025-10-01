@@ -38,7 +38,7 @@ export default function Home() {
 
   return (
     <div className="space-y-16 pb-24 md:space-y-24">
-      <section className="relative overflow-hidden bg-background pt-20 md:pt-32">
+      <section className="relative overflow-hidden bg-background pt-20 md:pt-32 rounded-2xl">
         <div className="container mx-auto px-4">
           <div className="relative z-10 grid items-center gap-12 pb-20 text-center md:grid-cols-2 md:pb-32 md:text-left">
             <MotionWrapper>
@@ -103,7 +103,7 @@ export default function Home() {
         </div>
       </section>
 
-      <MotionWrapper as="section" className="container mx-auto px-4">
+      <MotionWrapper as="section" className="container mx-auto px-4 rounded-2xl">
         <div className="mx-auto mb-12 max-w-3xl space-y-2 text-center">
           <SplitText
             text="Cara Kerjanya"
@@ -172,7 +172,7 @@ export default function Home() {
         </div>
       </MotionWrapper>
       
-      <MotionWrapper as="section" className="container mx-auto px-4">
+      <MotionWrapper as="section" className="container mx-auto px-4 rounded-2xl">
         <div className="overflow-hidden rounded-xl border bg-card shadow-lg">
           <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
             <div className="space-y-6 p-8 md:p-12">
@@ -218,7 +218,7 @@ export default function Home() {
       </MotionWrapper>
 
 
-      <MotionWrapper as="section" className="container mx-auto space-y-12 px-4">
+      <MotionWrapper as="section" className="container mx-auto space-y-12 px-4 rounded-2xl">
         <div className="mx-auto max-w-2xl space-y-2 text-center">
           <SplitText
             text="Jelajahi Cerita"
@@ -263,7 +263,7 @@ export default function Home() {
         </div>
       </MotionWrapper>
 
-      <MotionWrapper as="section" className="container mx-auto px-4">
+      <MotionWrapper as="section" className="container mx-auto px-4 rounded-2xl">
       <div className="mx-auto mb-12 max-w-3xl space-y-2 text-center">
         <SplitText
           text="Pembelajaran Interaktif"
@@ -317,7 +317,7 @@ export default function Home() {
       </Card>
     </MotionWrapper>
 
-      <MotionWrapper as="section" className="container mx-auto px-4">
+      <MotionWrapper as="section" className="container mx-auto px-4 rounded-2xl">
         <div className="relative overflow-hidden rounded-xl bg-blue-600 text-white">
           <Image
             src="https://picsum.photos/seed/eduboard-bg/1200/400"
@@ -362,7 +362,7 @@ export default function Home() {
         </div>
       </MotionWrapper>
 
-      <MotionWrapper as="section" id="share-story" className="container mx-auto px-4">
+      <MotionWrapper as="section" id="share-story" className="container mx-auto px-4 rounded-2xl">
         <div className="mx-auto mb-12 max-w-3xl space-y-2 text-center">
           <SplitText
             text="Bagikan Ceritamu"
@@ -378,7 +378,7 @@ export default function Home() {
         </div>
       </MotionWrapper>
 
-      <MotionWrapper as="section" className="container mx-auto px-4 text-center">
+      <MotionWrapper as="section" className="container mx-auto px-4 text-center rounded-2xl">
         <Separator className="mx-auto mb-8 w-1/2" />
         <p className="font-semibold text-muted-foreground">Didukung oleh</p>
         <LogoLoop>

@@ -14,7 +14,7 @@ export default function EduBoardPage() {
         </p>
       </div>
 
-      <div className="grid items-center gap-8 lg:gap-12 md:grid-cols-2">
+      <div className="grid items-center gap-8 lg:gap-12 md:grid-cols-2 rounded-2xl">
         <div className="relative aspect-square overflow-hidden rounded-xl border shadow-2xl md:aspect-[3/4]">
           <Image
             src="https://picsum.photos/seed/eduboard/600/800"

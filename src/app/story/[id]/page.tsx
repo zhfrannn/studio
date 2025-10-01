@@ -36,7 +36,7 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <div className="mx-auto max-w-4xl">
+      <div className="mx-auto max-w-4xl rounded-2xl">
         <MotionWrapper>
           <div className="mb-8">
             <h1 className="font-headline text-4xl text-foreground md:text-5xl">
