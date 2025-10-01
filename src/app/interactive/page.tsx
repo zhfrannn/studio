@@ -1,3 +1,4 @@
+
 import {
   Award,
   BookOpen,
@@ -24,6 +25,7 @@ import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Separator } from '@/components/ui/separator';
 import { stories } from '@/lib/data';
+import { interactiveContent } from '@/lib/interactive-content';
 import Image from 'next/image';
 import Link from 'next/link';
 import WaveIcon from '@/components/icons/wave-icon';
@@ -47,61 +49,64 @@ const achievementBadges = [
   { name: 'Educator', icon: <BookOpen /> },
 ];
 
-const comicData = [
-  {
-    title: 'Tsunami Survivor Story',
-    subtitle: 'The Day the Sea Came',
-    description: '8 panels - Interactive',
-    icon: <WaveIcon className="h-12 w-12" />,
-    color: 'bg-blue-100 dark:bg-blue-900/30',
-    textColor: 'text-blue-600 dark:text-blue-400',
-    buttonColor: 'bg-blue-500 hover:bg-blue-600',
-  },
-  {
-    title: 'Village Rebuilding',
-    subtitle: 'Spirit of Gotong Royong',
-    description: '6 panels - Interactive',
-    icon: <Users className="h-12 w-12" />,
-    color: 'bg-green-100 dark:bg-green-900/30',
-    textColor: 'text-green-600 dark:text-green-400',
-    buttonColor: 'bg-green-500 hover:bg-green-600',
-  },
-  {
-    title: 'From Conflict to Peace',
-    subtitle: 'Coffee Diplomacy',
-    description: '8 panels - Interactive',
-    icon: <Coffee className="h-12 w-12" />,
-    color: 'bg-purple-100 dark:bg-purple-900/30',
-    textColor: 'text-purple-600 dark:text-purple-400',
-    buttonColor: 'bg-purple-500 hover:bg-purple-600',
-  },
-  {
-    title: 'Traditional Knowledge',
-    subtitle: 'Wisdom of Smong',
-    description: '6 panels - Interactive',
-    icon: <ScrollText className="h-12 w-12" />,
-    color: 'bg-yellow-100 dark:bg-yellow-900/30',
-    textColor: 'text-yellow-600 dark:text-yellow-400',
-    buttonColor: 'bg-yellow-500 hover:bg-yellow-600',
-  },
-];
-
-const quickAccessStories = stories.slice(0, 5);
-
-const getThemeIcon = (theme?: string) => {
-  switch (theme) {
-    case 'Disaster Preparedness':
-      return <WaveIcon className="h-5 w-5 text-blue-500" />;
-    case 'Peacebuilding':
-      return <Coffee className="h-5 w-5 text-purple-500" />;
-    case 'Local Wisdom':
-      return <ScrollText className="h-5 w-5 text-yellow-500" />;
-    default:
-      return <BookOpen className="h-5 w-5 text-gray-500" />;
+const getThemeMeta = (theme: string) => {
+  if (theme.includes('Disaster')) {
+    return {
+      icon: <WaveIcon className="h-12 w-12" />,
+      color: 'bg-blue-100 dark:bg-blue-900/30',
+      textColor: 'text-blue-600 dark:text-blue-400',
+      buttonColor: 'bg-blue-500 hover:bg-blue-600',
+      iconSmall: <WaveIcon className="h-5 w-5 text-blue-500" />,
+    };
   }
+  if (theme.includes('Peace')) {
+    return {
+      icon: <Users className="h-12 w-12" />,
+      color: 'bg-green-100 dark:bg-green-900/30',
+      textColor: 'text-green-600 dark:text-green-400',
+      buttonColor: 'bg-green-500 hover:bg-green-600',
+      iconSmall: <Users className="h-5 w-5 text-green-500" />,
+    };
+  }
+  if (theme.includes('Wisdom')) {
+    return {
+      icon: <ScrollText className="h-12 w-12" />,
+      color: 'bg-yellow-100 dark:bg-yellow-900/30',
+      textColor: 'text-yellow-600 dark:text-yellow-400',
+      buttonColor: 'bg-yellow-500 hover:bg-yellow-600',
+      iconSmall: <ScrollText className="h-5 w-5 text-yellow-500" />,
+    };
+  }
+  // Default
+  return {
+    icon: <BookOpen className="h-12 w-12" />,
+    color: 'bg-gray-100 dark:bg-gray-900/30',
+    textColor: 'text-gray-600 dark:text-gray-400',
+    buttonColor: 'bg-gray-500 hover:bg-gray-600',
+    iconSmall: <BookOpen className="h-5 w-5 text-gray-500" />,
+  };
 };
 
+const allComics = stories
+  .map(story => {
+    const content = interactiveContent[story.id];
+    if (!content || !content.comic) return null;
+    const themeMeta = getThemeMeta(story.aiThemes[0] || '');
+
+    return {
+      id: story.id,
+      storyTitle: story.title,
+      comicTitle: content.comic.title,
+      description: content.comic.description,
+      ...themeMeta,
+    };
+  })
+  .filter(Boolean);
+
 export default function InteractiveLearningHub() {
+  const quickAccessStories = stories.slice(0, 5);
+  const videosToShow = stories.slice(0, 3);
+
   return (
     <div className="space-y-16 py-12 md:space-y-24">
       <MotionWrapper className="container mx-auto px-4">
@@ -143,12 +148,10 @@ export default function InteractiveLearningHub() {
                 <CardContent className="flex flex-col items-center justify-center bg-muted/40 py-12 text-center">
                   <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-primary/20">
                     <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/30">
-                      <Button
-                        variant="ghost"
-                        size="icon"
-                        className="h-12 w-12 rounded-full bg-white text-primary shadow-lg hover:bg-white"
-                      >
-                        <Film className="h-6 w-6" />
+                       <Button asChild variant="ghost" size="icon" className="h-12 w-12 rounded-full bg-white text-primary shadow-lg hover:bg-white">
+                         <Link href="/story/smong-selamat-dari-lautan">
+                            <Puzzle className="h-6 w-6" />
+                         </Link>
                       </Button>
                     </div>
                   </div>
@@ -159,7 +162,11 @@ export default function InteractiveLearningHub() {
                     Learn about disaster preparedness through interactive scenarios
                     based on real stories from Aceh.
                   </p>
-                  <Button size="lg">Start Quiz</Button>
+                  <Button size="lg" asChild>
+                     <Link href="/story/smong-selamat-dari-lautan">
+                        Start Quiz
+                     </Link>
+                  </Button>
                 </CardContent>
               </Card>
             </MotionWrapper>
@@ -177,7 +184,7 @@ export default function InteractiveLearningHub() {
                 </p>
               </div>
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                {stories.slice(0, 3).map((story, i) => (
+                {videosToShow.map((story, i) => (
                   <MotionWrapper key={story.id} delay={i * 0.1}>
                     <Card className="overflow-hidden">
                       <div className="relative aspect-video bg-muted">
@@ -188,14 +195,12 @@ export default function InteractiveLearningHub() {
                           className="object-cover"
                           data-ai-hint={story.media.featuredImageHint}
                         />
-                        <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-                          <Button
-                            variant="ghost"
-                            size="icon"
-                            className="h-12 w-12 rounded-full bg-white/80 text-primary shadow-lg hover:bg-white"
-                          >
-                            <Film className="h-6 w-6" />
-                          </Button>
+                         <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+                           <Button asChild variant="ghost" size="icon" className="h-12 w-12 rounded-full bg-white/80 text-primary shadow-lg hover:bg-white">
+                              <Link href={`/story/${story.id}`}>
+                                <Film className="h-6 w-6" />
+                              </Link>
+                           </Button>
                         </div>
                         <Badge
                           variant="secondary"
@@ -318,37 +323,37 @@ export default function InteractiveLearningHub() {
           </p>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {comicData.map((comic, i) => (
-            <MotionWrapper key={comic.title} delay={i * 0.1}>
+          {allComics.map((comic, i) => (
+            <MotionWrapper key={comic!.id} delay={i * 0.1}>
               <Card
-                key={comic.title}
+                key={comic!.id}
                 className="group flex flex-col overflow-hidden text-center"
               >
                 <CardContent
                   className={cn(
                     'flex flex-grow flex-col items-center justify-center p-6',
-                    comic.color
+                    comic!.color
                   )}
                 >
-                  <div className={cn('mb-4', comic.textColor)}>
-                    {comic.icon}
+                  <div className={cn('mb-4', comic!.textColor)}>
+                    {comic!.icon}
                   </div>
-                  <h3 className={cn('font-semibold', comic.textColor)}>
-                    {comic.subtitle}
+                  <h3 className={cn('font-semibold', comic!.textColor)}>
+                    {comic!.comicTitle}
                   </h3>
                 </CardContent>
                 <CardHeader className="flex-grow p-6">
-                  <CardTitle className="text-lg">{comic.title}</CardTitle>
-                  <CardDescription>{comic.description}</CardDescription>
+                  <CardTitle className="text-lg">{comic!.storyTitle}</CardTitle>
+                  <CardDescription>{comic!.description}</CardDescription>
                 </CardHeader>
                 <CardFooter className="p-6 pt-0">
-                  <Button
+                  <Button asChild
                     className={cn(
                       'w-full text-white',
-                      comic.buttonColor
+                      comic!.buttonColor
                     )}
                   >
-                    Read Comic
+                    <Link href={`/story/${comic!.id}`}>Read Comic</Link>
                   </Button>
                 </CardFooter>
               </Card>
@@ -373,7 +378,7 @@ export default function InteractiveLearningHub() {
               <Card className="p-6">
                 <div className="mb-4 flex items-center gap-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-muted">
-                    {getThemeIcon(story.aiThemes[0])}
+                    {getThemeMeta(story.aiThemes[0] || '').iconSmall}
                   </div>
                   <div>
                     <h3 className="font-semibold">{story.title}</h3>
@@ -393,7 +398,7 @@ export default function InteractiveLearningHub() {
               </Card>
             </MotionWrapper>
           ))}
-          <MotionWrapper delay={0.3}>
+          <MotionWrapper delay={quickAccessStories.length * 0.1}>
             <Card className="flex h-full min-h-[160px] flex-col items-center justify-center border-2 border-dashed bg-transparent p-6 text-center">
               <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-muted">
                 <Plus className="h-8 w-8 text-muted-foreground" />
