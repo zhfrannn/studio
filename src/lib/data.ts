@@ -66,14 +66,14 @@ export const stories: Story[] = [
     status: 'published',
   },
   {
-    id: 'bah-tangse-belajar-dari-air-bah',
-    title: 'Bah Tangse: Belajar dari Air Bah',
-    author: 'Komunitas Tangse, Pidie',
+    id: 'bah-tangse-sungai-murka',
+    title: 'Bah Tangse: Ketika Sungai Murka',
+    author: 'Warga Tangse, Pidie',
     location: { name: 'Pidie', lat: 5.37, lng: 95.96 },
     summary:
-      'Mengenang banjir bandang "Bah Tangse" di Pidie sebagai pelajaran berharga tentang pentingnya menjaga kelestarian hutan dan mengenali tanda-tanda alam.',
+      'Kesaksian mendalam tentang banjir bandang dahsyat di Tangse pada 2011, sebuah tragedi yang disebabkan oleh perambahan hutan dan menjadi pelajaran pahit tentang pentingnya menjaga alam.',
     fullText:
-      'Orang-orang tua di Tangse selalu mengingatkan kami, "jaga gunong, gunong jaga tanyoe" (jaga gunung, gunung jaga kita). Tapi kami sempat lalai. Hutan di hulu sungai banyak yang ditebang. Suatu malam di tahun 2011, hujan turun tanpa henti. Air sungai Krueng Tangse meluap dengan cepat, membawa kayu-kayu gelondongan besar. Air bah itu dahsyat, menghanyutkan rumah dan jembatan. Kami semua panik. Itu adalah pelajaran yang sangat mahal. Sejak saat itu, kami bekerja sama menghijaukan kembali area hulu. Kami belajar bahwa bencana tidak datang tiba-tiba, seringkali ada andil manusia di dalamnya. Menjaga alam adalah cara terbaik untuk menjaga hidup kami.',
+      'Malam itu, 10 Maret 2011, langit seakan pecah di atas Tangse. Hujan yang turun bukan lagi sekadar hujan, melainkan seperti air yang ditumpahkan dari langit tanpa henti. Kami yang tinggal di sepanjang Krueng Tangse sudah biasa dengan air sungai yang naik, tapi malam itu berbeda. Sekitar tengah malam, kami mendengar suara gemuruh yang bukan berasal dari guntur. Suaranya semakin keras, seperti gunung yang runtuh. Beberapa dari kami yang penasaran mencoba melihat keluar. Yang kami lihat adalah pemandangan mengerikan: air sungai meluap dengan liar, warnanya hitam pekat, dan membawa serta puluhan pohon gelondongan raksasa yang saling berbenturan. Itu bukan banjir biasa, itu adalah "Bah" – air bah yang murka.\n\nKepala desa berteriak melalui pengeras suara masjid, "Air naik! Selamatkan diri! Lari ke tempat tinggi!" Listrik padam, membuat suasana semakin panik dan mencekam. Dalam gelap gulita, kami hanya bisa mengandalkan naluri. Suara benturan kayu-kayu raksasa yang menghantam jembatan dan rumah-rumah terdengar begitu dekat. Rumah-rumah panggung yang terbuat dari kayu pun tak berdaya, tercabut dari pondasinya dan hanyut terseret arus. Kami berlari sekuat tenaga ke perbukitan, ke tempat yang lebih tinggi, hanya membawa pakaian di badan. Dari atas bukit, kami melihat desa kami dilahap oleh air bah yang ganas. Paginya, saat air mulai surut, yang tersisa hanyalah lumpur tebal dan puing-puing. Jembatan utama putus, puluhan rumah hilang, dan sawah kami berubah menjadi lautan lumpur. Kami sadar, ini bukan hanya bencana alam. Ini adalah akibat dari keserakahan. Hutan di hulu yang seharusnya menjadi penyangga telah gundul oleh penebangan liar. Sungai tidak lagi memiliki penahan. Bah Tangse menjadi pelajaran paling pahit bagi kami, bahwa merusak alam sama dengan menghancurkan diri sendiri. Sejak saat itu, kami bersumpah untuk menjaga hutan kami, menanam kembali pohon-pohon, sebagai warisan agar tragedi serupa tidak terulang lagi.',
     aiThemes: ['Disaster Preparedness', 'Local Wisdom'],
     media: {
       featuredImage: 'https://picsum.photos/seed/6/800/600',
