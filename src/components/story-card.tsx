@@ -18,7 +18,7 @@ interface StoryCardProps {
   story: Story;
 }
 
-const themeMeta = {
+const themeMeta: { [key: string]: { color: string; icon: JSX.Element; badgeColor: string } } = {
   'Disaster Preparedness': {
     color: 'bg-blue-500',
     icon: <WaveIcon className="h-10 w-10 text-white" />,
@@ -56,10 +56,10 @@ const StoryCard = ({ story }: StoryCardProps) => {
 
   return (
     <Link href={`/story/${story.id}`} className="group block h-full">
-      <Card className="flex h-full flex-col overflow-hidden rounded-xl shadow-md transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5">
+      <Card className="flex h-full flex-col overflow-hidden rounded-2xl shadow-md transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5">
         <div
           className={cn(
-            'relative flex h-36 w-full items-center justify-center rounded-t-xl',
+            'relative flex h-36 w-full items-center justify-center rounded-t-2xl',
             theme.color
           )}
         >

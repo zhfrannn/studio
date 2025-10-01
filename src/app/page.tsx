@@ -116,7 +116,7 @@ export default function Home() {
         </div>
         <div className="grid gap-8 text-left md:grid-cols-3">
           <MotionWrapper delay={0.1}>
-            <Card>
+            <Card className="rounded-2xl">
               <CardHeader className="flex-row items-start gap-4 space-y-0">
                 <div className="rounded-lg bg-blue-100 p-3 dark:bg-blue-900/30">
                   <MessageCircle className="h-6 w-6 text-blue-600 dark:text-blue-400" />
@@ -134,7 +134,7 @@ export default function Home() {
             </Card>
           </MotionWrapper>
           <MotionWrapper delay={0.2}>
-            <Card>
+            <Card className="rounded-2xl">
               <CardHeader className="flex-row items-start gap-4 space-y-0">
                 <div className="rounded-lg bg-green-100 p-3 dark:bg-green-900/30">
                   <Lightbulb className="h-6 w-6 text-green-600 dark:text-green-400" />
@@ -152,7 +152,7 @@ export default function Home() {
             </Card>
           </MotionWrapper>
           <MotionWrapper delay={0.3}>
-            <Card>
+            <Card className="rounded-2xl">
               <CardHeader className="flex-row items-start gap-4 space-y-0">
                 <div className="rounded-lg bg-purple-100 p-3 dark:bg-purple-900/30">
                   <BookOpen className="h-6 w-6 text-purple-600 dark:text-purple-400" />
@@ -173,7 +173,7 @@ export default function Home() {
       </MotionWrapper>
       
       <MotionWrapper as="section" className="container mx-auto px-4 rounded-2xl">
-        <div className="overflow-hidden rounded-xl border bg-card shadow-lg">
+        <div className="overflow-hidden rounded-2xl border bg-card shadow-lg">
           <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
             <div className="space-y-6 p-8 md:p-12">
               <SplitText
@@ -229,7 +229,7 @@ export default function Home() {
             pembangun perdamaian.
           </p>
         </div>
-        <div className="rounded-xl border shadow-lg">
+        <div className="rounded-2xl border shadow-lg overflow-hidden">
           <div className="h-[500px] w-full">
             <InteractiveMap stories={stories} />
           </div>
@@ -275,7 +275,7 @@ export default function Home() {
         </p>
       </div>
 
-      <Card className="overflow-hidden">
+      <Card className="overflow-hidden rounded-2xl">
         <div className="grid md:grid-cols-2">
           <CardContent className="space-y-6 p-8 md:p-12">
             <div className="flex items-start gap-4">
@@ -318,7 +318,7 @@ export default function Home() {
     </MotionWrapper>
 
       <MotionWrapper as="section" className="container mx-auto px-4 rounded-2xl">
-        <div className="relative overflow-hidden rounded-xl bg-blue-600 text-white">
+        <div className="relative overflow-hidden rounded-2xl bg-blue-600 text-white">
           <Image
             src="https://picsum.photos/seed/eduboard-bg/1200/400"
             alt="Abstract background for eduboard"
