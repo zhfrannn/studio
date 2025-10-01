@@ -23,6 +23,7 @@ import {
   InteractiveContent,
 } from '@/lib/interactive-content';
 import DigitalComic from '@/components/digital-comic';
+import MotionWrapper from '@/components/motion-wrapper';
 
 export default function StoryDetailPage({ params }: { params: { id: string } }) {
   const story = stories.find(s => s.id === params.id);
@@ -35,31 +36,33 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="mx-auto max-w-4xl">
-        <div className="mb-8">
-          <h1 className="font-headline text-4xl text-foreground md:text-5xl">
-            {story.title}
-          </h1>
-          <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2 text-muted-foreground">
-            <div className="flex items-center gap-2">
-              <User className="h-4 w-4" />
-              <span>{story.author}</span>
+        <MotionWrapper>
+          <div className="mb-8">
+            <h1 className="font-headline text-4xl text-foreground md:text-5xl">
+              {story.title}
+            </h1>
+            <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2 text-muted-foreground">
+              <div className="flex items-center gap-2">
+                <User className="h-4 w-4" />
+                <span>{story.author}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Calendar className="h-4 w-4" />
+                <span>{story.location.name}</span>
+              </div>
             </div>
-            <div className="flex items-center gap-2">
-              <Calendar className="h-4 w-4" />
-              <span>{story.location.name}</span>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {story.aiThemes.map(theme => (
+                <Badge key={theme} variant="default">
+                  {theme}
+                </Badge>
+              ))}
             </div>
           </div>
-          <div className="mt-4 flex flex-wrap gap-2">
-            {story.aiThemes.map(theme => (
-              <Badge key={theme} variant="default">
-                {theme}
-              </Badge>
-            ))}
-          </div>
-        </div>
+        </MotionWrapper>
 
         <div className="space-y-16">
-          <section>
+          <MotionWrapper as="section" delay={0.1}>
             <Card>
               <CardHeader>
                 <div className="flex items-start gap-4">
@@ -111,12 +114,14 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
                 </CardFooter>
               )}
             </Card>
-          </section>
+          </MotionWrapper>
 
           {content?.comic ? (
-            <DigitalComic comic={content.comic} />
+             <MotionWrapper as="section" delay={0.2}>
+                <DigitalComic comic={content.comic} />
+            </MotionWrapper>
           ) : (
-            <section>
+            <MotionWrapper as="section" delay={0.2}>
               <div className="mb-8 text-center">
                 <h2 className="mb-2 flex items-center justify-center gap-3 font-headline text-3xl">
                   <BookOpenText /> Komik Digital
@@ -125,25 +130,25 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
                   Komik digital untuk cerita ini akan segera hadir.
                 </p>
               </div>
-            </section>
+            </MotionWrapper>
           )}
 
-          <section>
+          <MotionWrapper as="section" delay={0.3}>
             <h2 className="mb-4 flex items-center gap-2 font-headline text-2xl">
               <BookOpenText /> Narasi Lengkap
             </h2>
             <Card>
               <CardContent className="p-6">
                 <div className="prose prose-slate max-w-none dark:prose-invert">
-                  <p className="text-lg leading-relaxed text-foreground">
-                    {story.fullText}
-                  </p>
+                    <p className="text-lg leading-relaxed text-foreground">
+                      {story.fullText}
+                    </p>
                 </div>
               </CardContent>
             </Card>
-          </section>
+          </MotionWrapper>
 
-          <section>
+          <MotionWrapper as="section" delay={0.4}>
             {content?.quiz ? (
               <InteractiveQuiz quiz={content.quiz} />
             ) : (
@@ -160,7 +165,7 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
                 </Card>
               </>
             )}
-          </section>
+          </MotionWrapper>
         </div>
       </div>
     </div>
