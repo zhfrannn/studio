@@ -24,6 +24,7 @@ import {
 } from '@/lib/interactive-content';
 import DigitalComic from '@/components/digital-comic';
 import MotionWrapper from '@/components/motion-wrapper';
+import SplitText from '@/components/ui/split-text';
 
 export default function StoryDetailPage({ params }: { params: { id: string } }) {
   const story = stories.find(s => s.id === params.id);
@@ -140,9 +141,11 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
             <Card>
               <CardContent className="p-6">
                 <div className="prose prose-slate max-w-none dark:prose-invert">
-                    <p className="text-lg leading-relaxed text-foreground">
-                      {story.fullText}
-                    </p>
+                    <SplitText
+                        as="p"
+                        text={story.fullText}
+                        className="text-lg leading-relaxed text-foreground"
+                    />
                 </div>
               </CardContent>
             </Card>

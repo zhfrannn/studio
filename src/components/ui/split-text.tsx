@@ -9,6 +9,7 @@ type SplitTextProps = {
   className?: string;
   wordClassName?: string;
   charClassName?: string;
+  as?: React.ElementType;
 };
 
 export default function SplitText({
@@ -16,9 +17,10 @@ export default function SplitText({
   className,
   wordClassName,
   charClassName,
+  as: Tag = 'h2',
 }: SplitTextProps) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.5 });
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   const words = text.split(' ');
 
@@ -36,11 +38,11 @@ export default function SplitText({
   };
 
   return (
-    <motion.h2
+    <Tag
       ref={ref}
       className={cn('split-text-container', className)}
       aria-label={text}
-      role="heading"
+      role={Tag === 'h2' ? 'heading' : undefined}
     >
       {words.map((word, wordIndex) => (
         <span
@@ -51,7 +53,7 @@ export default function SplitText({
           {word.split('').map((char, charIndex) => (
             <motion.span
               key={charIndex}
-              custom={wordIndex * 5 + charIndex}
+              custom={wordIndex * 7 + charIndex}
               variants={variants}
               initial="hidden"
               animate={isInView ? 'visible' : 'hidden'}
@@ -64,6 +66,6 @@ export default function SplitText({
           {wordIndex < words.length - 1 ? ' ' : ''}
         </span>
       ))}
-    </motion.h2>
+    </Tag>
   );
 }
