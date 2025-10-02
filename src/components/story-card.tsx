@@ -1,3 +1,6 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import type { Story } from '@/lib/types';
 import {
   Card,
@@ -10,7 +13,7 @@ import {
 import { Badge } from './ui/badge';
 import Link from 'next/link';
 import { Button } from './ui/button';
-import { Eye, MessageCircle, Heart, Users, ScrollText, AlertTriangle } from 'lucide-react';
+import { Eye, Heart, ScrollText, AlertTriangle, Users } from 'lucide-react';
 import WaveIcon from './icons/wave-icon';
 import { cn } from '@/lib/utils';
 
@@ -18,7 +21,9 @@ interface StoryCardProps {
   story: Story;
 }
 
-const themeMeta: { [key: string]: { color: string; icon: JSX.Element; badgeColor: string } } = {
+const themeMeta: {
+  [key: string]: { color: string; icon: JSX.Element; badgeColor: string };
+} = {
   'Disaster Preparedness': {
     color: 'bg-blue-500',
     icon: <WaveIcon className="h-10 w-10 text-white" />,
@@ -37,7 +42,8 @@ const themeMeta: { [key: string]: { color: string; icon: JSX.Element; badgeColor
     badgeColor:
       'bg-green-100 text-green-800 border-green-200 dark:bg-green-900/50 dark:text-green-200 dark:border-green-700',
   },
-  Emergency: { // Added for Flash Flood story if needed
+  Emergency: {
+    // Added for Flash Flood story if needed
     color: 'bg-red-500',
     icon: <AlertTriangle className="h-10 w-10 text-white" />,
     badgeColor:
@@ -46,13 +52,19 @@ const themeMeta: { [key: string]: { color: string; icon: JSX.Element; badgeColor
 };
 
 const StoryCard = ({ story }: StoryCardProps) => {
+  const [stats, setStats] = useState({ views: 0, likes: 0 });
+
+  useEffect(() => {
+    // Generate random stats on the client side to avoid hydration mismatch
+    setStats({
+      views: Math.floor(Math.random() * 2000) + 100,
+      likes: Math.floor(Math.random() * 500) + 20,
+    });
+  }, []);
+
   // Use first theme for card theming, or a default
   const primaryTheme = story.aiThemes[0] || 'Disaster Preparedness';
   const theme = themeMeta[primaryTheme];
-
-  // Placeholder stats
-  const views = Math.floor(Math.random() * 2000) + 100;
-  const likes = Math.floor(Math.random() * 500) + 20;
 
   return (
     <Link href={`/story/${story.id}`} className="group block h-full">
@@ -81,7 +93,9 @@ const StoryCard = ({ story }: StoryCardProps) => {
           </div>
         </CardHeader>
         <CardContent className="flex-grow px-6 pt-2">
-          <p className="mb-2 text-sm font-medium text-muted-foreground">{story.author}</p>
+          <p className="mb-2 text-sm font-medium text-muted-foreground">
+            {story.author}
+          </p>
           <CardTitle className="mb-2 font-headline text-xl leading-tight transition-colors group-hover:text-primary">
             {story.title}
           </CardTitle>
@@ -91,17 +105,21 @@ const StoryCard = ({ story }: StoryCardProps) => {
         </CardContent>
         <CardFooter className="flex-col items-start gap-4 p-6">
           <div className="flex w-full items-center justify-between text-sm text-muted-foreground">
-             <div className="flex items-center gap-4">
-               <div className="flex items-center gap-1.5">
-                 <Eye className="h-4 w-4" />
-                 <span>{views}</span>
-               </div>
-               <div className="flex items-center gap-1.5">
-                 <Heart className="h-4 w-4" />
-                 <span>{likes}</span>
-               </div>
-             </div>
-            <Button variant="secondary" size="sm" className="group-hover:bg-primary group-hover:text-primary-foreground">
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-1.5">
+                <Eye className="h-4 w-4" />
+                <span>{stats.views}</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <Heart className="h-4 w-4" />
+                <span>{stats.likes}</span>
+              </div>
+            </div>
+            <Button
+              variant="secondary"
+              size="sm"
+              className="group-hover:bg-primary group-hover:text-primary-foreground"
+            >
               Read More
             </Button>
           </div>
