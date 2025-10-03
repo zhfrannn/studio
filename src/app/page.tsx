@@ -63,31 +63,28 @@ export default function Home() {
               </div>
             </MotionWrapper>
             <MotionWrapper delay={0.2}>
-              <div className="relative mx-auto h-[300px] w-[300px] md:h-[400px] md:w-[400px]">
+              <div className="relative mx-auto h-[300px] w-full md:h-[400px]">
                 <Image
-                  src="https://picsum.photos/seed/hero-1/400/400"
-                  alt="Floating island with a tree"
-                  width={400}
-                  height={400}
-                  className="animate-float rounded-full object-cover shadow-2xl"
-                  data-ai-hint="floating island"
+                  src="https://picsum.photos/seed/landscape-hero/800/600"
+                  alt="Scenic landscape"
+                  fill
+                  className="rounded-2xl object-cover shadow-2xl"
+                  data-ai-hint="desert landscape"
                 />
-                <Image
-                  src="https://picsum.photos/seed/hero-2/150/150"
-                  alt="Small floating rock"
-                  width={150}
-                  height={150}
-                  className="absolute -bottom-10 -right-10 hidden animate-float-delay-1 rounded-full object-cover shadow-lg lg:block"
-                  data-ai-hint="floating rock"
-                />
-                <Image
-                  src="https://picsum.photos/seed/hero-3/100/100"
-                  alt="Another small floating rock"
-                  width={100}
-                  height={100}
-                  className="absolute -top-10 -left-10 hidden animate-float-delay-2 rounded-full object-cover shadow-md lg:block"
-                  data-ai-hint="small rock"
-                />
+                <div className="absolute -top-8 -left-8 hidden md:block">
+                    <Card className="flex items-center gap-2 p-2">
+                         <Image src="https://picsum.photos/seed/avatar1/40/40" alt="avatar" width={40} height={40} className="rounded-full" />
+                         <div>
+                            <p className="font-bold text-sm">Pak Budi</p>
+                            <p className="text-xs text-muted-foreground">Simeulue</p>
+                         </div>
+                    </Card>
+                </div>
+                 <div className="absolute -bottom-8 right-8 hidden md:block">
+                    <Card className="p-3 max-w-xs">
+                        <p className="text-sm">"We are one generation...dedicated to promoting the environment for all."</p>
+                    </Card>
+                </div>
               </div>
             </MotionWrapper>
           </div>
