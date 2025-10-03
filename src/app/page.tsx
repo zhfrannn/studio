@@ -84,10 +84,6 @@ export default function Home() {
             </div>
           </div>
           
-          <div aria-hidden="true" className="hero-v2-note hero-v2-note-headline">
-             Lestarikan Kearifan Lokal
-            <ArrowUpLeft className="hero-v2-note-arrow" />
-          </div>
         </div>
       </section>
 
