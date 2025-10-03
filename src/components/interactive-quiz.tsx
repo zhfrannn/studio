@@ -75,7 +75,7 @@ export default function InteractiveQuiz({ quiz }: InteractiveQuizProps) {
   if (!quizStarted) {
     return (
        <MotionWrapper>
-        <Card className="mx-auto w-full max-w-2xl text-center">
+        <Card className="w-full max-w-2xl text-center">
           <CardHeader className="p-8">
             <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
                 <HelpCircle className="h-8 w-8" />
@@ -97,7 +97,7 @@ export default function InteractiveQuiz({ quiz }: InteractiveQuizProps) {
   if (quizFinished) {
     return (
       <MotionWrapper>
-        <Card className="mx-auto w-full max-w-2xl overflow-hidden">
+        <Card className="w-full max-w-2xl overflow-hidden">
           <CardHeader className="bg-muted/30 p-8 text-center">
             <Trophy className="mx-auto h-16 w-16 text-yellow-500" />
             <h2 className="mt-4 font-headline text-3xl">Kuis Selesai!</h2>
@@ -133,7 +133,7 @@ export default function InteractiveQuiz({ quiz }: InteractiveQuizProps) {
 
   return (
     <MotionWrapper>
-      <Card className="mx-auto w-full max-w-2xl">
+      <Card className="w-full max-w-2xl">
         <CardHeader className="p-6">
           <div className="mb-2 flex items-center gap-3">
             <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary">
