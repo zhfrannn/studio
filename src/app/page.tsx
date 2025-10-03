@@ -192,7 +192,7 @@ ${story}`;
         </p>
       </div>
 
-      <div className="grid grid-cols-1 gap-12 rounded-2xl md:grid-cols-2 lg:grid-cols-1">
+      <div className="grid grid-cols-1 gap-12 rounded-2xl md:grid-cols-1 lg:grid-cols-1">
         <MotionWrapper delay={0.1}>
           <Card>
             <CardHeader>
@@ -800,33 +800,16 @@ export default function Home() {
         <p className="font-semibold text-muted-foreground">
           {homeDict.supportedBy}
         </p>
-        <LogoLoop>
-          <Image
-            src="https://firebasestorage.googleapis.com/v0/b/firebase-studio-bots.appspot.com/o/imagereader%2Fomni-studio-box%2F09a96f13-7eda-4d1a-ac5d-4f11e9f0868f?alt=media&token=e1f76d91-3720-4355-9017-802c0182834b"
-            alt="Universitas Syiah Kuala Logo"
-            width={120}
-            height={120}
-            className="h-20 w-auto"
-          />
-          <Image
-            src="https://firebasestorage.googleapis.com/v0/b/firebase-studio-bots.appspot.com/o/imagereader%2Fomni-studio-box%2F09a96f13-7eda-4d1a-ac5d-4f11e9f0868f?alt=media&token=e1f76d91-3720-4355-9017-802c0182834b"
-            alt="Universitas Syiah Kuala Logo"
-            width={120}
-            height={120}
-            className="h-20 w-auto"
-          />
-          <Image
-            src="https://firebasestorage.googleapis.com/v0/b/firebase-studio-bots-dev.appspot.com/o/imagereader%2Fomni-studio-box%2F1bc132b3-57a4-44a3-8a85-e11516e45f94?alt=media&token=40422c54-4740-424a-aa47-493a7a9a149c"
-            alt="Universitas Syiah Kuala Logo"
-            width={120}
-            height={120}
-            className="h-20 w-auto"
-          />
-        </LogoLoop>
+        <div style={{position: 'relative', width: '100%', height: 0, paddingTop: '6.2500%', paddingBottom: 0, boxShadow: '0 2px 8px 0 rgba(63,69,81,0.16)', marginTop: '1.6em', marginBottom: '0.9em', overflow: 'hidden', borderRadius: '8px', willChange: 'transform'}}>
+          <iframe loading="lazy" style={{position: 'absolute', width: '100%', height: '100%', top: 0, left: 0, border: 'none', padding: 0, margin: 0}} src="https://www.canva.com/design/DAG0vgSu8Q4/J8dlQa7zH4MCir-aF4d54g/view?embed" allowFullScreen={true} allow="fullscreen">
+          </iframe>
+        </div>
       </MotionWrapper>
     </div>
   );
 }
+
+    
 
     
 
