@@ -1,7 +1,11 @@
+'use client';
 import Link from 'next/link';
 import WaveMascot from '../icons/wave-mascot';
+import { useLanguage } from '@/context/language-context';
 
 const Footer = () => {
+  const { dictionary } = useLanguage();
+  const footerDict = dictionary.footer;
   return (
     <footer className="border-t bg-background">
       <div className="container mx-auto px-4 py-8">
@@ -12,23 +16,23 @@ const Footer = () => {
           </div>
           <nav className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground md:gap-6">
             <Link href="/" className="hover:text-primary">
-              Beranda
+              {footerDict.home}
             </Link>
             <Link href="/explore" className="hover:text-primary">
-              Jelajahi
+              {footerDict.explore}
             </Link>
             <Link href="/eduboard" className="hover:text-primary">
-              EduBoard
+              {footerDict.eduboard}
             </Link>
             <Link href="#" className="hover:text-primary">
-              Tentang Kami
+              {footerDict.about}
             </Link>
             <Link href="#" className="hover:text-primary">
-              Privasi
+              {footerDict.privacy}
             </Link>
           </nav>
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Wave of Voice. All Rights Reserved.
+            &copy; {new Date().getFullYear()} Wave of Voice. {footerDict.rights}
           </p>
         </div>
       </div>

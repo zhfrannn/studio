@@ -1,0 +1,111 @@
+
+{
+  "header": {
+    "home": "Beranda",
+    "explore": "Jelajahi",
+    "interactive": "Interaktif",
+    "eduboard": "EduBoard",
+    "shareStory": "Bagikan Cerita"
+  },
+  "footer": {
+    "home": "Beranda",
+    "explore": "Jelajahi",
+    "eduboard": "EduBoard",
+    "about": "Tentang Kami",
+    "privacy": "Privasi",
+    "rights": "Hak Cipta Dilindungi."
+  },
+  "home": {
+    "hero": {
+      "pill": "Lebih dari 100+ cerita terkumpul",
+      "title": "Suara Ketahanan, Gema Kebijaksanaan",
+      "description": "Jelajahi kearifan lokal, kesiapsiagaan bencana, dan perdamaian di Aceh melalui cerita yang dihidupkan oleh teknologi AI.",
+      "ctaExplore": "Jelajahi Cerita",
+      "ctaShare": "Bagikan Ceritamu"
+    },
+    "howItWorks": {
+      "title": "Cara Kerjanya",
+      "description": "Arsitektur tiga lapis yang mengubah cerita pribadi menjadi alat edukasi yang kuat.",
+      "step1": {
+        "title": "1. Pengumpulan Cerita",
+        "description": "Warga berbagi pengalaman melalui WhatsApp. Duta muda membantu merekam cerita dari para tetua."
+      },
+      "step2": {
+        "title": "2. Pemrosesan AI",
+        "description": "AI menganalisis, menerjemahkan, dan memetakan cerita ke modul edukasi sambil melestarikan konteks budaya."
+      },
+      "step3": {
+        "title": "3. Pembelajaran Komunitas",
+        "description": "Cerita menjadi komik interaktif, audio, dan EduBoard fisik di ruang komunitas di seluruh Aceh."
+      }
+    },
+    "whyItMatters": {
+      "title": "Mengapa Ini Penting",
+      "description": "\"Wave of Voice\" bukan hanya tentang SOP bencana. Ini tentang melestarikan memori kolektif, memperkuat rasa memiliki, dan membangun ketahanan serta komunikasi perdamaian yang relevan dengan konteks di Aceh pasca-tsunami dan pasca-konflik.",
+      "point1": "Melawan misinformasi melalui narasi lokal yang dikurasi dan diperiksa faktanya",
+      "point2": "Mengintegrasikan kearifan lokal (Smong, gotong royong) dengan ilmu bencana modern",
+      "point3": "Mendukung penyembuhan melalui refleksi terpandu dan dialog komunitas"
+    },
+    "exploreStories": {
+      "title": "Jelajahi Cerita",
+      "description": "Narasi personal dari penyintas tsunami, pekerja pemulihan, dan pembangun perdamaian.",
+      "mapCta": "Klik pada penanda untuk melihat cerita dari berbagai daerah.",
+      "featuredTitle": "Cerita Unggulan",
+      "loadMore": "Muat Lebih Banyak Cerita"
+    },
+    "interactiveLearning": {
+      "title": "Pembelajaran Interaktif",
+      "description": "Alami cerita melalui berbagai format menarik yang dirancang untuk memperdalam pemahaman dan keterlibatan Anda.",
+      "cardTitle": "Kuis, Komik & Video",
+      "cardDescription": "Uji pengetahuan Anda dengan kuis, selami narasi visual dengan komik, dan tonton kisah nyata yang menjadi hidup.",
+      "cardBody": "Setiap cerita di platform kami dilengkapi dengan serangkaian alat pembelajaran interaktif. Ini bukan hanya tentang membaca; ini tentang mengalami.",
+      "cta": "Masuk ke Learning Hub"
+    },
+    "eduboard": {
+      "title": "Community EduBoards",
+      "description": "Papan interaktif fisik dipasang di ruang komunitas (masjid, sekolah, warung kopi) yang menjembatani arsip digital melalui kode QR dan tag NFC.",
+      "badge1": "Kutipan Harian",
+      "badge2": "Kuis Mini",
+      "badge3": "Garis Waktu",
+      "badge4": "Tips Harian",
+      "cta": "Lihat Desain EduBoard"
+    },
+    "shareStory": {
+      "title": "Bagikan Ceritamu",
+      "description": "Pengalaman Anda sangat berarti. Bantu membangun memori kolektif dan ketahanan Aceh.",
+      "cta": "Mulai Berbagi Sekarang"
+    },
+    "supportedBy": "Didukung oleh"
+  },
+  "explore": {
+    "title": "Cerita dari Aceh",
+    "description": "Jelajahi pengalaman pribadi dan kearifan dari masyarakat Aceh"
+  },
+  "storyGrid": {
+    "filterAllTypes": "Semua Jenis Cerita",
+    "filterAllLocations": "Semua Lokasi",
+    "searchPlaceholder": "Cari cerita...",
+    "searchButton": "Cari",
+    "storyMap": "Peta Cerita",
+    "shareCard": {
+      "title": "Bagikan Ceritamu",
+      "description": "Bantu lestarikan memori kolektif Aceh dengan membagikan pengalaman Anda.",
+      "cta": "Kontribusi"
+    },
+    "pagination": {
+      "previous": "Sebelumnya",
+      "next": "Berikutnya"
+    },
+    "themes": {
+        "disaster": "Kesiapsiagaan Bencana",
+        "wisdom": "Kearifan Lokal",
+        "peace": "Pembangunan Perdamaian"
+    }
+  },
+  "storyCard": {
+    "readMore": "Baca Selengkapnya"
+  },
+  "languageToggle": {
+    "label": "Ganti Bahasa"
+  }
+}

@@ -7,16 +7,20 @@ import { Button } from '../ui/button';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-
-const navLinks = [
-  { href: '/', label: 'Beranda' },
-  { href: '/explore', label: 'Jelajahi' },
-  { href: '/interactive', label: 'Interaktif' },
-  { href: '/eduboard', label: 'EduBoard' },
-];
+import { useLanguage } from '@/context/language-context';
+import LanguageToggle from './language-toggle';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { dictionary } = useLanguage();
+
+  const navLinks = [
+    { href: '/', label: dictionary.header.home },
+    { href: '/explore', label: dictionary.header.explore },
+    { href: '/interactive', label: dictionary.header.interactive },
+    { href: '/eduboard', label: dictionary.header.eduboard },
+  ];
+
 
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
 
@@ -42,8 +46,9 @@ const Header = () => {
         </nav>
         <div className="flex flex-1 items-center justify-end gap-2">
           <Button asChild variant="ghost" className="hidden sm:inline-flex">
-            <Link href="/share-story">Bagikan Ceritamu</Link>
+            <Link href="/share-story">{dictionary.header.shareStory}</Link>
           </Button>
+          <LanguageToggle />
           <ThemeToggle />
           <div className="md:hidden">
             <Button onClick={toggleMobileMenu} variant="ghost" size="icon">
@@ -74,7 +79,7 @@ const Header = () => {
               ))}
               <Button asChild>
                 <Link href="/share-story" onClick={() => setMobileMenuOpen(false)}>
-                  Bagikan Ceritamu
+                  {dictionary.header.shareStory}
                 </Link>
               </Button>
             </nav>

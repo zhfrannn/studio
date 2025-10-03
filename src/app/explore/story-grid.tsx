@@ -32,6 +32,7 @@ import { Map, MapPin, Search, Plus, Share } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Link from 'next/link';
 import { Card } from '@/components/ui/card';
+import { useLanguage } from '@/context/language-context';
 
 interface StoryGridProps {
   allStories: Story[];
@@ -50,6 +51,8 @@ export default function StoryGrid({ allStories }: StoryGridProps) {
   const [selectedLocation, setSelectedLocation] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
+  const { dictionary } = useLanguage();
+  const storyGridDict = dictionary.storyGrid;
   
   const allLocations = [...new Set(allStories.map(s => s.location.name))];
 
@@ -75,6 +78,13 @@ export default function StoryGrid({ allStories }: StoryGridProps) {
     setCurrentPage(page);
     window.scrollTo(0, 0); // Scroll to top on page change
   };
+  
+  const themeLabels: Record<StoryTheme, string> = {
+    'Disaster Preparedness': storyGridDict.themes.disaster,
+    'Local Wisdom': storyGridDict.themes.wisdom,
+    Peacebuilding: storyGridDict.themes.peace,
+  };
+
 
   return (
     <div className="space-y-8">
@@ -82,23 +92,23 @@ export default function StoryGrid({ allStories }: StoryGridProps) {
       <div className="mb-8 flex flex-wrap items-center justify-center gap-4 rounded-lg border bg-card p-4 shadow-sm">
         <Select value={selectedTheme} onValueChange={setSelectedTheme}>
           <SelectTrigger className="w-full sm:w-auto sm:min-w-[180px]">
-            <SelectValue placeholder="All Story Types" />
+            <SelectValue placeholder={storyGridDict.filterAllTypes} />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="all">All Story Types</SelectItem>
+            <SelectItem value="all">{storyGridDict.filterAllTypes}</SelectItem>
             {allThemes.map(theme => (
               <SelectItem key={theme} value={theme}>
-                {theme}
+                {themeLabels[theme]}
               </SelectItem>
             ))}
           </SelectContent>
         </Select>
         <Select value={selectedLocation} onValueChange={setSelectedLocation}>
           <SelectTrigger className="w-full sm:w-auto sm:min-w-[180px]">
-            <SelectValue placeholder="All Locations" />
+            <SelectValue placeholder={storyGridDict.filterAllLocations} />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="all">All Locations</SelectItem>
+            <SelectItem value="all">{storyGridDict.filterAllLocations}</SelectItem>
             {allLocations.map(loc => (
               <SelectItem key={loc} value={loc}>
                 {loc}
@@ -108,14 +118,14 @@ export default function StoryGrid({ allStories }: StoryGridProps) {
         </Select>
         <Input
           type="text"
-          placeholder="Search stories..."
+          placeholder={storyGridDict.searchPlaceholder}
           className="w-full sm:w-auto sm:flex-grow"
           value={searchTerm}
           onChange={e => setSearchTerm(e.target.value)}
         />
         <Button className="w-full sm:w-auto">
           <Search className="mr-2 h-4 w-4" />
-          Search
+          {storyGridDict.searchButton}
         </Button>
       </div>
 
@@ -124,7 +134,7 @@ export default function StoryGrid({ allStories }: StoryGridProps) {
         <AccordionItem value="item-1" className="rounded-lg border">
           <AccordionTrigger className="rounded-lg bg-card px-6 py-4 font-headline text-lg hover:no-underline">
             <div className="flex items-center gap-2">
-              <MapPin className="h-5 w-5 text-primary" /> Story Map
+              <MapPin className="h-5 w-5 text-primary" /> {storyGridDict.storyMap}
             </div>
           </AccordionTrigger>
           <AccordionContent className="border-t">
@@ -162,14 +172,14 @@ export default function StoryGrid({ allStories }: StoryGridProps) {
               <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-muted">
                 <Plus className="h-8 w-8 text-muted-foreground" />
               </div>
-              <h3 className="mb-2 font-headline text-xl">Share Your Story</h3>
+              <h3 className="mb-2 font-headline text-xl">{storyGridDict.shareCard.title}</h3>
               <p className="mb-4 text-sm text-muted-foreground">
-                Help preserve Aceh's collective memory by sharing your experience.
+                {storyGridDict.shareCard.description}
               </p>
               <Button asChild>
                 <Link href="/share-story">
                   <Share className="mr-2 h-4 w-4" />
-                  Contribute
+                  {storyGridDict.shareCard.cta}
                 </Link>
               </Button>
             </Card>
@@ -191,7 +201,9 @@ export default function StoryGrid({ allStories }: StoryGridProps) {
                 }}
                 aria-disabled={currentPage === 1}
                 className={currentPage === 1 ? 'pointer-events-none opacity-50' : ''}
-              />
+              >
+                {storyGridDict.pagination.previous}
+              </PaginationPrevious>
             </PaginationItem>
             {[...Array(totalPages)].map((_, i) => (
               <PaginationItem key={i}>
@@ -216,7 +228,9 @@ export default function StoryGrid({ allStories }: StoryGridProps) {
                 }}
                 aria-disabled={currentPage === totalPages}
                 className={currentPage === totalPages ? 'pointer-events-none opacity-50' : ''}
-              />
+              >
+                {storyGridDict.pagination.next}
+              </PaginationNext>
             </PaginationItem>
           </PaginationContent>
         </Pagination>

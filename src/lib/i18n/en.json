@@ -1,0 +1,111 @@
+
+{
+  "header": {
+    "home": "Home",
+    "explore": "Explore",
+    "interactive": "Interactive",
+    "eduboard": "EduBoard",
+    "shareStory": "Share Story"
+  },
+  "footer": {
+    "home": "Home",
+    "explore": "Explore",
+    "eduboard": "EduBoard",
+    "about": "About Us",
+    "privacy": "Privacy",
+    "rights": "All Rights Reserved."
+  },
+  "home": {
+    "hero": {
+      "pill": "Over 100+ stories collected",
+      "title": "Voices of Resilience, Echoes of Wisdom",
+      "description": "Explore local wisdom, disaster preparedness, and peacebuilding in Aceh through stories brought to life by AI technology.",
+      "ctaExplore": "Explore Stories",
+      "ctaShare": "Share Your Story"
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "description": "A three-layer architecture that transforms personal stories into powerful educational tools.",
+      "step1": {
+        "title": "1. Story Collection",
+        "description": "Community members share experiences via WhatsApp. Youth ambassadors help record stories from elders."
+      },
+      "step2": {
+        "title": "2. AI Processing",
+        "description": "AI analyzes, translates, and maps stories to educational modules while preserving cultural context."
+      },
+      "step3": {
+        "title": "3. Community Learning",
+        "description": "Stories become interactive comics, audio, and physical EduBoards in community spaces across Aceh."
+      }
+    },
+    "whyItMatters": {
+      "title": "Why It Matters",
+      "description": "\"Wave of Voice\" is not just about disaster SOPs. It's about preserving collective memory, strengthening belonging, and building resilience and peace communication relevant to the post-tsunami and post-conflict context in Aceh.",
+      "point1": "Countering misinformation through curated and fact-checked local narratives",
+      "point2": "Integrating local wisdom (Smong, gotong royong) with modern disaster science",
+      "point3": "Supporting healing through guided reflection and community dialogue"
+    },
+    "exploreStories": {
+      "title": "Explore Stories",
+      "description": "Personal narratives from tsunami survivors, recovery workers, and peacebuilders.",
+      "mapCta": "Click on a marker to see stories from different areas.",
+      "featuredTitle": "Featured Stories",
+      "loadMore": "Load More Stories"
+    },
+    "interactiveLearning": {
+      "title": "Interactive Learning",
+      "description": "Experience stories through various engaging formats designed to deepen your understanding and engagement.",
+      "cardTitle": "Quizzes, Comics & Videos",
+      "cardDescription": "Test your knowledge with quizzes, dive into visual narratives with comics, and watch real stories come to life.",
+      "cardBody": "Each story on our platform is equipped with a suite of interactive learning tools. It's not just about reading; it's about experiencing.",
+      "cta": "Enter the Learning Hub"
+    },
+    "eduboard": {
+      "title": "Community EduBoards",
+      "description": "Physical interactive boards installed in community spaces (mosques, schools, coffee shops) that bridge the digital archive via QR codes and NFC tags.",
+      "badge1": "Daily Quotes",
+      "badge2": "Mini Quizzes",
+      "badge3": "Timelines",
+      "badge4": "Daily Tips",
+      "cta": "See EduBoard Designs"
+    },
+    "shareStory": {
+      "title": "Share Your Story",
+      "description": "Your experience is valuable. Help build Aceh's collective memory and resilience.",
+      "cta": "Start Sharing Now"
+    },
+    "supportedBy": "Supported by"
+  },
+  "explore": {
+    "title": "Stories from Aceh",
+    "description": "Explore personal experiences and wisdom from the people of Aceh"
+  },
+  "storyGrid": {
+    "filterAllTypes": "All Story Types",
+    "filterAllLocations": "All Locations",
+    "searchPlaceholder": "Search stories...",
+    "searchButton": "Search",
+    "storyMap": "Story Map",
+    "shareCard": {
+      "title": "Share Your Story",
+      "description": "Help preserve Aceh's collective memory by sharing your experience.",
+      "cta": "Contribute"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next"
+    },
+    "themes": {
+      "disaster": "Disaster Preparedness",
+      "wisdom": "Local Wisdom",
+      "peace": "Peacebuilding"
+    }
+  },
+  "storyCard": {
+    "readMore": "Read More"
+  },
+  "languageToggle": {
+    "label": "Change Language"
+  }
+}

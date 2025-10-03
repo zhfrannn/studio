@@ -6,6 +6,7 @@ import Footer from '@/components/layout/footer';
 import { ThemeProvider } from '@/components/theme-provider';
 import ChatbotFab from '@/components/chatbot-fab';
 import 'mapbox-gl/dist/mapbox-gl.css';
+import { LanguageProvider } from '@/context/language-context';
 
 export const metadata: Metadata = {
   title: 'Wave of Voice',
@@ -34,18 +35,20 @@ export default function RootLayout({
       </head>
       <body className="font-body antialiased bg-background text-foreground">
         <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
         >
-          <div className="flex min-h-screen flex-col">
-            <Header />
-            <main className="flex-grow">{children}</main>
-            <Footer />
-          </div>
-          <ChatbotFab />
-          <Toaster />
+          <LanguageProvider>
+            <div className="flex min-h-screen flex-col">
+              <Header />
+              <main className="flex-grow">{children}</main>
+              <Footer />
+            </div>
+            <ChatbotFab />
+            <Toaster />
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

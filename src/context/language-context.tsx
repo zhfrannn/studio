@@ -1,0 +1,39 @@
+
+'use client';
+
+import { createContext, useContext, useState, ReactNode } from 'react';
+import id from '@/lib/i18n/id.json';
+import en from '@/lib/i18n/en.json';
+
+type Language = 'id' | 'en';
+
+type Dictionary = typeof id;
+
+interface LanguageContextType {
+  language: Language;
+  setLanguage: (language: Language) => void;
+  dictionary: Dictionary;
+}
+
+const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+
+export function LanguageProvider({ children }: { children: ReactNode }) {
+  const [language, setLanguage] = useState<Language>('id');
+
+  const dictionaries = { id, en };
+  const dictionary = dictionaries[language];
+
+  return (
+    <LanguageContext.Provider value={{ language, setLanguage, dictionary }}>
+      {children}
+    </LanguageContext.Provider>
+  );
+}
+
+export function useLanguage() {
+  const context = useContext(LanguageContext);
+  if (context === undefined) {
+    throw new Error('useLanguage must be used within a LanguageProvider');
+  }
+  return context;
+}

@@ -16,6 +16,7 @@ import { Button } from './ui/button';
 import { Eye, Heart, ScrollText, AlertTriangle, Users } from 'lucide-react';
 import WaveIcon from './icons/wave-icon';
 import { cn } from '@/lib/utils';
+import { useLanguage } from '@/context/language-context';
 
 interface StoryCardProps {
   story: Story;
@@ -53,6 +54,15 @@ const themeMeta: {
 
 const StoryCard = ({ story }: StoryCardProps) => {
   const [stats, setStats] = useState({ views: 0, likes: 0 });
+  const { dictionary } = useLanguage();
+  const storyGridDict = dictionary.storyGrid;
+
+  const themeLabels: Record<string, string> = {
+    'Disaster Preparedness': storyGridDict.themes.disaster,
+    'Local Wisdom': storyGridDict.themes.wisdom,
+    Peacebuilding: storyGridDict.themes.peace,
+  };
+
 
   useEffect(() => {
     // Generate random stats on the client side to avoid hydration mismatch
@@ -86,7 +96,7 @@ const StoryCard = ({ story }: StoryCardProps) => {
                   key={themeName}
                   className={cn('border', badgeTheme.badgeColor)}
                 >
-                  {themeName}
+                  {themeLabels[themeName] || themeName}
                 </Badge>
               );
             })}
@@ -120,7 +130,7 @@ const StoryCard = ({ story }: StoryCardProps) => {
               size="sm"
               className="group-hover:bg-primary group-hover:text-primary-foreground"
             >
-              Read More
+              {dictionary.storyCard.readMore}
             </Button>
           </div>
         </CardFooter>
