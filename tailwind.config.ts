@@ -92,6 +92,10 @@ export default {
           '0%, 100%': { transform: 'translateY(-3%)' },
           '50%': { transform: 'translateY(3%)' },
         },
+        'hero-scroll': {
+          from: { transform: 'translateX(40%)' },
+          to: { transform: 'translateX(-40%)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -99,6 +103,7 @@ export default {
         'float': 'float 6s ease-in-out infinite',
         'float-delay-1': 'float 7s ease-in-out infinite 1s',
         'float-delay-2': 'float 8s ease-in-out infinite 0.5s',
+        'hero-scroll': 'hero-scroll 30s linear infinite',
       },
     },
   },

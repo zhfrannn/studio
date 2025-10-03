@@ -23,6 +23,11 @@ import {
   Play,
   Share2,
   Puzzle,
+  Star,
+  Rocket,
+  ChevronsRight,
+  Sparkles,
+  ArrowUpLeft
 } from 'lucide-react';
 import InteractiveMap from '@/components/interactive-map';
 import { Progress } from '@/components/ui/progress';
@@ -35,68 +40,54 @@ import LogoLoop from '@/components/ui/logo-loop';
 
 export default function Home() {
   const featuredStory = stories[0];
+  const thumbStories = stories.slice(0, 6);
 
   return (
     <div className="space-y-16 pb-24 md:space-y-24">
-      <section className="relative overflow-hidden bg-background pt-20 md:pt-32 rounded-2xl">
-        <div className="container mx-auto px-4">
-          <div className="relative z-10 grid items-center gap-12 pb-20 text-center md:grid-cols-2 md:pb-32 md:text-left">
-            <MotionWrapper>
-              <div className="space-y-6">
-                <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground md:text-6xl animate-float">
-                  Suara Ketahanan, Gema Kebijaksanaan
-                </h1>
-                <p className="text-lg text-muted-foreground md:text-xl">
-                  Menjelajahi kearifan lokal, kesiapsiagaan bencana, dan perdamaian
-                  di Aceh melalui cerita yang dihidupkan oleh teknologi AI.
-                </p>
-                <div className="flex flex-col gap-4 pt-4 sm:flex-row sm:justify-center md:justify-start">
-                  <Button asChild size="lg">
-                    <Link href="/explore">
-                      Jelajahi Cerita <ArrowRight />
-                    </Link>
-                  </Button>
-                  <Button asChild variant="secondary" size="lg">
-                    <Link href="/eduboard">Tentang EduBoard</Link>
-                  </Button>
-                </div>
-              </div>
-            </MotionWrapper>
-            <MotionWrapper delay={0.2}>
-              <div className="relative mx-auto h-[300px] w-full md:h-[400px]">
-                <Image
-                  src="https://picsum.photos/seed/landscape-hero/800/600"
-                  alt="Scenic landscape"
-                  fill
-                  className="rounded-2xl object-cover shadow-2xl"
-                  data-ai-hint="desert landscape"
-                />
-                <div className="absolute -top-8 -left-8 hidden md:block">
-                    <Card className="flex items-center gap-2 p-2">
-                         <Image src="https://picsum.photos/seed/avatar1/40/40" alt="avatar" width={40} height={40} className="rounded-full" />
-                         <div>
-                            <p className="font-bold text-sm">Pak Budi</p>
-                            <p className="text-xs text-muted-foreground">Simeulue</p>
-                         </div>
-                    </Card>
-                </div>
-                 <div className="absolute -bottom-8 right-8 hidden md:block">
-                    <Card className="p-3 max-w-xs">
-                        <p className="text-sm">"We are one generation...dedicated to promoting the environment for all."</p>
-                    </Card>
-                </div>
-              </div>
-            </MotionWrapper>
+      <section role="region" aria-labelledby="hero-title">
+        <div className="hero-v2-card">
+          <div className="hero-v2-content">
+            <div aria-label="Highlight" className="hero-v2-pill">
+              <Sparkles className="h-5 w-5" />
+              <span>Lebih dari 100+ cerita terkumpul</span>
+            </div>
+            <h1 id="hero-title" className="hero-v2-title">
+              Suara Ketahanan, Gema Kebijaksanaan
+            </h1>
+            <p className="hero-v2-desc">
+              Jelajahi kearifan lokal, kesiapsiagaan bencana, dan perdamaian di
+              Aceh melalui cerita yang dihidupkan oleh teknologi AI.
+            </p>
+            
+            <div aria-label="Story previews" className="hero-v2-thumbs">
+              {thumbStories.map((story, i) => (
+                <figure key={story.id} className="contents">
+                   <Image
+                      src={story.media.featuredImage}
+                      alt={story.title}
+                      width={360}
+                      height={480}
+                      className="hero-v2-thumb"
+                      data-ai-hint={story.media.featuredImageHint}
+                    />
+                </figure>
+              ))}
+            </div>
+
+            <div className="hero-v2-cta">
+              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                <Link href="/explore">
+                  <Rocket className="mr-2 h-5 w-5" />
+                  Jelajahi Cerita
+                </Link>
+              </Button>
+            </div>
           </div>
-        </div>
-        <div className="absolute inset-0 z-0 opacity-10 dark:opacity-20">
-          <Image
-            src="https://picsum.photos/seed/bg/1920/1080"
-            alt="Abstract background"
-            fill
-            className="object-cover"
-            data-ai-hint="abstract waves"
-          />
+          
+          <div aria-hidden="true" className="hero-v2-note hero-v2-note-headline">
+             Lestarikan Kearifan Lokal
+            <ArrowUpLeft className="hero-v2-note-arrow" />
+          </div>
         </div>
       </section>
 
