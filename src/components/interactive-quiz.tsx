@@ -1,10 +1,11 @@
+
 'use client';
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
-import { CheckCircle, HelpCircle, RefreshCw, Trophy } from 'lucide-react';
+import { CheckCircle, HelpCircle, RefreshCw, Trophy, PlayCircle } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import MotionWrapper from './motion-wrapper';
 import { Quiz } from '@/lib/interactive-content';
@@ -18,6 +19,7 @@ export default function InteractiveQuiz({ quiz }: InteractiveQuizProps) {
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
   const [score, setScore] = useState(0);
+  const [quizStarted, setQuizStarted] = useState(false);
   const [quizFinished, setQuizFinished] = useState(false);
 
   const { questions, title, description } = quiz;
@@ -53,12 +55,44 @@ export default function InteractiveQuiz({ quiz }: InteractiveQuizProps) {
     setIsCorrect(null);
     setScore(0);
     setQuizFinished(false);
+    setQuizStarted(true); // Langsung mulai lagi
   };
+  
+  const handleStartQuiz = () => {
+    setQuizStarted(true);
+    setQuizFinished(false);
+    setCurrentQuestionIndex(0);
+    setScore(0);
+    setSelectedAnswer(null);
+    setIsCorrect(null);
+  }
 
   const progress =
     ((currentQuestionIndex + (quizFinished || selectedAnswer ? 1 : 0)) /
       questions.length) *
     100;
+
+  if (!quizStarted) {
+    return (
+       <MotionWrapper>
+        <Card className="mx-auto w-full max-w-2xl text-center">
+          <CardHeader className="p-8">
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+                <HelpCircle className="h-8 w-8" />
+            </div>
+            <CardTitle className="mt-4 font-headline text-3xl">{title}</CardTitle>
+            <CardDescription className="mt-2 text-lg text-muted-foreground">{description}</CardDescription>
+          </CardHeader>
+          <CardContent className="p-8 pt-0">
+            <Button onClick={handleStartQuiz} size="lg">
+              <PlayCircle className="mr-2 h-5 w-5" />
+              Mulai Kuis
+            </Button>
+          </CardContent>
+        </Card>
+      </MotionWrapper>
+    );
+  }
 
   if (quizFinished) {
     return (
@@ -80,10 +114,15 @@ export default function InteractiveQuiz({ quiz }: InteractiveQuizProps) {
                 ? 'Luar biasa! Anda adalah seorang ahli.'
                 : 'Kerja bagus! Selalu ada ruang untuk belajar.'}
             </p>
-            <Button onClick={handleRestartQuiz} size="lg">
-              <RefreshCw className="mr-2 h-4 w-4" />
-              Ulangi Kuis
-            </Button>
+            <div className="flex justify-center gap-4">
+              <Button onClick={handleRestartQuiz} size="lg">
+                <RefreshCw className="mr-2 h-4 w-4" />
+                Ulangi Kuis
+              </Button>
+               <Button onClick={() => setQuizStarted(false)} size="lg" variant="outline">
+                Kembali
+              </Button>
+            </div>
           </CardContent>
         </Card>
       </MotionWrapper>
