@@ -74,11 +74,17 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="hero-v2-cta">
+            <div className="hero-v2-cta flex flex-wrap justify-center gap-4">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
                 <Link href="/explore">
                   <Rocket className="mr-2 h-5 w-5" />
                   Jelajahi Cerita
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="secondary">
+                <Link href="/share-story">
+                  <Share2 className="mr-2 h-5 w-5" />
+                  Bagikan Ceritamu
                 </Link>
               </Button>
             </div>
@@ -392,3 +398,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
