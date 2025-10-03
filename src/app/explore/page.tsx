@@ -23,7 +23,7 @@ export default function ExplorePage() {
       <div className="mb-12 text-center">
         <h1 className="relative inline-block font-headline text-4xl md:text-5xl">
           {exploreDict.title}
-          <span className="absolute -bottom-2 left-0 block h-1 w-full rounded-full bg-primary" />
+          <span className="absolute -bottom-2 left-0 block h-1 w-full rounded-full bg-sky-500" />
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
           {exploreDict.description}
