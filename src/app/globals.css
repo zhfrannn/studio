@@ -89,7 +89,7 @@
 
 /* LogoLoop styles */
 .logo-loop-container {
-  @apply relative mt-8 flex overflow-hidden opacity-60;
+  @apply relative mt-8 flex overflow-hidden;
   -webkit-mask-image: linear-gradient(
     to right,
     transparent 0%,
