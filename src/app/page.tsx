@@ -822,8 +822,6 @@ export default function Home() {
                 margin: 0,
               }}
               src="https://www.canva.com/design/DAG0vgSu8Q4/J8dlQa7zH4MCir-aF4d54g/view?embed"
-              allowFullScreen={true}
-              allow="fullscreen"
             ></iframe>
           </div>
         </LogoLoop>
