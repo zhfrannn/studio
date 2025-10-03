@@ -47,8 +47,8 @@ export const stories: Omit<Story, 'title' | 'summary' | 'fullText'>[] = [
     aiThemes: ['Disaster Preparedness', 'Local Wisdom', 'Peacebuilding'],
     media: {
       featuredImage:
-        'https://images.unsplash.com/photo-1614933723626-22f927cd37dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtb3VudGFpbiUyMHZpbGxhZ2V8ZW58MHx8fHwxNzU5NDkzNzQzfDA&ixlib=rb-4.1.0&q=80&w=1080',
-      featuredImageHint: 'mountain village',
+        'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb21tdW5pdHl8ZW58MHx8fHwxNzU5NDk5MTEyfDA&ixlib=rb-4.1.0&q=80&w=1080',
+      featuredImageHint: 'community',
     },
     status: 'published',
   },
