@@ -161,6 +161,17 @@
     @apply relative overflow-hidden bg-gray-900 py-8 text-center sm:py-16;
 }
 
+.hero-v2-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: linear-gradient(to top, hsl(var(--background)), transparent);
+    pointer-events: none;
+}
+
 .hero-v2-card .hero-v2-title, .hero-v2-card .hero-v2-desc {
     @apply text-white;
 }
