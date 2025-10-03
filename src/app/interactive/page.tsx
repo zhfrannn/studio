@@ -26,12 +26,13 @@ import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Separator } from '@/components/ui/separator';
 import { stories } from '@/lib/data';
-import { interactiveContent } from '@/lib/interactive-content';
+import { interactiveContent, masterQuiz } from '@/lib/interactive-content';
 import Image from 'next/image';
 import Link from 'next/link';
 import WaveIcon from '@/components/icons/wave-icon';
 import { cn } from '@/lib/utils';
 import MotionWrapper from '@/components/motion-wrapper';
+import InteractiveQuiz from '@/components/interactive-quiz';
 
 const leaderboardData = [
   { name: 'Tsunami Expert', score: '30/30', rank: 1, initial: 'TE' },
@@ -123,53 +124,9 @@ export default function InteractiveLearningHub() {
 
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-start">
           <main className="col-span-1 space-y-8 lg:col-span-2">
-            {/* Disaster Preparedness Quiz */}
+            {/* Master Quiz */}
             <MotionWrapper>
-              <Card className="w-full overflow-hidden">
-                <CardHeader>
-                  <div className="flex items-center justify-between">
-                    <CardTitle className="flex items-center gap-2">
-                      <ClipboardList className="h-6 w-6 text-primary" />
-                      Disaster Preparedness Quiz
-                    </CardTitle>
-                    <div className="flex items-center gap-2">
-                      <span className="text-xs text-muted-foreground">
-                        Progress: 25%
-                      </span>
-                      <Progress value={25} className="w-24" />
-                    </div>
-                  </div>
-                  <CardDescription>
-                    Welcome to the Interactive Disaster Preparedness Quiz! Test your
-                    knowledge about tsunami warnings, community response, and
-                    traditional wisdom like Smong. Click "Start Quiz" to begin your
-                    learning journey.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="flex flex-col items-center justify-center bg-muted/40 py-12 text-center">
-                  <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-primary/20">
-                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/30">
-                       <Button asChild variant="ghost" size="icon" className="h-12 w-12 rounded-full bg-white text-primary shadow-lg hover:bg-white">
-                         <Link href="/story/smong-selamat-dari-lautan">
-                            <Puzzle className="h-6 w-6" />
-                         </Link>
-                      </Button>
-                    </div>
-                  </div>
-                  <h3 className="mb-2 text-xl font-semibold">
-                    Ready to Test Your Knowledge?
-                  </h3>
-                  <p className="mb-6 max-w-sm text-sm text-muted-foreground">
-                    Learn about disaster preparedness through interactive scenarios
-                    based on real stories from Aceh.
-                  </p>
-                  <Button size="lg" asChild>
-                     <Link href="/story/smong-selamat-dari-lautan">
-                        Start Quiz
-                     </Link>
-                  </Button>
-                </CardContent>
-              </Card>
+               <InteractiveQuiz quiz={masterQuiz} />
             </MotionWrapper>
 
             {/* Educational Videos */}
@@ -418,3 +375,5 @@ export default function InteractiveLearningHub() {
     </div>
   );
 }
+
+    

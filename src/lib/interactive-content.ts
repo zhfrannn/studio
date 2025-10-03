@@ -39,6 +39,368 @@ export interface InteractiveContent {
   video: Video;
 }
 
+const smongQuiz: Quiz = {
+  title: 'Kuis Kearifan Smong',
+  description:
+    'Uji pemahaman Anda tentang Smong dan sistem pengetahuan tradisional untuk kesiapsiagaan bencana.',
+  questions: [
+    {
+      question:
+        "Apa arti kata 'Smong' dalam bahasa lokal Pulau Simeulue?",
+      options: ['Gempa Bumi', 'Tsunami', 'Peringatan', 'Lautan'],
+      correctAnswer: 'Tsunami',
+      points: 10,
+    },
+    {
+      question:
+        'Apa dua tanda dalam syair Smong yang menunjukkan akan datangnya tsunami?',
+      options: [
+        'Angin kencang dan hujan lebat',
+        'Gempa kuat diikuti surutnya air laut',
+        'Awan gelap dan petir',
+        'Suara sirene yang keras',
+      ],
+      correctAnswer: 'Gempa kuat diikuti surutnya air laut',
+      points: 10,
+    },
+    {
+      question:
+        'Tindakan apa yang disarankan oleh kearifan Smong segera setelah melihat tanda-tanda tersebut?',
+      options: [
+        'Pergi ke pantai untuk melihat',
+        'Menunggu instruksi resmi',
+        'Lari ke tempat yang lebih tinggi',
+        'Bersembunyi di dalam rumah',
+      ],
+      correctAnswer: 'Lari ke tempat yang lebih tinggi',
+      points: 10,
+    },
+  ],
+};
+
+const bahTangseQuiz: Quiz = {
+  title: 'Kuis Siaga Banjir Tangse',
+  description:
+    'Uji pemahamanmu tentang penyebab dan dampak dari banjir bandang "Bah Tangse".',
+  questions: [
+    {
+      question:
+        'Apa akar penyebab utama dari bencana "Bah Tangse" menurut cerita?',
+      options: [
+        'Gempa bumi',
+        'Bendungan yang jebol',
+        'Penebangan hutan liar di hulu sungai',
+        'Hujan es',
+      ],
+      correctAnswer: 'Penebangan hutan liar di hulu sungai',
+      points: 10,
+    },
+    {
+      question:
+        'Ke mana warga menyelamatkan diri saat banjir bandang terjadi?',
+      options: [
+        'Ke atap rumah',
+        'Ke dalam bunker bawah tanah',
+        'Ke perbukitan atau tempat yang lebih tinggi',
+        'Ke tengah lapangan',
+      ],
+      correctAnswer: 'Ke perbukitan atau tempat yang lebih tinggi',
+      points: 10,
+    },
+  ],
+};
+
+const kopiGayoQuiz: Quiz = {
+  title: 'Kuis Aroma Perdamaian',
+  description:
+    'Seberapa jauh Anda tahu tentang peran kopi Gayo dalam pemulihan pasca-konflik?',
+  questions: [
+    {
+      question:
+        'Mengapa para petani kopi Gayo memutuskan untuk membentuk koperasi?',
+      options: [
+        'Karena diwajibkan oleh pemerintah',
+        'Untuk bersaing satu sama lain',
+        'Untuk saling menguatkan dan memiliki posisi tawar yang lebih baik',
+        'Untuk mendapatkan pinjaman bank',
+      ],
+      correctAnswer:
+        'Untuk saling menguatkan dan memiliki posisi tawar yang lebih baik',
+      points: 10,
+    },
+    {
+      question:
+        'Apa dampak positif utama dari bangkitnya industri kopi Gayo bagi masyarakat?',
+      options: [
+        'Meningkatnya jumlah wisatawan',
+        'Masyarakat bisa menyekolahkan anak-anak mereka',
+        'Berkurangnya populasi hama',
+        'Harga tanah menjadi mahal',
+      ],
+      correctAnswer: 'Masyarakat bisa menyekolahkan anak-anak mereka',
+      points: 10,
+    },
+  ],
+};
+
+const bakauQuiz: Quiz = {
+    title: 'Kuis Penjaga Pantai',
+    description:
+      'Seberapa baik Anda memahami fungsi dan manfaat hutan bakau?',
+    questions: [
+        {
+          question:
+            'Selain sebagai pelindung pantai, apa manfaat ekologis lain dari hutan bakau?',
+          options: [
+            'Menghasilkan buah-buahan',
+            'Menjadi habitat bagi biota laut seperti ikan dan kepiting',
+            'Menarik wisatawan asing',
+            'Membuat pantai lebih panas',
+          ],
+          correctAnswer:
+            'Menjadi habitat bagi biota laut seperti ikan dan kepiting',
+          points: 10,
+        },
+    ]
+};
+
+const dapurUmumQuiz: Quiz = {
+    title: 'Kuis Dapur Perdamaian',
+    description: 'Uji pemahaman Anda tentang peran inisiatif lokal dalam membangun perdamaian.',
+    questions: [
+        {
+          question:
+            'Apa hasil akhir yang paling penting dari inisiatif Dapur Umum Perdamaian?',
+          options: [
+            'Warga menjadi kenyang',
+            'Mendapat penghargaan dari pemerintah',
+            'Runtuhnya dinding ketidakpercayaan dan terjalinnya kembali persaudaraan',
+            'Menjadi tujuan wisata kuliner',
+          ],
+          correctAnswer:
+            'Runtuhnya dinding ketidakpercayaan dan terjalinnya kembali persaudaraan',
+          points: 10,
+        },
+    ]
+};
+
+const lumbungPadiQuiz: Quiz = {
+    title: 'Kuis Lumbung Komunal',
+    description:
+      'Uji pemahaman Anda tentang gotong royong dan ketahanan pangan.',
+    questions: [
+        {
+            question:
+              'Apa prinsip dasar yang mendasari sistem lumbung bersama ini?',
+            options: [
+              'Prinsip untung-rugi',
+              'Prinsip utang-piutang dengan bunga',
+              'Semangat gotong royong dan kepedulian',
+              'Prinsip kompetisi',
+            ],
+            correctAnswer: 'Semangat gotong royong dan kepedulian',
+            points: 10,
+          },
+    ]
+};
+
+const apiBukitQuiz: Quiz = {
+    title: 'Kuis Jaga Hutan',
+    description:
+      'Uji pengetahuan Anda tentang pencegahan dan penanggulangan kebakaran hutan.',
+    questions: [
+        {
+            question: 'Menurut cerita, apa penyebab umum kebakaran hutan?',
+            options: [
+              'Sambaran petir',
+              'Panas matahari yang ekstrem',
+              'Kelalaian manusia seperti membuka lahan dengan membakar',
+              'Letusan gunung berapi',
+            ],
+            correctAnswer:
+              'Kelalaian manusia seperti membuka lahan dengan membakar',
+            points: 10,
+          },
+    ]
+};
+
+const pemudaAdatQuiz: Quiz = {
+    title: 'Kuis Penjaga Adat',
+    description:
+      'Uji pemahamanmu tentang peran budaya dalam pembangunan perdamaian.',
+    questions: [
+        {
+            question:
+              'Inisiatif ini menunjukkan bahwa seni dan budaya dapat menjadi alat yang efektif untuk...',
+            options: [
+              'Menghasilkan seniman terkenal',
+              'Pembangunan perdamaian dan penguatan komunitas',
+              'Menarik wisatawan',
+              'Melupakan masa lalu',
+            ],
+            correctAnswer: 'Pembangunan perdamaian dan penguatan komunitas',
+            points: 10,
+          },
+    ]
+};
+
+const perempuanPenganyamQuiz: Quiz = {
+    title: 'Kuis Anyaman Harapan',
+    description:
+      'Uji pemahamanmu tentang pemberdayaan perempuan dan pemulihan pasca-bencana.',
+    questions: [
+        {
+            question:
+              'Apa transformasi utama yang dialami oleh para perempuan ini?',
+            options: [
+              'Dari petani menjadi pengrajin',
+              'Dari ibu rumah tangga menjadi politisi',
+              'Dari korban menjadi penyintas yang berdaya',
+              'Dari pedagang menjadi guru',
+            ],
+            correctAnswer: 'Dari korban menjadi penyintas yang berdaya',
+            points: 10,
+          },
+    ]
+};
+
+const arsitekturQuiz: Quiz = {
+    title: 'Kuis Arsitektur Bijak',
+    description:
+      'Uji pemahamanmu tentang kearifan di balik arsitektur Rumoh Aceh.',
+    questions: [
+        {
+            question:
+              'Apa pelajaran utama yang bisa diambil dari kearifan arsitektur Rumoh Aceh?',
+            options: [
+              'Kita harus membangun rumah dari kayu saja',
+              'Teknologi modern tidak berguna',
+              'Desain tradisional seringkali memiliki solusi yang adaptif terhadap lingkungan',
+              'Rumah panggung tidak aman',
+            ],
+            correctAnswer:
+              'Desain tradisional seringkali memiliki solusi yang adaptif terhadap lingkungan',
+            points: 10,
+          },
+    ]
+};
+
+const seniTraumaQuiz: Quiz = {
+    title: 'Kuis Kanvas Harapan',
+    description:
+      'Uji pemahamanmu tentang kekuatan seni dalam proses pemulihan sosial.',
+    questions: [
+        {
+            question:
+              'Apa tema yang sering diangkat dalam mural-mural mereka?',
+            options: [
+              'Kemarahan dan kesedihan',
+              'Pemandangan abstrak',
+              'Harapan, ketahanan, dan kebersamaan',
+              'Potret para seniman',
+            ],
+            correctAnswer: 'Harapan, ketahanan, dan kebersamaan',
+            points: 10,
+          },
+    ]
+};
+
+const nelayanQuiz: Quiz = {
+    title: 'Kuis Navigasi Tradisional',
+    description:
+      'Uji pengetahuanmu tentang cara nelayan tradisional membaca tanda-tanda alam.',
+    questions: [
+        {
+            question: 'Rasi bintang apa yang disebut "Bintang Tiga" dan digunakan untuk penunjuk arah?',
+            options: ['Scorpio', 'Orion', 'Big Dipper', 'Crux'],
+            correctAnswer: 'Orion',
+            points: 10,
+        }
+    ]
+};
+
+const sumurTuaQuiz: Quiz = {
+    title: 'Kuis Sumber Kehidupan',
+    description:
+      'Uji pemahamanmu tentang manajemen sumber daya air tradisional.',
+    questions: [
+        {
+            question: 'Mengapa sumur tua tersebut tidak pernah kering?',
+            options: [
+              'Karena sangat dalam',
+              'Karena dibangun di atas mata air besar',
+              'Karena jarang digunakan',
+              'Karena terbuat dari batu ajaib',
+            ],
+            correctAnswer: 'Karena dibangun di atas mata air besar',
+            points: 10,
+          },
+    ]
+};
+
+const ilmuFalakQuiz: Quiz = {
+    title: 'Kuis Ilmu Falak',
+    description:
+      'Uji pengetahuanmu tentang penerapan astronomi tradisional di Aceh.',
+    questions: [
+        {
+            question:
+              'Kisah ini menunjukkan bahwa di Aceh, ilmu agama dan ilmu pengetahuan (sains)...',
+            options: [
+              'Selalu bertentangan',
+              'Tidak ada hubungannya sama sekali',
+              'Dapat saling melengkapi dan bermanfaat bagi kehidupan',
+              'Hanya dipelajari oleh kalangan bangsawan',
+            ],
+            correctAnswer:
+              'Dapat saling melengkapi dan bermanfaat bagi kehidupan',
+            points: 10,
+          },
+    ]
+};
+
+const pasarQuiz: Quiz = {
+    title: 'Kuis Jantung Komunitas',
+    description: 'Uji pemahamanmu tentang peran sosial pasar tradisional.',
+    questions: [
+        {
+            question: 'Apa pesan utama dari cerita ini?',
+            options: [
+              'Pasar modern lebih baik dari pasar tradisional',
+              'Pasar tradisional harus dijaga karena perannya sebagai pusat komunitas',
+              'Berjualan di pasar sangat menguntungkan',
+              'Warung kopi adalah bisnis terbaik di pasar',
+            ],
+            correctAnswer:
+              'Pasar tradisional harus dijaga karena perannya sebagai pusat komunitas',
+            points: 10,
+          },
+    ]
+};
+
+export const masterQuiz: Quiz = {
+    title: 'Kuis Pengetahuan Aceh',
+    description: 'Uji wawasan Anda tentang kearifan lokal, kesiapsiagaan bencana, dan perdamaian di Aceh melalui pertanyaan-pertanyaan dari berbagai cerita.',
+    questions: [
+        ...smongQuiz.questions.slice(0,1),
+        ...bahTangseQuiz.questions.slice(0,1),
+        ...kopiGayoQuiz.questions.slice(0,1),
+        ...bakauQuiz.questions.slice(0,1),
+        ...dapurUmumQuiz.questions.slice(0,1),
+        ...lumbungPadiQuiz.questions.slice(0,1),
+        ...apiBukitQuiz.questions.slice(0,1),
+        ...pemudaAdatQuiz.questions.slice(0,1),
+        ...perempuanPenganyamQuiz.questions.slice(0,1),
+        ...arsitekturQuiz.questions.slice(0,1),
+        ...seniTraumaQuiz.questions.slice(0,1),
+        ...nelayanQuiz.questions.slice(0,1),
+        ...sumurTuaQuiz.questions.slice(0,1),
+        ...ilmuFalakQuiz.questions.slice(0,1),
+        ...pasarQuiz.questions.slice(0,1),
+    ]
+}
+
+
 export const interactiveContent: { [key: string]: InteractiveContent } = {
   'smong-selamat-dari-lautan': {
     video: {
@@ -105,68 +467,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
         },
       ],
     },
-    quiz: {
-      title: 'Kuis Kearifan Smong',
-      description:
-        'Uji pemahaman Anda tentang Smong dan sistem pengetahuan tradisional untuk kesiapsiagaan bencana.',
-      questions: [
-        {
-          question:
-            "Apa arti kata 'Smong' dalam bahasa lokal Pulau Simeulue?",
-          options: ['Gempa Bumi', 'Tsunami', 'Peringatan', 'Lautan'],
-          correctAnswer: 'Tsunami',
-          points: 10,
-        },
-        {
-          question:
-            'Apa dua tanda dalam syair Smong yang menunjukkan akan datangnya tsunami?',
-          options: [
-            'Angin kencang dan hujan lebat',
-            'Gempa kuat diikuti surutnya air laut',
-            'Awan gelap dan petir',
-            'Suara sirene yang keras',
-          ],
-          correctAnswer: 'Gempa kuat diikuti surutnya air laut',
-          points: 10,
-        },
-        {
-          question:
-            'Tindakan apa yang disarankan oleh kearifan Smong segera setelah melihat tanda-tanda tersebut?',
-          options: [
-            'Pergi ke pantai untuk melihat',
-            'Menunggu instruksi resmi',
-            'Lari ke tempat yang lebih tinggi',
-            'Bersembunyi di dalam rumah',
-          ],
-          correctAnswer: 'Lari ke tempat yang lebih tinggi',
-          points: 10,
-        },
-        {
-          question:
-            'Bagaimana kearifan Smong secara tradisional diwariskan dari generasi ke generasi?',
-          options: [
-            'Melalui buku-buku tertulis',
-            'Melalui pelajaran di sekolah',
-            'Melalui syair dan lagu lisan',
-            'Melalui pamflet pemerintah',
-          ],
-          correctAnswer: 'Melalui syair dan lagu lisan',
-          points: 10,
-        },
-        {
-          question:
-            'Keefektifan Smong selama tsunami 2004 adalah contoh kuat dari:',
-          options: [
-            'Teknologi modern',
-            'Bantuan internasional',
-            'Kearifan lokal dalam kesiapsiagaan bencana',
-            'Sebuah kebetulan yang beruntung',
-          ],
-          correctAnswer: 'Kearifan lokal dalam kesiapsiagaan bencana',
-          points: 10,
-        },
-      ],
-    },
+    quiz: smongQuiz,
   },
   'bah-tangse-sungai-murka': {
     video: {
@@ -237,74 +538,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
         },
       ],
     },
-    quiz: {
-      title: 'Kuis Siaga Banjir Tangse',
-      description:
-        'Uji pemahamanmu tentang penyebab dan dampak dari banjir bandang "Bah Tangse".',
-      questions: [
-        {
-          question:
-            'Apa suara yang didengar warga sebelum air bah datang?',
-          options: [
-            'Suara sirene',
-            'Suara gemuruh seperti gunung runtuh',
-            'Suara musik keras',
-            'Suara helikopter',
-          ],
-          correctAnswer: 'Suara gemuruh seperti gunung runtuh',
-          points: 10,
-        },
-        {
-          question:
-            'Selain air, apa yang dibawa oleh arus deras banjir bandang tersebut?',
-          options: [
-            'Ikan-ikan besar',
-            'Pasir putih',
-            'Pohon-pohon gelondongan raksasa',
-            'Sampah plastik',
-          ],
-          correctAnswer: 'Pohon-pohon gelondongan raksasa',
-          points: 10,
-        },
-        {
-          question:
-            'Apa akar penyebab utama dari bencana "Bah Tangse" menurut cerita?',
-          options: [
-            'Gempa bumi',
-            'Bendungan yang jebol',
-            'Penebangan hutan liar di hulu sungai',
-            'Hujan es',
-          ],
-          correctAnswer: 'Penebangan hutan liar di hulu sungai',
-          points: 10,
-        },
-        {
-          question:
-            'Ke mana warga menyelamatkan diri saat banjir bandang terjadi?',
-          options: [
-            'Ke atap rumah',
-            'Ke dalam bunker bawah tanah',
-            'Ke perbukitan atau tempat yang lebih tinggi',
-            'Ke tengah lapangan',
-          ],
-          correctAnswer: 'Ke perbukitan atau tempat yang lebih tinggi',
-          points: 10,
-        },
-        {
-          question:
-            'Apa pelajaran terpenting yang dipetik oleh masyarakat Tangse dari tragedi ini?',
-          options: [
-            'Pentingnya membangun rumah dari beton',
-            'Pentingnya memiliki perahu karet',
-            'Pentingnya menjaga kelestarian alam untuk mencegah bencana',
-            'Pentingnya pindah ke kota besar',
-          ],
-          correctAnswer:
-            'Pentingnya menjaga kelestarian alam untuk mencegah bencana',
-          points: 10,
-        },
-      ],
-    },
+    quiz: bahTangseQuiz,
   },
   'kopi-gayo-aroma-perdamaian': {
     video: {
@@ -375,75 +609,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
         },
       ],
     },
-    quiz: {
-      title: 'Kuis Aroma Perdamaian',
-      description:
-        'Seberapa jauh Anda tahu tentang peran kopi Gayo dalam pemulihan pasca-konflik?',
-      questions: [
-        {
-          question:
-            'Apa yang terjadi pada kebun-kebun kopi di Gayo selama masa konflik?',
-          options: [
-            'Ditanami tanaman lain',
-            'Dikelola oleh pemerintah',
-            'Ditinggalkan dan menjadi telantar',
-            'Dijual dengan harga murah',
-          ],
-          correctAnswer: 'Ditinggalkan dan menjadi telantar',
-          points: 10,
-        },
-        {
-          question:
-            'Apa langkah awal yang dilakukan para petani setelah masa damai tiba?',
-          options: [
-            'Mencari pekerjaan di kota',
-            'Membangun kembali kebun kopi mereka',
-            'Menunggu bantuan pemerintah',
-            'Menjual tanah mereka',
-          ],
-          correctAnswer: 'Membangun kembali kebun kopi mereka',
-          points: 10,
-        },
-        {
-          question:
-            'Mengapa para petani kopi Gayo memutuskan untuk membentuk koperasi?',
-          options: [
-            'Karena diwajibkan oleh pemerintah',
-            'Untuk bersaing satu sama lain',
-            'Untuk saling menguatkan dan memiliki posisi tawar yang lebih baik',
-            'Untuk mendapatkan pinjaman bank',
-          ],
-          correctAnswer:
-            'Untuk saling menguatkan dan memiliki posisi tawar yang lebih baik',
-          points: 10,
-        },
-        {
-          question:
-            'Selain sebagai sumber ekonomi, apa makna penting kopi bagi masyarakat Gayo pasca-konflik?',
-          options: [
-            'Sebagai minuman para bangsawan',
-            'Sebagai simbol kerja keras, harapan, dan pemulihan',
-            'Sebagai satu-satunya tanaman yang bisa tumbuh',
-            'Sebagai syarat untuk mendapatkan bantuan',
-          ],
-          correctAnswer:
-            'Sebagai simbol kerja keras, harapan, dan pemulihan',
-          points: 10,
-        },
-        {
-          question:
-            'Apa dampak positif utama dari bangkitnya industri kopi Gayo bagi masyarakat?',
-          options: [
-            'Meningkatnya jumlah wisatawan',
-            'Masyarakat bisa menyekolahkan anak-anak mereka',
-            'Berkurangnya populasi hama',
-            'Harga tanah menjadi mahal',
-          ],
-          correctAnswer: 'Masyarakat bisa menyekolahkan anak-anak mereka',
-          points: 10,
-        },
-      ],
-    },
+    quiz: kopiGayoQuiz,
   },
   'hutan-bakau-penjaga-pantai': {
     video: {
@@ -514,69 +680,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
         },
       ],
     },
-    quiz: {
-      title: 'Kuis Penjaga Pantai',
-      description:
-        'Seberapa baik Anda memahami fungsi dan manfaat hutan bakau?',
-      questions: [
-        {
-          question:
-            'Apa masalah utama yang dihadapi desa di Aceh Jaya sebelum menanam bakau?',
-          options: [
-            'Kekeringan',
-            'Abrasi dan erosi pantai',
-            'Serangan hama',
-            'Konflik warga',
-          ],
-          correctAnswer: 'Abrasi dan erosi pantai',
-          points: 10,
-        },
-        {
-          question:
-            'Bagaimana hutan bakau melindungi desa dari ombak dan badai?',
-          options: [
-            'Dengan membuat suara yang menakutkan ombak',
-            'Dengan akar-akarnya yang kokoh menahan tanah dan ombak',
-            'Dengan daunnya yang menyerap air',
-            'Dengan memantulkan cahaya matahari',
-          ],
-          correctAnswer:
-            'Dengan akar-akarnya yang kokoh menahan tanah dan ombak',
-          points: 10,
-        },
-        {
-          question:
-            'Selain sebagai pelindung pantai, apa manfaat ekologis lain dari hutan bakau?',
-          options: [
-            'Menghasilkan buah-buahan',
-            'Menjadi habitat bagi biota laut seperti ikan dan kepiting',
-            'Menarik wisatawan asing',
-            'Membuat pantai lebih panas',
-          ],
-          correctAnswer:
-            'Menjadi habitat bagi biota laut seperti ikan dan kepiting',
-          points: 10,
-        },
-        {
-          question:
-            'Inisiatif penanaman bakau dalam cerita ini adalah contoh dari...',
-          options: [
-            'Proyek pemerintah',
-            'Bantuan asing',
-            'Aksi gotong royong komunitas',
-            'Bisnis perorangan',
-          ],
-          correctAnswer: 'Aksi gotong royong komunitas',
-          points: 10,
-        },
-        {
-          question: 'Apa istilah lain untuk hutan bakau yang sering digunakan?',
-          options: ['Hutan Pinus', 'Hutan Mangrove', 'Hutan Hujan', 'Sabana'],
-          correctAnswer: 'Hutan Mangrove',
-          points: 10,
-        },
-      ],
-    },
+    quiz: bakauQuiz,
   },
   'dapur-umum-perdamaian': {
     video: {
@@ -646,74 +750,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
         },
       ],
     },
-    quiz: {
-      title: 'Kuis Dapur Perdamaian',
-      description:
-        'Uji pemahaman Anda tentang peran inisiatif lokal dalam membangun perdamaian.',
-      questions: [
-        {
-          question:
-            'Apa masalah utama yang ingin diatasi dengan mendirikan dapur umum?',
-          options: [
-            'Kelaparan',
-            'Ketidakpercayaan dan perpecahan pasca-konflik',
-            'Kurangnya lapangan kerja',
-            'Masalah kesehatan',
-          ],
-          correctAnswer: 'Ketidakpercayaan dan perpecahan pasca-konflik',
-          points: 10,
-        },
-        {
-          question: 'Mengapa makanan dipilih sebagai media untuk rekonsiliasi?',
-          options: [
-            'Karena makanan mudah didapat',
-            'Karena semua orang butuh makan dan makanan bisa menyatukan',
-            'Karena ada sisa dana bantuan',
-            'Karena itu satu-satunya ide yang ada',
-          ],
-          correctAnswer:
-            'Karena semua orang butuh makan dan makanan bisa menyatukan',
-          points: 10,
-        },
-        {
-          question:
-            'Di mana keajaiban "rekonsiliasi" terjadi di dapur umum tersebut?',
-          options: [
-            'Saat pembagian makanan',
-            'Saat makan bersama',
-            'Saat proses memasak dan persiapan',
-            'Saat menerima donasi',
-          ],
-          correctAnswer: 'Saat proses memasak dan persiapan',
-          points: 10,
-        },
-        {
-          question:
-            'Apa hasil akhir yang paling penting dari inisiatif Dapur Umum Perdamaian?',
-          options: [
-            'Warga menjadi kenyang',
-            'Mendapat penghargaan dari pemerintah',
-            'Runtuhnya dinding ketidakpercayaan dan terjalinnya kembali persaudaraan',
-            'Menjadi tujuan wisata kuliner',
-          ],
-          correctAnswer:
-            'Runtuhnya dinding ketidakpercayaan dan terjalinnya kembali persaudaraan',
-          points: 10,
-        },
-        {
-          question:
-            'Kisah ini menunjukkan bahwa perdamaian dapat dimulai dari...',
-          options: [
-            'Perjanjian politik yang rumit',
-            'Intervensi pihak asing',
-            'Proyek pembangunan besar',
-            'Inisiatif sederhana dan tulus dari komunitas',
-          ],
-          correctAnswer: 'Inisiatif sederhana dan tulus dari komunitas',
-          points: 10,
-        },
-      ],
-    },
+    quiz: dapurUmumQuiz,
   },
   'lumbung-padi-komunal': {
     video: {
@@ -783,71 +820,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
         },
       ],
     },
-    quiz: {
-      title: 'Kuis Lumbung Komunal',
-      description:
-        'Uji pemahaman Anda tentang gotong royong dan ketahanan pangan.',
-      questions: [
-        {
-          question:
-            'Apa tujuan utama dari didirikannya lumbung padi komunal di Gayo?',
-          options: [
-            'Untuk menjual padi secara massal',
-            'Sebagai jaring pengaman sosial saat musim paceklik',
-            'Sebagai syarat bantuan pemerintah',
-            'Untuk membayar pajak desa',
-          ],
-          correctAnswer: 'Sebagai jaring pengaman sosial saat musim paceklik',
-          points: 10,
-        },
-        {
-          question: 'Siapa yang menyumbang ke lumbung padi komunal?',
-          options: [
-            'Hanya orang kaya',
-            'Setiap keluarga yang panennya berlebih',
-            'Pemerintah daerah',
-            'Perusahaan swasta',
-          ],
-          correctAnswer: 'Setiap keluarga yang panennya berlebih',
-          points: 10,
-        },
-        {
-          question:
-            'Apa prinsip dasar yang mendasari sistem lumbung bersama ini?',
-          options: [
-            'Prinsip untung-rugi',
-            'Prinsip utang-piutang dengan bunga',
-            'Semangat gotong royong dan kepedulian',
-            'Prinsip kompetisi',
-          ],
-          correctAnswer: 'Semangat gotong royong dan kepedulian',
-          points: 10,
-        },
-        {
-          question: 'Apa yang terjadi jika sebuah keluarga mengalami gagal panen?',
-          options: [
-            'Mereka harus berutang ke rentenir',
-            'Mereka bisa mengambil padi dari lumbung tanpa bunga',
-            'Mereka harus pindah dari desa',
-            'Mereka dibiarkan kelaparan',
-          ],
-          correctAnswer: 'Mereka bisa mengambil padi dari lumbung tanpa bunga',
-          points: 10,
-        },
-        {
-          question:
-            'Kisah lumbung padi komunal ini adalah contoh nyata dari kearifan lokal dalam bidang...',
-          options: [
-            'Ketahanan Pangan',
-            'Seni dan Budaya',
-            'Militer',
-            'Teknologi Informasi',
-          ],
-          correctAnswer: 'Ketahanan Pangan',
-          points: 10,
-        },
-      ],
-    },
+    quiz: lumbungPadiQuiz,
   },
   'api-di-bukit-barisan': {
     video: {
@@ -918,73 +891,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
         },
       ],
     },
-    quiz: {
-      title: 'Kuis Jaga Hutan',
-      description:
-        'Uji pengetahuan Anda tentang pencegahan dan penanggulangan kebakaran hutan.',
-      questions: [
-        {
-          question:
-            'Apa ancaman utama yang dihadapi hutan pinus di Aceh Tengah setiap musim kemarau?',
-          options: [
-            'Banjir',
-            'Tanah Longsor',
-            'Kebakaran Hutan',
-            'Serangan Hama',
-          ],
-          correctAnswer: 'Kebakaran Hutan',
-          points: 10,
-        },
-        {
-          question:
-            'Apa nama kelompok sukarela yang dibentuk masyarakat untuk melindungi hutan?',
-          options: [
-            'Pecinta Alam',
-            'Polisi Hutan',
-            'Masyarakat Peduli Api',
-            'Jaga Hutan Gayo',
-          ],
-          correctAnswer: 'Masyarakat Peduli Api',
-          points: 10,
-        },
-        {
-          question:
-            'Manakah dari berikut ini yang merupakan kegiatan pencegahan kebakaran yang mereka lakukan?',
-          options: [
-            'Menyiram hutan setiap hari',
-            'Membuat sekat bakar dan melakukan penyuluhan',
-            'Menebang semua pohon pinus',
-            'Memasang pendingin di hutan',
-          ],
-          correctAnswer: 'Membuat sekat bakar dan melakukan penyuluhan',
-          points: 10,
-        },
-        {
-          question: 'Menurut cerita, apa penyebab umum kebakaran hutan?',
-          options: [
-            'Sambaran petir',
-            'Panas matahari yang ekstrem',
-            'Kelalaian manusia seperti membuka lahan dengan membakar',
-            'Letusan gunung berapi',
-          ],
-          correctAnswer:
-            'Kelalaian manusia seperti membuka lahan dengan membakar',
-          points: 10,
-        },
-        {
-          question: 'Mengapa menjaga hutan sangat penting bagi masyarakat sekitar?',
-          options: [
-            'Karena hutan adalah tempat yang angker',
-            'Hanya karena itu adalah perintah pemerintah',
-            'Karena hutan adalah sumber air dan warisan untuk generasi mendatang',
-            'Agar bisa dijual kayunya',
-          ],
-          correctAnswer:
-            'Karena hutan adalah sumber air dan warisan untuk generasi mendatang',
-          points: 10,
-        },
-      ],
-    },
+    quiz: apiBukitQuiz,
   },
   'pemuda-penjaga-adat': {
     video: {
@@ -1027,7 +934,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
           textColor: 'text-green-800 dark:text-green-200',
         },
         {
-          iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-puzzle"><path d="M19.43 7.53A4.5 4.5 0 0 0 15 6a4.5 4.5 0 0 0-4.43 1.53L10.5 8h.01l.01.01.01.01.01.01h.01l.01.01.01.01h.01l.01.01.01.01h.01l.01.01.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01L12 9.5l.47.47.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01A4.5 4.5 0 0 0 15 18a4.5 4.5 0 0 0 4.43-1.53l.07-.07A4.5 4.5 0 0 0 21 12a4.5 4.5 0 0 0-1.53-3.43l-.07-.07A4.5 4.5 0 0 0 18 6a4.5 4.5 0 0 0-3.43 1.53l-.07.07A4.5 4.5 0 0 0 12 9a4.5 4.5 0 0 0-1.53 3.43l.07.07a4.5 4.5 0 0 0 1.46.93h.01Z"/><path d="M6 15a4.5 4.5 0 0 0 1.53 3.43l.07.07A4.5 4.5 0 0 0 9 21a4.5 4.5 0 0 0 3.43-1.53l.07-.07A4.5 4.5 0 0 0 15 18a4.5 4.5 0 0 0-1.53-3.43l-.07-.07A4.5 4.5 0 0 0 9 12a4.5 4.5 0 0 0-3.43 1.53l-.07.07A4.5 4.5 0 0 0 3 18a4.5 4.5 0 0 0 1.53 3.43l.07.07A4.5 4.5 0 0 0 6 21a4.5 4.5 0 0 0 3.43-1.53l.07-.07A4.5 4.5 0 0 0 12 18a4.5 4.5 0 0 0-1.53-3.43l-.07-.07A4.5 4.5 0 0 0 6 12a4.5 4.5 0 0 0-3.43 1.53L2.5 13.53A4.5 4.5 0 0 1 6 9a4.5 4.5 0 0 1 3.43 1.53l.07.07A4.5 4.5 0 0 1 12 12a4.5 4.5 0 0 1 1.53-3.43l-.07-.07A4.5 4.5 0 0 1 9 6a4.5 4.5 0 0 1-3.43-1.53l-.07.07A4.5 4.5 0 0 1 3 6a4.5 4.5 0 0 1 1.53-3.43l.07.07A4.5 4.5 0 0 1 6 3a4.5 4.5 0 0 1 3.43 1.53l.07.07A4.5 4.5 0 0 1 12 6a4.5 4.5 0 0 1 1.53-3.43L12.5 1.5A4.5 4.5 0 0 0 9 3a4.5 4.5 0 0 0-3.43 1.53L5.5 4.57A4.5 4.5 0 0 0 3 9a4.5 4.5 0 0 0 1.53 3.43l.07.07A4.5 4.5 0 0 0 6 15Z"/></svg>`,
+          iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-puzzle"><path d="M19.43 7.53A4.5 4.5 0 0 0 15 6a4.5 4.5 0 0 0-4.43 1.53L10.5 8h.01l.01.01.01.01.01.01h.01l.01.01.01.01h.01l.01.01.01.01h.01l.01.01.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01L12 9.5l.47.47.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01A4.5 4.5 0 0 0 15 18a4.5 4.5 0 0 0 4.43-1.53l.07-.07A4.5 4.5 0 0 0 21 12a4.5 4.5 0 0 0-1.53-3.43l-.07-.07A4.5 4.5 0 0 0 18 6a4.5 4.5 0 0 0-3.43 1.53l-.07.07A4.5 4.5 0 0 0 12 9a4.5 4.5 0 0 0-1.53 3.43l.07.07a4.5 4.5 0 0 0 1.46.93h.01Z"/><path d="M6 15a4.5 4.5 0 0 0 1.53 3.43l.07.07A4.5 4.5 0 0 0 9 21a4.5 4.5 0 0 0 3.43-1.53l.07-.07A4.5 4.5 0 0 0 15 18a4.5 4.5 0 0 0-1.53-3.43l-.07-.07A4.5 4.5 0 0 0 9 12a4.5 4.5 0 0 0-3.43 1.53l-.07.07A4.5 4.5 0 0 0 3 18a4.5 4.5 0 0 0 1.53 3.43l.07.07A4.5 4.5 0 0 0 6 21a4.5 4.5 0 0 0 3.43-1.53l.07-.07A4.5 4.5 0 0 0 12 18a4.5 4.5 0 0 0-1.53-3.43l-.07-.07A4.5 4.5 0 0 0 6 12a4.5 4.5 0 0 0-3.43 1.53L2.5 13.53A4.5 4.5 0 0 1 6 9a4.5 4.5 0 0 1 3.43 1.53l.07.07A4.5 4.5 0 0 1 12 12a4.5 4.5 0 0 1 1.53-3.43l-.07-.07A4.5 4.5 0 0 1 9 6a4.5 4.5 0 0 1-3.43-1.53l-.07.07A4.5 4.5 0 0 1 3 6a4.5 4.5 0 0 1 1.53-3.43l.07.07A4.5 4.5 0 0 1 6 3a4.5 4.5 0 0 1 3.43 1.53l.07.07A4.5 4.5 0 0 1 12 6a4.5 4.5 0 0 1 1.53-3.43L12.5 1.5A4.5 4.5 0 0 0 9 3a4.5 4.5 0 0 0-3.43 1.53L5.5 4.57A4.5 4.5 0 0 0 3 9a4.5 4.5 0 0 0 1.53 3.43l.07.07A4.5 4.5 0 0 0 6 15Z"/></svg>`,
           title: 'Ruang Aman',
           quote:
             '“Sanggar menjadi ruang aman bagi pemuda untuk berekspresi secara positif dan kreatif.”',
@@ -1054,68 +961,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
         },
       ],
     },
-    quiz: {
-      title: 'Kuis Penjaga Adat',
-      description:
-        'Uji pemahamanmu tentang peran budaya dalam pembangunan perdamaian.',
-      questions: [
-        {
-          question:
-            'Apa masalah utama yang dihadapi pemuda pasca-konflik dalam cerita ini?',
-          options: [
-            'Kemiskinan',
-            'Penyakit',
-            'Kehilangan arah dan energi yang tersalurkan negatif',
-            'Kurangnya pendidikan formal',
-          ],
-          correctAnswer:
-            'Kehilangan arah dan energi yang tersalurkan negatif',
-          points: 10,
-        },
-        {
-          question:
-            'Apa nama tarian tradisional yang dihidupkan kembali oleh para pemuda?',
-          options: ['Tari Saman', 'Tari Seudati', 'Tari Piring', 'Tari Kecak'],
-          correctAnswer: 'Tari Seudati',
-          points: 10,
-        },
-        {
-          question: 'Selain gerakan, apa saja yang diajarkan dalam tari Seudati?',
-          options: [
-            'Hanya gerakan yang indah',
-            'Ilmu bela diri',
-            'Disiplin, kerja sama tim, dan nasihat melalui syair',
-            'Cara berbisnis',
-          ],
-          correctAnswer:
-            'Disiplin, kerja sama tim, dan nasihat melalui syair',
-          points: 10,
-        },
-        {
-          question: 'Apa fungsi sanggar tari bagi para pemuda?',
-          options: [
-            'Tempat mencari jodoh',
-            'Tempat menghasilkan uang',
-            'Ruang aman untuk berekspresi secara positif',
-            'Tempat bersantai saja',
-          ],
-          correctAnswer: 'Ruang aman untuk berekspresi secara positif',
-          points: 10,
-        },
-        {
-          question:
-            'Inisiatif ini menunjukkan bahwa seni dan budaya dapat menjadi alat yang efektif untuk...',
-          options: [
-            'Menghasilkan seniman terkenal',
-            'Pembangunan perdamaian dan penguatan komunitas',
-            'Menarik wisatawan',
-            'Melupakan masa lalu',
-          ],
-          correctAnswer: 'Pembangunan perdamaian dan penguatan komunitas',
-          points: 10,
-        },
-      ],
-    },
+    quiz: pemudaAdatQuiz,
   },
   'perempuan-penganyam-harapan': {
     video: {
@@ -1186,67 +1032,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
         },
       ],
     },
-    quiz: {
-      title: 'Kuis Anyaman Harapan',
-      description:
-        'Uji pemahamanmu tentang pemberdayaan perempuan dan pemulihan pasca-bencana.',
-      questions: [
-        {
-          question: 'Apa dampak utama tsunami bagi para perempuan dalam cerita ini?',
-          options: [
-            'Kehilangan pekerjaan',
-            'Kehilangan suami dan rumah',
-            'Kehilangan lahan pertanian',
-            'Kehilangan akses pendidikan',
-          ],
-          correctAnswer: 'Kehilangan suami dan rumah',
-          points: 10,
-        },
-        {
-          question:
-            'Apa sumber daya alam lokal yang mereka manfaatkan untuk memulai usaha?',
-          options: ['Kayu', 'Bambu', 'Daun pandan', 'Tanah liat'],
-          correctAnswer: 'Daun pandan',
-          points: 10,
-        },
-        {
-          question:
-            'Selain sebagai sumber ekonomi, apa fungsi lain dari kegiatan menganyam bagi mereka?',
-          options: [
-            'Hanya untuk mengisi waktu luang',
-            'Sebagai terapi dan media untuk saling menguatkan',
-            'Untuk kompetisi antar desa',
-            'Untuk memenuhi tugas pemerintah',
-          ],
-          correctAnswer: 'Sebagai terapi dan media untuk saling menguatkan',
-          points: 10,
-        },
-        {
-          question:
-            'Apa transformasi utama yang dialami oleh para perempuan ini?',
-          options: [
-            'Dari petani menjadi pengrajin',
-            'Dari ibu rumah tangga menjadi politisi',
-            'Dari korban menjadi penyintas yang berdaya',
-            'Dari pedagang menjadi guru',
-          ],
-          correctAnswer: 'Dari korban menjadi penyintas yang berdaya',
-          points: 10,
-        },
-        {
-          question: 'Kisah ini adalah contoh nyata dari...',
-          options: [
-            'Pemberdayaan ekonomi perempuan sebagai alat pemulihan',
-            'Pentingnya bantuan asing',
-            'Kegagalan program pemerintah',
-            'Persaingan bisnis yang ketat',
-          ],
-          correctAnswer:
-            'Pemberdayaan ekonomi perempuan sebagai alat pemulihan',
-          points: 10,
-        },
-      ],
-    },
+    quiz: perempuanPenganyamQuiz,
   },
   'arsitektur-rumah-panggung': {
     video: {
@@ -1316,74 +1102,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
         },
       ],
     },
-    quiz: {
-      title: 'Kuis Arsitektur Bijak',
-      description:
-        'Uji pemahamanmu tentang kearifan di balik arsitektur Rumoh Aceh.',
-      questions: [
-        {
-          question: 'Apa keunggulan utama Rumoh Aceh yang membuatnya tahan gempa?',
-          options: [
-            'Dinding beton yang tebal',
-            'Konstruksi kayu yang fleksibel',
-            'Pondasi yang sangat dalam',
-            'Atap dari baja ringan',
-          ],
-          correctAnswer: 'Konstruksi kayu yang fleksibel',
-          points: 10,
-        },
-        {
-          question:
-            'Apa fungsi dari "kolong" atau ruang di bawah rumah panggung?',
-          options: [
-            'Hanya untuk hiasan',
-            'Sebagai garasi mobil',
-            'Memberi jalan bagi air dan sirkulasi udara',
-            'Untuk menyimpan barang bekas',
-          ],
-          correctAnswer: 'Memberi jalan bagi air dan sirkulasi udara',
-          points: 10,
-        },
-        {
-          question:
-            'Mengapa banyak bangunan modern hancur saat tsunami, sementara Rumoh Aceh banyak yang bertahan?',
-          options: [
-            'Karena Rumoh Aceh lebih baru',
-            'Karena bangunannya lebih berat',
-            'Karena desainnya kaku dan tidak fleksibel',
-            'Karena struktur Rumoh Aceh lebih adaptif terhadap guncangan',
-          ],
-          correctAnswer:
-            'Karena struktur Rumoh Aceh lebih adaptif terhadap guncangan',
-          points: 10,
-        },
-        {
-          question:
-            'Apa pelajaran utama yang bisa diambil dari kearifan arsitektur Rumoh Aceh?',
-          options: [
-            'Kita harus membangun rumah dari kayu saja',
-            'Teknologi modern tidak berguna',
-            'Desain tradisional seringkali memiliki solusi yang adaptif terhadap lingkungan',
-            'Rumah panggung tidak aman',
-          ],
-          correctAnswer:
-            'Desain tradisional seringkali memiliki solusi yang adaptif terhadap lingkungan',
-          points: 10,
-        },
-        {
-          question: 'Mengadaptasi prinsip Rumoh Aceh untuk bangunan modern berarti...',
-          options: [
-            'Meniru bentuknya 100%',
-            'Membangun rumah persis seperti zaman dulu',
-            'Mengambil prinsip desainnya (fleksibilitas, adaptasi) untuk bangunan modern',
-            'Mewarnai rumah modern dengan cat coklat',
-          ],
-          correctAnswer:
-            'Mengambil prinsip desainnya (fleksibilitas, adaptasi) untuk bangunan modern',
-          points: 10,
-        },
-      ],
-    },
+    quiz: arsitekturQuiz,
   },
   'seni-melawan-trauma': {
     video: {
@@ -1454,71 +1173,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
         },
       ],
     },
-    quiz: {
-      title: 'Kuis Kanvas Harapan',
-      description:
-        'Uji pemahamanmu tentang kekuatan seni dalam proses pemulihan sosial.',
-      questions: [
-        {
-          question: 'Apa media utama yang digunakan para seniman dalam cerita ini?',
-          options: [
-            'Kanvas dan cat minyak',
-            'Patung dari tanah liat',
-            'Mural di dinding-dinding publik',
-            'Fotografi digital',
-          ],
-          correctAnswer: 'Mural di dinding-dinding publik',
-          points: 10,
-        },
-        {
-          question: 'Apa tujuan utama dari kegiatan seni yang mereka lakukan?',
-          options: [
-            'Menjual lukisan dengan harga mahal',
-            'Menghias kota agar terlihat cantik',
-            'Memberi warna baru pada ingatan tragedi dan menyembuhkan trauma',
-            'Memprotes pemerintah',
-          ],
-          correctAnswer:
-            'Memberi warna baru pada ingatan tragedi dan menyembuhkan trauma',
-          points: 10,
-        },
-        {
-          question: 'Apa tema yang sering diangkat dalam mural-mural mereka?',
-          options: [
-            'Kemarahan dan kesedihan',
-            'Pemandangan abstrak',
-            'Harapan, ketahanan, dan kebersamaan',
-            'Potret para seniman',
-          ],
-          correctAnswer: 'Harapan, ketahanan, dan kebersamaan',
-          points: 10,
-        },
-        {
-          question:
-            'Selain sebagai karya seni, apa fungsi lain dari proses melukis bersama?',
-          options: [
-            'Sebagai ajang kompetisi',
-            'Sebagai kegiatan komersial',
-            'Sebagai proses terapi bagi seniman dan masyarakat',
-            'Sebagai cara mencari popularitas',
-          ],
-          correctAnswer: 'Sebagai proses terapi bagi seniman dan masyarakat',
-          points: 10,
-        },
-        {
-          question:
-            'Transformasi apa yang terjadi pada "dinding-dinding bisu" di kota?',
-          options: [
-            'Dinding itu dirobohkan',
-            'Dinding itu dicat putih semua',
-            'Dinding itu menjadi galeri seni terbuka',
-            'Dinding itu ditutupi papan iklan',
-          ],
-          correctAnswer: 'Dinding itu menjadi galeri seni terbuka',
-          points: 10,
-        },
-      ],
-    },
+    quiz: seniTraumaQuiz,
   },
   'nelayan-dan-tanda-alam': {
     video: {
@@ -1588,61 +1243,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
         },
       ],
     },
-    quiz: {
-      title: 'Kuis Navigasi Tradisional',
-      description:
-        'Uji pengetahuanmu tentang cara nelayan tradisional membaca tanda-tanda alam.',
-      questions: [
-        {
-          question: 'Apa yang digunakan nelayan sebagai "kompas" alami mereka?',
-          options: [
-            'Jam tangan',
-            'Peta kertas',
-            'Langit, bintang, dan laut',
-            'Aplikasi smartphone',
-          ],
-          correctAnswer: 'Langit, bintang, dan laut',
-          points: 10,
-        },
-        {
-          question:
-            'Rasi bintang apa yang disebut "Bintang Tiga" dan digunakan untuk penunjuk arah?',
-          options: ['Scorpio', 'Orion', 'Big Dipper', 'Crux'],
-          correctAnswer: 'Orion',
-          points: 10,
-        },
-        {
-          question:
-            'Hewan laut apa yang menjadi pertanda cuaca buruk jika mendekati pantai?',
-          options: ['Penyu', 'Ikan pari', 'Lumba-lumba', 'Hiu'],
-          correctAnswer: 'Lumba-lumba',
-          points: 10,
-        },
-        {
-          question: 'Bagaimana pengetahuan navigasi tradisional ini diwariskan?',
-          options: [
-            'Melalui sekolah formal',
-            'Melalui buku panduan',
-            'Secara turun-temurun dari ayah ke anak',
-            'Melalui internet',
-          ],
-          correctAnswer: 'Secara turun-temurun dari ayah ke anak',
-          points: 10,
-        },
-        {
-          question: 'Kearifan lokal para nelayan ini menunjukkan...',
-          options: [
-            'Keterbelakangan teknologi',
-            'Hubungan yang harmonis dan pemahaman mendalam tentang alam',
-            'Keberanian yang nekat',
-            'Kurangnya pilihan lain',
-          ],
-          correctAnswer:
-            'Hubungan yang harmonis dan pemahaman mendalam tentang alam',
-          points: 10,
-        },
-      ],
-    },
+    quiz: nelayanQuiz,
   },
   'sumur-tua-sumber-kehidupan': {
     video: {
@@ -1712,69 +1313,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
         },
       ],
     },
-    quiz: {
-      title: 'Kuis Sumber Kehidupan',
-      description:
-        'Uji pemahamanmu tentang manajemen sumber daya air tradisional.',
-      questions: [
-        {
-          question: 'Apa masalah yang dihadapi oleh desa dalam cerita?',
-          options: [
-            'Banjir bandang',
-            'Serangan hama',
-            'Kekeringan panjang',
-            'Konflik antarwarga',
-          ],
-          correctAnswer: 'Kekeringan panjang',
-          points: 10,
-        },
-        {
-          question: 'Sumber air apa yang pada akhirnya menyelamatkan desa?',
-          options: [
-            'Bantuan air dari pemerintah',
-            'Sumur bor modern',
-            'Sebuah sumur tua warisan leluhur',
-            'Danau buatan',
-          ],
-          correctAnswer: 'Sebuah sumur tua warisan leluhur',
-          points: 10,
-        },
-        {
-          question: 'Mengapa sumur tua tersebut tidak pernah kering?',
-          options: [
-            'Karena sangat dalam',
-            'Karena dibangun di atas mata air besar',
-            'Karena jarang digunakan',
-            'Karena terbuat dari batu ajaib',
-          ],
-          correctAnswer: 'Karena dibangun di atas mata air besar',
-          points: 10,
-        },
-        {
-          question: 'Siapa yang pertama kali mengingat keberadaan sumur tua tersebut?',
-          options: [
-            'Kepala desa',
-            'Seorang anak kecil',
-            'Seorang insinyur',
-            'Seorang tetua desa',
-          ],
-          correctAnswer: 'Seorang tetua desa',
-          points: 10,
-        },
-        {
-          question: 'Pelajaran apa yang dapat diambil dari cerita ini?',
-          options: [
-            'Teknologi modern selalu lebih unggul',
-            'Kita tidak boleh menggunakan sumur tua',
-            'Kearifan dan peninggalan masa lalu seringkali menyimpan solusi penting',
-            'Kekeringan tidak bisa diatasi',
-          ],
-          correctAnswer:
-            'Kearifan dan peninggalan masa lalu seringkali menyimpan solusi penting',
-          points: 10,
-        },
-      ],
-    },
+    quiz: sumurTuaQuiz,
   },
   'ilmu-falak-di-pesantren': {
     video: {
@@ -1844,73 +1383,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
         },
       ],
     },
-    quiz: {
-      title: 'Kuis Ilmu Falak',
-      description:
-        'Uji pengetahuanmu tentang penerapan astronomi tradisional di Aceh.',
-      questions: [
-        {
-          question: 'Apa itu "Ilmu Falak" yang diajarkan di dayah?',
-          options: [
-            'Ilmu sihir',
-            'Ilmu astronomi',
-            'Ilmu pertanian',
-            'Ilmu bela diri',
-          ],
-          correctAnswer: 'Ilmu astronomi',
-          points: 10,
-        },
-        {
-          question:
-            'Selain untuk menentukan awal bulan puasa, untuk apa lagi Ilmu Falak digunakan dalam cerita ini?',
-          options: [
-            'Untuk meramal nasib',
-            'Untuk navigasi para nelayan',
-            'Untuk menemukan harta karun',
-            'Untuk menentukan hari baik pernikahan',
-          ],
-          correctAnswer: 'Untuk navigasi para nelayan',
-          points: 10,
-        },
-        {
-          question:
-            'Bagaimana santri yang pulang ke kampung membantu para nelayan?',
-          options: [
-            'Dengan memberikan pinjaman modal',
-            'Dengan menjadi rujukan untuk ilmu navigasi langit',
-            'Dengan memperbaiki jaring ikan',
-            'Dengan menjual ikan di pasar',
-          ],
-          correctAnswer: 'Dengan menjadi rujukan untuk ilmu navigasi langit',
-          points: 10,
-        },
-        {
-          question:
-            'Apa yang bisa diprediksi oleh para santri menggunakan Ilmu Falak untuk para nelayan?',
-          options: [
-            'Jumlah tangkapan ikan',
-            'Cuaca esok hari secara pasti',
-            'Waktu pasang surut dan arah bintang',
-            'Harga ikan di pasaran',
-          ],
-          correctAnswer: 'Waktu pasang surut dan arah bintang',
-          points: 10,
-        },
-        {
-          question:
-            'Kisah ini menunjukkan bahwa di Aceh, ilmu agama dan ilmu pengetahuan (sains)...',
-          options: [
-            'Selalu bertentangan',
-            'Tidak ada hubungannya sama sekali',
-            'Dapat saling melengkapi dan bermanfaat bagi kehidupan',
-            'Hanya dipelajari oleh kalangan bangsawan',
-          ],
-          correctAnswer:
-            'Dapat saling melengkapi dan bermanfaat bagi kehidupan',
-          points: 10,
-        },
-      ],
-    },
+    quiz: ilmuFalakQuiz,
   },
   'pasar-sebagai-ruang-sosial': {
     video: {
@@ -1971,7 +1444,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
           textColor: 'text-gray-800 dark:text-gray-200',
         },
         {
-          iconSvg: `<svg xmlns="http://wwwWWW.W3.ORG/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-pulse"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></svg>`,
+          iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-pulse"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></svg>`,
           title: 'Menjaga Denyut Nadi',
           quote:
             '“Menjaga pasar tradisional tetap hidup sama dengan menjaga denyut nadi komunitas kami.”',
@@ -1981,73 +1454,8 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
         },
       ],
     },
-    quiz: {
-      title: 'Kuis Jantung Komunitas',
-      description: 'Uji pemahamanmu tentang peran sosial pasar tradisional.',
-      questions: [
-        {
-          question:
-            'Menurut cerita, apa fungsi pasar selain sebagai tempat transaksi ekonomi?',
-          options: [
-            'Tempat parkir',
-            'Jantung sosial komunitas',
-            'Kantor pemerintahan',
-            'Tempat wisata',
-          ],
-          correctAnswer: 'Jantung sosial komunitas',
-          points: 10,
-        },
-        {
-          question:
-            'Di mana biasanya informasi non-resmi menyebar dengan cepat di dalam pasar?',
-          options: [
-            'Di toilet umum',
-            'Di kantor pengelola pasar',
-            'Di warung kopi',
-            'Di tempat pembuangan sampah',
-          ],
-          correctAnswer: 'Di warung kopi',
-          points: 10,
-        },
-        {
-          question:
-            'Apa yang dimaksud dengan "barometer sosial" dalam konteks pasar?',
-          options: [
-            'Alat pengukur cuaca di pasar',
-            'Tempat untuk mengetahui harga-harga',
-            'Tempat untuk mengukur apa yang sedang dirasakan atau dibicarakan masyarakat',
-            'Alat pengukur kebisingan pasar',
-          ],
-          correctAnswer:
-            'Tempat untuk mengukur apa yang sedang dirasakan atau dibicarakan masyarakat',
-          points: 10,
-        },
-        {
-          question:
-            'Bagaimana pasar dapat membantu menjaga ketenangan saat ada isu meresahkan?',
-          options: [
-            'Dengan menutup pasar',
-            'Dengan melarang orang berbicara',
-            'Warga bisa saling bertemu, mengklarifikasi, dan menenangkan satu sama lain',
-            'Dengan memanggil aparat keamanan',
-          ],
-          correctAnswer:
-            'Warga bisa saling bertemu, mengklarifikasi, dan menenangkan satu sama lain',
-          points: 10,
-        },
-        {
-          question: 'Apa pesan utama dari cerita ini?',
-          options: [
-            'Pasar modern lebih baik dari pasar tradisional',
-            'Pasar tradisional harus dijaga karena perannya sebagai pusat komunitas',
-            'Berjualan di pasar sangat menguntungkan',
-            'Warung kopi adalah bisnis terbaik di pasar',
-          ],
-          correctAnswer:
-            'Pasar tradisional harus dijaga karena perannya sebagai pusat komunitas',
-          points: 10,
-        },
-      ],
-    },
+    quiz: pasarQuiz,
   },
 };
+
+    
