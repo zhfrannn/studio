@@ -794,6 +794,15 @@ export default function Home() {
 
       <MotionWrapper
         as="section"
+        className="container mx-auto px-4 text-center"
+      >
+        <p className="mx-auto max-w-2xl font-semibold text-lg text-center text-muted-foreground">
+          "Setiap cerita, sekecil apapun, adalah bagian dari mozaik besar ketahanan komunitas kita. Bersama, kita merawat ingatan dan membangun masa depan yang lebih kuat."
+        </p>
+      </MotionWrapper>
+
+      <MotionWrapper
+        as="section"
         className="container mx-auto px-4 text-center rounded-2xl"
       >
         <Separator className="mx-auto mb-8 w-1/2" />
