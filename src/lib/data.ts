@@ -35,8 +35,8 @@ export const stories: Omit<Story, 'title' | 'summary' | 'fullText'>[] = [
     aiThemes: ['Peacebuilding', 'Local Wisdom'],
     media: {
       featuredImage:
-        'https://images.unsplash.com/photo-1606299835846-097e92abcc59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjb21tdW5pdHklMjBnYXRoZXJpbmd8ZW58MHx8fHwxNzU5NDEwNDc2fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      featuredImageHint: 'community gathering',
+        'https://images.unsplash.com/photo-1640296150617-1ede154483d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxkaXNhc3RlcnxlbnwwfHx8fDE3NTk0OTkwOTd8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      featuredImageHint: 'disaster',
     },
     status: 'published',
   },
