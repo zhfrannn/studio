@@ -23,7 +23,7 @@ export const stories: Omit<Story, 'title' | 'summary' | 'fullText'>[] = [
     aiThemes: ['Disaster Preparedness', 'Peacebuilding'],
     media: {
       featuredImage:
-        'https://images.unsplash.com/photo-1618344322727-2256d3abdd1e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtYW5ncm92ZSUyMGZvcmVzdHxlbnwwfHx8fDE3NTk0OTM3NDN8MA&ixlib=rb-4.1.0&q=80&w=1080',
+        'https://images.unsplash.com/photo-1556768555-ee22fbdc8a61?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtYW5ncm92ZSUyMGZvcmVzdHxlbnwwfHx8fDE3NTk0OTM3NDN8MA&ixlib=rb-4.1.0&q=80&w=1080',
       featuredImageHint: 'mangrove forest',
     },
     status: 'published',
@@ -35,7 +35,7 @@ export const stories: Omit<Story, 'title' | 'summary' | 'fullText'>[] = [
     aiThemes: ['Peacebuilding', 'Local Wisdom'],
     media: {
       featuredImage:
-        'https://images.unsplash.com/photo-1759347115771-b9bf87e1dce1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb21tdW5pdHklMjBnYXRoZXJpbmd8ZW58MHx8fHwxNzU5NDEwNDc2fDA&ixlib=rb-4.1.0&q=80&w=1080',
+        'https://images.unsplash.com/photo-1606299835846-097e92abcc59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjb21tdW5pdHklMjBnYXRoZXJpbmd8ZW58MHx8fHwxNzU5NDEwNDc2fDA&ixlib=rb-4.1.0&q=80&w=1080',
       featuredImageHint: 'community gathering',
     },
     status: 'published',
@@ -47,7 +47,7 @@ export const stories: Omit<Story, 'title' | 'summary' | 'fullText'>[] = [
     aiThemes: ['Disaster Preparedness', 'Local Wisdom', 'Peacebuilding'],
     media: {
       featuredImage:
-        'https://images.unsplash.com/photo-1594069758873-e79e9075eb7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb3VudGFpbiUyMHZpbGxhZ2V8ZW58MHx8fHwxNzU5NDkzNzQzfDA&ixlib=rb-4.1.0&q=80&w=1080',
+        'https://images.unsplash.com/photo-1614933723626-22f927cd37dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtb3VudGFpbiUyMHZpbGxhZ2V8ZW58MHx8fHwxNzU5NDkzNzQzfDA&ixlib=rb-4.1.0&q=80&w=1080',
       featuredImageHint: 'mountain village',
     },
     status: 'published',
@@ -59,7 +59,7 @@ export const stories: Omit<Story, 'title' | 'summary' | 'fullText'>[] = [
     aiThemes: ['Disaster Preparedness', 'Local Wisdom'],
     media: {
       featuredImage:
-        'https://images.unsplash.com/photo-1631134953337-b660eda6e87f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxyYWdpbmclMjByaXZlcnxlbnwwfHx8fDE3NTk0OTM3NDR8MA&ixlib=rb-4.1.0&q=80&w=1080',
+        'https://images.unsplash.com/photo-1646692071626-7e374cfadaa2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYWdpbmclMjByaXZlcnxlbnwwfHx8fDE3NTk0OTM3NDR8MA&ixlib=rb-4.1.0&q=80&w=1080',
       featuredImageHint: 'raging river',
     },
     status: 'published',
@@ -71,7 +71,7 @@ export const stories: Omit<Story, 'title' | 'summary' | 'fullText'>[] = [
     aiThemes: ['Disaster Preparedness', 'Peacebuilding'],
     media: {
       featuredImage:
-        'https://images.unsplash.com/photo-1600181958051-bd8544360312?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxmb3Jlc3QlMjBmaXJlfGVufDB8fHx8MTc1OTQ5Mzc0M3ww&ixlib=rb-4.1.0&q=80&w=1080',
+        'https://images.unsplash.com/photo-1613858636109-354616495373?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Zm9yZXN0JTIwZmlyZXxlbnwwfHx8fDE3NTk0OTM3NDN8MA&ixlib=rb-4.1.0&q=80&w=1080',
       featuredImageHint: 'forest fire',
     },
     status: 'published',
