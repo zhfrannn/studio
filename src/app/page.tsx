@@ -46,6 +46,14 @@ export default function Home() {
     <div className="space-y-16 pb-24 md:space-y-24">
       <section role="region" aria-labelledby="hero-title">
         <div className="hero-v2-card">
+           <Image
+            src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Beautiful landscape of Aceh"
+            fill
+            className="object-cover opacity-20"
+            data-ai-hint="aceh landscape"
+            priority
+          />
           <div className="hero-v2-content">
             <div aria-label="Highlight" className="hero-v2-pill">
               <Sparkles className="h-5 w-5" />
