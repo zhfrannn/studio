@@ -73,9 +73,48 @@
     "shareStory": {
       "title": "Share Your Story",
       "description": "Your experience is valuable. Help build Aceh's collective memory and resilience.",
-      "cta": "Start Sharing Now"
+      "cta": "Start Sharing Now",
+      "formTitle": "Start Sharing Here",
+      "labels": {
+        "name": "Your Name (optional)",
+        "location": "Location",
+        "storyType": "Story Type",
+        "story": "Your Story",
+        "agree": "I agree to the terms and conditions."
+      },
+      "placeholders": {
+        "name": "Your Name",
+        "location": "Select your location",
+        "story": "Tell us your experience..."
+      },
+      "descriptions": {
+        "agree": "My story can be used for educational purposes."
+      },
+      "storyTypes": {
+        "tsunami": "Tsunami",
+        "recovery": "Recovery",
+        "peace": "Peace Process",
+        "wisdom": "Local Wisdom"
+      },
+      "submitButton": "Send via WhatsApp",
+      "aiHelper": {
+        "title": "Your AI Assistant",
+        "description": "Use Siaga-Bot to help you.",
+        "initialMessage": "Hello! I'm Siaga-Bot. I'm here to help you share your story. Need ideas on where to start? Just ask!",
+        "errorMessage": "Sorry, an error occurred. Please try again.",
+        "placeholder": "Ask for story ideas...",
+        "readStory": "Read Story"
+      },
+      "validation": {
+        "locationRequired": "Location is required.",
+        "storyTypeRequired": "You must select at least one story type.",
+        "storyMinLength": "Story must be longer than 10 characters.",
+        "storyMaxLength": "Story cannot be longer than 2000 characters.",
+        "agreeRequired": "You must agree to the terms and conditions."
+      }
     },
-    "supportedBy": "Supported by"
+    "supportedBy": "Supported by",
+    "quote": "\"Every story, no matter how small, is part of the great mosaic of our community's resilience. Together, we preserve memory and build a stronger future.\""
   },
   "explore": {
     "title": "Stories from Aceh",

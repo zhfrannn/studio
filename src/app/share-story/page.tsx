@@ -34,41 +34,13 @@ import {
   Loader2,
   BookOpen,
 } from 'lucide-react';
-import { stories } from '@/lib/data';
+import { stories as staticStories } from '@/lib/data';
 import MotionWrapper from '@/components/motion-wrapper';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { askSiagaBot, AskSiagaBotOutput } from '@/ai/flows/ask-siaga-bot';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
-
-// Schema untuk form
-const formSchema = z.object({
-  name: z.string().optional(),
-  location: z.string().nonempty({ message: 'Lokasi harus diisi.' }),
-  storyType: z
-    .array(z.string())
-    .refine(value => value.some(item => item), {
-      message: 'Anda harus memilih setidaknya satu jenis cerita.',
-    }),
-  story: z
-    .string()
-    .min(10, { message: 'Cerita harus lebih dari 10 karakter.' })
-    .max(2000, { message: 'Cerita tidak boleh lebih dari 2000 karakter.' }),
-  agree: z.boolean().refine(value => value === true, {
-    message: 'Anda harus menyetujui syarat dan ketentuan.',
-  }),
-});
-
-type FormValues = z.infer<typeof formSchema>;
-
-const storyTypes = [
-  { id: 'Tsunami', label: 'Tsunami' },
-  { id: 'Recovery', label: 'Pemulihan' },
-  { id: 'Peace Process', label: 'Proses Perdamaian' },
-  { id: 'Local Wisdom', label: 'Kearifan Lokal' },
-];
-
-const locations = [...new Set(stories.map(s => s.location.name))];
+import { useLanguage } from '@/context/language-context';
 
 // Tipe untuk pesan chatbot
 type Message = {
@@ -79,6 +51,37 @@ type Message = {
 
 // Komponen utama halaman
 export default function ShareStoryPage() {
+  const { dictionary } = useLanguage();
+  const shareStoryDict = dictionary.home.shareStory;
+
+  const formSchema = z.object({
+    name: z.string().optional(),
+    location: z.string().nonempty({ message: shareStoryDict.validation.locationRequired }),
+    storyType: z
+      .array(z.string())
+      .refine(value => value.some(item => item), {
+        message: shareStoryDict.validation.storyTypeRequired,
+      }),
+    story: z
+      .string()
+      .min(10, { message: shareStoryDict.validation.storyMinLength })
+      .max(2000, { message: shareStoryDict.validation.storyMaxLength }),
+    agree: z.boolean().refine(value => value === true, {
+      message: shareStoryDict.validation.agreeRequired,
+    }),
+  });
+
+  type FormValues = z.infer<typeof formSchema>;
+  
+  const storyTypes = [
+    { id: 'Tsunami', label: shareStoryDict.storyTypes.tsunami },
+    { id: 'Recovery', label: shareStoryDict.storyTypes.recovery },
+    { id: 'Peace Process', label: shareStoryDict.storyTypes.peace },
+    { id: 'Local Wisdom', label: shareStoryDict.storyTypes.wisdom },
+  ];
+  
+  const locations = [...new Set(staticStories.map(s => s.location.name))];
+  
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -93,7 +96,7 @@ export default function ShareStoryPage() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'bot',
-      text: 'Halo! Saya Siaga-Bot. Saya di sini untuk membantu Anda berbagi cerita. Butuh ide harus mulai dari mana? Tanyakan saja!',
+      text: shareStoryDict.aiHelper.initialMessage,
     },
   ]);
   const [input, setInput] = useState('');
@@ -133,7 +136,7 @@ ${story}`;
     } catch (error) {
       const errorMessage: Message = {
         role: 'bot',
-        text: 'Maaf, terjadi kesalahan. Silakan coba lagi.',
+        text: shareStoryDict.aiHelper.errorMessage,
       };
       setMessages(prev => [...prev, errorMessage]);
       console.error('Error asking Siaga-Bot:', error);
@@ -147,10 +150,10 @@ ${story}`;
       <MotionWrapper>
         <div className="mb-12 text-center">
           <h1 className="font-headline text-4xl md:text-5xl">
-            Bagikan Ceritamu
+            {shareStoryDict.title}
           </h1>
           <p className="mx-auto mt-2 max-w-3xl text-muted-foreground">
-            Pengalaman Anda sangat berharga. Jadilah bagian dari upaya melestarikan memori kolektif dan membangun ketahanan Aceh untuk masa depan.
+            {shareStoryDict.description}
           </p>
         </div>
       </MotionWrapper>
@@ -160,7 +163,7 @@ ${story}`;
         <MotionWrapper delay={0.1}>
           <Card className="lg:sticky lg:top-24">
             <CardHeader>
-                <CardTitle className="text-2xl">Mulai Berbagi di Sini</CardTitle>
+                <CardTitle className="text-2xl">{shareStoryDict.formTitle}</CardTitle>
             </CardHeader>
             <CardContent>
               <Form {...form}>
@@ -173,9 +176,9 @@ ${story}`;
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Nama Anda (opsional)</FormLabel>
+                        <FormLabel>{shareStoryDict.labels.name}</FormLabel>
                         <FormControl>
-                          <Input placeholder="Nama Anda" {...field} />
+                          <Input placeholder={shareStoryDict.placeholders.name} {...field} />
                         </FormControl>
                       </FormItem>
                     )}
@@ -186,14 +189,14 @@ ${story}`;
                     name="location"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Lokasi</FormLabel>
+                        <FormLabel>{shareStoryDict.labels.location}</FormLabel>
                         <Select
                           onValueChange={field.onChange}
                           defaultValue={field.value}
                         >
                           <FormControl>
                             <SelectTrigger>
-                              <SelectValue placeholder="Pilih lokasi Anda" />
+                              <SelectValue placeholder={shareStoryDict.placeholders.location} />
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
@@ -215,7 +218,7 @@ ${story}`;
                     render={() => (
                       <FormItem>
                         <div className="mb-4">
-                          <FormLabel className="text-base">Jenis Cerita</FormLabel>
+                          <FormLabel className="text-base">{shareStoryDict.labels.storyType}</FormLabel>
                         </div>
                         <div className="grid grid-cols-2 gap-4">
                           {storyTypes.map(item => (
@@ -234,11 +237,11 @@ ${story}`;
                                       onCheckedChange={checked => {
                                         return checked
                                           ? field.onChange([
-                                              ...field.value,
+                                              ...(field.value || []),
                                               item.id,
                                             ])
                                           : field.onChange(
-                                              field.value?.filter(
+                                              (field.value || [])?.filter(
                                                 value => value !== item.id
                                               )
                                             );
@@ -263,10 +266,10 @@ ${story}`;
                     name="story"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Cerita Anda</FormLabel>
+                        <FormLabel>{shareStoryDict.labels.story}</FormLabel>
                         <FormControl>
                           <Textarea
-                            placeholder="Ceritakan pengalaman Anda..."
+                            placeholder={shareStoryDict.placeholders.story}
                             className="h-32 resize-none"
                             {...field}
                           />
@@ -289,10 +292,10 @@ ${story}`;
                         </FormControl>
                         <div className="space-y-1 leading-none">
                           <FormLabel>
-                            Saya menyetujui syarat dan ketentuan.
+                           {shareStoryDict.labels.agree}
                           </FormLabel>
                           <FormDescription className="text-xs">
-                             Cerita saya boleh digunakan untuk tujuan pendidikan.
+                           {shareStoryDict.descriptions.agree}
                           </FormDescription>
                         </div>
                       </FormItem>
@@ -301,7 +304,7 @@ ${story}`;
 
                   <Button type="submit" size="lg" className="w-full">
                     <MessageSquareText className="mr-2 h-5 w-5" />
-                    Kirim via WhatsApp
+                    {shareStoryDict.submitButton}
                   </Button>
                 </form>
               </Form>
@@ -317,9 +320,9 @@ ${story}`;
                 <Bot className="h-6 w-6 text-primary" />
               </div>
               <div>
-                <CardTitle>Asisten AI Anda</CardTitle>
+                <CardTitle>{shareStoryDict.aiHelper.title}</CardTitle>
                 <p className="text-sm text-muted-foreground">
-                  Gunakan Siaga-Bot untuk membantu Anda.
+                  {shareStoryDict.aiHelper.description}
                 </p>
               </div>
             </CardHeader>
@@ -365,7 +368,7 @@ ${story}`;
                                 href={`/story/${message.storySuggestion.id}`}
                               >
                                 <BookOpen className="mr-2 h-4 w-4"/>
-                                Baca Kisah: {message.storySuggestion.title}
+                                {shareStoryDict.aiHelper.readStory}: {message.storySuggestion.title}
                               </Link>
                              </Button>
                           )}
@@ -396,7 +399,7 @@ ${story}`;
                   <Input
                     value={input}
                     onChange={e => setInput(e.target.value)}
-                    placeholder="Tanya ide cerita..."
+                    placeholder={shareStoryDict.aiHelper.placeholder}
                     disabled={isLoading}
                   />
                   <Button type="submit" size="icon" disabled={isLoading}>

@@ -73,9 +73,48 @@
     "shareStory": {
       "title": "Bagikan Ceritamu",
       "description": "Pengalaman Anda sangat berarti. Bantu membangun memori kolektif dan ketahanan Aceh.",
-      "cta": "Mulai Berbagi Sekarang"
+      "cta": "Mulai Berbagi Sekarang",
+      "formTitle": "Mulai Berbagi di Sini",
+      "labels": {
+        "name": "Nama Anda (opsional)",
+        "location": "Lokasi",
+        "storyType": "Jenis Cerita",
+        "story": "Cerita Anda",
+        "agree": "Saya menyetujui syarat dan ketentuan."
+      },
+      "placeholders": {
+        "name": "Nama Anda",
+        "location": "Pilih lokasi Anda",
+        "story": "Ceritakan pengalaman Anda..."
+      },
+      "descriptions": {
+        "agree": "Cerita saya boleh digunakan untuk tujuan pendidikan."
+      },
+      "storyTypes": {
+        "tsunami": "Tsunami",
+        "recovery": "Pemulihan",
+        "peace": "Proses Perdamaian",
+        "wisdom": "Kearifan Lokal"
+      },
+      "submitButton": "Kirim via WhatsApp",
+      "aiHelper": {
+        "title": "Asisten AI Anda",
+        "description": "Gunakan Siaga-Bot untuk membantu Anda.",
+        "initialMessage": "Halo! Saya Siaga-Bot. Saya di sini untuk membantu Anda berbagi cerita. Butuh ide harus mulai dari mana? Tanyakan saja!",
+        "errorMessage": "Maaf, terjadi kesalahan. Silakan coba lagi.",
+        "placeholder": "Tanya ide cerita...",
+        "readStory": "Baca Kisah"
+      },
+      "validation": {
+        "locationRequired": "Lokasi harus diisi.",
+        "storyTypeRequired": "Anda harus memilih setidaknya satu jenis cerita.",
+        "storyMinLength": "Cerita harus lebih dari 10 karakter.",
+        "storyMaxLength": "Cerita tidak boleh lebih dari 2000 karakter.",
+        "agreeRequired": "Anda harus menyetujui syarat dan ketentuan."
+      }
     },
-    "supportedBy": "Didukung oleh"
+    "supportedBy": "Didukung oleh",
+    "quote": "\"Setiap cerita, sekecil apapun, adalah bagian dari mozaik besar ketahanan komunitas kita. Bersama, kita merawat ingatan dan membangun masa depan yang lebih kuat.\""
   },
   "explore": {
     "title": "Cerita dari Aceh",

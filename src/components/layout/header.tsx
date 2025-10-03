@@ -50,7 +50,7 @@ const Header = () => {
 
         <div className="flex flex-1 items-center justify-end gap-2">
           <Button asChild className="hidden sm:inline-flex bg-gradient-to-r from-blue-500 to-sky-500 text-white hover:opacity-90">
-            <Link href="/share-story">{dictionary.header.shareStory}</Link>
+            <Link href="/#share-story">{dictionary.header.shareStory}</Link>
           </Button>
           <LanguageToggle />
           <ThemeToggle />
@@ -82,7 +82,7 @@ const Header = () => {
                 </Link>
               ))}
               <Button asChild>
-                <Link href="/share-story" onClick={() => setMobileMenuOpen(false)}>
+                <Link href="/#share-story" onClick={() => setMobileMenuOpen(false)}>
                   {dictionary.header.shareStory}
                 </Link>
               </Button>
