@@ -192,9 +192,9 @@ ${story}`;
         </p>
       </div>
 
-      <div className="grid gap-12 lg:grid-cols-2 lg:items-start rounded-2xl">
+      <div className="grid grid-cols-1 gap-12 rounded-2xl md:grid-cols-2 lg:grid-cols-1">
         <MotionWrapper delay={0.1}>
-          <Card className="lg:sticky lg:top-24">
+          <Card>
             <CardHeader>
               <CardTitle className="text-2xl">Mulai Berbagi di Sini</CardTitle>
             </CardHeader>
@@ -346,7 +346,7 @@ ${story}`;
         </MotionWrapper>
 
         <MotionWrapper delay={0.2}>
-          <Card className="flex h-full min-h-[500px] flex-col lg:h-[80vh] lg:sticky lg:top-24">
+          <Card className="flex h-full min-h-[500px] flex-col lg:h-[80vh]">
             <CardHeader className="flex flex-row items-start gap-3">
               <div className="mt-1 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary/20">
                 <Bot className="h-6 w-6 text-primary" />
@@ -827,5 +827,7 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
