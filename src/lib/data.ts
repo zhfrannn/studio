@@ -12,7 +12,7 @@ export const stories: Story[] = [
       'Di Pulau Simeulue, jauh sebelum sistem peringatan dini modern ada, leluhur kami telah mewariskan sebuah syair, sebuah nyanyian bernama "Smong". Syair ini bukan sekadar lantunan, melainkan sebuah panduan hidup. "Enggel mon sao suru, linon bak, mae oek suruik..." yang artinya "Jika gempa kuat diikuti surutnya air laut, segeralah lari ke tempat tinggi". Saat gempa dan tsunami dahsyat melanda Aceh pada tahun 2004, ingatan akan Smong inilah yang mendorong kami semua berlari ke bukit, menjauhi pantai. Dari puluhan ribu penduduk, hanya sedikit yang menjadi korban. Smong adalah bukti bahwa alam memberi tanda, dan leluhur kami telah mengajari kami cara membacanya. Ini adalah cerita tentang bagaimana pengetahuan yang diwariskan dari generasi ke generasi menjadi penyelamat kami.',
     aiThemes: ['Local Wisdom', 'Disaster Preparedness'],
     media: {
-      featuredImage: 'https://picsum.photos/seed/1/800/600',
+      featuredImage: 'https://images.unsplash.com/photo-1525873020571-08690094e301?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxvY2VhbiUyMHdhdmVzfGVufDB8fHx8MTc1OTQxNzMyMHww&ixlib=rb-4.1.0&q=80&w=1080',
       featuredImageHint: 'ocean waves',
     },
     status: 'published',
@@ -28,7 +28,7 @@ export const stories: Story[] = [
       'Dulu, pantai di desa kami terus menerus terkikis. Setiap kali badai datang, kami selalu was-was. Rumah-rumah di dekat pantai perlahan hancur. Lalu, kami teringat cerita orang tua dulu, bahwa hutan bakau adalah benteng alami kami. Bersama-sama, para pemuda dan orang tua, kami mulai menanam kembali bibit bakau di sepanjang pesisir. Awalnya sulit, banyak yang gagal. Tapi kami tidak menyerah. Sekarang, setelah bertahun-tahun, hutan bakau itu telah tumbuh lebat. Akarnya yang kokoh mencengkeram tanah, menahan laju ombak. Desa kami kini lebih aman. Anak-anak bisa bermain di pantai tanpa rasa takut. Hutan bakau tidak hanya melindungi kami, tapi juga menjadi rumah bagi ikan dan kepiting, memberikan kami sumber penghidupan tambahan.',
     aiThemes: ['Disaster Preparedness', 'Peacebuilding'],
     media: {
-      featuredImage: 'https://picsum.photos/seed/2/800/600',
+      featuredImage: 'https://images.unsplash.com/photo-1618344322727-2256d3abdd1e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtYW5ncm92ZSUyMGZvcmVzdHxlbnwwfHx8fDE3NTk0OTM3NDN8MA&ixlib=rb-4.1.0&q=80&w=1080',
       featuredImageHint: 'mangrove forest',
     },
     status: 'published',
@@ -44,7 +44,7 @@ export const stories: Story[] = [
       'Setelah konflik berakhir, masih ada banyak luka dan ketidakpercayaan di antara kami. Sulit untuk memulai kembali. Lalu, beberapa dari kami, para ibu, berpikir: semua orang butuh makan, dan makanan bisa menyatukan. Kami mendirikan sebuah dapur umum sederhana. Siapapun boleh datang untuk makan, dan siapapun boleh membantu memasak. Di sinilah keajaiban terjadi. Sambil memotong sayur dan mengaduk gulai, kami mulai berbicara. Kami berbagi cerita, tawa, dan air mata. Dinding-dinding yang dulu memisahkan kami perlahan runtuh. Dapur ini menjadi lebih dari sekadar tempat makan; ia menjadi ruang rekonsiliasi. Kami belajar bahwa perdamaian bisa dimulai dari hal yang paling sederhana: sepiring nasi hangat dan hati yang terbuka.',
     aiThemes: ['Peacebuilding', 'Local Wisdom'],
     media: {
-      featuredImage: 'https://picsum.photos/seed/3/800/600',
+      featuredImage: 'https://images.unsplash.com/photo-1759347115771-b9bf87e1dce1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb21tdW5pdHklMjBnYXRoZXJpbmd8ZW58MHx8fHwxNzU5NDEwNDc2fDA&ixlib=rb-4.1.0&q=80&w=1080',
       featuredImageHint: 'community gathering',
     },
     status: 'published',
@@ -60,7 +60,7 @@ export const stories: Story[] = [
       'Di dataran tinggi Gayo, cuaca tak selalu bisa ditebak. Kadang panen melimpah, kadang gagal total. Untuk menghadapi ini, kami menghidupkan kembali tradisi "lumbung bersama". Setiap keluarga yang panennya berlebih akan menyisihkan sebagian hasilnya untuk disimpan di lumbung komunal. Saat ada keluarga yang mengalami kesulitan atau gagal panen, mereka bisa mengambil dari lumbung ini. Tidak ada bunga, tidak ada catatan utang. Semuanya didasari oleh semangat gotong royong dan kepedulian. Lumbung ini adalah simbol persatuan kami. Ia mengajarkan kami bahwa dengan berbagi, kita semua menjadi lebih kuat. Kami mungkin tidak kaya secara materi, tapi kami kaya dalam persaudaraan.',
     aiThemes: ['Disaster Preparedness', 'Local Wisdom', 'Peacebuilding'],
     media: {
-      featuredImage: 'https://picsum.photos/seed/5/800/600',
+      featuredImage: 'https://images.unsplash.com/photo-1594069758873-e79e9075eb7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb3VudGFpbiUyMHZpbGxhZ2V8ZW58MHx8fHwxNzU5NDkzNzQzfDA&ixlib=rb-4.1.0&q=80&w=1080',
       featuredImageHint: 'mountain village',
     },
     status: 'published',
@@ -76,7 +76,7 @@ export const stories: Story[] = [
       'Malam itu, 10 Maret 2011, langit seakan pecah di atas Tangse. Hujan yang turun bukan lagi sekadar hujan, melainkan seperti air yang ditumpahkan dari langit tanpa henti. Kami yang tinggal di sepanjang Krueng Tangse sudah biasa dengan air sungai yang naik, tapi malam itu berbeda. Sekitar tengah malam, kami mendengar suara gemuruh yang bukan berasal dari guntur. Suaranya semakin keras, seperti gunung yang runtuh. Beberapa dari kami yang penasaran mencoba melihat keluar. Yang kami lihat adalah pemandangan mengerikan: air sungai meluap dengan liar, warnanya hitam pekat, dan membawa serta puluhan pohon gelondongan raksasa yang saling berbenturan. Itu bukan banjir biasa, itu adalah "Bah" – air bah yang murka.\n\nKepala desa berteriak melalui pengeras suara masjid, "Air naik! Selamatkan diri! Lari ke tempat tinggi!" Listrik padam, membuat suasana semakin panik dan mencekam. Dalam gelap gulita, kami hanya bisa mengandalkan naluri. Suara benturan kayu-kayu raksasa yang menghantam jembatan dan rumah-rumah terdengar begitu dekat. Rumah-rumah panggung yang terbuat dari kayu pun tak berdaya, tercabut dari pondasinya dan hanyut terseret arus. Kami berlari sekuat tenaga ke perbukitan, ke tempat yang lebih tinggi, hanya membawa pakaian di badan. Dari atas bukit, kami melihat desa kami dilahap oleh air bah yang ganas. Paginya, saat air mulai surut, yang tersisa hanyalah lumpur tebal dan puing-puing. Jembatan utama putus, puluhan rumah hilang, dan sawah kami berubah menjadi lautan lumpur. Kami sadar, ini bukan hanya bencana alam. Ini adalah akibat dari keserakahan. Hutan di hulu yang seharusnya menjadi penyangga telah gundul oleh penebangan liar. Sungai tidak lagi memiliki penahan. Bah Tangse menjadi pelajaran paling pahit bagi kami, bahwa merusak alam sama dengan menghancurkan diri sendiri. Sejak saat itu, kami bersumpah untuk menjaga hutan kami, menanam kembali pohon-pohon, sebagai warisan agar tragedi serupa tidak terulang lagi.',
     aiThemes: ['Disaster Preparedness', 'Local Wisdom'],
     media: {
-      featuredImage: 'https://picsum.photos/seed/6/800/600',
+      featuredImage: 'https://images.unsplash.com/photo-1631134953337-b660eda6e87f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxyYWdpbmclMjByaXZlcnxlbnwwfHx8fDE3NTk0OTM3NDR8MA&ixlib=rb-4.1.0&q=80&w=1080',
       featuredImageHint: 'raging river',
     },
     status: 'published',
@@ -92,7 +92,7 @@ export const stories: Story[] = [
       'Setiap musim kemarau, hati kami selalu was-was. Hutan pinus di sekitar kami ini indah, tapi juga sangat rentan terbakar. Sedikit saja percikan api, bisa menjadi bencana besar. Kami membentuk kelompok "Masyarakat Peduli Api". Kami berpatroli secara sukarela, membuat sekat bakar, dan yang terpenting, memberikan penyuluhan kepada warga agar tidak membuka lahan dengan cara membakar. Ini bukan pekerjaan pemerintah, ini adalah tanggung jawab kami bersama. Hutan ini adalah sumber air kami, rumah bagi satwa liar, dan warisan untuk anak cucu kami. Memadamkan api sebelum membesar adalah cara kami membangun perdamaian dengan alam.',
     aiThemes: ['Disaster Preparedness', 'Peacebuilding'],
     media: {
-      featuredImage: 'https://picsum.photos/seed/7/800/600',
+      featuredImage: 'https://images.unsplash.com/photo-1600181958051-bd8544360312?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxmb3Jlc3QlMjBmaXJlfGVufDB8fHx8MTc1OTQ5Mzc0M3ww&ixlib=rb-4.1.0&q=80&w=1080',
       featuredImageHint: 'forest fire',
     },
     status: 'published',
