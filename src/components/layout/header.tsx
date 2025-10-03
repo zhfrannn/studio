@@ -26,13 +26,16 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b backdrop-blur-lg bg-background/80">
-      <div className="container mx-auto flex h-16 items-center px-4">
-        <Link href="/" className="mr-8 flex items-center gap-2">
-          <WaveMascot className="h-8 w-8 text-primary" />
-          <span className="font-headline text-xl font-bold text-foreground">
-            Wave of Voice
-          </span>
-        </Link>
+      <div className="container mx-auto flex h-16 items-center justify-between px-4">
+        <div className="flex items-center">
+          <Link href="/" className="mr-8 flex items-center gap-2">
+            <WaveMascot className="h-8 w-8 text-primary" />
+            <span className="font-headline text-xl font-bold text-foreground">
+              Wave of Voice
+            </span>
+          </Link>
+        </div>
+
         <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
           {navLinks.map(link => (
             <Link
@@ -44,7 +47,8 @@ const Header = () => {
             </Link>
           ))}
         </nav>
-        <div className="flex flex-1 items-center justify-end gap-2">
+
+        <div className="flex items-center justify-end gap-2">
           <Button asChild variant="ghost" className="hidden sm:inline-flex">
             <Link href="/share-story">{dictionary.header.shareStory}</Link>
           </Button>
