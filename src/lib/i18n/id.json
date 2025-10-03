@@ -98,11 +98,11 @@
       },
       "submitButton": "Kirim via WhatsApp",
       "aiHelper": {
-        "title": "Asisten AI Anda",
-        "description": "Gunakan Siaga-Bot untuk membantu Anda.",
-        "initialMessage": "Halo! Saya Siaga-Bot. Saya di sini untuk membantu Anda berbagi cerita. Butuh ide harus mulai dari mana? Tanyakan saja!",
+        "title": "Siaga-Bot",
+        "description": "Asisten AI edukasi kebencanaan Anda.",
+        "initialMessage": "Halo! Saya Siaga-Bot. Saya di sini untuk menjawab pertanyaan Anda seputar kesiapsiagaan bencana, kearifan lokal, dan perdamaian di Aceh.",
         "errorMessage": "Maaf, terjadi kesalahan. Silakan coba lagi.",
-        "placeholder": "Tanya ide cerita...",
+        "placeholder": "Tanya tentang kebencanaan...",
         "readStory": "Baca Kisah"
       },
       "validation": {
@@ -146,6 +146,17 @@
   },
   "languageToggle": {
     "label": "Ganti Bahasa"
+  },
+  "chatbot": {
+    "title": "Siaga-Bot",
+    "description": "Asisten Kebencanaan Anda",
+    "initialMessage": "Halo! Saya Siaga-Bot, asisten AI Anda untuk edukasi kebencanaan. Apa yang ingin Anda ketahui tentang kesiapsiagaan bencana, kearifan lokal, atau perdamaian di Aceh?",
+    "errorMessage": "Maaf, terjadi kesalahan saat memproses permintaan Anda. Silakan coba lagi.",
+    "placeholder": "Tanya tentang bencana...",
+    "relatedStory": "Baca cerita terkait:",
+    "fabAsk": "Tanya Siaga-Bot",
+    "fabExplore": "Jelajahi Cerita",
+    "fabShare": "Bagikan Cerita"
   },
   "stories": {
     "smong-selamat-dari-lautan": {

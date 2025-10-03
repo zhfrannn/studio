@@ -28,6 +28,7 @@ import { ScrollArea } from './ui/scroll-area';
 import { askSiagaBot, AskSiagaBotOutput } from '@/ai/flows/ask-siaga-bot';
 import { cn } from '@/lib/utils';
 import MotionWrapper from './motion-wrapper';
+import { useLanguage } from '@/context/language-context';
 
 type Message = {
   role: 'user' | 'bot';
@@ -41,6 +42,7 @@ export default function ChatbotFab() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const { dictionary } = useLanguage();
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const openChat = () => {
@@ -50,7 +52,7 @@ export default function ChatbotFab() {
       setMessages([
         {
           role: 'bot',
-          text: 'Halo! Saya Siaga-Bot, asisten AI Anda untuk edukasi kebencanaan. Apa yang ingin Anda ketahui tentang kesiapsiagaan bencana, kearifan lokal, atau perdamaian di Aceh?',
+          text: dictionary.chatbot.initialMessage,
         },
       ]);
     }
@@ -76,7 +78,7 @@ export default function ChatbotFab() {
     } catch (error) {
       const errorMessage: Message = {
         role: 'bot',
-        text: 'Maaf, terjadi kesalahan saat memproses permintaan Anda. Silakan coba lagi.',
+        text: dictionary.chatbot.errorMessage,
       };
       setMessages(prev => [...prev, errorMessage]);
       console.error('Error asking Siaga-Bot:', error);
@@ -102,7 +104,7 @@ export default function ChatbotFab() {
                 onClick={openChat}
               >
                 <Bot className="mr-2" />
-                Tanya Siaga-Bot
+                {dictionary.chatbot.fabAsk}
               </Button>
               <Button
                 variant="secondary"
@@ -110,7 +112,7 @@ export default function ChatbotFab() {
                 asChild
               >
                 <Link href="/explore">
-                  <BookOpen className="mr-2" /> Jelajahi Cerita
+                  <BookOpen className="mr-2" /> {dictionary.chatbot.fabExplore}
                 </Link>
               </Button>
               <Button
@@ -119,7 +121,7 @@ export default function ChatbotFab() {
                 asChild
               >
                 <Link href="/share-story">
-                  <Share2 className="mr-2" /> Bagikan Cerita
+                  <Share2 className="mr-2" /> {dictionary.chatbot.fabShare}
                 </Link>
               </Button>
             </motion.div>
@@ -156,8 +158,8 @@ export default function ChatbotFab() {
                 <div className="flex items-center gap-3">
                   <Bot className="h-8 w-8 text-primary" />
                   <div>
-                    <CardTitle>Siaga-Bot</CardTitle>
-                    <CardDescription>Asisten Kebencanaan Anda</CardDescription>
+                    <CardTitle>{dictionary.chatbot.title}</CardTitle>
+                    <CardDescription>{dictionary.chatbot.description}</CardDescription>
                   </div>
                 </div>
                 <Button variant="ghost" size="icon" onClick={closeChat}>
@@ -204,7 +206,7 @@ export default function ChatbotFab() {
                             <Card className="mt-3">
                               <CardHeader className="p-3">
                                 <CardDescription>
-                                  Baca cerita terkait:
+                                  {dictionary.chatbot.relatedStory}
                                 </CardDescription>
                                 <CardTitle className="text-base">
                                   <Link
@@ -245,7 +247,7 @@ export default function ChatbotFab() {
                   <Input
                     value={input}
                     onChange={e => setInput(e.target.value)}
-                    placeholder="Tanya tentang bencana..."
+                    placeholder={dictionary.chatbot.placeholder}
                     disabled={isLoading}
                   />
                   <Button type="submit" size="icon" disabled={isLoading}>

@@ -98,11 +98,11 @@
       },
       "submitButton": "Send via WhatsApp",
       "aiHelper": {
-        "title": "Your AI Assistant",
-        "description": "Use Siaga-Bot to help you.",
-        "initialMessage": "Hello! I'm Siaga-Bot. I'm here to help you share your story. Need ideas on where to start? Just ask!",
+        "title": "Siaga-Bot",
+        "description": "Your AI assistant for disaster education.",
+        "initialMessage": "Hello! I am Siaga-Bot. I'm here to answer your questions about disaster preparedness, local wisdom, and peacebuilding in Aceh.",
         "errorMessage": "Sorry, an error occurred. Please try again.",
-        "placeholder": "Ask for story ideas...",
+        "placeholder": "Ask about disasters...",
         "readStory": "Read Story"
       },
       "validation": {
@@ -147,7 +147,18 @@
   "languageToggle": {
     "label": "Change Language"
   },
-    "stories": {
+  "chatbot": {
+    "title": "Siaga-Bot",
+    "description": "Your Disaster Assistant",
+    "initialMessage": "Hello! I am Siaga-Bot, your AI assistant for disaster education. What would you like to know about disaster preparedness, local wisdom, or peace in Aceh?",
+    "errorMessage": "Sorry, an error occurred. Please try again.",
+    "placeholder": "Ask about disasters...",
+    "relatedStory": "Read the related story:",
+    "fabAsk": "Ask Siaga-Bot",
+    "fabExplore": "Explore Stories",
+    "fabShare": "Share Story"
+  },
+  "stories": {
     "smong-selamat-dari-lautan": {
       "title": "Smong: Local Wisdom that Survived the Ocean",
       "summary": "The story of how the 'Smong' oral tradition on Simeulue Island saved thousands of lives during the 2004 tsunami, a testament to the power of local wisdom in disaster mitigation.",
@@ -225,5 +236,3 @@
     }
   }
 }
-
-    
