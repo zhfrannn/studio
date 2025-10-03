@@ -7,6 +7,8 @@ import { MapPin } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from './ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
+import { useLanguage } from '@/context/language-context';
+
 
 interface InteractiveMapProps {
   stories: Story[];
@@ -16,6 +18,7 @@ const MAPBOX_TOKEN = process.env.NEXT_PUBLIC_MAPBOX_API_KEY;
 
 export default function InteractiveMap({ stories }: InteractiveMapProps) {
   const [selectedStory, setSelectedStory] = useState<Story | null>(null);
+  const { dictionary } = useLanguage();
 
   const initialViewState = {
     latitude: 4.695135,
@@ -69,7 +72,7 @@ export default function InteractiveMap({ stories }: InteractiveMapProps) {
                   {selectedStory.summary}
                 </p>
                 <Button size="sm" asChild>
-                  <Link href={`/story/${selectedStory.id}`}>Read Story</Link>
+                  <Link href={`/story/${selectedStory.id}`}>{dictionary.storyCard.readMore}</Link>
                 </Button>
               </CardContent>
             </Card>

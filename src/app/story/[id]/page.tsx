@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { stories } from '@/lib/data';
+import { stories as staticStories } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
 import {
   Card,
@@ -25,14 +25,41 @@ import {
 import DigitalComic from '@/components/digital-comic';
 import MotionWrapper from '@/components/motion-wrapper';
 import SplitText from '@/components/ui/split-text';
+import { useLanguage } from '@/context/language-context';
+import type { Story } from '@/lib/types';
+import idDict from '@/lib/i18n/id.json';
+import enDict from '@/lib/i18n/en.json';
+
+// This is a server component, so we can't use the hook directly.
+// We'll simulate language selection for static generation if needed,
+// but for client-side navigation, the context will work.
+// For simplicity in this fix, we'll fetch both and decide.
+// A more robust solution might involve middleware.
 
 export default function StoryDetailPage({ params }: { params: { id: string } }) {
-  const story = stories.find(s => s.id === params.id);
-  const content: InteractiveContent | undefined = interactiveContent[params.id];
+  // This is a workaround for server components. In a real app, you'd
+  // likely get the language from params or cookies.
+  const lang = 'id'; // Defaulting to 'id' for demonstration
+  const dictionary = lang === 'id' ? idDict : enDict;
 
-  if (!story) {
+  const staticStoryData = staticStories.find(s => s.id === params.id);
+  
+  if (!staticStoryData) {
     notFound();
   }
+  
+  const translatedContent = dictionary.stories[staticStoryData.id as keyof typeof dictionary.stories];
+
+  if (!translatedContent) {
+      notFound();
+  }
+
+  const story: Story = {
+      ...staticStoryData,
+      ...translatedContent
+  }
+
+  const content: InteractiveContent | undefined = interactiveContent[params.id];
 
   return (
     <div className="container mx-auto px-4 py-12">
@@ -141,11 +168,9 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
             <Card>
               <CardContent className="p-6">
                 <div className="prose prose-slate max-w-none dark:prose-invert">
-                    <SplitText
-                        as="p"
-                        text={story.fullText}
-                        className="text-lg leading-relaxed text-foreground"
-                    />
+                    <p className="text-lg leading-relaxed text-foreground whitespace-pre-line">
+                      {story.fullText}
+                    </p>
                 </div>
               </CardContent>
             </Card>
@@ -173,4 +198,12 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
       </div>
     </div>
   );
+}
+
+// Since this is a server component, we need to handle static generation
+// for all possible story IDs.
+export async function generateStaticParams() {
+  return staticStories.map(story => ({
+    id: story.id,
+  }));
 }

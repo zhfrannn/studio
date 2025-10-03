@@ -1,13 +1,22 @@
 'use client';
 import StoryGrid from './story-grid';
-import { stories } from '@/lib/data';
+import { stories as staticStories } from '@/lib/data';
 import { BookDashed } from 'lucide-react';
 import { useLanguage } from '@/context/language-context';
-
+import type { Story } from '@/lib/types';
 
 export default function ExplorePage() {
   const { dictionary } = useLanguage();
   const exploreDict = dictionary.explore;
+
+  // Combine static data with translated data
+  const allStories: Story[] = staticStories.map(story => {
+    const translatedContent = dictionary.stories[story.id as keyof typeof dictionary.stories];
+    return {
+      ...story,
+      ...translatedContent,
+    };
+  });
 
   return (
     <div className="container mx-auto px-4 py-12 rounded-2xl">
@@ -20,7 +29,7 @@ export default function ExplorePage() {
           {exploreDict.description}
         </p>
       </div>
-      <StoryGrid allStories={stories} />
+      <StoryGrid allStories={allStories} />
     </div>
   );
 }

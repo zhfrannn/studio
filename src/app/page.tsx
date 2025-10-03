@@ -11,7 +11,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import StoryCard from '@/components/story-card';
-import { stories } from '@/lib/data';
+import { stories as staticStories } from '@/lib/data';
 import Link from 'next/link';
 import {
   ArrowRight,
@@ -40,12 +40,23 @@ import MotionWrapper from '@/components/motion-wrapper';
 import SplitText from '@/components/ui/split-text';
 import LogoLoop from '@/components/ui/logo-loop';
 import { useLanguage } from '@/context/language-context';
+import type { Story } from '@/lib/types';
+
 
 export default function Home() {
-  const featuredStory = stories[0];
-  const thumbStories = stories.slice(0, 6);
   const { dictionary } = useLanguage();
   const homeDict = dictionary.home;
+
+  const allStories: Story[] = staticStories.map(story => {
+    const translatedContent = dictionary.stories[story.id as keyof typeof dictionary.stories];
+    return {
+      ...story,
+      ...translatedContent
+    };
+  });
+
+  const featuredStory = allStories[0];
+  const thumbStories = allStories.slice(0, 6);
 
   return (
     <div className="space-y-16 pb-24 md:space-y-24">
@@ -243,7 +254,7 @@ export default function Home() {
         </div>
         <div className="rounded-2xl border shadow-lg overflow-hidden">
           <div className="h-[500px] w-full">
-            <InteractiveMap stories={stories} />
+            <InteractiveMap stories={allStories} />
           </div>
           <div className="border-t p-4 text-center">
             <p className="text-sm text-muted-foreground">
@@ -258,7 +269,7 @@ export default function Home() {
             className="mb-8 text-center font-headline text-2xl md:text-3xl"
           />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {stories.slice(0, 3).map((story, i) => (
+            {allStories.slice(0, 3).map((story, i) => (
               <MotionWrapper key={story.id} delay={i * 0.1}>
                 <StoryCard story={story} />
               </MotionWrapper>

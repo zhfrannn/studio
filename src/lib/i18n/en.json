@@ -107,5 +107,84 @@
   },
   "languageToggle": {
     "label": "Change Language"
+  },
+    "stories": {
+    "smong-selamat-dari-lautan": {
+      "title": "Smong: Local Wisdom that Survived the Ocean",
+      "summary": "The story of how the 'Smong' oral tradition on Simeulue Island saved thousands of lives during the 2004 tsunami, a testament to the power of local wisdom in disaster mitigation.",
+      "fullText": "On Simeulue Island, long before modern early warning systems existed, our ancestors passed down a poem, a song called 'Smong'. This poem was not just a chant, but a guide to life. 'Enggel mon sao suru, linon bak, mae oek suruik...' which means 'If a strong earthquake is followed by the receding of the sea, run immediately to high ground'. When the devastating earthquake and tsunami struck Aceh in 2004, it was the memory of Smong that prompted us all to run to the hills, away from the coast. Of the tens of thousands of residents, only a few became victims. Smong is proof that nature gives signs, and our ancestors taught us how to read them. This is a story of how knowledge passed down from generation to generation became our savior."
+    },
+    "hutan-bakau-penjaga-pantai": {
+      "title": "Mangrove Forest, the Guardian of the Coast",
+      "summary": "An inspiring story from a coastal community in Aceh Jaya who worked together to replant the mangrove forest to protect their village from abrasion and storms.",
+      "fullText": "In the past, the coast in our village was continuously eroding. Every time a storm came, we were always anxious. Houses near the beach were slowly destroyed. Then, we remembered the stories of our elders, that the mangrove forest was our natural fortress. Together, the youth and the elderly, we began to replant mangrove seedlings along the coast. It was difficult at first, many failed. But we did not give up. Now, after many years, the mangrove forest has grown dense. Its strong roots grip the soil, holding back the waves. Our village is now safer. Children can play on the beach without fear. The mangrove forest not only protects us, but also becomes a home for fish and crabs, providing us with an additional source of livelihood."
+    },
+    "dapur-umum-perdamaian": {
+      "title": "The Community Kitchen of Peace",
+      "summary": "How a community kitchen established post-conflict became a space to re-weave the threads of brotherhood and build peace through food.",
+      "fullText": "After the conflict ended, there were still many wounds and distrust among us. It was difficult to start over. Then, some of us, the mothers, thought: everyone needs to eat, and food can unite. We set up a simple community kitchen. Anyone could come to eat, and anyone could help cook. This is where the magic happened. While cutting vegetables and stirring curry, we began to talk. We shared stories, laughter, and tears. The walls that once separated us slowly crumbled. This kitchen became more than just a place to eat; it became a space for reconciliation. We learned that peace can start from the simplest thing: a plate of warm rice and an open heart."
+    },
+    "lumbung-padi-komunal": {
+      "title": "Communal Rice Barn: Mutual Help to Face Famine",
+      "summary": "The initiative of the Gayo community in building a communal rice barn as a social safety net to ensure that no resident goes hungry during the lean season.",
+      "fullText": "In the Gayo highlands, the weather is not always predictable. Sometimes the harvest is abundant, sometimes it fails completely. To face this, we revived the tradition of a 'communal barn'. Every family with a surplus harvest would set aside a portion of their yield to be stored in the communal barn. When a family experienced hardship or crop failure, they could take from this barn. There is no interest, no debt record. Everything is based on the spirit of mutual cooperation and care. This barn is a symbol of our unity. It teaches us that by sharing, we all become stronger. We may not be rich in material things, but we are rich in brotherhood."
+    },
+    "bah-tangse-sungai-murka": {
+      "title": "Bah Tangse: When the River Raged",
+      "summary": "A deep testimony about the devastating flash flood in Tangse in 2011, a tragedy caused by deforestation and a bitter lesson on the importance of protecting nature.",
+      "fullText": "That night, March 10, 2011, the sky seemed to break over Tangse. The rain that fell was no longer just rain, but like water being poured from the sky without stopping. Those of us living along the Krueng Tangse were used to the river rising, but that night was different. Around midnight, we heard a rumbling sound that was not from thunder. The sound grew louder, like a collapsing mountain. Some of us who were curious tried to look outside. What we saw was a horrifying scene: the river water was overflowing wildly, its color pitch black, and carrying with it dozens of giant logs that collided with each other. It wasn't an ordinary flood, it was 'Bah' – a raging flood.\\n\\nThe village head shouted through the mosque's loudspeaker, 'The water is rising! Save yourselves! Run to high ground!' The electricity went out, making the atmosphere even more panicked and tense. In the pitch dark, we could only rely on instinct. The sound of giant logs hitting bridges and houses sounded so close. Even the wooden stilt houses were powerless, uprooted from their foundations and swept away by the current. We ran as fast as we could to the hills, to higher ground, with only the clothes on our backs. From the top of the hill, we watched our village being devoured by the ferocious flood. In the morning, as the water began to recede, all that was left was thick mud and debris. The main bridge was broken, dozens of houses were gone, and our rice fields had turned into a sea of mud. We realized, this was not just a natural disaster. This was the result of greed. The forest upstream that should have been a buffer had been stripped bare by illegal logging. The river no longer had a barrier. Bah Tangse became the bitterest lesson for us, that destroying nature is the same as destroying ourselves. Since then, we have vowed to protect our forests, to replant trees, as a legacy so that a similar tragedy does not happen again."
+    },
+    "api-di-bukit-barisan": {
+      "title": "Fire on the Barisan Hills",
+      "summary": "The story of the struggle of the Fire-Care Community in the Gayo highlands in preventing and extinguishing forest fires, protecting the precious Leuser ecosystem.",
+      "fullText": "Every dry season, our hearts are always anxious. The pine forest around us is beautiful, but also very flammable. Just a small spark can become a major disaster. We formed a 'Fire-Care Community' group. We patrol voluntarily, create firebreaks, and most importantly, educate residents not to clear land by burning. This is not the government's job, this is our shared responsibility. This forest is our water source, home to wildlife, and a legacy for our children and grandchildren. Extinguishing the fire before it grows is our way of building peace with nature."
+    },
+    "kopi-gayo-aroma-perdamaian": {
+      "title": "Gayo Coffee: The Aroma of Peace",
+      "summary": "How the coffee plantations in Bener Meriah, once abandoned due to conflict, have now become the economic engine and a symbol of new hope for the community.",
+      "fullText": "During the conflict, many of us were forced to leave our coffee plantations. The plantations were neglected, overgrown with weeds. After peace came, we returned. Starting again from scratch was very hard. But, we saw hope in these coffee beans. We worked hard, learned better farming techniques, and built a cooperative together. Slowly but surely, Gayo coffee became known to the world. The aroma of the coffee we process every morning is not just the aroma of a drink, but also the aroma of peace and hard work. These coffee plantations have reunited us, provided jobs, and allowed us to send our children to school. Coffee has healed our wounds."
+    },
+    "pemuda-penjaga-adat": {
+      "title": "The Youth Guardians of Custom",
+      "summary": "A group of young men in Pidie revives the Seudati dance as a way to keep young people away from violence and strengthen cultural identity post-conflict.",
+      "fullText": "After peace, many young people lost their way. Their great energy was sometimes channeled into negative things. We, some of the older youth, felt we had to do something. We decided to revive the Seudati dance troupe. This dance is not just about movement, it also teaches discipline, teamwork, and contains advisory poems. It wasn't easy to attract their interest at first. But with patience, our troupe began to grow. Their energy is now channeled into preserving culture. Through dance, we build bridges between villages and create a safe space for young people to express themselves positively."
+    },
+    "perempuan-penganyam-harapan": {
+      "title": "The Women Weavers of Hope",
+      "summary": "The story of tsunami widow survivors who rose from adversity by forming a weaving craft group, creating economic independence and a healing space.",
+      "fullText": "The tsunami took our husbands and our homes. We were left with grief and uncertainty. To survive, we started to gather and do what we could: weaving. We used the pandan leaves that grew abundantly around us. While weaving, we shared stories, strengthened each other. This weaving is not just a mat or a bag, it is therapy for us. Slowly, our products began to be known. Orders came in, and we earned our own income. We are no longer just victims, we are empowered survivors. This group became our new family, a place where we weave back hope for the future."
+    },
+    "arsitektur-rumah-panggung": {
+      "title": "Stilt House Architecture: Learning from the Ancestors",
+      "summary": "Rediscovering the wisdom of traditional Acehnese architecture, Rumoh Aceh, as an inspiration for building more earthquake-resistant and environmentally adaptive houses.",
+      "fullText": "When the earthquake and tsunami destroyed so many modern buildings, we saw many Rumoh Aceh (traditional Acehnese houses) still standing firm. This opened our eyes. The architecture of our ancestors is truly extraordinary. The stilt house with its flexible wooden construction is able to absorb earthquake shocks. The space underneath the house not only serves as a multipurpose area but also provides a path for water in case of floods or inundation. We began to advocate for and rebuild houses by adapting the principles of Rumoh Aceh. This is not about returning to the past, but taking the best lessons from the past to build a safer future."
+    },
+    "seni-melawan-trauma": {
+      "title": "Art Against Trauma",
+      "summary": "How young artists in Banda Aceh use murals and street art to transform the walls left by the tsunami into canvases of hope and collective memory.",
+      "fullText": "Post-tsunami Banda Aceh was full of silent walls that witnessed the tragedy. The atmosphere felt heavy. As artists, we felt called to do something. We started painting murals on public walls. Not to erase the memory, but to give it new color. We painted about hope, resilience, togetherness, and the beauty of Aceh. This process of painting together became therapy for us and the community. Children joined in. The once gloomy walls have now become an open gallery that tells the story of our revival. Art became our way of healing the city's wounds and our own souls."
+    },
+    "nelayan-dan-tanda-alam": {
+      "title": "The Wisdom of Fishermen and the Signs of Nature",
+      "summary": "The story of traditional fishermen in Banda Aceh who rely on generational knowledge of constellations, winds, and fish behavior to sail safely.",
+      "fullText": "We fishermen don't have fancy GPS. Our compass is the sky and the sea itself. My father taught me how to read the Orion constellation, or 'Bintang Tiga' as we call it, to know the way home. We know when the fish gather just by looking at the color of the water and the type of birds flying above. If dolphins swim close to the shore, it's a sign the weather will be bad. This knowledge is not in books, it is passed down from father to son, from one generation of fishermen to the next. This is the science of life that allows us to be friends with the ocean."
+    },
+    "sumur-tua-sumber-kehidupan": {
+      "title": "The Old Well, a Source of Life During Drought",
+      "summary": "The story of how an ancient ancestral well became the only source of water that survived when the village was hit by a long drought.",
+      "fullText": "The dry season that year was very long. The river dried up, and our modern wells also ran dry. We began to despair. Then a village elder remembered an old well on the edge of the forest that had long been unused. The well was built with stone rings and covered by a large tree. Hesitantly, we cleaned it. Miraculously, at the bottom, there was still clear water that never ran out! It turned out, our ancestors built the well right on top of a large spring. That old well saved our village. We learned that modern technology is not always better. There is wisdom in the relics of the past that we must preserve."
+    },
+    "ilmu-falak-di-pesantren": {
+      "title": "Astronomy in the Dayah: Navigating the Seas and Skies",
+      "summary": "Revealing how Islamic boarding schools (dayah) in Aceh not only teach religious knowledge but also 'Ilmu Falak' (astronomy) which is used by fishermen for navigation.",
+      "fullText": "Many think that a dayah is only a place to study the Al-Quran. But since long ago, we have also studied Ilmu Falak. We calculate the position of the stars to determine the beginning of the fasting month, and also the direction of qibla. It turns out, the same science is also very useful for the fishermen on the coast. The students who return to their villages often become a reference. They can tell when the tides are highest, or where the position of the north star is. There is a close relationship between the sky and the sea, between religious knowledge and the science of life. Here, we learn that all knowledge comes from God and can be used for the common good, both on land and at sea."
+    },
+    "pasar-sebagai-ruang-sosial": {
+      "title": "The Morning Market: More Than Just Buying and Selling",
+      "summary": "The traditional market is not just a place for economic transactions, but also the social heart of the community, where information is disseminated and social bonds are strengthened.",
+      "fullText": "I have been trading in this market since I was young. For us, the market is not just a place to make money. This is where we meet friends, exchange news, and share stories. If there is news about upcoming aid, or job vacancies, the information spreads quickly in the market. Even when there are unsettling issues, we can calm each other down here. The market is a social barometer. From the conversations in the market's coffee stalls, we can know what the community is feeling. Keeping the traditional market alive is the same as keeping the pulse of our community."
+    }
   }
 }
+
+    
