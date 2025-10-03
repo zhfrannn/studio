@@ -27,10 +27,10 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b backdrop-blur-lg bg-background/80">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <div className="flex items-center">
+        <div className="flex flex-1 items-center justify-start">
           <Link href="/" className="mr-8 flex items-center gap-2">
             <WaveMascot className="h-8 w-8 text-primary" />
-            <span className="font-headline text-xl font-bold text-foreground">
+            <span className="hidden font-headline text-xl font-bold text-foreground sm:inline-block">
               Wave of Voice
             </span>
           </Link>
@@ -48,8 +48,8 @@ const Header = () => {
           ))}
         </nav>
 
-        <div className="flex items-center justify-end gap-2">
-          <Button asChild variant="ghost" className="hidden sm:inline-flex">
+        <div className="flex flex-1 items-center justify-end gap-2">
+          <Button asChild className="hidden sm:inline-flex bg-gradient-to-r from-blue-500 to-sky-500 text-white hover:opacity-90">
             <Link href="/share-story">{dictionary.header.shareStory}</Link>
           </Button>
           <LanguageToggle />
