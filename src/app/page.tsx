@@ -463,7 +463,7 @@ export default function Home() {
   const thumbStories = allStories.slice(0, 6);
 
   return (
-    <div className="space-y-16 pb-24 md:space-y-24">
+    <div className="space-y-12 pb-16 md:space-y-20">
       <section role="region" aria-labelledby="hero-title">
         <div className="hero-v2-card">
           <Image
@@ -796,7 +796,7 @@ export default function Home() {
         as="section"
         className="container mx-auto px-4 text-center"
       >
-        <p className="mx-auto max-w-2xl font-semibold text-lg text-center text-muted-foreground">
+        <p className="mx-auto max-w-2xl font-semibold italic text-lg text-center text-muted-foreground">
           "Setiap cerita, sekecil apapun, adalah bagian dari mozaik besar ketahanan komunitas kita. Bersama, kita merawat ingatan dan membangun masa depan yang lebih kuat."
         </p>
       </MotionWrapper>
