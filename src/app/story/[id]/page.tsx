@@ -168,7 +168,7 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
             <Card>
               <CardContent className="p-6">
                 <div className="prose prose-slate max-w-none dark:prose-invert">
-                  <ScrollReveal textClassName="text-lg leading-relaxed text-foreground whitespace-pre-line">
+                  <ScrollReveal textClassName="leading-relaxed text-foreground whitespace-pre-line">
                     {story.fullText}
                   </ScrollReveal>
                 </div>

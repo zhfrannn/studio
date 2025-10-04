@@ -247,9 +247,9 @@
 }
 
 .scroll-reveal-text {
-  font-size: clamp(1.6rem, 4vw, 3rem);
-  line-height: 1.5;
-  font-weight: 600;
+  font-size: 1.125rem; /* ~18px */
+  line-height: 1.75rem; /* ~28px */
+  font-weight: 400;
 }
 
 .word {
