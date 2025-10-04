@@ -91,9 +91,8 @@
         "agree": "My story can be used for educational purposes."
       },
       "storyTypes": {
-        "tsunami": "Tsunami",
-        "recovery": "Recovery",
-        "peace": "Peace Process",
+        "disaster": "Disaster Preparedness",
+        "peace": "Peacebuilding",
         "wisdom": "Local Wisdom"
       },
       "submitButton": "Send via WhatsApp",
@@ -233,6 +232,11 @@
       "title": "The Morning Market: More Than Just Buying and Selling",
       "summary": "The traditional market is not just a place for economic transactions, but also the social heart of the community, where information is disseminated and social bonds are strengthened.",
       "fullText": "I have been trading in this market since I was young. For us, the market is not just a place to make money. This is where we meet friends, exchange news, and share stories. If there is news about upcoming aid, or job vacancies, the information spreads quickly in the market. Even when there are unsettling issues, we can calm each other down here. The market is a social barometer. From the conversations in the market's coffee stalls, we can know what the community is feeling. Keeping the traditional market alive is the same as keeping the pulse of our community."
+    },
+    "siaga-si-kucing-cerdas": {
+      "title": "Siaga, the Smart Cat",
+      "summary": "A story for elementary school children about disaster preparedness, told through the adventure of a smart cat named Siaga who teaches his friends what to do during an earthquake.",
+      "fullText": "In a small village, lived a smart cat named Siaga. He was different from other cats. While his friends loved to nap all day, Siaga loved listening to stories from the village elders about earthquakes and tsunamis. One day, while Siaga was playing with his friends, the ground suddenly started to shake. 'Earthquake!' shouted Siaga. 'Remember the three steps: Drop, Cover, and Hold On!' Siaga immediately dropped to the ground, took cover under a sturdy table, and held on to its leg. His friends, who were initially scared and confused, saw what Siaga was doing and immediately followed suit. After the shaking stopped, Siaga calmly led his friends to an open field, away from buildings and tall trees. 'We have to go to a high place, just in case the sea water recedes,' he said, remembering the Smong story he had heard. Siaga's story teaches children that by knowing what to do, we don't need to panic when a disaster strikes. We can protect ourselves and our friends."
     }
   }
 }

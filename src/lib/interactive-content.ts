@@ -378,6 +378,39 @@ const pasarQuiz: Quiz = {
     ]
 };
 
+const kucingCerdasQuiz: Quiz = {
+  title: 'Kuis Kucing Cerdas',
+  description: 'Uji pemahamanmu tentang kesiapsiagaan bencana gempa bersama Siaga!',
+  questions: [
+      {
+          question:
+            'Apa tiga langkah yang diajarkan Siaga saat terjadi gempa?',
+          options: [
+            'Lari, berteriak, dan melompat',
+            'Merunduk, berlindung, dan bertahan',
+            'Berdiri, melihat, dan menunggu',
+            'Makan, minum, dan tidur',
+          ],
+          correctAnswer:
+            'Merunduk, berlindung, dan bertahan',
+          points: 10,
+        },
+        {
+          question:
+            'Ke mana Siaga mengajak teman-temannya setelah guncangan gempa berhenti?',
+          options: [
+            'Kembali ke dalam rumah',
+            'Ke pinggir pantai',
+            'Ke lapangan terbuka yang jauh dari bangunan',
+            'Naik ke atas pohon',
+          ],
+          correctAnswer:
+            'Ke lapangan terbuka yang jauh dari bangunan',
+          points: 10,
+        },
+  ]
+};
+
 export const masterQuiz: Quiz = {
     title: 'Kuis Pengetahuan Aceh',
     description: 'Uji wawasan Anda tentang kearifan lokal, kesiapsiagaan bencana, dan perdamaian di Aceh melalui pertanyaan-pertanyaan dari berbagai cerita.',
@@ -510,7 +543,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
           textColor: 'text-red-800 dark:text-red-200',
         },
         {
-          iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-handshake"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08v0c.82.82 2.13.82 2.94 0L12 11l2.96-2.96a2.17 2.17 0 0 1 3.08 0v0c.82.82.82 2.13 0 2.94L12 14"/></svg>`,
+          iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-handshake"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="m12 5-3 3 1.5 1.5L12 8l4.5 4.5L18 11l-3-3-3 3"/></svg>`,
           title: 'Gotong Royong',
           quote:
             '“Dalam kesulitan, kami saling membantu membangun kembali apa yang hilang.”',
@@ -1456,6 +1489,47 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
     },
     quiz: pasarQuiz,
   },
+  'siaga-si-kucing-cerdas': {
+    video: {
+      title: 'Video Animasi Akan Segera Hadir!',
+      description: 'Sebuah video animasi pendek yang mengajarkan anak-anak langkah-langkah penting saat terjadi gempa, bersama Siaga si kucing cerdas.',
+      embedUrl: '',
+      info: 'Video ini akan menggunakan visual yang ceria dan lagu yang mudah diingat untuk membantu anak-anak memahami konsep kesiapsiagaan bencana.',
+    },
+    comic: {
+      title: 'Komik Digital: Petualangan Siaga',
+      description: 'Ikuti petualangan Siaga dan teman-temannya belajar tentang gempa bumi.',
+      panels: [
+        {
+          iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cat"><path d="M12 5c.67 0 1.35.09 2 .26 1.78.47 3.34 1.45 4.5 2.94s1.45 3.34 2.94 4.5c.17.65.26 1.33.26 2 .03.78-.08 1.56-.29 2.28-.43 1.45-1.2 2.75-2.22 3.8-.9.9-2.02 1.6-3.23 2.1-1.32.5-2.8.6-4.25.5a10 10 0 0 1-5.02-1.42A10 10 0 0 1 3.5 18c-.85-1.1-1.42-2.5-1.42-5.02.1-1.45.5-2.92 1.25-4.25s1.6-2.33 2.75-3.23C7.4 4.2 8.82 3.5 10.5 3.12c.55-.1.98-.12 1.5-.12Z"/><path d="M9.5 7.5c.34-.34.78-.5 1.25-.5s.9.16 1.25.5c.33.34.5.78.5 1.25s-.17.9-.5 1.25c-.34.33-.78.5-1.25.5s-.91-.17-1.25-.5c-.33-.34-.5-.78-.5-1.25s.16-.91.5-1.25Z"/><path d="M15.5 7.5c.34-.34.78-.5 1.25-.5s.9.16 1.25.5c.33.34.5.78.5 1.25s-.17.9-.5 1.25c-.34.33-.78.5-1.25.5s-.91-.17-1.25-.5c-.33-.34-.5-.78-.5-1.25s.16-.91.5-1.25Z"/><path d="M17.63 14.5c.3.3.3.8 0 1.1-.3.3-.8.3-1.1 0l-1.4-1.4c-1-.9-2.6-.9-3.6 0l-1.4 1.4c-.3.3-.8.3-1.1 0-.3-.3-.3-.8 0-1.1l1.4-1.4c.5-.5 1.1-.7 1.8-.7s1.3.2 1.8.7l1.4 1.4Z"/></svg>`,
+          title: 'Siaga, si Kucing Cerdas',
+          quote: '“Siaga suka mendengarkan cerita dari tetua desa tentang bencana alam.”',
+          gradient: 'from-blue-200 to-blue-100 dark:from-blue-900/70 dark:to-blue-800/70',
+          textColor: 'text-blue-800 dark:text-blue-200',
+        },
+        {
+          iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-earth"><path d="M21.54 15H17a2 2 0 0 0-2 2v4.54"/><path d="M7 3.34V5a2 2 0 0 0 2 2h2.5"/><path d="M12 2a10 10 0 0 0-9.17 12.5A10 10 0 0 0 12 22a10 10 0 0 0 9.17-7.5A10 10 0 0 0 12 2Z"/></svg>`,
+          title: 'Tanah Bergoyang!',
+          quote: '“Tiba-tiba, tanah bergoyang! Teman-teman Siaga panik dan ketakutan.”',
+          gradient: 'from-red-200 to-red-100 dark:from-red-900/70 dark:to-red-800/70',
+          textColor: 'text-red-800 dark:text-red-200',
+        },
+        {
+          iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-half"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 22V2"/></svg>`,
+          title: 'Merunduk, Berlindung, Bertahan',
+          quote: '“Jangan lari! Merunduk di bawah meja, lindungi kepala, dan pegangan!” teriak Siaga.',
+          gradient: 'from-yellow-200 to-yellow-100 dark:from-yellow-900/70 dark:to-yellow-800/70',
+          textColor: 'text-yellow-800 dark:text-yellow-200',
+        },
+        {
+          iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-footprints"><path d="M4 16v-2.38c0-.9.68-1.78 1.58-2.05s1.93-.2 2.58.34l.64.54c.6.5 1.42.75 2.2.75s1.6-.25 2.2-.75l.64-.54c.65-.55 1.68-.62 2.58-.34s1.58 1.16 1.58 2.05V16"/><path d="M5.61 10.22c.9 0 1.7-.45 2.2-1.22s.5-1.7-.1-2.5c-.7-.9-1.8-1.3-2.9-1.1-1.1.2-1.8 1.2-1.8 2.3 0 .9.4 1.7 1.1 2.2s1.5.5 2 .5Z"/><path d="M18.39 10.22c-.9 0-1.7-.45-2.2-1.22s-.5-1.7.1-2.5c.7-.9 1.8-1.3 2.9-1.1 1.1.2 1.8 1.2 1.8 2.3 0 .9-.4 1.7-1.1 2.2s-1.5.5-2 .5Z"/></svg>`,
+          title: 'Menuju Tempat Aman',
+          quote: '“Setelah berhenti, ayo kita ke lapangan terbuka, jauh dari gedung!”',
+          gradient: 'from-green-200 to-green-100 dark:from-green-900/70 dark:to-green-800/70',
+          textColor: 'text-green-800 dark:text-green-200',
+        }
+      ]
+    },
+    quiz: kucingCerdasQuiz,
+  },
 };
-
-    

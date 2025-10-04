@@ -11,7 +11,7 @@ export const stories: Omit<Story, 'title' | 'summary' | 'fullText'>[] = [
     aiThemes: ['Local Wisdom', 'Disaster Preparedness'],
     media: {
       featuredImage:
-        'https://images.unsplash.com/photo-1525873020571-08690094e301?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxvY2VhbiUyMHdhdmVzfGVufDB8fHx8MTc1OTQxNzMyMHww&ixlib=rb-4.1.0&q=80&w=1080',
+        'https://images.unsplash.com/photo-1616141893496-fbc65370493e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3YXZlfGVufDB8fHx8MTc1OTUxNjQ3Mnww&ixlib=rb-4.1.0&q=80&w=1080',
       featuredImageHint: 'ocean waves',
     },
     status: 'published',
@@ -172,6 +172,17 @@ export const stories: Omit<Story, 'title' | 'summary' | 'fullText'>[] = [
     media: {
       featuredImage: 'https://picsum.photos/seed/16/800/600',
       featuredImageHint: 'traditional market',
+    },
+    status: 'published',
+  },
+  {
+    id: 'siaga-si-kucing-cerdas',
+    author: 'Kak Sarah, Relawan Pendidikan',
+    location: { name: 'Lhokseumawe', lat: 5.18, lng: 97.15 },
+    aiThemes: ['Disaster Preparedness', 'Local Wisdom'],
+    media: {
+      featuredImage: 'https://picsum.photos/seed/17/800/600',
+      featuredImageHint: 'child drawing',
     },
     status: 'published',
   },

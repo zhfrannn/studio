@@ -91,9 +91,8 @@
         "agree": "Cerita saya boleh digunakan untuk tujuan pendidikan."
       },
       "storyTypes": {
-        "tsunami": "Tsunami",
-        "recovery": "Pemulihan",
-        "peace": "Proses Perdamaian",
+        "disaster": "Kesiapsiagaan Bencana",
+        "peace": "Pembangunan Perdamaian",
         "wisdom": "Kearifan Lokal"
       },
       "submitButton": "Kirim via WhatsApp",
@@ -233,6 +232,11 @@
       "title": "Pasar Pagi: Lebih dari Sekadar Jual Beli",
       "summary": "Pasar tradisional bukan hanya tempat transaksi ekonomi, tetapi juga jantung sosial komunitas, tempat informasi disebarkan dan ikatan sosial diperkuat.",
       "fullText": "Saya sudah berdagang di pasar ini sejak muda. Bagi kami, pasar bukan hanya tempat mencari uang. Di sinilah kami bertemu teman, bertukar kabar, dan berbagi cerita. Jika ada kabar tentang akan ada bantuan, atau lowongan kerja, informasi itu menyebar cepat di pasar. Bahkan saat ada isu-isu yang meresahkan, kami bisa saling menenangkan di sini. Pasar adalah barometer sosial. Dari obrolan di warung kopi pasar, kita bisa tahu apa yang sedang dirasakan masyarakat. Menjaga pasar tradisional tetap hidup sama dengan menjaga denyut nadi komunitas kami."
+    },
+    "siaga-si-kucing-cerdas": {
+      "title": "Siaga, Si Kucing Cerdas",
+      "summary": "Sebuah cerita untuk anak-anak SD tentang kesiapsiagaan bencana, dikisahkan melalui petualangan seekor kucing pintar bernama Siaga yang mengajari teman-temannya apa yang harus dilakukan saat gempa.",
+      "fullText": "Di sebuah desa kecil, hiduplah seekor kucing cerdas bernama Siaga. Ia berbeda dari kucing lainnya. Saat teman-temannya suka tidur seharian, Siaga suka mendengarkan cerita dari para tetua desa tentang gempa dan tsunami. Suatu hari, saat Siaga sedang bermain bersama teman-temannya, tiba-tiba tanah bergoyang. 'Gempa!' teriak Siaga. 'Ingat tiga langkah: Merunduk, Berlindung, dan Bertahan!' Siaga langsung merunduk, berlindung di bawah meja yang kokoh, dan berpegangan pada kakinya. Teman-temannya yang awalnya takut dan bingung, melihat apa yang dilakukan Siaga dan langsung mengikutinya. Setelah guncangan berhenti, Siaga dengan tenang mengajak teman-temannya ke lapangan terbuka, jauh dari gedung dan pohon tinggi. 'Kita harus ke tempat tinggi, siapa tahu air laut surut,' katanya, mengingat cerita Smong yang pernah ia dengar. Kisah Siaga mengajarkan pada anak-anak bahwa dengan tahu apa yang harus dilakukan, kita tidak perlu panik saat bencana datang. Kita bisa melindungi diri sendiri dan teman-teman."
     }
   }
 }
