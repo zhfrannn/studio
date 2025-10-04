@@ -106,9 +106,8 @@ function ShareStorySection() {
   type FormValues = z.infer<typeof formSchema>;
 
   const storyTypes = [
-    { id: 'Tsunami', label: shareStoryDict.storyTypes.tsunami },
-    { id: 'Recovery', label: shareStoryDict.storyTypes.recovery },
-    { id: 'Peace Process', label: shareStoryDict.storyTypes.peace },
+    { id: 'Disaster Preparedness', label: shareStoryDict.storyTypes.disaster },
+    { id: 'Peacebuilding', label: shareStoryDict.storyTypes.peace },
     { id: 'Local Wisdom', label: shareStoryDict.storyTypes.wisdom },
   ];
   
@@ -468,7 +467,7 @@ export default function Home() {
       <section role="region" aria-labelledby="hero-title">
         <div className="hero-v2-card">
           <Image
-            src="https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://images.unsplash.com/photo-1616141893496-fbc65370493e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3YXZlfGVufDB8fHx8MTc1OTUxNjQ3Mnww&ixlib=rb-4.1.0&q=80&w=1080"
             alt="Abstract blue water pattern"
             fill
             className="object-cover opacity-70"
@@ -839,3 +838,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
