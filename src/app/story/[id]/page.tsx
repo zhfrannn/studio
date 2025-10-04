@@ -24,7 +24,7 @@ import {
 } from '@/lib/interactive-content';
 import DigitalComic from '@/components/digital-comic';
 import MotionWrapper from '@/components/motion-wrapper';
-import SplitText from '@/components/ui/split-text';
+import ScrollReveal from '@/components/ui/scroll-reveal';
 import { useLanguage } from '@/context/language-context';
 import type { Story } from '@/lib/types';
 import idDict from '@/lib/i18n/id.json';
@@ -168,9 +168,9 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
             <Card>
               <CardContent className="p-6">
                 <div className="prose prose-slate max-w-none dark:prose-invert">
-                    <p className="text-lg leading-relaxed text-foreground whitespace-pre-line">
-                      {story.fullText}
-                    </p>
+                  <ScrollReveal textClassName="text-lg leading-relaxed text-foreground whitespace-pre-line">
+                    {story.fullText}
+                  </ScrollReveal>
                 </div>
               </CardContent>
             </Card>
