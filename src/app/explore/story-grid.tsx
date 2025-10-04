@@ -139,7 +139,7 @@ export default function StoryGrid({ allStories }: StoryGridProps) {
           </AccordionTrigger>
           <AccordionContent className="border-t">
             <div className="h-[500px] w-full">
-              <InteractiveMap stories={allStories} />
+              <InteractiveMap stories={filteredStories} />
             </div>
           </AccordionContent>
         </AccordionItem>
