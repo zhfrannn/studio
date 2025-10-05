@@ -718,10 +718,11 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
   },
   'dapur-umum-perdamaian': {
     video: {
-      title: 'Video Edukasi Akan Segera Hadir!',
+      title: 'Video Edukasi: Memasak Perdamaian',
       description:
-        'Kami sedang mempersiapkan video edukasi yang menarik untuk cerita ini. Nantikan pembaruan dari kami!',
-      embedUrl: '',
+        'Saksikan bagaimana Dapur Umum di Bireuen menjadi ruang untuk merajut kembali persaudaraan pasca-konflik.',
+      embedUrl:
+        'https://www.canva.com/design/DAG058Re3lE/fIjzr5r35dMT83HRBGlMfw/watch?embed',
       info: 'Video dokumenter singkat ini akan meliput kegiatan sehari-hari di Dapur Umum Perdamaian di Bireuen dan wawancara dengan para inisiatornya.',
     },
     comic: {
@@ -1534,4 +1535,5 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
     quiz: kucingCerdasQuiz,
   },
 };
+
 
