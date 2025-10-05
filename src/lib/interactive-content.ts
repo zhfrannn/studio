@@ -789,11 +789,12 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
   },
   'lumbung-padi-komunal': {
     video: {
-      title: 'Video Edukasi Akan Segera Hadir!',
+      title: 'Video Edukasi: Lumbung Padi, Jaring Pengaman Sosial',
       description:
-        'Kami sedang mempersiapkan video edukasi yang menarik untuk cerita ini. Nantikan pembaruan dari kami!',
-      embedUrl: '',
-      info: 'Video ini akan menjelaskan cara kerja lumbung padi komunal sebagai jaring pengaman sosial yang efektif di tingkat masyarakat.',
+        'Pelajari bagaimana lumbung padi komunal menjadi fondasi ketahanan pangan dan gotong royong di Gayo.',
+      embedUrl:
+        'https://www.canva.com/design/DAG062E6zns/ZlMWr3u5a6HfVicIQx5qNQ/watch?embed',
+      info: 'Video ini menjelaskan cara kerja lumbung padi komunal sebagai jaring pengaman sosial yang efektif di tingkat masyarakat.',
     },
     comic: {
       title: 'Komik Digital: Butir-Butir Kebersamaan',
@@ -1535,5 +1536,6 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
     quiz: kucingCerdasQuiz,
   },
 };
+
 
 
