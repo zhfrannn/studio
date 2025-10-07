@@ -506,7 +506,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
     video: {
       title: 'Video Dokumenter: Dahsyatnya Bah Tangse 2011',
       description:
-        'Saksikan liputan berita nyata dari MetroTV mengenai banjir bandang yang menghancurkan Tangse, Pidie pada 10 Maret 2011.',
+        'Saksikan liputan berita nyata mengenai banjir bandang yang menghancurkan Tangse, Pidie pada 10 Maret 2011.',
       embedUrl: 'https://www.canva.com/design/DAG1Gsxv32g/oEZ8pFfT0nK2UZJACt_RWw/watch?embed',
       info: 'Video ini berisi rekaman aktual dari lokasi bencana dan wawancara dengan korban, memberikan gambaran nyata tentang dampak kerusakan akibat perambahan hutan.',
     },
@@ -575,11 +575,12 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
   },
   'kopi-gayo-aroma-perdamaian': {
     video: {
-      title: 'Video Edukasi Akan Segera Hadir!',
+      title: 'Video Edukasi: Kopi Gayo, Aroma Perdamaian',
       description:
-        'Kami sedang mempersiapkan video edukasi yang menarik untuk cerita ini. Nantikan pembaruan dari kami!',
-      embedUrl: '',
-      info: 'Video ini akan menampilkan wawancara dengan petani kopi Gayo yang menceritakan perjalanan mereka dari masa konflik hingga membangun kembali kehidupan melalui kebun kopi.',
+        'Saksikan kisah inspiratif para petani kopi Gayo yang bangkit dari keterpurukan pasca-konflik untuk membangun kembali kehidupan mereka.',
+      embedUrl:
+        'https://www.canva.com/design/DAG1HC5cT1A/5pCeQTue043ynhFySg1WcQ/watch?embed',
+      info: 'Video ini menampilkan wawancara dengan petani kopi Gayo yang menceritakan perjalanan mereka dari masa konflik hingga membangun kembali kehidupan melalui kebun kopi.',
     },
     comic: {
       title: 'Komik Digital: Secangkir Harapan',
@@ -1529,6 +1530,3 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
     quiz: kucingCerdasQuiz,
   },
 };
-
-    
-    
