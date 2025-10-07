@@ -970,7 +970,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
           textColor: 'text-green-800 dark:text-green-200',
         },
         {
-          iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-puzzle"><path d="M19.43 7.53A4.5 4.5 0 0 0 15 6a4.5 4.5 0 0 0-4.43 1.53L10.5 8h.01l.01.01.01.01.01.01h.01l.01.01.01.01h.01l.01.01.01.01h.01l.01.01.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01L12 9.5l.47.47.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01A4.5 4.5 0 0 0 15 18a4.5 4.5 0 0 0 4.43-1.53l.07-.07A4.5 4.5 0 0 0 21 12a4.5 4.5 0 0 0-1.53-3.43l-.07-.07A4.5 4.5 0 0 0 18 6a4.5 4.5 0 0 0-3.43 1.53l-.07.07A4.5 4.5 0 0 0 12 9a4.5 4.5 0 0 0-1.53 3.43l.07.07a4.5 4.5 0 0 0 1.46.93h.01Z"/><path d="M6 15a4.5 4.5 0 0 0 1.53 3.43l.07.07A4.5 4.5 0 0 0 9 21a4.5 4.5 0 0 0 3.43-1.53l.07-.07A4.5 4.5 0 0 0 15 18a4.5 4.5 0 0 0-1.53-3.43l-.07-.07A4.5 4.5 0 0 0 9 12a4.5 4.5 0 0 0-3.43 1.53l-.07.07A4.5 4.5 0 0 0 3 18a4.5 4.5 0 0 0 1.53 3.43l.07.07A4.5 4.5 0 0 0 6 21a4.5 4.5 0 0 0 3.43-1.53l.07-.07A4.5 4.5 0 0 0 12 18a4.5 4.5 0 0 0-1.53-3.43l-.07-.07A4.5 4.5 0 0 0 6 12a4.5 4.5 0 0 0-3.43 1.53L2.5 13.53A4.5 4.5 0 0 1 6 9a4.5 4.5 0 0 1 3.43 1.53l.07.07A4.5 4.5 0 0 1 12 12a4.5 4.5 0 0 1 1.53-3.43l-.07-.07A4.5 4.5 0 0 1 9 6a4.5 4.5 0 0 1-3.43-1.53l-.07.07A4.5 4.5 0 0 1 3 6a4.5 4.5 0 0 1 1.53-3.43l.07.07A4.5 4.5 0 0 1 6 3a4.5 4.5 0 0 1 3.43 1.53l.07.07A4.5 4.5 0 0 1 12 6a4.5 4.5 0 0 1 1.53-3.43L12.5 1.5A4.5 4.5 0 0 0 9 3a4.5 4.5 0 0 0-3.43 1.53L5.5 4.57A4.5 4.5 0 0 0 3 9a4.5 4.5 0 0 0 1.53 3.43l.07.07A4.5 4.5 0 0 0 6 15Z"/></svg>`,
+          iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-puzzle"><path d="M19.43 7.53A4.5 4.5 0 0 0 15 6a4.5 4.5 0 0 0-4.43 1.53L10.5 8h.01l.01.01.01.01.01.01h.01l.01.01.01.01h.01l.01.01.01.01h.01l.01.01.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01L12 9.5l.47.47.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01A4.5 4.5 0 0 0 15 18a4.5 4.5 0 0 0 4.43-1.53l.07-.07A4.5 4.5 0 0 0 21 12a4.5 4.5 0 0 0-1.53-3.43l-.07-.07A4.5 4.5 0 0 0 18 6a4.5 4.5 0 0 0-3.43 1.53l-.07.07A4.5 4.5 0 0 0 12 9a4.5 4.5 0 0 0-1.53 3.43l.07.07a4.5 4.5 0 0 0 1.46.93h.01Z"/><path d="M6 15a4.5 4.5 0 0 0 1.53 3.43l.07.07A4.5 4.5 0 0 0 9 21a4.5 4.5 0 0 0 3.43-1.53l.07-.07A4.5 4.5 0 0 0 15 18a4.5 4.5 0 0 0-1.53-3.43l-.07-.07A4.5 4.5 0 0 0 9 12a4.5 4.5 0 0 0-3.43 1.53l-.07.07A4.5 4.5 0 0 0 3 18a4.5 4.5 0 0 0 1.53 3.43l.07.07A4.5 4.5 0 0 0 6 21a4.5 4.5 0 0 0 3.43-1.53l.07-.07A4.5 4.5 0 0 0 12 18a4.5 4.5 0 0 0-1.53-3.43l-.07-.07A4.5 4.5 0 0 0 6 12a4.5 4.5 0 0 0-3.43 1.53L2.5 13.53A4.5 4.5 0 0 1 6 9a4.5 4.5 0 0 1 3.43 1.53l.07.07A4.5 4.5 0 0 1 12 12a4.5 4.5 0 0 1 1.53-3.43l-.07-.07A4.5 4.5 0 0 1 9 6a4.5 4.5 0 0 1-3.43-1.53l-.07.07A4.5 4.5 0 0 1 3 6a4.5 4.5 0 0 1 1.53-3.43l.07.07A4.5 4.5 0 0 1 6 3a4.5 4.5 0 0 1 3.43 1.53l.07.07A4.5 4.5 0 0 1 12 6a4.5 4.5 0 0 1 1.53-3.43L12.5 1.5A4.5 4.5 0 0 0 9 3a4.5 4.5 0 0 0-3.43 1.53L5.5 4.57A4.5 4.5 0 0 0 3 9a4.5 4.5 0 0 0 1.53 3.43l.07.07A4.5 4.5 0 0 0 6 15Z"/></svg>`,
           title: 'Ruang Aman',
           quote:
             '“Sanggar menjadi ruang aman bagi pemuda untuk berekspresi secara positif dan kreatif.”',
@@ -1518,4 +1518,16 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
           textColor: 'text-red-800 dark:text-red-200',
         },
         {
-          iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0
+          iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-alert"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>`,
+          title: 'Merunduk, Berlindung, Bertahan!',
+          quote: '“Jangan panik! Merunduk, berlindung di bawah meja, dan bertahan!” kata Siaga.”',
+          gradient: 'from-yellow-200 to-yellow-100 dark:from-yellow-900/70 dark:to-yellow-800/70',
+          textColor: 'text-yellow-800 dark:text-yellow-200',
+        },
+      ],
+    },
+    quiz: kucingCerdasQuiz,
+  },
+};
+
+    
