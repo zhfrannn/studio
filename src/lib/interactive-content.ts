@@ -507,7 +507,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
       title: 'Video Dokumenter: Dahsyatnya Bah Tangse 2011',
       description:
         'Saksikan liputan berita nyata dari MetroTV mengenai banjir bandang yang menghancurkan Tangse, Pidie pada 10 Maret 2011.',
-      embedUrl: 'https://www.youtube.com/embed/p1uN_I4zWKE?si=N-zllu-z3Xk3hY0h',
+      embedUrl: 'https://www.canva.com/design/DAG1Gsxv32g/oEZ8pFfT0nK2UZJACt_RWw/watch?embed',
       info: 'Video ini berisi rekaman aktual dari lokasi bencana dan wawancara dengan korban, memberikan gambaran nyata tentang dampak kerusakan akibat perambahan hutan.',
     },
     comic: {
@@ -1518,24 +1518,4 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
           textColor: 'text-red-800 dark:text-red-200',
         },
         {
-          iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-half"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 22V2"/></svg>`,
-          title: 'Merunduk, Berlindung, Bertahan',
-          quote: '“Jangan lari! Merunduk di bawah meja, lindungi kepala, dan pegangan!” teriak Siaga.',
-          gradient: 'from-yellow-200 to-yellow-100 dark:from-yellow-900/70 dark:to-yellow-800/70',
-          textColor: 'text-yellow-800 dark:text-yellow-200',
-        },
-        {
-          iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-footprints"><path d="M4 16v-2.38c0-.9.68-1.78 1.58-2.05s1.93-.2 2.58.34l.64.54c.6.5 1.42.75 2.2.75s1.6-.25 2.2-.75l.64-.54c.65-.55 1.68-.62 2.58-.34s1.58 1.16 1.58 2.05V16"/><path d="M5.61 10.22c.9 0 1.7-.45 2.2-1.22s.5-1.7-.1-2.5c-.7-.9-1.8-1.3-2.9-1.1-1.1.2-1.8 1.2-1.8 2.3 0 .9.4 1.7 1.1 2.2s1.5.5 2 .5Z"/><path d="M18.39 10.22c-.9 0-1.7-.45-2.2-1.22s-.5-1.7.1-2.5c.7-.9 1.8-1.3 2.9-1.1 1.1.2 1.8 1.2 1.8 2.3 0 .9-.4 1.7-1.1 2.2s-1.5.5-2 .5Z"/></svg>`,
-          title: 'Menuju Tempat Aman',
-          quote: '“Setelah berhenti, ayo kita ke lapangan terbuka, jauh dari gedung!”',
-          gradient: 'from-green-200 to-green-100 dark:from-green-900/70 dark:to-green-800/70',
-          textColor: 'text-green-800 dark:text-green-200',
-        }
-      ]
-    },
-    quiz: kucingCerdasQuiz,
-  },
-};
-
-
-
+          iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0
