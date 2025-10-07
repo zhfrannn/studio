@@ -860,10 +860,10 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
   },
   'api-di-bukit-barisan': {
     video: {
-      title: 'Video Edukasi Akan Segera Hadir!',
+      title: 'Video Edukasi: Masyarakat Peduli Api',
       description:
-        'Kami sedang mempersiapkan video edukasi yang menarik untuk cerita ini. Nantikan pembaruan dari kami!',
-      embedUrl: '',
+        'Lihat bagaimana Masyarakat Peduli Api berjuang melindungi hutan dari kebakaran.',
+      embedUrl: 'https://www.canva.com/design/DAG1GsSgV9M/ju7Vt8gVq1yDMj2-4DKklg/watch?embed',
       info: 'Video ini akan menyoroti pentingnya pencegahan dan peran aktif masyarakat dalam mitigasi bencana kebakaran hutan.',
     },
     comic: {
@@ -970,7 +970,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
           textColor: 'text-green-800 dark:text-green-200',
         },
         {
-          iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-puzzle"><path d="M19.43 7.53A4.5 4.5 0 0 0 15 6a4.5 4.5 0 0 0-4.43 1.53L10.5 8h.01l.01.01.01.01.01.01h.01l.01.01.01.01h.01l.01.01.01.01h.01l.01.01.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01L12 9.5l.47.47.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01A4.5 4.5 0 0 0 15 18a4.5 4.5 0 0 0 4.43-1.53l.07-.07A4.5 4.5 0 0 0 21 12a4.5 4.5 0 0 0-1.53-3.43l-.07-.07A4.5 4.5 0 0 0 18 6a4.5 4.5 0 0 0-3.43 1.53l-.07.07A4.5 4.5 0 0 0 12 9a4.5 4.5 0 0 0-1.53 3.43l.07.07a4.5 4.5 0 0 0 1.46.93h.01Z"/><path d="M6 15a4.5 4.5 0 0 0 1.53 3.43l.07.07A4.5 4.5 0 0 0 9 21a4.5 4.5 0 0 0 3.43-1.53l.07-.07A4.5 4.5 0 0 0 15 18a4.5 4.5 0 0 0-1.53-3.43l-.07-.07A4.5 4.5 0 0 0 9 12a4.5 4.5 0 0 0-3.43 1.53l-.07.07A4.5 4.5 0 0 0 3 18a4.5 4.5 0 0 0 1.53 3.43l.07.07A4.5 4.5 0 0 0 6 21a4.5 4.5 0 0 0 3.43-1.53l.07-.07A4.5 4.5 0 0 0 12 18a4.5 4.5 0 0 0-1.53-3.43l-.07-.07A4.5 4.5 0 0 0 6 12a4.5 4.5 0 0 0-3.43 1.53L2.5 13.53A4.5 4.5 0 0 1 6 9a4.5 4.5 0 0 1 3.43 1.53l.07.07A4.5 4.5 0 0 1 12 12a4.5 4.5 0 0 1 1.53-3.43l-.07-.07A4.5 4.5 0 0 1 9 6a4.5 4.5 0 0 1-3.43-1.53l-.07.07A4.5 4.5 0 0 1 3 6a4.5 4.5 0 0 1 1.53-3.43l.07.07A4.5 4.5 0 0 1 6 3a4.5 4.5 0 0 1 3.43 1.53l.07.07A4.5 4.5 0 0 1 12 6a4.5 4.5 0 0 1 1.53-3.43L12.5 1.5A4.5 4.5 0 0 0 9 3a4.5 4.5 0 0 0-3.43 1.53L5.5 4.57A4.5 4.5 0 0 0 3 9a4.5 4.5 0 0 0 1.53 3.43l.07.07A4.5 4.5 0 0 0 6 15Z"/></svg>`,
+          iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-puzzle"><path d="M19.43 7.53A4.5 4.5 0 0 0 15 6a4.5 4.5 0 0 0-4.43 1.53L10.5 8h.01l.01.01.01.01.01.01h.01l.01.01.01.01h.01l.01.01.01.01h.01l.01.01.01.01h.01l.01.01h.01l.01.01h.01l.01.01L12 9.5l.47.47.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01l.01.01h.01A4.5 4.5 0 0 0 15 18a4.5 4.5 0 0 0 4.43-1.53l.07-.07A4.5 4.5 0 0 0 21 12a4.5 4.5 0 0 0-1.53-3.43l-.07-.07A4.5 4.5 0 0 0 18 6a4.5 4.5 0 0 0-3.43 1.53l-.07.07A4.5 4.5 0 0 0 12 9a4.5 4.5 0 0 0-1.53 3.43l.07.07a4.5 4.5 0 0 0 1.46.93h.01Z"/><path d="M6 15a4.5 4.5 0 0 0 1.53 3.43l.07.07A4.5 4.5 0 0 0 9 21a4.5 4.5 0 0 0 3.43-1.53l.07-.07A4.5 4.5 0 0 0 15 18a4.5 4.5 0 0 0-1.53-3.43l-.07-.07A4.5 4.5 0 0 0 9 12a4.5 4.5 0 0 0-3.43 1.53l-.07.07A4.5 4.5 0 0 0 3 18a4.5 4.5 0 0 0 1.53 3.43l.07.07A4.5 4.5 0 0 0 6 21a4.5 4.5 0 0 0 3.43-1.53l.07-.07A4.5 4.5 0 0 0 12 18a4.5 4.5 0 0 0-1.53-3.43l-.07-.07A4.5 4.5 0 0 0 6 12a4.5 4.5 0 0 0-3.43 1.53L2.5 13.53A4.5 4.5 0 0 1 6 9a4.5 4.5 0 0 1 3.43 1.53l.07.07A4.5 4.5 0 0 1 12 12a4.5 4.5 0 0 1 1.53-3.43l-.07-.07A4.5 4.5 0 0 1 9 6a4.5 4.5 0 0 1-3.43-1.53l-.07.07A4.5 4.5 0 0 1 3 6a4.5 4.5 0 0 1 1.53-3.43l.07.07A4.5 4.5 0 0 1 6 3a4.5 4.5 0 0 1 3.43 1.53l.07.07A4.5 4.5 0 0 1 12 6a4.5 4.5 0 0 1 1.53-3.43L12.5 1.5A4.5 4.5 0 0 0 9 3a4.5 4.5 0 0 0-3.43 1.53L5.5 4.57A4.5 4.5 0 0 0 3 9a4.5 4.5 0 0 0 1.53 3.43l.07.07A4.5 4.5 0 0 0 6 15Z"/></svg>`,
           title: 'Ruang Aman',
           quote:
             '“Sanggar menjadi ruang aman bagi pemuda untuk berekspresi secara positif dan kreatif.”',
@@ -1530,4 +1530,5 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
   },
 };
 
+    
     
