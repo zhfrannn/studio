@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -18,6 +19,7 @@ const MAPBOX_TOKEN = process.env.NEXT_PUBLIC_MAPBOX_API_KEY;
 export default function InteractiveMap({ stories }: InteractiveMapProps) {
   const [selectedStory, setSelectedStory] = useState<Story | null>(null);
   const { dictionary } = useLanguage();
+  const [fog, setFog] = useState({});
 
   const [viewState, setViewState] = useState({
     latitude: 4.695135,
@@ -26,6 +28,22 @@ export default function InteractiveMap({ stories }: InteractiveMapProps) {
     pitch: 50,
     bearing: -15,
   });
+
+  useEffect(() => {
+    // We need to get the computed style of the background color
+    // because Mapbox fog doesn't understand CSS variables.
+    // This needs to run on the client after the component has mounted.
+    const backgroundColor = getComputedStyle(document.body).getPropertyValue(
+      '--background'
+    );
+    if (backgroundColor) {
+      setFog({
+        range: [0.8, 8],
+        color: `hsl(${backgroundColor.trim()})`,
+        'horizon-blend': 0.1,
+      });
+    }
+  }, []);
 
   // GSAP animation for smooth transition
   useEffect(() => {
@@ -54,11 +72,7 @@ export default function InteractiveMap({ stories }: InteractiveMapProps) {
         mapboxAccessToken={MAPBOX_TOKEN}
         mapStyle="mapbox://styles/mapbox/standard"
         style={{ width: '100%', height: '100%' }}
-        fog={{
-            'range': [0.8, 8],
-            'color': 'hsl(var(--background))',
-            'horizon-blend': 0.1
-        }}
+        fog={fog}
         terrain={{source: 'mapbox-dem', exaggeration: 1.5}}
       >
         <NavigationControl position="top-right" />
