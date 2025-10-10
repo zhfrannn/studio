@@ -18,7 +18,7 @@ const Header = () => {
 
   const navLinks = [
     { href: '/', label: dictionary.header.home },
-    { href: '/explore', label: dictionary.header.explore },
+    { href: '/explore', label: dictionary.header.stories },
     { href: '/interactive', label: dictionary.header.interactive },
     { href: '/eduboard', label: dictionary.header.eduboard },
     { href: '/wave-of-school', label: 'Wave of School', isSpecial: true },
