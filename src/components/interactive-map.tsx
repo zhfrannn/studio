@@ -50,7 +50,7 @@ export default function InteractiveMap({ stories }: InteractiveMapProps) {
   // GSAP animation for smooth transition
   useEffect(() => {
     const { gsap } = require('gsap');
-    if (selectedStory) {
+    if (selectedStory && selectedStory.location) {
       gsap.to(viewState, {
         duration: 2,
         latitude: selectedStory.location.lat,
@@ -78,26 +78,28 @@ export default function InteractiveMap({ stories }: InteractiveMapProps) {
         terrain={{source: 'mapbox-dem', exaggeration: 1.5}}
       >
         <NavigationControl position="top-right" />
-        {stories.map(story => (
-          <Marker
-            key={story.id}
-            latitude={story.location.lat}
-            longitude={story.location.lng}
-            onClick={e => {
-              e.originalEvent.stopPropagation();
-              setSelectedStory(story);
-            }}
-          >
-            <button
-              aria-label={`View story: ${story.title}`}
-              className="transform transition-transform duration-200 hover:scale-125"
+        {stories.map(story =>
+          story.location ? (
+            <Marker
+              key={story.id}
+              latitude={story.location.lat}
+              longitude={story.location.lng}
+              onClick={e => {
+                e.originalEvent.stopPropagation();
+                setSelectedStory(story);
+              }}
             >
-              <MapPin className="h-8 w-8 fill-red-600 text-white drop-shadow-lg" />
-            </button>
-          </Marker>
-        ))}
+              <button
+                aria-label={`View story: ${story.title}`}
+                className="transform transition-transform duration-200 hover:scale-125"
+              >
+                <MapPin className="h-8 w-8 fill-red-600 text-white drop-shadow-lg" />
+              </button>
+            </Marker>
+          ) : null
+        )}
 
-        {selectedStory && (
+        {selectedStory && selectedStory.location && (
           <Popup
             latitude={selectedStory.location.lat}
             longitude={selectedStory.location.lng}
