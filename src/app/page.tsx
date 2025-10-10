@@ -71,7 +71,7 @@ import useEmblaCarousel, {
   type EmblaCarouselType,
   type EmblaOptionsType,
 } from 'embla-carousel-react';
-import { askSiagaBot, AskSiagaBotOutput } from '@/ai/flows/ask-siaga-bot';
+import { generateStoryRecommendation, GenerateStoryRecommendationOutput } from '@/ai/flows/generate-story-recommendation';
 
 function ShareStorySection() {
   const { dictionary, language } = useLanguage();
@@ -121,10 +121,12 @@ function ShareStorySection() {
     },
   });
 
+  type StoryRecommendation = NonNullable<GenerateStoryRecommendationOutput['recommendedStory']>;
+
   type Message = {
     role: 'user' | 'bot';
     text: string;
-    storySuggestion?: AskSiagaBotOutput['storySuggestion'];
+    recommendedStory?: StoryRecommendation;
   };
 
   const [messages, setMessages] = useState<Message[]>([
@@ -160,11 +162,11 @@ ${story}`;
     setIsLoading(true);
 
     try {
-      const result = await askSiagaBot({ query: input, language });
+      const result = await generateStoryRecommendation({ query: input, language });
       const botMessage: Message = {
         role: 'bot',
         text: result.response,
-        storySuggestion: result.storySuggestion,
+        recommendedStory: result.recommendedStory,
       };
       setMessages(prev => [...prev, botMessage]);
     } catch (error) {
@@ -415,7 +417,7 @@ ${story}`;
                           )}
                         >
                           <p className="whitespace-pre-wrap">{message.text}</p>
-                          {message.storySuggestion && (
+                          {message.recommendedStory && (
                             <Button
                               asChild
                               variant="secondary"
@@ -423,11 +425,11 @@ ${story}`;
                               className="mt-3 w-full"
                             >
                               <Link
-                                href={`/story/${message.storySuggestion.id}`}
+                                href={`/story/${message.recommendedStory.id}`}
                               >
                                 <BookOpen className="mr-2 h-4 w-4" />
                                 {shareStoryDict.aiHelper.readStory}:{' '}
-                                {message.storySuggestion.title}
+                                {message.recommendedStory.title}
                               </Link>
                             </Button>
                           )}

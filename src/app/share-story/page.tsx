@@ -34,25 +34,29 @@ import {
   Loader2,
   BookOpen,
 } from 'lucide-react';
-import { stories as staticStories } from '@/lib/data';
+import { getTranslatedStories } from '@/lib/data';
 import MotionWrapper from '@/components/motion-wrapper';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { askSiagaBot, AskSiagaBotOutput } from '@/ai/flows/ask-siaga-bot';
+import { generateStoryRecommendation, GenerateStoryRecommendationOutput } from '@/ai/flows/generate-story-recommendation';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { useLanguage } from '@/context/language-context';
+
+type StoryRecommendation = NonNullable<GenerateStoryRecommendationOutput['recommendedStory']>;
 
 // Tipe untuk pesan chatbot
 type Message = {
   role: 'user' | 'bot';
   text: string;
-  storySuggestion?: AskSiagaBotOutput['storySuggestion'];
+  recommendedStory?: StoryRecommendation;
 };
 
 // Komponen utama halaman
 export default function ShareStoryPage() {
   const { dictionary, language } = useLanguage();
   const shareStoryDict = dictionary.home.shareStory;
+
+  const allStories = getTranslatedStories({ lang: language });
 
   const formSchema = z.object({
     name: z.string().optional(),
@@ -74,13 +78,12 @@ export default function ShareStoryPage() {
   type FormValues = z.infer<typeof formSchema>;
   
   const storyTypes = [
-    { id: 'Tsunami', label: shareStoryDict.storyTypes.tsunami },
-    { id: 'Recovery', label: shareStoryDict.storyTypes.recovery },
-    { id: 'Peace Process', label: shareStoryDict.storyTypes.peace },
+    { id: 'Disaster Preparedness', label: shareStoryDict.storyTypes.disaster },
+    { id: 'Peacebuilding', label: shareStoryDict.storyTypes.peace },
     { id: 'Local Wisdom', label: shareStoryDict.storyTypes.wisdom },
   ];
   
-  const locations = [...new Set(staticStories.filter(s => s.location).map(s => s.location!.name))];
+  const locations = [...new Set(allStories.map(s => s.location?.name).filter(Boolean))];
   
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -126,11 +129,11 @@ ${story}`;
     setIsLoading(true);
 
     try {
-      const result = await askSiagaBot({ query: input, language });
+      const result = await generateStoryRecommendation({ query: input, language });
       const botMessage: Message = {
         role: 'bot',
         text: result.response,
-        storySuggestion: result.storySuggestion,
+        recommendedStory: result.recommendedStory,
       };
       setMessages(prev => [...prev, botMessage]);
     } catch (error) {
@@ -361,13 +364,13 @@ ${story}`;
                           )}
                         >
                           <p className="whitespace-pre-wrap">{message.text}</p>
-                          {message.storySuggestion && (
+                          {message.recommendedStory && (
                             <Button asChild variant="secondary" size="sm" className="mt-3 w-full">
                               <Link
-                                href={`/story/${message.storySuggestion.id}`}
+                                href={`/story/${message.recommendedStory.id}`}
                               >
                                 <BookOpen className="mr-2 h-4 w-4"/>
-                                {shareStoryDict.aiHelper.readStory}: {message.storySuggestion.title}
+                                {shareStoryDict.aiHelper.readStory}: {message.recommendedStory.title}
                               </Link>
                              </Button>
                           )}

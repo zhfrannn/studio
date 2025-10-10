@@ -1,18 +1,18 @@
 
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Plus,
   X,
-  MessageCircle,
   Share2,
   BookOpen,
   Bot,
   Send,
   User,
   Loader2,
+  Sparkles,
 } from 'lucide-react';
 import { Button } from './ui/button';
 import Link from 'next/link';
@@ -26,15 +26,20 @@ import {
 } from './ui/card';
 import { Input } from './ui/input';
 import { ScrollArea } from './ui/scroll-area';
-import { askSiagaBot, AskSiagaBotOutput } from '@/ai/flows/ask-siaga-bot';
+import {
+  generateStoryRecommendation,
+  GenerateStoryRecommendationOutput,
+} from '@/ai/flows/generate-story-recommendation';
 import { cn } from '@/lib/utils';
-import MotionWrapper from './motion-wrapper';
 import { useLanguage } from '@/context/language-context';
+import Image from 'next/image';
+
+type StoryRecommendation = NonNullable<GenerateStoryRecommendationOutput['recommendedStory']>;
 
 type Message = {
   role: 'user' | 'bot';
   text: string;
-  storySuggestion?: AskSiagaBotOutput['storySuggestion'];
+  recommendedStory?: StoryRecommendation;
 };
 
 export default function ChatbotFab() {
@@ -44,8 +49,10 @@ export default function ChatbotFab() {
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const { dictionary, language } = useLanguage();
+  const scrollAreaRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = () => setIsOpen(!isOpen);
+
   const openChat = () => {
     setIsOpen(false);
     setIsChatOpen(true);
@@ -58,6 +65,7 @@ export default function ChatbotFab() {
       ]);
     }
   };
+
   const closeChat = () => setIsChatOpen(false);
 
   const handleSend = async () => {
@@ -69,14 +77,15 @@ export default function ChatbotFab() {
     setIsLoading(true);
 
     try {
-      const result = await askSiagaBot({ query: input, language });
+      const result = await generateStoryRecommendation({ query: input, language });
       const botMessage: Message = {
         role: 'bot',
         text: result.response,
-        storySuggestion: result.storySuggestion,
+        recommendedStory: result.recommendedStory,
       };
       setMessages(prev => [...prev, botMessage]);
     } catch (error) {
+      console.error("Chatbot error:", error);
       const errorMessage: Message = {
         role: 'bot',
         text: dictionary.chatbot.errorMessage,
@@ -86,6 +95,17 @@ export default function ChatbotFab() {
       setIsLoading(false);
     }
   };
+  
+  useEffect(() => {
+    // Auto-scroll to bottom
+    if (scrollAreaRef.current) {
+        const viewport = scrollAreaRef.current.querySelector('div');
+        if (viewport) {
+            viewport.scrollTop = viewport.scrollHeight;
+        }
+    }
+  }, [messages]);
+
 
   return (
     <>
@@ -156,7 +176,9 @@ export default function ChatbotFab() {
             <Card className="flex h-[70vh] w-[90vw] flex-col shadow-2xl sm:w-[400px]">
               <CardHeader className="flex flex-row items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <Bot className="h-8 w-8 text-primary" />
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
+                    <Sparkles className="h-6 w-6 text-primary" />
+                  </div>
                   <div>
                     <CardTitle>{dictionary.chatbot.title}</CardTitle>
                     <CardDescription>{dictionary.chatbot.description}</CardDescription>
@@ -167,13 +189,13 @@ export default function ChatbotFab() {
                 </Button>
               </CardHeader>
               <CardContent className="flex-grow overflow-hidden">
-                <ScrollArea className="h-full pr-4">
+                <ScrollArea className="h-full pr-4" ref={scrollAreaRef}>
                   <div className="space-y-4">
                     {messages.map((message, index) => (
                       <div
                         key={index}
                         className={cn(
-                          'flex items-start gap-3',
+                          'flex items-end gap-3',
                           message.role === 'user'
                             ? 'flex-row-reverse'
                             : 'flex-row'
@@ -195,40 +217,29 @@ export default function ChatbotFab() {
                         </span>
                         <div
                           className={cn(
-                            'max-w-[80%] rounded-lg p-3 text-sm',
+                            'max-w-[85%] rounded-lg p-3 text-sm',
                             message.role === 'user'
                               ? 'bg-primary text-primary-foreground'
                               : 'bg-muted'
                           )}
                         >
                           <p className="whitespace-pre-wrap">{message.text}</p>
-                          {message.storySuggestion && (
-                            <Card className="mt-3">
-                              <CardHeader className="p-3">
-                                <CardDescription>
-                                  {dictionary.chatbot.relatedStory}
-                                </CardDescription>
-                                <CardTitle className="text-base">
-                                  <Link
-                                    href={`/story/${message.storySuggestion.id}`}
-                                    className="hover:underline"
-                                    onClick={() => setIsChatOpen(false)}
-                                  >
-                                    {message.storySuggestion.title}
-                                  </Link>
-                                </CardTitle>
-                              </CardHeader>
-                            </Card>
+                          {message.recommendedStory && (
+                            <Link href={`/story/${message.recommendedStory.id}`} onClick={closeChat} className="mt-3 block rounded-lg bg-background/50 p-3 hover:bg-background/70">
+                                <p className="text-xs font-semibold text-primary">{dictionary.chatbot.relatedStory}</p>
+                                <p className="font-bold">{message.recommendedStory.title}</p>
+                                <p className="mt-1 text-xs opacity-80 line-clamp-2">{message.recommendedStory.summary}</p>
+                            </Link>
                           )}
                         </div>
                       </div>
                     ))}
                     {isLoading && (
-                      <div className="flex flex-row items-start gap-3">
+                      <div className="flex flex-row items-end gap-3">
                          <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-muted">
                             <Bot size={16} />
                         </span>
-                        <div className="max-w-[80%] rounded-lg bg-muted p-3 text-sm">
+                        <div className="max-w-[85%] rounded-lg bg-muted p-3 text-sm">
                            <Loader2 className="h-5 w-5 animate-spin" />
                         </div>
                       </div>
