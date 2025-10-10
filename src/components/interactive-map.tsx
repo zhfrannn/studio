@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Map, { Marker, Popup, NavigationControl } from 'react-map-gl';
+import Map, { Marker, Popup, NavigationControl, FlyToInterpolator } from 'react-map-gl';
 import type { Story } from '@/lib/types';
 import { MapPin } from 'lucide-react';
 import Link from 'next/link';
@@ -10,6 +10,7 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { useLanguage } from '@/context/language-context';
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
+import type { ViewState } from 'react-map-gl';
 
 interface InteractiveMapProps {
   stories: Story[];
@@ -22,7 +23,7 @@ export default function InteractiveMap({ stories }: InteractiveMapProps) {
   const { dictionary } = useLanguage();
   const [fog, setFog] = useState({});
 
-  const [viewState, setViewState] = useState({
+  const [viewState, setViewState] = useState<Partial<ViewState>>({
     latitude: 4.695135,
     longitude: 96.749399,
     zoom: 7.5,
@@ -31,15 +32,11 @@ export default function InteractiveMap({ stories }: InteractiveMapProps) {
   });
 
   useEffect(() => {
-    // We need to get the computed style of the background color
-    // because Mapbox fog doesn't understand CSS variables or space-separated HSL values.
-    // This needs to run on the client after the component has mounted.
     if (typeof window !== 'undefined') {
         const backgroundColorValue = getComputedStyle(document.body).getPropertyValue(
           '--background'
         );
         if (backgroundColorValue) {
-          // Convert space-separated HSL "210 40% 98%" to comma-separated "hsl(210, 40%, 98%)"
           const formattedColor = `hsl(${backgroundColorValue.trim().replace(/ /g, ', ')})`;
           setFog({
             range: [0.8, 8],
@@ -50,24 +47,20 @@ export default function InteractiveMap({ stories }: InteractiveMapProps) {
     }
   }, []);
 
-  // GSAP animation for smooth transition
   useEffect(() => {
-    const { gsap } = require('gsap');
     if (selectedStory && selectedStory.location) {
-      gsap.to(viewState, {
-        duration: 2,
+      setViewState(vs => ({
+        ...vs,
         latitude: selectedStory.location.lat,
         longitude: selectedStory.location.lng,
         zoom: 12,
         pitch: 60,
         bearing: 0,
-        onUpdate: () => {
-          setViewState({ ...viewState });
-        },
-        ease: 'power3.inOut',
-      });
+        transitionDuration: 2000,
+        transitionInterpolator: new FlyToInterpolator(),
+      }));
     }
-  }, [selectedStory, viewState]);
+  }, [selectedStory]);
 
   return (
     <div className="relative h-full min-h-[300px] w-full lg:min-h-[400px]">
