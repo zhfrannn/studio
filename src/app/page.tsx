@@ -178,10 +178,10 @@ const StackedStoryCard = ({
 
 
 function ShareStorySection() {
-  const { dictionary } = useLanguage();
+  const { dictionary, language } = useLanguage();
   const shareStoryDict = dictionary.home.shareStory;
 
-  const allStories = getTranslatedStories({ lang: useLanguage().language });
+  const allStories = getTranslatedStories({ lang: language });
   const locations = [
     ...new Set(allStories.map(s => s.location?.name).filter(Boolean)),
   ] as string[];
