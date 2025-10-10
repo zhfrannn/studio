@@ -20,6 +20,7 @@ const Header = () => {
     { href: '/explore', label: dictionary.header.explore },
     { href: '/interactive', label: dictionary.header.interactive },
     { href: '/eduboard', label: dictionary.header.eduboard },
+    { href: '/wave-of-school', label: 'Wave of School' },
     { href: '/eduboard-editor', label: 'EduBoard Editor' },
   ];
 
@@ -27,7 +28,7 @@ const Header = () => {
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b backdrop-blur-lg bg-background/80">
+    <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-lg">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex flex-1 items-center justify-start">
           <Link href="/" className="mr-8 flex items-center gap-2">
