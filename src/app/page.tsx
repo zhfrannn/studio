@@ -73,108 +73,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { cn } from '@/lib/utils';
-import { AnimatePresence, motion, useMotionValue, useSpring } from 'framer-motion';
-import { gsap } from 'gsap';
-
-// Tipe untuk pesan chatbot
-type Message = {
-  role: 'user' | 'bot';
-  text: string;
-  storySuggestion?: any;
-};
-
-const StackedStoryCard = ({
-  story,
-  index,
-  total,
-}: {
-  story: Story;
-  index: number;
-  total: number;
-}) => {
-  const isFront = index === 0;
-  const cardRef = useRef<HTMLDivElement>(null);
-
-  const rotateX = useSpring(useMotionValue(0), { stiffness: 150, damping: 20, mass: 0.1 });
-  const rotateY = useSpring(useMotionValue(0), { stiffness: 150, damping: 20, mass: 0.1 });
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      if (!cardRef.current || !isFront) return;
-      const rect = cardRef.current.getBoundingClientRect();
-      const { width, height, left, top } = rect;
-      const mouseX = e.clientX - left;
-      const mouseY = e.clientY - top;
-      const xPct = mouseX / width - 0.5;
-      const yPct = mouseY / height - 0.5;
-      rotateX.set(-yPct * 8);
-      rotateY.set(xPct * 8);
-    };
-
-    const handleMouseLeave = () => {
-      rotateX.set(0);
-      rotateY.set(0);
-    };
-
-    const currentCard = cardRef.current;
-    if (currentCard) {
-        currentCard.addEventListener('mousemove', handleMouseMove);
-        currentCard.addEventListener('mouseleave', handleMouseLeave);
-    }
-    
-    return () => {
-        if (currentCard) {
-            currentCard.removeEventListener('mousemove', handleMouseMove);
-            currentCard.removeEventListener('mouseleave', handleMouseLeave);
-        }
-    };
-  }, [isFront, rotateX, rotateY]);
-
-  return (
-    <motion.div
-      ref={cardRef}
-      className="absolute h-full w-full"
-      style={{
-        transformStyle: 'preserve-3d',
-        rotateX,
-        rotateY,
-        zIndex: total - index
-      }}
-      initial={{ scale: 1, y: 0, opacity: 1 }}
-      animate={{
-        scale: 1 - index * 0.05,
-        y: index * -20,
-        opacity: index < 4 ? 1 : 0,
-      }}
-      exit={{ y: 50, opacity: 0 }}
-      transition={{ type: 'spring', stiffness: 200, damping: 30 }}
-    >
-      <Link href={`/story/${story.id}`} className="block h-full w-full">
-        <Card className="group relative h-full w-full overflow-hidden rounded-2xl border-4 border-white/20 shadow-2xl">
-          <Image
-            src={story.media.featuredImage}
-            alt={story.title}
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-110"
-            data-ai-hint={story.media.featuredImageHint}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-          <div className="absolute bottom-0 left-0 p-6 text-white">
-            <Badge variant="secondary" className="mb-2">
-              {story.aiThemes?.[0]}
-            </Badge>
-            <h3 className="font-headline text-2xl font-bold">{story.title}</h3>
-            <p className="text-sm opacity-80">{story.author}</p>
-          </div>
-          <div className="absolute bottom-2 right-3 text-xs text-white/50">
-            Image by Julia Sevchenko
-          </div>
-        </Card>
-      </Link>
-    </motion.div>
-  );
-};
-
+import { AnimatePresence, motion } from 'framer-motion';
 
 function ShareStorySection() {
   const { dictionary, language } = useLanguage();
@@ -562,94 +461,76 @@ ${story}`;
   );
 }
 
-const StackedCardsHero = () => {
-  const { language } = useLanguage();
-  const allStories = getTranslatedStories({ lang: language });
+const HeroCarousel = () => {
+    const { language } = useLanguage();
+    const allStories = getTranslatedStories({ lang: language });
   
-  const storyImages: { id: string; image: string; hint: string }[] = [
-    {
-      id: 'dapur-umum-perdamaian',
-      image:
-        'https://cdn.dribbble.com/userupload/32247153/file/original-1fe677ceff3cabb6bf2037dc808ace4d.jpg',
-      hint: 'community cooking',
-    },
-    {
-      id: 'hutan-bakau-penjaga-pantai',
-      image:
-        'https://cdn.dribbble.com/userupload/27796411/file/original-992aa78e02707e86da76830a224a2f2d.png',
-      hint: 'mangrove illustration',
-    },
-    {
-      id: 'smong-selamat-dari-lautan',
-      image:
-        'https://cdn.dribbble.com/userupload/26382361/file/original-a94049296846fa5218859ac34ea57b23.png',
-      hint: 'ocean wave illustration',
-    },
-     {
-      id: 'bah-tangse-sungai-murka',
-      image:
-        'https://cdn.dribbble.com/userupload/29829998/file/original-94b1514fe3d528f62a84cf250c5efc1f.png',
-      hint: 'river village illustration',
-    },
-  ];
+    const storyImages = [
+      {
+        id: 'dapur-umum-perdamaian',
+        image: 'https://cdn.dribbble.com/userupload/32247153/file/original-1fe677ceff3cabb6bf2037dc808ace4d.jpg',
+        hint: 'community cooking',
+      },
+      {
+        id: 'hutan-bakau-penjaga-pantai',
+        image: 'https://cdn.dribbble.com/userupload/27796411/file/original-992aa78e02707e86da76830a224a2f2d.png',
+        hint: 'mangrove illustration',
+      },
+      {
+        id: 'smong-selamat-dari-lautan',
+        image: 'https://cdn.dribbble.com/userupload/26382361/file/original-a94049296846fa5218859ac34ea57b23.png',
+        hint: 'ocean wave illustration',
+      },
+      {
+        id: 'bah-tangse-sungai-murka',
+        image: 'https://cdn.dribbble.com/userupload/29829998/file/original-94b1514fe3d528f62a84cf250c5efc1f.png',
+        hint: 'river village illustration',
+      },
+       {
+        id: 'perempuan-penganyam-harapan',
+        image: 'https://cdn.dribbble.com/userupload/32707329/file/original-01992760209b192c3d12d849dc7ee6d4.jpeg',
+        hint: 'women weaving',
+      },
+    ];
+  
+    const carouselStories = storyImages.map(({ id, image, hint }) => {
+        const story = allStories.find(s => s.id === id);
+        if (!story) return null;
+        return { ...story, media: { ...story.media, featuredImage: image, featuredImageHint: hint } };
+    }).filter((s): s is Story => s !== null);
 
-  const cardStories = storyImages
-    .map(({ id, image, hint }) => {
-      const story = allStories.find(s => s.id === id);
-      if (!story) return null;
-      return {
-        ...story,
-        media: { ...story.media, featuredImage: image, featuredImageHint: hint },
-      };
-    })
-    .filter((s): s is Story => s !== null);
-
-  const [cardStack, setCardStack] = useState(cardStories);
-
-  const rotateStack = useCallback((direction: 'next' | 'prev') => {
-    setCardStack(currentStack => {
-      const newStack = [...currentStack];
-      if (direction === 'next') {
-        const first = newStack.shift();
-        if (first) newStack.push(first);
-      } else {
-        const last = newStack.pop();
-        if (last) newStack.unshift(last);
-      }
-      return newStack;
-    });
-  }, []);
-
-  return (
-    <div className="relative flex flex-col items-center">
-      <div className="relative w-full max-w-sm h-96 [perspective:1000px] sm:max-w-md sm:h-[450px]">
-        <AnimatePresence>
-          {cardStack.map((story, i) => (
-            <StackedStoryCard
-              key={story.id}
-              story={story}
-              index={i}
-              total={cardStack.length}
-            />
-          ))}
-        </AnimatePresence>
+    // Duplicate stories for infinite loop effect
+    const extendedStories = [...carouselStories, ...carouselStories];
+  
+    return (
+      <div className="hero-v2-thumbs">
+        {extendedStories.map((story, index) => (
+            <Link href={`/story/${story.id}`} key={`${story.id}-${index}`}>
+                <Image
+                    src={story.media.featuredImage}
+                    alt={story.title}
+                    width={300}
+                    height={400}
+                    className="hero-v2-thumb"
+                    data-ai-hint={story.media.featuredImageHint}
+                />
+            </Link>
+        ))}
       </div>
-      <div className="relative z-10 -mt-2 flex items-center gap-4">
-        <Button onClick={() => rotateStack('prev')} variant="secondary" size="icon" className="rounded-full shadow-lg">
-          <ArrowLeft className="h-5 w-5"/>
-        </Button>
-        <Button onClick={() => rotateStack('next')} variant="secondary" size="icon" className="rounded-full shadow-lg">
-          <ArrowRight className="h-5 w-5"/>
-        </Button>
-      </div>
-    </div>
-  );
-};
+    );
+  };
 
 
 export default function Home() {
   const { dictionary, language } = useLanguage();
   const homeDict = dictionary.home;
+
+  // Tipe untuk pesan chatbot
+  type Message = {
+    role: 'user' | 'bot';
+    text: string;
+    storySuggestion?: any;
+  };
 
   const allStories = getTranslatedStories({ lang: language });
 
@@ -675,13 +556,13 @@ export default function Home() {
             </h1>
             <p className="hero-v2-desc">{homeDict.hero.description}</p>
             
-            <StackedCardsHero />
+            <HeroCarousel />
 
-            <div className="hero-v2-cta relative z-30 mt-12 flex flex-wrap justify-center gap-4">
+            <div className="hero-v2-cta relative z-30 mt-8 flex flex-wrap justify-center gap-4">
               <Button
                 asChild
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:opacity-90"
               >
                 <Link href="/explore">
                   <Rocket className="mr-2 h-5 w-5" />
@@ -789,19 +670,19 @@ export default function Home() {
               </p>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-blue-500" />
+                  <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
                   <p className="text-muted-foreground">
                     {homeDict.whyItMatters.point1}
                   </p>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-blue-500" />
+                  <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
                   <p className="text-muted-foreground">
                     {homeDict.whyItMatters.point2}
                   </p>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-blue-500" />
+                  <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
                   <p className="text-muted-foreground">
                     {homeDict.whyItMatters.point3}
                   </p>

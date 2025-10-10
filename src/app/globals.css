@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap');
 
 @tailwind base;
@@ -230,6 +231,15 @@
 
 .hero-v2-thumb:nth-child(odd) {
     animation-duration: 45s;
+}
+
+@keyframes hero-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
 }
 
 .hero-v2-cta {
