@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Map, { Marker, Popup, NavigationControl, FlyToInterpolator } from 'react-map-gl';
+import Map, { Marker, Popup, NavigationControl } from 'react-map-gl';
 import type { Story } from '@/lib/types';
 import { MapPin } from 'lucide-react';
 import Link from 'next/link';
@@ -57,7 +57,6 @@ export default function InteractiveMap({ stories }: InteractiveMapProps) {
         pitch: 60,
         bearing: 0,
         transitionDuration: 2000,
-        transitionInterpolator: new FlyToInterpolator(),
       }));
     }
   }, [selectedStory]);
