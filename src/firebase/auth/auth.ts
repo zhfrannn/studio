@@ -4,7 +4,9 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
   signOut as firebaseSignOut,
-  type Auth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  updateProfile,
 } from 'firebase/auth';
 import { initializeFirebase } from '@/firebase';
 
@@ -26,5 +28,34 @@ export const signOut = async () => {
     await firebaseSignOut(auth);
   } catch (error) {
     console.error('Error signing out: ', error);
+  }
+};
+
+export const signUpWithEmail = async (
+  email: string,
+  password: string,
+  displayName: string
+) => {
+  try {
+    const userCredential = await createUserWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
+    await updateProfile(userCredential.user, { displayName });
+    return userCredential.user;
+  } catch (error) {
+    console.error('Error signing up with email: ', error);
+    throw error;
+  }
+};
+
+export const signInWithEmail = async (email: string, password: string) => {
+  try {
+    const result = await signInWithEmailAndPassword(auth, email, password);
+    return result.user;
+  } catch (error) {
+    console.error('Error signing in with email: ', error);
+    return null;
   }
 };
