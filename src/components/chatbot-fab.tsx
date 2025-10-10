@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -25,7 +26,7 @@ import {
 } from './ui/card';
 import { Input } from './ui/input';
 import { ScrollArea } from './ui/scroll-area';
-// import { askSiagaBot, AskSiagaBotOutput } from '@/ai/flows/ask-siaga-bot';
+import { askSiagaBot, AskSiagaBotOutput } from '@/ai/flows/ask-siaga-bot';
 import { cn } from '@/lib/utils';
 import MotionWrapper from './motion-wrapper';
 import { useLanguage } from '@/context/language-context';
@@ -33,7 +34,7 @@ import { useLanguage } from '@/context/language-context';
 type Message = {
   role: 'user' | 'bot';
   text: string;
-  storySuggestion?: any; //AskSiagaBotOutput['storySuggestion'];
+  storySuggestion?: AskSiagaBotOutput['storySuggestion'];
 };
 
 export default function ChatbotFab() {
@@ -42,7 +43,7 @@ export default function ChatbotFab() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const { dictionary } = useLanguage();
+  const { dictionary, language } = useLanguage();
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const openChat = () => {
@@ -67,15 +68,23 @@ export default function ChatbotFab() {
     setInput('');
     setIsLoading(true);
 
-    // AI logic is disabled
-    setTimeout(() => {
-        const botMessage: Message = {
-            role: 'bot',
-            text: "Maaf, fitur AI saat ini sedang tidak tersedia.",
-        };
-        setMessages(prev => [...prev, botMessage]);
-        setIsLoading(false);
-    }, 1000);
+    try {
+      const result = await askSiagaBot({ query: input, language });
+      const botMessage: Message = {
+        role: 'bot',
+        text: result.response,
+        storySuggestion: result.storySuggestion,
+      };
+      setMessages(prev => [...prev, botMessage]);
+    } catch (error) {
+      const errorMessage: Message = {
+        role: 'bot',
+        text: dictionary.chatbot.errorMessage,
+      };
+      setMessages(prev => [...prev, errorMessage]);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (

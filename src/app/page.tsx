@@ -71,6 +71,7 @@ import useEmblaCarousel, {
   type EmblaCarouselType,
   type EmblaOptionsType,
 } from 'embla-carousel-react';
+import { askSiagaBot, AskSiagaBotOutput } from '@/ai/flows/ask-siaga-bot';
 
 function ShareStorySection() {
   const { dictionary, language } = useLanguage();
@@ -120,6 +121,12 @@ function ShareStorySection() {
     },
   });
 
+  type Message = {
+    role: 'user' | 'bot';
+    text: string;
+    storySuggestion?: AskSiagaBotOutput['storySuggestion'];
+  };
+
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'bot',
@@ -152,15 +159,23 @@ ${story}`;
     setInput('');
     setIsLoading(true);
 
-    // AI logic is disabled
-    setTimeout(() => {
+    try {
+      const result = await askSiagaBot({ query: input, language });
       const botMessage: Message = {
         role: 'bot',
-        text: 'Maaf, fitur AI saat ini sedang tidak tersedia.',
+        text: result.response,
+        storySuggestion: result.storySuggestion,
       };
       setMessages(prev => [...prev, botMessage]);
+    } catch (error) {
+      const errorMessage: Message = {
+        role: 'bot',
+        text: shareStoryDict.aiHelper.errorMessage,
+      };
+      setMessages(prev => [...prev, errorMessage]);
+    } finally {
       setIsLoading(false);
-    }, 1000);
+    }
   };
 
   return (
@@ -562,13 +577,6 @@ const HeroCarousel = () => {
 export default function Home() {
   const { dictionary, language } = useLanguage();
   const homeDict = dictionary.home;
-
-  // Tipe untuk pesan chatbot
-  type Message = {
-    role: 'user' | 'bot';
-    text: string;
-    storySuggestion?: any;
-  };
 
   const allStories = getTranslatedStories({ lang: language });
 

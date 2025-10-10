@@ -37,7 +37,7 @@ import {
 import { stories as staticStories } from '@/lib/data';
 import MotionWrapper from '@/components/motion-wrapper';
 import { ScrollArea } from '@/components/ui/scroll-area';
-// import { askSiagaBot, AskSiagaBotOutput } from '@/ai/flows/ask-siaga-bot';
+import { askSiagaBot, AskSiagaBotOutput } from '@/ai/flows/ask-siaga-bot';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { useLanguage } from '@/context/language-context';
@@ -46,12 +46,12 @@ import { useLanguage } from '@/context/language-context';
 type Message = {
   role: 'user' | 'bot';
   text: string;
-  storySuggestion?: any; // AskSiagaBotOutput['storySuggestion'];
+  storySuggestion?: AskSiagaBotOutput['storySuggestion'];
 };
 
 // Komponen utama halaman
 export default function ShareStoryPage() {
-  const { dictionary } = useLanguage();
+  const { dictionary, language } = useLanguage();
   const shareStoryDict = dictionary.home.shareStory;
 
   const formSchema = z.object({
@@ -125,15 +125,23 @@ ${story}`;
     setInput('');
     setIsLoading(true);
 
-    // AI logic is disabled
-    setTimeout(() => {
-        const botMessage: Message = {
-            role: 'bot',
-            text: "Maaf, fitur AI saat ini sedang tidak tersedia.",
-        };
-        setMessages(prev => [...prev, botMessage]);
-        setIsLoading(false);
-    }, 1000);
+    try {
+      const result = await askSiagaBot({ query: input, language });
+      const botMessage: Message = {
+        role: 'bot',
+        text: result.response,
+        storySuggestion: result.storySuggestion,
+      };
+      setMessages(prev => [...prev, botMessage]);
+    } catch (error) {
+      const errorMessage: Message = {
+        role: 'bot',
+        text: shareStoryDict.aiHelper.errorMessage,
+      };
+      setMessages(prev => [...prev, errorMessage]);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
