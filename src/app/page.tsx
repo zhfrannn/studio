@@ -469,7 +469,40 @@ ${story}`;
 
 const CAROUSEL_OPTIONS: EmblaOptionsType = { loop: true };
 
-const HeroCarousel = () => {
+const HeroStoryCard = ({ story }: { story: Story }) => {
+    const { dictionary } = useLanguage();
+    const storyGridDict = dictionary.storyGrid;
+    const themeLabels: Record<string, string> = {
+      'Disaster Preparedness': storyGridDict.themes.disaster,
+      'Local Wisdom': storyGridDict.themes.wisdom,
+      Peacebuilding: storyGridDict.themes.peace,
+    };
+  
+    return (
+      <Link href={`/story/${story.id}`} className="group block h-full">
+        <Card className="relative h-full overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-2xl">
+          <Image
+            src={story.media.featuredImage}
+            alt={story.title}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            data-ai-hint={story.media.featuredImageHint}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
+          <div className="absolute bottom-0 left-0 p-6 text-white">
+            <Badge className="mb-2 border-white/50 bg-white/20 backdrop-blur-sm">
+              {themeLabels[story.aiThemes[0]] || story.aiThemes[0]}
+            </Badge>
+            <h3 className="font-headline text-2xl font-bold leading-tight">
+              {story.title}
+            </h3>
+          </div>
+        </Card>
+      </Link>
+    );
+  };
+  
+  const HeroCarousel = () => {
     const { language } = useLanguage();
     const allStories = getTranslatedStories({ lang: language });
   
@@ -487,24 +520,26 @@ const HeroCarousel = () => {
     const [emblaRef, emblaApi] = useEmblaCarousel(CAROUSEL_OPTIONS);
   
     const scrollPrev = useCallback(() => {
-      if (emblaApi) emblaApi.scrollPrev()
-    }, [emblaApi])
+      if (emblaApi) emblaApi.scrollPrev();
+    }, [emblaApi]);
   
     const scrollNext = useCallback(() => {
-      if (emblaApi) emblaApi.scrollNext()
-    }, [emblaApi])
+      if (emblaApi) emblaApi.scrollNext();
+    }, [emblaApi]);
   
     if (highlightedStories.length === 0) {
       return null;
     }
   
     return (
-      <div className="relative w-full max-w-6xl mx-auto mt-8">
+      <div className="relative mx-auto mt-8 w-full max-w-6xl">
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex -ml-4">
             {highlightedStories.map(story => (
-              <div className="flex-grow-0 flex-shrink-0 basis-full md:basis-1/2 lg:basis-1/3 pl-4" key={story.id}>
-                <StoryCard story={story} />
+              <div className="basis-full flex-grow-0 flex-shrink-0 pl-4 md:basis-1/2 lg:basis-1/3" key={story.id}>
+                <div className="h-[450px]">
+                    <HeroStoryCard story={story} />
+                </div>
               </div>
             ))}
           </div>
@@ -513,7 +548,7 @@ const HeroCarousel = () => {
           onClick={scrollPrev}
           variant="outline"
           size="icon"
-          className="absolute top-1/2 -translate-y-1/2 left-0 -translate-x-1/2 rounded-full h-12 w-12 z-10 hidden lg:flex"
+          className="absolute top-1/2 -left-4 z-10 hidden h-12 w-12 -translate-y-1/2 rounded-full lg:flex"
         >
           <ChevronLeft />
         </Button>
@@ -521,7 +556,7 @@ const HeroCarousel = () => {
           onClick={scrollNext}
           variant="outline"
           size="icon"
-          className="absolute top-1/2 -translate-y-1/2 right-0 translate-x-1/2 rounded-full h-12 w-12 z-10 hidden lg:flex"
+          className="absolute top-1/2 -right-4 z-10 hidden h-12 w-12 -translate-y-1/2 rounded-full lg:flex"
         >
           <ChevronRight />
         </Button>
@@ -906,5 +941,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
