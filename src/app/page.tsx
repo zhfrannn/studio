@@ -1,4 +1,3 @@
-
 'use client';
 
 import Image from 'next/image';
@@ -36,6 +35,7 @@ import {
   User,
   Loader2,
   MessageSquareText,
+  ArrowLeft,
 } from 'lucide-react';
 import InteractiveMap from '@/components/interactive-map';
 import { Progress } from '@/components/ui/progress';
@@ -47,7 +47,7 @@ import LogoLoop from '@/components/ui/logo-loop';
 import { useLanguage } from '@/context/language-context';
 import type { Story } from '@/lib/types';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -72,7 +72,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { cn } from '@/lib/utils';
-import { motion, useMotionValue, useSpring } from 'framer-motion';
+import { AnimatePresence, motion, useMotionValue, useSpring } from 'framer-motion';
 import { gsap } from 'gsap';
 
 // Tipe untuk pesan chatbot
@@ -86,12 +86,12 @@ const StackedStoryCard = ({
   story,
   index,
   total,
-  mouse,
+  isFront,
 }: {
   story: Story;
   index: number;
   total: number;
-  mouse: { x: any; y: any };
+  isFront: boolean;
 }) => {
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -108,7 +108,7 @@ const StackedStoryCard = ({
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      if (!cardRef.current) return;
+      if (!cardRef.current || !isFront) return;
       const rect = cardRef.current.getBoundingClientRect();
       const width = rect.width;
       const height = rect.height;
@@ -133,7 +133,7 @@ const StackedStoryCard = ({
       cardElement?.removeEventListener('mousemove', handleMouseMove);
       cardElement?.removeEventListener('mouseleave', handleMouseLeave);
     };
-  }, [rotateX, rotateY]);
+  }, [rotateX, rotateY, isFront]);
 
   return (
     <motion.div
@@ -144,11 +144,17 @@ const StackedStoryCard = ({
         rotateX,
         rotateY,
       }}
+      initial={{
+        top: index * -15,
+        scale: 1 - index * 0.05,
+        zIndex: total - index,
+      }}
       animate={{
         top: index * -15,
         scale: 1 - index * 0.05,
         zIndex: total - index,
       }}
+      transition={{ type: 'spring', stiffness: 300, damping: 30 }}
     >
       <Link href={`/story/${story.id}`}>
         <Card className="group relative h-full w-full overflow-hidden rounded-2xl border-4 border-white/20 shadow-2xl">
@@ -270,326 +276,303 @@ ${story}`;
   };
 
   return (
-    <MotionWrapper
-      as="section"
-      id="share-story"
-      className="container mx-auto px-4 rounded-2xl"
-    >
-      <div className="mx-auto mb-12 max-w-3xl space-y-2 text-center">
-        <SplitText
-          text={shareStoryDict.title}
-          className="font-headline text-3xl md:text-4xl"
-        />
-        <p className="text-muted-foreground">{shareStoryDict.description}</p>
+    <section className="relative py-16 md:py-24">
+      <div className="absolute inset-0">
+         <Image
+            src="https://cdn.dribbble.com/userupload/32707329/file/original-01992760209b192c3d12d849dc7ee6d4.jpeg"
+            alt="Beautiful Acehnese pattern"
+            fill
+            className="object-cover opacity-10 dark:opacity-5"
+            data-ai-hint="aceh pattern"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
       </div>
+      <MotionWrapper
+        id="share-story"
+        className="container mx-auto px-4 rounded-2xl"
+      >
+        <div className="relative mx-auto mb-12 max-w-3xl space-y-2 text-center">
+          <SplitText
+            text={shareStoryDict.title}
+            className="font-headline text-3xl md:text-4xl"
+          />
+          <p className="text-muted-foreground">{shareStoryDict.description}</p>
+        </div>
 
-      <div className="grid grid-cols-1 gap-12 rounded-2xl md:grid-cols-1 lg:grid-cols-2">
-        <MotionWrapper delay={0.1}>
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-2xl">
-                {shareStoryDict.formTitle}
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <Form {...form}>
-                <form
-                  onSubmit={form.handleSubmit(onFormSubmit)}
-                  className="space-y-6"
-                >
-                  <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>{shareStoryDict.labels.name}</FormLabel>
-                        <FormControl>
-                          <Input
-                            placeholder={shareStoryDict.placeholders.name}
-                            {...field}
-                          />
-                        </FormControl>
-                      </FormItem>
-                    )}
-                  />
-
-                  <FormField
-                    control={form.control}
-                    name="location"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>{shareStoryDict.labels.location}</FormLabel>
-                        <Select
-                          onValueChange={field.onChange}
-                          defaultValue={field.value}
-                        >
+        <div className="relative grid grid-cols-1 gap-12 rounded-2xl md:grid-cols-1 lg:grid-cols-2">
+          <MotionWrapper delay={0.1}>
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-2xl">
+                  {shareStoryDict.formTitle}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <Form {...form}>
+                  <form
+                    onSubmit={form.handleSubmit(onFormSubmit)}
+                    className="space-y-6"
+                  >
+                    <FormField
+                      control={form.control}
+                      name="name"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>{shareStoryDict.labels.name}</FormLabel>
                           <FormControl>
-                            <SelectTrigger>
-                              <SelectValue
-                                placeholder={
-                                  shareStoryDict.placeholders.location
-                                }
-                              />
-                            </SelectTrigger>
-                          </FormControl>
-                          <SelectContent>
-                            {locations.map(loc => (
-                              <SelectItem key={loc} value={loc}>
-                                {loc}
-                              </SelectItem>
-                            ))}
-                          </SelectContent>
-                        </Select>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <FormField
-                    control={form.control}
-                    name="storyType"
-                    render={() => (
-                      <FormItem>
-                        <div className="mb-4">
-                          <FormLabel className="text-base">
-                            {shareStoryDict.labels.storyType}
-                          </FormLabel>
-                        </div>
-                        <div className="grid grid-cols-2 gap-4">
-                          {storyTypes.map(item => (
-                            <FormField
-                              key={item.id}
-                              control={form.control}
-                              name="storyType"
-                              render={({ field }) => (
-                                <FormItem
-                                  key={item.id}
-                                  className="flex flex-row items-start space-x-3 space-y-0"
-                                >
-                                  <FormControl>
-                                    <Checkbox
-                                      checked={field.value?.includes(item.id)}
-                                      onCheckedChange={checked => {
-                                        return checked
-                                          ? field.onChange([
-                                              ...(field.value || []),
-                                              item.id,
-                                            ])
-                                          : field.onChange(
-                                              (field.value || [])?.filter(
-                                                value => value !== item.id
-                                              )
-                                            );
-                                      }}
-                                    />
-                                  </FormControl>
-                                  <FormLabel className="font-normal">
-                                    {item.label}
-                                  </FormLabel>
-                                </FormItem>
-                              )}
+                            <Input
+                              placeholder={shareStoryDict.placeholders.name}
+                              {...field}
                             />
-                          ))}
+                          </FormControl>
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="location"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>{shareStoryDict.labels.location}</FormLabel>
+                          <Select
+                            onValueChange={field.onChange}
+                            defaultValue={field.value}
+                          >
+                            <FormControl>
+                              <SelectTrigger>
+                                <SelectValue
+                                  placeholder={
+                                    shareStoryDict.placeholders.location
+                                  }
+                                />
+                              </SelectTrigger>
+                            </FormControl>
+                            <SelectContent>
+                              {locations.map(loc => (
+                                <SelectItem key={loc} value={loc}>
+                                  {loc}
+                                </SelectItem>
+                              ))}
+                            </SelectContent>
+                          </Select>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="storyType"
+                      render={() => (
+                        <FormItem>
+                          <div className="mb-4">
+                            <FormLabel className="text-base">
+                              {shareStoryDict.labels.storyType}
+                            </FormLabel>
+                          </div>
+                          <div className="grid grid-cols-2 gap-4">
+                            {storyTypes.map(item => (
+                              <FormField
+                                key={item.id}
+                                control={form.control}
+                                name="storyType"
+                                render={({ field }) => (
+                                  <FormItem
+                                    key={item.id}
+                                    className="flex flex-row items-start space-x-3 space-y-0"
+                                  >
+                                    <FormControl>
+                                      <Checkbox
+                                        checked={field.value?.includes(item.id)}
+                                        onCheckedChange={checked => {
+                                          return checked
+                                            ? field.onChange([
+                                                ...(field.value || []),
+                                                item.id,
+                                              ])
+                                            : field.onChange(
+                                                (field.value || [])?.filter(
+                                                  value => value !== item.id
+                                                )
+                                              );
+                                        }}
+                                      />
+                                    </FormControl>
+                                    <FormLabel className="font-normal">
+                                      {item.label}
+                                    </FormLabel>
+                                  </FormItem>
+                                )}
+                              />
+                            ))}
+                          </div>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="story"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>{shareStoryDict.labels.story}</FormLabel>
+                          <FormControl>
+                            <Textarea
+                              placeholder={shareStoryDict.placeholders.story}
+                              className="h-32 resize-none"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="agree"
+                      render={({ field }) => (
+                        <FormItem className="flex flex-row items-start space-x-3 space-y-0 pt-2">
+                          <FormControl>
+                            <Checkbox
+                              checked={field.value}
+                              onCheckedChange={field.onChange}
+                            />
+                          </FormControl>
+                          <div className="space-y-1 leading-none">
+                            <FormLabel>{shareStoryDict.labels.agree}</FormLabel>
+                            <FormDescription className="text-xs">
+                              {shareStoryDict.descriptions.agree}
+                            </FormDescription>
+                          </div>
+                        </FormItem>
+                      )}
+                    />
+
+                    <Button type="submit" size="lg" className="w-full">
+                      <MessageSquareText className="mr-2 h-5 w-5" />
+                      {shareStoryDict.submitButton}
+                    </Button>
+                  </form>
+                </Form>
+              </CardContent>
+            </Card>
+          </MotionWrapper>
+
+          <MotionWrapper delay={0.2}>
+            <Card className="flex h-full min-h-[500px] flex-col lg:h-auto">
+              <CardHeader className="flex flex-row items-start gap-3">
+                <div className="mt-1 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary/20">
+                  <Bot className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <CardTitle>{shareStoryDict.aiHelper.title}</CardTitle>
+                  <p className="text-sm text-muted-foreground">
+                    {shareStoryDict.aiHelper.description}
+                  </p>
+                </div>
+              </CardHeader>
+              <CardContent className="flex-grow overflow-hidden">
+                <ScrollArea className="h-full pr-4 min-h-[300px]">
+                  <div className="space-y-4">
+                    {messages.map((message, index) => (
+                      <div
+                        key={index}
+                        className={cn(
+                          'flex items-start gap-3',
+                          message.role === 'user'
+                            ? 'flex-row-reverse'
+                            : 'flex-row'
+                        )}
+                      >
+                        <span
+                          className={cn(
+                            'flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full',
+                            message.role === 'user'
+                              ? 'bg-primary text-primary-foreground'
+                              : 'bg-muted'
+                          )}
+                        >
+                          {message.role === 'user' ? (
+                            <User size={16} />
+                          ) : (
+                            <Bot size={16} />
+                          )}
+                        </span>
+                        <div
+                          className={cn(
+                            'max-w-[85%] rounded-lg p-3 text-sm',
+                            message.role === 'user'
+                              ? 'bg-primary text-primary-foreground'
+                              : 'bg-muted'
+                          )}
+                        >
+                          <p className="whitespace-pre-wrap">{message.text}</p>
+                          {message.storySuggestion && (
+                            <Button
+                              asChild
+                              variant="secondary"
+                              size="sm"
+                              className="mt-3 w-full"
+                            >
+                              <Link
+                                href={`/story/${message.storySuggestion.id}`}
+                              >
+                                <BookOpen className="mr-2 h-4 w-4" />
+                                {shareStoryDict.aiHelper.readStory}:{' '}
+                                {message.storySuggestion.title}
+                              </Link>
+                            </Button>
+                          )}
                         </div>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <FormField
-                    control={form.control}
-                    name="story"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>{shareStoryDict.labels.story}</FormLabel>
-                        <FormControl>
-                          <Textarea
-                            placeholder={shareStoryDict.placeholders.story}
-                            className="h-32 resize-none"
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <FormField
-                    control={form.control}
-                    name="agree"
-                    render={({ field }) => (
-                      <FormItem className="flex flex-row items-start space-x-3 space-y-0 pt-2">
-                        <FormControl>
-                          <Checkbox
-                            checked={field.value}
-                            onCheckedChange={field.onChange}
-                          />
-                        </FormControl>
-                        <div className="space-y-1 leading-none">
-                          <FormLabel>{shareStoryDict.labels.agree}</FormLabel>
-                          <FormDescription className="text-xs">
-                            {shareStoryDict.descriptions.agree}
-                          </FormDescription>
+                      </div>
+                    ))}
+                    {isLoading && (
+                      <div className="flex flex-row items-start gap-3">
+                        <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-muted">
+                          <Bot size={16} />
+                        </span>
+                        <div className="max-w-[85%] rounded-lg bg-muted p-3 text-sm">
+                          <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
                         </div>
-                      </FormItem>
+                      </div>
                     )}
+                  </div>
+                </ScrollArea>
+              </CardContent>
+              <div className="border-t p-4">
+                <form
+                  onSubmit={e => {
+                    e.preventDefault();
+                    handleChatSend();
+                  }}
+                  className="flex w-full items-center gap-2"
+                >
+                  <Input
+                    value={input}
+                    onChange={e => setInput(e.target.value)}
+                    placeholder={shareStoryDict.aiHelper.placeholder}
+                    disabled={isLoading}
                   />
-
-                  <Button type="submit" size="lg" className="w-full">
-                    <MessageSquareText className="mr-2 h-5 w-5" />
-                    {shareStoryDict.submitButton}
+                  <Button type="submit" size="icon" disabled={isLoading}>
+                    <Send className="h-4 w-4" />
                   </Button>
                 </form>
-              </Form>
-            </CardContent>
-          </Card>
-        </MotionWrapper>
-
-        <MotionWrapper delay={0.2}>
-          <Card className="flex h-full min-h-[500px] flex-col lg:h-auto">
-            <CardHeader className="flex flex-row items-start gap-3">
-              <div className="mt-1 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary/20">
-                <Bot className="h-6 w-6 text-primary" />
               </div>
-              <div>
-                <CardTitle>{shareStoryDict.aiHelper.title}</CardTitle>
-                <p className="text-sm text-muted-foreground">
-                  {shareStoryDict.aiHelper.description}
-                </p>
-              </div>
-            </CardHeader>
-            <CardContent className="flex-grow overflow-hidden">
-              <ScrollArea className="h-full pr-4 min-h-[300px]">
-                <div className="space-y-4">
-                  {messages.map((message, index) => (
-                    <div
-                      key={index}
-                      className={cn(
-                        'flex items-start gap-3',
-                        message.role === 'user'
-                          ? 'flex-row-reverse'
-                          : 'flex-row'
-                      )}
-                    >
-                      <span
-                        className={cn(
-                          'flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full',
-                          message.role === 'user'
-                            ? 'bg-primary text-primary-foreground'
-                            : 'bg-muted'
-                        )}
-                      >
-                        {message.role === 'user' ? (
-                          <User size={16} />
-                        ) : (
-                          <Bot size={16} />
-                        )}
-                      </span>
-                      <div
-                        className={cn(
-                          'max-w-[85%] rounded-lg p-3 text-sm',
-                          message.role === 'user'
-                            ? 'bg-primary text-primary-foreground'
-                            : 'bg-muted'
-                        )}
-                      >
-                        <p className="whitespace-pre-wrap">{message.text}</p>
-                        {message.storySuggestion && (
-                          <Button
-                            asChild
-                            variant="secondary"
-                            size="sm"
-                            className="mt-3 w-full"
-                          >
-                            <Link
-                              href={`/story/${message.storySuggestion.id}`}
-                            >
-                              <BookOpen className="mr-2 h-4 w-4" />
-                              {shareStoryDict.aiHelper.readStory}:{' '}
-                              {message.storySuggestion.title}
-                            </Link>
-                          </Button>
-                        )}
-                      </div>
-                    </div>
-                  ))}
-                  {isLoading && (
-                    <div className="flex flex-row items-start gap-3">
-                      <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-muted">
-                        <Bot size={16} />
-                      </span>
-                      <div className="max-w-[85%] rounded-lg bg-muted p-3 text-sm">
-                        <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </ScrollArea>
-            </CardContent>
-            <div className="border-t p-4">
-              <form
-                onSubmit={e => {
-                  e.preventDefault();
-                  handleChatSend();
-                }}
-                className="flex w-full items-center gap-2"
-              >
-                <Input
-                  value={input}
-                  onChange={e => setInput(e.target.value)}
-                  placeholder={shareStoryDict.aiHelper.placeholder}
-                  disabled={isLoading}
-                />
-                <Button type="submit" size="icon" disabled={isLoading}>
-                  <Send className="h-4 w-4" />
-                </Button>
-              </form>
-            </div>
-          </Card>
-        </MotionWrapper>
-      </div>
-    </MotionWrapper>
+            </Card>
+          </MotionWrapper>
+        </div>
+      </MotionWrapper>
+    </section>
   );
 }
 
 const StackedCardsHero = () => {
   const { language } = useLanguage();
   const allStories = getTranslatedStories({ lang: language });
-  const containerRef = useRef<HTMLDivElement>(null);
-  const mouse = {
-    x: useMotionValue(0),
-    y: useMotionValue(0),
-  };
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      const { clientX, clientY } = e;
-      if (containerRef.current) {
-        const { left, top, width, height } = containerRef.current.getBoundingClientRect();
-        const x = clientX - (left + width / 2);
-        const y = clientY - (top + height / 2);
-        mouse.x.set(x);
-        mouse.y.set(y);
-      }
-    };
-    
-    window.addEventListener("mousemove", handleMouseMove);
-
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
-
-  useEffect(() => {
-    if(containerRef.current) {
-        gsap.fromTo(containerRef.current.children, 
-            { y: '100%', opacity: 0 },
-            { y: '0%', opacity: 1, duration: 0.5, stagger: 0.1, ease: 'power3.out' }
-        );
-    }
-  }, [])
   
-
   const storyImages: { id: string; image: string; hint: string }[] = [
     {
       id: 'dapur-umum-perdamaian',
@@ -628,17 +611,46 @@ const StackedCardsHero = () => {
     })
     .filter((s): s is Story => s !== null);
 
+  const [cardStack, setCardStack] = useState(cardStories);
+
+  const rotateStack = useCallback((direction: 'next' | 'prev') => {
+    setCardStack(currentStack => {
+      const newStack = [...currentStack];
+      if (direction === 'next') {
+        const first = newStack.shift();
+        if (first) newStack.push(first);
+      } else {
+        const last = newStack.pop();
+        if (last) newStack.unshift(last);
+      }
+      return newStack;
+    });
+  }, []);
+
+
   return (
-    <div ref={containerRef} className="relative aspect-[1.3] w-full max-w-xl [perspective:800px] group">
-      {cardStories.map((story, i) => (
-        <StackedStoryCard
-          key={story.id}
-          story={story}
-          index={i}
-          total={cardStories.length}
-          mouse={mouse}
-        />
-      ))}
+    <div className="relative flex flex-col items-center">
+      <div className="relative aspect-[1.3] w-full max-w-xl [perspective:800px] group">
+        <AnimatePresence>
+          {cardStack.map((story, i) => (
+            <StackedStoryCard
+              key={story.id}
+              story={story}
+              index={i}
+              total={cardStack.length}
+              isFront={i === 0}
+            />
+          ))}
+        </AnimatePresence>
+      </div>
+      <div className="relative z-10 -mt-8 flex items-center gap-4">
+        <Button onClick={() => rotateStack('prev')} variant="secondary" size="icon" className="rounded-full shadow-lg">
+          <ArrowLeft className="h-5 w-5"/>
+        </Button>
+        <Button onClick={() => rotateStack('next')} variant="secondary" size="icon" className="rounded-full shadow-lg">
+          <ArrowRight className="h-5 w-5"/>
+        </Button>
+      </div>
     </div>
   );
 };
