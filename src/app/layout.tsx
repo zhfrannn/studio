@@ -1,12 +1,8 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
-import Header from '@/components/layout/header';
-import Footer from '@/components/layout/footer';
-import { ThemeProvider } from '@/components/theme-provider';
-import ChatbotFab from '@/components/chatbot-fab';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import { LanguageProvider } from '@/context/language-context';
+import Providers from '@/components/providers';
 
 export const metadata: Metadata = {
   title: 'Wave of Voice',
@@ -34,22 +30,10 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body bg-background antialiased text-foreground">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <LanguageProvider>
-            <div className="flex min-h-screen flex-col">
-              <Header />
-              <main className="flex-grow">{children}</main>
-              <Footer />
-            </div>
-            <ChatbotFab />
-            <Toaster />
-          </LanguageProvider>
-        </ThemeProvider>
+        <Providers>
+          {children}
+          <Toaster />
+        </Providers>
       </body>
     </html>
   );

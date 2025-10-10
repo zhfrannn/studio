@@ -11,27 +11,17 @@ import {
   CardFooter,
   CardTitle,
 } from '@/components/ui/card';
-import StoryCard from '@/components/story-card';
 import { getTranslatedStories } from '@/lib/data';
 import Link from 'next/link';
 import {
   ArrowRight,
-  ArrowLeft,
   BookOpen,
   Lightbulb,
   MessageCircle,
   CheckCircle,
-  Film,
-  RefreshCw,
-  Download,
-  Play,
   Share2,
   Puzzle,
-  Star,
-  Rocket,
-  ChevronsRight,
   Sparkles,
-  ArrowUpLeft,
   Bot,
   Send,
   User,
@@ -39,9 +29,11 @@ import {
   MessageSquareText,
   ChevronLeft,
   ChevronRight,
+  BrainCircuit,
+  GraduationCap,
+  Users2,
 } from 'lucide-react';
 import InteractiveMap from '@/components/interactive-map';
-import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import MotionWrapper from '@/components/motion-wrapper';
@@ -75,7 +67,6 @@ import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { cn } from '@/lib/utils';
-import { AnimatePresence, motion } from 'framer-motion';
 import useEmblaCarousel, {
   type EmblaCarouselType,
   type EmblaOptionsType,
@@ -89,7 +80,6 @@ function ShareStorySection() {
   const locations = [
     ...new Set(allStories.map(s => s.location?.name).filter(Boolean)),
   ] as string[];
-
 
   // Schema untuk form
   const formSchema = z.object({
@@ -176,14 +166,14 @@ ${story}`;
   return (
     <section className="relative py-16 md:py-24">
       <div className="absolute inset-0">
-         <Image
-            src="https://cdn.dribbble.com/userupload/32707329/file/original-01992760209b192c3d12d849dc7ee6d4.jpeg"
-            alt="Beautiful Acehnese pattern"
-            fill
-            className="object-cover opacity-10 dark:opacity-5"
-            data-ai-hint="aceh pattern"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
+        <Image
+          src="https://cdn.dribbble.com/userupload/32707329/file/original-01992760209b192c3d12d849dc7ee6d4.jpeg"
+          alt="Beautiful Acehnese pattern"
+          fill
+          className="object-cover opacity-10 dark:opacity-5"
+          data-ai-hint="aceh pattern"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
       </div>
       <MotionWrapper
         id="share-story"
@@ -232,7 +222,9 @@ ${story}`;
                       name="location"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>{shareStoryDict.labels.location}</FormLabel>
+                          <FormLabel>
+                            {shareStoryDict.labels.location}
+                          </FormLabel>
                           <Select
                             onValueChange={field.onChange}
                             defaultValue={field.value}
@@ -470,100 +462,102 @@ ${story}`;
 const CAROUSEL_OPTIONS: EmblaOptionsType = { loop: true };
 
 const HeroStoryCard = ({ story }: { story: Story }) => {
-    const { dictionary } = useLanguage();
-    const storyGridDict = dictionary.storyGrid;
-    const themeLabels: Record<string, string> = {
-      'Disaster Preparedness': storyGridDict.themes.disaster,
-      'Local Wisdom': storyGridDict.themes.wisdom,
-      Peacebuilding: storyGridDict.themes.peace,
-    };
-  
-    return (
-      <Link href={`/story/${story.id}`} className="group block h-full">
-        <Card className="relative h-full overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-2xl">
-          <Image
-            src={story.media.featuredImage}
-            alt={story.title}
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-            data-ai-hint={story.media.featuredImageHint}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
-          <div className="absolute bottom-0 left-0 p-6 text-white">
-            <Badge className="mb-2 border-white/50 bg-white/20 backdrop-blur-sm">
-              {themeLabels[story.aiThemes[0]] || story.aiThemes[0]}
-            </Badge>
-            <h3 className="font-headline text-2xl font-bold leading-tight">
-              {story.title}
-            </h3>
-          </div>
-        </Card>
-      </Link>
-    );
-  };
-  
-  const HeroCarousel = () => {
-    const { language } = useLanguage();
-    const allStories = getTranslatedStories({ lang: language });
-  
-    const highlightedStories = [
-      'smong-selamat-dari-lautan',
-      'dapur-umum-perdamaian',
-      'hutan-bakau-penjaga-pantai',
-      'perempuan-penganyam-harapan',
-      'kopi-gayo-aroma-perdamaian',
-      'arsitektur-rumah-panggung'
-    ]
-      .map(id => allStories.find(s => s.id === id))
-      .filter((s): s is Story => s !== null && s !== undefined);
-  
-    const [emblaRef, emblaApi] = useEmblaCarousel(CAROUSEL_OPTIONS);
-  
-    const scrollPrev = useCallback(() => {
-      if (emblaApi) emblaApi.scrollPrev();
-    }, [emblaApi]);
-  
-    const scrollNext = useCallback(() => {
-      if (emblaApi) emblaApi.scrollNext();
-    }, [emblaApi]);
-  
-    if (highlightedStories.length === 0) {
-      return null;
-    }
-  
-    return (
-      <div className="relative mx-auto mt-8 w-full max-w-6xl">
-        <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex -ml-4">
-            {highlightedStories.map(story => (
-              <div className="basis-full flex-grow-0 flex-shrink-0 pl-4 md:basis-1/2 lg:basis-1/3" key={story.id}>
-                <div className="h-[450px]">
-                    <HeroStoryCard story={story} />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        <Button
-          onClick={scrollPrev}
-          variant="outline"
-          size="icon"
-          className="absolute top-1/2 -left-4 z-10 hidden h-12 w-12 -translate-y-1/2 rounded-full lg:flex"
-        >
-          <ChevronLeft />
-        </Button>
-        <Button
-          onClick={scrollNext}
-          variant="outline"
-          size="icon"
-          className="absolute top-1/2 -right-4 z-10 hidden h-12 w-12 -translate-y-1/2 rounded-full lg:flex"
-        >
-          <ChevronRight />
-        </Button>
-      </div>
-    );
+  const { dictionary } = useLanguage();
+  const storyGridDict = dictionary.storyGrid;
+  const themeLabels: Record<string, string> = {
+    'Disaster Preparedness': storyGridDict.themes.disaster,
+    'Local Wisdom': storyGridDict.themes.wisdom,
+    Peacebuilding: storyGridDict.themes.peace,
   };
 
+  return (
+    <Link href={`/story/${story.id}`} className="group block h-full">
+      <Card className="relative h-full overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-2xl">
+        <Image
+          src={story.media.featuredImage}
+          alt={story.title}
+          fill
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          data-ai-hint={story.media.featuredImageHint}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
+        <div className="absolute bottom-0 left-0 p-6 text-white">
+          <Badge className="mb-2 border-white/50 bg-white/20 backdrop-blur-sm">
+            {themeLabels[story.aiThemes[0]] || story.aiThemes[0]}
+          </Badge>
+          <h3 className="font-headline text-2xl font-bold leading-tight">
+            {story.title}
+          </h3>
+        </div>
+      </Card>
+    </Link>
+  );
+};
+
+const HeroCarousel = () => {
+  const { language } = useLanguage();
+  const allStories = getTranslatedStories({ lang: language });
+
+  const highlightedStories = [
+    'smong-selamat-dari-lautan',
+    'dapur-umum-perdamaian',
+    'hutan-bakau-penjaga-pantai',
+    'perempuan-penganyam-harapan',
+    'kopi-gayo-aroma-perdamaian',
+    'arsitektur-rumah-panggung',
+  ]
+    .map(id => allStories.find(s => s.id === id))
+    .filter((s): s is Story => s !== null && s !== undefined);
+
+  const [emblaRef, emblaApi] = useEmblaCarousel(CAROUSEL_OPTIONS);
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
+  if (highlightedStories.length === 0) {
+    return null;
+  }
+
+  return (
+    <div className="relative mx-auto mt-8 w-full max-w-6xl">
+      <div className="overflow-hidden" ref={emblaRef}>
+        <div className="flex -ml-4">
+          {highlightedStories.map(story => (
+            <div
+              className="basis-full flex-grow-0 flex-shrink-0 pl-4 md:basis-1/2 lg:basis-1/3"
+              key={story.id}
+            >
+              <div className="h-[450px]">
+                <HeroStoryCard story={story} />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <Button
+        onClick={scrollPrev}
+        variant="outline"
+        size="icon"
+        className="absolute top-1/2 -left-4 z-10 hidden h-12 w-12 -translate-y-1/2 rounded-full lg:flex"
+      >
+        <ChevronLeft />
+      </Button>
+      <Button
+        onClick={scrollNext}
+        variant="outline"
+        size="icon"
+        className="absolute top-1/2 -right-4 z-10 hidden h-12 w-12 -translate-y-1/2 rounded-full lg:flex"
+      >
+        <ChevronRight />
+      </Button>
+    </div>
+  );
+};
 
 export default function Home() {
   const { dictionary, language } = useLanguage();
@@ -599,7 +593,7 @@ export default function Home() {
               {homeDict.hero.title}
             </h1>
             <p className="hero-v2-desc">{homeDict.hero.description}</p>
-            
+
             <HeroCarousel />
 
             <div className="hero-v2-cta relative z-30 mt-8 flex flex-wrap justify-center gap-4">
@@ -609,7 +603,7 @@ export default function Home() {
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:opacity-90"
               >
                 <Link href="/explore">
-                  <Rocket className="mr-2 h-5 w-5" />
+                  <BookOpen className="mr-2 h-5 w-5" />
                   {homeDict.hero.ctaExplore}
                 </Link>
               </Button>
@@ -770,24 +764,11 @@ export default function Home() {
           </div>
         </div>
 
-        <div>
-          <SplitText
-            text={homeDict.exploreStories.featuredTitle}
-            className="mb-8 text-center font-headline text-2xl font-bold md:text-3xl"
-          />
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {allStories.slice(0, 3).map((story, i) => (
-              <MotionWrapper key={story.id} delay={i * 0.1}>
-                <StoryCard story={story} />
-              </MotionWrapper>
-            ))}
-          </div>
-        </div>
-
         <div className="text-center">
           <Button asChild size="lg">
             <Link href="/explore">
-              {homeDict.exploreStories.loadMore} <ArrowRight />
+              {homeDict.exploreStories.loadMore}{' '}
+              <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
         </div>
@@ -829,7 +810,7 @@ export default function Home() {
               <Button asChild size="lg">
                 <Link href="/interactive">
                   {homeDict.interactiveLearning.cta}
-                  <ArrowRight />
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </CardContent>
@@ -850,7 +831,69 @@ export default function Home() {
         as="section"
         className="container mx-auto px-4 rounded-2xl"
       >
-        <div className="relative overflow-hidden rounded-2xl bg-blue-600 text-white">
+        <div className="relative overflow-hidden rounded-2xl bg-gray-900 text-white">
+          <Image
+            src="https://cdn.dribbble.com/userupload/13448080/file/original-e275af77b98be7d7d015e61704339958.png"
+            alt="Abstract background for school section"
+            fill
+            className="object-cover opacity-20"
+            data-ai-hint="abstract pattern"
+          />
+          <div className="relative grid items-center gap-12 p-8 md:grid-cols-2 md:p-16">
+            <MotionWrapper className="z-10" delay={0.1}>
+              <Badge variant="secondary" className="mb-4">
+                Untuk Guru & Sekolah
+              </Badge>
+              <h2 className="font-headline text-3xl font-bold md:text-4xl">
+                Wave of School: Ciptakan Masa Depan Pendidikan
+              </h2>
+              <p className="mt-4 text-gray-300">
+                Ubah cerita lokal menjadi konten pembelajaran interaktif dengan
+                kekuatan AI. Berdayakan siswa dan berkolaborasi dengan pendidik
+                lainnya.
+              </p>
+              <div className="mt-6 space-y-3">
+                <div className="flex items-center gap-3">
+                  <BrainCircuit className="h-5 w-5 text-primary" />
+                  <span>Konten Pembelajaran Berbasis AI</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <GraduationCap className="h-5 w-5 text-primary" />
+                  <span>Kurikulum Adaptif & Kultural</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Users2 className="h-5 w-5 text-primary" />
+                  <span>Ekosistem Kolaborasi Pendidik</span>
+                </div>
+              </div>
+              <Button variant="secondary" asChild className="mt-8">
+                <Link href="/wave-of-school">
+                  Jelajahi Wave of School{' '}
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </MotionWrapper>
+            <MotionWrapper
+              className="relative hidden h-64 md:block"
+              delay={0.2}
+            >
+              <Image
+                src="https://cdn.dribbble.com/userupload/16865134/file/original-ac6d283eaa706824abed43da7e901dd2.jpeg"
+                alt="Wave of School visualization"
+                fill
+                className="rounded-lg object-cover shadow-lg"
+                data-ai-hint="school illustration"
+              />
+            </MotionWrapper>
+          </div>
+        </div>
+      </MotionWrapper>
+
+      <MotionWrapper
+        as="section"
+        className="container mx-auto px-4 rounded-2xl"
+      >
+        <div className="relative overflow-hidden rounded-2xl bg-primary text-primary-foreground">
           <Image
             src="https://cdn.dribbble.com/userupload/29829998/file/original-94b1514fe3d528f62a84cf250c5efc1f.png"
             alt="Abstract background for eduboard"
@@ -873,7 +916,7 @@ export default function Home() {
               </div>
               <Button variant="secondary" asChild className="mt-4">
                 <Link href="/eduboard">
-                  {homeDict.eduboard.cta} <ArrowRight />
+                  {homeDict.eduboard.cta} <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </MotionWrapper>
