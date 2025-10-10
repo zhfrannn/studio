@@ -480,7 +480,7 @@ const HeroStackedCards = () => {
       'perempuan-penganyam-harapan',
     ]
       .map(id => allStories.find(s => s.id === id))
-      .filter((s): s is Story => s !== null);
+      .filter((s): s is Story => s !== null && s !== undefined);
   
     const [activeIndex, setActiveIndex] = useState(0);
   
@@ -494,6 +494,10 @@ const HeroStackedCards = () => {
       );
     };
   
+    if (!highlightedStories.length) {
+        return null;
+    }
+
     return (
       <div className="relative w-full max-w-4xl mx-auto mt-8 flex flex-col items-center justify-center">
         <div className="relative h-[450px] w-[300px] md:h-[500px] md:w-[350px]">
@@ -507,20 +511,22 @@ const HeroStackedCards = () => {
               return isVisible && (
                   <motion.div
                     key={story.id}
-                    initial={{
-                      scale: 1 - position * 0.1,
-                      y: position * 20,
-                      zIndex: highlightedStories.length - position,
-                    }}
-                    animate={{
-                      scale: 1 - position * 0.1,
-                      y: position * 20,
-                      zIndex: highlightedStories.length - position,
-                      opacity: 1 - position * 0.25
-                    }}
-                    exit={{
-                        y: -300,
-                        opacity: 0,
+                    custom={position}
+                    initial="hidden"
+                    animate="visible"
+                    exit="hidden"
+                    variants={{
+                        visible: (i) => ({
+                            x: 0,
+                            y: i * 20,
+                            scale: 1 - i * 0.1,
+                            zIndex: highlightedStories.length - i,
+                            opacity: 1 - i * 0.25,
+                        }),
+                        hidden: (i) => ({
+                            y: -300,
+                            opacity: 0,
+                        })
                     }}
                     transition={{
                       duration: 0.5,
@@ -537,6 +543,7 @@ const HeroStackedCards = () => {
                                   fill
                                   className="object-cover"
                                   data-ai-hint={story.media.featuredImageHint}
+                                  sizes="(max-width: 768px) 100vw, 350px"
                               />
                               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
                               <div className="absolute bottom-0 left-0 p-6 text-white">
