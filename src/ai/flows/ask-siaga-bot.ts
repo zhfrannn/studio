@@ -35,18 +35,25 @@ const AskSiagaBotOutputSchema = z.object({
 export type AskSiagaBotOutput = z.infer<typeof AskSiagaBotOutputSchema>;
 
 export async function askSiagaBot(input: AskSiagaBotInput): Promise<AskSiagaBotOutput> {
-  return askSiagaBotFlow(input);
+  // Prepare a summarized version of stories for the prompt context
+  const storiesForContext = stories
+    .map(
+      story =>
+        `id: ${story.id}, author: ${story.author}, location: ${
+          story.location?.name || ''
+        }, themes: ${story.aiThemes?.join(', ') || ''}`
+    )
+    .join('\n-\n');
+
+  return askSiagaBotFlow({ ...input, storiesForContext });
 }
-
-// Prepare a summarized version of stories for the prompt context
-const storiesForContext = stories.map(story => (
-  `id: ${story.id}, author: ${story.author}, location: ${story.location?.name || ''}, themes: ${story.aiThemes?.join(', ') || ''}`
-)).join('\n-\n');
-
 
 const askSiagaBotPrompt = ai.definePrompt({
   name: 'askSiagaBotPrompt',
-  input: { schema: AskSiagaBotInputSchema },
+  input: { schema: z.object({
+    question: AskSiagaBotInputSchema.shape.question,
+    storiesForContext: z.string(),
+  }) },
   output: { schema: AskSiagaBotOutputSchema },
   prompt: `You are Siaga-Bot, a friendly and knowledgeable AI assistant for the Wave of Voice platform. Your purpose is to educate users about disaster preparedness, local wisdom, and peacebuilding in Aceh, based on a collection of real stories.
 
@@ -55,7 +62,7 @@ const askSiagaBotPrompt = ai.definePrompt({
 
   Available Stories:
   ---
-  ${storiesForContext}
+  {{{storiesForContext}}}
   ---
 
   TASK:
@@ -73,7 +80,10 @@ const askSiagaBotPrompt = ai.definePrompt({
 const askSiagaBotFlow = ai.defineFlow(
   {
     name: 'askSiagaBotFlow',
-    inputSchema: AskSiagaBotInputSchema,
+    inputSchema: z.object({
+        question: AskSiagaBotInputSchema.shape.question,
+        storiesForContext: z.string(),
+    }),
     outputSchema: AskSiagaBotOutputSchema,
   },
   async (input) => {

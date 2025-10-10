@@ -78,7 +78,7 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
               {story.location && (
                 <div className="flex items-center gap-2">
                   <Calendar className="h-4 w-4" />
-                  <span>{story.location.name}</span>
+                  <span>{story.location?.name}</span>
                 </div>
               )}
             </div>
