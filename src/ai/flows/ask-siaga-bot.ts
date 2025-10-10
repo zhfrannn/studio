@@ -1,4 +1,3 @@
-
 'use server';
 
 /**
@@ -42,6 +41,7 @@ const askSiagaBotFlow = ai.defineFlow(
     outputSchema: AskSiagaBotOutputSchema,
   },
   async ({ query, language }) => {
+    // Select only the necessary fields for the AI context.
     const stories = getTranslatedStories({ lang: language }).map(
       ({ id, title, summary }) => ({ id, title, summary })
     );
