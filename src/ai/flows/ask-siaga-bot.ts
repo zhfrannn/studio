@@ -39,12 +39,9 @@ export async function askSiagaBot(input: AskSiagaBotInput): Promise<AskSiagaBotO
 }
 
 // Prepare a summarized version of stories for the prompt context
-const storiesForContext = stories.map(story => ({
-  id: story.id,
-  title: story.title,
-  summary: story.summary,
-  themes: story.aiThemes,
-})).join('\n-\n');
+const storiesForContext = stories.map(story => (
+  `id: ${story.id}, author: ${story.author}, location: ${story.location?.name || ''}, themes: ${story.aiThemes?.join(', ') || ''}`
+)).join('\n-\n');
 
 
 const askSiagaBotPrompt = ai.definePrompt({

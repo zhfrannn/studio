@@ -55,13 +55,13 @@ export default function StoryGrid({ allStories }: StoryGridProps) {
   const { dictionary } = useLanguage();
   const storyGridDict = dictionary.storyGrid;
   
-  const allLocations = [...new Set(allStories.map(s => s.location.name))];
+  const allLocations = [...new Set(allStories.filter(s => s.location).map(s => s.location.name))];
 
   const filteredStories = allStories.filter(story => {
     const themeMatch =
       selectedTheme === 'all' || story.aiThemes.includes(selectedTheme as StoryTheme);
     const locationMatch =
-      selectedLocation === 'all' || story.location.name === selectedLocation;
+      selectedLocation === 'all' || (story.location && story.location.name === selectedLocation);
     const searchMatch =
       searchTerm.trim() === '' ||
       story.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -239,5 +239,3 @@ export default function StoryGrid({ allStories }: StoryGridProps) {
     </div>
   );
 }
-
-    

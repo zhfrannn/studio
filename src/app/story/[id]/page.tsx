@@ -1,3 +1,4 @@
+
 import { notFound } from 'next/navigation';
 import { stories as staticStories } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
@@ -74,10 +75,12 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
                 <User className="h-4 w-4" />
                 <span>{story.author}</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Calendar className="h-4 w-4" />
-                <span>{story.location.name}</span>
-              </div>
+              {story.location && (
+                <div className="flex items-center gap-2">
+                  <Calendar className="h-4 w-4" />
+                  <span>{story.location.name}</span>
+                </div>
+              )}
             </div>
             <div className="mt-4 flex flex-wrap gap-2">
               {story.aiThemes.map(theme => (
