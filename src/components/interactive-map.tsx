@@ -9,6 +9,8 @@ import Link from 'next/link';
 import { Button } from './ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { useLanguage } from '@/context/language-context';
+import { AnimatePresence, motion } from 'framer-motion';
+import Image from 'next/image';
 
 interface InteractiveMapProps {
   stories: Story[];
@@ -95,41 +97,58 @@ export default function InteractiveMap({ stories }: InteractiveMapProps) {
                 aria-label={`View story: ${story.title}`}
                 className="transform transition-transform duration-200 hover:scale-125"
               >
-                <MapPin className="h-8 w-8 fill-red-600 text-white drop-shadow-lg" />
+                <MapPin className="h-8 w-8 fill-primary text-white drop-shadow-lg" />
               </button>
             </Marker>
           ) : null
         )}
 
-        {selectedStory && selectedStory.location && (
-          <Popup
-            latitude={selectedStory.location.lat}
-            longitude={selectedStory.location.lng}
-            onClose={() => setSelectedStory(null)}
-            closeOnClick={false}
-            anchor="bottom"
-            offset={40}
-          >
-            <Card className="max-w-xs border-0 shadow-none">
-              <CardHeader className="p-2">
-                <CardTitle className="text-base">{selectedStory.title}</CardTitle>
-              </CardHeader>
-              <CardContent className="p-2">
-                <p className="mb-2 text-xs text-muted-foreground line-clamp-2">
-                  {selectedStory.summary}
-                </p>
-                <Button size="sm" asChild>
-                  <Link href={`/story/${selectedStory.id}`}>
-                    {dictionary.storyCard.readMore}
-                  </Link>
-                </Button>
-              </CardContent>
-            </Card>
-          </Popup>
-        )}
+        <AnimatePresence>
+          {selectedStory && selectedStory.location && (
+            <Popup
+              latitude={selectedStory.location.lat}
+              longitude={selectedStory.location.lng}
+              onClose={() => setSelectedStory(null)}
+              closeButton={false}
+              closeOnClick={false}
+              anchor="bottom"
+              offset={40}
+              className="z-10"
+            >
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9, y: 10 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.9, y: 10 }}
+                transition={{ duration: 0.2 }}
+              >
+                <Card className="max-w-xs overflow-hidden border-0 shadow-2xl">
+                  <div className="relative h-32 w-full">
+                    <Image
+                      src={selectedStory.media.featuredImage}
+                      alt={selectedStory.title}
+                      fill
+                      className="object-cover"
+                      data-ai-hint={selectedStory.media.featuredImageHint}
+                    />
+                  </div>
+                  <CardHeader className="p-4">
+                    <CardTitle className="text-base font-bold leading-tight">
+                      {selectedStory.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="px-4 pb-4 pt-0">
+                    <Button size="sm" asChild className="w-full">
+                      <Link href={`/story/${selectedStory.id}`}>
+                        {dictionary.storyCard.readMore}
+                      </Link>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </Popup>
+          )}
+        </AnimatePresence>
       </Map>
     </div>
   );
 }
-
-    

@@ -303,3 +303,16 @@
 .word {
   display: inline-block;
 }
+
+
+/* Mapbox Popup Customization */
+.mapboxgl-popup-content {
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+}
+
+.mapboxgl-popup-tip {
+  display: none;
+}
+
