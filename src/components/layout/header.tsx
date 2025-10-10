@@ -4,7 +4,7 @@ import Link from 'next/link';
 import WaveMascot from '@/components/icons/wave-mascot';
 import ThemeToggle from './theme-toggle';
 import { Button } from '../ui/button';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Share2 } from 'lucide-react';
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useLanguage } from '@/context/language-context';
@@ -21,8 +21,12 @@ const Header = () => {
     { href: '/explore', label: dictionary.header.stories },
     { href: '/interactive', label: dictionary.header.interactive },
     { href: '/eduboard', label: dictionary.header.eduboard },
-    { href: '/wave-of-school', label: 'Wave of School', isSpecial: true },
   ];
+  
+  const specialLinks = [
+     { href: '/wave-of-school', label: 'Wave of School' },
+     { href: '/share-story', label: dictionary.header.shareStory },
+  ]
 
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
 
@@ -39,29 +43,39 @@ const Header = () => {
         </div>
 
         <nav className="hidden items-center gap-2 text-sm font-medium md:flex">
-          {navLinks.map(link =>
-            link.isSpecial ? (
-              <Button
-                key={link.href}
-                asChild
-                className="shiny-button bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:opacity-90"
-              >
-                <Link href={link.href}>{link.label}</Link>
-              </Button>
-            ) : (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="nav-link relative px-3 py-2 text-muted-foreground transition-colors hover:text-foreground"
-              >
-                {link.label}
-                <span className="nav-link-indicator absolute bottom-0 left-0 h-0.5 w-full scale-x-0 bg-primary transition-transform duration-300 ease-out"></span>
-              </Link>
-            )
-          )}
+          {navLinks.map(link => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="nav-link relative px-3 py-2 text-muted-foreground transition-colors hover:text-foreground"
+            >
+              {link.label}
+              <span className="nav-link-indicator absolute bottom-0 left-0 h-0.5 w-full scale-x-0 bg-primary transition-transform duration-300 ease-out"></span>
+            </Link>
+          ))}
         </nav>
 
         <div className="flex flex-1 items-center justify-end gap-2">
+          <div className="hidden md:flex items-center gap-2">
+            <Button
+              asChild
+              className="shiny-button bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:opacity-90"
+              size="sm"
+            >
+              <Link href="/wave-of-school">Wave of School</Link>
+            </Button>
+             <Button
+                asChild
+                variant="outline"
+                size="sm"
+              >
+                <Link href="/share-story">
+                  <Share2 className="mr-2 h-4 w-4" />
+                  {dictionary.header.shareStory}
+                </Link>
+              </Button>
+          </div>
+
           <AuthButton />
           <LanguageToggle />
           <ThemeToggle />
@@ -86,17 +100,18 @@ const Header = () => {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={cn(
-                    'rounded-md px-3 py-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground',
-                    link.isSpecial && 'bg-primary text-primary-foreground'
-                  )}
+                  className='rounded-md px-3 py-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground'
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.label}
                 </Link>
               ))}
-              <Button asChild>
-                <Link href="/#share-story" onClick={() => setMobileMenuOpen(false)}>
+               <Button asChild className="shiny-button bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:opacity-90">
+                 <Link href="/wave-of-school" onClick={() => setMobileMenuOpen(false)}>Wave of School</Link>
+               </Button>
+               <Button asChild variant="outline">
+                <Link href="/share-story" onClick={() => setMobileMenuOpen(false)}>
+                  <Share2 className="mr-2 h-4 w-4" />
                   {dictionary.header.shareStory}
                 </Link>
               </Button>
