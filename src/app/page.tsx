@@ -16,6 +16,7 @@ import { getTranslatedStories } from '@/lib/data';
 import Link from 'next/link';
 import {
   ArrowRight,
+  ArrowLeft,
   BookOpen,
   Lightbulb,
   MessageCircle,
@@ -36,7 +37,8 @@ import {
   User,
   Loader2,
   MessageSquareText,
-  ArrowLeft,
+  ChevronLeft,
+  ChevronRight,
 } from 'lucide-react';
 import InteractiveMap from '@/components/interactive-map';
 import { Progress } from '@/components/ui/progress';
@@ -46,7 +48,7 @@ import MotionWrapper from '@/components/motion-wrapper';
 import SplitText from '@/components/ui/split-text';
 import LogoLoop from '@/components/ui/logo-loop';
 import { useLanguage } from '@/context/language-context';
-import type { Story } from '@/lib/types';
+import type { Story, StoryTheme } from '@/lib/types';
 
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -461,61 +463,106 @@ ${story}`;
   );
 }
 
-const HeroCarousel = () => {
-    const { language } = useLanguage();
-    const allStories = getTranslatedStories({ lang: language });
-  
-    const storyImages = [
-      {
-        id: 'dapur-umum-perdamaian',
-        image: 'https://cdn.dribbble.com/userupload/32247153/file/original-1fe677ceff3cabb6bf2037dc808ace4d.jpg',
-        hint: 'community cooking',
-      },
-      {
-        id: 'hutan-bakau-penjaga-pantai',
-        image: 'https://cdn.dribbble.com/userupload/27796411/file/original-992aa78e02707e86da76830a224a2f2d.png',
-        hint: 'mangrove illustration',
-      },
-      {
-        id: 'smong-selamat-dari-lautan',
-        image: 'https://cdn.dribbble.com/userupload/26382361/file/original-a94049296846fa5218859ac34ea57b23.png',
-        hint: 'ocean wave illustration',
-      },
-      {
-        id: 'bah-tangse-sungai-murka',
-        image: 'https://cdn.dribbble.com/userupload/29829998/file/original-94b1514fe3d528f62a84cf250c5efc1f.png',
-        hint: 'river village illustration',
-      },
-       {
-        id: 'perempuan-penganyam-harapan',
-        image: 'https://cdn.dribbble.com/userupload/32707329/file/original-01992760209b192c3d12d849dc7ee6d4.jpeg',
-        hint: 'women weaving',
-      },
-    ];
-  
-    const carouselStories = storyImages.map(({ id, image, hint }) => {
-        const story = allStories.find(s => s.id === id);
-        if (!story) return null;
-        return { ...story, media: { ...story.media, featuredImage: image, featuredImageHint: hint } };
-    }).filter((s): s is Story => s !== null);
 
-    // Duplicate stories for infinite loop effect
-    const extendedStories = [...carouselStories, ...carouselStories];
+const HeroStackedCards = () => {
+    const { language, dictionary } = useLanguage();
+    const allStories = getTranslatedStories({ lang: language });
+    const themeLabels: Record<StoryTheme, string> = {
+      'Disaster Preparedness': dictionary.storyGrid.themes.disaster,
+      'Local Wisdom': dictionary.storyGrid.themes.wisdom,
+      Peacebuilding: dictionary.storyGrid.themes.peace,
+    };
+  
+    const highlightedStories = [
+      'smong-selamat-dari-lautan',
+      'dapur-umum-perdamaian',
+      'hutan-bakau-penjaga-pantai',
+      'perempuan-penganyam-harapan',
+    ]
+      .map(id => allStories.find(s => s.id === id))
+      .filter((s): s is Story => s !== null);
+  
+    const [activeIndex, setActiveIndex] = useState(0);
+  
+    const handleNext = () => {
+      setActiveIndex(prev => (prev + 1) % highlightedStories.length);
+    };
+  
+    const handlePrev = () => {
+      setActiveIndex(
+        prev => (prev - 1 + highlightedStories.length) % highlightedStories.length
+      );
+    };
   
     return (
-      <div className="hero-v2-thumbs">
-        {extendedStories.map((story, index) => (
-            <Link href={`/story/${story.id}`} key={`${story.id}-${index}`}>
-                <Image
-                    src={story.media.featuredImage}
-                    alt={story.title}
-                    width={300}
-                    height={400}
-                    className="hero-v2-thumb"
-                    data-ai-hint={story.media.featuredImageHint}
-                />
-            </Link>
-        ))}
+      <div className="relative w-full max-w-4xl mx-auto mt-8 flex flex-col items-center justify-center">
+        <div className="relative h-[450px] w-[300px] md:h-[500px] md:w-[350px]">
+          <AnimatePresence>
+            {highlightedStories.map((story, index) => {
+              const position =
+                (index - activeIndex + highlightedStories.length) %
+                highlightedStories.length;
+              const isVisible = position < 4;
+              
+              return isVisible && (
+                  <motion.div
+                    key={story.id}
+                    initial={{
+                      scale: 1 - position * 0.1,
+                      y: position * 20,
+                      zIndex: highlightedStories.length - position,
+                    }}
+                    animate={{
+                      scale: 1 - position * 0.1,
+                      y: position * 20,
+                      zIndex: highlightedStories.length - position,
+                      opacity: 1 - position * 0.25
+                    }}
+                    exit={{
+                        y: -300,
+                        opacity: 0,
+                    }}
+                    transition={{
+                      duration: 0.5,
+                      ease: 'easeInOut',
+                    }}
+                    className="absolute w-full h-full"
+                  >
+                    <Link href={`/story/${story.id}`}>
+                      <Card className="h-full w-full overflow-hidden rounded-2xl shadow-2xl">
+                          <div className="relative h-full w-full">
+                              <Image 
+                                  src={story.media.featuredImage}
+                                  alt={story.title}
+                                  fill
+                                  className="object-cover"
+                                  data-ai-hint={story.media.featuredImageHint}
+                              />
+                              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                              <div className="absolute bottom-0 left-0 p-6 text-white">
+                                  <Badge className="mb-2 backdrop-blur-sm bg-white/20 border-white/50">{themeLabels[story.aiThemes[0]] || story.aiThemes[0]}</Badge>
+                                  <h3 className="font-headline text-2xl font-bold">{story.title}</h3>
+                                  <p className="text-sm opacity-80">{story.author}</p>
+                              </div>
+                          </div>
+                      </Card>
+                    </Link>
+                  </motion.div>
+              )
+            })}
+          </AnimatePresence>
+        </div>
+         <div className="mt-8 flex items-center gap-4">
+            <Button onClick={handlePrev} variant="outline" size="icon" className="rounded-full h-12 w-12">
+                <ChevronLeft />
+            </Button>
+            <span className="text-sm text-muted-foreground font-semibold">
+                {activeIndex + 1} / {highlightedStories.length}
+            </span>
+            <Button onClick={handleNext} variant="outline" size="icon" className="rounded-full h-12 w-12">
+                <ChevronRight />
+            </Button>
+        </div>
       </div>
     );
   };
@@ -556,7 +603,7 @@ export default function Home() {
             </h1>
             <p className="hero-v2-desc">{homeDict.hero.description}</p>
             
-            <HeroCarousel />
+            <HeroStackedCards />
 
             <div className="hero-v2-cta relative z-30 mt-8 flex flex-wrap justify-center gap-4">
               <Button

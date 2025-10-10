@@ -259,7 +259,7 @@
     @apply inline-block -mt-4 -ml-4 h-8 w-8 text-gray-700 dark:text-gray-300;
 }
 
-/* Stacked Cards Hero */
+/* Stacked Cards Hero (Old - for reference) */
 .stacked-cards-container {
     perspective: 1000px;
 }
