@@ -12,7 +12,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import StoryCard from '@/components/story-card';
-import { stories as staticStories } from '@/lib/data';
+import { getTranslatedStories } from '@/lib/data';
 import Link from 'next/link';
 import {
   ArrowRight,
@@ -47,7 +47,7 @@ import LogoLoop from '@/components/ui/logo-loop';
 import { useLanguage } from '@/context/language-context';
 import type { Story } from '@/lib/types';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -72,23 +72,127 @@ import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { cn } from '@/lib/utils';
-// import { askSiagaBot, AskSiagaBotOutput } from '@/ai/flows/ask-siaga-bot';
+import { motion, useMotionValue, useSpring } from 'framer-motion';
+import { gsap } from 'gsap';
 
 // Tipe untuk pesan chatbot
 type Message = {
   role: 'user' | 'bot';
   text: string;
-  storySuggestion?: any; // AskSiagaBotOutput['storySuggestion'];
+  storySuggestion?: any;
 };
+
+const StackedStoryCard = ({
+  story,
+  index,
+  total,
+  mouse,
+}: {
+  story: Story;
+  index: number;
+  total: number;
+  mouse: { x: any; y: any };
+}) => {
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  const rotateX = useSpring(useMotionValue(0), {
+    stiffness: 150,
+    damping: 20,
+    mass: 0.1,
+  });
+  const rotateY = useSpring(useMotionValue(0), {
+    stiffness: 150,
+    damping: 20,
+    mass: 0.1,
+  });
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!cardRef.current) return;
+      const rect = cardRef.current.getBoundingClientRect();
+      const width = rect.width;
+      const height = rect.height;
+      const mouseX = e.clientX - rect.left;
+      const mouseY = e.clientY - rect.top;
+      const xPct = mouseX / width - 0.5;
+      const yPct = mouseY / height - 0.5;
+      rotateX.set(-yPct * 10);
+      rotateY.set(xPct * 10);
+    };
+
+    const handleMouseLeave = () => {
+      rotateX.set(0);
+      rotateY.set(0);
+    };
+
+    const cardElement = cardRef.current;
+    cardElement?.addEventListener('mousemove', handleMouseMove);
+    cardElement?.addEventListener('mouseleave', handleMouseLeave);
+
+    return () => {
+      cardElement?.removeEventListener('mousemove', handleMouseMove);
+      cardElement?.removeEventListener('mouseleave', handleMouseLeave);
+    };
+  }, [rotateX, rotateY]);
+
+  return (
+    <motion.div
+      ref={cardRef}
+      className="absolute h-full w-full"
+      style={{
+        transformStyle: 'preserve-3d',
+        rotateX,
+        rotateY,
+      }}
+      animate={{
+        top: index * -15,
+        scale: 1 - index * 0.05,
+        zIndex: total - index,
+      }}
+    >
+      <Link href={`/story/${story.id}`}>
+        <Card className="group relative h-full w-full overflow-hidden rounded-2xl border-4 border-white/20 shadow-2xl">
+          <Image
+            src={story.media.featuredImage}
+            alt={story.title}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-110"
+            data-ai-hint={story.media.featuredImageHint}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+          <div className="absolute bottom-0 left-0 p-6 text-white">
+            <Badge variant="secondary" className="mb-2">
+              {story.aiThemes?.[0]}
+            </Badge>
+            <h3 className="font-headline text-2xl">{story.title}</h3>
+            <p className="text-sm opacity-80">{story.author}</p>
+          </div>
+          <div className="absolute bottom-2 right-3 text-xs text-white/50">
+            Image by Julia Sevchenko
+          </div>
+        </Card>
+      </Link>
+    </motion.div>
+  );
+};
+
 
 function ShareStorySection() {
   const { dictionary } = useLanguage();
   const shareStoryDict = dictionary.home.shareStory;
 
+  const allStories = getTranslatedStories({ lang: useLanguage().language });
+  const locations = [
+    ...new Set(allStories.map(s => s.location?.name).filter(Boolean)),
+  ] as string[];
+
+
   // Schema untuk form
   const formSchema = z.object({
     name: z.string().optional(),
-    location: z.string().nonempty({ message: shareStoryDict.validation.locationRequired }),
+    location: z
+      .string()
+      .nonempty({ message: shareStoryDict.validation.locationRequired }),
     storyType: z
       .array(z.string())
       .refine(value => value.some(item => item), {
@@ -110,8 +214,6 @@ function ShareStorySection() {
     { id: 'Peacebuilding', label: shareStoryDict.storyTypes.peace },
     { id: 'Local Wisdom', label: shareStoryDict.storyTypes.wisdom },
   ];
-  
-  const locations = [...new Set(staticStories.filter(s => s.location).map(s => s.location!.name))];
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -158,12 +260,12 @@ ${story}`;
 
     // AI logic is disabled
     setTimeout(() => {
-        const botMessage: Message = {
-            role: 'bot',
-            text: "Maaf, fitur AI saat ini sedang tidak tersedia.",
-        };
-        setMessages(prev => [...prev, botMessage]);
-        setIsLoading(false);
+      const botMessage: Message = {
+        role: 'bot',
+        text: 'Maaf, fitur AI saat ini sedang tidak tersedia.',
+      };
+      setMessages(prev => [...prev, botMessage]);
+      setIsLoading(false);
     }, 1000);
   };
 
@@ -178,16 +280,16 @@ ${story}`;
           text={shareStoryDict.title}
           className="font-headline text-3xl md:text-4xl"
         />
-        <p className="text-muted-foreground">
-          {shareStoryDict.description}
-        </p>
+        <p className="text-muted-foreground">{shareStoryDict.description}</p>
       </div>
 
       <div className="grid grid-cols-1 gap-12 rounded-2xl md:grid-cols-1 lg:grid-cols-2">
         <MotionWrapper delay={0.1}>
           <Card>
             <CardHeader>
-              <CardTitle className="text-2xl">{shareStoryDict.formTitle}</CardTitle>
+              <CardTitle className="text-2xl">
+                {shareStoryDict.formTitle}
+              </CardTitle>
             </CardHeader>
             <CardContent>
               <Form {...form}>
@@ -202,7 +304,10 @@ ${story}`;
                       <FormItem>
                         <FormLabel>{shareStoryDict.labels.name}</FormLabel>
                         <FormControl>
-                          <Input placeholder={shareStoryDict.placeholders.name} {...field} />
+                          <Input
+                            placeholder={shareStoryDict.placeholders.name}
+                            {...field}
+                          />
                         </FormControl>
                       </FormItem>
                     )}
@@ -220,7 +325,11 @@ ${story}`;
                         >
                           <FormControl>
                             <SelectTrigger>
-                              <SelectValue placeholder={shareStoryDict.placeholders.location} />
+                              <SelectValue
+                                placeholder={
+                                  shareStoryDict.placeholders.location
+                                }
+                              />
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
@@ -242,7 +351,9 @@ ${story}`;
                     render={() => (
                       <FormItem>
                         <div className="mb-4">
-                          <FormLabel className="text-base">{shareStoryDict.labels.storyType}</FormLabel>
+                          <FormLabel className="text-base">
+                            {shareStoryDict.labels.storyType}
+                          </FormLabel>
                         </div>
                         <div className="grid grid-cols-2 gap-4">
                           {storyTypes.map(item => (
@@ -315,11 +426,9 @@ ${story}`;
                           />
                         </FormControl>
                         <div className="space-y-1 leading-none">
-                          <FormLabel>
-                           {shareStoryDict.labels.agree}
-                          </FormLabel>
+                          <FormLabel>{shareStoryDict.labels.agree}</FormLabel>
                           <FormDescription className="text-xs">
-                             {shareStoryDict.descriptions.agree}
+                            {shareStoryDict.descriptions.agree}
                           </FormDescription>
                         </div>
                       </FormItem>
@@ -350,86 +459,92 @@ ${story}`;
               </div>
             </CardHeader>
             <CardContent className="flex-grow overflow-hidden">
-                <ScrollArea className="h-full pr-4 min-h-[300px]">
-                  <div className="space-y-4">
-                    {messages.map((message, index) => (
-                      <div
-                        key={index}
+              <ScrollArea className="h-full pr-4 min-h-[300px]">
+                <div className="space-y-4">
+                  {messages.map((message, index) => (
+                    <div
+                      key={index}
+                      className={cn(
+                        'flex items-start gap-3',
+                        message.role === 'user'
+                          ? 'flex-row-reverse'
+                          : 'flex-row'
+                      )}
+                    >
+                      <span
                         className={cn(
-                          'flex items-start gap-3',
+                          'flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full',
                           message.role === 'user'
-                            ? 'flex-row-reverse'
-                            : 'flex-row'
+                            ? 'bg-primary text-primary-foreground'
+                            : 'bg-muted'
                         )}
                       >
-                        <span
-                          className={cn(
-                            'flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full',
-                            message.role === 'user'
-                              ? 'bg-primary text-primary-foreground'
-                              : 'bg-muted'
-                          )}
-                        >
-                          {message.role === 'user' ? (
-                            <User size={16} />
-                          ) : (
-                            <Bot size={16} />
-                          )}
-                        </span>
-                        <div
-                          className={cn(
-                            'max-w-[85%] rounded-lg p-3 text-sm',
-                            message.role === 'user'
-                              ? 'bg-primary text-primary-foreground'
-                              : 'bg-muted'
-                          )}
-                        >
-                          <p className="whitespace-pre-wrap">{message.text}</p>
-                          {message.storySuggestion && (
-                            <Button asChild variant="secondary" size="sm" className="mt-3 w-full">
-                              <Link
-                                href={`/story/${message.storySuggestion.id}`}
-                              >
-                                <BookOpen className="mr-2 h-4 w-4"/>
-                                {shareStoryDict.aiHelper.readStory}: {message.storySuggestion.title}
-                              </Link>
-                             </Button>
-                          )}
-                        </div>
+                        {message.role === 'user' ? (
+                          <User size={16} />
+                        ) : (
+                          <Bot size={16} />
+                        )}
+                      </span>
+                      <div
+                        className={cn(
+                          'max-w-[85%] rounded-lg p-3 text-sm',
+                          message.role === 'user'
+                            ? 'bg-primary text-primary-foreground'
+                            : 'bg-muted'
+                        )}
+                      >
+                        <p className="whitespace-pre-wrap">{message.text}</p>
+                        {message.storySuggestion && (
+                          <Button
+                            asChild
+                            variant="secondary"
+                            size="sm"
+                            className="mt-3 w-full"
+                          >
+                            <Link
+                              href={`/story/${message.storySuggestion.id}`}
+                            >
+                              <BookOpen className="mr-2 h-4 w-4" />
+                              {shareStoryDict.aiHelper.readStory}:{' '}
+                              {message.storySuggestion.title}
+                            </Link>
+                          </Button>
+                        )}
                       </div>
-                    ))}
-                    {isLoading && (
-                      <div className="flex flex-row items-start gap-3">
-                         <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-muted">
-                            <Bot size={16} />
-                        </span>
-                        <div className="max-w-[85%] rounded-lg bg-muted p-3 text-sm">
-                           <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
-                        </div>
+                    </div>
+                  ))}
+                  {isLoading && (
+                    <div className="flex flex-row items-start gap-3">
+                      <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-muted">
+                        <Bot size={16} />
+                      </span>
+                      <div className="max-w-[85%] rounded-lg bg-muted p-3 text-sm">
+                        <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
                       </div>
-                    )}
-                  </div>
-                </ScrollArea>
-              </CardContent>
-              <div className="border-t p-4">
-                 <form
-                  onSubmit={e => {
-                    e.preventDefault();
-                    handleChatSend();
-                  }}
-                  className="flex w-full items-center gap-2"
-                >
-                  <Input
-                    value={input}
-                    onChange={e => setInput(e.target.value)}
-                    placeholder={shareStoryDict.aiHelper.placeholder}
-                    disabled={isLoading}
-                  />
-                  <Button type="submit" size="icon" disabled={isLoading}>
-                    <Send className="h-4 w-4" />
-                  </Button>
-                </form>
-              </div>
+                    </div>
+                  )}
+                </div>
+              </ScrollArea>
+            </CardContent>
+            <div className="border-t p-4">
+              <form
+                onSubmit={e => {
+                  e.preventDefault();
+                  handleChatSend();
+                }}
+                className="flex w-full items-center gap-2"
+              >
+                <Input
+                  value={input}
+                  onChange={e => setInput(e.target.value)}
+                  placeholder={shareStoryDict.aiHelper.placeholder}
+                  disabled={isLoading}
+                />
+                <Button type="submit" size="icon" disabled={isLoading}>
+                  <Send className="h-4 w-4" />
+                </Button>
+              </form>
+            </div>
           </Card>
         </MotionWrapper>
       </div>
@@ -437,35 +552,117 @@ ${story}`;
   );
 }
 
+const StackedCardsHero = () => {
+  const { language } = useLanguage();
+  const allStories = getTranslatedStories({ lang: language });
+  const containerRef = useRef<HTMLDivElement>(null);
+  const mouse = {
+    x: useMotionValue(0),
+    y: useMotionValue(0),
+  };
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const { clientX, clientY } = e;
+      if (containerRef.current) {
+        const { left, top, width, height } = containerRef.current.getBoundingClientRect();
+        const x = clientX - (left + width / 2);
+        const y = clientY - (top + height / 2);
+        mouse.x.set(x);
+        mouse.y.set(y);
+      }
+    };
+    
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
+  useEffect(() => {
+    if(containerRef.current) {
+        gsap.fromTo(containerRef.current.children, 
+            { y: '100%', opacity: 0 },
+            { y: '0%', opacity: 1, duration: 0.5, stagger: 0.1, ease: 'power3.out' }
+        );
+    }
+  }, [])
+  
+
+  const storyImages: { id: string; image: string; hint: string }[] = [
+    {
+      id: 'dapur-umum-perdamaian',
+      image:
+        'https://cdn.dribbble.com/userupload/32247153/file/original-1fe677ceff3cabb6bf2037dc808ace4d.jpg',
+      hint: 'community cooking',
+    },
+    {
+      id: 'hutan-bakau-penjaga-pantai',
+      image:
+        'https://cdn.dribbble.com/userupload/27796411/file/original-992aa78e02707e86da76830a224a2f2d.png',
+      hint: 'mangrove illustration',
+    },
+    {
+      id: 'smong-selamat-dari-lautan',
+      image:
+        'https://cdn.dribbble.com/userupload/26382361/file/original-a94049296846fa5218859ac34ea57b23.png',
+      hint: 'ocean wave illustration',
+    },
+     {
+      id: 'bah-tangse-sungai-murka',
+      image:
+        'https://cdn.dribbble.com/userupload/29829998/file/original-94b1514fe3d528f62a84cf250c5efc1f.png',
+      hint: 'river village illustration',
+    },
+  ];
+
+  const cardStories = storyImages
+    .map(({ id, image, hint }) => {
+      const story = allStories.find(s => s.id === id);
+      if (!story) return null;
+      return {
+        ...story,
+        media: { ...story.media, featuredImage: image, featuredImageHint: hint },
+      };
+    })
+    .filter((s): s is Story => s !== null);
+
+  return (
+    <div ref={containerRef} className="relative aspect-[1.3] w-full max-w-xl [perspective:800px] group">
+      {cardStories.map((story, i) => (
+        <StackedStoryCard
+          key={story.id}
+          story={story}
+          index={i}
+          total={cardStories.length}
+          mouse={mouse}
+        />
+      ))}
+    </div>
+  );
+};
+
 
 export default function Home() {
-  const { dictionary } = useLanguage();
+  const { dictionary, language } = useLanguage();
   const homeDict = dictionary.home;
 
-  const allStories: Story[] = staticStories.map(story => {
-    const translatedContent = dictionary.stories[story.id as keyof typeof dictionary.stories];
-    return {
-      ...story,
-      ...translatedContent
-    };
-  });
-
-  const featuredStory = allStories[0];
-  const thumbStories = allStories.slice(0, 6);
+  const allStories = getTranslatedStories({ lang: language });
 
   return (
     <div className="space-y-12 pb-16 md:space-y-20">
       <section role="region" aria-labelledby="hero-title">
         <div className="hero-v2-card">
           <Image
-            src="https://cdn.dribbble.com/userupload/13448080/file/original-e275af77b98be7d7d015e61704339958.png?resize=752x&vertical=center"
+            src="https://cdn.dribbble.com/userupload/13448080/file/original-e275af77b98be7d7d015e61704339958.png"
             alt="Abstract blue water pattern"
             fill
             className="object-cover opacity-70"
             data-ai-hint="abstract blue water"
             priority
           />
-          <div className="hero-v2-content">
+          <div className="hero-v2-content flex flex-col items-center">
             <div aria-label="Highlight" className="hero-v2-pill">
               <Sparkles className="h-5 w-5" />
               <span>{homeDict.hero.pill}</span>
@@ -474,23 +671,10 @@ export default function Home() {
               {homeDict.hero.title}
             </h1>
             <p className="hero-v2-desc">{homeDict.hero.description}</p>
+            
+            <StackedCardsHero />
 
-            <div aria-label="Story previews" className="hero-v2-thumbs">
-              {thumbStories.map((story, i) => (
-                <figure key={story.id} className="contents">
-                  <Image
-                    src={story.media.featuredImage}
-                    alt={story.title}
-                    width={360}
-                    height={480}
-                    className="hero-v2-thumb"
-                    data-ai-hint={story.media.featuredImageHint}
-                  />
-                </figure>
-              ))}
-            </div>
-
-            <div className="hero-v2-cta relative z-30 flex flex-wrap justify-center gap-4">
+            <div className="hero-v2-cta relative z-30 mt-12 flex flex-wrap justify-center gap-4">
               <Button
                 asChild
                 size="lg"
@@ -829,5 +1013,3 @@ export default function Home() {
     </div>
   );
 }
-
-    

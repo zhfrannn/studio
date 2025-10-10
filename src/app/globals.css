@@ -166,6 +166,7 @@
 /* New Hero Styles */
 .hero-v2-card {
     @apply relative overflow-hidden bg-gray-900 py-8 text-center sm:py-16;
+    min-height: 90vh;
 }
 
 .hero-v2-card::before {
@@ -247,6 +248,36 @@
 .hero-v2-note-arrow {
     @apply inline-block -mt-4 -ml-4 h-8 w-8 text-gray-700 dark:text-gray-300;
 }
+
+/* Stacked Cards Hero */
+.stacked-cards-container {
+    perspective: 1000px;
+}
+
+.stacked-cards-container:hover > div {
+    transform: rotateX(0deg) rotateY(0deg) !important;
+}
+
+.stacked-cards-container:hover > div:nth-child(1) {
+    transform: translate3d(0px, 0px, 0px) !important;
+}
+
+.stacked-cards-container:hover > div:nth-child(2) {
+    transform: translate3d(-80px, 0px, -30px) !important;
+}
+
+.stacked-cards-container:hover > div:nth-child(3) {
+    transform: translate3d(80px, 0px, -30px) !important;
+}
+
+.stacked-cards-container:hover > div:nth-child(4) {
+    transform: translate3d(-160px, 0px, -60px) !important;
+}
+
+.stacked-cards-container:hover > div:nth-child(5) {
+    transform: translate3d(160px, 0px, -60px) !important;
+}
+
 
 /* ScrollReveal Styles */
 .scroll-reveal {
