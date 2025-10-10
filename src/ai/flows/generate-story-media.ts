@@ -11,6 +11,9 @@
 import { ai } from '@/ai/genkit';
 import { z } from 'genkit';
 import wav from 'wav';
+import { MediaPart } from 'genkit';
+import * as fs from 'fs';
+import { Readable } from 'stream';
 
 const GenerateStoryMediaInputSchema = z.object({
   storyText: z
@@ -28,18 +31,22 @@ const GenerateStoryMediaOutputSchema = z.object({
 
 export type GenerateStoryMediaOutput = z.infer<typeof GenerateStoryMediaOutputSchema>;
 
-export async function generateStoryMedia(
-  input: GenerateStoryMediaInput
-): Promise<GenerateStoryMediaOutput> {
-  return generateStoryMediaFlow(input);
+async function downloadVideo(video: MediaPart, path: string) {
+    const fetch = (await import('node-fetch')).default;
+    // Add API key before fetching the video.
+    const videoDownloadResponse = await fetch(
+      `${video.media!.url}&key=${process.env.GEMINI_API_KEY}`
+    );
+    if (
+      !videoDownloadResponse ||
+      videoDownloadResponse.status !== 200 ||
+      !videoDownloadResponse.body
+    ) {
+      throw new Error('Failed to fetch video');
+    }
+  
+    Readable.from(videoDownloadResponse.body).pipe(fs.createWriteStream(path));
 }
-
-const textToSpeechPrompt = ai.definePrompt({
-  name: 'textToSpeechPrompt',
-  input: { schema: GenerateStoryMediaInputSchema },
-  output: { schema: z.string() },
-  prompt: `Convert the following text to audio for video narration:\n\n{{{storyText}}}`,
-});
 
 async function toWav(
   pcmData: Buffer,
@@ -99,40 +106,47 @@ const generateStoryMediaFlow = ai.defineFlow(
     const audioDataUri = 'data:audio/wav;base64,' + (await toWav(audioBuffer));
 
     // Generate a video using the audio narration and story text
-    let videoOperation = await ai.generate({
+    let { operation } = await ai.generate({
       model: ai.model('veo-3.0-generate-preview'),
       prompt: input.storyText,
     });
 
-    if (!videoOperation.operation) {
+    if (!operation) {
       throw new Error('Expected the model to return an operation');
     }
 
-    while (!videoOperation.operation.done) {\n      videoOperation = await ai.checkOperation(videoOperation.operation);
+    while (!operation.done) {
+      operation = await ai.checkOperation(operation);
       // Sleep for 5 seconds before checking again.
       await new Promise((resolve) => setTimeout(resolve, 5000));
     }
 
-    if (videoOperation.operation.error) {
+    if (operation.error) {
       throw new Error(
-        'failed to generate video: ' + videoOperation.operation.error.message
+        'failed to generate video: ' + operation.error.message
       );
     }
 
-    const video = videoOperation.operation.output?.message?.content.find(
+    const video = operation.output?.message?.content.find(
       p => !!p.media
     );
 
     if (!video) {
       throw new Error('Failed to find the generated video');
     }
-    const videoUrl = `${video.media!.url}&key=${process.env.GEMINI_API_KEY}`;
 
     // Placeholder logic for comic and quiz generation - to be implemented later
     return {
-      videoUrl,
+      videoUrl: video.media?.url,
       comicUrl: undefined,
       quizUrl: undefined,
     };
   }
 );
+
+
+export async function generateStoryMedia(
+  input: GenerateStoryMediaInput
+): Promise<GenerateStoryMediaOutput> {
+  return generateStoryMediaFlow(input);
+}
