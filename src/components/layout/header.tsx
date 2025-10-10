@@ -10,6 +10,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useLanguage } from '@/context/language-context';
 import LanguageToggle from './language-toggle';
 import { cn } from '@/lib/utils';
+import AuthButton from '../auth-button';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -20,10 +21,9 @@ const Header = () => {
     { href: '/explore', label: dictionary.header.explore },
     { href: '/interactive', label: dictionary.header.interactive },
     { href: '/eduboard', label: dictionary.header.eduboard },
-    { href: '/wave-of-school', label: 'Wave of School' },
+    { href: '/wave-of-school', label: 'Wave of School', isSpecial: true },
     { href: '/eduboard-editor', label: 'EduBoard Editor' },
   ];
-
 
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
 
@@ -40,22 +40,30 @@ const Header = () => {
         </div>
 
         <nav className="hidden items-center gap-2 text-sm font-medium md:flex">
-          {navLinks.map(link => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="nav-link relative px-3 py-2 text-muted-foreground transition-colors hover:text-foreground"
-            >
-              {link.label}
-              <span className="nav-link-indicator absolute bottom-0 left-0 h-0.5 w-full scale-x-0 bg-primary transition-transform duration-300 ease-out"></span>
-            </Link>
-          ))}
+          {navLinks.map(link =>
+            link.isSpecial ? (
+              <Button
+                key={link.href}
+                asChild
+                className="shiny-button bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:opacity-90"
+              >
+                <Link href={link.href}>{link.label}</Link>
+              </Button>
+            ) : (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="nav-link relative px-3 py-2 text-muted-foreground transition-colors hover:text-foreground"
+              >
+                {link.label}
+                <span className="nav-link-indicator absolute bottom-0 left-0 h-0.5 w-full scale-x-0 bg-primary transition-transform duration-300 ease-out"></span>
+              </Link>
+            )
+          )}
         </nav>
 
         <div className="flex flex-1 items-center justify-end gap-2">
-          <Button asChild className={cn("hidden sm:inline-flex shiny-button", "bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:opacity-90")}>
-            <Link href="/#share-story">{dictionary.header.shareStory}</Link>
-          </Button>
+          <AuthButton />
           <LanguageToggle />
           <ThemeToggle />
           <div className="md:hidden">
@@ -79,7 +87,10 @@ const Header = () => {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="rounded-md px-3 py-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                  className={cn(
+                    'rounded-md px-3 py-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground',
+                    link.isSpecial && 'bg-primary text-primary-foreground'
+                  )}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.label}

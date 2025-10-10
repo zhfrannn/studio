@@ -5,6 +5,7 @@ import { LanguageProvider } from '@/context/language-context';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import ChatbotFab from '@/components/chatbot-fab';
+import FirebaseClientProvider from '@/firebase/client-provider';
 
 export default function Providers({ children }: { children: React.ReactNode }) {
   return (
@@ -15,12 +16,14 @@ export default function Providers({ children }: { children: React.ReactNode }) {
       disableTransitionOnChange
     >
       <LanguageProvider>
-        <div className="flex min-h-screen flex-col">
-          <Header />
-          <main className="flex-grow">{children}</main>
-          <Footer />
-        </div>
-        <ChatbotFab />
+        <FirebaseClientProvider>
+          <div className="flex min-h-screen flex-col">
+            <Header />
+            <main className="flex-grow">{children}</main>
+            <Footer />
+          </div>
+          <ChatbotFab />
+        </FirebaseClientProvider>
       </LanguageProvider>
     </ThemeProvider>
   );
