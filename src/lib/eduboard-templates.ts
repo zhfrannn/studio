@@ -54,8 +54,8 @@ export const eduboardSlidesTemplate: Slide[] = [
     ],
     themeColor: 'oklch(70% 0.2 50)', // Yellow
     metadata: {
-        pointIcons: ['GanttChartSquare', 'Goal', 'Target']
-    }
+      pointIcons: ['GanttChartSquare', 'Goal', 'Target'],
+    },
   },
   {
     id: 'slide-04',
@@ -118,11 +118,11 @@ export const eduboardSlidesTemplate: Slide[] = [
     category: 'Kearifan Lokal',
     title: 'Smong: Kearifan dari Simeulue',
     description:
-      "Enggel mon sao suru, linon bak, mae oek suruik. (Jika gempa kuat diikuti surutnya air laut, segeralah lari ke tempat tinggi).",
+      'Enggel mon sao suru, linon bak, mae oek suruik. (Jika gempa kuat diikuti surutnya air laut, segeralah lari ke tempat tinggi).',
     themeColor: 'oklch(70% 0.1 290)', // Violet
     metadata: {
-        author: 'Tradisi Lisan Pulau Simeulue'
-    }
+      author: 'Tradisi Lisan Pulau Simeulue',
+    },
   },
   {
     id: 'slide-09',
@@ -137,8 +137,8 @@ export const eduboardSlidesTemplate: Slide[] = [
     ],
     themeColor: 'oklch(65% 0.15 330)', // Magenta
     metadata: {
-        pointIcons: ['Info', 'AlertTriangle', 'HeartHandshake']
-    }
+      pointIcons: ['Info', 'AlertTriangle', 'HeartHandshake'],
+    },
   },
   {
     id: 'slide-10',
@@ -147,6 +147,113 @@ export const eduboardSlidesTemplate: Slide[] = [
     title: 'Anda Siap, Anda Selamat!',
     description:
       'Membangun budaya sadar bencana adalah tanggung jawab kita bersama untuk masa depan yang lebih aman.',
-    themeColor: 'oklogch(60% 0.15 240)', // Blue
+    themeColor: 'oklch(60% 0.15 240)', // Blue
+  },
+];
+
+export interface StoryboardSlideData {
+  id: string;
+  layout: 'storyboard-layout';
+  title: string;
+  subtitle: string;
+  columns: {
+    title: string;
+    text: string;
+    imageHint: string;
+  }[];
+}
+
+export const storyboardTemplate: StoryboardSlideData[] = [
+  {
+    id: 'story-01',
+    layout: 'storyboard-layout',
+    title: 'Bab 1: Tanda-Tanda Alam',
+    subtitle: 'Bagaimana alam berkomunikasi sebelum bencana datang.',
+    columns: [
+      {
+        title: 'Gempa Mengguncang',
+        text: 'Getaran kuat yang tiba-tiba adalah sinyal pertama. Jangan panik, segera cari tempat berlindung.',
+        imageHint: 'earthquake crack ground',
+      },
+      {
+        title: 'Laut yang Aneh',
+        text: 'Air laut surut jauh dari bibir pantai, memperlihatkan dasar laut yang biasanya terendam. Ini bukan pertanda baik.',
+        imageHint: 'receding ocean tsunami',
+      },
+      {
+        title: 'Suara Gemuruh',
+        text: 'Terdengar suara misterius seperti deru kereta api atau pesawat jet dari arah lautan.',
+        imageHint: 'stormy ocean waves',
+      },
+    ],
+  },
+  {
+    id: 'story-02',
+    layout: 'storyboard-layout',
+    title: 'Bab 2: Respon Cepat',
+    subtitle: 'Detik-detik berharga setelah tanda pertama muncul.',
+    columns: [
+      {
+        title: 'Lupakan Harta',
+        text: 'Nyawa lebih berharga. Jangan kembali ke rumah untuk mengambil barang. Segera bergerak.',
+        imageHint: 'people running away',
+      },
+      {
+        title: 'Cari Tempat Tinggi',
+        text: 'Berlari menjauhi pantai menuju perbukitan atau gedung tinggi yang kokoh. Setiap meter ketinggian berarti.',
+        imageHint: 'running uphill mountain',
+      },
+      {
+        title: 'Bantu yang Lemah',
+        text: 'Bantu anak-anak, lansia, dan penyandang disabilitas. Pastikan tidak ada yang tertinggal.',
+        imageHint: 'helping elderly person',
+      },
+    ],
+  },
+  {
+    id: 'story-03',
+    layout: 'storyboard-layout',
+    title: 'Bab 3: Bertahan & Menunggu',
+    subtitle: 'Apa yang harus dilakukan saat berada di lokasi evakuasi.',
+    columns: [
+      {
+        title: 'Tetap di Ketinggian',
+        text: 'Gelombang tsunami bisa datang lebih dari satu kali. Tunggu arahan dari pihak berwenang sebelum turun.',
+        imageHint: 'people on hill watching',
+      },
+      {
+        title: 'Dengarkan Informasi',
+        text: 'Gunakan radio baterai atau ponsel untuk memantau informasi terkini dari sumber yang terpercaya.',
+        imageHint: 'person listening radio',
+      },
+      {
+        title: 'Hemat Energi',
+        text: 'Simpan tenaga dan perbekalan. Bantuan mungkin membutuhkan waktu untuk datang.',
+        imageHint: 'emergency food kit',
+      },
+    ],
+  },
+  {
+    id: 'story-04',
+    layout: 'storyboard-layout',
+    title: 'Bab 4: Memori & Kearifan',
+    subtitle: 'Pelajaran dari "Smong" dan pentingnya mewariskan pengetahuan.',
+    columns: [
+      {
+        title: 'Kearifan Smong',
+        text: 'Di Simeulue, syair "Smong" menyelamatkan puluhan ribu jiwa. Kearifan lokal terbukti ampuh.',
+        imageHint: 'ancient scroll manuscript',
+      },
+      {
+        title: 'Ceritakan Kembali',
+        text: 'Bagikan pengalaman dan pengetahuan ini kepada keluarga dan generasi muda.',
+        imageHint: 'storytelling community elder',
+      },
+      {
+        title: 'Membangun Ketangguhan',
+        text: 'Dengan pengetahuan dan persiapan, kita membangun komunitas yang lebih tangguh menghadapi bencana.',
+        imageHint: 'community building hands',
+      },
+    ],
   },
 ];
