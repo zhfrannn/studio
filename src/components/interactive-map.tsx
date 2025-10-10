@@ -33,17 +33,19 @@ export default function InteractiveMap({ stories }: InteractiveMapProps) {
     // We need to get the computed style of the background color
     // because Mapbox fog doesn't understand CSS variables or space-separated HSL values.
     // This needs to run on the client after the component has mounted.
-    const backgroundColorValue = getComputedStyle(document.body).getPropertyValue(
-      '--background'
-    );
-    if (backgroundColorValue) {
-      // Convert space-separated HSL "210 40% 98%" to comma-separated "hsl(210, 40%, 98%)"
-      const formattedColor = `hsl(${backgroundColorValue.trim().replace(/ /g, ', ')})`;
-      setFog({
-        range: [0.8, 8],
-        color: formattedColor,
-        'horizon-blend': 0.1,
-      });
+    if (typeof window !== 'undefined') {
+        const backgroundColorValue = getComputedStyle(document.body).getPropertyValue(
+          '--background'
+        );
+        if (backgroundColorValue) {
+          // Convert space-separated HSL "210 40% 98%" to comma-separated "hsl(210, 40%, 98%)"
+          const formattedColor = `hsl(${backgroundColorValue.trim().replace(/ /g, ', ')})`;
+          setFog({
+            range: [0.8, 8],
+            color: formattedColor,
+            'horizon-blend': 0.1,
+          });
+        }
     }
   }, []);
 
@@ -64,7 +66,7 @@ export default function InteractiveMap({ stories }: InteractiveMapProps) {
         ease: 'power3.inOut',
       });
     }
-  }, [selectedStory]);
+  }, [selectedStory, viewState]);
 
   return (
     <div className="relative h-full min-h-[300px] w-full lg:min-h-[400px]">
@@ -129,3 +131,5 @@ export default function InteractiveMap({ stories }: InteractiveMapProps) {
     </div>
   );
 }
+
+    

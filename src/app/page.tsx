@@ -76,6 +76,10 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { cn } from '@/lib/utils';
 import { AnimatePresence, motion } from 'framer-motion';
+import useEmblaCarousel, {
+  type EmblaCarouselType,
+  type EmblaOptionsType,
+} from 'embla-carousel-react';
 
 function ShareStorySection() {
   const { dictionary, language } = useLanguage();
@@ -463,113 +467,64 @@ ${story}`;
   );
 }
 
+const CAROUSEL_OPTIONS: EmblaOptionsType = { loop: true };
 
-const HeroStackedCards = () => {
-    const { language, dictionary } = useLanguage();
+const HeroCarousel = () => {
+    const { language } = useLanguage();
     const allStories = getTranslatedStories({ lang: language });
-    const themeLabels: Record<StoryTheme, string> = {
-      'Disaster Preparedness': dictionary.storyGrid.themes.disaster,
-      'Local Wisdom': dictionary.storyGrid.themes.wisdom,
-      Peacebuilding: dictionary.storyGrid.themes.peace,
-    };
   
     const highlightedStories = [
       'smong-selamat-dari-lautan',
       'dapur-umum-perdamaian',
       'hutan-bakau-penjaga-pantai',
       'perempuan-penganyam-harapan',
+      'kopi-gayo-aroma-perdamaian',
+      'arsitektur-rumah-panggung'
     ]
       .map(id => allStories.find(s => s.id === id))
       .filter((s): s is Story => s !== null && s !== undefined);
   
-    const [activeIndex, setActiveIndex] = useState(0);
+    const [emblaRef, emblaApi] = useEmblaCarousel(CAROUSEL_OPTIONS);
   
-    const handleNext = () => {
-      setActiveIndex(prev => (prev + 1) % highlightedStories.length);
-    };
+    const scrollPrev = useCallback(() => {
+      if (emblaApi) emblaApi.scrollPrev()
+    }, [emblaApi])
   
-    const handlePrev = () => {
-      setActiveIndex(
-        prev => (prev - 1 + highlightedStories.length) % highlightedStories.length
-      );
-    };
+    const scrollNext = useCallback(() => {
+      if (emblaApi) emblaApi.scrollNext()
+    }, [emblaApi])
   
-    if (!highlightedStories.length) {
-        return null;
+    if (highlightedStories.length === 0) {
+      return null;
     }
-
+  
     return (
-      <div className="relative w-full max-w-4xl mx-auto mt-8 flex flex-col items-center justify-center">
-        <div className="relative h-[450px] w-[300px] md:h-[500px] md:w-[350px]">
-          <AnimatePresence>
-            {highlightedStories.map((story, index) => {
-              const position =
-                (index - activeIndex + highlightedStories.length) %
-                highlightedStories.length;
-              const isVisible = position < 4;
-              
-              return isVisible && (
-                  <motion.div
-                    key={story.id}
-                    custom={position}
-                    initial="hidden"
-                    animate="visible"
-                    exit="hidden"
-                    variants={{
-                        visible: (i) => ({
-                            x: 0,
-                            y: i * 20,
-                            scale: 1 - i * 0.1,
-                            zIndex: highlightedStories.length - i,
-                            opacity: 1 - i * 0.25,
-                        }),
-                        hidden: (i) => ({
-                            y: -300,
-                            opacity: 0,
-                        })
-                    }}
-                    transition={{
-                      duration: 0.5,
-                      ease: 'easeInOut',
-                    }}
-                    className="absolute w-full h-full"
-                  >
-                    <Link href={`/story/${story.id}`}>
-                      <Card className="h-full w-full overflow-hidden rounded-2xl shadow-2xl">
-                          <div className="relative h-full w-full">
-                              <Image 
-                                  src={story.media.featuredImage}
-                                  alt={story.title}
-                                  fill
-                                  className="object-cover"
-                                  data-ai-hint={story.media.featuredImageHint}
-                                  sizes="(max-width: 768px) 100vw, 350px"
-                              />
-                              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-                              <div className="absolute bottom-0 left-0 p-6 text-white">
-                                  <Badge className="mb-2 backdrop-blur-sm bg-white/20 border-white/50">{themeLabels[story.aiThemes[0]] || story.aiThemes[0]}</Badge>
-                                  <h3 className="font-headline text-2xl font-bold">{story.title}</h3>
-                                  <p className="text-sm opacity-80">{story.author}</p>
-                              </div>
-                          </div>
-                      </Card>
-                    </Link>
-                  </motion.div>
-              )
-            })}
-          </AnimatePresence>
+      <div className="relative w-full max-w-6xl mx-auto mt-8">
+        <div className="overflow-hidden" ref={emblaRef}>
+          <div className="flex -ml-4">
+            {highlightedStories.map(story => (
+              <div className="flex-grow-0 flex-shrink-0 basis-full md:basis-1/2 lg:basis-1/3 pl-4" key={story.id}>
+                <StoryCard story={story} />
+              </div>
+            ))}
+          </div>
         </div>
-         <div className="mt-8 flex items-center gap-4">
-            <Button onClick={handlePrev} variant="outline" size="icon" className="rounded-full h-12 w-12">
-                <ChevronLeft />
-            </Button>
-            <span className="text-sm text-muted-foreground font-semibold">
-                {activeIndex + 1} / {highlightedStories.length}
-            </span>
-            <Button onClick={handleNext} variant="outline" size="icon" className="rounded-full h-12 w-12">
-                <ChevronRight />
-            </Button>
-        </div>
+        <Button
+          onClick={scrollPrev}
+          variant="outline"
+          size="icon"
+          className="absolute top-1/2 -translate-y-1/2 left-0 -translate-x-1/2 rounded-full h-12 w-12 z-10 hidden lg:flex"
+        >
+          <ChevronLeft />
+        </Button>
+        <Button
+          onClick={scrollNext}
+          variant="outline"
+          size="icon"
+          className="absolute top-1/2 -translate-y-1/2 right-0 translate-x-1/2 rounded-full h-12 w-12 z-10 hidden lg:flex"
+        >
+          <ChevronRight />
+        </Button>
       </div>
     );
   };
@@ -610,7 +565,7 @@ export default function Home() {
             </h1>
             <p className="hero-v2-desc">{homeDict.hero.description}</p>
             
-            <HeroStackedCards />
+            <HeroCarousel />
 
             <div className="hero-v2-cta relative z-30 mt-8 flex flex-wrap justify-center gap-4">
               <Button
@@ -951,3 +906,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
