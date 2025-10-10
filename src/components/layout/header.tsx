@@ -19,6 +19,7 @@ const Header = () => {
     { href: '/explore', label: dictionary.header.explore },
     { href: '/interactive', label: dictionary.header.interactive },
     { href: '/eduboard', label: dictionary.header.eduboard },
+    { href: '/eduboard-editor', label: 'EduBoard Editor' },
   ];
 
 
