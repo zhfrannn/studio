@@ -2,12 +2,13 @@
 
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Presentation, Instagram } from 'lucide-react';
+import { ArrowLeft, Presentation, Instagram, Puzzle } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
 import SlideCarousel from '@/components/slide-carousel';
 import StoryboardCarousel from '@/components/storyboard-carousel';
+import QuizCarousel from '@/components/quiz-carousel';
 
-type EditorMode = 'selection' | 'slide' | 'storyboard';
+type EditorMode = 'selection' | 'slide' | 'storyboard' | 'quiz';
 
 const OnboardingScreen = ({
   setMode,
@@ -18,7 +19,7 @@ const OnboardingScreen = ({
     initial={{ opacity: 0, scale: 0.95 }}
     animate={{ opacity: 1, scale: 1 }}
     exit={{ opacity: 0, scale: 0.95 }}
-    className="w-full max-w-4xl text-center"
+    className="w-full max-w-5xl text-center"
   >
     <div className="mb-12">
       <h1 className="font-headline text-4xl md:text-5xl">
@@ -29,7 +30,7 @@ const OnboardingScreen = ({
         mengisi konten berdasarkan template yang Anda pilih.
       </p>
     </div>
-    <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+    <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
       <div
         className="cursor-pointer rounded-xl border-2 bg-card p-8 text-center transition-all hover:border-primary hover:shadow-2xl"
         onClick={() => setMode('slide')}
@@ -52,6 +53,16 @@ const OnboardingScreen = ({
           Story, padat dengan gambar dan teks.
         </p>
       </div>
+       <div
+        className="cursor-pointer rounded-xl border-2 bg-card p-8 text-center transition-all hover:border-primary hover:shadow-2xl"
+        onClick={() => setMode('quiz')}
+      >
+        <Puzzle className="mx-auto mb-4 h-16 w-16 text-primary" />
+        <h2 className="font-headline text-2xl">Quiz Card Interaktif</h2>
+        <p className="mt-2 text-muted-foreground">
+          Buat kartu kuis interaktif untuk menguji pemahaman dengan umpan balik langsung.
+        </p>
+      </div>
     </div>
   </motion.div>
 );
@@ -66,7 +77,7 @@ export default function EduBoardEditorPage() {
           <OnboardingScreen key="selection" setMode={setMode} />
         )}
 
-        {(mode === 'slide' || mode === 'storyboard') && (
+        {(mode === 'slide' || mode === 'storyboard' || mode === 'quiz') && (
           <motion.div
             key="editor"
             initial={{ opacity: 0, y: 20 }}
@@ -85,6 +96,7 @@ export default function EduBoardEditorPage() {
 
             {mode === 'slide' && <SlideCarousel />}
             {mode === 'storyboard' && <StoryboardCarousel />}
+            {mode === 'quiz' && <QuizCarousel />}
           </motion.div>
         )}
       </AnimatePresence>

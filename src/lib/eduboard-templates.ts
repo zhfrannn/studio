@@ -257,3 +257,66 @@ export const storyboardTemplate: StoryboardSlideData[] = [
     ],
   },
 ];
+
+export interface QuizCardData {
+    id: string;
+    layout: 'quiz-card';
+    category: string;
+    question: string;
+    options: string[];
+    correctAnswer: string;
+    explanation: string;
+    icon: string;
+    themeColor: string;
+}
+
+export const quizCardTemplate: QuizCardData[] = [
+    {
+        id: 'quiz-1',
+        layout: 'quiz-card',
+        category: 'Tanda-Tanda Tsunami',
+        question: "Manakah dari berikut ini yang merupakan tanda alam PALING khas sebelum tsunami terjadi?",
+        options: [
+            "Hujan deras disertai petir",
+            "Air laut surut secara tiba-tiba dan tidak wajar",
+            "Munculnya pelangi di atas laut",
+            "Angin bertiup sangat kencang ke arah darat"
+        ],
+        correctAnswer: "Air laut surut secara tiba-tiba dan tidak wajar",
+        explanation: "Surutnya air laut secara drastis adalah fenomena khas yang terjadi karena air laut terhisap ke arah pusat gempa sebelum kembali sebagai gelombang raksasa.",
+        icon: 'Waves',
+        themeColor: 'oklch(60% 0.15 200)', // Cyan
+    },
+    {
+        id: 'quiz-2',
+        layout: 'quiz-card',
+        category: 'Tindakan Saat Gempa',
+        question: "Apa singkatan dari tindakan yang harus dilakukan saat gempa terjadi?",
+        options: [
+            "Lari, Lompat, Sembunyi",
+            "Berdiri, Lihat, Tunggu",
+            "Merunduk, Berlindung, Bertahan (Drop, Cover, Hold On)",
+            "Telepon, Rekam, Bagikan"
+        ],
+        correctAnswer: "Merunduk, Berlindung, Bertahan (Drop, Cover, Hold On)",
+        explanation: "Metode 'Drop, Cover, Hold On' adalah standar internasional untuk melindungi diri dari reruntuhan saat terjadi gempa bumi.",
+        icon: 'ShieldAlert',
+        themeColor: 'oklch(60% 0.25 0)', // Red
+    },
+    {
+        id: 'quiz-3',
+        layout: 'quiz-card',
+        category: 'Tas Siaga Bencana',
+        question: "Barang apa yang TIDAK perlu ada di dalam Tas Siaga Bencana?",
+        options: [
+            "P3K dan obat-obatan pribadi",
+            "Senter dan baterai cadangan",
+            "Konsol game portabel",
+            "Salinan dokumen penting"
+        ],
+        correctAnswer: "Konsol game portabel",
+        explanation: "Tas Siaga Bencana berfokus pada kebutuhan bertahan hidup esensial. Hiburan seperti konsol game bukanlah prioritas utama.",
+        icon: 'ListChecks',
+        themeColor: 'oklch(60% 0.18 150)', // Green
+    }
+]
