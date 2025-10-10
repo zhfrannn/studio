@@ -67,7 +67,7 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
       <div className="mx-auto max-w-4xl rounded-2xl">
         <MotionWrapper>
           <div className="mb-8">
-            <h1 className="font-headline text-4xl text-foreground md:text-5xl">
+            <h1 className="font-headline text-4xl font-bold text-foreground md:text-5xl">
               {story.title}
             </h1>
             <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2 text-muted-foreground">
@@ -99,7 +99,7 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
                 <div className="flex items-start gap-4">
                   <PlayCircle className="h-8 w-8 flex-shrink-0 text-yellow-500" />
                   <div>
-                    <CardTitle className="text-2xl">
+                    <CardTitle className="text-2xl font-bold">
                       {content?.video.title || 'Video Edukasi'}
                     </CardTitle>
                     <CardDescription>
@@ -154,7 +154,7 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
           ) : (
             <MotionWrapper as="section" delay={0.2}>
               <div className="mb-8 text-center">
-                <h2 className="mb-2 flex items-center justify-center gap-3 font-headline text-3xl">
+                <h2 className="mb-2 flex items-center justify-center gap-3 font-headline text-3xl font-bold">
                   <BookOpenText /> Komik Digital
                 </h2>
                 <p className="text-muted-foreground">
@@ -165,7 +165,7 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
           )}
 
           <MotionWrapper as="section" delay={0.3}>
-            <h2 className="mb-4 flex items-center gap-2 font-headline text-2xl">
+            <h2 className="mb-4 flex items-center gap-2 font-headline text-2xl font-bold">
               <BookOpenText /> Narasi Lengkap
             </h2>
             <Card>
@@ -184,7 +184,7 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
               <InteractiveQuiz quiz={content.quiz} />
             ) : (
               <>
-                <h2 className="mb-4 flex items-center gap-2 font-headline text-2xl">
+                <h2 className="mb-4 flex items-center gap-2 font-headline text-2xl font-bold">
                   <Puzzle /> Kuis Interaktif
                 </h2>
                 <Card>

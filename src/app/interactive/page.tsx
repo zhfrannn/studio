@@ -113,7 +113,7 @@ export default function InteractiveLearningHub() {
     <div className="space-y-16 py-12 md:space-y-24">
       <MotionWrapper className="container mx-auto px-4 rounded-2xl">
         <div className="mb-12 text-center">
-          <h1 className="font-headline text-4xl md:text-5xl">
+          <h1 className="font-headline text-4xl font-bold md:text-5xl">
             Interactive Learning Hub
           </h1>
           <p className="mx-auto mt-2 max-w-2xl text-muted-foreground">
@@ -132,7 +132,7 @@ export default function InteractiveLearningHub() {
             {/* Educational Videos */}
             <MotionWrapper as="section">
               <div className="mb-6">
-                <h2 className="flex items-center gap-3 font-headline text-3xl">
+                <h2 className="flex items-center gap-3 font-headline text-3xl font-bold">
                   <Film className="h-8 w-8 text-red-500" />
                   Educational Videos
                 </h2>
@@ -205,7 +205,7 @@ export default function InteractiveLearningHub() {
             <MotionWrapper delay={0.1}>
               <Card>
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
+                  <CardTitle className="flex items-center gap-2 font-bold">
                     <Trophy className="h-5 w-5 text-yellow-500" />
                     Leaderboard
                   </CardTitle>
@@ -245,7 +245,7 @@ export default function InteractiveLearningHub() {
             <MotionWrapper delay={0.2}>
               <Card>
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
+                  <CardTitle className="flex items-center gap-2 font-bold">
                     <Award className="h-5 w-5 text-green-500" />
                     Achievement Badges
                   </CardTitle>
@@ -271,7 +271,7 @@ export default function InteractiveLearningHub() {
 
       <MotionWrapper as="section" className="container mx-auto px-4 rounded-2xl">
         <div className="mb-12 text-center">
-          <h2 className="flex items-center justify-center gap-3 font-headline text-3xl md:text-4xl">
+          <h2 className="flex items-center justify-center gap-3 font-headline text-3xl font-bold md:text-4xl">
             <BookOpen className="h-8 w-8 text-primary" />
             Interactive Digital Comics
           </h2>
@@ -322,7 +322,7 @@ export default function InteractiveLearningHub() {
 
       <MotionWrapper as="section" className="container mx-auto px-4 rounded-2xl">
         <div className="mb-12 text-center">
-          <h2 className="flex items-center justify-center gap-3 font-headline text-3xl md:text-4xl">
+          <h2 className="flex items-center justify-center gap-3 font-headline text-3xl font-bold md:text-4xl">
             <ClipboardList className="h-8 w-8 text-primary" />
             Quick Access to Stories
           </h2>

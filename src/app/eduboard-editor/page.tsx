@@ -39,7 +39,7 @@ const OnboardingScreen = ({
     className="w-full max-w-5xl text-center"
   >
     <div className="mb-12">
-      <h1 className="font-headline text-4xl md:text-5xl">
+      <h1 className="font-headline text-4xl font-bold md:text-5xl">
         EduBoard AI Editor
       </h1>
       <p className="mx-auto mt-2 max-w-2xl text-muted-foreground">
@@ -53,7 +53,7 @@ const OnboardingScreen = ({
         onClick={() => setMode('slide')}
       >
         <Presentation className="mx-auto mb-4 h-16 w-16 text-primary" />
-        <h2 className="font-headline text-2xl">Slide Presentasi</h2>
+        <h2 className="font-headline text-2xl font-bold">Slide Presentasi</h2>
         <p className="mt-2 text-muted-foreground">
           Buat presentasi edukasi terstruktur dengan 10 slide tentang topik
           seperti kesiapsiagaan bencana.
@@ -64,7 +64,7 @@ const OnboardingScreen = ({
         onClick={() => setMode('storyboard')}
       >
         <Instagram className="mx-auto mb-4 h-16 w-16 text-primary" />
-        <h2 className="font-headline text-2xl">Konten Storyboard</h2>
+        <h2 className="font-headline text-2xl font-bold">Konten Storyboard</h2>
         <p className="mt-2 text-muted-foreground">
           Rancang narasi visual 4-slide dalam format vertikal seperti Instagram
           Story, padat dengan gambar dan teks.
@@ -75,7 +75,7 @@ const OnboardingScreen = ({
         onClick={() => setMode('quiz')}
       >
         <Puzzle className="mx-auto mb-4 h-16 w-16 text-primary" />
-        <h2 className="font-headline text-2xl">Quiz Card Interaktif</h2>
+        <h2 className="font-headline text-2xl font-bold">Quiz Card Interaktif</h2>
         <p className="mt-2 text-muted-foreground">
           Buat kartu kuis interaktif untuk menguji pemahaman dengan umpan balik
           langsung.
@@ -86,7 +86,7 @@ const OnboardingScreen = ({
         onClick={() => setMode('printable')}
       >
         <Printer className="mx-auto mb-4 h-16 w-16 text-primary" />
-        <h2 className="font-headline text-2xl">Infografis A4</h2>
+        <h2 className="font-headline text-2xl font-bold">Infografis A4</h2>
         <p className="mt-2 text-muted-foreground">
           Hasilkan infografis satu halaman format A4 yang padat informasi dan
           siap untuk dicetak.
@@ -97,7 +97,7 @@ const OnboardingScreen = ({
        <div className="flex items-center justify-center gap-4">
         <Sparkles className="h-16 w-16 text-amber-500" />
         <div>
-            <h2 className="font-headline text-2xl text-amber-600 dark:text-amber-400">Premium Content: Mini Game</h2>
+            <h2 className="font-headline text-2xl font-bold text-amber-600 dark:text-amber-400">Premium Content: Mini Game</h2>
             <p className="mt-2 text-muted-foreground">
             Bangun skenario game tanggap bencana interaktif yang kontennya dapat digerakkan oleh AI.
             </p>

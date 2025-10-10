@@ -52,7 +52,7 @@ const Header = () => {
         </nav>
 
         <div className="flex flex-1 items-center justify-end gap-2">
-          <Button asChild className={cn("hidden sm:inline-flex shiny-button", "bg-gradient-to-r from-blue-500 to-sky-500 text-white hover:opacity-90")}>
+          <Button asChild className={cn("hidden sm:inline-flex shiny-button", "bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:opacity-90")}>
             <Link href="/#share-story">{dictionary.header.shareStory}</Link>
           </Button>
           <LanguageToggle />

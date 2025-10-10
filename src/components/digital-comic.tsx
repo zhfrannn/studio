@@ -17,7 +17,7 @@ export default function DigitalComic({ comic }: DigitalComicProps) {
   return (
     <section>
       <div className="mb-8 text-center">
-        <h2 className="mb-2 flex items-center justify-center gap-3 font-headline text-3xl">
+        <h2 className="mb-2 flex items-center justify-center gap-3 font-headline text-3xl font-bold">
           <BookOpenText /> {comic.title}
         </h2>
         <p className="text-muted-foreground">{comic.description}</p>

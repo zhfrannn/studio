@@ -106,7 +106,7 @@ const StoryCard = ({ story }: StoryCardProps) => {
           <p className="mb-2 text-sm font-medium text-muted-foreground">
             {story.author}
           </p>
-          <CardTitle className="mb-2 font-headline text-xl leading-tight transition-colors group-hover:text-primary">
+          <CardTitle className="mb-2 font-headline text-xl font-bold leading-tight transition-colors group-hover:text-primary">
             {story.title}
           </CardTitle>
           <CardDescription className="line-clamp-3 text-sm">

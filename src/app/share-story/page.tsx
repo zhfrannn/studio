@@ -140,7 +140,7 @@ ${story}`;
     <div className="container mx-auto px-4 py-12">
       <MotionWrapper>
         <div className="mb-12 text-center">
-          <h1 className="font-headline text-4xl md:text-5xl">
+          <h1 className="font-headline text-4xl font-bold md:text-5xl">
             {shareStoryDict.title}
           </h1>
           <p className="mx-auto mt-2 max-w-3xl text-muted-foreground">
@@ -154,7 +154,7 @@ ${story}`;
         <MotionWrapper delay={0.1}>
           <Card className="lg:sticky lg:top-24">
             <CardHeader>
-                <CardTitle className="text-2xl">{shareStoryDict.formTitle}</CardTitle>
+                <CardTitle className="text-2xl font-bold">{shareStoryDict.formTitle}</CardTitle>
             </CardHeader>
             <CardContent>
               <Form {...form}>

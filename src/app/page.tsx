@@ -86,38 +86,28 @@ const StackedStoryCard = ({
   story,
   index,
   total,
-  isFront,
 }: {
   story: Story;
   index: number;
   total: number;
-  isFront: boolean;
 }) => {
+  const isFront = index === 0;
   const cardRef = useRef<HTMLDivElement>(null);
 
-  const rotateX = useSpring(useMotionValue(0), {
-    stiffness: 150,
-    damping: 20,
-    mass: 0.1,
-  });
-  const rotateY = useSpring(useMotionValue(0), {
-    stiffness: 150,
-    damping: 20,
-    mass: 0.1,
-  });
+  const rotateX = useSpring(useMotionValue(0), { stiffness: 150, damping: 20, mass: 0.1 });
+  const rotateY = useSpring(useMotionValue(0), { stiffness: 150, damping: 20, mass: 0.1 });
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (!cardRef.current || !isFront) return;
       const rect = cardRef.current.getBoundingClientRect();
-      const width = rect.width;
-      const height = rect.height;
-      const mouseX = e.clientX - rect.left;
-      const mouseY = e.clientY - rect.top;
+      const { width, height, left, top } = rect;
+      const mouseX = e.clientX - left;
+      const mouseY = e.clientY - top;
       const xPct = mouseX / width - 0.5;
       const yPct = mouseY / height - 0.5;
-      rotateX.set(-yPct * 10);
-      rotateY.set(xPct * 10);
+      rotateX.set(-yPct * 8);
+      rotateY.set(xPct * 8);
     };
 
     const handleMouseLeave = () => {
@@ -125,15 +115,19 @@ const StackedStoryCard = ({
       rotateY.set(0);
     };
 
-    const cardElement = cardRef.current;
-    cardElement?.addEventListener('mousemove', handleMouseMove);
-    cardElement?.addEventListener('mouseleave', handleMouseLeave);
-
+    const currentCard = cardRef.current;
+    if (currentCard) {
+        currentCard.addEventListener('mousemove', handleMouseMove);
+        currentCard.addEventListener('mouseleave', handleMouseLeave);
+    }
+    
     return () => {
-      cardElement?.removeEventListener('mousemove', handleMouseMove);
-      cardElement?.removeEventListener('mouseleave', handleMouseLeave);
+        if (currentCard) {
+            currentCard.removeEventListener('mousemove', handleMouseMove);
+            currentCard.removeEventListener('mouseleave', handleMouseLeave);
+        }
     };
-  }, [rotateX, rotateY, isFront]);
+  }, [isFront, rotateX, rotateY]);
 
   return (
     <motion.div
@@ -143,18 +137,16 @@ const StackedStoryCard = ({
         transformStyle: 'preserve-3d',
         rotateX,
         rotateY,
+        zIndex: total - index
       }}
-      initial={{
-        top: index * -15,
-        scale: 1 - index * 0.05,
-        zIndex: total - index,
-      }}
+      initial={{ scale: 1, y: 0, opacity: 1 }}
       animate={{
-        top: index * -15,
         scale: 1 - index * 0.05,
-        zIndex: total - index,
+        y: index * -20,
+        opacity: index < 4 ? 1 : 0,
       }}
-      transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+      exit={{ y: 50, opacity: 0 }}
+      transition={{ type: 'spring', stiffness: 200, damping: 30 }}
     >
       <Link href={`/story/${story.id}`}>
         <Card className="group relative h-full w-full overflow-hidden rounded-2xl border-4 border-white/20 shadow-2xl">
@@ -170,7 +162,7 @@ const StackedStoryCard = ({
             <Badge variant="secondary" className="mb-2">
               {story.aiThemes?.[0]}
             </Badge>
-            <h3 className="font-headline text-2xl">{story.title}</h3>
+            <h3 className="font-headline text-2xl font-bold">{story.title}</h3>
             <p className="text-sm opacity-80">{story.author}</p>
           </div>
           <div className="absolute bottom-2 right-3 text-xs text-white/50">
@@ -294,7 +286,7 @@ ${story}`;
         <div className="relative mx-auto mb-12 max-w-3xl space-y-2 text-center">
           <SplitText
             text={shareStoryDict.title}
-            className="font-headline text-3xl md:text-4xl"
+            className="font-headline text-3xl font-bold md:text-4xl"
           />
           <p className="text-muted-foreground">{shareStoryDict.description}</p>
         </div>
@@ -303,7 +295,7 @@ ${story}`;
           <MotionWrapper delay={0.1}>
             <Card>
               <CardHeader>
-                <CardTitle className="text-2xl">
+                <CardTitle className="text-2xl font-bold">
                   {shareStoryDict.formTitle}
                 </CardTitle>
               </CardHeader>
@@ -627,10 +619,9 @@ const StackedCardsHero = () => {
     });
   }, []);
 
-
   return (
     <div className="relative flex flex-col items-center">
-      <div className="relative aspect-[1.3] w-full max-w-xl [perspective:800px] group">
+      <div className="relative w-full max-w-sm h-96 [perspective:1000px] sm:max-w-md sm:h-[450px]">
         <AnimatePresence>
           {cardStack.map((story, i) => (
             <StackedStoryCard
@@ -638,12 +629,11 @@ const StackedCardsHero = () => {
               story={story}
               index={i}
               total={cardStack.length}
-              isFront={i === 0}
             />
           ))}
         </AnimatePresence>
       </div>
-      <div className="relative z-10 -mt-8 flex items-center gap-4">
+      <div className="relative z-10 -mt-2 flex items-center gap-4">
         <Button onClick={() => rotateStack('prev')} variant="secondary" size="icon" className="rounded-full shadow-lg">
           <ArrowLeft className="h-5 w-5"/>
         </Button>
@@ -715,7 +705,7 @@ export default function Home() {
         <div className="mx-auto mb-12 max-w-3xl space-y-2 text-center">
           <SplitText
             text={homeDict.howItWorks.title}
-            className="font-headline text-3xl md:text-4xl"
+            className="font-headline text-3xl font-bold md:text-4xl"
           />
           <p className="text-muted-foreground">
             {homeDict.howItWorks.description}
@@ -729,7 +719,7 @@ export default function Home() {
                   <MessageCircle className="h-6 w-6 text-blue-600 dark:text-blue-400" />
                 </div>
                 <div className="space-y-1">
-                  <CardTitle className="text-lg">
+                  <CardTitle className="text-lg font-bold">
                     {homeDict.howItWorks.step1.title}
                   </CardTitle>
                 </div>
@@ -748,7 +738,7 @@ export default function Home() {
                   <Lightbulb className="h-6 w-6 text-green-600 dark:text-green-400" />
                 </div>
                 <div className="space-y-1">
-                  <CardTitle className="text-lg">
+                  <CardTitle className="text-lg font-bold">
                     {homeDict.howItWorks.step2.title}
                   </CardTitle>
                 </div>
@@ -767,7 +757,7 @@ export default function Home() {
                   <BookOpen className="h-6 w-6 text-purple-600 dark:text-purple-400" />
                 </div>
                 <div className="space-y-1">
-                  <CardTitle className="text-lg">
+                  <CardTitle className="text-lg font-bold">
                     {homeDict.howItWorks.step3.title}
                   </CardTitle>
                 </div>
@@ -791,7 +781,7 @@ export default function Home() {
             <div className="space-y-6 p-8 md:p-12">
               <SplitText
                 text={homeDict.whyItMatters.title}
-                className="font-headline text-3xl md:text-4xl"
+                className="font-headline text-3xl font-bold md:text-4xl"
               />
               <p className="text-muted-foreground">
                 {homeDict.whyItMatters.description}
@@ -837,7 +827,7 @@ export default function Home() {
         <div className="mx-auto max-w-2xl space-y-2 text-center">
           <SplitText
             text={homeDict.exploreStories.title}
-            className="font-headline text-3xl md:text-4xl"
+            className="font-headline text-3xl font-bold md:text-4xl"
           />
           <p className="text-muted-foreground">
             {homeDict.exploreStories.description}
@@ -857,7 +847,7 @@ export default function Home() {
         <div>
           <SplitText
             text={homeDict.exploreStories.featuredTitle}
-            className="mb-8 text-center font-headline text-2xl md:text-3xl"
+            className="mb-8 text-center font-headline text-2xl font-bold md:text-3xl"
           />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {allStories.slice(0, 3).map((story, i) => (
@@ -884,7 +874,7 @@ export default function Home() {
         <div className="mx-auto mb-12 max-w-3xl space-y-2 text-center">
           <SplitText
             text={homeDict.interactiveLearning.title}
-            className="font-headline text-3xl md:text-4xl"
+            className="font-headline text-3xl font-bold md:text-4xl"
           />
           <p className="text-muted-foreground">
             {homeDict.interactiveLearning.description}
@@ -899,7 +889,7 @@ export default function Home() {
                   <Puzzle className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-headline text-xl">
+                  <h3 className="font-headline text-xl font-bold">
                     {homeDict.interactiveLearning.cardTitle}
                   </h3>
                   <p className="text-muted-foreground">
@@ -946,7 +936,7 @@ export default function Home() {
             <MotionWrapper className="space-y-4" delay={0.1}>
               <SplitText
                 text={homeDict.eduboard.title}
-                className="font-headline text-3xl md:text-4xl"
+                className="font-headline text-3xl font-bold md:text-4xl"
               />
               <p>{homeDict.eduboard.description}</p>
               <div className="flex flex-wrap gap-2 pt-2">

@@ -7,7 +7,9 @@ export default function EduBoardPage() {
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="mb-12 text-center">
-        <h1 className="font-headline text-4xl md:text-5xl">EduBoard Fisik</h1>
+        <h1 className="font-headline text-4xl font-bold md:text-5xl">
+          EduBoard Fisik
+        </h1>
         <p className="mx-auto mt-2 max-w-3xl text-muted-foreground">
           Menjembatani dunia digital dan fisik untuk pembelajaran komunitas yang
           inklusif dan berkelanjutan.
@@ -28,7 +30,9 @@ export default function EduBoardPage() {
         <div className="space-y-8">
           <Card>
             <CardContent className="space-y-4 p-6">
-              <h2 className="font-headline text-2xl">Apa itu EduBoard?</h2>
+              <h2 className="font-headline text-2xl font-bold">
+                Apa itu EduBoard?
+              </h2>
               <p className="text-muted-foreground">
                 EduBoard adalah papan informasi fisik yang dirancang untuk
                 ditempatkan di ruang publik seperti sekolah, kantor desa, atau
@@ -41,7 +45,7 @@ export default function EduBoardPage() {
 
           <Card>
             <CardContent className="space-y-4 p-6">
-              <h2 className="font-headline text-2xl">
+              <h2 className="font-headline text-2xl font-bold">
                 Gunakan di Komunitas Anda
               </h2>
               <p className="text-muted-foreground">

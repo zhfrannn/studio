@@ -80,7 +80,7 @@ export default function InteractiveQuiz({ quiz }: InteractiveQuizProps) {
             <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
                 <HelpCircle className="h-8 w-8" />
             </div>
-            <CardTitle className="mt-4 font-headline text-3xl">{title}</CardTitle>
+            <CardTitle className="mt-4 font-headline text-3xl font-bold">{title}</CardTitle>
             <CardDescription className="mt-2 text-lg text-muted-foreground">{description}</CardDescription>
           </CardHeader>
           <CardContent className="p-8 pt-0">
@@ -100,7 +100,7 @@ export default function InteractiveQuiz({ quiz }: InteractiveQuizProps) {
         <Card className="w-full overflow-hidden">
           <CardHeader className="bg-muted/30 p-8 text-center">
             <Trophy className="mx-auto h-16 w-16 text-yellow-500" />
-            <h2 className="mt-4 font-headline text-3xl">Kuis Selesai!</h2>
+            <h2 className="mt-4 font-headline text-3xl font-bold">Kuis Selesai!</h2>
             <p className="text-muted-foreground">{title}</p>
           </CardHeader>
           <CardContent className="p-8 text-center">
@@ -139,7 +139,7 @@ export default function InteractiveQuiz({ quiz }: InteractiveQuizProps) {
             <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary">
               <HelpCircle className="h-5 w-5" />
             </div>
-            <h2 className="font-headline text-2xl text-foreground">{title}</h2>
+            <h2 className="font-headline text-2xl font-bold text-foreground">{title}</h2>
           </div>
           <p className="text-muted-foreground">{description}</p>
         </CardHeader>
