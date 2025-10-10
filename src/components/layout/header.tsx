@@ -4,7 +4,7 @@ import Link from 'next/link';
 import WaveMascot from '@/components/icons/wave-mascot';
 import ThemeToggle from './theme-toggle';
 import { Button } from '../ui/button';
-import { Menu, X, Share2 } from 'lucide-react';
+import { Menu, X, Share2, User } from 'lucide-react';
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useLanguage } from '@/context/language-context';
@@ -53,6 +53,12 @@ const Header = () => {
               <span className="nav-link-indicator absolute bottom-0 left-0 h-0.5 w-full scale-x-0 bg-primary transition-transform duration-300 ease-out"></span>
             </Link>
           ))}
+           <Link
+              href="/wave-of-school/profile"
+              className="nav-link relative px-3 py-2 text-muted-foreground transition-colors hover:text-foreground"
+            >
+              Profile
+            </Link>
         </nav>
 
         <div className="flex flex-1 items-center justify-end gap-2">
@@ -106,6 +112,13 @@ const Header = () => {
                   {link.label}
                 </Link>
               ))}
+               <Link
+                href="/wave-of-school/profile"
+                className='rounded-md px-3 py-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground'
+                onClick={() => setMobileMenuOpen(false)}
+               >
+                Profile
+              </Link>
                <Button asChild variant="outline">
                 <Link href="/share-story" onClick={() => setMobileMenuOpen(false)}>
                   <Share2 className="mr-2 h-4 w-4" />
