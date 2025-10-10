@@ -71,14 +71,14 @@ import {
 import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { askSiagaBot, AskSiagaBotOutput } from '@/ai/flows/ask-siaga-bot';
 import { cn } from '@/lib/utils';
+// import { askSiagaBot, AskSiagaBotOutput } from '@/ai/flows/ask-siaga-bot';
 
 // Tipe untuk pesan chatbot
 type Message = {
   role: 'user' | 'bot';
   text: string;
-  storySuggestion?: AskSiagaBotOutput['storySuggestion'];
+  storySuggestion?: any; // AskSiagaBotOutput['storySuggestion'];
 };
 
 function ShareStorySection() {
@@ -111,7 +111,7 @@ function ShareStorySection() {
     { id: 'Local Wisdom', label: shareStoryDict.storyTypes.wisdom },
   ];
   
-  const locations = [...new Set(staticStories.map(s => s.location.name))];
+  const locations = [...new Set(staticStories.filter(s => s.location).map(s => s.location!.name))];
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -149,31 +149,22 @@ ${story}`;
   }
 
   const handleChatSend = async () => {
-    if (!input.trim()) return;
+    if (!input.trim() || isLoading) return;
 
     const userMessage: Message = { role: 'user', text: input };
     setMessages(prev => [...prev, userMessage]);
     setInput('');
     setIsLoading(true);
 
-    try {
-      const botResponse = await askSiagaBot({ question: input });
-      const botMessage: Message = {
-        role: 'bot',
-        text: botResponse.answer,
-        storySuggestion: botResponse.storySuggestion,
-      };
-      setMessages(prev => [...prev, botMessage]);
-    } catch (error) {
-      const errorMessage: Message = {
-        role: 'bot',
-        text: shareStoryDict.aiHelper.errorMessage,
-      };
-      setMessages(prev => [...prev, errorMessage]);
-      console.error('Error asking Siaga-Bot:', error);
-    } finally {
-      setIsLoading(false);
-    }
+    // AI logic is disabled
+    setTimeout(() => {
+        const botMessage: Message = {
+            role: 'bot',
+            text: "Maaf, fitur AI saat ini sedang tidak tersedia.",
+        };
+        setMessages(prev => [...prev, botMessage]);
+        setIsLoading(false);
+    }, 1000);
   };
 
   return (
