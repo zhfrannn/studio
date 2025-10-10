@@ -9,6 +9,7 @@ import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useLanguage } from '@/context/language-context';
 import LanguageToggle from './language-toggle';
+import { cn } from '@/lib/utils';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -37,20 +38,21 @@ const Header = () => {
           </Link>
         </div>
 
-        <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
+        <nav className="hidden items-center gap-2 text-sm font-medium md:flex">
           {navLinks.map(link => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-muted-foreground transition-colors hover:text-foreground"
+              className="nav-link relative px-3 py-2 text-muted-foreground transition-colors hover:text-foreground"
             >
               {link.label}
+              <span className="nav-link-indicator absolute bottom-0 left-0 h-0.5 w-full scale-x-0 bg-primary transition-transform duration-300 ease-out"></span>
             </Link>
           ))}
         </nav>
 
         <div className="flex flex-1 items-center justify-end gap-2">
-          <Button asChild className="hidden sm:inline-flex bg-gradient-to-r from-blue-500 to-sky-500 text-white hover:opacity-90">
+          <Button asChild className={cn("hidden sm:inline-flex shiny-button", "bg-gradient-to-r from-blue-500 to-sky-500 text-white hover:opacity-90")}>
             <Link href="/#share-story">{dictionary.header.shareStory}</Link>
           </Button>
           <LanguageToggle />
