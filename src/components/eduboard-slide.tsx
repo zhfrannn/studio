@@ -12,6 +12,7 @@ import {
   Lightbulb,
   ListChecks,
   Quote,
+  ShieldAlert,
   Sparkles,
   Target,
 } from 'lucide-react';
@@ -33,6 +34,8 @@ const iconMapping: { [key: string]: React.ElementType } = {
   HeartHandshake,
   BookCopy,
   Info,
+  GanttChartSquare, // Added missing icon
+  ShieldAlert, // Added missing icon
 };
 
 const SlideLayout = ({ children }: { children: React.ReactNode }) => (
@@ -180,7 +183,7 @@ const InfographicSlide = ({ slide }: { slide: Slide }) => (
                 slide.themeColor.replace('bg-', 'text-')
               )}
             >
-              <Icon className="h-8 w-8" />
+              {Icon && <Icon className="h-8 w-8" />}
             </div>
             <h3 className="font-headline text-xl">{header}</h3>
             <p className="mt-1 text-muted-foreground">{body}</p>
