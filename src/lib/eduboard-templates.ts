@@ -69,7 +69,7 @@ export const eduboardSlidesTemplate: Slide[] = [
       'Tentukan rute evakuasi yang aman.',
       'Lakukan latihan evakuasi secara berkala.',
     ],
-    imageUrl: 'https://picsum.photos/seed/evacuation/800/600',
+    imageUrl: 'https://cdn.dribbble.com/userupload/27796411/file/original-992aa78e02707e86da76830a224a2f2d.png',
     icon: 'Goal',
     themeColor: 'oklch(60% 0.15 200)', // Cyan
   },

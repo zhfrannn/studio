@@ -149,7 +149,7 @@ const StackedStoryCard = ({
       exit={{ y: 50, opacity: 0 }}
       transition={{ type: 'spring', stiffness: 200, damping: 30 }}
     >
-      <Link href={`/story/${story.id}`}>
+      <Link href={`/story/${story.id}`} className="block h-full w-full">
         <Card className="group relative h-full w-full overflow-hidden rounded-2xl border-4 border-white/20 shadow-2xl">
           <Image
             src={story.media.featuredImage}
@@ -810,11 +810,11 @@ export default function Home() {
             </div>
             <div className="relative min-h-[300px] md:min-h-full">
               <Image
-                src="https://images.unsplash.com/photo-1640296150617-1ede154483d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxkaXNhc3RlcnxlbnwwfHx8fDE3NTk0OTkwOTd8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                src="https://cdn.dribbble.com/userupload/32247153/file/original-1fe677ceff3cabb6bf2037dc808ace4d.jpg"
                 alt="Community gathering discussing disaster preparedness"
                 fill
                 className="object-cover"
-                data-ai-hint="disaster"
+                data-ai-hint="community cooking"
               />
             </div>
           </div>
@@ -910,7 +910,7 @@ export default function Home() {
             </CardContent>
             <div className="relative min-h-[300px] bg-muted/50 md:min-h-full">
               <Image
-                src="https://picsum.photos/seed/interactive-hub/800/600"
+                src="https://cdn.dribbble.com/userupload/16865134/file/original-ac6d283eaa706824abed43da7e901dd2.jpeg"
                 alt="Interactive Learning Hub Preview"
                 fill
                 className="object-cover"
@@ -927,7 +927,7 @@ export default function Home() {
       >
         <div className="relative overflow-hidden rounded-2xl bg-blue-600 text-white">
           <Image
-            src="https://picsum.photos/seed/eduboard-bg/1200/400"
+            src="https://cdn.dribbble.com/userupload/29829998/file/original-94b1514fe3d528f62a84cf250c5efc1f.png"
             alt="Abstract background for eduboard"
             fill
             className="object-cover opacity-20"
@@ -957,7 +957,7 @@ export default function Home() {
               delay={0.2}
             >
               <Image
-                src="https://picsum.photos/seed/eduboard-main/500/400"
+                src="https://cdn.dribbble.com/userupload/16865092/file/original-286765ae0de4074597bfb6584a571c60.jpeg"
                 alt="EduBoard visualization"
                 fill
                 className="rounded-lg object-cover shadow-lg"

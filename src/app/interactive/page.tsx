@@ -25,7 +25,7 @@ import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Separator } from '@/components/ui/separator';
-import { stories } from '@/lib/data';
+import { getTranslatedStories } from '@/lib/data';
 import { interactiveContent, masterQuiz } from '@/lib/interactive-content';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -33,6 +33,7 @@ import WaveIcon from '@/components/icons/wave-icon';
 import { cn } from '@/lib/utils';
 import MotionWrapper from '@/components/motion-wrapper';
 import InteractiveQuiz from '@/components/interactive-quiz';
+import { useLanguage } from '@/context/language-context';
 
 const leaderboardData = [
   { name: 'Tsunami Expert', score: '30/30', rank: 1, initial: 'TE' },
@@ -89,7 +90,13 @@ const getThemeMeta = (theme: string) => {
   };
 };
 
-const allComics = stories
+
+export default function InteractiveLearningHub() {
+  // We can't use the hook here directly, so we'll just default to 'id' for now.
+  // The LanguageProvider will handle the client-side changes.
+  const stories = getTranslatedStories({ lang: 'id' });
+  
+  const allComics = stories
   .map(story => {
     const content = interactiveContent[story.id];
     if (!content || !content.comic) return null;
@@ -105,7 +112,6 @@ const allComics = stories
   })
   .filter(Boolean);
 
-export default function InteractiveLearningHub() {
   const quickAccessStories = stories.slice(0, 5);
   const videosToShow = stories.slice(0, 3);
 
@@ -168,7 +174,7 @@ export default function InteractiveLearningHub() {
                         </Badge>
                       </div>
                       <CardHeader>
-                        <CardTitle className="text-lg">{story.title}</CardTitle>
+                        <CardTitle className="text-lg font-bold">{story.title}</CardTitle>
                         <CardDescription className="line-clamp-2">
                           {story.summary}
                         </CardDescription>
@@ -301,7 +307,7 @@ export default function InteractiveLearningHub() {
                   </h3>
                 </CardContent>
                 <CardHeader className="flex-grow p-6">
-                  <CardTitle className="text-lg">{comic!.storyTitle}</CardTitle>
+                  <CardTitle className="text-lg font-bold">{comic!.storyTitle}</CardTitle>
                   <CardDescription>{comic!.description}</CardDescription>
                 </CardHeader>
                 <CardFooter className="p-6 pt-0">
@@ -375,5 +381,3 @@ export default function InteractiveLearningHub() {
     </div>
   );
 }
-
-    

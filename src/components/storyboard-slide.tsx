@@ -10,6 +10,12 @@ interface StoryboardSlideProps {
 }
 
 export default function StoryboardSlide({ slide }: StoryboardSlideProps) {
+  const images = [
+    'https://cdn.dribbble.com/userupload/26382361/file/original-a94049296846fa5218859ac34ea57b23.png',
+    'https://cdn.dribbble.com/userupload/27796411/file/original-992aa78e02707e86da76830a224a2f2d.png',
+    'https://cdn.dribbble.com/userupload/29829998/file/original-94b1514fe3d528f62a84cf250c5efc1f.png'
+  ];
+
   return (
     <div className="flex h-full w-full flex-col overflow-hidden rounded-lg bg-background text-foreground shadow-xl">
       <div className="p-6">
@@ -25,10 +31,7 @@ export default function StoryboardSlide({ slide }: StoryboardSlideProps) {
           <div key={index} className="grid grid-cols-3 gap-3 overflow-hidden rounded-lg bg-muted/50 p-3">
             <div className="relative col-span-1 h-full w-full overflow-hidden rounded-md">
               <Image
-                src={`https://picsum.photos/seed/${col.imageHint.replace(
-                  / /g,
-                  '-'
-                )}/300/300`}
+                src={images[index % images.length]}
                 alt={col.title}
                 fill
                 className="object-cover"
