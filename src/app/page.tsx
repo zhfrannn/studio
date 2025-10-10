@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -669,7 +670,7 @@ export default function Home() {
               <Sparkles className="h-5 w-5" />
               <span>{homeDict.hero.pill}</span>
             </div>
-            <h1 id="hero-title" className="hero-v2-title">
+            <h1 id="hero-title" className="hero-v2-title font-bold">
               {homeDict.hero.title}
             </h1>
             <p className="hero-v2-desc">{homeDict.hero.description}</p>
