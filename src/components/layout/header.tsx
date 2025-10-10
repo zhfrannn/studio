@@ -57,13 +57,6 @@ const Header = () => {
 
         <div className="flex flex-1 items-center justify-end gap-2">
           <div className="hidden md:flex items-center gap-2">
-            <Button
-              asChild
-              className="shiny-button bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:opacity-90"
-              size="sm"
-            >
-              <Link href="/wave-of-school">Wave of School</Link>
-            </Button>
              <Button
                 asChild
                 variant="outline"
@@ -74,6 +67,13 @@ const Header = () => {
                   {dictionary.header.shareStory}
                 </Link>
               </Button>
+            <Button
+              asChild
+              className="shiny-button bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:opacity-90"
+              size="sm"
+            >
+              <Link href="/wave-of-school">Wave of School</Link>
+            </Button>
           </div>
 
           <AuthButton />
@@ -106,15 +106,15 @@ const Header = () => {
                   {link.label}
                 </Link>
               ))}
-               <Button asChild className="shiny-button bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:opacity-90">
-                 <Link href="/wave-of-school" onClick={() => setMobileMenuOpen(false)}>Wave of School</Link>
-               </Button>
                <Button asChild variant="outline">
                 <Link href="/share-story" onClick={() => setMobileMenuOpen(false)}>
                   <Share2 className="mr-2 h-4 w-4" />
                   {dictionary.header.shareStory}
                 </Link>
               </Button>
+               <Button asChild className="shiny-button bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:opacity-90">
+                 <Link href="/wave-of-school" onClick={() => setMobileMenuOpen(false)}>Wave of School</Link>
+               </Button>
             </nav>
           </motion.div>
         )}
