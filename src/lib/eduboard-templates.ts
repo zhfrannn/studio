@@ -319,4 +319,80 @@ export const quizCardTemplate: QuizCardData[] = [
         icon: 'ListChecks',
         themeColor: 'oklch(60% 0.18 150)', // Green
     }
-]
+];
+
+export interface PrintableContentData {
+    id: string;
+    layout: 'printable-a4';
+    mainTitle: string;
+    mainIcon: string;
+    themeColor: string; // oklch color
+    intro: {
+        title: string;
+        text: string;
+    };
+    sections: {
+        title: string;
+        icon: string;
+        points: string[];
+    }[];
+    quote: {
+        text: string;
+        author: string;
+    };
+    qrCodeUrl: string;
+}
+
+export const printableContentTemplate: PrintableContentData = {
+    id: 'printable-tsunami-01',
+    layout: 'printable-a4',
+    mainTitle: 'Panduan Kesiapsiagaan Tsunami',
+    mainIcon: 'ShieldAlert',
+    themeColor: 'oklch(55% 0.15 240)', // Blue
+    intro: {
+        title: 'Apa itu Tsunami?',
+        text: 'Tsunami adalah serangkaian gelombang laut raksasa yang disebabkan oleh gangguan di dasar laut, seperti gempa bumi, yang dapat menyebabkan kerusakan parah di wilayah pesisir.'
+    },
+    sections: [
+        {
+            title: 'Tanda-Tanda Peringatan',
+            icon: 'AlertTriangle',
+            points: [
+                'Gempa bumi kuat yang membuat sulit berdiri.',
+                'Air laut surut secara tiba-tiba dan tidak wajar.',
+                'Suara gemuruh aneh dari arah lautan.'
+            ]
+        },
+        {
+            title: 'Saat Terjadi Gempa',
+            icon: 'GanttChartSquare',
+            points: [
+                'MERUNDUK (Drop) di bawah meja yang kokoh.',
+                'BERLINDUNG (Cover) melindungi kepala dan leher.',
+                'BERTAHAN (Hold On) hingga guncangan berhenti.'
+            ]
+        },
+        {
+            title: 'Segera Evakuasi',
+            icon: 'Goal',
+            points: [
+                'Setelah gempa berhenti, segera lari ke tempat tinggi.',
+                'Jangan menunggu peringatan resmi jika Anda merasakan tanda-tanda alam.',
+                'Ikuti jalur evakuasi yang telah ditentukan.'
+            ]
+        },
+        {
+            title: 'Tas Siaga Bencana',
+            icon: 'ListChecks',
+            points: [
+                'Siapkan tas berisi: air, makanan ringan, P3K, senter, peluit, dan dokumen penting.',
+                'Satu tas untuk setiap anggota keluarga.',
+            ]
+        }
+    ],
+    quote: {
+        text: 'Enggel mon sao suru, linon bak, mae oek suruik. (Jika gempa kuat diikuti surutnya air laut, segeralah lari ke tempat tinggi).',
+        author: 'Kearifan Lokal "Smong", Simeulue'
+    },
+    qrCodeUrl: 'https://waveofvoice.com/explore'
+}

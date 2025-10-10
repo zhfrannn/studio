@@ -2,13 +2,14 @@
 
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Presentation, Instagram, Puzzle } from 'lucide-react';
+import { ArrowLeft, Presentation, Instagram, Puzzle, Printer } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
 import SlideCarousel from '@/components/slide-carousel';
 import StoryboardCarousel from '@/components/storyboard-carousel';
 import QuizCarousel from '@/components/quiz-carousel';
+import PrintableContent from '@/components/printable-content';
 
-type EditorMode = 'selection' | 'slide' | 'storyboard' | 'quiz';
+type EditorMode = 'selection' | 'slide' | 'storyboard' | 'quiz' | 'printable';
 
 const OnboardingScreen = ({
   setMode,
@@ -30,7 +31,7 @@ const OnboardingScreen = ({
         mengisi konten berdasarkan template yang Anda pilih.
       </p>
     </div>
-    <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+    <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
       <div
         className="cursor-pointer rounded-xl border-2 bg-card p-8 text-center transition-all hover:border-primary hover:shadow-2xl"
         onClick={() => setMode('slide')}
@@ -63,6 +64,16 @@ const OnboardingScreen = ({
           Buat kartu kuis interaktif untuk menguji pemahaman dengan umpan balik langsung.
         </p>
       </div>
+      <div
+        className="cursor-pointer rounded-xl border-2 bg-card p-8 text-center transition-all hover:border-primary hover:shadow-2xl"
+        onClick={() => setMode('printable')}
+      >
+        <Printer className="mx-auto mb-4 h-16 w-16 text-primary" />
+        <h2 className="font-headline text-2xl">Infografis A4</h2>
+        <p className="mt-2 text-muted-foreground">
+          Hasilkan infografis satu halaman format A4 yang padat informasi dan siap untuk dicetak.
+        </p>
+      </div>
     </div>
   </motion.div>
 );
@@ -77,7 +88,7 @@ export default function EduBoardEditorPage() {
           <OnboardingScreen key="selection" setMode={setMode} />
         )}
 
-        {(mode === 'slide' || mode === 'storyboard' || mode === 'quiz') && (
+        {(mode !== 'selection') && (
           <motion.div
             key="editor"
             initial={{ opacity: 0, y: 20 }}
@@ -97,6 +108,7 @@ export default function EduBoardEditorPage() {
             {mode === 'slide' && <SlideCarousel />}
             {mode === 'storyboard' && <StoryboardCarousel />}
             {mode === 'quiz' && <QuizCarousel />}
+            {mode === 'printable' && <PrintableContent />}
           </motion.div>
         )}
       </AnimatePresence>
