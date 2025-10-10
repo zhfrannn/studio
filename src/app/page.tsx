@@ -458,7 +458,7 @@ export default function Home() {
       <section role="region" aria-labelledby="hero-title">
         <div className="hero-v2-card">
           <Image
-            src="https://images.unsplash.com/photo-1616141893496-fbc65370493e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3YXZlfGVufDB8fHx8MTc1OTUxNjQ3Mnww&ixlib=rb-4.1.0&q=80&w=1080"
+            src="https://cdn.dribbble.com/userupload/13448080/file/original-e275af77b98be7d7d015e61704339958.png?resize=752x&vertical=center"
             alt="Abstract blue water pattern"
             fill
             className="object-cover opacity-70"
