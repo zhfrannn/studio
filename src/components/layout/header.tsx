@@ -22,7 +22,6 @@ const Header = () => {
     { href: '/interactive', label: dictionary.header.interactive },
     { href: '/eduboard', label: dictionary.header.eduboard },
     { href: '/wave-of-school', label: 'Wave of School', isSpecial: true },
-    { href: '/eduboard-editor', label: 'EduBoard Editor' },
   ];
 
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
