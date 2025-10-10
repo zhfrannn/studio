@@ -11,6 +11,7 @@ import { useLanguage } from '@/context/language-context';
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import type { ViewState } from 'react-map-gl';
+import { cn } from '@/lib/utils';
 
 interface InteractiveMapProps {
   stories: Story[];
@@ -53,10 +54,10 @@ export default function InteractiveMap({ stories }: InteractiveMapProps) {
         ...vs,
         latitude: selectedStory.location.lat,
         longitude: selectedStory.location.lng,
-        zoom: 12,
+        zoom: 14,
         pitch: 60,
         bearing: 0,
-        transitionDuration: 2000,
+        transitionDuration: 3000,
       }));
     }
   }, [selectedStory]);
@@ -88,7 +89,14 @@ export default function InteractiveMap({ stories }: InteractiveMapProps) {
                 aria-label={`View story: ${story.title}`}
                 className="transform transition-transform duration-200 hover:scale-125"
               >
-                <MapPin className="h-8 w-8 fill-primary text-white drop-shadow-lg" />
+                 <MapPin
+                  className={cn(
+                    'h-8 w-8 text-white drop-shadow-lg transition-colors',
+                    selectedStory?.id === story.id
+                      ? 'fill-red-500 scale-125'
+                      : 'fill-primary'
+                  )}
+                />
               </button>
             </Marker>
           ) : null
