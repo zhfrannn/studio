@@ -1,44 +1,22 @@
-
 'use server';
 
 /**
  * @fileOverview Defines a Genkit flow for the Bot Siaga, an AI assistant that recommends stories.
  *
  * - generateStoryRecommendation - The main function that handles chatbot queries and recommends stories.
- * - GenerateStoryRecommendationInput - The input type for the function.
- * - GenerateStoryRecommendationOutput - The return type for the function.
  */
 
 import { ai } from '@/ai/genkit';
 import { getTranslatedStories } from '@/lib/data';
 import { z } from 'zod';
+import {
+  GenerateStoryRecommendationInputSchema,
+  GenerateStoryRecommendationOutputSchema,
+  type GenerateStoryRecommendationInput,
+  type GenerateStoryRecommendationOutput,
+  type Story,
+} from './story-recommendation-types';
 
-const StorySchema = z.object({
-  id: z.string(),
-  title: z.string(),
-  summary: z.string(),
-});
-export type Story = z.infer<typeof StorySchema>;
-
-// Input schema for the main flow
-export const GenerateStoryRecommendationInputSchema = z.object({
-  query: z.string().describe("The user's question or message to the bot."),
-  language: z.enum(['id', 'en']).describe('The language for the response.'),
-});
-export type GenerateStoryRecommendationInput = z.infer<
-  typeof GenerateStoryRecommendationInputSchema
->;
-
-// Output schema for the main flow
-export const GenerateStoryRecommendationOutputSchema = z.object({
-  response: z.string().describe("The AI-generated response to the user's query."),
-  recommendedStory: StorySchema.optional().describe(
-    'The most relevant story recommendation if applicable.'
-  ),
-});
-export type GenerateStoryRecommendationOutput = z.infer<
-  typeof GenerateStoryRecommendationOutputSchema
->;
 
 // Tool: A function for the AI to find relevant stories
 const findRelevantStoryTool = ai.defineTool(
@@ -50,7 +28,11 @@ const findRelevantStoryTool = ai.defineTool(
       query: z.string(),
       language: z.enum(['id', 'en']),
     }),
-    outputSchema: StorySchema.optional(),
+    outputSchema: z.object({
+      id: z.string(),
+      title: z.string(),
+      summary: z.string(),
+    }).optional(),
   },
   async ({ query, language }) => {
     console.log(`Tool: Searching for stories with query: "${query}" in ${language}`);

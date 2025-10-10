@@ -71,7 +71,9 @@ import useEmblaCarousel, {
   type EmblaCarouselType,
   type EmblaOptionsType,
 } from 'embla-carousel-react';
-import { generateStoryRecommendation, GenerateStoryRecommendationOutput } from '@/ai/flows/generate-story-recommendation';
+import { generateStoryRecommendation } from '@/ai/flows/generate-story-recommendation';
+import type { GenerateStoryRecommendationOutput } from '@/ai/flows/story-recommendation-types';
+
 
 function ShareStorySection() {
   const { dictionary, language } = useLanguage();

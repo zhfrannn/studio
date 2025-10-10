@@ -37,7 +37,8 @@ import {
 import { getTranslatedStories } from '@/lib/data';
 import MotionWrapper from '@/components/motion-wrapper';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { generateStoryRecommendation, GenerateStoryRecommendationOutput } from '@/ai/flows/generate-story-recommendation';
+import { generateStoryRecommendation } from '@/ai/flows/generate-story-recommendation';
+import type { GenerateStoryRecommendationOutput } from '@/ai/flows/story-recommendation-types';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { useLanguage } from '@/context/language-context';

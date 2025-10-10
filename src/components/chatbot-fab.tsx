@@ -26,10 +26,8 @@ import {
 } from './ui/card';
 import { Input } from './ui/input';
 import { ScrollArea } from './ui/scroll-area';
-import {
-  generateStoryRecommendation,
-  GenerateStoryRecommendationOutput,
-} from '@/ai/flows/generate-story-recommendation';
+import { generateStoryRecommendation } from '@/ai/flows/generate-story-recommendation';
+import type { GenerateStoryRecommendationOutput } from '@/ai/flows/story-recommendation-types';
 import { cn } from '@/lib/utils';
 import { useLanguage } from '@/context/language-context';
 import Image from 'next/image';
