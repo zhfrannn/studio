@@ -57,7 +57,7 @@ const recommendationFlow = ai.defineFlow(
   },
   async ({ query, language }) => {
     const { output } = await ai.generate({
-      model: 'googleai/gemini-1.5-flash',
+      model: 'googleai/gemini-pro',
       tools: [findRelevantStoryTool],
       prompt: `You are Bot Siaga, a friendly and helpful AI assistant for the 'Wave of Voice' platform.
       Your expertise is in disaster preparedness, Acehnese local wisdom, and peacebuilding.
