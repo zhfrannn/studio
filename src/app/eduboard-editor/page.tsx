@@ -2,14 +2,30 @@
 
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Presentation, Instagram, Puzzle, Printer } from 'lucide-react';
+import {
+  ArrowLeft,
+  Presentation,
+  Instagram,
+  Puzzle,
+  Printer,
+  Sparkles,
+} from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
 import SlideCarousel from '@/components/slide-carousel';
 import StoryboardCarousel from '@/components/storyboard-carousel';
 import QuizCarousel from '@/components/quiz-carousel';
 import PrintableContent from '@/components/printable-content';
+import MiniGameEngine from '@/components/minigame/minigame-engine';
+import { floodScenario } from '@/lib/minigame-scenarios';
+import { Card } from '@/components/ui/card';
 
-type EditorMode = 'selection' | 'slide' | 'storyboard' | 'quiz' | 'printable';
+type EditorMode =
+  | 'selection'
+  | 'slide'
+  | 'storyboard'
+  | 'quiz'
+  | 'printable'
+  | 'minigame';
 
 const OnboardingScreen = ({
   setMode,
@@ -54,14 +70,15 @@ const OnboardingScreen = ({
           Story, padat dengan gambar dan teks.
         </p>
       </div>
-       <div
+      <div
         className="cursor-pointer rounded-xl border-2 bg-card p-8 text-center transition-all hover:border-primary hover:shadow-2xl"
         onClick={() => setMode('quiz')}
       >
         <Puzzle className="mx-auto mb-4 h-16 w-16 text-primary" />
         <h2 className="font-headline text-2xl">Quiz Card Interaktif</h2>
         <p className="mt-2 text-muted-foreground">
-          Buat kartu kuis interaktif untuk menguji pemahaman dengan umpan balik langsung.
+          Buat kartu kuis interaktif untuk menguji pemahaman dengan umpan balik
+          langsung.
         </p>
       </div>
       <div
@@ -71,10 +88,22 @@ const OnboardingScreen = ({
         <Printer className="mx-auto mb-4 h-16 w-16 text-primary" />
         <h2 className="font-headline text-2xl">Infografis A4</h2>
         <p className="mt-2 text-muted-foreground">
-          Hasilkan infografis satu halaman format A4 yang padat informasi dan siap untuk dicetak.
+          Hasilkan infografis satu halaman format A4 yang padat informasi dan
+          siap untuk dicetak.
         </p>
       </div>
     </div>
+    <Card className="mt-12 cursor-pointer rounded-xl border-2 border-amber-500/50 bg-gradient-to-r from-amber-500/10 to-yellow-500/10 p-8 text-center transition-all hover:border-amber-500 hover:shadow-2xl" onClick={() => setMode('minigame')}>
+       <div className="flex items-center justify-center gap-4">
+        <Sparkles className="h-16 w-16 text-amber-500" />
+        <div>
+            <h2 className="font-headline text-2xl text-amber-600 dark:text-amber-400">Premium Content: Mini Game</h2>
+            <p className="mt-2 text-muted-foreground">
+            Bangun skenario game tanggap bencana interaktif yang kontennya dapat digerakkan oleh AI.
+            </p>
+        </div>
+       </div>
+    </Card>
   </motion.div>
 );
 
@@ -88,7 +117,7 @@ export default function EduBoardEditorPage() {
           <OnboardingScreen key="selection" setMode={setMode} />
         )}
 
-        {(mode !== 'selection') && (
+        {mode !== 'selection' && (
           <motion.div
             key="editor"
             initial={{ opacity: 0, y: 20 }}
@@ -109,6 +138,7 @@ export default function EduBoardEditorPage() {
             {mode === 'storyboard' && <StoryboardCarousel />}
             {mode === 'quiz' && <QuizCarousel />}
             {mode === 'printable' && <PrintableContent />}
+            {mode === 'minigame' && <MiniGameEngine scenario={floodScenario} />}
           </motion.div>
         )}
       </AnimatePresence>
