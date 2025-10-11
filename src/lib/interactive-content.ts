@@ -76,7 +76,7 @@ const smongComic: Comic = {
         {
             title: 'Syukur & Pelajaran',
             text: '“Kami selamat karena mendengarkan nasihat leluhur. Smong adalah penyelamat kami.”',
-            imageUrl: 'https://i.ibb.co/GQSD4TWr/Gemini-Generated-Image-muisyomuisyomuis.png',
+            imageUrl: 'https://i.ibb.co/N2td66Hx/Gemini-Generated-Image-vpirzivpirzivpir.png',
             imageHint: 'survivors watching sunrise'
         },
     ],
