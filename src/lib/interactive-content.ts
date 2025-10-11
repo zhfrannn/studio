@@ -216,17 +216,29 @@ const bahTangseComic: Comic = {
             imageHint: 'raging flash flood logs'
         },
         {
+            title: 'Teriakan Peringatan',
+            text: 'Kepala desa berteriak melalui pengeras suara masjid, "Air naik! Selamatkan diri! Lari ke tempat tinggi!"',
+            imageUrl: 'https://picsum.photos/seed/bah3/800/600',
+            imageHint: 'mosque speaker warning'
+        },
+        {
             title: 'Lari ke Tempat Tinggi',
             text: 'Dalam gelap gulita, kami berlari sekuat tenaga ke perbukitan, hanya membawa pakaian di badan.',
-            imageUrl: 'https://picsum.photos/seed/bah3/800/600',
+            imageUrl: 'https://picsum.photos/seed/bah4/800/600',
             imageHint: 'people running uphill dark'
         },
         {
             title: 'Pagi Penuh Lumpur',
-            text: 'Pagi harinya, yang tersisa hanyalah lumpur tebal dan puing-puing. Kami sadar, ini akibat penebangan liar.',
-            imageUrl: 'https://picsum.photos/seed/bah4/800/600',
+            text: 'Pagi harinya, yang tersisa hanyalah lumpur tebal dan puing-puing. Jembatan utama putus, puluhan rumah hilang.',
+            imageUrl: 'https://picsum.photos/seed/bah5/800/600',
             imageHint: 'village destroyed mud'
         },
+        {
+            title: 'Pelajaran Pahit',
+            text: 'Kami sadar, ini akibat penebangan liar. Sejak saat itu, kami bersumpah untuk menjaga hutan kami.',
+            imageUrl: 'https://picsum.photos/seed/bah6/800/600',
+            imageHint: 'community planting trees'
+        }
     ],
 };
 
@@ -247,15 +259,27 @@ const apiBukitComic: Comic = {
       imageHint: 'community patrolling forest'
     },
     {
+        title: 'Edukasi Warga',
+        text: 'Yang terpenting, kami memberikan penyuluhan kepada warga agar tidak membuka lahan dengan cara membakar.',
+        imageUrl: 'https://picsum.photos/seed/api3/800/600',
+        imageHint: 'community meeting education'
+    },
+    {
       title: 'Memadamkan Api',
       text: 'Saat api muncul, kami bekerja sama dengan peralatan seadanya untuk memadamkannya sebelum membesar.',
-      imageUrl: 'https://picsum.photos/seed/api3/800/600',
+      imageUrl: 'https://picsum.photos/seed/api4/800/600',
       imageHint: 'people fighting forest fire'
+    },
+    {
+        title: 'Tanggung Jawab Bersama',
+        text: 'Ini bukan pekerjaan pemerintah, ini adalah tanggung jawab kami bersama. Hutan ini adalah sumber air kami.',
+        imageUrl: 'https://picsum.photos/seed/api5/800/600',
+        imageHint: 'community shaking hands'
     },
     {
       title: 'Damai dengan Alam',
       text: 'Menjaga hutan ini adalah cara kami membangun perdamaian dengan alam, demi masa depan anak cucu.',
-      imageUrl: 'https://picsum.photos/seed/api4/800/600',
+      imageUrl: 'https://picsum.photos/seed/api6/800/600',
       imageHint: 'green forest sunrise'
     }
   ]
@@ -272,21 +296,33 @@ const kopiGayoComic: Comic = {
       imageHint: 'abandoned coffee plantation'
     },
     {
-      title: 'Harapan di Biji Kopi',
-      text: 'Setelah damai, kami kembali. Kami bekerja keras, melihat harapan baru di setiap biji kopi.',
+      title: 'Kembali dari Nol',
+      text: 'Setelah damai, kami kembali. Memulainya lagi dari nol sangat berat, namun kami melihat harapan.',
       imageUrl: 'https://picsum.photos/seed/kopi2/800/600',
+      imageHint: 'farmer looking at overgrown field'
+    },
+    {
+      title: 'Harapan di Biji Kopi',
+      text: 'Kami bekerja keras, belajar teknik bertani yang lebih baik, melihat harapan baru di setiap biji kopi.',
+      imageUrl: 'https://picsum.photos/seed/kopi3/800/600',
       imageHint: 'farmer holding coffee beans'
     },
     {
       title: 'Membangun Koperasi',
       text: 'Kami membentuk koperasi untuk saling menguatkan, belajar teknik baru, dan memasarkan kopi bersama.',
-      imageUrl: 'https://picsum.photos/seed/kopi3/800/600',
+      imageUrl: 'https://picsum.photos/seed/kopi4/800/600',
       imageHint: 'farmers meeting cooperative'
+    },
+    {
+        title: 'Menjadi Dikenal Dunia',
+        text: 'Perlahan tapi pasti, kopi Gayo mulai dikenal dunia, membawa nama baik bagi daerah kami.',
+        imageUrl: 'https://picsum.photos/seed/kopi5/800/600',
+        imageHint: 'coffee export shipping'
     },
     {
       title: 'Aroma Perdamaian',
       text: 'Kini, aroma kopi Gayo yang mendunia adalah aroma kerja keras, harapan, dan perdamaian yang telah kami raih.',
-      imageUrl: 'https://picsum.photos/seed/kopi4/800/600',
+      imageUrl: 'https://picsum.photos/seed/kopi6/800/600',
       imageHint: 'cup of steaming gayo coffee'
     }
   ]
@@ -303,21 +339,33 @@ const pemudaAdatComic: Comic = {
       imageHint: 'disaffected youth group'
     },
     {
+      title: 'Sebuah Panggilan',
+      text: 'Kami, beberapa pemuda yang lebih tua, merasa harus melakukan sesuatu untuk komunitas.',
+      imageUrl: 'https://picsum.photos/seed/pemuda2/800/600',
+      imageHint: 'youth leaders discussing'
+    },
+    {
       title: 'Menghidupkan Sanggar',
       text: 'Kami memutuskan untuk menghidupkan kembali sanggar tari Seudati, tarian yang mengajarkan disiplin dan kerja sama.',
-      imageUrl: 'https://picsum.photos/seed/pemuda2/800/600',
+      imageUrl: 'https://picsum.photos/seed/pemuda3/800/600',
       imageHint: 'reopening old building'
     },
     {
       title: 'Berlatih Bersama',
       text: 'Awalnya sulit, tapi perlahan sanggar kami mulai ramai. Para pemuda menyalurkan energi mereka ke dalam tarian.',
-      imageUrl: 'https://picsum.photos/seed/pemuda3/800/600',
+      imageUrl: 'https://picsum.photos/seed/pemuda4/800/600',
       imageHint: 'youth practicing seudati dance'
     },
     {
+        title: 'Ekspresi Positif',
+        text: 'Sanggar menjadi ruang aman bagi pemuda untuk berekspresi secara positif dan belajar nilai-nilai luhur.',
+        imageUrl: 'https://picsum.photos/seed/pemuda5/800/600',
+        imageHint: 'young dancers smiling'
+    },
+    {
       title: 'Jembatan Antar Desa',
-      text: 'Melalui tarian, kami membangun jembatan antar desa dan menciptakan ruang ekspresi yang positif bagi pemuda.',
-      imageUrl: 'https://picsum.photos/seed/pemuda4/800/600',
+      text: 'Melalui tarian, kami membangun jembatan antar desa dan menciptakan ikatan komunitas yang lebih kuat.',
+      imageUrl: 'https://picsum.photos/seed/pemuda6/800/600',
       imageHint: 'seudati dance performance'
     }
   ]
@@ -340,15 +388,27 @@ const perempuanPenganyamComic: Comic = {
       imageHint: 'women weaving together'
     },
     {
+        title: 'Karya dari Hati',
+        text: 'Anyaman ini bukan sekadar tikar atau tas, ini adalah terapi dan curahan hati kami.',
+        imageUrl: 'https://picsum.photos/seed/anyam3/800/600',
+        imageHint: 'closeup hands weaving'
+    },
+    {
       title: 'Kemandirian Ekonomi',
       text: 'Perlahan, produk kami mulai dikenal dan pesanan datang. Kami mendapatkan penghasilan sendiri.',
-      imageUrl: 'https://picsum.photos/seed/anyam3/800/600',
+      imageUrl: 'https://picsum.photos/seed/anyam4/800/600',
       imageHint: 'woven bags and mats market'
+    },
+    {
+        title: 'Menjadi Berdaya',
+        text: 'Kami tidak lagi hanya korban, kami adalah penyintas yang berdaya, yang bisa menghidupi keluarga.',
+        imageUrl: 'https://picsum.photos/seed/anyam5/800/600',
+        imageHint: 'woman proudly holding woven bag'
     },
     {
       title: 'Keluarga Baru',
       text: 'Kelompok ini menjadi keluarga baru kami, tempat kami menenun kembali harapan untuk masa depan.',
-      imageUrl: 'https://picsum.photos/seed/anyam4/800/600',
+      imageUrl: 'https://picsum.photos/seed/anyam6/800/600',
       imageHint: 'group of happy women smiling'
     }
   ]
@@ -377,9 +437,21 @@ const arsitekturComic: Comic = {
       imageHint: 'water flowing under stilt house'
     },
     {
+        title: 'Membuka Mata',
+        text: 'Ini membuka mata kami. Arsitektur nenek moyang kita ternyata luar biasa dan sangat relevan.',
+        imageUrl: 'https://picsum.photos/seed/ars4/800/600',
+        imageHint: 'people studying old house'
+    },
+    {
+        title: 'Inspirasi untuk Masa Depan',
+        text: 'Kami mulai mengadvokasikan dan membangun kembali rumah dengan mengadaptasi prinsip-prinsip Rumoh Aceh.',
+        imageUrl: 'https://picsum.photos/seed/ars5/800/600',
+        imageHint: 'architect drawing new house plan'
+    },
+    {
       title: 'Membangun Masa Depan',
-      text: 'Kami mengambil pelajaran terbaik dari masa lalu untuk membangun rumah dan masa depan yang lebih aman.',
-      imageUrl: 'https://picsum.photos/seed/ars4/800/600',
+      text: 'Ini bukan kembali ke masa lalu, tapi mengambil pelajaran terbaik dari masa lalu untuk membangun masa depan yang lebih aman.',
+      imageUrl: 'https://picsum.photos/seed/ars6/800/600',
       imageHint: 'modern house with traditional aceh design'
     }
   ]
@@ -396,21 +468,33 @@ const seniTraumaComic: Comic = {
       imageHint: 'ruined city wall'
     },
     {
-      title: 'Memberi Warna Baru',
-      text: 'Sebagai seniman, kami terpanggil. Kami mulai melukis mural di dinding publik, bukan untuk melupakan, tapi untuk memberi warna baru.',
+      title: 'Panggilan untuk Seniman',
+      text: 'Sebagai seniman, kami merasa terpanggil untuk melakukan sesuatu, untuk menyembuhkan luka kota dengan cara kami.',
       imageUrl: 'https://picsum.photos/seed/seni2/800/600',
+      imageHint: 'group of artists planning'
+    },
+    {
+      title: 'Memberi Warna Baru',
+      text: 'Kami mulai melukis mural di dinding publik, bukan untuk melupakan, tapi untuk memberi warna baru pada ingatan.',
+      imageUrl: 'https://picsum.photos/seed/seni3/800/600',
       imageHint: 'artist painting mural on wall'
     },
     {
       title: 'Terapi Melalui Seni',
       text: 'Proses melukis bersama ini menjadi terapi bagi kami dan komunitas. Dinding yang suram menjadi galeri terbuka.',
-      imageUrl: 'https://picsum.photos/seed/seni3/800/600',
+      imageUrl: 'https://picsum.photos/seed/seni4/800/600',
       imageHint: 'colorful community mural'
+    },
+    {
+        title: 'Harapan di Setiap Goresan',
+        text: 'Kami melukis tentang harapan, ketahanan, kebersamaan, dan keindahan Aceh yang tak pernah padam.',
+        imageUrl: 'https://picsum.photos/seed/seni5/800/600',
+        imageHint: 'closeup mural painting hope'
     },
     {
       title: 'Menyembuhkan Luka Kota',
       text: 'Seni menjadi cara kami menyembuhkan luka kota dan jiwa kami, mengubah trauma menjadi harapan.',
-      imageUrl: 'https://picsum.photos/seed/seni4/800/600',
+      imageUrl: 'https://picsum.photos/seed/seni6/800/600',
       imageHint: 'children interacting with mural'
     }
   ]
@@ -439,10 +523,22 @@ const nelayanComic: Comic = {
       imageHint: 'dolphins swimming near coast'
     },
     {
+        title: 'Warna Air dan Ikan',
+        text: 'Kami tahu kapan ikan berkumpul hanya dengan melihat warna air dan jenis burung yang terbang di atasnya.',
+        imageUrl: 'https://picsum.photos/seed/nelayan4/800/600',
+        imageHint: 'seabirds diving for fish'
+    },
+    {
+        title: 'Warisan Generasi',
+        text: 'Pengetahuan ini tidak ada di buku, ini diwariskan dari ayah ke anak, dari satu generasi nelayan ke generasi berikutnya.',
+        imageUrl: 'https://picsum.photos/seed/nelayan5/800/600',
+        imageHint: 'father teaching son on boat'
+    },
+    {
       title: 'Ilmu Kehidupan',
-      text: 'Pengetahuan ini diwariskan turun temurun, ilmu kehidupan yang membuat kami bersahabat dengan lautan.',
-      imageUrl: 'https://picsum.photos/seed/nelayan4/800/600',
-      imageHint: 'father teaching son on boat'
+      text: 'Ini adalah ilmu kehidupan yang membuat kami bisa bersahabat dengan lautan dan pulang dengan selamat.',
+      imageUrl: 'https://picsum.photos/seed/nelayan6/800/600',
+      imageHint: 'fishing boat returning at sunrise'
     }
   ]
 };
@@ -474,6 +570,18 @@ const sumurTuaComic: Comic = {
       text: 'Ajaib! Di dasarnya masih ada air jernih yang tak pernah kering. Leluhur kami membangunnya tepat di atas mata air.',
       imageUrl: 'https://picsum.photos/seed/sumur4/800/600',
       imageHint: 'clear water in old well'
+    },
+    {
+        title: 'Sumber Kehidupan',
+        text: 'Sumur tua itu menjadi satu-satunya sumber air bersih bagi seluruh desa selama sisa musim kemarau.',
+        imageUrl: 'https://picsum.photos/seed/sumur5/800/600',
+        imageHint: 'people queuing for water'
+    },
+    {
+        title: 'Pelajaran Berharga',
+        text: 'Kami belajar bahwa ada kearifan dalam peninggalan masa lalu yang harus kami jaga dan lestarikan.',
+        imageUrl: 'https://picsum.photos/seed/sumur6/800/600',
+        imageHint: 'community gathered around old well'
     }
   ]
 };
@@ -501,9 +609,21 @@ const ilmuFalakComic: Comic = {
       imageHint: 'scholar talking to fisherman'
     },
     {
-      title: 'Langit dan Lautan',
-      text: 'Ada hubungan erat antara langit dan laut, antara ilmu agama dan ilmu kehidupan, untuk kebaikan bersama.',
-      imageUrl: 'https://picsum.photos/seed/falak4/800/600',
+        title: 'Rujukan Masyarakat',
+        text: 'Para santri yang pulang ke kampungnya sering menjadi rujukan, memberitahu arah bintang utara atau kapan pasang tertinggi.',
+        imageUrl: 'https://picsum.photos/seed/falak4/800/600',
+        imageHint: 'student helping community'
+    },
+    {
+        title: 'Ilmu Agama dan Kehidupan',
+        text: 'Ada hubungan erat antara langit dan laut, antara ilmu agama dan ilmu kehidupan.',
+        imageUrl: 'https://picsum.photos/seed/falak5/800/600',
+        imageHint: 'mosque against starry sky'
+    },
+    {
+      title: 'Untuk Kebaikan Bersama',
+      text: 'Kami belajar bahwa semua ilmu berasal dari Tuhan dan bisa dimanfaatkan untuk kebaikan bersama, di darat maupun di lautan.',
+      imageUrl: 'https://picsum.photos/seed/falak6/800/600',
       imageHint: 'night sky over fishing village'
     }
   ]
@@ -532,10 +652,22 @@ const pasarComic: Comic = {
       imageHint: 'group of men drinking coffee'
     },
     {
-      title: 'Menjaga Denyut Nadi',
-      text: 'Menjaga pasar tradisional tetap hidup sama dengan menjaga denyut nadi dan ikatan sosial komunitas kita.',
-      imageUrl: 'https://picsum.photos/seed/pasar4/800/600',
-      imageHint: 'smiling market vendor'
+        title: 'Saling Menenangkan',
+        text: 'Bahkan ketika ada isu-isu yang meresahkan, kami bisa saling menenangkan dan mencari kebenaran di sini.',
+        imageUrl: 'https://picsum.photos/seed/pasar4/800/600',
+        imageHint: 'two people having serious talk'
+    },
+    {
+        title: 'Denyut Nadi Komunitas',
+        text: 'Menjaga pasar tradisional tetap hidup sama dengan menjaga denyut nadi dan ikatan sosial komunitas kita.',
+        imageUrl: 'https://picsum.photos/seed/pasar5/800/600',
+        imageHint: 'smiling market vendor'
+    },
+    {
+        title: 'Lebih dari Jual Beli',
+        text: 'Di sinilah persahabatan terjalin, masalah diselesaikan, dan komunitas terasa hidup.',
+        imageUrl: 'https://picsum.photos/seed/pasar6/800/600',
+        imageHint: 'people laughing in market'
     }
   ]
 };
@@ -567,6 +699,18 @@ const kucingCerdasComic: Comic = {
       text: 'Setelah guncangan berhenti, Siaga dengan tenang mengajak teman-temannya ke lapangan terbuka yang aman.',
       imageUrl: 'https://picsum.photos/seed/kucing4/800/600',
       imageHint: 'cats walking to open field'
+    },
+    {
+        title: 'Peringatan Tsunami',
+        text: '"Kita harus ke tempat tinggi," kata Siaga, "siapa tahu air laut surut!" Ia ingat cerita Smong.',
+        imageUrl: 'https://picsum.photos/seed/kucing5/800/600',
+        imageHint: 'cat pointing to hill'
+    },
+    {
+        title: 'Semua Selamat',
+        text: 'Karena Siaga, semua temannya selamat dan belajar cara melindungi diri saat bencana.',
+        imageUrl: 'https://picsum.photos/seed/kucing6/800/600',
+        imageHint: 'happy cats playing on hill'
     }
   ]
 };
@@ -1151,5 +1295,4 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
   },
 };
 
-    
     
