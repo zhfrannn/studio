@@ -292,37 +292,37 @@ const kopiGayoComic: Comic = {
     {
       title: 'Kebun yang Terlantar',
       text: 'Selama konflik, banyak kebun kopi kami yang telantar dan ditumbuhi semak belukar.',
-      imageUrl: 'https://picsum.photos/seed/kopi1/800/600',
+      imageUrl: 'https://i.ibb.co/N612z0S8/Gemini-Generated-Image-fc3gznfc3gznfc3g.png',
       imageHint: 'abandoned coffee plantation'
     },
     {
       title: 'Kembali dari Nol',
       text: 'Setelah damai, kami kembali. Memulainya lagi dari nol sangat berat, namun kami melihat harapan.',
-      imageUrl: 'https://picsum.photos/seed/kopi2/800/600',
+      imageUrl: 'https://i.ibb.co/qYDz7XHx/Gemini-Generated-Image-72mog772mog772mo.png',
       imageHint: 'farmer looking at overgrown field'
     },
     {
       title: 'Harapan di Biji Kopi',
       text: 'Kami bekerja keras, belajar teknik bertani yang lebih baik, melihat harapan baru di setiap biji kopi.',
-      imageUrl: 'https://picsum.photos/seed/kopi3/800/600',
+      imageUrl: 'https://i.ibb.co/Gr8hPCK/Gemini-Generated-Image-a3lug5a3lug5a3lu.png',
       imageHint: 'farmer holding coffee beans'
     },
     {
       title: 'Membangun Koperasi',
       text: 'Kami membentuk koperasi untuk saling menguatkan, belajar teknik baru, dan memasarkan kopi bersama.',
-      imageUrl: 'https://picsum.photos/seed/kopi4/800/600',
+      imageUrl: 'https://i.ibb.co/gL1dyvWm/Gemini-Generated-Image-wneukxwneukxwneu.png',
       imageHint: 'farmers meeting cooperative'
     },
     {
         title: 'Menjadi Dikenal Dunia',
         text: 'Perlahan tapi pasti, kopi Gayo mulai dikenal dunia, membawa nama baik bagi daerah kami.',
-        imageUrl: 'https://picsum.photos/seed/kopi5/800/600',
+        imageUrl: 'https://i.ibb.co/BxTrr9y/Gemini-Generated-Image-ntsba2ntsba2ntsb.png',
         imageHint: 'coffee export shipping'
     },
     {
       title: 'Aroma Perdamaian',
       text: 'Kini, aroma kopi Gayo yang mendunia adalah aroma kerja keras, harapan, dan perdamaian yang telah kami raih.',
-      imageUrl: 'https://picsum.photos/seed/kopi6/800/600',
+      imageUrl: 'https://i.ibb.co/65QLYw8/Gemini-Generated-Image-xp78xcxp78xcxp78.png',
       imageHint: 'cup of steaming gayo coffee'
     }
   ]
@@ -1294,6 +1294,8 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
     comic: kucingCerdasComic,
   },
 };
+
+    
 
     
 
