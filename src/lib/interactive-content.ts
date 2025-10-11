@@ -94,7 +94,7 @@ const bakauComic: Comic = {
         },
         {
             title: 'Mengingat Nasihat Tetua',
-            text: 'Kami teringat cerita orang tua dulu, bahwa hutan bakau adalah benteng alami kami.',
+            text: 'Kami teringat cerita orang tua dulu, bahwa hutan bakau adalah benteng alami kami yang telah hilang.',
             imageUrl: 'https://picsum.photos/seed/bakau2/800/600',
             imageHint: 'village elder storytelling'
         },
@@ -105,10 +105,22 @@ const bakauComic: Comic = {
             imageHint: 'community planting mangroves'
         },
         {
+            title: 'Tantangan & Kegagalan',
+            text: 'Awalnya sulit, banyak bibit yang gagal tumbuh. Tapi kami tidak menyerah dan terus mencoba.',
+            imageUrl: 'https://picsum.photos/seed/bakau-challenge/800/600',
+            imageHint: 'failed mangrove sapling'
+        },
+        {
             title: 'Benteng Alami Tumbuh Kuat',
             text: 'Kini, hutan bakau telah tumbuh lebat. Akarnya yang kokoh mencengkeram tanah, menahan laju ombak.',
             imageUrl: 'https://picsum.photos/seed/bakau4/800/600',
             imageHint: 'dense mangrove forest'
+        },
+        {
+            title: 'Kehidupan Kembali',
+            text: 'Hutan ini tidak hanya melindungi desa, tapi juga menjadi rumah bagi ikan dan kepiting, memberi kami sumber penghidupan baru.',
+            imageUrl: 'https://picsum.photos/seed/bakau-life/800/600',
+            imageHint: 'fish crabs mangroves'
         },
     ],
 };
@@ -204,6 +216,347 @@ const bahTangseComic: Comic = {
             imageHint: 'village destroyed mud'
         },
     ],
+};
+
+const apiBukitComic: Comic = {
+  title: 'Komik: Api di Bukit Barisan',
+  description: 'Perjuangan Masyarakat Peduli Api melindungi hutan Gayo.',
+  panels: [
+    {
+      title: 'Ancaman Musim Kering',
+      text: 'Setiap musim kemarau, hutan pinus yang indah ini menjadi sangat rentan terbakar. Sedikit percikan bisa menjadi bencana.',
+      imageUrl: 'https://picsum.photos/seed/api1/800/600',
+      imageHint: 'dry pine forest'
+    },
+    {
+      title: 'Patroli Sukarela',
+      text: 'Kami membentuk kelompok Masyarakat Peduli Api, berpatroli secara sukarela untuk mencegah kebakaran.',
+      imageUrl: 'https://picsum.photos/seed/api2/800/600',
+      imageHint: 'community patrolling forest'
+    },
+    {
+      title: 'Memadamkan Api',
+      text: 'Saat api muncul, kami bekerja sama dengan peralatan seadanya untuk memadamkannya sebelum membesar.',
+      imageUrl: 'https://picsum.photos/seed/api3/800/600',
+      imageHint: 'people fighting forest fire'
+    },
+    {
+      title: 'Damai dengan Alam',
+      text: 'Menjaga hutan ini adalah cara kami membangun perdamaian dengan alam, demi masa depan anak cucu.',
+      imageUrl: 'https://picsum.photos/seed/api4/800/600',
+      imageHint: 'green forest sunrise'
+    }
+  ]
+};
+
+const kopiGayoComic: Comic = {
+  title: 'Komik: Kopi Gayo, Aroma Perdamaian',
+  description: 'Kisah bangkitnya petani kopi Gayo pasca-konflik.',
+  panels: [
+    {
+      title: 'Kebun yang Terlantar',
+      text: 'Selama konflik, banyak kebun kopi kami yang telantar dan ditumbuhi semak belukar.',
+      imageUrl: 'https://picsum.photos/seed/kopi1/800/600',
+      imageHint: 'abandoned coffee plantation'
+    },
+    {
+      title: 'Harapan di Biji Kopi',
+      text: 'Setelah damai, kami kembali. Kami bekerja keras, melihat harapan baru di setiap biji kopi.',
+      imageUrl: 'https://picsum.photos/seed/kopi2/800/600',
+      imageHint: 'farmer holding coffee beans'
+    },
+    {
+      title: 'Membangun Koperasi',
+      text: 'Kami membentuk koperasi untuk saling menguatkan, belajar teknik baru, dan memasarkan kopi bersama.',
+      imageUrl: 'https://picsum.photos/seed/kopi3/800/600',
+      imageHint: 'farmers meeting cooperative'
+    },
+    {
+      title: 'Aroma Perdamaian',
+      text: 'Kini, aroma kopi Gayo yang mendunia adalah aroma kerja keras, harapan, dan perdamaian yang telah kami raih.',
+      imageUrl: 'https://picsum.photos/seed/kopi4/800/600',
+      imageHint: 'cup of steaming gayo coffee'
+    }
+  ]
+};
+
+const pemudaAdatComic: Comic = {
+  title: 'Komik: Pemuda Penjaga Adat',
+  description: 'Menghidupkan kembali tari Seudati untuk menjauhkan pemuda dari kekerasan.',
+  panels: [
+    {
+      title: 'Energi yang Hilang Arah',
+      text: 'Pasca-konflik, banyak pemuda kehilangan arah. Energi mereka yang besar terkadang tersalurkan ke hal negatif.',
+      imageUrl: 'https://picsum.photos/seed/pemuda1/800/600',
+      imageHint: 'disaffected youth group'
+    },
+    {
+      title: 'Menghidupkan Sanggar',
+      text: 'Kami memutuskan untuk menghidupkan kembali sanggar tari Seudati, tarian yang mengajarkan disiplin dan kerja sama.',
+      imageUrl: 'https://picsum.photos/seed/pemuda2/800/600',
+      imageHint: 'reopening old building'
+    },
+    {
+      title: 'Berlatih Bersama',
+      text: 'Awalnya sulit, tapi perlahan sanggar kami mulai ramai. Para pemuda menyalurkan energi mereka ke dalam tarian.',
+      imageUrl: 'https://picsum.photos/seed/pemuda3/800/600',
+      imageHint: 'youth practicing seudati dance'
+    },
+    {
+      title: 'Jembatan Antar Desa',
+      text: 'Melalui tarian, kami membangun jembatan antar desa dan menciptakan ruang ekspresi yang positif bagi pemuda.',
+      imageUrl: 'https://picsum.photos/seed/pemuda4/800/600',
+      imageHint: 'seudati dance performance'
+    }
+  ]
+};
+
+const perempuanPenganyamComic: Comic = {
+  title: 'Komik: Perempuan Penganyam Harapan',
+  description: 'Kisah janda korban tsunami yang bangkit dengan membentuk kelompok kerajinan anyaman.',
+  panels: [
+    {
+      title: 'Duka dan Ketidakpastian',
+      text: 'Tsunami merenggut suami dan rumah kami, meninggalkan kami dalam duka dan ketidakpastian.',
+      imageUrl: 'https://picsum.photos/seed/anyam1/800/600',
+      imageHint: 'sad woman looking at ocean'
+    },
+    {
+      title: 'Menganyam sebagai Terapi',
+      text: 'Kami berkumpul dan mulai menganyam dengan daun pandan. Sambil menganyam, kami saling berbagi cerita dan menguatkan.',
+      imageUrl: 'https://picsum.photos/seed/anyam2/800/600',
+      imageHint: 'women weaving together'
+    },
+    {
+      title: 'Kemandirian Ekonomi',
+      text: 'Perlahan, produk kami mulai dikenal dan pesanan datang. Kami mendapatkan penghasilan sendiri.',
+      imageUrl: 'https://picsum.photos/seed/anyam3/800/600',
+      imageHint: 'woven bags and mats market'
+    },
+    {
+      title: 'Keluarga Baru',
+      text: 'Kelompok ini menjadi keluarga baru kami, tempat kami menenun kembali harapan untuk masa depan.',
+      imageUrl: 'https://picsum.photos/seed/anyam4/800/600',
+      imageHint: 'group of happy women smiling'
+    }
+  ]
+};
+
+const arsitekturComic: Comic = {
+  title: 'Komik: Arsitektur Rumah Panggung',
+  description: 'Menggali kembali kearifan Rumoh Aceh sebagai inspirasi bangunan tahan gempa.',
+  panels: [
+    {
+      title: 'Rumoh Aceh yang Bertahan',
+      text: 'Saat gempa dan tsunami merobohkan banyak bangunan modern, kami melihat banyak Rumoh Aceh yang masih berdiri kokoh.',
+      imageUrl: 'https://picsum.photos/seed/ars1/800/600',
+      imageHint: 'aceh house after tsunami'
+    },
+    {
+      title: 'Konstruksi yang Fleksibel',
+      text: 'Struktur panggung dengan konstruksi kayu yang fleksibel terbukti mampu meredam guncangan gempa.',
+      imageUrl: 'https://picsum.photos/seed/ars2/800/600',
+      imageHint: 'diagram of stilt house structure'
+    },
+    {
+      title: 'Adaptif Terhadap Lingkungan',
+      text: 'Kolong di bawah rumah tidak hanya serbaguna, tapi juga memberi jalan bagi air saat terjadi banjir atau genangan.',
+      imageUrl: 'https://picsum.photos/seed/ars3/800/600',
+      imageHint: 'water flowing under stilt house'
+    },
+    {
+      title: 'Membangun Masa Depan',
+      text: 'Kami mengambil pelajaran terbaik dari masa lalu untuk membangun rumah dan masa depan yang lebih aman.',
+      imageUrl: 'https://picsum.photos/seed/ars4/800/600',
+      imageHint: 'modern house with traditional aceh design'
+    }
+  ]
+};
+
+const seniTraumaComic: Comic = {
+  title: 'Komik: Seni Melawan Trauma',
+  description: 'Bagaimana seniman muda Banda Aceh menggunakan mural untuk memulihkan kota.',
+  panels: [
+    {
+      title: 'Dinding Bisu Pasca-Tsunami',
+      text: 'Banda Aceh pasca-tsunami penuh dengan dinding bisu yang menjadi saksi tragedi. Suasananya terasa berat.',
+      imageUrl: 'https://picsum.photos/seed/seni1/800/600',
+      imageHint: 'ruined city wall'
+    },
+    {
+      title: 'Memberi Warna Baru',
+      text: 'Sebagai seniman, kami terpanggil. Kami mulai melukis mural di dinding publik, bukan untuk melupakan, tapi untuk memberi warna baru.',
+      imageUrl: 'https://picsum.photos/seed/seni2/800/600',
+      imageHint: 'artist painting mural on wall'
+    },
+    {
+      title: 'Terapi Melalui Seni',
+      text: 'Proses melukis bersama ini menjadi terapi bagi kami dan komunitas. Dinding yang suram menjadi galeri terbuka.',
+      imageUrl: 'https://picsum.photos/seed/seni3/800/600',
+      imageHint: 'colorful community mural'
+    },
+    {
+      title: 'Menyembuhkan Luka Kota',
+      text: 'Seni menjadi cara kami menyembuhkan luka kota dan jiwa kami, mengubah trauma menjadi harapan.',
+      imageUrl: 'https://picsum.photos/seed/seni4/800/600',
+      imageHint: 'children interacting with mural'
+    }
+  ]
+};
+
+const nelayanComic: Comic = {
+  title: 'Komik: Kearifan Nelayan',
+  description: 'Kisah nelayan tradisional yang membaca tanda alam untuk melaut.',
+  panels: [
+    {
+      title: 'Kompas Langit dan Laut',
+      text: 'Kami para nelayan tidak punya GPS canggih. Kompas kami adalah langit dan laut itu sendiri.',
+      imageUrl: 'https://picsum.photos/seed/nelayan1/800/600',
+      imageHint: 'fisherman at night starry sky'
+    },
+    {
+      title: 'Membaca Rasi Bintang',
+      text: 'Ayah mengajari cara membaca rasi bintang Orion, atau Bintang Tiga, untuk mengetahui arah pulang.',
+      imageUrl: 'https://picsum.photos/seed/nelayan2/800/600',
+      imageHint: 'orion constellation over sea'
+    },
+    {
+      title: 'Tanda dari Satwa',
+      text: 'Jika lumba-lumba berenang mendekati pantai, itu adalah pertanda cuaca akan buruk. Kami belajar dari perilaku hewan.',
+      imageUrl: 'https://picsum.photos/seed/nelayan3/800/600',
+      imageHint: 'dolphins swimming near coast'
+    },
+    {
+      title: 'Ilmu Kehidupan',
+      text: 'Pengetahuan ini diwariskan turun temurun, ilmu kehidupan yang membuat kami bersahabat dengan lautan.',
+      imageUrl: 'https://picsum.photos/seed/nelayan4/800/600',
+      imageHint: 'father teaching son on boat'
+    }
+  ]
+};
+
+const sumurTuaComic: Comic = {
+  title: 'Komik: Sumur Tua Sumber Kehidupan',
+  description: 'Bagaimana sumur kuno menyelamatkan desa dari kekeringan.',
+  panels: [
+    {
+      title: 'Kekeringan Panjang',
+      text: 'Musim kemarau tahun itu sangat panjang. Sungai dan sumur modern kami mengering. Kami mulai putus asa.',
+      imageUrl: 'https://picsum.photos/seed/sumur1/800/600',
+      imageHint: 'cracked dry earth'
+    },
+    {
+      title: 'Mengingat Warisan',
+      text: 'Seorang tetua teringat akan sebuah sumur tua di pinggir hutan yang sudah lama tak terpakai.',
+      imageUrl: 'https://picsum.photos/seed/sumur2/800/600',
+      imageHint: 'old man pointing towards forest'
+    },
+    {
+      title: 'Membersihkan Sumur',
+      text: 'Dengan ragu, kami membersihkan sumur yang dibangun dengan cincin batu dan ditutupi pohon besar itu.',
+      imageUrl: 'https://picsum.photos/seed/sumur3/800/600',
+      imageHint: 'community cleaning old well'
+    },
+    {
+      title: 'Mata Air yang Ajaib',
+      text: 'Ajaib! Di dasarnya masih ada air jernih yang tak pernah kering. Leluhur kami membangunnya tepat di atas mata air.',
+      imageUrl: 'https://picsum.photos/seed/sumur4/800/600',
+      imageHint: 'clear water in old well'
+    }
+  ]
+};
+
+const ilmuFalakComic: Comic = {
+  title: 'Komik: Ilmu Falak di Dayah',
+  description: 'Mengungkap peran dayah dalam mengajarkan astronomi untuk kehidupan.',
+  panels: [
+    {
+      title: 'Belajar di Dayah',
+      text: 'Banyak yang mengira dayah hanya tempat belajar Al-Quran, tapi kami juga mempelajari Ilmu Falak (astronomi).',
+      imageUrl: 'https://picsum.photos/seed/falak1/800/600',
+      imageHint: 'students studying in dayah'
+    },
+    {
+      title: 'Menghitung Posisi Bintang',
+      text: 'Kami menghitung posisi bintang untuk menentukan awal bulan puasa, arah kiblat, dan waktu shalat.',
+      imageUrl: 'https://picsum.photos/seed/falak2/800/600',
+      imageHint: 'teacher pointing at stars map'
+    },
+    {
+      title: 'Ilmu untuk Nelayan',
+      text: 'Ilmu yang sama ternyata juga bermanfaat bagi nelayan di pesisir untuk navigasi dan menentukan pasang surut.',
+      imageUrl: 'https://picsum.photos/seed/falak3/800/600',
+      imageHint: 'scholar talking to fisherman'
+    },
+    {
+      title: 'Langit dan Lautan',
+      text: 'Ada hubungan erat antara langit dan laut, antara ilmu agama dan ilmu kehidupan, untuk kebaikan bersama.',
+      imageUrl: 'https://picsum.photos/seed/falak4/800/600',
+      imageHint: 'night sky over fishing village'
+    }
+  ]
+};
+
+const pasarComic: Comic = {
+  title: 'Komik: Pasar sebagai Ruang Sosial',
+  description: 'Pasar tradisional bukan hanya tempat jual beli, tapi jantung komunitas.',
+  panels: [
+    {
+      title: 'Jantung Komunitas',
+      text: 'Bagi kami, pasar bukan hanya tempat mencari uang, tapi tempat kami bertemu teman dan bertukar kabar.',
+      imageUrl: 'https://picsum.photos/seed/pasar1/800/600',
+      imageHint: 'bustling traditional market'
+    },
+    {
+      title: 'Pusat Informasi',
+      text: 'Jika ada berita penting, lowongan kerja, atau isu meresahkan, informasi menyebar cepat di pasar.',
+      imageUrl: 'https://picsum.photos/seed/pasar2/800/600',
+      imageHint: 'people talking at coffee stall'
+    },
+    {
+      title: 'Barometer Sosial',
+      text: 'Dari obrolan di warung kopi pasar, kita bisa tahu apa yang sedang dirasakan masyarakat.',
+      imageUrl: 'https://picsum.photos/seed/pasar3/800/600',
+      imageHint: 'group of men drinking coffee'
+    },
+    {
+      title: 'Menjaga Denyut Nadi',
+      text: 'Menjaga pasar tradisional tetap hidup sama dengan menjaga denyut nadi dan ikatan sosial komunitas kita.',
+      imageUrl: 'https://picsum.photos/seed/pasar4/800/600',
+      imageHint: 'smiling market vendor'
+    }
+  ]
+};
+
+const kucingCerdasComic: Comic = {
+  title: 'Komik: Siaga, Si Kucing Cerdas',
+  description: 'Petualangan Siaga mengajarkan anak-anak tentang kesiapsiagaan bencana.',
+  panels: [
+    {
+      title: 'Kucing yang Berbeda',
+      text: 'Siaga suka mendengarkan cerita para tetua tentang gempa dan tsunami, tidak seperti teman-temannya yang suka tidur.',
+      imageUrl: 'https://picsum.photos/seed/kucing1/800/600',
+      imageHint: 'cute cat listening to old man'
+    },
+    {
+      title: 'Tanah Bergoyang!',
+      text: 'Saat tanah bergoyang, Siaga langsung berteriak, "Gempa! Ingat tiga langkah: Merunduk, Berlindung, dan Bertahan!"',
+      imageUrl: 'https://picsum.photos/seed/kucing2/800/600',
+      imageHint: 'cartoon earthquake cat under table'
+    },
+    {
+      title: 'Mengikuti si Ahli',
+      text: 'Teman-temannya yang bingung melihat apa yang dilakukan Siaga dan langsung mengikutinya.',
+      imageUrl: 'https://picsum.photos/seed/kucing3/800/600',
+      imageHint: 'other cats hiding under furniture'
+    },
+    {
+      title: 'Menuju Tempat Aman',
+      text: 'Setelah guncangan berhenti, Siaga dengan tenang mengajak teman-temannya ke lapangan terbuka yang aman.',
+      imageUrl: 'https://picsum.photos/seed/kucing4/800/600',
+      imageHint: 'cats walking to open field'
+    }
+  ]
 };
 
 
@@ -672,6 +1025,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
       info: 'Video ini menampilkan wawancara dengan petani kopi Gayo yang menceritakan perjalanan mereka dari masa konflik hingga membangun kembali kehidupan melalui kebun kopi.',
     },
     quiz: kopiGayoQuiz,
+    comic: kopiGayoComic,
   },
   'api-di-bukit-barisan': {
     video: {
@@ -682,6 +1036,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
       info: 'Video ini akan menyoroti pentingnya pencegahan dan peran aktif masyarakat dalam mitigasi bencana kebakaran hutan.',
     },
     quiz: apiBukitQuiz,
+    comic: apiBukitComic,
   },
   'pemuda-penjaga-adat': {
     video: {
@@ -693,6 +1048,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
       info: 'Video ini akan mendokumentasikan kegiatan sanggar Seudati dan dampaknya terhadap kaum muda di Pidie.',
     },
     quiz: pemudaAdatQuiz,
+    comic: pemudaAdatComic,
   },
   'perempuan-penganyam-harapan': {
     video: {
@@ -703,6 +1059,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
       info: 'Film dokumenter pendek ini akan mengikuti perjalanan kelompok penganyam dari duka menjadi berdaya.',
     },
     quiz: perempuanPenganyamQuiz,
+    comic: perempuanPenganyamComic,
   },
   'arsitektur-rumah-panggung': {
     video: {
@@ -713,6 +1070,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
       info: 'Video ini akan membandingkan desain Rumoh Aceh dengan bangunan modern dan menyoroti prinsip-prinsip rekayasa jenius di dalamnya.',
     },
     quiz: arsitekturQuiz,
+    comic: arsitekturComic,
   },
   'seni-melawan-trauma': {
     video: {
@@ -723,6 +1081,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
       info: 'Video ini akan menampilkan karya-karya seniman mural di Banda Aceh dan wawancara tentang kekuatan seni sebagai media terapi.',
     },
     quiz: seniTraumaQuiz,
+    comic: seniTraumaComic,
   },
   'nelayan-dan-tanda-alam': {
     video: {
@@ -733,6 +1092,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
       info: 'Video ini akan mendokumentasikan pengetahuan para nelayan tentang rasi bintang, angin, dan perilaku biota laut sebagai pemandu mereka.',
     },
     quiz: nelayanQuiz,
+    comic: nelayanComic,
   },
   'sumur-tua-sumber-kehidupan': {
     video: {
@@ -743,6 +1103,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
       info: 'Video ini akan mengeksplorasi pentingnya menjaga sumber-sumber air tradisional dan kearifan leluhur dalam menentukan lokasinya.',
     },
     quiz: sumurTuaQuiz,
+    comic: sumurTuaComic,
   },
   'ilmu-falak-di-pesantren': {
     video: {
@@ -753,6 +1114,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
       info: 'Video ini akan menjelaskan bagaimana ilmu agama dan sains saling melengkapi dalam tradisi intelektual Aceh.',
     },
     quiz: ilmuFalakQuiz,
+    comic: ilmuFalakComic,
   },
   'pasar-sebagai-ruang-sosial': {
     video: {
@@ -763,6 +1125,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
       info: 'Video ini akan menangkap suasana dan interaksi sosial di Pasar Peunayong, menunjukkan bagaimana informasi dan kohesi sosial terjalin.',
     },
     quiz: pasarQuiz,
+    comic: pasarComic,
   },
   'siaga-si-kucing-cerdas': {
     video: {
@@ -772,6 +1135,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
       info: 'Video ini akan menggunakan visual yang ceria dan lagu yang mudah diingat untuk membantu anak-anak memahami konsep kesiapsiagaan bencana.',
     },
     quiz: kucingCerdasQuiz,
+    comic: kucingCerdasComic,
   },
 };
 
