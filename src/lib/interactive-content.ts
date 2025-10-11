@@ -198,7 +198,7 @@ const bahTangseComic: Comic = {
             imageHint: 'people running uphill dark'
         },
         {
-            title 'Pagi Penuh Lumpur',
+            title: 'Pagi Penuh Lumpur',
             text: 'Pagi harinya, yang tersisa hanyalah lumpur tebal dan puing-puing. Kami sadar, ini akibat penebangan liar.',
             imageUrl: 'https://picsum.photos/seed/bah4/800/600',
             imageHint: 'village destroyed mud'
