@@ -784,6 +784,17 @@ const bahTangseQuiz: Quiz = {
       correctAnswer: 'Ke perbukitan atau tempat yang lebih tinggi',
       points: 10,
     },
+    {
+        question: 'Apa yang dibawa oleh air bah selain air yang meluap?',
+        options: [
+            'Ikan-ikan besar',
+            'Sampah plastik',
+            'Puluhan pohon gelondongan raksasa',
+            'Pasir pantai',
+        ],
+        correctAnswer: 'Puluhan pohon gelondongan raksasa',
+        points: 10,
+    }
   ],
 };
 
@@ -817,6 +828,17 @@ const kopiGayoQuiz: Quiz = {
       correctAnswer: 'Masyarakat bisa menyekolahkan anak-anak mereka',
       points: 10,
     },
+    {
+        question: 'Menurut cerita, apa yang menjadi "aroma perdamaian"?',
+        options: [
+            'Aroma masakan di dapur umum',
+            'Aroma bunga-bunga di taman',
+            'Aroma kopi yang diolah setiap pagi',
+            'Aroma laut setelah badai',
+        ],
+        correctAnswer: 'Aroma kopi yang diolah setiap pagi',
+        points: 10,
+    }
   ],
 };
 
@@ -827,17 +849,39 @@ const bakauQuiz: Quiz = {
     questions: [
         {
           question:
-            'Selain sebagai pelindung pantai, apa manfaat ekologis lain dari hutan bakau?',
+            'Selain sebagai pelindung pantai dari abrasi dan badai, apa manfaat ekologis lain dari hutan bakau?',
           options: [
-            'Menghasilkan buah-buahan',
+            'Menghasilkan buah-buahan yang bisa dimakan',
             'Menjadi habitat bagi biota laut seperti ikan dan kepiting',
-            'Menarik wisatawan asing',
-            'Membuat pantai lebih panas',
+            'Menyaring polusi udara di kota',
+            'Membuat air laut menjadi tawar',
           ],
           correctAnswer:
             'Menjadi habitat bagi biota laut seperti ikan dan kepiting',
           points: 10,
         },
+        {
+            question: 'Apa tantangan awal yang dihadapi komunitas saat menanam kembali hutan bakau?',
+            options: [
+                'Banyak bibit yang gagal tumbuh',
+                'Kekurangan dana dari pemerintah',
+                'Konflik dengan perusahaan sawit',
+                'Larangan dari tetua adat',
+            ],
+            correctAnswer: 'Banyak bibit yang gagal tumbuh',
+            points: 10,
+        },
+        {
+            question: 'Bagaimana cara hutan bakau melindungi pantai?',
+            options: [
+                'Dengan mengeluarkan zat kimia yang memecah ombak',
+                'Dengan membuat dinding tak terlihat',
+                'Dengan akarnya yang kokoh mencengkeram tanah dan menahan laju ombak',
+                'Dengan menarik burung-burung besar untuk melawan badai',
+            ],
+            correctAnswer: 'Dengan akarnya yang kokoh mencengkeram tanah dan menahan laju ombak',
+            points: 10,
+        }
     ]
 };
 
@@ -858,6 +902,28 @@ const dapurUmumQuiz: Quiz = {
             'Runtuhnya dinding ketidakpercayaan dan terjalinnya kembali persaudaraan',
           points: 10,
         },
+        {
+            question: 'Di mana keajaiban rekonsiliasi terjadi menurut cerita?',
+            options: [
+                'Di balai desa saat rapat resmi',
+                'Di media sosial melalui grup diskusi',
+                'Saat memotong sayur dan mengaduk gulai di dapur',
+                'Di lapangan olahraga saat kompetisi',
+            ],
+            correctAnswer: 'Saat memotong sayur dan mengaduk gulai di dapur',
+            points: 10,
+        },
+        {
+            question: 'Apa ide dasar yang memicu terbentuknya dapur umum ini?',
+            options: [
+                'Perintah dari kepala desa',
+                'Adanya bantuan bahan makanan dari LSM',
+                'Semua orang butuh makan, dan makanan bisa menyatukan',
+                'Untuk membuka bisnis restoran',
+            ],
+            correctAnswer: 'Semua orang butuh makan, dan makanan bisa menyatukan',
+            points: 10,
+        }
     ]
 };
 
@@ -878,6 +944,28 @@ const lumbungPadiQuiz: Quiz = {
             correctAnswer: 'Semangat gotong royong dan kepedulian',
             points: 10,
           },
+          {
+            question: 'Kapan seseorang boleh mengambil dari lumbung komunal?',
+            options: [
+                'Kapan saja mereka mau',
+                'Saat ada perayaan desa',
+                'Ketika mengalami kesulitan atau gagal panen',
+                'Hanya jika mereka sudah menyumbang lebih banyak',
+            ],
+            correctAnswer: 'Ketika mengalami kesulitan atau gagal panen',
+            points: 10,
+          },
+          {
+              question: 'Selain sebagai cadangan makanan, apa fungsi lumbung padi bagi komunitas?',
+              options: [
+                  'Sebagai tempat wisata',
+                  'Sebagai simbol persatuan dan kekuatan bersama',
+                  'Sebagai tempat penyimpanan barang antik',
+                  'Sebagai tempat pemungutan suara',
+              ],
+              correctAnswer: 'Sebagai simbol persatuan dan kekuatan bersama',
+              points: 10,
+          }
     ]
 };
 
@@ -887,7 +975,7 @@ const apiBukitQuiz: Quiz = {
       'Uji pengetahuan Anda tentang pencegahan dan penanggulangan kebakaran hutan.',
     questions: [
         {
-            question: 'Menurut cerita, apa penyebab umum kebakaran hutan?',
+            question: 'Menurut cerita, apa penyebab umum kebakaran hutan di Gayo?',
             options: [
               'Sambaran petir',
               'Panas matahari yang ekstrem',
@@ -898,6 +986,28 @@ const apiBukitQuiz: Quiz = {
               'Kelalaian manusia seperti membuka lahan dengan membakar',
             points: 10,
           },
+          {
+              question: 'Apa nama kelompok sukarela yang dibentuk warga untuk mengatasi kebakaran hutan?',
+              options: [
+                  'Tim Pemadam Gayo',
+                  'Masyarakat Peduli Api',
+                  'Aliansi Penjaga Hutan',
+                  'Komunitas Bukit Barisan',
+              ],
+              correctAnswer: 'Masyarakat Peduli Api',
+              points: 10,
+          },
+          {
+              question: 'Selain memadamkan api, apa kegiatan penting lain yang dilakukan kelompok ini?',
+              options: [
+                  'Menjual kayu hasil tebangan',
+                  'Berburu hewan liar',
+                  'Memberikan penyuluhan kepada warga agar tidak membakar lahan',
+                  'Membangun villa di hutan',
+              ],
+              correctAnswer: 'Memberikan penyuluhan kepada warga agar tidak membakar lahan',
+              points: 10,
+          }
     ]
 };
 
@@ -918,6 +1028,28 @@ const pemudaAdatQuiz: Quiz = {
             correctAnswer: 'Pembangunan perdamaian dan penguatan komunitas',
             points: 10,
           },
+          {
+              question: 'Tarian apa yang dihidupkan kembali oleh para pemuda dalam cerita?',
+              options: [
+                  'Tari Saman',
+                  'Tari Seudati',
+                  'Tari Piring',
+                  'Tari Kecak',
+              ],
+              correctAnswer: 'Tari Seudati',
+              points: 10,
+          },
+          {
+              question: 'Selain gerakan, apa yang diajarkan oleh tarian tersebut kepada para pemuda?',
+              options: [
+                  'Cara bertarung',
+                  'Sejarah kerajaan Aceh',
+                  'Disiplin, kerja sama tim, dan syair nasihat',
+                  'Teknik vokal untuk bernyanyi',
+              ],
+              correctAnswer: 'Disiplin, kerja sama tim, dan syair nasihat',
+              points: 10,
+          }
     ]
 };
 
@@ -938,6 +1070,28 @@ const perempuanPenganyamQuiz: Quiz = {
             correctAnswer: 'Dari korban menjadi penyintas yang berdaya',
             points: 10,
           },
+          {
+              question: 'Bahan utama apa yang mereka gunakan untuk membuat kerajinan anyaman?',
+              options: [
+                  'Rotan',
+                  'Bambu',
+                  'Daun Pandan',
+                  'Plastik daur ulang',
+              ],
+              correctAnswer: 'Daun Pandan',
+              points: 10,
+          },
+          {
+              question: 'Selain sebagai sumber ekonomi, apa fungsi lain dari kegiatan menganyam bersama bagi mereka?',
+              options: [
+                  'Sebagai kompetisi tahunan',
+                  'Sebagai terapi dan ruang untuk saling menguatkan',
+                  'Sebagai cara untuk melestarikan bahasa daerah',
+                  'Sebagai syarat untuk mendapatkan bantuan pemerintah',
+              ],
+              correctAnswer: 'Sebagai terapi dan ruang untuk saling menguatkan',
+              points: 10,
+          }
     ]
 };
 
@@ -959,6 +1113,28 @@ const arsitekturQuiz: Quiz = {
               'Desain tradisional seringkali memiliki solusi yang adaptif terhadap lingkungan',
             points: 10,
           },
+          {
+              question: 'Fitur utama apa dari Rumoh Aceh yang membuatnya tahan terhadap gempa?',
+              options: [
+                  'Dinding beton yang tebal',
+                  'Konstruksi kayu yang fleksibel',
+                  'Atap dari daun rumbia',
+                  'Pondasi yang sangat dalam',
+              ],
+              correctAnswer: 'Konstruksi kayu yang fleksibel',
+              points: 10,
+          },
+          {
+              question: 'Apa fungsi dari "kolong" atau ruang di bawah rumah panggung?',
+              options: [
+                  'Hanya sebagai hiasan',
+                  'Sebagai garasi mobil',
+                  'Sebagai ruang serbaguna dan jalan bagi air saat banjir',
+                  'Sebagai tempat membuang sampah',
+              ],
+              correctAnswer: 'Sebagai ruang serbaguna dan jalan bagi air saat banjir',
+              points: 10,
+          }
     ]
 };
 
@@ -979,6 +1155,28 @@ const seniTraumaQuiz: Quiz = {
             correctAnswer: 'Harapan, ketahanan, dan kebersamaan',
             points: 10,
           },
+          {
+              question: 'Apa tujuan utama para seniman melukis di dinding-dinding publik?',
+              options: [
+                  'Untuk menjual lukisan mereka',
+                  'Untuk menyembuhkan luka kota dan jiwa melalui seni',
+                  'Untuk memprotes pemerintah',
+                  'Untuk memenangkan kompetisi seni',
+              ],
+              correctAnswer: 'Untuk menyembuhkan luka kota dan jiwa melalui seni',
+              points: 10,
+          },
+          {
+              question: 'Bagaimana reaksi komunitas terhadap kegiatan mural ini?',
+              options: [
+                  'Komunitas marah karena dindingnya dicoret-coret',
+                  'Komunitas tidak peduli',
+                  'Komunitas, termasuk anak-anak, ikut bergabung dalam proses melukis',
+                  'Komunitas melaporkannya ke polisi',
+              ],
+              correctAnswer: 'Komunitas, termasuk anak-anak, ikut bergabung dalam proses melukis',
+              points: 10,
+          }
     ]
 };
 
@@ -988,9 +1186,31 @@ const nelayanQuiz: Quiz = {
       'Uji pengetahuanmu tentang cara nelayan tradisional membaca tanda-tanda alam.',
     questions: [
         {
-            question: 'Rasi bintang apa yang disebut "Bintang Tiga" dan digunakan untuk penunjuk arah?',
-            options: ['Scorpio', 'Orion', 'Big Dipper', 'Crux'],
+            question: 'Rasi bintang apa yang disebut "Bintang Tiga" dan digunakan oleh nelayan Aceh untuk penunjuk arah?',
+            options: ['Scorpio', 'Orion', 'Big Dipper', 'Crux (Salib Selatan)'],
             correctAnswer: 'Orion',
+            points: 10,
+        },
+        {
+            question: 'Perilaku hewan apa yang menjadi pertanda cuaca buruk bagi para nelayan?',
+            options: [
+                'Kucing tidur di dalam rumah',
+                'Burung-burung terbang tinggi di langit',
+                'Lumba-lumba berenang mendekati pantai',
+                'Ayam berkokok di pagi hari',
+            ],
+            correctAnswer: 'Lumba-lumba berenang mendekati pantai',
+            points: 10,
+        },
+        {
+            question: 'Bagaimana para nelayan mengetahui lokasi berkumpulnya ikan?',
+            options: [
+                'Menggunakan sonar canggih',
+                'Dengan melihat warna air dan jenis burung yang terbang di atasnya',
+                'Mengikuti kapal nelayan lain',
+                'Melempar jaring secara acak',
+            ],
+            correctAnswer: 'Dengan melihat warna air dan jenis burung yang terbang di atasnya',
             points: 10,
         }
     ]
@@ -1002,16 +1222,38 @@ const sumurTuaQuiz: Quiz = {
       'Uji pemahamanmu tentang manajemen sumber daya air tradisional.',
     questions: [
         {
-            question: 'Mengapa sumur tua tersebut tidak pernah kering?',
+            question: 'Mengapa sumur tua tersebut tidak pernah kering saat sumur modern lainnya kering?',
             options: [
               'Karena sangat dalam',
-              'Karena dibangun di atas mata air besar',
+              'Karena dibangun tepat di atas mata air besar',
               'Karena jarang digunakan',
               'Karena terbuat dari batu ajaib',
             ],
-            correctAnswer: 'Karena dibangun di atas mata air besar',
+            correctAnswer: 'Karena dibangun tepat di atas mata air besar',
             points: 10,
           },
+          {
+              question: 'Apa yang mendorong warga untuk mencari dan membersihkan sumur tua tersebut?',
+              options: [
+                  'Perintah dari pemerintah',
+                  'Rasa penasaran dan ingin berpetualang',
+                  'Kekeringan panjang yang membuat sumber air modern kering',
+                  'Mimpi seorang warga desa',
+              ],
+              correctAnswer: 'Kekeringan panjang yang membuat sumber air modern kering',
+              points: 10,
+          },
+          {
+              question: 'Pelajaran apa yang didapat warga dari peristiwa ini?',
+              options: [
+                  'Teknologi modern selalu lebih unggul',
+                  'Air tidak akan pernah habis',
+                  'Kearifan dalam peninggalan masa lalu harus dijaga dan dilestarikan',
+                  'Hutan tidak ada hubungannya dengan sumber air',
+              ],
+              correctAnswer: 'Kearifan dalam peninggalan masa lalu harus dijaga dan dilestarikan',
+              points: 10,
+          }
     ]
 };
 
@@ -1033,6 +1275,28 @@ const ilmuFalakQuiz: Quiz = {
               'Dapat saling melengkapi dan bermanfaat bagi kehidupan',
             points: 10,
           },
+          {
+              question: 'Selain untuk menentukan awal bulan puasa dan arah kiblat, untuk apa lagi Ilmu Falak digunakan dalam cerita?',
+              options: [
+                  'Untuk meramal nasib seseorang',
+                  'Untuk navigasi bagi para nelayan',
+                  'Untuk menentukan tanggal pernikahan',
+                  'Untuk menemukan harta karun',
+              ],
+              correctAnswer: 'Untuk navigasi bagi para nelayan',
+              points: 10,
+          },
+          {
+              question: 'Di mana Ilmu Falak ini diajarkan secara turun-temurun menurut cerita?',
+              options: [
+                  'Di universitas modern',
+                  'Di sekolah pelayaran',
+                  'Di balai desa',
+                  'Di pesantren (dayah)',
+              ],
+              correctAnswer: 'Di pesantren (dayah)',
+              points: 10,
+          }
     ]
 };
 
@@ -1041,17 +1305,39 @@ const pasarQuiz: Quiz = {
     description: 'Uji pemahamanmu tentang peran sosial pasar tradisional.',
     questions: [
         {
-            question: 'Apa pesan utama dari cerita ini?',
+            question: 'Selain sebagai tempat jual beli, apa fungsi utama pasar tradisional menurut cerita?',
             options: [
-              'Pasar modern lebih baik dari pasar tradisional',
-              'Pasar tradisional harus dijaga karena perannya sebagai pusat komunitas',
-              'Berjualan di pasar sangat menguntungkan',
-              'Warung kopi adalah bisnis terbaik di pasar',
+              'Sebagai tempat parkir kendaraan',
+              'Sebagai pusat penyebaran informasi dan penguatan ikatan sosial',
+              'Sebagai lokasi syuting film',
+              'Sebagai museum terbuka',
             ],
             correctAnswer:
-              'Pasar tradisional harus dijaga karena perannya sebagai pusat komunitas',
+              'Sebagai pusat penyebaran informasi dan penguatan ikatan sosial',
             points: 10,
           },
+          {
+              question: 'Tempat apa di dalam pasar yang disebut sebagai "barometer sosial"?',
+              options: [
+                  'Toko emas',
+                  'Kios penjahit',
+                  'Warung kopi pasar',
+                  'Lapak penjual ikan',
+              ],
+              correctAnswer: 'Warung kopi pasar',
+              points: 10,
+          },
+          {
+              question: 'Menurut cerita, mengapa menjaga pasar tradisional tetap hidup itu penting?',
+              options: [
+                  'Karena bangunannya antik dan bersejarah',
+                  'Karena sama dengan menjaga denyut nadi komunitas',
+                  'Karena pajaknya lebih murah daripada pasar modern',
+                  'Karena hanya di sana menjual bahan makanan langka',
+              ],
+              correctAnswer: 'Karena sama dengan menjaga denyut nadi komunitas',
+              points: 10,
+          }
     ]
 };
 
@@ -1085,6 +1371,17 @@ const kucingCerdasQuiz: Quiz = {
             'Ke lapangan terbuka yang jauh dari bangunan',
           points: 10,
         },
+        {
+            question: 'Kearifan lokal apa yang diingat Siaga setelah gempa berhenti?',
+            options: [
+                'Kisah tentang Kopi Gayo',
+                'Syair Smong tentang air laut surut',
+                'Cara membangun Rumoh Aceh',
+                'Pantangan menanam pohon di tepi pantai',
+            ],
+            correctAnswer: 'Syair Smong tentang air laut surut',
+            points: 10,
+        }
   ]
 };
 
