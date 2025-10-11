@@ -464,37 +464,37 @@ const seniTraumaComic: Comic = {
     {
       title: 'Dinding Bisu Pasca-Tsunami',
       text: 'Banda Aceh pasca-tsunami penuh dengan dinding bisu yang menjadi saksi tragedi. Suasananya terasa berat.',
-      imageUrl: 'https://picsum.photos/seed/seni1/800/600',
+      imageUrl: 'https://i.ibb.co/PZFB87MM/Gemini-Generated-Image-yr5r75yr5r75yr5r.png',
       imageHint: 'ruined city wall'
     },
     {
       title: 'Panggilan untuk Seniman',
       text: 'Sebagai seniman, kami merasa terpanggil untuk melakukan sesuatu, untuk menyembuhkan luka kota dengan cara kami.',
-      imageUrl: 'https://picsum.photos/seed/seni2/800/600',
+      imageUrl: 'https://i.ibb.co/qMvHYSfd/Gemini-Generated-Image-9zglxq9zglxq9zgl.png',
       imageHint: 'group of artists planning'
     },
     {
       title: 'Memberi Warna Baru',
       text: 'Kami mulai melukis mural di dinding publik, bukan untuk melupakan, tapi untuk memberi warna baru pada ingatan.',
-      imageUrl: 'https://picsum.photos/seed/seni3/800/600',
+      imageUrl: 'https://i.ibb.co/5XGSLv5c/Gemini-Generated-Image-d5p172d5p172d5p1.png',
       imageHint: 'artist painting mural on wall'
     },
     {
-      title: 'Terapi Melalui Seni',
-      text: 'Proses melukis bersama ini menjadi terapi bagi kami dan komunitas. Dinding yang suram menjadi galeri terbuka.',
-      imageUrl: 'https://picsum.photos/seed/seni4/800/600',
-      imageHint: 'colorful community mural'
+        title: 'Terapi Melalui Seni',
+        text: 'Proses melukis bersama ini menjadi terapi bagi kami dan komunitas. Dinding yang suram menjadi galeri terbuka.',
+        imageUrl: 'https://i.ibb.co/1GzKfrWz/Gemini-Generated-Image-2hh0ld2hh0ld2hh0.png',
+        imageHint: 'colorful community mural'
     },
     {
         title: 'Harapan di Setiap Goresan',
         text: 'Kami melukis tentang harapan, ketahanan, kebersamaan, dan keindahan Aceh yang tak pernah padam.',
-        imageUrl: 'https://picsum.photos/seed/seni5/800/600',
+        imageUrl: 'https://i.ibb.co/3ymkCsBm/Gemini-Generated-Image-363z96363z96363z.png',
         imageHint: 'closeup mural painting hope'
     },
     {
       title: 'Menyembuhkan Luka Kota',
       text: 'Seni menjadi cara kami menyembuhkan luka kota dan jiwa kami, mengubah trauma menjadi harapan.',
-      imageUrl: 'https://picsum.photos/seed/seni6/800/600',
+      imageUrl: 'https://i.ibb.co/pjr6h7s0/Gemini-Generated-Image-ikoughikoughikou.png',
       imageHint: 'children interacting with mural'
     }
   ]
