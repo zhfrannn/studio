@@ -132,37 +132,37 @@ const dapurUmumComic: Comic = {
         {
             title: 'Luka Pasca-Konflik',
             text: 'Setelah konflik berakhir, masih ada banyak luka dan ketidakpercayaan di antara kami. Sulit untuk memulai kembali.',
-            imageUrl: 'https://picsum.photos/seed/dapur1/800/600',
+            imageUrl: 'https://i.ibb.co/JWCgC8W2/Gemini-Generated-Image-higpgmhigpgmhigp.png',
             imageHint: 'sad village atmosphere'
         },
         {
             title: 'Ide Sederhana: Makanan',
             text: 'Beberapa dari kami, para ibu, berpikir: semua orang butuh makan, dan makanan bisa menyatukan.',
-            imageUrl: 'https://picsum.photos/seed/dapur2/800/600',
+            imageUrl: 'https://i.ibb.co/zWHC2Vf7/Gemini-Generated-Image-6ohms66ohms66ohm.png',
             imageHint: 'women discussing plan'
         },
         {
             title: 'Memulai Dapur Umum',
             text: 'Kami mendirikan dapur sederhana. Siapapun boleh datang untuk makan, dan siapapun boleh membantu memasak.',
-            imageUrl: 'https://picsum.photos/seed/dapur3/800/600',
+            imageUrl: 'https://i.ibb.co/FLFgPs27/Gemini-Generated-Image-etuhnbetuhnbetuh.png',
             imageHint: 'setting up community kitchen'
         },
         {
             title: 'Merajut Cerita di Atas Tungku',
             text: 'Sambil memotong sayur dan mengaduk gulai, kami mulai berbicara, berbagi cerita, tawa, dan air mata.',
-            imageUrl: 'https://picsum.photos/seed/dapur4/800/600',
+            imageUrl: 'https://i.ibb.co/gZymfGtt/Gemini-Generated-Image-p1tl3p1tl3p1tl3p.png',
             imageHint: 'community kitchen cooking'
         },
         {
             title: 'Ruang Rekonsiliasi',
             text: 'Dapur ini menjadi lebih dari tempat makan; ia menjadi ruang rekonsiliasi di mana dinding pemisah runtuh.',
-            imageUrl: 'https://picsum.photos/seed/dapur5/800/600',
+            imageUrl: 'https://i.ibb.co/4ntNZGTH/Gemini-Generated-Image-5y1cbj5y1cbj5y1c.png',
             imageHint: 'people talking laughing'
         },
         {
             title: 'Perdamaian dari Sepiring Nasi',
             text: 'Kami belajar bahwa perdamaian bisa dimulai dari hal yang paling sederhana: sepiring nasi hangat dan hati yang terbuka.',
-            imageUrl: 'https://picsum.photos/seed/dapur6/800/600',
+            imageUrl: 'https://i.ibb.co/T3f302F/Gemini-Generated-Image-rmhvlgrmhvlgrmhv.png',
             imageHint: 'people eating together happily'
         },
     ],
@@ -1151,4 +1151,5 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
   },
 };
 
+    
     
