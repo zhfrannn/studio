@@ -378,37 +378,37 @@ const perempuanPenganyamComic: Comic = {
     {
       title: 'Duka dan Ketidakpastian',
       text: 'Tsunami merenggut suami dan rumah kami, meninggalkan kami dalam duka dan ketidakpastian.',
-      imageUrl: 'https://picsum.photos/seed/anyam1/800/600',
+      imageUrl: 'https://i.ibb.co/JwwT5gf9/Gemini-Generated-Image-d4jht0d4jht0d4jh.png',
       imageHint: 'sad woman looking at ocean'
     },
     {
       title: 'Menganyam sebagai Terapi',
       text: 'Kami berkumpul dan mulai menganyam dengan daun pandan. Sambil menganyam, kami saling berbagi cerita dan menguatkan.',
-      imageUrl: 'https://picsum.photos/seed/anyam2/800/600',
+      imageUrl: 'https://i.ibb.co/N2shQ8zW/Gemini-Generated-Image-lt0y0glt0y0glt0y.png',
       imageHint: 'women weaving together'
     },
     {
         title: 'Karya dari Hati',
         text: 'Anyaman ini bukan sekadar tikar atau tas, ini adalah terapi dan curahan hati kami.',
-        imageUrl: 'https://picsum.photos/seed/anyam3/800/600',
+        imageUrl: 'https://i.ibb.co/9m56wN9M/Gemini-Generated-Image-6hbsja6hbsja6hbs.png',
         imageHint: 'closeup hands weaving'
     },
     {
       title: 'Kemandirian Ekonomi',
       text: 'Perlahan, produk kami mulai dikenal dan pesanan datang. Kami mendapatkan penghasilan sendiri.',
-      imageUrl: 'https://picsum.photos/seed/anyam4/800/600',
+      imageUrl: 'https://i.ibb.co/DDGWWjDV/Gemini-Generated-Image-2onqdx2onqdx2onq.png',
       imageHint: 'woven bags and mats market'
     },
     {
         title: 'Menjadi Berdaya',
         text: 'Kami tidak lagi hanya korban, kami adalah penyintas yang berdaya, yang bisa menghidupi keluarga.',
-        imageUrl: 'https://picsum.photos/seed/anyam5/800/600',
+        imageUrl: 'https://i.ibb.co/RkGvwjR8/Gemini-Generated-Image-pucmhfpucmhfpucm.png',
         imageHint: 'woman proudly holding woven bag'
     },
     {
       title: 'Keluarga Baru',
       text: 'Kelompok ini menjadi keluarga baru kami, tempat kami menenun kembali harapan untuk masa depan.',
-      imageUrl: 'https://picsum.photos/seed/anyam6/800/600',
+      imageUrl: 'https://i.ibb.co/846HCc3H/Gemini-Generated-Image-sh6lbush6lbush6l.png',
       imageHint: 'group of happy women smiling'
     }
   ]
@@ -1389,22 +1389,23 @@ export const masterQuiz: Quiz = {
     title: 'Kuis Pengetahuan Aceh',
     description: 'Uji wawasan Anda tentang kearifan lokal, kesiapsiagaan bencana, dan perdamaian di Aceh melalui pertanyaan-pertanyaan dari berbagai cerita.',
     questions: [
-        ...smongQuiz.questions.slice(0,1),
-        ...bahTangseQuiz.questions.slice(0,1),
-        ...kopiGayoQuiz.questions.slice(0,1),
-        ...bakauQuiz.questions.slice(0,1),
-        ...dapurUmumQuiz.questions.slice(0,1),
-        ...lumbungPadiQuiz.questions.slice(0,1),
-        ...apiBukitQuiz.questions.slice(0,1),
-        ...pemudaAdatQuiz.questions.slice(0,1),
-        ...perempuanPenganyamQuiz.questions.slice(0,1),
-        ...arsitekturQuiz.questions.slice(0,1),
-        ...seniTraumaQuiz.questions.slice(0,1),
-        ...nelayanQuiz.questions.slice(0,1),
-        ...sumurTuaQuiz.questions.slice(0,1),
-        ...ilmuFalakQuiz.questions.slice(0,1),
-        ...pasarQuiz.questions.slice(0,1),
-    ]
+        ...smongQuiz.questions,
+        ...bahTangseQuiz.questions,
+        ...kopiGayoQuiz.questions,
+        ...bakauQuiz.questions,
+        ...dapurUmumQuiz.questions,
+        ...lumbungPadiQuiz.questions,
+        ...apiBukitQuiz.questions,
+        ...pemudaAdatQuiz.questions,
+        ...perempuanPenganyamQuiz.questions,
+        ...arsitekturQuiz.questions,
+        ...seniTraumaQuiz.questions,
+        ...nelayanQuiz.questions,
+        ...sumurTuaQuiz.questions,
+        ...ilmuFalakQuiz.questions,
+        ...pasarQuiz.questions,
+        ...kucingCerdasQuiz.questions,
+    ].sort(() => 0.5 - Math.random()).slice(0, 10) // Ambil 10 pertanyaan acak
 }
 
 
