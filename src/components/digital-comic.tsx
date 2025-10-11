@@ -8,6 +8,7 @@ import {
 import { BookOpenText } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Comic } from '@/lib/interactive-content';
+import Image from 'next/image';
 
 interface DigitalComicProps {
   comic: Comic;
@@ -33,16 +34,27 @@ export default function DigitalComic({ comic }: DigitalComicProps) {
             >
               <div
                 className={cn(
-                  'flex h-48 w-full flex-col items-center justify-center rounded-lg bg-gradient-to-br p-4',
+                  'relative flex h-48 w-full flex-col items-center justify-center rounded-lg bg-gradient-to-br p-4 overflow-hidden',
                   panel.gradient
                 )}
               >
-                {/* We will need a way to dynamically render icons */}
-                <div
-                  dangerouslySetInnerHTML={{ __html: panel.iconSvg || '' }}
-                  className="h-10 w-10"
-                />
-                <h3 className="mt-4 font-semibold">{panel.title}</h3>
+                {panel.imageUrl ? (
+                  <Image
+                    src={panel.imageUrl}
+                    alt={panel.title}
+                    fill
+                    className="object-cover"
+                  />
+                ) : (
+                  panel.iconSvg && (
+                    <div
+                      dangerouslySetInnerHTML={{ __html: panel.iconSvg }}
+                      className="h-10 w-10"
+                    />
+                  )
+                )}
+                 <div className="absolute inset-0 bg-black/20" />
+                <h3 className="relative mt-4 font-semibold z-10 text-white drop-shadow-md">{panel.title}</h3>
               </div>
             </CardContent>
             <CardFooter

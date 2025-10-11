@@ -13,7 +13,8 @@ export interface Quiz {
 }
 
 export interface ComicPanel {
-  iconSvg: string;
+  iconSvg?: string;
+  imageUrl?: string;
   title: string;
   quote: string;
   gradient: string;
@@ -450,7 +451,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
         'Lihat bagaimana pengetahuan tradisional diwariskan dari generasi ke generasi.',
       panels: [
         {
-          iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trees"><path d="M10 10v.2A3 3 0 0 1 7 13v5H4v-5A6 6 0 0 1 10 7v3Z"/><path d="M14 14v.2A3 3 0 0 0 17 17v5h3v-5A6 6 0 0 0 14 11v3Z"/></svg>`,
+          imageUrl: 'https://i.ibb.co/Kpqs3Z9/panel1.jpg',
           title: 'Di Bawah Pohon Beringin',
           quote:
             '“Nenek mengajarkan kami peringatan kuno di bawah pohon beringin tua...”',
@@ -459,7 +460,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
           textColor: 'text-green-800 dark:text-green-200',
         },
         {
-          iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-waves"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg>`,
+          imageUrl: 'https://i.ibb.co/PZNfRh9/panel2.jpg',
           title: 'Membaca Laut',
           quote: '“Laut itu seperti orang, punya suasana hati. Belajarlah membaca tandanya...”',
           gradient:
@@ -467,7 +468,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
           textColor: 'text-blue-800 dark:text-blue-200',
         },
         {
-          iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-siren"><path d="M7 12a5 5 0 0 1 5-5v0a5 5 0 0 1 5 5v0a5 5 0 0 1-5 5v0a5 5 0 0 1-5-5Z"/><path d="M12 2v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="M22 12h-2"/><path d="m17.66 17.66-1.41-1.41"/><path d="M12 22v-2"/><path d="m6.34 17.66-1.41 1.41"/><path d="M2 12H0"/><path d="M4.93 19.07l1.41-1.41"/></svg>`,
+          imageUrl: 'https://i.ibb.co/hFVyfdt/panel3.jpg',
           title: 'Tanda Peringatan',
           quote: '“Jika bumi berguncang dan laut surut...”',
           gradient:
@@ -475,7 +476,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
           textColor: 'text-red-800 dark:text-red-200',
         },
         {
-          iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevrons-up"><path d="m17 11-5-5-5 5"/><path d="m17 18-5-5-5 5"/></svg>`,
+          imageUrl: 'https://i.ibb.co/Zz9J8nL/panel4.jpg',
           title: 'Lari ke Bukit!',
           quote: '“Jangan berpikir, jangan berkemas - lari saja ke tempat tinggi!”',
           gradient:
@@ -483,7 +484,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
           textColor: 'text-yellow-800 dark:text-yellow-200',
         },
         {
-          iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mountain"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>`,
+          imageUrl: 'https://i.ibb.co/XxRPr87/panel5.jpg',
           title: 'Aman di Ketinggian',
           quote: '“Tetap di sana sampai laut tenang selama berjam-jam...”',
           gradient:
@@ -491,7 +492,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
           textColor: 'text-purple-800 dark:text-purple-200',
         },
         {
-          iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-person-standing"><circle cx="12" cy="5" r="1"/><path d="m9 20 3-6 3 6"/><path d="m6 8 6 2 6-2"/><path d="M12 10v4"/></svg>`,
+          imageUrl: 'https://i.ibb.co/PGFvZZf/panel6.jpg',
           title: 'Meneruskan Tradisi',
           quote: '“Sekarang saya mengajari generasi berikutnya kearifan Smong...”',
           gradient:
@@ -981,7 +982,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
           textColor: 'text-purple-800 dark:text-purple-200',
         },
         {
-          iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bridge"><path d="M8 12h8"/><path d="M8 16h8"/><path d="M14 12v-2a2 2 0 1 0-4 0v2"/><path d="M4 10h.01"/><path d="M4 14h.01"/><path d="M20 10h-.01"/><path d="M20 14h-.01"/><path d="M2 10a8 8 0 0 1 11-8h2a8 8 0 0 1 11 8"/><path d="M2 16a8 8 0 0 0 11 8h2a8 8 0 0 0 11-8"/></svg>`,
+          iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0-0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bridge"><path d="M8 12h8"/><path d="M8 16h8"/><path d="M14 12v-2a2 2 0 1 0-4 0v2"/><path d="M4 10h.01"/><path d="M4 14h.01"/><path d="M20 10h-.01"/><path d="M20 14h-.01"/><path d="M2 10a8 8 0 0 1 11-8h2a8 8 0 0 1 11 8"/><path d="M2 16a8 8 0 0 0 11 8h2a8 8 0 0 0 11-8"/></svg>`,
           title: 'Membangun Jembatan',
           quote:
             '“Melalui pementasan tari, kami membangun jembatan silaturahmi antar desa yang dulu renggang.”',
