@@ -82,6 +82,130 @@ const smongComic: Comic = {
     ],
 };
 
+const bakauComic: Comic = {
+    title: 'Komik: Hutan Bakau Penjaga Pantai',
+    description: 'Kisah inspiratif tentang bagaimana komunitas bersatu menanam kembali benteng alami mereka.',
+    panels: [
+        {
+            title: 'Pantai yang Terkikis',
+            text: 'Dulu, pantai kami terus menerus terkikis oleh badai. Rumah-rumah di dekat pantai perlahan hancur.',
+            imageUrl: 'https://picsum.photos/seed/bakau1/800/600',
+            imageHint: 'eroded coastline storm'
+        },
+        {
+            title: 'Mengingat Nasihat Tetua',
+            text: 'Kami teringat cerita orang tua dulu, bahwa hutan bakau adalah benteng alami kami.',
+            imageUrl: 'https://picsum.photos/seed/bakau2/800/600',
+            imageHint: 'village elder storytelling'
+        },
+        {
+            title: 'Menanam Bibit Harapan',
+            text: 'Bersama-sama, para pemuda dan orang tua, kami mulai menanam kembali bibit bakau di sepanjang pesisir.',
+            imageUrl: 'https://picsum.photos/seed/bakau3/800/600',
+            imageHint: 'community planting mangroves'
+        },
+        {
+            title: 'Benteng Alami Tumbuh Kuat',
+            text: 'Kini, hutan bakau telah tumbuh lebat. Akarnya yang kokoh mencengkeram tanah, menahan laju ombak.',
+            imageUrl: 'https://picsum.photos/seed/bakau4/800/600',
+            imageHint: 'dense mangrove forest'
+        },
+    ],
+};
+
+const dapurUmumComic: Comic = {
+    title: 'Komik: Dapur Umum Perdamaian',
+    description: 'Bagaimana sebuah dapur sederhana merajut kembali tali persaudaraan yang sempat terkoyak.',
+    panels: [
+        {
+            title: 'Luka Pasca-Konflik',
+            text: 'Setelah konflik berakhir, masih ada banyak luka dan ketidakpercayaan di antara kami. Sulit untuk memulai kembali.',
+            imageUrl: 'https://picsum.photos/seed/dapur1/800/600',
+            imageHint: 'sad village atmosphere'
+        },
+        {
+            title: 'Ide Sederhana: Makanan',
+            text: 'Beberapa dari kami, para ibu, berpikir: semua orang butuh makan, dan makanan bisa menyatukan.',
+            imageUrl: 'https://picsum.photos/seed/dapur2/800/600',
+            imageHint: 'women discussing plan'
+        },
+        {
+            title: 'Merajut Cerita di Atas Tungku',
+            text: 'Sambil memotong sayur dan mengaduk gulai, kami mulai berbicara, berbagi cerita, tawa, dan air mata.',
+            imageUrl: 'https://picsum.photos/seed/dapur3/800/600',
+            imageHint: 'community kitchen cooking'
+        },
+        {
+            title: 'Perdamaian dari Sepiring Nasi',
+            text: 'Dapur ini menjadi ruang rekonsiliasi. Kami belajar bahwa perdamaian bisa dimulai dari hal yang paling sederhana.',
+            imageUrl: 'https://picsum.photos/seed/dapur4/800/600',
+            imageHint: 'people eating together happily'
+        },
+    ],
+};
+
+const lumbungPadiComic: Comic = {
+    title: 'Komik: Lumbung Padi Komunal',
+    description: 'Cerita tentang gotong royong masyarakat Gayo dalam menghadapi musim paceklik.',
+    panels: [
+        {
+            title: 'Panen Tak Menentu',
+            text: 'Di dataran tinggi Gayo, cuaca tidak selalu bisa ditebak. Kadang panen melimpah, kadang gagal total.',
+            imageUrl: 'https://picsum.photos/seed/lumbung1/800/600',
+            imageHint: 'gayo highlands farming'
+        },
+        {
+            title: 'Menghidupkan Tradisi',
+            text: 'Kami menghidupkan kembali tradisi lumbung bersama. Setiap keluarga menyisihkan sebagian panennya.',
+            imageUrl: 'https://picsum.photos/seed/lumbung2/800/600',
+            imageHint: 'putting rice into communal barn'
+        },
+        {
+            title: 'Jaring Pengaman Sosial',
+            text: 'Saat ada keluarga yang gagal panen, mereka bisa mengambil dari lumbung ini tanpa bunga atau utang.',
+            imageUrl: 'https://picsum.photos/seed/lumbung3/800/600',
+            imageHint: 'sharing food community'
+        },
+        {
+            title: 'Kaya dalam Persaudaraan',
+            text: 'Lumbung ini adalah simbol persatuan kami. Dengan berbagi, kita semua menjadi lebih kuat.',
+            imageUrl: 'https://picsum.photos/seed/lumbung4/800/600',
+            imageHint: 'happy farming community'
+        },
+    ],
+};
+
+const bahTangseComic: Comic = {
+    title: 'Komik: Bah Tangse, Sungai Murka',
+    description: 'Pelajaran pahit dari Tangse tentang pentingnya menjaga alam.',
+    panels: [
+        {
+            title: 'Malam yang Mencekam',
+            text: 'Hujan turun tanpa henti. Tiba-tiba, kami mendengar suara gemuruh yang bukan dari guntur.',
+            imageUrl: 'https://picsum.photos/seed/bah1/800/600',
+            imageHint: 'dark stormy night village'
+        },
+        {
+            title: 'Air Bah Datang',
+            text: 'Air sungai meluap dengan liar, warnanya hitam pekat, membawa puluhan pohon gelondongan raksasa.',
+            imageUrl: 'https://picsum.photos/seed/bah2/800/600',
+            imageHint: 'raging flash flood logs'
+        },
+        {
+            title: 'Lari ke Tempat Tinggi',
+            text: 'Dalam gelap gulita, kami berlari sekuat tenaga ke perbukitan, hanya membawa pakaian di badan.',
+            imageUrl: 'https://picsum.photos/seed/bah3/800/600',
+            imageHint: 'people running uphill dark'
+        },
+        {
+            title 'Pagi Penuh Lumpur',
+            text: 'Pagi harinya, yang tersisa hanyalah lumpur tebal dan puing-puing. Kami sadar, ini akibat penebangan liar.',
+            imageUrl: 'https://picsum.photos/seed/bah4/800/600',
+            imageHint: 'village destroyed mud'
+        },
+    ],
+};
+
 
 const smongQuiz: Quiz = {
   title: 'Kuis Kearifan Smong',
@@ -491,27 +615,6 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
     quiz: smongQuiz,
     comic: smongComic,
   },
-  'bah-tangse-sungai-murka': {
-    video: {
-      title: 'Video Dokumenter: Dahsyatnya Bah Tangse 2011',
-      description:
-        'Saksikan liputan berita nyata mengenai banjir bandang yang menghancurkan Tangse, Pidie pada 10 Maret 2011.',
-      embedUrl: 'https://www.canva.com/design/DAG1Gsxv32g/oEZ8pFfT0nK2UZJACt_RWw/watch?embed',
-      info: 'Video ini berisi rekaman aktual dari lokasi bencana dan wawancara dengan korban, memberikan gambaran nyata tentang dampak kerusakan akibat perambahan hutan.',
-    },
-    quiz: bahTangseQuiz,
-  },
-  'kopi-gayo-aroma-perdamaian': {
-    video: {
-      title: 'Video Edukasi: Kopi Gayo, Aroma Perdamaian',
-      description:
-        'Saksikan kisah inspiratif para petani kopi Gayo yang bangkit dari keterpurukan pasca-konflik untuk membangun kembali kehidupan mereka.',
-      embedUrl:
-        'https://www.canva.com/design/DAG1HC5cT1A/5pCeQTue043ynhFySg1WcQ/watch?embed',
-      info: 'Video ini menampilkan wawancara dengan petani kopi Gayo yang menceritakan perjalanan mereka dari masa konflik hingga membangun kembali kehidupan melalui kebun kopi.',
-    },
-    quiz: kopiGayoQuiz,
-  },
   'hutan-bakau-penjaga-pantai': {
     video: {
       title: 'Video Edukasi: Hutan Bakau, Benteng Alami Kita',
@@ -522,6 +625,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
       info: 'Video ini menjelaskan bagaimana komunitas di Aceh Jaya berhasil memulihkan garis pantai mereka melalui penanaman kembali hutan bakau.',
     },
     quiz: bakauQuiz,
+    comic: bakauComic,
   },
   'dapur-umum-perdamaian': {
     video: {
@@ -533,8 +637,9 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
       info: 'Video dokumenter singkat ini akan meliput kegiatan sehari-hari di Dapur Umum Perdamaian di Bireuen dan wawancara dengan para inisiatornya.',
     },
     quiz: dapurUmumQuiz,
+    comic: dapurUmumComic,
   },
-  'lumbung-padi-komunal': {
+    'lumbung-padi-komunal': {
     video: {
       title: 'Video Edukasi: Lumbung Padi, Jaring Pengaman Sosial',
       description:
@@ -544,6 +649,29 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
       info: 'Video ini menjelaskan cara kerja lumbung padi komunal sebagai jaring pengaman sosial yang efektif di tingkat masyarakat.',
     },
     quiz: lumbungPadiQuiz,
+    comic: lumbungPadiComic,
+  },
+  'bah-tangse-sungai-murka': {
+    video: {
+      title: 'Video Dokumenter: Dahsyatnya Bah Tangse 2011',
+      description:
+        'Saksikan liputan berita nyata mengenai banjir bandang yang menghancurkan Tangse, Pidie pada 10 Maret 2011.',
+      embedUrl: 'https://www.canva.com/design/DAG1Gsxv32g/oEZ8pFfT0nK2UZJACt_RWw/watch?embed',
+      info: 'Video ini berisi rekaman aktual dari lokasi bencana dan wawancara dengan korban, memberikan gambaran nyata tentang dampak kerusakan akibat perambahan hutan.',
+    },
+    quiz: bahTangseQuiz,
+    comic: bahTangseComic,
+  },
+  'kopi-gayo-aroma-perdamaian': {
+    video: {
+      title: 'Video Edukasi: Kopi Gayo, Aroma Perdamaian',
+      description:
+        'Saksikan kisah inspiratif para petani kopi Gayo yang bangkit dari keterpurukan pasca-konflik untuk membangun kembali kehidupan mereka.',
+      embedUrl:
+        'https://www.canva.com/design/DAG1HC5cT1A/5pCeQTue043ynhFySg1WcQ/watch?embed',
+      info: 'Video ini menampilkan wawancara dengan petani kopi Gayo yang menceritakan perjalanan mereka dari masa konflik hingga membangun kembali kehidupan melalui kebun kopi.',
+    },
+    quiz: kopiGayoQuiz,
   },
   'api-di-bukit-barisan': {
     video: {
