@@ -11,6 +11,7 @@ import {
   Coffee,
   ScrollText,
   ArrowRight,
+  Newspaper,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -97,7 +98,8 @@ export default function InteractiveLearningHub() {
   const stories = getTranslatedStories({ lang: 'id' });
   
   const quickAccessStories = stories.slice(0, 5);
-  const videosToShow = stories.slice(0, 3);
+  const videosToShow = stories.filter(s => interactiveContent[s.id]?.video?.embedUrl).slice(0, 2);
+  const comicsToShow = stories.filter(s => interactiveContent[s.id]?.comic).slice(0, 2);
 
   return (
     <div className="space-y-16 py-12 md:space-y-24">
@@ -172,7 +174,7 @@ export default function InteractiveLearningHub() {
                     </Card>
                   </MotionWrapper>
                 ))}
-                <MotionWrapper delay={0.3}>
+                <MotionWrapper delay={0.2}>
                   <Card className="flex h-full min-h-[200px] flex-col items-center justify-center border-2 border-dashed bg-transparent p-6 text-center">
                     <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-muted">
                       <Plus className="h-8 w-8 text-muted-foreground" />
@@ -188,6 +190,56 @@ export default function InteractiveLearningHub() {
                 </MotionWrapper>
               </div>
             </MotionWrapper>
+
+             {/* Interactive Comics Section */}
+             <MotionWrapper as="section">
+                <div className="mb-6">
+                  <h2 className="flex items-center gap-3 font-headline text-3xl font-bold">
+                    <Newspaper className="h-8 w-8 text-orange-500" />
+                    Interactive Digital Comics
+                  </h2>
+                  <p className="mt-1 text-muted-foreground">
+                    Experience stories in a visually engaging comic strip format.
+                  </p>
+                </div>
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                  {comicsToShow.map((story, i) => (
+                    <MotionWrapper key={story.id} delay={i * 0.1}>
+                      <Card className="overflow-hidden">
+                        <div className="relative aspect-video bg-muted">
+                          <Image
+                            src={story.media.featuredImage}
+                            alt={story.title}
+                            fill
+                            className="object-cover"
+                            data-ai-hint={story.media.featuredImageHint}
+                          />
+                          <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+                           <Button asChild variant="ghost" size="icon" className="h-12 w-12 rounded-full bg-white/80 text-primary shadow-lg hover:bg-white">
+                              <Link href={`/story/${story.id}`}>
+                                <Newspaper className="h-6 w-6" />
+                              </Link>
+                           </Button>
+                          </div>
+                          <Badge variant="secondary" className="absolute left-2 top-2">
+                            {story.aiThemes[0]}
+                          </Badge>
+                        </div>
+                        <CardHeader>
+                          <CardTitle className="text-lg font-bold">{story.title}</CardTitle>
+                          <CardDescription className="line-clamp-2">{story.summary}</CardDescription>
+                        </CardHeader>
+                        <CardFooter>
+                           <Button variant="secondary" size="sm" asChild className="w-full">
+                              <Link href={`/story/${story.id}`}>Read Comic</Link>
+                           </Button>
+                        </CardFooter>
+                      </Card>
+                    </MotionWrapper>
+                  ))}
+                </div>
+            </MotionWrapper>
+
           </main>
 
           <aside className="col-span-1 space-y-8">

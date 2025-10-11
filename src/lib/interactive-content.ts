@@ -19,10 +19,69 @@ export interface Video {
   info?: string;
 }
 
+export interface ComicPanel {
+  title: string;
+  text: string;
+  imageUrl: string;
+  imageHint: string;
+}
+
+export interface Comic {
+  title: string;
+  description: string;
+  panels: ComicPanel[];
+}
+
+
 export interface InteractiveContent {
   quiz?: Quiz;
   video: Video;
+  comic?: Comic;
 }
+
+const smongComic: Comic = {
+    title: 'Komik Digital: Kearifan Smong',
+    description: 'Ikuti kisah bagaimana kearifan lokal Smong menyelamatkan ribuan nyawa dalam format komik strip yang menarik.',
+    panels: [
+        {
+            title: 'Di Bawah Pohon Beringin',
+            text: '“Nenek mengajarkan kami peringatan kuno di bawah pohon beringin tua...”',
+            imageUrl: 'https://picsum.photos/seed/comic1/600/400',
+            imageHint: 'elder teaching children'
+        },
+        {
+            title: 'Gempa Mengguncang',
+            text: '“Tiba-tiba, tanah bergetar hebat. Kami tahu ini bukan gempa biasa.”',
+            imageUrl: 'https://picsum.photos/seed/comic2/600/400',
+            imageHint: 'earthquake shaking village'
+        },
+        {
+            title: 'Lari! Jangan Kembali!',
+            text: '“Orang-orang berteriak, ‘Smong! Smong!’ sambil menunjuk ke arah laut yang surut.”',
+            imageUrl: 'https://picsum.photos/seed/comic3/600/400',
+            imageHint: 'people running uphill'
+        },
+        {
+            title: 'Menuju Bukit',
+            text: '“Kami semua berlari sekuat tenaga menuju perbukitan, meninggalkan segalanya.”',
+            imageUrl: 'https://picsum.photos/seed/comic4/600/400',
+            imageHint: 'crowd climbing hill'
+        },
+        {
+            title: 'Lautan yang Murka',
+            text: '“Dari atas bukit, kami melihat gelombang raksasa menerjang desa kami.”',
+            imageUrl: 'https://picsum.photos/seed/comic5/600/400',
+            imageHint: 'tsunami wave hitting coast'
+        },
+        {
+            title: 'Syukur & Pelajaran',
+            text: '“Kami selamat karena mendengarkan nasihat leluhur. Smong adalah penyelamat kami.”',
+            imageUrl: 'https://picsum.photos/seed/comic6/600/400',
+            imageHint: 'survivors watching sunrise'
+        },
+    ],
+};
+
 
 const smongQuiz: Quiz = {
   title: 'Kuis Kearifan Smong',
@@ -430,6 +489,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
       info: 'Video ini mengeksplorasi bagaimana sistem pengetahuan tradisional seperti Smong bekerja bersama sistem peringatan dini modern untuk melindungi masyarakat.',
     },
     quiz: smongQuiz,
+    comic: smongComic,
   },
   'bah-tangse-sungai-murka': {
     video: {

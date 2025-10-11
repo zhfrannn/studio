@@ -29,6 +29,7 @@ import { useLanguage } from '@/context/language-context';
 import type { Story } from '@/lib/types';
 import idDict from '@/lib/i18n/id.json';
 import enDict from '@/lib/i18n/en.json';
+import DigitalComic from '@/components/digital-comic';
 
 // This is a server component, so we can't use the hook directly.
 // We'll simulate language selection for static generation if needed,
@@ -145,6 +146,12 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
               )}
             </Card>
           </MotionWrapper>
+
+          {content?.comic && (
+            <MotionWrapper as="section" delay={0.2}>
+              <DigitalComic comic={content.comic} />
+            </MotionWrapper>
+          )}
 
           <MotionWrapper as="section" delay={0.3}>
             <h2 className="mb-4 flex items-center gap-2 font-headline text-2xl font-bold">
