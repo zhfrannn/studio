@@ -421,37 +421,37 @@ const arsitekturComic: Comic = {
     {
       title: 'Rumoh Aceh yang Bertahan',
       text: 'Saat gempa dan tsunami merobohkan banyak bangunan modern, kami melihat banyak Rumoh Aceh yang masih berdiri kokoh.',
-      imageUrl: 'https://picsum.photos/seed/ars1/800/600',
+      imageUrl: 'https://i.ibb.co/ycjpYJDF/Gemini-Generated-Image-k7l0glk7l0glk7l0.png',
       imageHint: 'aceh house after tsunami'
     },
     {
       title: 'Konstruksi yang Fleksibel',
       text: 'Struktur panggung dengan konstruksi kayu yang fleksibel terbukti mampu meredam guncangan gempa.',
-      imageUrl: 'https://picsum.photos/seed/ars2/800/600',
+      imageUrl: 'https://i.ibb.co/Q7VdjXBn/Gemini-Generated-Image-c9fxgzc9fxgzc9fx.png',
       imageHint: 'diagram of stilt house structure'
     },
     {
       title: 'Adaptif Terhadap Lingkungan',
       text: 'Kolong di bawah rumah tidak hanya serbaguna, tapi juga memberi jalan bagi air saat terjadi banjir atau genangan.',
-      imageUrl: 'https://picsum.photos/seed/ars3/800/600',
+      imageUrl: 'https://i.ibb.co/KdDRNDF/Gemini-Generated-Image-imaeuhimaeuhimae.png',
       imageHint: 'water flowing under stilt house'
     },
     {
         title: 'Membuka Mata',
         text: 'Ini membuka mata kami. Arsitektur nenek moyang kita ternyata luar biasa dan sangat relevan.',
-        imageUrl: 'https://picsum.photos/seed/ars4/800/600',
+        imageUrl: 'https://i.ibb.co/PG545YGD/Gemini-Generated-Image-iof1g5iof1g5iof1.png',
         imageHint: 'people studying old house'
     },
     {
         title: 'Inspirasi untuk Masa Depan',
         text: 'Kami mulai mengadvokasikan dan membangun kembali rumah dengan mengadaptasi prinsip-prinsip Rumoh Aceh.',
-        imageUrl: 'https://picsum.photos/seed/ars5/800/600',
+        imageUrl: 'https://i.ibb.co/wrZyYXVc/Gemini-Generated-Image-ywlmvrywlmvrywlm.png',
         imageHint: 'architect drawing new house plan'
     },
     {
       title: 'Membangun Masa Depan',
       text: 'Ini bukan kembali ke masa lalu, tapi mengambil pelajaran terbaik dari masa lalu untuk membangun masa depan yang lebih aman.',
-      imageUrl: 'https://picsum.photos/seed/ars6/800/600',
+      imageUrl: 'https://i.ibb.co/JfnLPtj/Gemini-Generated-Image-wo8rv7wo8rv7wo8r.png',
       imageHint: 'modern house with traditional aceh design'
     }
   ]
@@ -1498,7 +1498,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
       description:
         'Saksikan bagaimana para pemuda di Pidie melestarikan budaya dan memperkuat ikatan sosial melalui tari Seudati.',
       embedUrl:
-        'https://www.canva.com/design/DAG1OM98Yrw/nyuZ9I8l9VuDI6AAdSYbCw/watch?embed',
+        'https://wwwcanva.com/design/DAG1OM98Yrw/nyuZ9I8l9VuDI6AAdSYbCw/watch?embed',
       info: 'Video ini akan mendokumentasikan kegiatan sanggar Seudati dan dampaknya terhadap kaum muda di Pidie.',
     },
     quiz: pemudaAdatQuiz,
