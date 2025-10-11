@@ -206,37 +206,37 @@ const bahTangseComic: Comic = {
         {
             title: 'Malam yang Mencekam',
             text: 'Hujan turun tanpa henti. Tiba-tiba, kami mendengar suara gemuruh yang bukan dari guntur.',
-            imageUrl: 'https://picsum.photos/seed/bah1/800/600',
+            imageUrl: 'https://i.ibb.co/8gC04Tds/Gemini-Generated-Image-tzd2r9tzd2r9tzd2.png',
             imageHint: 'dark stormy night village'
         },
         {
             title: 'Air Bah Datang',
             text: 'Air sungai meluap dengan liar, warnanya hitam pekat, membawa puluhan pohon gelondongan raksasa.',
-            imageUrl: 'https://picsum.photos/seed/bah2/800/600',
+            imageUrl: 'https://i.ibb.co/MxDVKgQ8/Gemini-Generated-Image-ptyvfqptyvfqptyv.png',
             imageHint: 'raging flash flood logs'
         },
         {
             title: 'Teriakan Peringatan',
             text: 'Kepala desa berteriak melalui pengeras suara masjid, "Air naik! Selamatkan diri! Lari ke tempat tinggi!"',
-            imageUrl: 'https://picsum.photos/seed/bah3/800/600',
+            imageUrl: 'https://i.ibb.co/Q31hqKRj/Gemini-Generated-Image-mbv9yumbv9yumbv9.png',
             imageHint: 'mosque speaker warning'
         },
         {
             title: 'Lari ke Tempat Tinggi',
             text: 'Dalam gelap gulita, kami berlari sekuat tenaga ke perbukitan, hanya membawa pakaian di badan.',
-            imageUrl: 'https://picsum.photos/seed/bah4/800/600',
+            imageUrl: 'https://i.ibb.co/8gvn36Hj/Gemini-Generated-Image-xbiewaxbiewaxbie.png',
             imageHint: 'people running uphill dark'
         },
         {
             title: 'Pagi Penuh Lumpur',
-            text: 'Pagi harinya, yang tersisa hanyalah lumpur tebal dan puing-puing. Jembatan utama putus, puluhan rumah hilang.',
-            imageUrl: 'https://picsum.photos/seed/bah5/800/600',
+            text: 'Pagi harinya, yang tersisa hanyalah lumpur tebal dan puing-puing. Kami sadar, ini akibat penebangan liar.',
+            imageUrl: 'https://i.ibb.co/gMTdhPdj/Gemini-Generated-Image-diwjbbdiwjbbdiwj.png',
             imageHint: 'village destroyed mud'
         },
         {
-            title: 'Pelajaran Pahit',
-            text: 'Kami sadar, ini akibat penebangan liar. Sejak saat itu, kami bersumpah untuk menjaga hutan kami.',
-            imageUrl: 'https://picsum.photos/seed/bah6/800/600',
+            title: 'Pelajaran & Sumpah',
+            text: 'Bah Tangse adalah pelajaran pahit. Sejak saat itu, kami bersumpah untuk menjaga dan menanam kembali hutan kami.',
+            imageUrl: 'https://i.ibb.co/gMvs88K7/Gemini-Generated-Image-6ijxun6ijxun6ijx.png',
             imageHint: 'community planting trees'
         }
     ],
