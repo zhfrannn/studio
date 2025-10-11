@@ -89,37 +89,37 @@ const bakauComic: Comic = {
         {
             title: 'Pantai yang Terkikis',
             text: 'Dulu, pantai kami terus menerus terkikis oleh badai. Rumah-rumah di dekat pantai perlahan hancur.',
-            imageUrl: 'https://picsum.photos/seed/bakau1/800/600',
+            imageUrl: 'https://i.ibb.co/PZHd26b4/Gemini-Generated-Image-421pmy421pmy421p.png',
             imageHint: 'eroded coastline storm'
         },
         {
             title: 'Mengingat Nasihat Tetua',
             text: 'Kami teringat cerita orang tua dulu, bahwa hutan bakau adalah benteng alami kami yang telah hilang.',
-            imageUrl: 'https://picsum.photos/seed/bakau2/800/600',
+            imageUrl: 'https://i.ibb.co/JWpk16NX/Gemini-Generated-Image-rsvte8rsvte8rsvt.png',
             imageHint: 'village elder storytelling'
         },
         {
             title: 'Menanam Bibit Harapan',
             text: 'Bersama-sama, para pemuda dan orang tua, kami mulai menanam kembali bibit bakau di sepanjang pesisir.',
-            imageUrl: 'https://picsum.photos/seed/bakau3/800/600',
+            imageUrl: 'https://i.ibb.co/qLMNkxFd/Gemini-Generated-Image-2b2mqh2b2mqh2b2m.png',
             imageHint: 'community planting mangroves'
         },
         {
             title: 'Tantangan & Kegagalan',
             text: 'Awalnya sulit, banyak bibit yang gagal tumbuh. Tapi kami tidak menyerah dan terus mencoba.',
-            imageUrl: 'https://picsum.photos/seed/bakau-challenge/800/600',
+            imageUrl: 'https://i.ibb.co/fVtfWBkG/Gemini-Generated-Image-6n753u6n753u6n75.png',
             imageHint: 'failed mangrove sapling'
         },
         {
             title: 'Benteng Alami Tumbuh Kuat',
             text: 'Kini, hutan bakau telah tumbuh lebat. Akarnya yang kokoh mencengkeram tanah, menahan laju ombak.',
-            imageUrl: 'https://picsum.photos/seed/bakau4/800/600',
+            imageUrl: 'https://i.ibb.co/cKZnnyh5/Gemini-Generated-Image-t9i448t9i448t9i4.png',
             imageHint: 'dense mangrove forest'
         },
         {
             title: 'Kehidupan Kembali',
             text: 'Hutan ini tidak hanya melindungi desa, tapi juga menjadi rumah bagi ikan dan kepiting, memberi kami sumber penghidupan baru.',
-            imageUrl: 'https://picsum.photos/seed/bakau-life/800/600',
+            imageUrl: 'https://i.ibb.co/bRz9Qck7/Gemini-Generated-Image-4rapqm4rapqm4rap.png',
             imageHint: 'fish crabs mangroves'
         },
     ],
