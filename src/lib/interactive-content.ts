@@ -335,37 +335,37 @@ const pemudaAdatComic: Comic = {
     {
       title: 'Energi yang Hilang Arah',
       text: 'Pasca-konflik, banyak pemuda kehilangan arah. Energi mereka yang besar terkadang tersalurkan ke hal negatif.',
-      imageUrl: 'https://picsum.photos/seed/pemuda1/800/600',
+      imageUrl: 'https://i.ibb.co/GvdSwzQf/Gemini-Generated-Image-3pu65m3pu65m3pu6.png',
       imageHint: 'disaffected youth group'
     },
     {
       title: 'Sebuah Panggilan',
       text: 'Kami, beberapa pemuda yang lebih tua, merasa harus melakukan sesuatu untuk komunitas.',
-      imageUrl: 'https://picsum.photos/seed/pemuda2/800/600',
+      imageUrl: 'https://i.ibb.co/hFpC4fNv/Gemini-Generated-Image-2ct3h82ct3h82ct3.png',
       imageHint: 'youth leaders discussing'
     },
     {
       title: 'Menghidupkan Sanggar',
       text: 'Kami memutuskan untuk menghidupkan kembali sanggar tari Seudati, tarian yang mengajarkan disiplin dan kerja sama.',
-      imageUrl: 'https://picsum.photos/seed/pemuda3/800/600',
+      imageUrl: 'https://i.ibb.co/FqH0xKx3/Gemini-Generated-Image-qq18guqq18guqq18.png',
       imageHint: 'reopening old building'
     },
     {
       title: 'Berlatih Bersama',
       text: 'Awalnya sulit, tapi perlahan sanggar kami mulai ramai. Para pemuda menyalurkan energi mereka ke dalam tarian.',
-      imageUrl: 'https://picsum.photos/seed/pemuda4/800/600',
+      imageUrl: 'https://i.ibb.co/d05SD259/Gemini-Generated-Image-esu33aesu33aesu3.png',
       imageHint: 'youth practicing seudati dance'
     },
     {
         title: 'Ekspresi Positif',
         text: 'Sanggar menjadi ruang aman bagi pemuda untuk berekspresi secara positif dan belajar nilai-nilai luhur.',
-        imageUrl: 'https://picsum.photos/seed/pemuda5/800/600',
+        imageUrl: 'https://i.ibb.co/NgQtKFvQ/Gemini-Generated-Image-9kobq9kobq9kobq9.png',
         imageHint: 'young dancers smiling'
     },
     {
       title: 'Jembatan Antar Desa',
       text: 'Melalui tarian, kami membangun jembatan antar desa dan menciptakan ikatan komunitas yang lebih kuat.',
-      imageUrl: 'https://picsum.photos/seed/pemuda6/800/600',
+      imageUrl: 'https://i.ibb.co/MDmNGYvr/Gemini-Generated-Image-sqvrxesqvrxesqvr.png',
       imageHint: 'seudati dance performance'
     }
   ]
