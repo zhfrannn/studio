@@ -13,7 +13,7 @@ export interface Quiz {
 }
 
 export interface Video {
-  title: string;
+  title:string;
   description: string;
   embedUrl: string;
   info?: string;
@@ -46,7 +46,7 @@ const smongComic: Comic = {
         {
             title: 'Di Bawah Pohon Beringin',
             text: '“Nenek mengajarkan kami peringatan kuno di bawah pohon beringin tua...”',
-            imageUrl: 'https://picsum.photos/seed/comic1/600/400',
+            imageUrl: 'https://i.ibb.co/7dWp6cGz/Gemini-Generated-Image-y3jausy3jausy3ja.png',
             imageHint: 'elder teaching children'
         },
         {
@@ -646,3 +646,5 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
     quiz: kucingCerdasQuiz,
   },
 };
+
+    
