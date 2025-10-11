@@ -175,25 +175,25 @@ const lumbungPadiComic: Comic = {
         {
             title: 'Panen Tak Menentu',
             text: 'Di dataran tinggi Gayo, cuaca tidak selalu bisa ditebak. Kadang panen melimpah, kadang gagal total.',
-            imageUrl: 'https://picsum.photos/seed/lumbung1/800/600',
+            imageUrl: 'https://i.ibb.co/XrSWCszM/Gemini-Generated-Image-mfguf9mfguf9mfgu.png',
             imageHint: 'gayo highlands farming'
         },
         {
             title: 'Menghidupkan Tradisi',
             text: 'Kami menghidupkan kembali tradisi lumbung bersama. Setiap keluarga menyisihkan sebagian panennya.',
-            imageUrl: 'https://picsum.photos/seed/lumbung2/800/600',
+            imageUrl: 'https://i.ibb.co/TxLMKmZd/Gemini-Generated-Image-o6m8b8o6m8b8o6m8.png',
             imageHint: 'putting rice into communal barn'
         },
         {
             title: 'Jaring Pengaman Sosial',
             text: 'Saat ada keluarga yang gagal panen, mereka bisa mengambil dari lumbung ini tanpa bunga atau utang.',
-            imageUrl: 'https://picsum.photos/seed/lumbung3/800/600',
+            imageUrl: 'https://i.ibb.co/N2Hcz9Q6/Gemini-Generated-Image-nzlk8inzlk8inzlk.png',
             imageHint: 'sharing food community'
         },
         {
             title: 'Kaya dalam Persaudaraan',
             text: 'Lumbung ini adalah simbol persatuan kami. Dengan berbagi, kita semua menjadi lebih kuat.',
-            imageUrl: 'https://picsum.photos/seed/lumbung4/800/600',
+            imageUrl: 'https://i.ibb.co/s9nftm6k/Gemini-Generated-Image-2yb53r2yb53r2yb5.png',
             imageHint: 'happy farming community'
         },
     ],
