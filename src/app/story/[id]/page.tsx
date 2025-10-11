@@ -23,7 +23,6 @@ import {
   interactiveContent,
   InteractiveContent,
 } from '@/lib/interactive-content';
-import DigitalComic from '@/components/digital-comic';
 import MotionWrapper from '@/components/motion-wrapper';
 import ScrollReveal from '@/components/ui/scroll-reveal';
 import { useLanguage } from '@/context/language-context';
@@ -146,23 +145,6 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
               )}
             </Card>
           </MotionWrapper>
-
-          {content?.comic ? (
-             <MotionWrapper as="section" delay={0.2}>
-                <DigitalComic comic={content.comic} />
-            </MotionWrapper>
-          ) : (
-            <MotionWrapper as="section" delay={0.2}>
-              <div className="mb-8 text-center">
-                <h2 className="mb-2 flex items-center justify-center gap-3 font-headline text-3xl font-bold">
-                  <BookOpenText /> Komik Digital
-                </h2>
-                <p className="text-muted-foreground">
-                  Komik digital untuk cerita ini akan segera hadir.
-                </p>
-              </div>
-            </MotionWrapper>
-          )}
 
           <MotionWrapper as="section" delay={0.3}>
             <h2 className="mb-4 flex items-center gap-2 font-headline text-2xl font-bold">

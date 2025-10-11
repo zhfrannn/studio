@@ -17,7 +17,6 @@ export interface Story {
   aiThemes: StoryTheme[];
   media: {
     videoUrl?: string;
-    comicUrl?: string;
     quizUrl?: string;
     featuredImage: string;
     featuredImageHint: string;

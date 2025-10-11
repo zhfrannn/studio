@@ -96,22 +96,6 @@ export default function InteractiveLearningHub() {
   // The LanguageProvider will handle the client-side changes.
   const stories = getTranslatedStories({ lang: 'id' });
   
-  const allComics = stories
-  .map(story => {
-    const content = interactiveContent[story.id];
-    if (!content || !content.comic) return null;
-    const themeMeta = getThemeMeta(story.aiThemes[0] || '');
-
-    return {
-      id: story.id,
-      storyTitle: story.title,
-      comicTitle: content.comic.title,
-      description: content.comic.description,
-      ...themeMeta,
-    };
-  })
-  .filter(Boolean);
-
   const quickAccessStories = stories.slice(0, 5);
   const videosToShow = stories.slice(0, 3);
 
@@ -274,58 +258,7 @@ export default function InteractiveLearningHub() {
           </aside>
         </div>
       </MotionWrapper>
-
-      <MotionWrapper as="section" className="container mx-auto px-4 rounded-2xl">
-        <div className="mb-12 text-center">
-          <h2 className="flex items-center justify-center gap-3 font-headline text-3xl font-bold md:text-4xl">
-            <BookOpen className="h-8 w-8 text-primary" />
-            Interactive Digital Comics
-          </h2>
-          <p className="mx-auto mt-2 max-w-2xl text-muted-foreground">
-            Experience stories through visual storytelling and interactive
-            comics.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {allComics.map((comic, i) => (
-            <MotionWrapper key={comic!.id} delay={i * 0.1}>
-              <Card
-                key={comic!.id}
-                className="group flex flex-col overflow-hidden text-center"
-              >
-                <CardContent
-                  className={cn(
-                    'flex flex-grow flex-col items-center justify-center p-6',
-                    comic!.color
-                  )}
-                >
-                  <div className={cn('mb-4', comic!.textColor)}>
-                    {comic!.icon}
-                  </div>
-                  <h3 className={cn('font-semibold', comic!.textColor)}>
-                    {comic!.comicTitle}
-                  </h3>
-                </CardContent>
-                <CardHeader className="flex-grow p-6">
-                  <CardTitle className="text-lg font-bold">{comic!.storyTitle}</CardTitle>
-                  <CardDescription>{comic!.description}</CardDescription>
-                </CardHeader>
-                <CardFooter className="p-6 pt-0">
-                  <Button asChild
-                    className={cn(
-                      'w-full text-white',
-                      comic!.buttonColor
-                    )}
-                  >
-                    <Link href={`/story/${comic!.id}`}>Read Comic</Link>
-                  </Button>
-                </CardFooter>
-              </Card>
-            </MotionWrapper>
-          ))}
-        </div>
-      </MotionWrapper>
-
+      
       <MotionWrapper as="section" className="container mx-auto px-4 rounded-2xl">
         <div className="mb-12 text-center">
           <h2 className="flex items-center justify-center gap-3 font-headline text-3xl font-bold md:text-4xl">
@@ -350,7 +283,7 @@ export default function InteractiveLearningHub() {
                   </div>
                 </div>
                 <p className="mb-4 text-sm text-muted-foreground">
-                  Complete story with video, comic, and interactive quiz.
+                  Complete story with video and interactive quiz.
                 </p>
                 <Link
                   href={`/story/${story.id}`}
