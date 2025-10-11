@@ -142,15 +142,27 @@ const dapurUmumComic: Comic = {
             imageHint: 'women discussing plan'
         },
         {
+            title: 'Memulai Dapur Umum',
+            text: 'Kami mendirikan dapur sederhana. Siapapun boleh datang untuk makan, dan siapapun boleh membantu memasak.',
+            imageUrl: 'https://picsum.photos/seed/dapur3/800/600',
+            imageHint: 'setting up community kitchen'
+        },
+        {
             title: 'Merajut Cerita di Atas Tungku',
             text: 'Sambil memotong sayur dan mengaduk gulai, kami mulai berbicara, berbagi cerita, tawa, dan air mata.',
-            imageUrl: 'https://picsum.photos/seed/dapur3/800/600',
+            imageUrl: 'https://picsum.photos/seed/dapur4/800/600',
             imageHint: 'community kitchen cooking'
         },
         {
+            title: 'Ruang Rekonsiliasi',
+            text: 'Dapur ini menjadi lebih dari tempat makan; ia menjadi ruang rekonsiliasi di mana dinding pemisah runtuh.',
+            imageUrl: 'https://picsum.photos/seed/dapur5/800/600',
+            imageHint: 'people talking laughing'
+        },
+        {
             title: 'Perdamaian dari Sepiring Nasi',
-            text: 'Dapur ini menjadi ruang rekonsiliasi. Kami belajar bahwa perdamaian bisa dimulai dari hal yang paling sederhana.',
-            imageUrl: 'https://picsum.photos/seed/dapur4/800/600',
+            text: 'Kami belajar bahwa perdamaian bisa dimulai dari hal yang paling sederhana: sepiring nasi hangat dan hati yang terbuka.',
+            imageUrl: 'https://picsum.photos/seed/dapur6/800/600',
             imageHint: 'people eating together happily'
         },
     ],
