@@ -507,37 +507,37 @@ const nelayanComic: Comic = {
     {
       title: 'Kompas Langit dan Laut',
       text: 'Kami para nelayan tidak punya GPS canggih. Kompas kami adalah langit dan laut itu sendiri.',
-      imageUrl: 'https://picsum.photos/seed/nelayan1/800/600',
+      imageUrl: 'https://i.ibb.co/zhj5vRfQ/Gemini-Generated-Image-yz9meiyz9meiyz9m.png',
       imageHint: 'fisherman at night starry sky'
     },
     {
       title: 'Membaca Rasi Bintang',
       text: 'Ayah mengajari cara membaca rasi bintang Orion, atau Bintang Tiga, untuk mengetahui arah pulang.',
-      imageUrl: 'https://picsum.photos/seed/nelayan2/800/600',
+      imageUrl: 'https://i.ibb.co/NgbyjjMf/Gemini-Generated-Image-ped9eaped9eaped9.png',
       imageHint: 'orion constellation over sea'
     },
     {
       title: 'Tanda dari Satwa',
       text: 'Jika lumba-lumba berenang mendekati pantai, itu adalah pertanda cuaca akan buruk. Kami belajar dari perilaku hewan.',
-      imageUrl: 'https://picsum.photos/seed/nelayan3/800/600',
+      imageUrl: 'https://i.ibb.co/XZQgHWxH/Gemini-Generated-Image-a8gbcxa8gbcxa8gb.png',
       imageHint: 'dolphins swimming near coast'
     },
     {
         title: 'Warna Air dan Ikan',
         text: 'Kami tahu kapan ikan berkumpul hanya dengan melihat warna air dan jenis burung yang terbang di atasnya.',
-        imageUrl: 'https://picsum.photos/seed/nelayan4/800/600',
+        imageUrl: 'https://i.ibb.co/gCpZCzB/Gemini-Generated-Image-4mvuio4mvuio4mvu.png',
         imageHint: 'seabirds diving for fish'
     },
     {
         title: 'Warisan Generasi',
         text: 'Pengetahuan ini tidak ada di buku, ini diwariskan dari ayah ke anak, dari satu generasi nelayan ke generasi berikutnya.',
-        imageUrl: 'https://picsum.photos/seed/nelayan5/800/600',
+        imageUrl: 'https://i.ibb.co/kVgdrTbg/Gemini-Generated-Image-h9xlylh9xlylh9xl.png',
         imageHint: 'father teaching son on boat'
     },
     {
       title: 'Ilmu Kehidupan',
       text: 'Ini adalah ilmu kehidupan yang membuat kami bisa bersahabat dengan lautan dan pulang dengan selamat.',
-      imageUrl: 'https://picsum.photos/seed/nelayan6/800/600',
+      imageUrl: 'https://i.ibb.co/4wvv5KV3/Gemini-Generated-Image-lrl3ielrl3ielrl3.png',
       imageHint: 'fishing boat returning at sunrise'
     }
   ]
