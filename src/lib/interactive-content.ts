@@ -52,31 +52,31 @@ const smongComic: Comic = {
         {
             title: 'Gempa Mengguncang',
             text: '“Tiba-tiba, tanah bergetar hebat. Kami tahu ini bukan gempa biasa.”',
-            imageUrl: 'https://picsum.photos/seed/comic2/600/400',
+            imageUrl: 'https://i.ibb.co/sv2Mhw6F/Gemini-Generated-Image-ubwgstubwgstubwg.png',
             imageHint: 'earthquake shaking village'
         },
         {
             title: 'Lari! Jangan Kembali!',
             text: '“Orang-orang berteriak, ‘Smong! Smong!’ sambil menunjuk ke arah laut yang surut.”',
-            imageUrl: 'https://picsum.photos/seed/comic3/600/400',
+            imageUrl: 'https://i.ibb.co/d4Zc2dW2/Gemini-Generated-Image-nep5q4nep5q4nep5.png',
             imageHint: 'people running uphill'
         },
         {
             title: 'Menuju Bukit',
             text: '“Kami semua berlari sekuat tenaga menuju perbukitan, meninggalkan segalanya.”',
-            imageUrl: 'https://picsum.photos/seed/comic4/600/400',
+            imageUrl: 'https://i.ibb.co/0yrct9db/Gemini-Generated-Image-o3lyr0o3lyr0o3ly.png',
             imageHint: 'crowd climbing hill'
         },
         {
             title: 'Lautan yang Murka',
             text: '“Dari atas bukit, kami melihat gelombang raksasa menerjang desa kami.”',
-            imageUrl: 'https://picsum.photos/seed/comic5/600/400',
+            imageUrl: 'https://i.ibb.co/GQSD4TWr/Gemini-Generated-Image-muisyomuisyomuis.png',
             imageHint: 'tsunami wave hitting coast'
         },
         {
             title: 'Syukur & Pelajaran',
             text: '“Kami selamat karena mendengarkan nasihat leluhur. Smong adalah penyelamat kami.”',
-            imageUrl: 'https://picsum.photos/seed/comic6/600/400',
+            imageUrl: 'https://i.ibb.co/GQSD4TWr/Gemini-Generated-Image-muisyomuisyomuis.png',
             imageHint: 'survivors watching sunrise'
         },
     ],
