@@ -249,37 +249,37 @@ const apiBukitComic: Comic = {
     {
       title: 'Ancaman Musim Kering',
       text: 'Setiap musim kemarau, hutan pinus yang indah ini menjadi sangat rentan terbakar. Sedikit percikan bisa menjadi bencana.',
-      imageUrl: 'https://picsum.photos/seed/api1/800/600',
+      imageUrl: 'https://i.ibb.co/Nd4BCwnh/Gemini-Generated-Image-mx2j89mx2j89mx2j.png',
       imageHint: 'dry pine forest'
     },
     {
       title: 'Patroli Sukarela',
       text: 'Kami membentuk kelompok Masyarakat Peduli Api, berpatroli secara sukarela untuk mencegah kebakaran.',
-      imageUrl: 'https://picsum.photos/seed/api2/800/600',
+      imageUrl: 'https://i.ibb.co/xQ84Wh9/Gemini-Generated-Image-fttc78fttc78fttc.png',
       imageHint: 'community patrolling forest'
     },
     {
         title: 'Edukasi Warga',
         text: 'Yang terpenting, kami memberikan penyuluhan kepada warga agar tidak membuka lahan dengan cara membakar.',
-        imageUrl: 'https://picsum.photos/seed/api3/800/600',
+        imageUrl: 'https://i.ibb.co/YwZvdXm/Gemini-Generated-Image-k3ov2dk3ov2dk3ov.png',
         imageHint: 'community meeting education'
     },
     {
       title: 'Memadamkan Api',
       text: 'Saat api muncul, kami bekerja sama dengan peralatan seadanya untuk memadamkannya sebelum membesar.',
-      imageUrl: 'https://picsum.photos/seed/api4/800/600',
+      imageUrl: 'https://i.ibb.co/wrwhkWjG/Gemini-Generated-Image-1tus9y1tus9y1tus.png',
       imageHint: 'people fighting forest fire'
     },
     {
         title: 'Tanggung Jawab Bersama',
         text: 'Ini bukan pekerjaan pemerintah, ini adalah tanggung jawab kami bersama. Hutan ini adalah sumber air kami.',
-        imageUrl: 'https://picsum.photos/seed/api5/800/600',
+        imageUrl: 'https://i.ibb.co/yFC19D6y/Gemini-Generated-Image-icr3a2icr3a2icr3.png',
         imageHint: 'community shaking hands'
     },
     {
       title: 'Damai dengan Alam',
       text: 'Menjaga hutan ini adalah cara kami membangun perdamaian dengan alam, demi masa depan anak cucu.',
-      imageUrl: 'https://picsum.photos/seed/api6/800/600',
+      imageUrl: 'https://i.ibb.co/39bW7xJz/Gemini-Generated-Image-x2zpffx2zpffx2zp.png',
       imageHint: 'green forest sunrise'
     }
   ]
@@ -1294,5 +1294,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
     comic: kucingCerdasComic,
   },
 };
+
+    
 
     
