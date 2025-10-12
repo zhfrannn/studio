@@ -550,37 +550,37 @@ const sumurTuaComic: Comic = {
     {
       title: 'Kekeringan Panjang',
       text: 'Musim kemarau tahun itu sangat panjang. Sungai dan sumur modern kami mengering. Kami mulai putus asa.',
-      imageUrl: 'https://picsum.photos/seed/sumur1/800/600',
+      imageUrl: 'https://i.ibb.co/6JJCYJZw/Gemini-Generated-Image-48cp6g48cp6g48cp.png',
       imageHint: 'cracked dry earth'
     },
     {
       title: 'Mengingat Warisan',
       text: 'Seorang tetua teringat akan sebuah sumur tua di pinggir hutan yang sudah lama tak terpakai.',
-      imageUrl: 'https://picsum.photos/seed/sumur2/800/600',
+      imageUrl: 'https://i.ibb.co/1tC6SMg3/Gemini-Generated-Image-as3nydas3nydas3n.png',
       imageHint: 'old man pointing towards forest'
     },
     {
       title: 'Membersihkan Sumur',
       text: 'Dengan ragu, kami membersihkan sumur yang dibangun dengan cincin batu dan ditutupi pohon besar itu.',
-      imageUrl: 'https://picsum.photos/seed/sumur3/800/600',
+      imageUrl: 'https://i.ibb.co/RG9HYJVM/Gemini-Generated-Image-1uj5031uj5031uj5.png',
       imageHint: 'community cleaning old well'
     },
     {
       title: 'Mata Air yang Ajaib',
       text: 'Ajaib! Di dasarnya masih ada air jernih yang tak pernah kering. Leluhur kami membangunnya tepat di atas mata air.',
-      imageUrl: 'https://picsum.photos/seed/sumur4/800/600',
+      imageUrl: 'https://i.ibb.co/N2DZQFsc/Gemini-Generated-Image-4o62wj4o62wj4o62.png',
       imageHint: 'clear water in old well'
     },
     {
         title: 'Sumber Kehidupan',
         text: 'Sumur tua itu menjadi satu-satunya sumber air bersih bagi seluruh desa selama sisa musim kemarau.',
-        imageUrl: 'https://picsum.photos/seed/sumur5/800/600',
+        imageUrl: 'https://i.ibb.co/BKNPTWgd/Gemini-Generated-Image-279br9279br9279b.png',
         imageHint: 'people queuing for water'
     },
     {
         title: 'Pelajaran Berharga',
         text: 'Kami belajar bahwa ada kearifan dalam peninggalan masa lalu yang harus kami jaga dan lestarikan.',
-        imageUrl: 'https://picsum.photos/seed/sumur6/800/600',
+        imageUrl: 'https://i.ibb.co/FLhZFwvy/Gemini-Generated-Image-t1ww3it1ww3it1ww.png',
         imageHint: 'community gathered around old well'
     }
   ]
@@ -1599,4 +1599,5 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
     
 
     
+
 
