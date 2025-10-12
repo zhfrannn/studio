@@ -1517,10 +1517,11 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
   },
   'arsitektur-rumah-panggung': {
     video: {
-      title: 'Video Edukasi Akan Segera Hadir!',
+      title: 'Video Edukasi: Kearifan Rumoh Aceh',
       description:
-        'Kami sedang mempersiapkan video edukasi yang menarik untuk cerita ini. Nantikan pembaruan dari kami!',
-      embedUrl: '',
+        'Pelajari bagaimana arsitektur tradisional Rumoh Aceh yang berbentuk panggung terbukti tahan gempa dan adaptif terhadap lingkungan.',
+      embedUrl:
+        'https://www.canva.com/design/DAG1ml1mW5M/P8bGYXOvuob1i0iTT9TQhg/watch?embed',
       info: 'Video ini akan membandingkan desain Rumoh Aceh dengan bangunan modern dan menyoroti prinsip-prinsip rekayasa jenius di dalamnya.',
     },
     quiz: arsitekturQuiz,
@@ -1598,3 +1599,4 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
     
 
     
+
