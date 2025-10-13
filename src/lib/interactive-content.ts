@@ -636,7 +636,7 @@ const pasarComic: Comic = {
     {
       title: 'Jantung Komunitas',
       text: 'Bagi kami, pasar bukan hanya tempat mencari uang, tapi tempat kami bertemu teman dan bertukar kabar.',
-      imageUrl: 'https://i.ibb.co.com/Lz42QxHm/Gemini-Generated-Image-k208uik208uik208.png',
+      imageUrl: 'https://i.ibb.co/Lz42QxHm/Gemini-Generated-Image-k208uik208uik208.png',
       imageHint: 'bustling traditional market'
     },
     {
@@ -679,13 +679,13 @@ const kucingCerdasComic: Comic = {
     {
       title: 'Kucing yang Berbeda',
       text: 'Siaga suka mendengarkan cerita para tetua tentang gempa dan tsunami, tidak seperti teman-temannya yang suka tidur.',
-      imageUrl: 'https://i.ibb.co.com/cSb6HNbk/Gemini-Generated-Image-yka8lryka8lryka8.png',
+      imageUrl: 'https://i.ibb.co/cSb6HNbk/Gemini-Generated-Image-yka8lryka8lryka8.png',
       imageHint: 'cute cat listening to old man'
     },
     {
       title: 'Tanah Bergoyang!',
       text: 'Saat tanah bergoyang, Siaga langsung berteriak, "Gempa! Ingat tiga langkah: Merunduk, Berlindung, dan Bertahan!"',
-      imageUrl: 'https://i.ibb.co.com/spP9SMTt/Gemini-Generated-Image-qxxmruqxxmruqxxm.png',
+      imageUrl: 'https://i.ibb.co/spP9SMTt/Gemini-Generated-Image-qxxmruqxxmruqxxm.png',
       imageHint: 'cartoon earthquake cat under table'
     },
     {
@@ -697,19 +697,19 @@ const kucingCerdasComic: Comic = {
     {
       title: 'Menuju Tempat Aman',
       text: 'Setelah guncangan berhenti, Siaga dengan tenang mengajak teman-temannya ke lapangan terbuka yang aman.',
-      imageUrl: 'https://i.ibb.co.com/Kj8wXcd1/Gemini-Generated-Image-rm690krm690krm69.png',
+      imageUrl: 'https://i.ibb.co/Kj8wXcd1/Gemini-Generated-Image-rm690krm690krm69.png',
       imageHint: 'cats walking to open field'
     },
     {
         title: 'Peringatan Tsunami',
         text: '"Kita harus ke tempat tinggi," kata Siaga, "siapa tahu air laut surut!" Ia ingat cerita Smong.',
-        imageUrl: 'https://i.ibb.co.com/YB6z4MkN/Gemini-Generated-Image-cw22b0cw22b0cw22.png',
+        imageUrl: 'https://i.ibb.co/YB6z4MkN/Gemini-Generated-Image-cw22b0cw22b0cw22.png',
         imageHint: 'cat pointing to hill'
     },
     {
         title: 'Semua Selamat',
         text: 'Karena Siaga, semua temannya selamat dan belajar cara melindungi diri saat bencana.',
-        imageUrl: 'https://i.ibb.co.com/TGNn2hy/Gemini-Generated-Image-spdth3spdth3spdt.png',
+        imageUrl: 'https://i.ibb.co/TGNn2hy/Gemini-Generated-Image-spdth3spdth3spdt.png',
         imageHint: 'happy cats playing on hill'
     }
   ]
@@ -1604,6 +1604,8 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
 
 
 
+
+    
 
     
 
