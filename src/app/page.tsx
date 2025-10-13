@@ -543,7 +543,7 @@ const HeroCarousel = () => {
   }
 
   return (
-    <div className="relative mx-auto mt-8 w-full max-w-6xl">
+    <div className="relative mx-auto mt-8 w-full max-w-7xl">
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex -ml-4">
           {highlightedStories.map(story => (
@@ -562,7 +562,7 @@ const HeroCarousel = () => {
         onClick={scrollPrev}
         variant="outline"
         size="icon"
-        className="absolute top-1/2 -left-4 z-10 hidden h-12 w-12 -translate-y-1/2 rounded-full lg:flex"
+        className="absolute top-1/2 -left-4 z-10 h-12 w-12 -translate-y-1/2 rounded-full flex"
       >
         <ChevronLeft />
       </Button>
@@ -570,7 +570,7 @@ const HeroCarousel = () => {
         onClick={scrollNext}
         variant="outline"
         size="icon"
-        className="absolute top-1/2 -right-4 z-10 hidden h-12 w-12 -translate-y-1/2 rounded-full lg:flex"
+        className="absolute top-1/2 -right-4 z-10 h-12 w-12 -translate-y-1/2 rounded-full flex"
       >
         <ChevronRight />
       </Button>
@@ -741,7 +741,7 @@ export default function Home() {
             </div>
             <div className="relative min-h-[300px] md:min-h-full">
               <Image
-                src="https://cdn.dribbble.com/userupload/32247153/file/original-1fe677ceff3cabb6bf2037dc808ace4d.jpg"
+                src="https://i.ibb.co/MxhjF3V1/aceh-community.png"
                 alt="Community gathering discussing disaster preparedness"
                 fill
                 className="object-cover"
