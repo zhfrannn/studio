@@ -1529,10 +1529,10 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
   },
   'seni-melawan-trauma': {
     video: {
-      title: 'Video Edukasi Akan Segera Hadir!',
+      title: 'Video Edukasi: Seni Melawan Trauma',
       description:
-        'Kami sedang mempersiapkan video edukasi yang menarik untuk cerita ini. Nantikan pembaruan dari kami!',
-      embedUrl: '',
+        'Saksikan bagaimana para seniman menggunakan mural untuk menyembuhkan luka kota dan jiwa pasca-bencana.',
+      embedUrl: 'https://www.canva.com/design/DAG1oFpnXaM/1AYF38ldBYM-z4jiL58VMg/watch?embed',
       info: 'Video ini akan menampilkan karya-karya seniman mural di Banda Aceh dan wawancara tentang kekuatan seni sebagai media terapi.',
     },
     quiz: seniTraumaQuiz,
@@ -1599,6 +1599,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
     
 
     
+
 
 
 
