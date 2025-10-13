@@ -593,7 +593,7 @@ const ilmuFalakComic: Comic = {
     {
       title: 'Belajar di Dayah',
       text: 'Banyak yang mengira dayah hanya tempat belajar Al-Quran, tapi kami juga mempelajari Ilmu Falak (astronomi).',
-      imageUrl: 'https://i.ibb.co.com/Rk9pNtJp/Gemini-Generated-Image-8m38498m38498m38.png',
+      imageUrl: 'https://i.ibb.co/Rk9pNtJp/Gemini-Generated-Image-8m38498m38498m38.png',
       imageHint: 'students studying in dayah'
     },
     {
@@ -1550,10 +1550,10 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
   },
   'sumur-tua-sumber-kehidupan': {
     video: {
-      title: 'Video Edukasi Akan Segera Hadir!',
+      title: 'Video Edukasi: Sumur Tua, Sumber Kehidupan',
       description:
-        'Kami sedang mempersiapkan video edukasi yang menarik untuk cerita ini. Nantikan pembaruan dari kami!',
-      embedUrl: '',
+        'Pelajari bagaimana sebuah sumur tua warisan leluhur menjadi penyelamat saat desa dilanda kekeringan.',
+      embedUrl: 'https://www.canva.com/design/DAG1sCoVdCc/ZIARnG8HuYWaqhyO4QlzfA/watch?embed',
       info: 'Video ini akan mengeksplorasi pentingnya menjaga sumber-sumber air tradisional dan kearifan leluhur dalam menentukan lokasinya.',
     },
     quiz: sumurTuaQuiz,
@@ -1610,4 +1610,5 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
     
 
     
+
 
