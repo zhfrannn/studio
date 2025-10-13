@@ -3,7 +3,6 @@
 
 import { useState } from 'react';
 import type { Story, StoryTheme } from '@/lib/types';
-import InteractiveMap from '@/components/interactive-map';
 import StoryCard from '@/components/story-card';
 import {
   Select,
@@ -15,21 +14,14 @@ import {
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion';
-import {
   Pagination,
   PaginationContent,
-  PaginationEllipsis,
   PaginationItem,
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
 } from '@/components/ui/pagination';
-import { Map, MapPin, Search, Plus, Share } from 'lucide-react';
+import { Search, Plus, Share } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Link from 'next/link';
 import { Card } from '@/components/ui/card';
@@ -129,22 +121,6 @@ export default function StoryGrid({ allStories }: StoryGridProps) {
           {storyGridDict.searchButton}
         </Button>
       </div>
-
-      {/* Story Map */}
-      <Accordion type="single" collapsible className="w-full">
-        <AccordionItem value="item-1" className="rounded-lg border">
-          <AccordionTrigger className="rounded-lg bg-card px-6 py-4 font-headline text-lg hover:no-underline">
-            <div className="flex items-center gap-2">
-              <MapPin className="h-5 w-5 text-primary" /> {storyGridDict.storyMap}
-            </div>
-          </AccordionTrigger>
-          <AccordionContent className="border-t">
-            <div className="h-[500px] w-full">
-              <InteractiveMap stories={filteredStories} />
-            </div>
-          </AccordionContent>
-        </AccordionItem>
-      </Accordion>
 
       {/* Story Grid */}
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
