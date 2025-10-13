@@ -46,37 +46,37 @@ const smongComic: Comic = {
         {
             title: 'Di Bawah Pohon Beringin',
             text: '“Nenek mengajarkan kami peringatan kuno di bawah pohon beringin tua...”',
-            imageUrl: 'https://i.ibb.co.com/7dWp6cGz/Gemini-Generated-Image-y3jausy3jausy3ja.png',
+            imageUrl: 'https://i.ibb.co/7dWp6cGz/Gemini-Generated-Image-y3jausy3jausy3ja.png',
             imageHint: 'elder teaching children'
         },
         {
             title: 'Gempa Mengguncang',
             text: '“Tiba-tiba, tanah bergetar hebat. Kami tahu ini bukan gempa biasa.”',
-            imageUrl: 'https://i.ibb.co.com/sv2Mhw6F/Gemini-Generated-Image-ubwgstubwgstubwg.png',
+            imageUrl: 'https://i.ibb.co/sv2Mhw6F/Gemini-Generated-Image-ubwgstubwgstubwg.png',
             imageHint: 'earthquake shaking village'
         },
         {
             title: 'Lari! Jangan Kembali!',
             text: '“Orang-orang berteriak, ‘Smong! Smong!’ sambil menunjuk ke arah laut yang surut.”',
-            imageUrl: 'https://i.ibb.co.com/d4Zc2dW2/Gemini-Generated-Image-nep5q4nep5q4nep5.png',
+            imageUrl: 'https://i.ibb.co/d4Zc2dW2/Gemini-Generated-Image-nep5q4nep5q4nep5.png',
             imageHint: 'people running uphill'
         },
         {
             title: 'Menuju Bukit',
             text: '“Kami semua berlari sekuat tenaga menuju perbukitan, meninggalkan segalanya.”',
-            imageUrl: 'https://i.ibb.co.com/0yrct9db/Gemini-Generated-Image-o3lyr0o3lyr0o3ly.png',
+            imageUrl: 'https://i.ibb.co/0yrct9db/Gemini-Generated-Image-o3lyr0o3lyr0o3ly.png',
             imageHint: 'crowd climbing hill'
         },
         {
             title: 'Lautan yang Murka',
             text: '“Dari atas bukit, kami melihat gelombang raksasa menerjang desa kami.”',
-            imageUrl: 'https://i.ibb.co.com/GQSD4TWr/Gemini-Generated-Image-muisyomuisyomuis.png',
+            imageUrl: 'https://i.ibb.co/GQSD4TWr/Gemini-Generated-Image-muisyomuisyomuis.png',
             imageHint: 'tsunami wave hitting coast'
         },
         {
             title: 'Syukur & Pelajaran',
             text: '“Kami selamat karena mendengarkan nasihat leluhur. Smong adalah penyelamat kami.”',
-            imageUrl: 'https://i.ibb.co.com/N2td66Hx/Gemini-Generated-Image-vpirzivpirzivpir.png',
+            imageUrl: 'https://i.ibb.co/N2td66Hx/Gemini-Generated-Image-vpirzivpirzivpir.png',
             imageHint: 'survivors watching sunrise'
         },
     ],
@@ -507,37 +507,37 @@ const nelayanComic: Comic = {
     {
       title: 'Kompas Langit dan Laut',
       text: 'Kami para nelayan tidak punya GPS canggih. Kompas kami adalah langit dan laut itu sendiri.',
-      imageUrl: 'https://i.ibb.co/zhj5vRfQ/Gemini-Generated-Image-yz9meiyz9meiyz9m.png',
+      imageUrl: 'https://i.ibb.co.com/zhj5vRfQ/Gemini-Generated-Image-yz9meiyz9meiyz9m.png',
       imageHint: 'fisherman at night starry sky'
     },
     {
       title: 'Membaca Rasi Bintang',
       text: 'Ayah mengajari cara membaca rasi bintang Orion, atau Bintang Tiga, untuk mengetahui arah pulang.',
-      imageUrl: 'https://i.ibb.co/NgbyjjMf/Gemini-Generated-Image-ped9eaped9eaped9.png',
+      imageUrl: 'https://i.ibb.co.com/NgbyjjMf/Gemini-Generated-Image-ped9eaped9eaped9.png',
       imageHint: 'orion constellation over sea'
     },
     {
       title: 'Tanda dari Satwa',
       text: 'Jika lumba-lumba berenang mendekati pantai, itu adalah pertanda cuaca akan buruk. Kami belajar dari perilaku hewan.',
-      imageUrl: 'https://i.ibb.co/XZQgHWxH/Gemini-Generated-Image-a8gbcxa8gbcxa8gb.png',
+      imageUrl: 'https://i.ibb.co.com/XZQgHWxH/Gemini-Generated-Image-a8gbcxa8gbcxa8gb.png',
       imageHint: 'dolphins swimming near coast'
     },
     {
         title: 'Warna Air dan Ikan',
         text: 'Kami tahu kapan ikan berkumpul hanya dengan melihat warna air dan jenis burung yang terbang di atasnya.',
-        imageUrl: 'https://i.ibb.co/gCpZCzB/Gemini-Generated-Image-4mvuio4mvuio4mvu.png',
+        imageUrl: 'https://i.ibb.co.com/gCpZCzB/Gemini-Generated-Image-4mvuio4mvuio4mvu.png',
         imageHint: 'seabirds diving for fish'
     },
     {
         title: 'Warisan Generasi',
         text: 'Pengetahuan ini tidak ada di buku, ini diwariskan dari ayah ke anak, dari satu generasi nelayan ke generasi berikutnya.',
-        imageUrl: 'https://i.ibb.co/kVgdrTbg/Gemini-Generated-Image-h9xlylh9xlylh9xl.png',
+        imageUrl: 'https://i.ibb.co.com/kVgdrTbg/Gemini-Generated-Image-h9xlylh9xlylh9xl.png',
         imageHint: 'father teaching son on boat'
     },
     {
       title: 'Ilmu Kehidupan',
       text: 'Ini adalah ilmu kehidupan yang membuat kami bisa bersahabat dengan lautan dan pulang dengan selamat.',
-      imageUrl: 'https://i.ibb.co/4wvv5KV3/Gemini-Generated-Image-lrl3ielrl3ielrl3.png',
+      imageUrl: 'https://i.ibb.co.com/4wvv5KV3/Gemini-Generated-Image-lrl3ielrl3ielrl3.png',
       imageHint: 'fishing boat returning at sunrise'
     }
   ]
@@ -1561,10 +1561,9 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
   },
   'ilmu-falak-di-pesantren': {
     video: {
-      title: 'Video Edukasi Akan Segera Hadir!',
-      description:
-        'Kami sedang mempersiapkan video edukasi yang menarik untuk cerita ini. Nantikan pembaruan dari kami!',
-      embedUrl: '',
+      title: 'Video Edukasi: Ilmu Falak, Navigasi Langit dan Laut',
+      description: 'Pelajari bagaimana dayah di Aceh mengajarkan astronomi (Ilmu Falak) yang digunakan nelayan untuk navigasi.',
+      embedUrl: 'https://www.canva.com/design/DAG1sLRnb6M/mPY87WGVdMwVfMQqdpi2cQ/watch?embed',
       info: 'Video ini akan menjelaskan bagaimana ilmu agama dan sains saling melengkapi dalam tradisi intelektual Aceh.',
     },
     quiz: ilmuFalakQuiz,
@@ -1610,5 +1609,6 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
     
 
     
+
 
 
