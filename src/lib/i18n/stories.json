@@ -161,8 +161,8 @@
       "location": { "name": "Banda Aceh", "lat": 5.55, "lng": 95.32 },
       "aiThemes": ["Local Wisdom", "Peacebuilding"],
       "media": {
-        "featuredImage": "https://i.ibb.co/Lz42QxH/Gemini-Generated-Image-k208uik208uik208.png",
-        "featuredImageHint": "bustling traditional market"
+        "featuredImage": "",
+        "featuredImageHint": ""
       },
       "status": "published"
     },
@@ -172,12 +172,10 @@
       "location": { "name": "Lhokseumawe", "lat": 5.18, "lng": 97.15 },
       "aiThemes": ["Disaster Preparedness", "Local Wisdom"],
       "media": {
-        "featuredImage": "https://i.ibb.co/TGNn2hy/Gemini-Generated-Image-spdth3spdth3spdt.png",
-        "featuredImageHint": "cartoon earthquake cat under table"
+        "featuredImage": "",
+        "featuredImageHint": ""
       },
       "status": "published"
     }
   ]
 }
-
-    
