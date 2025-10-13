@@ -70,7 +70,7 @@ const smongComic: Comic = {
         {
             title: 'Lautan yang Murka',
             text: '“Dari atas bukit, kami melihat gelombang raksasa menerjang desa kami.”',
-            imageUrl: 'https://i.ibb.co/GQSD4TWr/Gemini-Generated-Image-muisyomuisyomuis.png',
+            imageUrl: 'https://i.ibb.co.com/GQSD4TWr/Gemini-Generated-Image-muisyomuisyomuis.png',
             imageHint: 'tsunami wave hitting coast'
         },
         {
@@ -1539,11 +1539,11 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
   },
   'nelayan-dan-tanda-alam': {
     video: {
-      title: 'Video Edukasi Akan Segera Hadir!',
+      title: 'Video Edukasi: Navigasi Langit dan Laut',
       description:
-        'Kami sedang mempersiapkan video edukasi yang menarik untuk cerita ini. Nantikan pembaruan dari kami!',
-      embedUrl: '',
-      info: 'Video ini akan mendokumentasikan pengetahuan para nelayan tentang rasi bintang, angin, dan perilaku biota laut sebagai pemandu mereka.',
+        'Pelajari bagaimana nelayan tradisional Aceh menggunakan bintang dan tanda alam untuk bernavigasi di lautan luas.',
+      embedUrl: 'https://www.canva.com/design/DAG1sApRGB8/Kynmeiy6S-0u7YVxRG11qw/watch?embed',
+      info: 'Video ini mendokumentasikan pengetahuan para nelayan tentang rasi bintang, angin, dan perilaku biota laut sebagai pemandu mereka.',
     },
     quiz: nelayanQuiz,
     comic: nelayanComic,
@@ -1610,3 +1610,4 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
     
 
     
+
