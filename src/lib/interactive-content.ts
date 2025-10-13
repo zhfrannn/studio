@@ -636,37 +636,37 @@ const pasarComic: Comic = {
     {
       title: 'Jantung Komunitas',
       text: 'Bagi kami, pasar bukan hanya tempat mencari uang, tapi tempat kami bertemu teman dan bertukar kabar.',
-      imageUrl: 'https://picsum.photos/seed/pasar1/800/600',
+      imageUrl: 'https://i.ibb.co/Lz42QxHm/Gemini-Generated-Image-k208uik208uik208.png',
       imageHint: 'bustling traditional market'
     },
     {
       title: 'Pusat Informasi',
       text: 'Jika ada berita penting, lowongan kerja, atau isu meresahkan, informasi menyebar cepat di pasar.',
-      imageUrl: 'https://picsum.photos/seed/pasar2/800/600',
+      imageUrl: 'https://i.ibb.co/CspnwtQT/Gemini-Generated-Image-dsjhqbdsjhqbdsjh.png',
       imageHint: 'people talking at coffee stall'
     },
     {
       title: 'Barometer Sosial',
       text: 'Dari obrolan di warung kopi pasar, kita bisa tahu apa yang sedang dirasakan masyarakat.',
-      imageUrl: 'https://picsum.photos/seed/pasar3/800/600',
+      imageUrl: 'https://i.ibb.co/ch4DmBK8/Gemini-Generated-Image-o64ap4o64ap4o64a.png',
       imageHint: 'group of men drinking coffee'
     },
     {
         title: 'Saling Menenangkan',
         text: 'Bahkan ketika ada isu-isu yang meresahkan, kami bisa saling menenangkan dan mencari kebenaran di sini.',
-        imageUrl: 'https://picsum.photos/seed/pasar4/800/600',
+        imageUrl: 'https://i.ibb.co/5XxgpBFd/Gemini-Generated-Image-epyxelepyxelepyx.png',
         imageHint: 'two people having serious talk'
     },
     {
         title: 'Denyut Nadi Komunitas',
         text: 'Menjaga pasar tradisional tetap hidup sama dengan menjaga denyut nadi dan ikatan sosial komunitas kita.',
-        imageUrl: 'https://picsum.photos/seed/pasar5/800/600',
+        imageUrl: 'https://i.ibb.co/LXQKySBZ/Gemini-Generated-Image-k6s3dck6s3dck6s3.png',
         imageHint: 'smiling market vendor'
     },
     {
         title: 'Lebih dari Jual Beli',
         text: 'Di sinilah persahabatan terjalin, masalah diselesaikan, dan komunitas terasa hidup.',
-        imageUrl: 'https://picsum.photos/seed/pasar6/800/600',
+        imageUrl: 'https://i.ibb.co/V0hmJPM8/Gemini-Generated-Image-9lfrea9lfrea9lfr.png',
         imageHint: 'people laughing in market'
     }
   ]
@@ -1599,6 +1599,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
     
 
     
+
 
 
 
