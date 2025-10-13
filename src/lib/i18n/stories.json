@@ -172,8 +172,8 @@
       "location": { "name": "Lhokseumawe", "lat": 5.18, "lng": 97.15 },
       "aiThemes": ["Disaster Preparedness", "Local Wisdom"],
       "media": {
-        "featuredImage": "",
-        "featuredImageHint": ""
+        "featuredImage": "https://i.ibb.co/TGNn2hy/Gemini-Generated-Image-spdth3spdth3spdt.png",
+        "featuredImageHint": "happy cats playing on hill"
       },
       "status": "published"
     }
