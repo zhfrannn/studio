@@ -593,37 +593,37 @@ const ilmuFalakComic: Comic = {
     {
       title: 'Belajar di Dayah',
       text: 'Banyak yang mengira dayah hanya tempat belajar Al-Quran, tapi kami juga mempelajari Ilmu Falak (astronomi).',
-      imageUrl: 'https://picsum.photos/seed/falak1/800/600',
+      imageUrl: 'https://i.ibb.co/Rk9pNtJp/Gemini-Generated-Image-8m38498m38498m38.png',
       imageHint: 'students studying in dayah'
     },
     {
       title: 'Menghitung Posisi Bintang',
       text: 'Kami menghitung posisi bintang untuk menentukan awal bulan puasa, arah kiblat, dan waktu shalat.',
-      imageUrl: 'https://picsum.photos/seed/falak2/800/600',
+      imageUrl: 'https://i.ibb.co/DHNkQTGn/Gemini-Generated-Image-lr9x50lr9x50lr9x.png',
       imageHint: 'teacher pointing at stars map'
     },
     {
       title: 'Ilmu untuk Nelayan',
       text: 'Ilmu yang sama ternyata juga bermanfaat bagi nelayan di pesisir untuk navigasi dan menentukan pasang surut.',
-      imageUrl: 'https://picsum.photos/seed/falak3/800/600',
+      imageUrl: 'https://i.ibb.co/d0dtbX3X/Gemini-Generated-Image-168pi168pi168pi1.png',
       imageHint: 'scholar talking to fisherman'
     },
     {
         title: 'Rujukan Masyarakat',
         text: 'Para santri yang pulang ke kampungnya sering menjadi rujukan, memberitahu arah bintang utara atau kapan pasang tertinggi.',
-        imageUrl: 'https://picsum.photos/seed/falak4/800/600',
+        imageUrl: 'https://i.ibb.co/FLygk1L4/Gemini-Generated-Image-50j9v650j9v650j9.png',
         imageHint: 'student helping community'
     },
     {
         title: 'Ilmu Agama dan Kehidupan',
         text: 'Ada hubungan erat antara langit dan laut, antara ilmu agama dan ilmu kehidupan.',
-        imageUrl: 'https://picsum.photos/seed/falak5/800/600',
+        imageUrl: 'https://i.ibb.co/xS91Wwgz/Gemini-Generated-Image-j2fi8xj2fi8xj2fi.png',
         imageHint: 'mosque against starry sky'
     },
     {
       title: 'Untuk Kebaikan Bersama',
       text: 'Kami belajar bahwa semua ilmu berasal dari Tuhan dan bisa dimanfaatkan untuk kebaikan bersama, di darat maupun di lautan.',
-      imageUrl: 'https://picsum.photos/seed/falak6/800/600',
+      imageUrl: 'https://i.ibb.co/0VfjNWDg/Gemini-Generated-Image-z7pvrxz7pvrxz7pv.png',
       imageHint: 'night sky over fishing village'
     }
   ]
@@ -1599,5 +1599,6 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
     
 
     
+
 
 
