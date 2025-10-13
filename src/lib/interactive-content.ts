@@ -46,37 +46,37 @@ const smongComic: Comic = {
         {
             title: 'Di Bawah Pohon Beringin',
             text: '“Nenek mengajarkan kami peringatan kuno di bawah pohon beringin tua...”',
-            imageUrl: 'https://i.ibb.co/7dWp6cGz/Gemini-Generated-Image-y3jausy3jausy3ja.png',
+            imageUrl: 'https://i.ibb.co.com/7dWp6cGz/Gemini-Generated-Image-y3jausy3jausy3ja.png',
             imageHint: 'elder teaching children'
         },
         {
             title: 'Gempa Mengguncang',
             text: '“Tiba-tiba, tanah bergetar hebat. Kami tahu ini bukan gempa biasa.”',
-            imageUrl: 'https://i.ibb.co/sv2Mhw6F/Gemini-Generated-Image-ubwgstubwgstubwg.png',
+            imageUrl: 'https://i.ibb.co.com/sv2Mhw6F/Gemini-Generated-Image-ubwgstubwgstubwg.png',
             imageHint: 'earthquake shaking village'
         },
         {
             title: 'Lari! Jangan Kembali!',
             text: '“Orang-orang berteriak, ‘Smong! Smong!’ sambil menunjuk ke arah laut yang surut.”',
-            imageUrl: 'https://i.ibb.co/d4Zc2dW2/Gemini-Generated-Image-nep5q4nep5q4nep5.png',
+            imageUrl: 'https://i.ibb.co.com/d4Zc2dW2/Gemini-Generated-Image-nep5q4nep5q4nep5.png',
             imageHint: 'people running uphill'
         },
         {
             title: 'Menuju Bukit',
             text: '“Kami semua berlari sekuat tenaga menuju perbukitan, meninggalkan segalanya.”',
-            imageUrl: 'https://i.ibb.co/0yrct9db/Gemini-Generated-Image-o3lyr0o3lyr0o3ly.png',
+            imageUrl: 'https://i.ibb.co.com/0yrct9db/Gemini-Generated-Image-o3lyr0o3lyr0o3ly.png',
             imageHint: 'crowd climbing hill'
         },
         {
             title: 'Lautan yang Murka',
             text: '“Dari atas bukit, kami melihat gelombang raksasa menerjang desa kami.”',
-            imageUrl: 'https://i.ibb.co/GQSD4TWr/Gemini-Generated-Image-muisyomuisyomuis.png',
+            imageUrl: 'https://i.ibb.co.com/GQSD4TWr/Gemini-Generated-Image-muisyomuisyomuis.png',
             imageHint: 'tsunami wave hitting coast'
         },
         {
             title: 'Syukur & Pelajaran',
             text: '“Kami selamat karena mendengarkan nasihat leluhur. Smong adalah penyelamat kami.”',
-            imageUrl: 'https://i.ibb.co/N2td66Hx/Gemini-Generated-Image-vpirzivpirzivpir.png',
+            imageUrl: 'https://i.ibb.co.com/N2td66Hx/Gemini-Generated-Image-vpirzivpirzivpir.png',
             imageHint: 'survivors watching sunrise'
         },
     ],
@@ -593,25 +593,25 @@ const ilmuFalakComic: Comic = {
     {
       title: 'Belajar di Dayah',
       text: 'Banyak yang mengira dayah hanya tempat belajar Al-Quran, tapi kami juga mempelajari Ilmu Falak (astronomi).',
-      imageUrl: 'https://i.ibb.co/Rk9pNtJp/Gemini-Generated-Image-8m38498m38498m38.png',
+      imageUrl: 'https://i.ibb.co.com/Rk9pNtJp/Gemini-Generated-Image-8m38498m38498m38.png',
       imageHint: 'students studying in dayah'
     },
     {
       title: 'Menghitung Posisi Bintang',
       text: 'Kami menghitung posisi bintang untuk menentukan awal bulan puasa, arah kiblat, dan waktu shalat.',
-      imageUrl: 'https://i.ibb.co/DHNkQTGn/Gemini-Generated-Image-lr9x50lr9x50lr9x.png',
+      imageUrl: 'https://i.ibb.co.com/DHNkQTGn/Gemini-Generated-Image-lr9x50lr9x50lr9x.png',
       imageHint: 'teacher pointing at stars map'
     },
     {
       title: 'Ilmu untuk Nelayan',
       text: 'Ilmu yang sama ternyata juga bermanfaat bagi nelayan di pesisir untuk navigasi dan menentukan pasang surut.',
-      imageUrl: 'https://i.ibb.co/d0dtbX3X/Gemini-Generated-Image-168pi168pi168pi1.png',
+      imageUrl: 'https://i.ibb.co.com/d0dtbX3X/Gemini-Generated-Image-168pi168pi168pi1.png',
       imageHint: 'scholar talking to fisherman'
     },
     {
         title: 'Rujukan Masyarakat',
         text: 'Para santri yang pulang ke kampungnya sering menjadi rujukan, memberitahu arah bintang utara atau kapan pasang tertinggi.',
-        imageUrl: 'https://i.ibb.co/FLygk1L4/Gemini-Generated-Image-50j9v650j9v650j9.png',
+        imageUrl: 'https://i.ibb.co.com/FLygk1L4/Gemini-Generated-Image-50j9v650j9v650j9.png',
         imageHint: 'student helping community'
     },
     {
@@ -1530,8 +1530,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
   'seni-melawan-trauma': {
     video: {
       title: 'Video Edukasi: Seni Melawan Trauma',
-      description:
-        'Saksikan bagaimana para seniman menggunakan mural untuk menyembuhkan luka kota dan jiwa pasca-bencana.',
+      description: 'Saksikan bagaimana para seniman menggunakan mural untuk menyembuhkan luka kota dan jiwa pasca-bencana.',
       embedUrl: 'https://www.canva.com/design/DAG1oFpnXaM/1AYF38ldBYM-z4jiL58VMg/watch?embed',
       info: 'Video ini akan menampilkan karya-karya seniman mural di Banda Aceh dan wawancara tentang kekuatan seni sebagai media terapi.',
     },
@@ -1605,5 +1604,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
 
 
 
+
+    
 
     
