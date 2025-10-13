@@ -70,7 +70,7 @@ const smongComic: Comic = {
         {
             title: 'Lautan yang Murka',
             text: '“Dari atas bukit, kami melihat gelombang raksasa menerjang desa kami.”',
-            imageUrl: 'https://i.ibb.co.com/GQSD4TWr/Gemini-Generated-Image-muisyomuisyomuis.png',
+            imageUrl: 'https://i.ibb.co/GQSD4TWr/Gemini-Generated-Image-muisyomuisyomuis.png',
             imageHint: 'tsunami wave hitting coast'
         },
         {
@@ -605,7 +605,7 @@ const ilmuFalakComic: Comic = {
     {
       title: 'Ilmu untuk Nelayan',
       text: 'Ilmu yang sama ternyata juga bermanfaat bagi nelayan di pesisir untuk navigasi dan menentukan pasang surut.',
-      imageUrl: 'https://i.ibb.co.com/d0dtbX3X/Gemini-Generated-Image-168pi168pi168pi1.png',
+      imageUrl: 'https://i.ibb.co/d0dtbX3X/Gemini-Generated-Image-168pi168pi168pi1.png',
       imageHint: 'scholar talking to fisherman'
     },
     {
