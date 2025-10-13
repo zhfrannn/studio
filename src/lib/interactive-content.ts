@@ -679,37 +679,37 @@ const kucingCerdasComic: Comic = {
     {
       title: 'Kucing yang Berbeda',
       text: 'Siaga suka mendengarkan cerita para tetua tentang gempa dan tsunami, tidak seperti teman-temannya yang suka tidur.',
-      imageUrl: 'https://picsum.photos/seed/kucing1/800/600',
+      imageUrl: 'https://i.ibb.co/cSb6HNbk/Gemini-Generated-Image-yka8lryka8lryka8.png',
       imageHint: 'cute cat listening to old man'
     },
     {
       title: 'Tanah Bergoyang!',
       text: 'Saat tanah bergoyang, Siaga langsung berteriak, "Gempa! Ingat tiga langkah: Merunduk, Berlindung, dan Bertahan!"',
-      imageUrl: 'https://picsum.photos/seed/kucing2/800/600',
+      imageUrl: 'https://i.ibb.co/spP9SMTt/Gemini-Generated-Image-qxxmruqxxmruqxxm.png',
       imageHint: 'cartoon earthquake cat under table'
     },
     {
       title: 'Mengikuti si Ahli',
       text: 'Teman-temannya yang bingung melihat apa yang dilakukan Siaga dan langsung mengikutinya.',
-      imageUrl: 'https://picsum.photos/seed/kucing3/800/600',
+      imageUrl: 'https://i.ibb.co/CpKGCDBf/Gemini-Generated-Image-5ku3hs5ku3hs5ku3.png',
       imageHint: 'other cats hiding under furniture'
     },
     {
       title: 'Menuju Tempat Aman',
       text: 'Setelah guncangan berhenti, Siaga dengan tenang mengajak teman-temannya ke lapangan terbuka yang aman.',
-      imageUrl: 'https://picsum.photos/seed/kucing4/800/600',
+      imageUrl: 'https://i.ibb.co/Kj8wXcd1/Gemini-Generated-Image-rm690krm690krm69.png',
       imageHint: 'cats walking to open field'
     },
     {
         title: 'Peringatan Tsunami',
         text: '"Kita harus ke tempat tinggi," kata Siaga, "siapa tahu air laut surut!" Ia ingat cerita Smong.',
-        imageUrl: 'https://picsum.photos/seed/kucing5/800/600',
+        imageUrl: 'https://i.ibb.co/YB6z4MkN/Gemini-Generated-Image-cw22b0cw22b0cw22.png',
         imageHint: 'cat pointing to hill'
     },
     {
         title: 'Semua Selamat',
         text: 'Karena Siaga, semua temannya selamat dan belajar cara melindungi diri saat bencana.',
-        imageUrl: 'https://picsum.photos/seed/kucing6/800/600',
+        imageUrl: 'https://i.ibb.co/TGNn2hy/Gemini-Generated-Image-spdth3spdth3spdt.png',
         imageHint: 'happy cats playing on hill'
     }
   ]
@@ -1604,3 +1604,6 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
 
 
 
+
+
+    
