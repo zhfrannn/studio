@@ -46,7 +46,7 @@ const StoryCard = ({ story }: StoryCardProps) => {
   return (
     <Link href={`/story/${story.id}`} className="group block h-full">
       <Card className="flex h-full flex-col overflow-hidden rounded-2xl shadow-md transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5">
-        <div className="relative h-48 w-full">
+        <div className="relative w-full aspect-[16/9]">
             <Image
                 src={story.media.featuredImage}
                 alt={story.title}
