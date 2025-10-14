@@ -1,6 +1,6 @@
 
 import { notFound } from 'next/navigation';
-import { stories as staticStories } from '@/lib/data';
+import { stories as staticStories, getTranslatedStories } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
 import {
   Card,
@@ -17,6 +17,7 @@ import {
   PlayCircle,
   Info,
   Puzzle,
+  ArrowRight,
 } from 'lucide-react';
 import InteractiveQuiz from '@/components/interactive-quiz';
 import {
@@ -30,6 +31,8 @@ import type { Story } from '@/lib/types';
 import idDict from '@/lib/i18n/id.json';
 import enDict from '@/lib/i18n/en.json';
 import DigitalComic from '@/components/digital-comic';
+import Link from 'next/link';
+import Image from 'next/image';
 
 // This is a server component, so we can't use the hook directly.
 // We'll simulate language selection for static generation if needed,
@@ -42,6 +45,7 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
   // likely get the language from params or cookies.
   const lang = 'id'; // Defaulting to 'id' for demonstration
   const dictionary = lang === 'id' ? idDict : enDict;
+  const allStories = getTranslatedStories({ lang });
 
   const staticStoryData = staticStories.find(s => s.id === params.id);
   
@@ -62,7 +66,13 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
 
   const content: InteractiveContent | undefined = interactiveContent[params.id];
 
+  const otherStories = allStories
+    .filter(s => s.id !== story.id)
+    .sort(() => 0.5 - Math.random()) // Acak urutan
+    .slice(0, 3); // Ambil 3 cerita pertama
+
   return (
+    <>
     <div className="container mx-auto px-4 py-12">
       <div className="mx-auto max-w-4xl rounded-2xl">
         <MotionWrapper>
@@ -189,6 +199,48 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
         </div>
       </div>
     </div>
+     {/* Quick Access to Other Stories Section */}
+     <section className="bg-muted/50 py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="mb-8 text-center font-headline text-3xl font-bold">
+            Jelajahi Cerita Lainnya
+          </h2>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {otherStories.map((s, i) => (
+              <MotionWrapper key={s.id} delay={i * 0.1}>
+                <Link href={`/story/${s.id}`} className="group block h-full">
+                  <Card className="flex h-full flex-col overflow-hidden transition-shadow duration-300 hover:shadow-xl">
+                    <div className="relative h-40 w-full">
+                      <Image
+                        src={s.media.featuredImage}
+                        alt={s.title}
+                        fill
+                        className="object-cover"
+                        data-ai-hint={s.media.featuredImageHint}
+                      />
+                       <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+                    </div>
+                    <CardHeader>
+                      <CardTitle className="line-clamp-2 text-lg font-semibold group-hover:text-primary">
+                        {s.title}
+                      </CardTitle>
+                      <CardDescription>
+                        <Badge variant="secondary">{s.aiThemes[0]}</Badge>
+                      </CardDescription>
+                    </CardHeader>
+                    <CardFooter className="mt-auto">
+                        <span className="flex items-center text-sm font-semibold text-primary">
+                          Baca Cerita <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                        </span>
+                    </CardFooter>
+                  </Card>
+                </Link>
+              </MotionWrapper>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
 
