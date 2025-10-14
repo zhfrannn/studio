@@ -27,8 +27,6 @@ import {
   User,
   Loader2,
   MessageSquareText,
-  ChevronLeft,
-  ChevronRight,
   BrainCircuit,
   GraduationCap,
   Users2,
@@ -40,9 +38,10 @@ import MotionWrapper from '@/components/motion-wrapper';
 import SplitText from '@/components/ui/split-text';
 import LogoLoop from '@/components/ui/logo-loop';
 import { useLanguage } from '@/context/language-context';
-import type { Story, StoryTheme } from '@/lib/types';
+import type { Story } from '@/lib/types';
+import StoryCarousel from '@/components/story-carousel';
 
-import { useState, useRef, useEffect, useCallback } from 'react';
+import { useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -67,10 +66,6 @@ import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { cn } from '@/lib/utils';
-import useEmblaCarousel, {
-  type EmblaCarouselType,
-  type EmblaOptionsType,
-} from 'embla-carousel-react';
 import { generateStoryRecommendation } from '@/ai/flows/generate-story-recommendation';
 import type { GenerateStoryRecommendationOutput } from '@/ai/flows/story-recommendation-types';
 
@@ -478,106 +473,6 @@ ${story}`;
   );
 }
 
-const CAROUSEL_OPTIONS: EmblaOptionsType = { loop: true };
-
-const HeroStoryCard = ({ story }: { story: Story }) => {
-  const { dictionary } = useLanguage();
-  const storyGridDict = dictionary.storyGrid;
-  const themeLabels: Record<string, string> = {
-    'Disaster Preparedness': storyGridDict.themes.disaster,
-    'Local Wisdom': storyGridDict.themes.wisdom,
-    Peacebuilding: storyGridDict.themes.peace,
-  };
-
-  return (
-    <Link href={`/story/${story.id}`} className="group block h-full">
-      <Card className="relative h-full overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-2xl">
-        <Image
-          src={story.media.featuredImage}
-          alt={story.title}
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
-          data-ai-hint={story.media.featuredImageHint}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
-        <div className="absolute bottom-0 left-0 p-6 text-white">
-          <Badge className="mb-2 border-white/50 bg-white/20 backdrop-blur-sm">
-            {themeLabels[story.aiThemes[0]] || story.aiThemes[0]}
-          </Badge>
-          <h3 className="font-headline text-2xl font-bold leading-tight">
-            {story.title}
-          </h3>
-        </div>
-      </Card>
-    </Link>
-  );
-};
-
-const HeroCarousel = () => {
-  const { language } = useLanguage();
-  const allStories = getTranslatedStories({ lang: language });
-
-  const highlightedStories = [
-    'smong-selamat-dari-lautan',
-    'dapur-umum-perdamaian',
-    'hutan-bakau-penjaga-pantai',
-    'perempuan-penganyam-harapan',
-    'kopi-gayo-aroma-perdamaian',
-    'arsitektur-rumah-panggung',
-  ]
-    .map(id => allStories.find(s => s.id === id))
-    .filter((s): s is Story => s !== null && s !== undefined);
-
-  const [emblaRef, emblaApi] = useEmblaCarousel(CAROUSEL_OPTIONS);
-
-  const scrollPrev = useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev();
-  }, [emblaApi]);
-
-  const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext();
-  }, [emblaApi]);
-
-  if (highlightedStories.length === 0) {
-    return null;
-  }
-
-  return (
-    <div className="relative mx-auto mt-8 w-full max-w-7xl">
-      <div className="overflow-hidden" ref={emblaRef}>
-        <div className="flex -ml-4">
-          {highlightedStories.map(story => (
-            <div
-              className="basis-full flex-grow-0 flex-shrink-0 pl-4 md:basis-1/2 lg:basis-1/3"
-              key={story.id}
-            >
-              <div className="h-[450px]">
-                <HeroStoryCard story={story} />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-      <Button
-        onClick={scrollPrev}
-        variant="outline"
-        size="icon"
-        className="absolute top-1/2 -left-4 z-10 h-12 w-12 -translate-y-1/2 rounded-full flex"
-      >
-        <ChevronLeft />
-      </Button>
-      <Button
-        onClick={scrollNext}
-        variant="outline"
-        size="icon"
-        className="absolute top-1/2 -right-4 z-10 h-12 w-12 -translate-y-1/2 rounded-full flex"
-      >
-        <ChevronRight />
-      </Button>
-    </div>
-  );
-};
-
 export default function Home() {
   const { dictionary, language } = useLanguage();
   const homeDict = dictionary.home;
@@ -606,7 +501,7 @@ export default function Home() {
             </h1>
             <p className="hero-v2-desc">{homeDict.hero.description}</p>
 
-            <HeroCarousel />
+            <StoryCarousel stories={allStories} />
 
             <div className="hero-v2-cta relative z-30 mt-8 flex flex-wrap justify-center gap-4">
               <Button
