@@ -35,7 +35,7 @@ import enDict from '@/lib/i18n/en.json';
 import DigitalComic from '@/components/digital-comic';
 import Link from 'next/link';
 import Image from 'next/image';
-import StoryCarousel from '@/components/story-carousel';
+import RelatedStoryCarousel from '@/components/related-story-carousel';
 
 // This is a server component, so we can't use the hook directly.
 // We'll simulate language selection for static generation if needed,
@@ -207,7 +207,7 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
           <h2 className="mb-12 text-center font-headline text-3xl font-bold">
             Jelajahi Cerita Lainnya
           </h2>
-          <StoryCarousel stories={otherStories} />
+          <RelatedStoryCarousel stories={otherStories} />
         </div>
       </section>
     </>
