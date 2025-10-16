@@ -1,7 +1,9 @@
+
 import type { Story, StoryTheme } from './types';
 import storiesData from './i18n/stories.json';
 import idDict from './i18n/id.json';
 import enDict from './i18n/en.json';
+import aceDict from './i18n/ace.json';
 
 // The stories array is now built from the JSON file.
 // This contains only the non-translatable parts of the stories.
@@ -11,9 +13,10 @@ export const stories: Omit<Story, 'title' | 'summary' | 'fullText' | 'aiThemes'>
 const dictionaries = {
   id: idDict,
   en: enDict,
+  ace: aceDict,
 };
 
-type Language = 'id' | 'en';
+type Language = 'id' | 'en' | 'ace';
 
 interface GetTranslatedStoriesParams {
   lang: Language;

@@ -4,8 +4,9 @@
 import { createContext, useContext, useState, ReactNode } from 'react';
 import id from '@/lib/i18n/id.json';
 import en from '@/lib/i18n/en.json';
+import ace from '@/lib/i18n/ace.json';
 
-type Language = 'id' | 'en';
+type Language = 'id' | 'en' | 'ace';
 
 export type Dictionary = typeof en;
 
@@ -20,7 +21,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>('en');
 
-  const dictionaries = { id, en };
+  const dictionaries = { id, en, ace };
   const dictionary = dictionaries[language];
 
   return (
@@ -37,5 +38,3 @@ export function useLanguage() {
   }
   return context;
 }
-
-    

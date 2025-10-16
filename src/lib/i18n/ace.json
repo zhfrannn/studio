@@ -1,0 +1,896 @@
+
+{
+  "header": {
+    "home": "Keu",
+    "stories": "Calitra",
+    "interactive": "Interaktif",
+    "eduboard": "EduBoard",
+    "shareStory": "Puta Calitra"
+  },
+  "footer": {
+    "rights": "Mandum Hak Cipta Dilindungi."
+  },
+  "home": {
+    "hero": {
+      "pill": "Leubeh dari 100+ calitra ka geupeusapat",
+      "title": "Suara Teuga, Gema Arif Bijaksana",
+      "description": "Jelajahi keurifan lokal, siaga bencana, dan peudame di Aceh melalui calitra-calitra yang geupeuhidup le teknologi AI.",
+      "ctaExplore": "Jelajahi Calitra",
+      "ctaShare": "Puta Calitra Droeneuh"
+    },
+    "howItWorks": {
+      "title": "Cara Kerjane",
+      "description": "Arsitektur lhee lapis yang geu'ubah calitra pribadi jeut ke alat edukasi yang hebat.",
+      "step1": {
+        "title": "1. Peusapat Calitra",
+        "description": "Warga geupeusapat pengalaman melalui Telegram. Duta muda geubantu rekam calitra dari ureung tuha."
+      },
+      "step2": {
+        "title": "2. AI yang Proses",
+        "description": "AI geuanalisis, geupeualeh, dan geupeta calitra ke modul edukasi sira geupeuteun konteks budaya."
+      },
+      "step3": {
+        "title": "3. Meurunoe Komunitas",
+        "description": "Calitra jeut ke komik interaktif, audio, dan EduBoard fisik di tempat-tempat komunitas di seluruh Aceh."
+      }
+    },
+    "whyItMatters": {
+      "title": "Ken Peu Penteng",
+      "description": "\"Wave of Voice\" kon hanya tentang SOP bencana. Nyoe tentang peuteun memori bersama, peukuat rasa kebersamaan, dan peudong ketahanan serta komunikasi dame yang relevan dengan konteks di Aceh pasca-tsunami dan pasca-konflik.",
+      "point1": "Lawan informasi salah melalui narasi lokal yang ka geupileh dan geuperiksa kebenarannya",
+      "point2": "Integrasi keurifan lokal (Smong, gotong royong) dengan ilmu bencana modern",
+      "point3": "Dukung penyembuhan melalui refleksi terbimbing dan dialog komunitas"
+    },
+    "exploreStories": {
+      "title": "Jelajahi Calitra",
+      "description": "Narasi pribadi dari ureung yang seulamat dari tsunami, pekerja pemulihan, dan ureung peudame.",
+      "mapCta": "Klik bak tanda untuk kalon calitra dari macam-macam daerah.",
+      "featuredTitle": "Calitra Unggulan",
+      "loadMore": "Tunyok Leubeh Le Calitra"
+    },
+    "interactiveLearning": {
+      "title": "Meurunoe Interaktif",
+      "description": "Alami calitra melalui berbagai format menarik yang geurancang untuk peudalam pemahaman dan keterlibatan droeneuh.",
+      "cardTitle": "Kuis, Komik & Video",
+      "cardDescription": "Uji pengetahuan droeneuh dengan kuis, selami narasi visual dengan komik, dan kalon calitra nyata yang jeut ke hidu.",
+      "cardBody": "Tiap calitra di platform kamoe na alat meurunoe interaktif. Kon hanya tentang baca; tapi tentang rasa.",
+      "cta": "Tamöng U Pusat Meurunoe"
+    },
+    "eduboard": {
+      "title": "EduBoard Komunitas",
+      "description": "Papan interaktif fisik yang geupasang di tempat komunitas (meuseujid, sikula, warung kupi) yang hubung arsip digital melalui kode QR dan tag NFC.",
+      "badge1": "Kutipan Uroenoe",
+      "badge2": "Kuis Mini",
+      "badge3": "Gareh Watee",
+      "badge4": "Tips Uroenoe",
+      "cta": "Kalon Desain EduBoard"
+    },
+    "shareStory": {
+      "title": "Puta Calitra Droeneuh",
+      "description": "Pengalaman droeneuh sangat meuharga. Bantu peudong memori kolektif dan ketahanan Aceh.",
+      "cta": "Mulai Puta Jinoe",
+      "formTitle": "Mulai Puta Disinoe",
+      "labels": {
+        "name": "Nan Droeneuh (opsional)",
+        "location": "Lokasi",
+        "storyType": "Jeunèh Calitra",
+        "story": "Calitra Droeneuh",
+        "agree": "Lon setuju dengan syarat dan ketentuan."
+      },
+      "placeholders": {
+        "name": "Nan Droeneuh",
+        "location": "Pileh lokasi droeneuh",
+        "story": "Calitrakan pengalaman droeneuh..."
+      },
+      "descriptions": {
+        "agree": "Calitra lon jeut geunguy untuk tujuan pendidikan."
+      },
+      "storyTypes": {
+        "disaster": "Siaga Bencana",
+        "peace": "Peudong Dame",
+        "wisdom": "Keurifan Lokal"
+      },
+      "submitButton": "Kirem via Telegram",
+      "aiHelper": {
+        "title": "Siaga-Bot",
+        "description": "Asisten AI edukasi kebencanaan droeneuh.",
+        "initialMessage": "Assalamu'alaikum! Lon Siaga-Bot. Lon di siko untuk jaweub pertanyaan droeneuh tentang siaga bencana, keurifan lokal, dan peudame di Aceh.",
+        "errorMessage": "Meu'ah, na masalah. Neu cuba lom.",
+        "placeholder": "Tanyong tentang bencana...",
+        "readStory": "Baca Calitra"
+      },
+      "validation": {
+        "locationRequired": "Lokasi harus geuisi.",
+        "storyTypeRequired": "Droeneuh harus pileh setidaknya satu jeunèh calitra.",
+        "storyMinLength": "Calitra harus leubeh dari 10 karakter.",
+        "storyMaxLength": "Calitra hana jeut leubeh dari 2000 karakter.",
+        "agreeRequired": "Droeneuh harus setuju dengan syarat dan ketentuan."
+      }
+    },
+    "supportedBy": "Geudukung Le",
+    "quote": "\"Tiap calitra, sekecil apapun, nakeuh bagian dari mozaik rayeuk ketahanan komunitas geutanyoe. Sabe-sabe, geutanyoe rawat ingatan dan peudong masa depan yang leubeh teuga.\""
+  },
+  "explore": {
+    "title": "Calitra dari Aceh",
+    "description": "Jelajahi pengalaman pribadi dan keurifan dari masyarakat Aceh"
+  },
+  "storyGrid": {
+    "filterAllTypes": "Mandum Jeunèh Calitra",
+    "filterAllLocations": "Mandum Lokasi",
+    "searchPlaceholder": "Mita calitra...",
+    "searchButton": "Mita",
+    "storyMap": "Peta Calitra",
+    "shareCard": {
+      "title": "Puta Calitra Droeneuh",
+      "description": "Bantu peuteun memori kolektif Aceh dengan puta pengalaman droeneuh.",
+      "cta": "Kontribusi"
+    },
+    "pagination": {
+      "previous": "Seugolom",
+      "next": "Seuleuso"
+    },
+    "themes": {
+      "disaster": "Siaga Bencana",
+      "wisdom": "Keurifan Lokal",
+      "peace": "Peudong Dame"
+    }
+  },
+  "storyCard": {
+    "readMore": "Baca Leubeh"
+  },
+  "storyDetail": {
+    "otherStories": "Jelajahi Calitra La'en",
+    "fullNarrative": "Narasi Lengkap",
+    "interactiveQuiz": "Kuis Interaktif",
+    "quizComingSoon": "Kuis untuk calitra nyoe akan sigra na."
+  },
+  "interactive": {
+    "title": "Pusat Meurunoe Interaktif",
+    "description": "Jelajahi calitra-calitra Aceh melalui kuis gamifikasi, video edukatif, dan komik interaktif",
+    "masterQuiz": "Tantangan Pengetahuan Aceh",
+    "masterQuizDescription": "Uji pengetahuan umum droeneuh tentang budaya, sejarah, dan ketahanan Aceh.",
+    "startQuiz": "Mulai Kuis",
+    "quizComplete": "Kuis Ka Siap!",
+    "finalScore": "Skor Akhir Droeneuh:",
+    "excellentScore": "Luar biasa! Droeneuh sidroe ahli.",
+    "goodScore": "Bagus! Selalu na ruang untuk meurunoe.",
+    "restartQuiz": "Ulang Kuis",
+    "back": "Wo",
+    "questionOf": "Soai {current} dari {total}",
+    "progress": "Progres",
+    "correct": "Beutoi! Droeneuh meunang {points} poin.",
+    "incorrect": "Kon tepat. Jaweuban yang beutoi nakeuh: {correctAnswer}",
+    "nextQuestion": "Soai Seuleuso",
+    "finishQuiz": "Peusiap Kuis",
+    "videosTitle": "Video Edukasi",
+    "videosDescription": "Kalon video edukasi dari koleksi calitra kamoe untuk peudalam pemahaman.",
+    "watch": "Kalon",
+    "viewAllVideos": "Kalon Mandum Video",
+    "exploreAll": "Jelajahi Mandum",
+    "comicsTitle": "Komik Digital Interaktif",
+    "comicsDescription": "Alami calitra dalam format komik strip yang menarik secara visual.",
+    "readComic": "Baca Komik",
+    "leaderboard": "Papan Peringkat",
+    "leaderboardDescription": "Kalon so yang pimpin perjalanan meurunoe.",
+    "viewFullLeaderboard": "Kalon Papan Peringkat Lengkap",
+    "achievements": "Lencana Prestasi",
+    "achievementsDescription": "Peusapat lencana sira meurunoe.",
+    "quickAccess": "Akses Sigra ke Calitra",
+    "quickAccessDescription": "Langsung ke pengalaman calitra lengkap dengan mandum konten edukatif.",
+    "viewFullStory": "Kalon Calitra Lengkap",
+    "exploreAllStories": "Jelajahi Mandum Calitra",
+    "viewAllStories": "Kalon Mandum Calitra",
+    "tsunamiExpert": "Ahli Tsunami",
+    "disasterPrepared": "Siaga Bencana",
+    "communityHelper": "Ureung Tulong Komunitas",
+    "peaceBuilder": "Ureung Peudong Dame",
+    "wisdomKeeper": "Ureung Jaga Keurifan",
+    "tsunamiBadge": "Tsunami",
+    "communityBuilderBadge": "Ureung Peudong Komunitas",
+    "wisdomKeeperBadge": "Ureung Jaga Keurifan",
+    "peaceMakerBadge": "Ureung Peudame",
+    "emergencyReadyBadge": "Siap Darurat",
+    "educatorBadge": "Pendidik"
+  },
+  "eduboard": {
+    "title": "EduBoard Fisik",
+    "description": "Hubung donya digital dan fisik untuk meurunoe komunitas yang inklusif dan beulan.",
+    "whatIsItTitle": "Peu nyan EduBoard?",
+    "whatIsItDescription": "EduBoard nakeuh papan informasi fisik yang geurancang untuk tempat publik lagee sikula, kantor gampong, atau pusat komunitas. Nyan geupeuleumah ringkasan calitra, kode QR yang hubung ke konten digital interaktif (video, komik, kuis), dan informasi penteng siaga bencana.",
+    "useItTitle": "Gunakan di Komunitas Droeneuh",
+    "useItDescription": "Kamoe dorong sikula, komunitas, dan sukarelawan untuk geunguy EduBoard. Unduh aset desain kamoe secara gratis dan ikuti panduan untuk pasang di lingkungan droeneuh.",
+    "downloadAssets": "Unduh Aset Poster",
+    "viewGuide": "Kalon Panduan",
+    "editorTitle": "Editor AI EduBoard",
+    "editorDescription": "Pileh jeunèh konten yang neutem peuget atau pratinjau. AI akan bantu isi konten berdasarkan templat yang droeneuh pileh.",
+    "presentationTitle": "Slide Presentasi",
+    "presentationDescription": "Peuget presentasi edukatif 10 slide terstruktur tentang topik lagee siaga bencana.",
+    "storyboardTitle": "Konten Storyboard",
+    "storyboardDescription": "Rancang narasi visual 4 slide dalam format vertikal lagee Instagram Story, peu-penoh dengan gambar dan teks.",
+    "quizTitle": "Kartu Kuis Interaktif",
+    "quizDescription": "Peuget kartu kuis interaktif untuk uji pemahaman dengan umpan balik sigra.",
+    "infographicTitle": "Infografis A4",
+    "infographicDescription": "Hasilkan infografis satu halaman yang padat informasi dalam format A4 dan siap cetak.",
+    "minigameTitle": "Konten Premium: Game Mini",
+    "minigameDescription": "Peudong skenario game respons bencana interaktif dengan konten yang geupeuget le AI.",
+    "backToSelection": "Wo u Pilehan",
+    "printablePreviewTitle": "Pratinjau Konten Cetak (A4)",
+    "printablePreviewDescription": "Nyoekeuh pratinjau kiban infografis akan geupeuleumah. Konten nyoe geurancang untuk geucetak di ateuh keureutah A4.",
+    "learnMore": "Meurunoe Leubeh",
+    "scanQr": "Pindai Kode QR untuk akses mandum calitra dan konten interaktif.",
+    "slidePreviewTitle": "Pratinjau Slide Presentasi",
+    "slidePreviewDescription": "Gunakan tombol panah atau titik di bawah untuk navigasi slide.",
+    "storyboardPreviewTitle": "Pratinjau Storyboard",
+    "storyboardPreviewDescription": "Format vertikal yang geurancang untuk narasi visual yang padat.",
+    "quizPreviewTitle": "Pratinjau Kartu Kuis",
+    "quizPreviewDescription": "Jaweub soai untuk lanjut. Gunakan tombol panah untuk navigasi jika ka geujaweub.",
+    "restartQuiz": "Ulang Kuis",
+    "minigameIntroTitle": "Banjir di Sikula",
+    "minigameIntroDescription": "Droeneuh sidroe aneuk mit SMP. Hujan turun brat that, dan ie mulai tamong u halaman sikula. Droeneuh harus bertindak sigra dan beutoi untuk pastikan mandum ureung seulamat.",
+    "minigameStart": "Mulai Skenario",
+    "minigameScore": "Skor:",
+    "minigameComplete": "Skenario Ka Siap!",
+    "minigameFinalScore": "Skor Akhir:",
+    "minigamePlayAgain": "Main Lom"
+  },
+  "waveOfSchool": {
+    "heroTitle": "Wave of School: Watee Budaya Meurumpok AI, Guru Jeut Kreator",
+    "heroDescription": "Peuberdaya guru dan sikula dengan AI untuk peuget, adaptasi, dan puta konten meurunoe interaktif yang meuyub bak keurifan lokal.",
+    "joinAsSchool": "Gabung sebagai Sikula",
+    "tryAIGenerator": "Cuba Generator Konten AI",
+    "visionTitle": "Pendidikan yang Ingat, Meurunoe, dan Berkembang",
+    "visionDescription1": "Dari pendidikan bencana hingga peudong dame, Wave of School geu'ubah calitra jeut ke modul meurunoe cerdas dan adaptif yang geudukung le AI.",
+    "visionDescription2": "Guru kon mulai dari nol — awaknyan berkreasi sabe-sabe dengan budaya, komunitas, dan teknologi.",
+    "visionDescription3": "Nyoekeuh cara Aceh ajar donya untuk meurunoe secara la'en.",
+    "visionWoV": "Wave of Voice",
+    "visionWoVSub": "Calitra",
+    "visionWoS": "Wave of School",
+    "visionWoSSub": "Konten Meurunoe",
+    "howItWorksTitle": "Dari Calitra jeut ke Pelajaran Cerdas",
+    "howItWorksDescription": "Proses peuget konten AI peumudah peuget pelajaran, sehingga guru jeut fokus bak yang awaknyan paleng ahli: mengajar.",
+    "step1Title": "1. Input",
+    "step1Description": "Guru pileh tema, unggah calitra lokal, atau video wawancara paneuk.",
+    "step2Title": "2. Generasi AI",
+    "step2Description": "Sistem geu'ubah input jeut ke kuis, komik, poster, atau modul interaktif.",
+    "step3Title": "3. Output & Puta",
+    "step3Description": "Guru jeut langsung geunguy di kelas atau unggah ke Hub EduBoard untuk geupeusapat.",
+    "demoButton": "Hasilkan Demo Gratis",
+    "aiHubTitle": "Hub Konten AI: Temukan, Remix, Ajarkan",
+    "aiHubDescription": "Jelajahi ekosistem konten siap pakai yang sabe bertambah, geupeuget le AI dan geupileh le para pendidik.",
+    "browseModules": "Jelajahi 100+ Modul Meurunoe AI",
+    "forSchoolsTitle": "Untuk Sikula: Gabung dengan Gelombang",
+    "forSchoolsDescription": "Jeut ke sikula mitra perintis dan dapat akses eksklusif ke ekosistem meurunoe AI kamoe.",
+    "forSchoolsPoint1": "Akses ke 100+ rencana pelajaran berbasis AI.",
+    "forSchoolsPoint2": "Dasbor untuk pantau aktivitas & interaksi murid.",
+    "forSchoolsPoint3": "Fitur ko-kreasi dengan sikula la'en.",
+    "forSchoolsPoint4": "Branding digital: “Mitra Tersertifikasi Wave of School”.",
+    "applyButton": "Daftar sebagai Sikula Mitra",
+    "bookDemoButton": "Pesan Demo Langsung",
+    "forTeachersTitle": "Untuk Guru: Suara Droeneuh, Pelajaran Droeneuh",
+    "forTeachersQuote": "“Tiap guru na calitra. Tiap calitra jeut ajar donya.”",
+    "forTeachersPoint1": "Dapat templat otomatis (PPT, komik, kuis).",
+    "forTeachersPoint2": "Dapat Asisten Mengajar AI (hasilkan ide & pertanyaan).",
+    "forTeachersPoint3": "Puta hasil droeneuh dengan komunitas guru di seluruh Aceh.",
+    "startCreatingButton": "Mulai Peuget dengan AI",
+    "showcaseTitle": "AI dalam Aksi",
+    "showcaseDescription": "Kalon kiban Wave of School geunguy di kelas untuk peuget pengalaman meurunoe yang hana tuwo.",
+    "impactTitle": "Dampak Kamoe, dalam Angka",
+    "impactDescription": "Dorong perubahan nyata dalam ekosistem pendidikan lokal melalui adopsi teknologi dan partisipasi komunitas.",
+    "impactSchools": "Sikula Bergabung",
+    "impactLessons": "Pelajaran AI Dihasilkan",
+    "impactStudents": "Murid Terlibat",
+    "impactSatisfaction": "Kepuasan Guru",
+    "testimonial": "“Dengan Wave of School, lon ubah calitra tsunami lon jeut ke pelajaran digital yang geusuka le murid-murid lon.”",
+    "testimonialAuthor": "Ibu Nurdiani",
+    "testimonialRole": "Guru, SDN Simeulue Barat",
+    "joinMovementTitle": "Jeut ke Gelombang Seuleuso",
+    "joinMovementDescription": "Mari berkolaborasi untuk masa depan pendidikan di Aceh. Apapun peran droeneuh, droeneuh jeut jeut bagian dari perubahan.",
+    "joinForTeachers": "Untuk Guru",
+    "joinForTeachersDesc": "Mulai peuget konten dan dapat akses ke Asisten AI.",
+    "joinForSchools": "Untuk Sikula",
+    "joinForSchoolsDesc": "Daftar sikula droeneuh sebagai mitra perintis.",
+    "joinForOrgs": "Untuk Organisasi",
+    "joinForOrgsDesc": "Jelajahi peluang kolaborasi untuk dampak yang leubeh luah.",
+    "collaborateButton": "Berkolaborasi dengan Kamoe",
+    "becomePartnerButton": "Jeut ke Mitra"
+  },
+  "profile": {
+    "redirecting": "Mengarahkan ke halaman login...",
+    "welcome": "Assalamu'alaikum",
+    "teacher": "Guru",
+    "schoolPartner": "Sikula Mitra",
+    "quote": "\"Keurifan uroenyoe jeut ke pelajaran singoh. Mari geutanyoe peuget sabe-sabe.\"",
+    "lessonsCreated": "Pelajaran AI Geupeuget",
+    "studentsReached": "Murid Terjangkau",
+    "storyImpact": "Skor Dampak Calitra",
+    "reflectionsCollected": "Refleksi Geupeusapat",
+    "signOut": "Teubiet",
+    "aiStudioTitle": "AI Studio: Peuget Konten Baro",
+    "aiStudioDescription": "Ubah calitra atau ide droeneuh jeut ke materi meurunoe yang menarik hanya dalam beberapa klik.",
+    "lesson": "Pelajaran",
+    "quiz": "Kuis",
+    "comic": "Komik",
+    "reflection": "Refleksi",
+    "eduPoster": "EduPoster",
+    "startWithStory": "Mulai dengan calitra dari Wave of Voice:",
+    "searchStoryPlaceholder": "Mita calitra (contoh: 'Smong')",
+    "generateButton": "Hasilkan",
+    "myContentTab": "Konten AI Lon",
+    "libraryTab": "Perpustakaan Meurunoe",
+    "lessonsTab": "Pelajaran",
+    "quizzesTab": "Kuis",
+    "comicsTab": "Komik",
+    "quizExampleTitle": "Kuis Interaktif: Smong & Sains",
+    "quizExampleDescription": "Berdasarkan: Calitra Smong",
+    "editButton": "Ubah",
+    "previewButton": "Pratinjau",
+    "createNewContent": "Peuget Konten Baro",
+    "inspirationHubTitle": "Pusat Inspirasi",
+    "inspirationHubDescription": "Temukan dan remix pelajaran dari pendidik la'en.",
+    "libraryPlaceholder": "Konten perpustakaan meurunoe akan geupeuleumah di siko.",
+    "schoolHubTitle": "Hub Sikula",
+    "schoolHubDescription": "Pantau aktivitas dan kelola guru di organisasi droeneuh.",
+    "teachersJoined": "Guru Bergabung",
+    "totalLessons": "Total Pelajaran Geupeuget",
+    "manageTeachers": "Kelola Guru",
+    "achievementsTitle": "Prestasi",
+    "achievement1": "Pelajaran AI Phon Geupeuget",
+    "achievement2": "Integrator Keurifan Lokal",
+    "achievement3": "Kontributor 10 Rayeuk EduBoard",
+    "communityFeedTitle": "Umpan Komunitas",
+    "communityFeedExample1_part1": "Pak Budi",
+    "communityFeedExample1_part2": " baro saja unggah kuis baro: 'Smong & Sains'.",
+    "communityFeedExample2_part1": "Acara:",
+    "communityFeedExample2_part2": " Workshop EduAI di Banda Aceh - ",
+    "communityFeedExample2_part3": "Gabung Jinoe",
+    "viewAll": "Kalon Mandum",
+    "reflectionsTitle": "Refleksi Murid",
+    "reflectionExample": "\"Lon baro meurunoe bahwa kerja bakti juga jeut cegah bencana.\"",
+    "reflectionAuthor": "- Murid (Anonim)",
+    "impactReport": "Kalon Laporan Dampak"
+  },
+  "languageToggle": {
+    "label": "Gantoe Basa"
+  },
+  "chatbot": {
+    "title": "Siaga-Bot",
+    "description": "Asisten Kebencanaan Droeneuh",
+    "initialMessage": "Assalamu'alaikum! Lon Siaga-Bot, asisten AI droeneuh untuk edukasi kebencanaan. Peu yang neutem tanyong tentang siaga bencana, keurifan lokal, atau dame di Aceh?",
+    "errorMessage": "Meu'ah, na masalah saat proses permintaan droeneuh. Neu cuba lom.",
+    "placeholder": "Tanyong tentang bencana...",
+    "relatedStory": "Baca calitra terkait:",
+    "fabAsk": "Tanyong Siaga-Bot",
+    "fabExplore": "Jelajahi Calitra",
+    "fabShare": "Puta Calitra"
+  },
+  "stories": {
+    "smong-selamat-dari-lautan": {
+      "title": "Smong: Keurifan Lokal yang Seulamat dari La'ôt",
+      "summary": "Calitra tentang kiban tradisi lisan 'Smong' di Pulo Simeulue geupeuseulamat ribuan nyawong watee tsunami 2004, saboh bukti kehebatan keurifan lokal dalam mitigasi bencana.",
+      "fullText": "Di Pulo Simeulue, jioh seugolom na sistem peringatan dini modern, endatu kamoe ka geupeuwaréh saboh syair, saboh nyanyian nan jih 'Smong'. Syair nyoe kon hanya lantunan, tapi saboh panduan hidu. 'Enggel mon sao suru, linon bak, mae oek suruik...' yang arti jih 'Meunyo gempa kreueng geuikôt le surôt ie la'ôt, sigra plang u tempat manyang'. Watee gempa dan tsunami dahsyat geuhantam Aceh bak thon 2004, ingatan akan Smong nyoekeuh yang dorong kamoe mandum untuk plang u buket, peujioh dari pante. Dari pulohan ribee penduduk, hanya padum droe yang jeut ke korban. Smong nakeuh bukti bahwa alam geujok tanda, dan endatu kamoe ka geupeurunoe kamoe cara baca nyan. Nyoekeuh calitra tentang kiban pengetahuan yang geupeuwaréh dari generasi ke generasi jeut ke peunyelamat kamoe."
+    },
+    "hutan-bakau-penjaga-pantai": {
+      "title": "Uteuen Bakau, Si Penjaga Pante",
+      "summary": "Calitra inspiratif dari komunitas pante di Aceh Jaya yang bekerja sama pula uteuen bakau untuk lindungi gampong awaknyan dari abrasi dan badai.",
+      "fullText": "Awai, pante di gampong kamoe sabe terkikis. Tiap kali badai teuka, kamoe sabe cemas. Rumoh-rumoh dekat pante meunan-meunan hanco. Lheueh nyan, kamoe teuingat calitra ureung tuha awai, bahwa uteuen bakau nakeuh benteng alami kamoe. Sabe-sabe, aneuk muda dan ureung tuha, kamoe mulai pula lom bibit bakau di sepanjang pante. Awal jih payah, le yang gagal. Tapi kamoe hana menyerah. Jinoe, setelah meuthon-thon, uteuen bakau nyan ka rimbun. Urat jih yang kreueng cengkeram tanoh, tahan laju ombak. Gampong kamoe jinoe leubeh aman. Aneuk-aneuk jeut ma'en di pante hana le rasa teumakot. Uteuen bakau kon hanya lindungi kamoe, tapi juga jeut ke rumoh bagi eungkot dan keureuma, jok kamoe sumber penghidupan tambahan."
+    },
+    "dapur-umum-perdamaian": {
+      "title": "Dapu Umum Dame",
+      "summary": "Kiban saboh dapu umum yang geupeudong pasca-konflik jeut ke tempat untuk merajut kembali taloe persaudaraan dan peudong dame melalui makanan.",
+      "fullText": "Setelah konflik abéh, mantong le luka dan hana percaya di antara kamoe. Payah untuk mulai lom. Lheueh nyan, padum droe dari kamoe, para ibu, berpikir: mandum ureung butoh pajoh, dan makanan jeut peusaboh. Kamoe peudong saboh dapu umum sederhana. So mantong jeut teuka untuk pajoh, dan so mantong jeut bantu masak. Di siko keajaiban terjadi. Sira pot sayur dan aduk gulai, kamoe mulai marit. Kamoe puta calitra, meukhem, dan moe. Dinding-dinding yang awai jih peupisah kamoe meunan-meunan reuloh. Dapu nyoe jeut leubeh dari sekadar tempat pajoh; jih jeut ke ruang rekonsiliasi. Kamoe meurunoe bahwa dame jeut dimulai dari hal yang paling sederhana: sipiring bu hangat dan hate yang tebuka."
+    },
+    "lumbung-padi-komunal": {
+      "title": "Lumbung Pade Komunal: Gotong Royong Hadapi Paceklik",
+      "summary": "Inisiatif masyarakat Gayo dalam peudong lumbung pade komunal sebagai jaring pengaman sosial untuk pastikan hana sidroe pun warga yang deuk watee musim paceklik.",
+      "fullText": "Di dataran tinggi Gayo, cuaca hana sabe jeut geutebak. Kadang panen le, kadang gagal total. Untuk hadapi nyoe, kamoe peuhidup lom tradisi 'lumbung bersama'. Tiap keluarga yang panen jih leubeh akan sisihkan sebagian hasil untuk geusimpan di lumbung komunal. Watee na keluarga yang susah atau gagal panen, awaknyan jeut cok dari lumbung nyoe. Hana na bunga, hana na catatan utang. Mandum jih didasari le semangat gotong royong dan peduli. Lumbung nyoe nakeuh simbol persatuan kamoe. Jih peurunoe kamoe bahwa dengan berbagi, geutanyoe mandum jeut leubeh teuga. Kamoe mungkin hana kaya secara materi, tapi kamoe kaya dalam persaudaraan."
+    },
+    "bah-tangse-sungai-murka": {
+      "title": "Bah Tangse: Watee Krueng Murka",
+      "summary": "Kesaksian mendalam tentang banjir bandang dahsyat di Tangse thon 2011, saboh tragedi yang disebabkan le penebangan uteuen dan jeut ke pelajaran pahit tentang penteng jih jaga alam.",
+      "fullText": "Malam nyan, 10 Maret 2011, langet lagee pecah di ateuh Tangse. Hujan yang turun kon le hanya hujan, tapi lagee ie yang geutob dari langet hana henti. Kamoe yang tinggai di sepanjang Krueng Tangse ka biasa dengan ie krueng yang ek, tapi malam nyan la'en. Sekitar tengah malam, kamoe deungo su gemuruh yang kon dari guntor. Su jih makin kreueng, lagee gunong yang reuloh. Padum droe dari kamoe yang penasaran cuba kalon u lua. Yang kamoe kalon nakeuh pemandangan yang meuceuhu: ie krueng meluap dengan liar, warna jih itam pekat, dan ba serta pulohan bak kayee rayeuk yang saling hantam. Nyan kon banjir biasa, nyan nakeuh 'Bah' – ie bah yang murka.\\n\\nGeuchik geupeu'ingat melalui pengeras su meuseujid, 'Ie ek! Peuseulamat droe! Plang u tempat manyang!' Listrik padam, peuget suasana makin panik dan tegang. Dalam seupot buta, kamoe hanya jeut harap bak naluri. Su benturan kayee-kayee rayeuk yang hantam jembatan dan rumoh terdengar begitu dekat. Rumoh-rumoh panggung yang dari kayee pun hana daya, tercabut dari pondasi jih dan hanyot geuba le arus. Kamoe plang sekuat tenaga u perbukitan, u tempat yang leubeh manyang, hanya ba bajee di badan. Dari ateuh buket, kamoe kalon gampong kamoe geusieb le ie bah yang ganas. Paginya, watee ie mulai surôt, yang tinggai hanya lumpur teubai dan puing-puing. Jembatan utama putoh, pulohan rumoh hana le, dan blang kamoe ka berubah jeut ke la'ôt lumpur. Kamoe sadar, nyoe kon hanya bencana alam. Nyoe nakeuh akibat dari keserakahan. Uteuen di hulu yang seharusnya jeut ke penyangga ka gundul le penebangan liar. Krueng hana le na penahan. Bah Tangse jeut ke pelajaran paling pahit bagi kamoe, bahwa peurusak alam sama dengan peuhanco droe sendiri. Sejak saat nyan, kamoe bersumpah untuk jaga uteuen kamoe, pula lom bak kayee, sebagai warisan agar tragedi serupa hana terulang lom."
+    },
+    "api-di-bukit-barisan": {
+      "title": "Apui di Buket Barisan",
+      "summary": "Calitra perjuangan Masyarakat Peduli Apui di dataran tinggi Gayo dalam cegah dan padam kebakaran uteuen, lindungi ekosistem Leuser yang meuharga.",
+      "fullText": "Tiap musim kemarau, hate kamoe sabe cemas. Uteuen pinus di sekitar kamoe nyoe indah, tapi juga sangat mudah teutot. Padum mantong percikan apui, jeut jeut ke bencana rayeuk. Kamoe bentuk kelompok 'Masyarakat Peduli Apui'. Kamoe patroli secara sukarela, peuget sekat bakar, dan yang paling penteng, jok penyuluhan kepada warga agar hana buka lahan dengan cara tot. Nyoe kon buet pemerintah, nyoe nakeuh tanggung jaweub geutanyoe bersama. Uteuen nyoe nakeuh sumber ie kamoe, rumoh bagi satwa liar, dan warisan untuk aneuk cuco kamoe. Padam apui sebelum rayeuk nakeuh cara kamoe peudong dame dengan alam."
+    },
+    "kopi-gayo-aroma-perdamaian": {
+      "title": "Kupi Gayo: Aroma Dame",
+      "summary": "Kiban kebun kupi di Bener Meriah yang sempat geutinggai karena konflik, jinoe jeut ke motor penggerak ekonomi dan simbol harapan baro bagi masyarakat.",
+      "fullText": "Awai di masa konflik, le dari kamoe yang terpaksa tinggai kebun kupi. Kebun-kebun nyan telantar, geutumbuhi le naleueng. Setelah dame, kamoe wo. Mulai lom dari nol brat that. Tapi, kamoe kalon harapan bak bijeh-bijeh kupi nyoe. Kamoe kerja kreuh, meurunoe teknik pula yang leubeh get, dan peudong koperasi bersama. Meunan-meunan tapi pasti, kupi Gayo mulai geuturi le donya. Aroma kupi yang kamoe olah tiap pagi kon hanya aroma minuman, tapi juga aroma dame dan kerja kreuh. Kebun kupi nyoe ka peusaboh kamoe lom, jok buet, dan memungkinkan kamoe peu sikula aneuk-aneuk. Kupi ka peupuleh luka kamoe."
+    },
+    "pemuda-penjaga-adat": {
+      "title": "Pemuda Penjaga Adat",
+      "summary": "Saboh kelompok aneuk muda di Pidie peuhidup lom tari Seudati sebagai cara untuk peujioh aneuk muda dari kekerasan dan peukuat identitas budaya pasca-konflik.",
+      "fullText": "Setelah dame, le aneuk muda yang hilang arah. Energi awaknyan yang rayeuk kadang tersalur ke hal-hal negatif. Kamoe, padum droe pemuda yang leubeh tuha, merasa harus peuget sesuatu. Kamoe putuskan untuk peuhidup lom sanggar tari Seudati. Tarian nyoe kon hanya tentang gerakan, tapi juga peurunoe disiplin, kerja sama tim, dan na syair-syair nasihat. Awalnya kon mudah tarik minat awaknyan. Tapi dengan saba, sanggar kamoe mulai rame. Energi awaknyan jinoe tersalur untuk peuteun budaya. Melalui tarian, kamoe peudong jembatan antar gampong dan peuget ruang yang aman bagi aneuk muda untuk berekspresi secara positif."
+    },
+    "perempuan-penganyam-harapan": {
+      "title": "Inong Penganyam Harapan",
+      "summary": "Calitra para janda korban tsunami yang bangket dari keterpurukan dengan peudong kelompok kerajinan anyaman, peuget kemandirian ekonomi dan ruang penyembuhan.",
+      "fullText": "Tsunami cok lakoe dan rumoh kamoe. Kamoe tinggai dengan duka dan hana pasti. Untuk bertahan hidu, kamoe mulai kumpul dan peuget apa yang kamoe jeut: menganyam. Kamoe gunakan on pandan yang le tumbu di sekitar kamoe. Sira menganyam, kamoe puta calitra, saling peukuat. Anyaman nyoe kon hanya tika atau tas, nyoe nakeuh terapi bagi kamoe. Meunan-meunan, produk kamoe mulai geuturi. Pesanan teuka, dan kamoe meunang penghasilan sendiri. Kamoe kon le hanya korban, kamoe nakeuh penyintas yang berdaya. Kelompok nyoe jeut ke keluarga baro kamoe, tempat kamoe tenun kembali harapan untuk masa depan."
+    },
+    "arsitektur-rumah-panggung": {
+      "title": "Arsitektur Rumoh Panggung: Meurunoe dari Endatu",
+      "summary": "Gali lom keurifan arsitektur tradisional Aceh, Rumoh Aceh, sebagai inspirasi untuk peudong rumoh yang leubeh tahan gempa dan adaptif terhadap lingkungan.",
+      "fullText": "Watee gempa dan tsunami peuhanco begitu le bangunan modern, kamoe kalon le Rumoh Aceh (rumoh tradisional Aceh) yang mantong kong. Nyoe buka mata kamoe. Arsitektur endatu geutanyoe ternyata luar biasa. Rumoh panggung dengan konstruksi kayee yang fleksibel mampu redam guncangan gempa. Kolong di bawah rumoh kon hanya berfungsi sebagai ruang serbaguna, tapi juga jok jalan bagi ie meunyo terjadi banjir atau genangan. Kamoe mulai advokasi dan peudong lom rumoh dengan adaptasi prinsip-prinsip Rumoh Aceh. Nyoe kon tentang wo u masa lalu, tapi cok pelajaran terbaik dari masa lalu untuk peudong masa depan yang leubeh aman."
+    },
+    "seni-melawan-trauma": {
+      "title": "Seni Lawan Trauma",
+      "summary": "Kiban para seniman muda di Banda Aceh geunguy mural dan seni jalanan untuk ubah dinding-dinding bekas tsunami jeut ke kanvas harapan dan ingatan kolektif.",
+      "fullText": "Banda Aceh pasca-tsunami penoh dengan dinding-dinding bisu yang jeut ke saksi tragedi. Suasana terasa brat. Sebagai seniman, kamoe merasa terpanggil untuk peuget sesuatu. Kamoe mulai lukis mural di dinding-dinding publik. Kon untuk peuhilang ingatan, tapi untuk jok warna baro. Kamoe lukis tentang harapan, ketahanan, kebersamaan, dan keindahan Aceh. Proses melukis bersama nyoe jeut ke terapi bagi kamoe dan juga masyarakat. Aneuk-aneuk ikut gabung. Dinding yang awai jih suram jinoe ka jeut ke galeri tebuka yang calitrakan kisah kebangkitan kamoe. Seni jeut ke cara kamoe peupuleh luka kota dan jiwa kamoe."
+    },
+    "nelayan-dan-tanda-alam": {
+      "title": "Keurifan Nelayan dan Tanda-tanda Alam",
+      "summary": "Calitra nelayan tradisional di Banda Aceh yang harap bak pengetahuan turun-temurun tentang rasi bintang, angen, dan perilaku eungkot untuk melaut dengan aman.",
+      "fullText": "Kamoe para nelayan hana na GPS canggih. Kompas kamoe nakeuh langet dan la'ôt nyan sendiri. Ayah lon peurunoe lon cara baca rasi bintang Orion, atau 'Bintang Lhee' lagee yang kamoe seubut, untuk tuhoe jalan wo. Kamoe tuhoe watee eungkot kumpul hanya dengan kalon warna ie dan jeunèh cicem yang po di ateuh jih. Meunyo lumba-lumba meuen dekat pante, nyan tanda cuaca akan brok. Pengetahuan nyoe hana dalam buku, nyoe geupeuwaréh dari ayah u aneuk, dari satu generasi nelayan u generasi seulanjut jih. Nyoekeuh ilmu hidu yang peuget kamoe jeut berkawan dengan la'ôt."
+    },
+    "sumur-tua-sumber-kehidupan": {
+      "title": "Sumur Tuha, Sumber Hidu Watee Thon Meukho",
+      "summary": "Calitra tentang kiban saboh sumur tuha warisan endatu jeut ke satu-satunya sumber ie yang bertahan watee gampong geulanda le thon meukho panyang.",
+      "fullText": "Musim kemarau thon nyan panyang that. Krueng kho, sumur-sumur modern kamoe pun ikut kho. Kamoe mulai putoh asa. Lheueh nyan sidroe ureung tuha gampong teuingat akan saboh sumur tuha yang ka trep hana geunguy di pinggir uteuen. Sumur nyan geupeuget dengan cincin bato dan geutop le bak kayee rayeuk. Dengan ragu, kamoe peugleh nyan. Ajaib, di dasar jih mantong na ie yang jernih dan hana pernah kho! Ternyata, endatu kamoe peudong sumur nyan tepat di ateuh mata ie yang rayeuk. Sumur tuha nyan peuseulamat gampong kamoe. Kamoe meurunoe bahwa teknologi modern hana sabe leubeh get. Na keurifan dalam peninggalan masa lalu yang harus geutanyoe jaga."
+    },
+    "ilmu-falak-di-pesantren": {
+      "title": "Ilmu Falak di Dayah: Navigasi La'ôt dan Langet",
+      "summary": "Ungkap kiban pesantren (dayah) di Aceh kon hanya peurunoe ilmu agama, tapi juga ilmu falak (astronomi) yang geunguy le nelayan untuk navigasi.",
+      "fullText": "Le yang pike dayah hanya tempat meurunoe Al-Quran. Tapi sejak awai, kamoe juga meurunoe Ilmu Falak. Kamoe hitung posisi bintang untuk tentukan awal buleuen puasa, dan juga arah kiblat. Ternyata, ilmu yang sama juga sangat bermanfaat bagi para nelayan di pante. Para santri yang wo u gampong jih sering jeut ke rujukan. Awaknyan jeut peuturi watee pasang surôt paleng manyang, atau di pat posisi bintang utara. Na hubungan erat antara langet dan la'ôt, antara ilmu agama dan ilmu hidu. Di siko, kamoe meurunoe bahwa mandum ilmu teuka dari Allah dan jeut geunguy untuk kebaikan bersama, baik di darat maupun di la'ôt."
+    },
+    "pasar-sebagai-ruang-sosial": {
+      "title": "Pasa Pagi: Leubeh dari Sekadar Jual Beli",
+      "summary": "Pasa tradisional kon hanya tempat transaksi ekonomi, tapi juga jantong sosial komunitas, tempat informasi geupeusampoe dan taloe sosial geupeukuat.",
+      "fullText": "Lon ka meukat di pasa nyoe sejak ubit. Bagi kamoe, pasa kon hanya tempat mita peng. Di siko tempat kamoe meurumpok kawan, tukar haba, dan puta calitra. Meunyo na haba tentang akan na bantuan, atau lowongan buet, informasi nyan sigra menyebar di pasa. Bahkan watee na isu-isu yang resah, kamoe jeut saling peutenang di siko. Pasa nakeuh barometer sosial. Dari obrolan di warung kupi pasa, geutanyoe jeut tuhoe apa yang sedang geurasa le masyarakat. Jaga pasa tradisional tetap hidu sama dengan jaga denyut nadi komunitas geutanyoe."
+    },
+    "siaga-si-kucing-cerdas": {
+      "title": "Siaga, Si Meong Cerdik",
+      "summary": "Saboh calitra untuk aneuk mit SD tentang siaga bencana, geucalitrakan melalui petualangan sidroe meong cerdik nan jih Siaga yang peurunoe kawan-kawan jih peu yang harus geupeuget watee gempa.",
+      "fullText": "Di saboh gampong ubit, hiduplah sidroe meong cerdik nan jih Siaga. Jih la'en dari meong la'en. Watee kawan-kawan jih suka eéh siuroe suntok, Siaga suka deungo calitra dari ureung tuha gampong tentang gempa dan tsunami. Saboh uroe, watee Siaga sedang ma'en bersama kawan-kawan jih, tiba-tiba tanoh meugoyang. 'Gempa!' geuhoih Siaga. 'Ingat lhee langkah: Merunduk, Berlindung, dan Bertahan!' Siaga langsung merunduk, berlindung di bawah meja yang kong, dan peugang bak gaki jih. Kawan-kawan jih yang awalnya teumakot dan bingung, kalon peu yang Siaga peuget dan langsung ikot. Setelah goyangan berhenti, Siaga dengan tenang ajak kawan-kawan jih u lapangan tebuka, jioh dari bangunan dan bak kayee manyang. 'Geutanyoe harus u tempat manyang, siapa tuhoe ie la'ôt surôt,' katanya, teuingat calitra Smong yang pernah jih deungo. Kisah Siaga peurunoe aneuk-aneuk bahwa dengan tuhoe peu yang harus geupeuget, geutanyoe hana perlu panik watee bencana teuka. Geutanyoe jeut lindungi droe dan kawan-kawan."
+    }
+  },
+  "interactiveContent": {
+    "smong": {
+      "video": {
+        "title": "Video Edukasi: Sistem Pengetahuan Tradisional",
+        "description": "Temukan kiban sistem pengetahuan asli peulengkap ilmu pengetahuan modern dalam siaga bencana.",
+        "info": "Video nyoe peugah kiban sistem pengetahuan tradisional lagee Smong bekerja sabe-sabe dengan sistem peringatan dini modern untuk lindungi masyarakat."
+      },
+      "quiz": {
+        "title": "Kuis Keurifan Smong",
+        "description": "Uji pemahaman droeneuh tentang Smong dan sistem pengetahuan tradisional untuk siaga bencana.",
+        "questions": [
+          { "question": "Peu arti kata 'Smong' dalam basa lokal Pulo Simeulue?", "options": ["Gempa Bumi", "Tsunami", "Peringatan", "La'ôt"], "correctAnswer": "Tsunami", "points": 10 },
+          { "question": "Peu dua tanda dalam syair Smong yang tunyok tsunami akan teuka?", "options": ["Angen kreueng dan hujan brat", "Gempa kreueng geuikôt le surôt ie la'ôt", "Awan itam dan kilat", "Su sirene yang kreueng"], "correctAnswer": "Gempa kreueng geuikôt le surôt ie la'ôt", "points": 10 },
+          { "question": "Tindakan peu yang geusaran le keurifan Smong sigra setelah kalon tanda-tanda nyoe?", "options": ["U pante untuk kalon", "Preh instruksi resmi", "Plang u tempat yang leubeh manyang", "Meu'umpuet dalam rumoh"], "correctAnswer": "Plang u tempat yang leubeh manyang", "points": 10 }
+        ]
+      },
+      "comic": {
+        "title": "Komik Digital: Keurifan Smong",
+        "description": "Ikuti calitra kiban keurifan lokal Smong peuseulamat ribuan nyawong dalam format komik strip yang menarik.",
+        "panels": [
+          { "title": "Di Bah Bak Ulim", "text": "\"Nenek peurunoe kamoe peringatan kuno di bah bak ulim tuha...\"" },
+          { "title": "Bumoe Meugoyang", "text": "\"Tiba-tiba, tanoh meugoyang brat. Kamoe tuhoe nyoe kon gempa biasa.\"" },
+          { "title": "Plang! Bek Wo!", "text": "\"Ureung geuhoih, 'Smong! Smong!' sira tunyok u arah la'ôt yang surôt.\"" },
+          { "title": "U Buket", "text": "\"Kamoe mandum plang sekuat tenaga u buket, tinggai mandum barang.\"" },
+          { "title": "La'ôt yang Murka", "text": "\"Dari ateuh buket, kamoe kalon gelombang rayeuk hantam gampong kamoe.\"" },
+          { "title": "Syukur & Pelajaran", "text": "\"Kamoe seulamat karena kamoe deungo endatu kamoe. Smong nakeuh peunyelamat kamoe.\"" }
+        ]
+      }
+    },
+    "bakau": {
+      "video": {
+        "title": "Video Edukasi: Uteuen Bakau, Benteng Alam Geutanyoe",
+        "description": "Meurunoe penteng jih ekosistem bakau sebagai perlindungan alami terhadap abrasi, badai, dan bahkan tsunami.",
+        "info": "Video nyoe peugah kiban saboh komunitas di Aceh Jaya berhasil peupuleh garis pante awaknyan melalui pula lom bakau."
+      },
+      "quiz": {
+        "title": "Kuis Penjaga Pante",
+        "description": "Sejauh mana droeneuh pahami fungsi dan manfaat uteuen bakau?",
+        "questions": [
+          { "question": "Selain lindungi pante dari abrasi dan badai, peu manfaat ekologis la'en dari uteuen bakau?", "options": ["Peuhase buah yang jeut geupajoh", "Jeut ke habitat bagi biota la'ôt lagee eungkot dan keureuma", "Saring polusi udara di kota", "Peuget ie la'ôt jeut ke tawa"], "correctAnswer": "Jeut ke habitat bagi biota la'ôt lagee eungkot dan keureuma", "points": 10 },
+          { "question": "Peu tantangan awal yang dihadapi masyarakat watee pula lom uteuen bakau?", "options": ["Le bibit yang gagal tumbu", "Kurang dana dari pemerintah", "Konflik dengan perusahaan sawet", "Larangan dari ureung tuha gampong"], "correctAnswer": "Le bibit yang gagal tumbu", "points": 10 },
+          { "question": "Kiban uteuen bakau lindungi garis pante?", "options": ["Dengan peuteubiet zat kimia yang peucah ombak", "Dengan peuget dinding hana deuh", "Dengan urat jih yang kreueng yang cengkeram tanoh dan tahan ombak", "Dengan tarik cicem-cicem rayeuk untuk lawan badai"], "correctAnswer": "Dengan urat jih yang kreueng yang cengkeram tanoh dan tahan ombak", "points": 10 }
+        ]
+      },
+      "comic": {
+        "title": "Komik: Uteuen Bakau, Penjaga Pante",
+        "description": "Calitra inspiratif tentang kiban saboh komunitas meuesaboh untuk pula lom benteng alami awaknyan.",
+        "panels": [
+          { "title": "Garis Pante yang Terkikis", "text": "Awai, pante kamoe sabe terkikis le badai. Rumoh-rumoh dekat pante meunan-meunan hanco." },
+          { "title": "Ingat Nasihat Ureung Tuha", "text": "Kamoe teuingat calitra ureung tuha kamoe, bahwa uteuen bakau nakeuh benteng alami kamoe yang ka hilang." },
+          { "title": "Pula Benih Harapan", "text": "Sabe-sabe, aneuk muda dan ureung tuha, kamoe mulai pula lom bibit bakau di sepanjang pante." },
+          { "title": "Tantangan & Kegagalan", "text": "Awal jih payah, le bibit yang gagal tumbu. Tapi kamoe hana menyerah dan sabe cuba." },
+          { "title": "Benteng Alam Tumbu Kong", "text": "Jinoe, uteuen bakau ka rimbun. Urat jih yang kong cengkeram tanoh, tahan laju ombak." },
+          { "title": "Hidu Ka Wo", "text": "Uteuen nyoe kon hanya lindungi gampong, tapi juga jeut ke rumoh bagi eungkot dan keureuma, jok kamoe mata pencaharian baro." }
+        ]
+      }
+    },
+    "dapurUmum": {
+      "video": {
+        "title": "Video Edukasi: Taguen Dame",
+        "description": "Saksikan kiban Dapu Umum di Bireuen jeut ke ruang untuk merajut kembali persaudaraan pasca-konflik.",
+        "info": "Dokumenter paneuk nyoe liput kegiatan siuroe-uroe di Dapu Dame di Bireuen dan wawancara dengan para penggagas jih."
+      },
+      "quiz": {
+        "title": "Kuis Dapu Dame",
+        "description": "Uji pemahaman droeneuh tentang peran inisiatif lokal dalam peudong dame.",
+        "questions": [
+          { "question": "Peu hasil akhir paling penteng dari inisiatif Dapu Umum Dame?", "options": ["Warga jeut troe", "Meunang penghargaan dari pemerintah", "Reuloh jih dinding hana percaya dan terjalin lom persaudaraan", "Jeut ke tujuan wisata kuliner"], "correctAnswer": "Reuloh jih dinding hana percaya dan terjalin lom persaudaraan", "points": 10 },
+          { "question": "Pat keajaiban rekonsiliasi terjadi menurut calitra?", "options": ["Di balai gampong watee rapat resmi", "Di media sosial melalui grup diskusi", "Sira pot sayur dan aduk gulai di dapu", "Di lapangan olahraga watee kompetisi"], "correctAnswer": "Sira pot sayur dan aduk gulai di dapu", "points": 10 },
+          { "question": "Peu ide dasar yang picu terbentuk jih dapu umum nyoe?", "options": ["Perintah dari geuchik", "Na jih bantuan makanan dari LSM", "Mandum ureung butoh pajoh, dan makanan jeut peusaboh", "Untuk buka bisnis rumoh makan"], "correctAnswer": "Mandum ureung butoh pajoh, dan makanan jeut peusaboh", "points": 10 }
+        ]
+      },
+      "comic": {
+        "title": "Komik: Dapu Umum Dame",
+        "description": "Kiban saboh dapu sederhana merajut kembali benang persaudaraan yang pernah reuloh.",
+        "panels": [
+          { "title": "Luka Pasca-Konflik", "text": "Setelah konflik abéh, mantong le luka dan hana percaya di antara kamoe. Payah untuk mulai lom." },
+          { "title": "Ide Sederhana: Makanan", "text": "Padum droe dari kamoe, para ibu, berpikir: mandum ureung butoh pajoh, dan makanan jeut peusaboh." },
+          { "title": "Mulai Dapu Umum", "text": "Kamoe peudong saboh dapu sederhana. So mantong jeut teuka untuk pajoh, dan so mantong jeut bantu masak." },
+          { "title": "Merajut Calitra di Ateuh Kompor", "text": "Sira pot sayur dan aduk gulai, kamoe mulai marit, puta calitra, meukhem, dan moe." },
+          { "title": "Ruang untuk Rekonsiliasi", "text": "Dapu nyoe jeut leubeh dari tempat pajoh; jih jeut ke ruang rekonsiliasi di pat dinding pemisah reuloh." },
+          { "title": "Dame dari Sipiring Bu", "text": "Kamoe meurunoe bahwa dame jeut dimulai dari hal yang paling sederhana: sipiring bu hangat dan hate yang tebuka." }
+        ]
+      }
+    },
+    "lumbungPadi": {
+      "video": {
+        "title": "Video Edukasi: Lumbung Pade, Jaring Pengaman Sosial",
+        "description": "Meurunoe kiban lumbung komunal jeut ke fondasi ketahanan pangan dan gotong royong di Gayo.",
+        "info": "Video nyoe peugah cara kerja lumbung komunal sebagai jaring pengaman sosial yang efektif di tingkat komunitas."
+      },
+      "quiz": {
+        "title": "Kuis Lumbung Komunal",
+        "description": "Uji pemahaman droeneuh tentang gotong royong dan ketahanan pangan.",
+        "questions": [
+          { "question": "Prinsip dasar peu yang peudasar sistem lumbung komunal nyoe?", "options": ["Prinsip untung rugi", "Prinsip utang dengan bunga", "Semangat gotong royong dan peduli", "Prinsip kompetisi"], "correctAnswer": "Semangat gotong royong dan peduli", "points": 10 },
+          { "question": "Pajan sidroe ureung jeut cok dari lumbung komunal?", "options": ["Pajan mantong awaknyan tem", "Watee perayaan gampong", "Watee susah atau gagal panen", "Hanya meunyo awaknyan ka kontribusi leubeh le"], "correctAnswer": "Watee susah atau gagal panen", "points": 10 },
+          { "question": "Selain sebagai cadangan makanan, peu fungsi lumbung pade bagi masyarakat?", "options": ["Sebagai objek wisata", "Sebagai simbol persatuan dan kekuatan kolektif", "Sebagai tempat simpan barang antik", "Sebagai tempat pemungutan suara"], "correctAnswer": "Sebagai simbol persatuan dan kekuatan kolektif", "points": 10 }
+        ]
+      },
+      "comic": {
+        "title": "Komik: Lumbung Pade Komunal",
+        "description": "Saboh calitra tentang gotong royong masyarakat Gayo dalam hadapi musim paceklik.",
+        "panels": [
+          { "title": "Panen yang Hana Pasti", "text": "Di dataran tinggi Gayo, cuaca hana sabe jeut geutebak. Kadang panen le, kadang gagal total." },
+          { "title": "Peuhidup Lom Tradisi", "text": "Kamoe peuhidup lom tradisi lumbung komunal. Tiap keluarga sisihkan sebagian dari hasil panen awaknyan." },
+          { "title": "Jaring Pengaman Sosial", "text": "Watee saboh keluarga hadapi gagal panen, awaknyan jeut cok dari lumbung nyoe hana bunga atau utang." },
+          { "title": "Kaya dalam Persaudaraan", "text": "Lumbung nyoe nakeuh simbol persatuan kamoe. Dengan berbagi, geutanyoe mandum jeut leubeh teuga." }
+        ]
+      }
+    },
+    "bahTangse": {
+      "video": {
+        "title": "Video Dokumenter: Kehancuran Bah Tangse 2011",
+        "description": "Kalon cuplikan haba nyata dari banjir bandang yang peuhanco Tangse, Pidie bak 10 Maret 2011.",
+        "info": "Video nyoe na rekaman aktual dari lokasi bencana dan wawancara dengan para korban, jok gambaran nyata tentang dampak penggundulan uteuen."
+      },
+      "quiz": {
+        "title": "Kuis Kesadaran Banjir Tangse",
+        "description": "Uji pemahaman droeneuh tentang penyebab dan dampak banjir bandang \"Bah Tangse\".",
+        "questions": [
+          { "question": "Peu penyebab utama dari bencana \"Bah Tangse\" menurut calitra?", "options": ["Gempa bumoe", "Bendungan yang reuloh", "Penebangan liar di uteuen hulu", "Hujan es"], "correctAnswer": "Penebangan liar di uteuen hulu", "points": 10 },
+          { "question": "U pat penduduk mengungsi watee banjir bandang terjadi?", "options": ["U ateuh rumoh", "U dalam bungker bawah tanoh", "U perbukitan atau dataran manyang", "U tengah lapangan"], "correctAnswer": "U perbukitan atau dataran manyang", "points": 10 },
+          { "question": "Peu yang geuba le ie bah selain ie yang meluap?", "options": ["Eungkot-eungkot rayeuk", "Sampah plastik", "Pulohan bak kayee rayeuk", "Anou pante"], "correctAnswer": "Pulohan bak kayee rayeuk", "points": 10 }
+        ]
+      },
+      "comic": {
+        "title": "Komik: Bah Tangse, Krueng yang Murka",
+        "description": "Pelajaran pahit dari Tangse tentang penteng jih jaga alam.",
+        "panels": [
+          { "title": "Malam yang Tegang", "text": "Hujan turun hana henti. Tiba-tiba, kamoe deungo su gemuruh yang kon dari guntor." },
+          { "title": "Ie Bah Teuka", "text": "Ie krueng meluap dengan liar, warna jih itam pekat, ba pulohan bak kayee rayeuk." },
+          { "title": "Seruan Peringatan", "text": "Geuchik geuhoih melalui pengeras su meuseujid, \"Ie ek! Peuseulamat droe! Plang u tempat manyang!\"" },
+          { "title": "Plang u Tempat Manyang", "text": "Dalam seupot buta, kamoe plang sekuat tenaga u perbukitan, hanya dengan bajee di badan." },
+          { "title": "Pagi yang Berlumpur", "text": "Paginya, hanya lumpur teubai dan puing-puing yang tinggai. Kamoe sadar nyoe akibat penebangan liar." },
+          { "title": "Pelajaran & Sumpah", "text": "Bah Tangse nakeuh pelajaran pahit. Sejak nyan, kamoe bersumpah untuk lindungi dan pula lom uteuen kamoe." }
+        ]
+      }
+    },
+    "kopiGayo": {
+      "video": {
+        "title": "Video Edukasi: Kupi Gayo, Aroma Dame",
+        "description": "Saksikan calitra inspiratif para petani kupi Gayo bangket dari keterpurukan pasca-konflik untuk peudong lom hidu awaknyan.",
+        "info": "Video nyoe na wawancara dengan para petani kupi Gayo yang puta perjalanan awaknyan dari era konflik hingga peudong lom hidu awaknyan melalui perkebunan kupi."
+      },
+      "quiz": {
+        "title": "Kuis Aroma Dame",
+        "description": "Seberapa le yang droeneuh tuhoe tentang peran kupi Gayo dalam pemulihan pasca-konflik?",
+        "questions": [
+          { "question": "Ken petani kupi Gayo putuskan untuk peuget koperasi?", "options": ["Karena geupeuwajib le pemerintah", "Untuk bersaing satu sama la'en", "Untuk saling dukung dan na daya tawar yang leubeh get", "Untuk meunang pinjaman bank"], "correctAnswer": "Untuk saling dukung dan na daya tawar yang leubeh get", "points": 10 },
+          { "question": "Peu dampak positif utama dari kebangkitan industri kupi Gayo bagi masyarakat?", "options": ["Peningkatan jumlah wisatawan", "Masyarakat jeut peusikula aneuk-aneuk awaknyan", "Penurunan populasi hama", "Harga tanoh jeut meuhai"], "correctAnswer": "Masyarakat jeut peusikula aneuk-aneuk awaknyan", "points": 10 },
+          { "question": "Menurut calitra, peu nyan \"aroma dame\"?", "options": ["Aroma makanan di dapu umum", "Aroma bungo di taman", "Aroma kupi yang geuolah tiap pagi", "Aroma la'ôt setelah badai"], "correctAnswer": "Aroma kupi yang geuolah tiap pagi", "points": 10 }
+        ]
+      },
+      "comic": {
+        "title": "Komik: Kupi Gayo, Aroma Dame",
+        "description": "Calitra kebangkitan petani kupi Gayo pasca-konflik.",
+        "panels": [
+          { "title": "Kebun yang Terbengkalai", "text": "Selama konflik, le kebun kupi kamoe yang terbengkalai dan geutumbuhi le naleueng." },
+          { "title": "Wo dari Nol", "text": "Setelah dame, kamoe wo. Mulai lom dari nol brat that, tapi kamoe kalon harapan." },
+          { "title": "Harapan dalam Bijeh Kupi", "text": "Kamoe kerja kreuh, meurunoe teknik pula yang leubeh get, kalon harapan baro di tiap bijeh kupi." },
+          { "title": "Peudong Koperasi", "text": "Kamoe peuget koperasi untuk saling dukung, meurunoe teknik baro, dan pasarkan kupi bersama." },
+          { "title": "Geuturi le Donya", "text": "Meunan-meunan tapi pasti, kupi Gayo geuturi le donya, ba nama get untuk daerah kamoe." },
+          { "title": "Aroma Dame", "text": "Jinoe, aroma kupi Gayo yang terkenal di donya nakeuh aroma kerja kreuh, harapan, dan dame yang ka kamoe raih." }
+        ]
+      }
+    },
+    "apiBukit": {
+      "video": {
+        "title": "Video Edukasi: Masyarakat Peduli Apui",
+        "description": "Kalon kiban Masyarakat Peduli Apui berjuang lindungi uteuen dari kebakaran.",
+        "info": "Video nyoe akan sorot penteng jih pencegahan dan peran aktif masyarakat dalam mitigasi bencana kebakaran uteuen."
+      },
+      "quiz": {
+        "title": "Kuis Penjaga Uteuen",
+        "description": "Uji pengetahuan droeneuh tentang pencegahan dan penanggulangan kebakaran uteuen.",
+        "questions": [
+          { "question": "Menurut calitra, peu penyebab umum kebakaran uteuen di Gayo?", "options": ["Sambaran petir", "Panas matauroe yang ekstrim", "Kelalaian manusia lagee buka lahan dengan cara tot", "Letusan gunong berapi"], "correctAnswer": "Kelalaian manusia lagee buka lahan dengan cara tot", "points": 10 },
+          { "question": "Peu nan kelompok sukarelawan yang geupeuget le warga untuk atasi kebakaran uteuen?", "options": ["Tim Pemadam Gayo", "Masyarakat Peduli Apui", "Aliansi Penjaga Uteuen", "Komunitas Buket Barisan"], "correctAnswer": "Masyarakat Peduli Apui", "points": 10 },
+          { "question": "Selain padam apui, kegiatan penteng peu la'en yang geupeuget le kelompok nyoe?", "options": ["Peubloe kayee", "Meurusa hewan liar", "Peurunoe warga agar hana tot lahan", "Peudong vila dalam uteuen"], "correctAnswer": "Peurunoe warga agar hana tot lahan", "points": 10 }
+        ]
+      },
+      "comic": {
+        "title": "Komik: Apui di Buket Barisan",
+        "description": "Perjuangan Masyarakat Peduli Apui untuk lindungi uteuen Gayo.",
+        "panels": [
+          { "title": "Ancaman Musim Thon Meukho", "text": "Tiap musim thon meukho, uteuen pinus yang indah nyoe jeut ke sangat rentan terhadap apui. Percikan ubit jeut ke bencana." },
+          { "title": "Patroli Sukarela", "text": "Kamoe peuget Masyarakat Peduli Apui, patroli secara sukarela untuk cegah kebakaran." },
+          { "title": "Edukasi Warga", "text": "Yang paling penteng, kamoe edukasi warga agar hana buka lahan dengan cara tot." },
+          { "title": "Padam Apui", "text": "Watee apui mulai, kamoe kerja sama dengan alat seadanya untuk padam sebelum rayeuk." },
+          { "title": "Tanggung Jaweub Sabe-sabe", "text": "Nyoe kon buet pemerintah; nyoe nakeuh tanggung jaweub geutanyoe. Uteuen nyoe sumber ie geutanyoe." },
+          { "title": "Dame dengan Alam", "text": "Lindungi uteuen nyoe nakeuh cara kamoe peudong dame dengan alam, untuk masa depan aneuk-aneuk kamoe." }
+        ]
+      }
+    },
+    "pemudaAdat": {
+      "video": {
+        "title": "Video Edukasi: Tari Seudati, Peusaboh Komunitas",
+        "description": "Saksikan kiban para pemuda di Pidie peuteun budaya dan peukuat taloe sosial melalui tari Seudati.",
+        "info": "Video nyoe akan dokumentasikan kegiatan sanggar Seudati dan dampak jih bagi para pemuda di Pidie."
+      },
+      "quiz": {
+        "title": "Kuis Penjaga Adat",
+        "description": "Uji pemahaman droeneuh tentang peran budaya dalam peudong dame.",
+        "questions": [
+          { "question": "Inisiatif nyoe tunyok bahwa seni dan budaya jeut ke alat yang efektif untuk...", "options": ["Peuhase seniman terkenal", "Peudong dame dan peukuat komunitas", "Tarik wisatawan", "Peu tuwo masa lalu"], "correctAnswer": "Peudong dame dan peukuat komunitas", "points": 10 },
+          { "question": "Tarian peu yang geupeuhidup lom le para pemuda dalam calitra?", "options": ["Tari Saman", "Tari Seudati", "Tari Piring", "Tari Kecak"], "correctAnswer": "Tari Seudati", "points": 10 },
+          { "question": "Selain gerakan, peu yang geupeurunoe tarian nyan kepada para pemuda?", "options": ["Cara meulho", "Sejarah kerajaan Aceh", "Disiplin, kerja sama tim, dan syair nasihat", "Teknik vokal untuk meunyanyi"], "correctAnswer": "Disiplin, kerja sama tim, dan syair nasihat", "points": 10 }
+        ]
+      },
+      "comic": {
+        "title": "Komik: Pemuda Penjaga Adat",
+        "description": "Peuhidup lom tari Seudati untuk peujioh pemuda dari kekerasan.",
+        "panels": [
+          { "title": "Energi yang Salah Arah", "text": "Pasca-konflik, le aneuk muda yang hilang arah. Energi rayeuk awaknyan kadang tersalur ke hal negatif." },
+          { "title": "Saboh Panggilan", "text": "Kamoe, padum droe pemuda yang leubeh tuha, merasa harus peuget sesuatu untuk komunitas." },
+          { "title": "Peuhidup Lom Sanggar", "text": "Kamoe putuskan untuk peuhidup lom sanggar tari Seudati, tarian yang peurunoe disiplin dan kerja sama." },
+          { "title": "Latihan Sabe-sabe", "text": "Awalnya payah, tapi meunan-meunan sanggar kamoe mulai rame. Para pemuda salurkan energi awaknyan ke dalam tarian." },
+          { "title": "Ekspresi Positif", "text": "Sanggar jeut ke tempat aman bagi pemuda untuk berekspresi secara positif dan meurunoe nilai-nilai luhur." },
+          { "title": "Jembatan Antar Gampong", "text": "Melalui tarian, kamoe peudong jembatan antar gampong dan peuget taloe komunitas yang leubeh kong." }
+        ]
+      }
+    },
+    "perempuanPenganyam": {
+      "video": {
+        "title": "Video Edukasi: Inong Penganyam Harapan",
+        "description": "Saksikan kiban para janda korban tsunami bangket dari keterpurukan dengan peuget kelompok kerajinan anyaman.",
+        "info": "Dokumenter paneuk nyoe akan ikuti perjalanan kelompok anyam dari duka jeut ke berdaya."
+      },
+      "quiz": {
+        "title": "Kuis Penganyam Harapan",
+        "description": "Uji pemahaman droeneuh tentang pemberdayaan inong dan pemulihan pasca-bencana.",
+        "questions": [
+          { "question": "Transformasi utama peu yang geu alama le para inong nyoe?", "options": ["Dari petani jeut ke pengrajin", "Dari ibu rumoh tangga jeut ke politisi", "Dari korban jeut ke penyintas yang berdaya", "Dari pedagang jeut ke guru"], "correctAnswer": "Dari korban jeut ke penyintas yang berdaya", "points": 10 },
+          { "question": "Bahan utama peu yang awaknyan gunakan untuk peuget kerajinan anyaman?", "options": ["Awe", "Trieng", "On Pandan", "Plastik daur ulang"], "correctAnswer": "On Pandan", "points": 10 },
+          { "question": "Selain sebagai sumber penghasilan, fungsi la'en peu yang na bak kegiatan menganyam bagi awaknyan?", "options": ["Sebagai kompetisi thonan", "Sebagai terapi dan ruang untuk saling dukung", "Sebagai cara peuteun basa lokal", "Sebagai syarat untuk meunang bantuan pemerintah"], "correctAnswer": "Sebagai terapi dan ruang untuk saling dukung", "points": 10 }
+        ]
+      },
+      "comic": {
+        "title": "Komik: Inong Penganyam Harapan",
+        "description": "Calitra para janda korban tsunami yang bangket dengan peuget kelompok kerajinan anyaman.",
+        "panels": [
+          { "title": "Duka dan Hana Pasti", "text": "Tsunami cok lakoe dan rumoh kamoe, tinggai kamoe dalam duka dan hana pasti." },
+          { "title": "Menganyam sebagai Terapi", "text": "Kamoe kumpul dan mulai menganyam dengan on pandan. Sira menganyam, kamoe puta calitra dan saling peukuat." },
+          { "title": "Ciptaan dari Hate", "text": "Anyaman nyoe kon hanya tika atau tas; nyoe nakeuh terapi dan curahan hate kamoe." },
+          { "title": "Kemandirian Ekonomi", "text": "Meunan-meunan, produk kamoe geuturi dan pesanan teuka. Kamoe meunang penghasilan sendiri." },
+          { "title": "Jeut Berdaya", "text": "Kamoe kon le hanya korban; kamoe nakeuh penyintas yang berdaya yang jeut bi nafkah keluarga." },
+          { "title": "Keluarga Baro", "text": "Kelompok nyoe jeut ke keluarga baro kamoe, tempat kamoe tenun kembali harapan untuk masa depan." }
+        ]
+      }
+    },
+    "arsitektur": {
+      "video": {
+        "title": "Video Edukasi: Keurifan Rumoh Aceh",
+        "description": "Meurunoe kiban arsitektur rumoh panggung tradisional Rumoh Aceh terbukti tahan gempa dan adaptif terhadap lingkungan.",
+        "info": "Video nyoe akan bandingkan desain Rumoh Aceh dengan bangunan modern dan sorot prinsip-prinsip rekayasa cerdik di dalam jih."
+      },
+      "quiz": {
+        "title": "Kuis Arsitektur Bijak",
+        "description": "Uji pemahaman droeneuh tentang keurifan di balik arsitektur Rumoh Aceh.",
+        "questions": [
+          { "question": "Pelajaran utama peu yang jeut geucok dari keurifan arsitektur Rumoh Aceh?", "options": ["Geutanyoe harus hanya peudong rumoh dari kayee", "Teknologi modern hana guna", "Desain tradisional sering na solusi yang adaptif terhadap lingkungan", "Rumoh panggung hana aman"], "correctAnswer": "Desain tradisional sering na solusi yang adaptif terhadap lingkungan", "points": 10 },
+          { "question": "Fitur utama peu dari Rumoh Aceh yang peuget jih tahan gempa?", "options": ["Dinding beton yang teubai", "Konstruksi kayee yang fleksibel", "Atap dari on rumbia", "Fondasi yang sangat dalam"], "correctAnswer": "Konstruksi kayee yang fleksibel", "points": 10 },
+          { "question": "Peu fungsi \"kolong\" atau ruang di bawah rumoh panggung?", "options": ["Hanya sebagai hiasan", "Sebagai garasi mobil", "Sebagai ruang serbaguna dan jalan bagi ie watee banjir", "Sebagai tempat buang sampah"], "correctAnswer": "Sebagai ruang serbaguna dan jalan bagi ie watee banjir", "points": 10 }
+        ]
+      },
+      "comic": {
+        "title": "Komik: Arsitektur Rumoh Panggung",
+        "description": "Temukan lom keurifan Rumoh Aceh sebagai inspirasi untuk bangunan tahan gempa.",
+        "panels": [
+          { "title": "Rumoh Aceh yang Bertahan", "text": "Watee gempa dan tsunami peuhanco le bangunan modern, kamoe kalon le Rumoh Aceh mantong kong." },
+          { "title": "Konstruksi Fleksibel", "text": "Struktur panggung dengan konstruksi kayee yang fleksibel terbukti mampu redam guncangan gempa." },
+          { "title": "Adaptif terhadap Lingkungan", "text": "Ruang di bawah rumoh kon hanya serbaguna tapi juga jok jalan bagi ie watee banjir." },
+          { "title": "Peubuka Mata", "text": "Nyoe peubuka mata kamoe. Arsitektur endatu geutanyoe luar biasa dan sangat relevan." },
+          { "title": "Inspirasi untuk Masa Depan", "text": "Kamoe mulai advokasi dan peudong lom rumoh dengan adaptasi prinsip-prinsip Rumoh Aceh." },
+          { "title": "Peudong Masa Depan", "text": "Nyoe kon tentang wo u masa lalu, tapi cok pelajaran terbaik dari masa lalu untuk peudong masa depan yang leubeh aman." }
+        ]
+      }
+    },
+    "seniTrauma": {
+      "video": {
+        "title": "Video Edukasi: Seni Lawan Trauma",
+        "description": "Saksikan kiban para seniman geunguy mural untuk peupuleh luka kota dan jiwa pasca-bencana.",
+        "info": "Video nyoe akan peuleumah karya-karya seniman mural di Banda Aceh dan wawancara tentang kekuatan seni sebagai media terapi."
+      },
+      "quiz": {
+        "title": "Kuis Kanvas Harapan",
+        "description": "Uji pemahaman droeneuh tentang kekuatan seni dalam proses pemulihan sosial.",
+        "questions": [
+          { "question": "Tema peu yang sering geugambar dalam mural awaknyan?", "options": ["Kemarahan dan kesedihan", "Pemandangan abstrak", "Harapan, ketahanan, dan kebersamaan", "Potret para seniman"], "correctAnswer": "Harapan, ketahanan, dan kebersamaan", "points": 10 },
+          { "question": "Peu tujuan utama para seniman lukis di dinding publik?", "options": ["Untuk peubloe lukisan awaknyan", "Untuk peupuleh luka kota dan jiwa awaknyan melalui seni", "Untuk protes pemerintah", "Untuk meunang kompetisi seni"], "correctAnswer": "Untuk peupuleh luka kota dan jiwa awaknyan melalui seni", "points": 10 },
+          { "question": "Kiban reaksi masyarakat terhadap kegiatan mural nyoe?", "options": ["Masyarakat beungeh karena dinding awaknyan geucat", "Masyarakat hana peduli", "Masyarakat, termasuk aneuk mit, ikut gabung dalam proses melukis", "Masyarakat lapor awaknyan u polisi"], "correctAnswer": "Masyarakat, termasuk aneuk mit, ikut gabung dalam proses melukis", "points": 10 }
+        ]
+      },
+      "comic": {
+        "title": "Komik: Seni Lawan Trauma",
+        "description": "Kiban seniman muda Banda Aceh geunguy mural untuk peupuleh kota.",
+        "panels": [
+          { "title": "Dinding Bisu Pasca-Tsunami", "text": "Banda Aceh pasca-tsunami penoh dengan dinding bisu yang jeut ke saksi tragedi. Suasana terasa brat." },
+          { "title": "Panggilan untuk Seniman", "text": "Sebagai seniman, kamoe merasa terpanggil untuk peuget sesuatu, untuk peupuleh luka kota dengan cara kamoe sendiri." },
+          { "title": "Jok Warna Baro", "text": "Kamoe mulai lukis mural di dinding publik, kon untuk tuwo, tapi untuk jok warna baro bak ingatan." },
+          { "title": "Terapi Melalui Seni", "text": "Proses melukis bersama nyoe jeut ke terapi bagi kamoe dan masyarakat. Dinding suram jeut ke galeri tebuka." },
+          { "title": "Harapan di Tiap Goresan", "text": "Kamoe lukis tentang harapan, ketahanan, kebersamaan, dan keindahan Aceh yang hana pernah padam." },
+          { "title": "Peupuleh Luka Kota", "text": "Seni jeut ke cara kamoe peupuleh luka kota dan jiwa kamoe sendiri, ubah trauma jeut ke harapan." }
+        ]
+      }
+    },
+    "nelayan": {
+      "video": {
+        "title": "Video Edukasi: Navigasi Langet dan La'ôt",
+        "description": "Meurunoe kiban nelayan tradisional Aceh geunguy bintang dan tanda alam untuk navigasi la'ôt luah.",
+        "info": "Video nyoe dokumentasikan pengetahuan nelayan tentang rasi bintang, angen, dan perilaku biota la'ôt sebagai pemandu awaknyan."
+      },
+      "quiz": {
+        "title": "Kuis Navigasi Tradisional",
+        "description": "Uji pengetahuan droeneuh tentang kiban nelayan tradisional baca tanda-tanda alam.",
+        "questions": [
+          { "question": "Rasi bintang peu yang geukheun \"Bintang Lhee\" dan geunguy le nelayan Aceh sebagai penunyok arah?", "options": ["Scorpio", "Orion", "Biduk", "Salib Selatan"], "correctAnswer": "Orion", "points": 10 },
+          { "question": "Perilaku hewan peu yang jeut ke tanda cuaca brok bagi nelayan?", "options": ["Meong eéh dalam rumoh", "Cicem po manyang di langet", "Lumba-lumba meuen dekat pante", "Manok jantan meukok suboh"], "correctAnswer": "Lumba-lumba meuen dekat pante", "points": 10 },
+          { "question": "Kiban nelayan tuhoe di pat eungkot kumpul?", "options": ["Gunakan sonar canggih", "Dengan kalon warna ie dan jeunèh cicem yang po di ateuh jih", "Ikôt kapai nelayan la'en", "Reueng pukat secara acak"], "correctAnswer": "Dengan kalon warna ie dan jeunèh cicem yang po di ateuh jih", "points": 10 }
+        ]
+      },
+      "comic": {
+        "title": "Komik: Keurifan Nelayan",
+        "description": "Calitra nelayan tradisional yang baca tanda-tanda alam untuk berlayar.",
+        "panels": [
+          { "title": "Kompas Langet dan La'ôt", "text": "Kamoe nelayan hana na GPS canggih. Kompas kamoe nakeuh langet dan la'ôt nyan sendiri." },
+          { "title": "Baca Rasi Bintang", "text": "Ayah lon peurunoe lon cara baca rasi bintang Orion, atau 'Bintang Lhee', untuk tuhoe jalan wo." },
+          { "title": "Tanda dari Hewan", "text": "Meunyo lumba-lumba meuen dekat pante, nyan tanda cuaca akan brok. Kamoe meurunoe dari perilaku hewan." },
+          { "title": "Warna Ie dan Eungkot", "text": "Kamoe tuhoe watee eungkot kumpul hanya dengan kalon warna ie dan jeunèh cicem yang po di ateuh jih." },
+          { "title": "Warisan Generasi", "text": "Pengetahuan nyoe hana dalam buku; geupeuwaréh dari ayah u aneuk, dari satu generasi nelayan u generasi seulanjut jih." },
+          { "title": "Ilmu Hidu", "text": "Nyoekeuh ilmu hidu yang peuget kamoe jeut berkawan dengan la'ôt dan wo dengan seulamat." }
+        ]
+      }
+    },
+    "sumurTua": {
+      "video": {
+        "title": "Video Edukasi: Sumur Tuha, Sumber Hidu",
+        "description": "Meurunoe kiban saboh sumur kuno endatu jeut ke peunyelamat watee saboh gampong geulanda le thon meukho.",
+        "info": "Video nyoe akan eksplorasi penteng jih peuteun sumber ie tradisional dan keurifan endatu dalam tempatkan jih."
+      },
+      "quiz": {
+        "title": "Kuis Sumber Hidu",
+        "description": "Uji pemahaman droeneuh tentang pengelolaan sumber daya ie tradisional.",
+        "questions": [
+          { "question": "Ken sumur tuha nyan hana pernah kho watee sumur modern la'en kho?", "options": ["Karena dalam that", "Karena geupeuget tepat di ateuh mata ie rayeuk", "Karena jarang geunguy", "Karena geupeuget dari bato ajaib"], "correctAnswer": "Karena geupeuget tepat di ateuh mata ie rayeuk", "points": 10 },
+          { "question": "Peu yang dorong warga gampong untuk mita dan peugleh sumur tuha nyan?", "options": ["Perintah dari pemerintah", "Rasa ingin tuhoe dan petualangan", "Thon meukho panyang yang peukho sumber ie modern", "Lumpo sidroe warga"], "correctAnswer": "Thon meukho panyang yang peukho sumber ie modern", "points": 10 },
+          { "question": "Pelajaran peu yang geucok le warga gampong dari kejadian nyoe?", "options": ["Teknologi modern sabe leubeh unggul", "Ie hana akan pernah abéh", "Keurifan dalam peninggalan masa lalu harus geupeuteun", "Uteuen hana hubungan dengan sumber ie"], "correctAnswer": "Keurifan dalam peninggalan masa lalu harus geupeuteun", "points": 10 }
+        ]
+      },
+      "comic": {
+        "title": "Komik: Sumur Tuha, Sumber Hidu",
+        "description": "Kiban saboh sumur kuno peuseulamat saboh gampong dari thon meukho.",
+        "panels": [
+          { "title": "Thon Meukho Panyang", "text": "Musim kemarau thon nyan panyang that. Krueng dan sumur modern kamoe kho. Kamoe mulai putoh asa." },
+          { "title": "Ingat Warisan", "text": "Sidroe ureung tuha gampong teuingat akan saboh sumur tuha di pinggir uteuen yang ka trep hana geunguy." },
+          { "title": "Peugleh Sumur", "text": "Dengan ragu, kamoe peugleh sumur nyan, yang geupeuget dengan cincin bato dan geutop le bak kayee rayeuk." },
+          { "title": "Mata Ie Ajaib", "text": "Ajaib! Di dasar jih, mantong na ie yang jernih dan hana pernah kho. Endatu kamoe peudong jih tepat di ateuh mata ie rayeuk." },
+          { "title": "Sumber Hidu", "text": "Sumur tuha nyan jeut ke satu-satunya sumber ie bersih untuk mandum gampong selama sisa musim kemarau." },
+          { "title": "Pelajaran Meuharga", "text": "Kamoe meurunoe bahwa na keurifan dalam peninggalan masa lalu yang harus geutanyoe peuteun." }
+        ]
+      }
+    },
+    "ilmuFalak": {
+      "video": {
+        "title": "Video Edukasi: Ilmu Falak, Navigasi Langet dan La'ôt",
+        "description": "Meurunoe kiban dayah di Aceh peurunoe astronomi (Ilmu Falak) yang geunguy le nelayan untuk navigasi.",
+        "info": "Video nyoe akan peugah kiban pengetahuan agama dan sains saling peulengkap dalam tradisi intelektual Aceh."
+      },
+      "quiz": {
+        "title": "Kuis Ilmu Falak",
+        "description": "Uji pengetahuan droeneuh tentang penerapan astronomi tradisional di Aceh.",
+        "questions": [
+          { "question": "Calitra nyoe tunyok bahwa di Aceh, ilmu agama dan sains...", "options": ["Sabe bertentangan", "Hana hubungan sama sekali", "Jeut saling peulengkap dan bermanfaat bagi hidu", "Hanya geupeurunoe le kaum bangsawan"], "correctAnswer": "Jeut saling peulengkap dan bermanfaat bagi hidu", "points": 10 },
+          { "question": "Selain tentukan awal buleuen puasa dan arah kiblat, untuk peu la'en Ilmu Falak geunguy dalam calitra?", "options": ["Untuk ramal nasib sidroe ureung", "Untuk navigasi bagi nelayan", "Untuk tentukan tanggal meukawen", "Untuk mita harta karun"], "correctAnswer": "Untuk navigasi bagi nelayan", "points": 10 },
+          { "question": "Pat Ilmu Falak nyoe geupeurunoe secara turun-temurun menurut calitra?", "options": ["Di universitas modern", "Di sikula navigasi", "Di balai gampong", "Di pesantren (dayah)"], "correctAnswer": "Di pesantren (dayah)", "points": 10 }
+        ]
+      },
+      "comic": {
+        "title": "Komik: Ilmu Falak di Dayah",
+        "description": "Ungkap peran dayah dalam peurunoe astronomi untuk hidu.",
+        "panels": [
+          { "title": "Meurunoe di Dayah", "text": "Le yang pike dayah hanya tempat meurunoe Quran, tapi kamoe juga meurunoe Ilmu Falak (astronomi)." },
+          { "title": "Hitung Posisi Bintang", "text": "Kamoe hitung posisi bintang untuk tentukan awal buleuen puasa, arah kiblat, dan watee seumayang." },
+          { "title": "Pengetahuan untuk Nelayan", "text": "Ilmu yang sama juga bermanfaat bagi nelayan di pante untuk navigasi dan tentukan pasang surôt." },
+          { "title": "Rujukan Komunitas", "text": "Santri yang wo u gampong sering jeut ke rujukan, peuturi posisi bintang utara atau watee pasang paleng manyang." },
+          { "title": "Ilmu Agama dan Hidu", "text": "Na hubungan erat antara langet dan la'ôt, antara ilmu agama dan ilmu hidu." },
+          { "title": "Untuk Kebaikan Sabe-sabe", "text": "Kamoe meurunoe bahwa mandum ilmu teuka dari Allah dan jeut geunguy untuk kebaikan bersama, di darat dan di la'ôt." }
+        ]
+      }
+    },
+    "pasar": {
+      "video": {
+        "title": "Video Edukasi: Pasa, Jantong Komunitas",
+        "description": "Kalon kiban saboh pasa tradisional berfungsi sebagai ruang sosial penteng, leubeh dari sekadar tempat meukat.",
+        "info": "Video nyoe akan cok suasana dan interaksi sosial di Pasa Peunayong, tunyok kiban informasi dan kohesi sosial terjalin."
+      },
+      "quiz": {
+        "title": "Kuis Jantong Komunitas",
+        "description": "Uji pemahaman droeneuh tentang peran sosial pasa tradisional.",
+        "questions": [
+          { "question": "Selain sebagai tempat jual beli, peu fungsi utama pasa tradisional menurut calitra?", "options": ["Sebagai tempat parkir", "Sebagai pusat penyebaran informasi dan peukuat taloe sosial", "Sebagai lokasi syuting film", "Sebagai museum tebuka"], "correctAnswer": "Sebagai pusat penyebaran informasi dan peukuat taloe sosial", "points": 10 },
+          { "question": "Tempat peu dalam pasa yang geukheun sebagai \"barometer sosial\"?", "options": ["Toko meuh", "Kios penjahit", "Warung kupi pasa", "Lapak peubloe eungkot"], "correctAnswer": "Warung kupi pasa", "points": 10 },
+          { "question": "Menurut calitra, ken penteng jaga pasa tradisional tetap hidu?", "options": ["Karena bangunan jih antik dan bersejarah", "Karena sama dengan jaga denyut nadi komunitas", "Karena pajak jih leubeh murah dari pasa modern", "Karena hanya di sinan jeut meunang bahan langka"], "correctAnswer": "Karena sama dengan jaga denyut nadi komunitas", "points": 10 }
+        ]
+      },
+      "comic": {
+        "title": "Komik: Pasa sebagai Ruang Sosial",
+        "description": "Pasa tradisional kon hanya untuk jual beli, tapi jantong komunitas.",
+        "panels": [
+          { "title": "Jantong Komunitas", "text": "Bagi kamoe, pasa kon hanya tempat mita peng, tapi tempat kamoe meurumpok kawan dan tukar haba." },
+          { "title": "Pusat Informasi", "text": "Meunyo na haba penteng, lowongan buet, atau isu resah, informasi sigra menyebar di pasa." },
+          { "title": "Barometer Sosial", "text": "Dari obrolan di warung kupi pasa, geutanyoe jeut tuhoe peu yang sedang geurasa le masyarakat." },
+          { "title": "Saling Peutenang", "text": "Bahkan watee na isu resah, kamoe jeut saling peutenang dan mita kebenaran di siko." },
+          { "title": "Denyut Nadi Komunitas", "text": "Jaga pasa tradisional tetap hidu sama dengan jaga denyut nadi dan taloe sosial komunitas geutanyoe." },
+          { "title": "Leubeh dari Jual Beli", "text": "Di siko persahabatan terjalin, masalah terpecahkan, dan komunitas terasa hidu." }
+        ]
+      }
+    },
+    "kucingCerdas": {
+      "video": {
+        "title": "Video Animasi: Petualangan Siaga",
+        "description": "Kalon petualangan Siaga si meong cerdik dalam video animasi yang peurunoe aneuk mit langkah-langkah penteng watee gempa.",
+        "info": "Video nyoe geunguy visual yang ceria dan lagu yang menarik untuk bantu aneuk mit pahami konsep siaga bencana."
+      },
+      "quiz": {
+        "title": "Kuis Meong Cerdik",
+        "description": "Uji pemahaman droeneuh tentang siaga gempa bersama Siaga!",
+        "questions": [
+          { "question": "Peu lhee langkah yang geupeurunoe Siaga untuk geupeuget watee gempa?", "options": ["Plang, meula, dan lhom", "Merunduk, berlindung, dan bertahan", "Dong, kalon, dan preh", "Pajoh, jiep, dan eéh"], "correctAnswer": "Merunduk, berlindung, dan bertahan", "points": 10 },
+          { "question": "U pat Siaga ajak kawan-kawan jih setelah goyangan gempa berhenti?", "options": ["Wo u dalam rumoh", "U pante", "U lapangan tebuka yang jioh dari bangunan", "Ek u ateuh bak kayee"], "correctAnswer": "U lapangan tebuka yang jioh dari bangunan", "points": 10 },
+          { "question": "Keurifan lokal peu yang geuingat Siaga setelah gempa berhenti?", "options": ["Calitra Kupi Gayo", "Syair Smong tentang la'ôt yang surôt", "Cara peudong Rumoh Aceh", "Pantangan pula bak kayee di pante"], "correctAnswer": "Syair Smong tentang la'ôt yang surôt", "points": 10 }
+        ]
+      },
+      "comic": {
+        "title": "Komik: Siaga, Si Meong Cerdik",
+        "description": "Petualangan Siaga peurunoe aneuk mit tentang siaga bencana.",
+        "panels": [
+          { "title": "Meong yang La'en", "text": "Siaga suka deungo calitra ureung tuha tentang gempa dan tsunami, hana lagee kawan jih yang suka eéh." },
+          { "title": "Tanoh Meugoyang!", "text": "Watee tanoh meugoyang, Siaga geuhoih, \"Gempa! Ingat lhee langkah: Merunduk, Berlindung, dan Bertahan!\"" },
+          { "title": "Ikôt Si Ahli", "text": "Kawan-kawan jih yang bingung kalon peu yang Siaga peuget dan langsung ikôt." },
+          { "title": "U Tempat Aman", "text": "Setelah goyangan berhenti, Siaga dengan tenang pimpin kawan-kawan jih u lapangan tebuka yang aman." },
+          { "title": "Peringatan Tsunami", "text": "\"Geutanyoe harus u tempat manyang,\" kata Siaga, \"siapa tuhoe la'ôt surôt!\" Jih ingat calitra Smong." },
+          { "title": "Mandum Seulamat", "text": "Karena Siaga, mandum kawan jih seulamat dan meurunoe cara lindungi droe watee bencana." }
+        ]
+      }
+    }
+  }
+}

@@ -23,11 +23,14 @@ export default function LanguageToggle() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setLanguage('id')}>
-          Indonesia
-        </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setLanguage('en')}>
           English
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setLanguage('id')}>
+          Bahasa Indonesia
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setLanguage('ace')}>
+          Bahasa Aceh
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
