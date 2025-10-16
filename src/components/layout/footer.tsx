@@ -14,23 +14,6 @@ const Footer = () => {
             <WaveMascot className="h-8 w-8 text-primary" />
             <span className="font-headline text-xl font-bold">Wave of Voice</span>
           </div>
-          <nav className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground md:gap-6">
-            <Link href="/" className="hover:text-primary">
-              {footerDict.home}
-            </Link>
-            <Link href="/explore" className="hover:text-primary">
-              {footerDict.explore}
-            </Link>
-            <Link href="/eduboard" className="hover:text-primary">
-              {footerDict.eduboard}
-            </Link>
-            <Link href="#" className="hover:text-primary">
-              {footerDict.about}
-            </Link>
-            <Link href="#" className="hover:text-primary">
-              {footerDict.privacy}
-            </Link>
-          </nav>
           <p className="text-sm text-muted-foreground">
             &copy; {new Date().getFullYear()} Wave of Voice. {footerDict.rights}
           </p>
