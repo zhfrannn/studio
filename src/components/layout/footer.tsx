@@ -21,9 +21,6 @@ const Footer = () => {
             <Link href="/explore" className="hover:text-primary">
               {footerDict.explore}
             </Link>
-             <Link href="/profile" className="hover:text-primary">
-              Profile
-            </Link>
             <Link href="/eduboard" className="hover:text-primary">
               {footerDict.eduboard}
             </Link>
