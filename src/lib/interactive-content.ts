@@ -463,7 +463,7 @@ const seniTraumaComic: Comic = {
   panels: [
     {
       title: 'Dinding Bisu Pasca-Tsunami',
-      text: 'Banda Aceh pasca-tsunami penuh dengan dinding bisu yang menjadi saksi tragedi. Suasananya terasa berat.',
+      text: 'Banda Aceh pasca-tsunami penuh dengan dinding-dinding bisu yang menjadi saksi tragedi. Suasananya terasa berat.',
       imageUrl: 'https://i.ibb.co/PZFB87MM/Gemini-Generated-Image-yr5r75yr5r75yr5r.png',
       imageHint: 'ruined city wall'
     },
@@ -1582,10 +1582,10 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
   },
   'siaga-si-kucing-cerdas': {
     video: {
-      title: 'Video Animasi Akan Segera Hadir!',
-      description: 'Sebuah video animasi pendek yang mengajarkan anak-anak langkah-langkah penting saat terjadi gempa, bersama Siaga si kucing cerdas.',
-      embedUrl: '',
-      info: 'Video ini akan menggunakan visual yang ceria dan lagu yang mudah diingat untuk membantu anak-anak memahami konsep kesiapsiagaan bencana.',
+      title: 'Video Animasi: Petualangan Siaga',
+      description: 'Saksikan petualangan Siaga si kucing cerdas dalam video animasi yang mengajarkan anak-anak langkah-langkah penting saat terjadi gempa.',
+      embedUrl: 'https://www.canva.com/design/DAG18l97wYc/kwO9aaQIufH-t5cDC_36Ag/watch?embed',
+      info: 'Video ini menggunakan visual yang ceria dan lagu yang mudah diingat untuk membantu anak-anak memahami konsep kesiapsiagaan bencana.',
     },
     quiz: kucingCerdasQuiz,
     comic: kucingCerdasComic,
@@ -1609,6 +1609,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
     
 
     
+
 
 
 
