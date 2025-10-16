@@ -343,10 +343,7 @@
     "initialMessage": "Hello! I am Siaga-Bot, your AI assistant for disaster education. What would you like to know about disaster preparedness, local wisdom, or peace in Aceh?",
     "errorMessage": "Sorry, an error occurred. Please try again.",
     "placeholder": "Ask about disasters...",
-    "relatedStory": "Read the related story:",
-    "fabAsk": "Ask Siaga-Bot",
-    "fabExplore": "Explore Stories",
-    "fabShare": "Share Story"
+    "relatedStory": "Read the related story:"
   },
   "stories": {
     "smong-selamat-dari-lautan": {
