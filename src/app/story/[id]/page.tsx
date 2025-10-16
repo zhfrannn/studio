@@ -1,4 +1,3 @@
-
 'use client';
 
 import { notFound } from 'next/navigation';
@@ -30,16 +29,11 @@ import ScrollReveal from '@/components/ui/scroll-reveal';
 import { useLanguage } from '@/context/language-context';
 import DigitalComic from '@/components/digital-comic';
 import RelatedStoryCarousel from '@/components/related-story-carousel';
+import { Story } from '@/lib/types';
 
-export default function StoryDetailPage({ params }: { params: { id: string } }) {
+function StoryDetailClient({ story }: { story: Story }) {
   const { language, dictionary } = useLanguage();
   const allStories = getTranslatedStories({ lang: language });
-
-  const story = allStories.find(s => s.id === params.id);
-  
-  if (!story) {
-    notFound();
-  }
   
   const content: InteractiveContent | undefined = getInteractiveContent(dictionary)[story.id];
 
@@ -185,4 +179,21 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
       </section>
     </>
   );
+}
+
+
+// This is the main page component, now a Server Component
+export default function StoryDetailPage({ params }: { params: { id: string } }) {
+  // Data fetching happens here on the server
+  const storyId = params.id;
+  // We fetch with 'en' first to find the story, language context will apply on the client
+  const allStories = getTranslatedStories({ lang: 'en' }); 
+  const story = allStories.find(s => s.id === storyId);
+
+  if (!story) {
+    notFound();
+  }
+
+  // We pass the found story to the client component
+  return <StoryDetailClient story={story} />;
 }
