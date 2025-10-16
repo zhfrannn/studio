@@ -51,16 +51,16 @@ export default function QuizCarousel() {
     <div className="w-full max-w-2xl mx-auto">
        <div className="mb-8 text-center">
         <h1 className="font-headline text-3xl md:text-4xl">
-          Pratinjau Quiz Card
+          Quiz Card Preview
         </h1>
         <p className="mx-auto mt-2 max-w-2xl text-muted-foreground">
-            Jawab pertanyaan untuk melanjutkan. Gunakan tombol panah untuk navigasi jika sudah dijawab.
+            Answer the question to proceed. Use the arrow buttons to navigate if already answered.
         </p>
       </div>
       
       <div className="mb-4 space-y-2">
         <Progress value={progress} className="h-2"/>
-        <p className="text-sm text-center text-muted-foreground">Kartu {selectedIndex + 1} dari {quizCardTemplate.length}</p>
+        <p className="text-sm text-center text-muted-foreground">Card {selectedIndex + 1} of {quizCardTemplate.length}</p>
       </div>
 
       <div className="overflow-hidden" ref={emblaRef} key={key}>
@@ -99,7 +99,7 @@ export default function QuizCarousel() {
               variant="secondary"
             >
               <RefreshCw className="mr-2 h-4 w-4" />
-              Ulangi Kuis
+              Restart Quiz
             </Button>
         </div>
 

@@ -46,10 +46,10 @@ export default function SlideCarousel() {
     <div className="w-full max-w-6xl mx-auto">
        <div className="mb-8 text-center">
         <h1 className="font-headline text-3xl md:text-4xl">
-          Pratinjau Slide Presentasi
+          Presentation Slide Preview
         </h1>
         <p className="mx-auto mt-2 max-w-2xl text-muted-foreground">
-          Gunakan tombol panah atau titik di bawah untuk menavigasi slide.
+          Use the arrow buttons or the dots below to navigate the slides.
         </p>
       </div>
 

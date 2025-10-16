@@ -141,8 +141,8 @@ export default function WaveOfSchoolPage() {
                 </CardHeader>
                 <CardContent>
                   <p>
-                    Guru memilih tema, mengunggah cerita lokal, atau
-                    video wawancara singkat.
+                    Teachers select a theme, upload a local story, or a short
+                    interview video.
                   </p>
                 </CardContent>
               </Card>
@@ -157,8 +157,8 @@ export default function WaveOfSchoolPage() {
                 </CardHeader>
                 <CardContent>
                   <p>
-                    Sistem mengubah input menjadi kuis, komik, poster,
-                    atau modul interaktif.
+                    The system transforms the input into quizzes, comics,
+                    posters, or interactive modules.
                   </p>
                 </CardContent>
               </Card>
@@ -173,8 +173,8 @@ export default function WaveOfSchoolPage() {
                 </CardHeader>
                 <CardContent>
                   <p>
-                    Guru bisa langsung menggunakan di kelas atau mengunggah ke
-                    EduBoard Hub untuk dibagikan.
+                    Teachers can use it directly in class or upload it to the
+                    EduBoard Hub to share.
                   </p>
                 </CardContent>
               </Card>
@@ -196,15 +196,15 @@ export default function WaveOfSchoolPage() {
               AI Content Hub: Discover, Remix, Teach
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Jelajahi ekosistem konten siap pakai yang terus berkembang,
-              dibuat oleh AI dan dikurasi oleh para pendidik.
+              Explore an ever-growing ecosystem of ready-to-use content,
+              created by AI and curated by educators.
             </p>
           </div>
 
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                title: 'Komik: The Day the Ocean Talked',
+                title: 'Comic: The Day the Ocean Talked',
                 image: 'https://cdn.dribbble.com/userupload/26382361/file/original-a94049296846fa5218859ac34ea57b23.png',
                 hint: 'ocean waves comic',
               },
@@ -254,15 +254,15 @@ export default function WaveOfSchoolPage() {
               For Schools: Join the Wave
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Jadilah sekolah mitra perintis dan dapatkan akses eksklusif ke
-              ekosistem pembelajaran AI kami.
+              Become a pioneering partner school and get exclusive access to our
+              AI learning ecosystem.
             </p>
             <ul className="mt-6 space-y-4">
               {[
-                'Akses ke 100+ RPP berbasis AI.',
-                'Dashboard pelacakan aktivitas & interaksi siswa.',
-                'Fitur co-creation dengan sekolah lain.',
-                'Branding digital: “Wave of School Certified Partner”.',
+                'Access to 100+ AI-based lesson plans.',
+                'Dashboard for tracking student activity & interaction.',
+                'Co-creation features with other schools.',
+                'Digital branding: “Wave of School Certified Partner”.',
               ].map(item => (
                 <li key={item} className="flex items-start gap-3">
                   <div className="mt-1 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary">
@@ -318,9 +318,9 @@ export default function WaveOfSchoolPage() {
               </p>
             <ul className="mt-6 space-y-4">
               {[
-                'Dapatkan template otomatis (PPT, komik, kuis).',
-                'Dapatkan AI Teaching Assistant (buat ide & soal otomatis).',
-                'Berbagi hasil ke komunitas guru se-Aceh.',
+                'Get automatic templates (PPT, comics, quizzes).',
+                'Get an AI Teaching Assistant (generates ideas & questions).',
+                'Share your results with the teacher community across Aceh.',
               ].map(item => (
                 <li key={item} className="flex items-start gap-3">
                   <div className="mt-1 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary">
@@ -341,7 +341,7 @@ export default function WaveOfSchoolPage() {
         <section className="bg-muted/30 py-20 md:py-28">
             <div className="container mx-auto text-center">
             <h2 className="font-headline text-3xl font-bold md:text-4xl">AI in Action</h2>
-            <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">Lihat bagaimana Wave of School digunakan di dalam kelas untuk menciptakan pengalaman belajar yang tak terlupakan.</p>
+            <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">See how Wave of School is being used in the classroom to create unforgettable learning experiences.</p>
             <MotionWrapper className="relative mx-auto mt-12 aspect-video max-w-4xl overflow-hidden rounded-2xl border-8 border-background shadow-2xl">
                  <Image
                     src="https://cdn.dribbble.com/userupload/32707329/file/original-01992760209b192c3d12d849dc7ee6d4.jpeg"
@@ -369,8 +369,8 @@ export default function WaveOfSchoolPage() {
                 Our Impact, In Numbers
               </h2>
               <p className="mt-4 text-muted-foreground">
-                Mendorong perubahan nyata dalam ekosistem pendidikan lokal
-                melalui adopsi teknologi dan partisipasi komunitas.
+                Driving real change in the local education ecosystem through
+                technology adoption and community participation.
               </p>
               <div className="mt-8 grid grid-cols-2 gap-6">
                 <StatCard value="50+" label="Schools Joined" />
@@ -394,7 +394,7 @@ export default function WaveOfSchoolPage() {
                     <div>
                       <p className="font-semibold">Ibu Nurdiani</p>
                       <p className="text-sm text-muted-foreground">
-                        Guru, SDN Simeulue Barat
+                        Teacher, SDN Simeulue Barat
                       </p>
                     </div>
                   </div>
@@ -412,15 +412,15 @@ export default function WaveOfSchoolPage() {
             Be the Next Wave
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-            Mari berkolaborasi untuk masa depan pendidikan Aceh. Apapun peran
-            Anda, Anda bisa menjadi bagian dari perubahan.
+            Let's collaborate for the future of education in Aceh. Whatever
+            your role, you can be part of the change.
           </p>
           <div className="mx-auto mt-12 grid max-w-5xl gap-6 md:grid-cols-3">
             <Card className="p-8 text-center">
               <PenSquare className="mx-auto h-12 w-12 text-primary" />
               <h3 className="mt-4 font-headline text-2xl">For Teachers</h3>
               <p className="mt-2 text-sm text-muted-foreground">
-                Mulai buat konten dan dapatkan akses ke AI Assistant.
+                Start creating content and get access to the AI Assistant.
               </p>
               <Button variant="outline" className="mt-6">
                 Start Creating
@@ -430,7 +430,7 @@ export default function WaveOfSchoolPage() {
               <School className="mx-auto h-12 w-12 text-primary" />
               <h3 className="mt-4 font-headline text-2xl">For Schools</h3>
               <p className="mt-2 text-sm text-muted-foreground">
-                Daftarkan sekolah Anda sebagai mitra perintis.
+                Register your school as a pioneering partner.
               </p>
               <Button className="mt-6">Become a Partner</Button>
             </Card>
@@ -438,7 +438,7 @@ export default function WaveOfSchoolPage() {
               <Users className="mx-auto h-12 w-12 text-primary" />
               <h3 className="mt-4 font-headline text-2xl">For Organizations</h3>
               <p className="mt-2 text-sm text-muted-foreground">
-                Jajaki peluang kolaborasi untuk dampak yang lebih luas.
+                Explore collaboration opportunities for a broader impact.
               </p>
               <Button variant="outline" className="mt-6">
                 Collaborate with Us

@@ -115,7 +115,7 @@ const MiniGameEngine: React.FC<MiniGameEngineProps> = ({ scenario }) => {
             </p>
             <Button onClick={startGame} size="lg" className="mt-8">
               <Play className="mr-2 h-5 w-5" />
-              Mulai Skenario
+              Start Scenario
             </Button>
           </motion.div>
         );
@@ -149,7 +149,7 @@ const MiniGameEngine: React.FC<MiniGameEngineProps> = ({ scenario }) => {
             <div className="absolute top-4 left-4 z-10 w-[calc(100%-2rem)]">
               <div className="flex items-center justify-between gap-4">
                 <div className="rounded-full bg-black/50 px-4 py-2 text-white">
-                  Skor: <span className="font-bold">{score}</span>
+                  Score: <span className="font-bold">{score}</span>
                 </div>
                 <div className="flex flex-grow items-center gap-2">
                   <Clock className="h-5 w-5 text-white" />
@@ -214,16 +214,16 @@ const MiniGameEngine: React.FC<MiniGameEngineProps> = ({ scenario }) => {
             className="p-8 text-center"
           >
             <Trophy className="mx-auto h-16 w-16 text-yellow-500" />
-            <h1 className="mt-4 font-headline text-4xl">Skenario Selesai!</h1>
+            <h1 className="mt-4 font-headline text-4xl">Scenario Complete!</h1>
             <p className="mt-2 text-2xl font-semibold text-primary">
-              Skor Akhir: {score}
+              Final Score: {score}
             </p>
             <p className="mx-auto mt-4 max-w-xl text-lg text-muted-foreground">
               {getEndingMessage()}
             </p>
             <Button onClick={startGame} size="lg" className="mt-8">
               <RefreshCw className="mr-2 h-5 w-5" />
-              Main Lagi
+              Play Again
             </Button>
           </motion.div>
         );

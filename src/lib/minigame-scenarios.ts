@@ -53,39 +53,39 @@ export interface GameScenario {
 
 // Example Scenario 1: Flood at School (Expanded)
 export const floodScenario: GameScenario = {
-  scenario_id: 'banjir_smp_1_ext',
-  title: 'Banjir di Sekolah',
+  scenario_id: 'flood_smp_1_ext',
+  title: 'Flood at School',
   description:
-    'Kamu adalah seorang siswa SMP. Hujan deras tak henti-henti, dan air mulai memasuki halaman sekolahmu. Kamu harus bertindak cepat dan tepat untuk memastikan semua orang aman.',
+    'You are a middle school student. It\'s raining heavily, and water is starting to enter your school grounds. You must act quickly and correctly to ensure everyone is safe.',
   starting_level_id: 'banjir_1',
   levels: [
     {
       level_id: 'banjir_1',
       scene_text:
-        'Hujan sangat deras. Kamu melihat air mulai menggenang di lapangan upacara dan merayap ke koridor. Belum ada pengumuman dari guru. Apa yang kamu lakukan?',
+        'It\'s raining very hard. You see water starting to pool on the ceremony field and creep into the hallways. There has been no announcement from the teachers yet. What do you do?',
       timer_seconds: 10,
       background_image_hint: 'school hallway ankle-deep water raining',
       sound_effect: 'rain_heavy.mp3',
       options: [
         {
           id: 'A',
-          text: 'Lanjutkan bermain di kelas.',
+          text: 'Continue playing in the classroom.',
           result: 'wrong',
-          feedback: 'Bahaya! Mengabaikan tanda-tanda awal bisa berakibat fatal. Air bisa naik dengan cepat.',
+          feedback: 'Danger! Ignoring the early signs can be fatal. The water can rise quickly.',
           score: -10,
         },
         {
           id: 'B',
-          text: 'Beri tahu teman sekelas & lapor ke guru piket.',
+          text: 'Tell your classmates & report to the teacher on duty.',
           result: 'correct',
-          feedback: 'Tindakan yang sangat baik! Menginformasikan orang lain adalah langkah pertama mitigasi.',
+          feedback: 'Excellent action! Informing others is the first step in mitigation.',
           score: 20,
         },
         {
           id: 'C',
-          text: 'Ambil foto & update status sosial media.',
+          text: 'Take a photo & update your social media status.',
           result: 'neutral',
-          feedback: 'Dokumentasi boleh, tapi prioritas utama adalah keselamatan. Jangan sampai terlambat bertindak.',
+          feedback: 'Documentation is fine, but safety is the top priority. Don\'t be late to act.',
           score: 0,
         },
       ],
@@ -98,30 +98,30 @@ export const floodScenario: GameScenario = {
     {
         level_id: 'banjir_2',
         scene_text:
-          'Guru menginstruksikan semua untuk tetap tenang. Tiba-tiba, listrik padam! Air sudah setinggi mata kaki dan stop kontak di dinding mulai terendam. Apa prioritas utamamu?',
+          'The teacher instructs everyone to stay calm. Suddenly, the power goes out! The water is now ankle-deep and the wall sockets are starting to get submerged. What is your main priority?',
         timer_seconds: 8,
         background_image_hint: 'dark school corridor water covering electrical socket',
         sound_effect: 'power_down.mp3',
         options: [
           {
             id: 'A',
-            text: 'Selamatkan buku di tas.',
+            text: 'Save the books in your bag.',
             result: 'wrong',
-            feedback: 'Salah! Risiko sengatan listrik dari air jauh lebih berbahaya daripada buku basah.',
+            feedback: 'Wrong! The risk of electric shock from the water is far more dangerous than wet books.',
             score: -15,
           },
           {
             id: 'B',
-            text: 'Ingatkan semua untuk menjauhi dinding & genangan air.',
+            text: 'Remind everyone to stay away from the walls & puddles.',
             result: 'correct',
-            feedback: 'Penting! Mencegah risiko sengatan listrik adalah prioritas utama saat banjir di dalam ruangan.',
+            feedback: 'Important! Preventing the risk of electric shock is the top priority during an indoor flood.',
             score: 20,
           },
           {
             id: 'C',
-            text: 'Mencari sumber cahaya darurat seperti HP.',
+            text: 'Look for an emergency light source like a phone.',
             result: 'neutral',
-            feedback: 'Pencahayaan penting, tapi memastikan semua orang jauh dari bahaya listrik lebih mendesak.',
+            feedback: 'Lighting is important, but ensuring everyone is away from electrical hazards is more urgent.',
             score: 5,
           },
         ],
@@ -134,30 +134,30 @@ export const floodScenario: GameScenario = {
     {
       level_id: 'banjir_3',
       scene_text:
-        'Air semakin tinggi, sudah selutut. Guru memutuskan untuk evakuasi ke lantai 2. Temanmu terlihat panik dan mau berlari keluar gedung. Apa yang kamu lakukan?',
+        'The water is getting higher, it\'s now knee-deep. The teacher decides to evacuate to the 2nd floor. Your friend looks panicked and wants to run out of the building. What do you do?',
       timer_seconds: 10,
       background_image_hint: 'school corridor knee-deep water panic student',
       sound_effect: 'water_rising.mp3',
       options: [
         {
           id: 'A',
-          text: 'Tenangkan dia dan ajak naik ke lantai 2 bersama-sama.',
+          text: 'Calm them down and go up to the 2nd floor together.',
           result: 'correct',
-          feedback: 'Kerja bagus! Menjaga ketenangan dan mencari tempat lebih tinggi adalah kunci keselamatan.',
+          feedback: 'Great job! Staying calm and seeking higher ground are key to safety.',
           score: 25,
         },
         {
           id: 'B',
-          text: 'Biarkan saja, dia harusnya tahu sendiri.',
+          text: 'Just leave them, they should know better.',
           result: 'wrong',
-          feedback: 'Tidak baik! Dalam keadaan darurat, kita harus saling membantu dan memastikan tidak ada yang panik.',
+          feedback: 'Not good! In an emergency, we must help each other and ensure no one panics.',
           score: -15,
         },
         {
           id: 'C',
-          text: 'Ikut panik dan berteriak minta tolong.',
+          text: 'Panic too and scream for help.',
           result: 'neutral',
-          feedback: 'Teriakanmu bisa menarik perhatian, tapi tidak menyelesaikan masalah dan bisa menambah kepanikan.',
+          feedback: 'Your scream might attract attention, but it doesn\'t solve the problem and could increase panic.',
           score: 0,
         },
       ],
@@ -170,30 +170,30 @@ export const floodScenario: GameScenario = {
     {
         level_id: 'banjir_4',
         scene_text:
-          'Kalian semua aman di lantai 2. Air di luar terlihat deras. Kamu mendengar kabar ada teman yang terjebak di perpustakaan di lantai 1. Apa yang kamu sarankan kepada tim penyelamat guru?',
+          'You are all safe on the 2nd floor. The water outside looks rough. You hear that a friend is trapped in the library on the 1st floor. What do you suggest to the teacher rescue team?',
         timer_seconds: 12,
         background_image_hint: 'view from second floor window stormy flood',
         sound_effect: 'distant_sirens.mp3',
         options: [
           {
             id: 'A',
-            text: 'Sarankan untuk menerobos air secepatnya.',
+            text: 'Suggest wading through the water as quickly as possible.',
             result: 'wrong',
-            feedback: 'Terlalu berisiko! Arus deras dan benda tersembunyi di bawah air sangat berbahaya.',
+            feedback: 'Too risky! Strong currents and hidden objects under the water are very dangerous.',
             score: -20,
           },
           {
             id: 'B',
-            text: 'Tunggu sampai air surut, tidak ada yang bisa dilakukan.',
+            text: 'Wait for the water to recede, there\'s nothing that can be done.',
             result: 'neutral',
-            feedback: 'Keselamatan penolong memang utama, tapi mungkin ada cara lain yang lebih aman.',
+            feedback: 'Rescuer safety is paramount, but there might be other, safer ways to help.',
             score: 5,
           },
           {
             id: 'C',
-            text: 'Sarankan mencari tali atau pelampung & membentuk rantai manusia.',
+            text: 'Suggest finding a rope or floatation device & forming a human chain.',
             result: 'correct',
-            feedback: 'Solusi cerdas! Menggunakan alat bantu dan kerja sama tim meningkatkan peluang keberhasilan dan keselamatan.',
+            feedback: 'Smart solution! Using tools and teamwork increases the chances of success and safety.',
             score: 30,
           },
         ],
@@ -205,9 +205,9 @@ export const floodScenario: GameScenario = {
       },
   ],
   ending_messages: {
-    high: 'Luar biasa! Kamu tenang, sigap, dan bijak dalam mengambil keputusan. Kamu adalah pahlawan tanggap bencana sejati!',
-    medium: 'Cukup baik. Kamu tahu beberapa langkah penting, tapi ingat untuk selalu memprioritaskan keselamatan bersama dan berpikir kreatif.',
-    low: 'Kamu selamat, tapi keputusanmu masih bisa jauh lebih baik. Pelajari lagi langkah-langkah tanggap darurat agar lebih siap!',
+    high: 'Outstanding! You were calm, quick, and wise in your decision-making. You are a true disaster response hero!',
+    medium: 'Pretty good. You know some important steps, but remember to always prioritize collective safety and think creatively.',
+    low: 'You survived, but your decisions could have been much better. Study the emergency response steps again to be better prepared!',
   },
   score_thresholds: {
     high: 60,

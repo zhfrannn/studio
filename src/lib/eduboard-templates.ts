@@ -26,31 +26,31 @@ export const eduboardSlidesTemplate: Slide[] = [
   {
     id: 'slide-01',
     layout: 'title-slide',
-    category: 'Kesiapsiagaan Bencana',
-    title: 'Memahami Ancaman Tsunami',
+    category: 'Disaster Preparedness',
+    title: 'Understanding the Tsunami Threat',
     description:
-      'Panduan lengkap untuk mengenali tanda-tanda, mempersiapkan diri, dan selamat dari tsunami.',
+      'A complete guide to recognizing the signs, preparing yourself, and surviving a tsunami.',
     themeColor: 'oklch(55% 0.15 240)', // Blue
   },
   {
     id: 'slide-02',
     layout: 'section-header',
-    category: 'Sebelum Bencana',
-    title: 'Apa Itu Tsunami?',
+    category: 'Before the Disaster',
+    title: 'What Is a Tsunami?',
     description:
-      'Tsunami adalah serangkaian gelombang laut raksasa yang disebabkan oleh gangguan besar di dasar laut, seperti gempa bumi.',
+      'A tsunami is a series of giant ocean waves caused by major disturbances on the seabed, such as earthquakes.',
     themeColor: 'oklch(65% 0.1 260)', // Indigo
   },
   {
     id: 'slide-03',
     layout: 'infographic',
-    category: 'Fakta Penting',
-    title: 'Tanda-Tanda Alam Peringatan Tsunami',
+    category: 'Key Facts',
+    title: 'Natural Tsunami Warning Signs',
     icon: 'AlertTriangle',
     points: [
-      'Gempa Kuat: Guncangan tanah yang membuat Anda sulit berdiri.',
-      'Suara Gemuruh: Suara aneh seperti kereta api dari arah laut.',
-      'Laut Surut: Air laut surut secara tiba-tiba dan tidak wajar.',
+      'Strong Earthquake: Ground shaking that makes it difficult to stand.',
+      'Rumbling Sound: A strange noise like a train coming from the sea.',
+      'Receding Sea: The ocean water recedes suddenly and unusually.',
     ],
     themeColor: 'oklch(70% 0.2 50)', // Yellow
     metadata: {
@@ -60,14 +60,14 @@ export const eduboardSlidesTemplate: Slide[] = [
   {
     id: 'slide-04',
     layout: 'content-with-image',
-    category: 'Persiapan',
-    title: 'Rencanakan Evakuasi Anda',
+    category: 'Preparation',
+    title: 'Plan Your Evacuation',
     description:
-      'Setiap keluarga harus memiliki rencana evakuasi. Penting untuk mengetahui rute dan lokasi aman.',
+      'Every family should have an evacuation plan. It is important to know the route and safe locations.',
     points: [
-      'Identifikasi dataran tinggi terdekat.',
-      'Tentukan rute evakuasi yang aman.',
-      'Lakukan latihan evakuasi secara berkala.',
+      'Identify the nearest high ground.',
+      'Determine a safe evacuation route.',
+      'Conduct regular evacuation drills.',
     ],
     imageUrl: 'https://cdn.dribbble.com/userupload/27796411/file/original-992aa78e02707e86da76830a224a2f2d.png',
     icon: 'Goal',
@@ -76,16 +76,16 @@ export const eduboardSlidesTemplate: Slide[] = [
   {
     id: 'slide-05',
     layout: 'bullet-points',
-    category: 'Persiapan',
-    title: 'Siapkan Tas Siaga Bencana',
+    category: 'Preparation',
+    title: 'Prepare a Go-Bag',
     description:
-      'Tas ini berisi barang-barang penting yang Anda butuhkan untuk bertahan hidup selama 72 jam pertama.',
+      'This bag contains essential items you need to survive for the first 72 hours.',
     points: [
-      'Air minum dan makanan ringan',
-      'P3K dan obat-obatan pribadi',
-      'Senter, peluit, dan radio baterai',
-      'Salinan dokumen penting',
-      'Pakaian ganti dan selimut',
+      'Drinking water and snacks',
+      'First aid kit and personal medications',
+      'Flashlight, whistle, and battery-powered radio',
+      'Copies of important documents',
+      'Change of clothes and a blanket',
     ],
     icon: 'ListChecks',
     themeColor: 'oklch(60% 0.18 150)', // Green
@@ -93,21 +93,21 @@ export const eduboardSlidesTemplate: Slide[] = [
   {
     id: 'slide-06',
     layout: 'section-header',
-    category: 'Saat Bencana',
-    title: 'Tindakan Saat Terjadi Gempa & Tsunami',
+    category: 'During the Disaster',
+    title: 'Actions During an Earthquake & Tsunami',
     description:
-      'Tetap tenang dan ikuti langkah-langkah ini untuk melindungi diri Anda dan keluarga.',
+      'Stay calm and follow these steps to protect yourself and your family.',
     themeColor: 'oklch(65% 0.2 20)', // Orange
   },
   {
     id: 'slide-07',
     layout: 'bullet-points',
-    category: 'Tindakan',
-    title: 'Saat Gempa: Drop, Cover, Hold On!',
+    category: 'Action',
+    title: 'During an Earthquake: Drop, Cover, Hold On!',
     points: [
-      'DROP (Merunduk) ke lantai.',
-      'COVER (Berlindung) di bawah meja yang kokoh.',
-      'HOLD ON (Bertahan) sampai guncangan berhenti.',
+      'DROP to the floor.',
+      'Take COVER under a sturdy table.',
+      'HOLD ON until the shaking stops.',
     ],
     icon: 'ShieldAlert',
     themeColor: 'oklch(60% 0.25 0)', // Red
@@ -115,25 +115,25 @@ export const eduboardSlidesTemplate: Slide[] = [
   {
     id: 'slide-08',
     layout: 'quote',
-    category: 'Kearifan Lokal',
-    title: 'Smong: Kearifan dari Simeulue',
+    category: 'Local Wisdom',
+    title: 'Smong: Wisdom from Simeulue',
     description:
-      'Enggel mon sao suru, linon bak, mae oek suruik. (Jika gempa kuat diikuti surutnya air laut, segeralah lari ke tempat tinggi).',
+      'Enggel mon sao suru, linon bak, mae oek suruik. (If a strong earthquake is followed by the receding of the sea, run immediately to high ground).',
     themeColor: 'oklch(70% 0.1 290)', // Violet
     metadata: {
-      author: 'Tradisi Lisan Pulau Simeulue',
+      author: 'Oral Tradition of Simeulue Island',
     },
   },
   {
     id: 'slide-09',
     layout: 'infographic',
-    category: 'Setelah Bencana',
-    title: 'Langkah Setelah Selamat',
+    category: 'After the Disaster',
+    title: 'Steps After Surviving',
     icon: 'HeartHandshake',
     points: [
-      'Tetap di Evakuasi: Jangan kembali ke pantai sampai dinyatakan aman oleh pihak berwenang.',
-      'Hindari Area Rusak: Jauhi bangunan yang rusak dan kabel listrik yang jatuh.',
-      'Bantu Sesama: Periksa kondisi tetangga dan berikan pertolongan pertama jika mampu.',
+      'Stay at Evacuation Site: Do not return to the coast until authorities declare it safe.',
+      'Avoid Damaged Areas: Stay away from damaged buildings and fallen power lines.',
+      'Help Others: Check on your neighbors and provide first aid if you are able.',
     ],
     themeColor: 'oklch(65% 0.15 330)', // Magenta
     metadata: {
@@ -143,10 +143,10 @@ export const eduboardSlidesTemplate: Slide[] = [
   {
     id: 'slide-10',
     layout: 'end-slide',
-    category: 'Kesimpulan',
-    title: 'Anda Siap, Anda Selamat!',
+    category: 'Conclusion',
+    title: 'You Are Prepared, You Are Safe!',
     description:
-      'Membangun budaya sadar bencana adalah tanggung jawab kita bersama untuk masa depan yang lebih aman.',
+      'Building a disaster-aware culture is our shared responsibility for a safer future.',
     themeColor: 'oklch(60% 0.15 240)', // Blue
   },
 ];
@@ -167,22 +167,22 @@ export const storyboardTemplate: StoryboardSlideData[] = [
   {
     id: 'story-01',
     layout: 'storyboard-layout',
-    title: 'Bab 1: Tanda-Tanda Alam',
-    subtitle: 'Bagaimana alam berkomunikasi sebelum bencana datang.',
+    title: 'Chapter 1: The Signs of Nature',
+    subtitle: 'How nature communicates before a disaster strikes.',
     columns: [
       {
-        title: 'Gempa Mengguncang',
-        text: 'Getaran kuat yang tiba-tiba adalah sinyal pertama. Jangan panik, segera cari tempat berlindung.',
+        title: 'The Earth Shakes',
+        text: 'A sudden, strong tremor is the first signal. Don\'t panic, seek shelter immediately.',
         imageHint: 'earthquake crack ground',
       },
       {
-        title: 'Laut yang Aneh',
-        text: 'Air laut surut jauh dari bibir pantai, memperlihatkan dasar laut yang biasanya terendam. Ini bukan pertanda baik.',
+        title: 'The Strange Sea',
+        text: 'The sea water recedes far from the shoreline, revealing the usually submerged seabed. This is not a good sign.',
         imageHint: 'receding ocean tsunami',
       },
       {
-        title: 'Suara Gemuruh',
-        text: 'Terdengar suara misterius seperti deru kereta api atau pesawat jet dari arah lautan.',
+        title: 'The Rumbling Sound',
+        text: 'A mysterious sound like the roar of a train or a jet engine is heard from the ocean.',
         imageHint: 'stormy ocean waves',
       },
     ],
@@ -190,22 +190,22 @@ export const storyboardTemplate: StoryboardSlideData[] = [
   {
     id: 'story-02',
     layout: 'storyboard-layout',
-    title: 'Bab 2: Respon Cepat',
-    subtitle: 'Detik-detik berharga setelah tanda pertama muncul.',
+    title: 'Chapter 2: Quick Response',
+    subtitle: 'Precious seconds after the first sign appears.',
     columns: [
       {
-        title: 'Lupakan Harta',
-        text: 'Nyawa lebih berharga. Jangan kembali ke rumah untuk mengambil barang. Segera bergerak.',
+        title: 'Forget Possessions',
+        text: 'Life is more valuable. Do not return home to retrieve belongings. Move immediately.',
         imageHint: 'people running away',
       },
       {
-        title: 'Cari Tempat Tinggi',
-        text: 'Berlari menjauhi pantai menuju perbukitan atau gedung tinggi yang kokoh. Setiap meter ketinggian berarti.',
+        title: 'Seek High Ground',
+        text: 'Run away from the coast towards hills or sturdy tall buildings. Every meter of elevation matters.',
         imageHint: 'running uphill mountain',
       },
       {
-        title: 'Bantu yang Lemah',
-        text: 'Bantu anak-anak, lansia, dan penyandang disabilitas. Pastikan tidak ada yang tertinggal.',
+        title: 'Help the Vulnerable',
+        text: 'Assist children, the elderly, and people with disabilities. Make sure no one is left behind.',
         imageHint: 'helping elderly person',
       },
     ],
@@ -213,22 +213,22 @@ export const storyboardTemplate: StoryboardSlideData[] = [
   {
     id: 'story-03',
     layout: 'storyboard-layout',
-    title: 'Bab 3: Bertahan & Menunggu',
-    subtitle: 'Apa yang harus dilakukan saat berada di lokasi evakuasi.',
+    title: 'Chapter 3: Survive & Wait',
+    subtitle: 'What to do when you are at the evacuation site.',
     columns: [
       {
-        title: 'Tetap di Ketinggian',
-        text: 'Gelombang tsunami bisa datang lebih dari satu kali. Tunggu arahan dari pihak berwenang sebelum turun.',
+        title: 'Stay on High Ground',
+        text: 'Tsunami waves can come more than once. Wait for instructions from the authorities before descending.',
         imageHint: 'people on hill watching',
       },
       {
-        title: 'Dengarkan Informasi',
-        text: 'Gunakan radio baterai atau ponsel untuk memantau informasi terkini dari sumber yang terpercaya.',
+        title: 'Listen for Information',
+        text: 'Use a battery-powered radio or mobile phone to monitor the latest information from trusted sources.',
         imageHint: 'person listening radio',
       },
       {
-        title: 'Hemat Energi',
-        text: 'Simpan tenaga dan perbekalan. Bantuan mungkin membutuhkan waktu untuk datang.',
+        title: 'Conserve Energy',
+        text: 'Save your energy and supplies. Help may take time to arrive.',
         imageHint: 'emergency food kit',
       },
     ],
@@ -236,22 +236,22 @@ export const storyboardTemplate: StoryboardSlideData[] = [
   {
     id: 'story-04',
     layout: 'storyboard-layout',
-    title: 'Bab 4: Memori & Kearifan',
-    subtitle: 'Pelajaran dari "Smong" dan pentingnya mewariskan pengetahuan.',
+    title: 'Chapter 4: Memory & Wisdom',
+    subtitle: 'Lessons from "Smong" and the importance of passing on knowledge.',
     columns: [
       {
-        title: 'Kearifan Smong',
-        text: 'Di Simeulue, syair "Smong" menyelamatkan puluhan ribu jiwa. Kearifan lokal terbukti ampuh.',
+        title: 'The Wisdom of Smong',
+        text: 'In Simeulue, the "Smong" poem saved tens of thousands of lives. Local wisdom proved to be powerful.',
         imageHint: 'ancient scroll manuscript',
       },
       {
-        title: 'Ceritakan Kembali',
-        text: 'Bagikan pengalaman dan pengetahuan ini kepada keluarga dan generasi muda.',
+        title: 'Tell the Story Again',
+        text: 'Share this experience and knowledge with your family and the younger generation.',
         imageHint: 'storytelling community elder',
       },
       {
-        title: 'Membangun Ketangguhan',
-        text: 'Dengan pengetahuan dan persiapan, kita membangun komunitas yang lebih tangguh menghadapi bencana.',
+        title: 'Building Resilience',
+        text: 'With knowledge and preparation, we build a more resilient community in the face of disasters.',
         imageHint: 'community building hands',
       },
     ],
@@ -274,48 +274,48 @@ export const quizCardTemplate: QuizCardData[] = [
     {
         id: 'quiz-1',
         layout: 'quiz-card',
-        category: 'Tanda-Tanda Tsunami',
-        question: "Manakah dari berikut ini yang merupakan tanda alam PALING khas sebelum tsunami terjadi?",
+        category: 'Tsunami Signs',
+        question: "Which of the following is the MOST typical natural sign before a tsunami occurs?",
         options: [
-            "Hujan deras disertai petir",
-            "Air laut surut secara tiba-tiba dan tidak wajar",
-            "Munculnya pelangi di atas laut",
-            "Angin bertiup sangat kencang ke arah darat"
+            "Heavy rain with thunder",
+            "The sea water recedes suddenly and unusually",
+            "A rainbow appears over the sea",
+            "Very strong winds blowing towards the land"
         ],
-        correctAnswer: "Air laut surut secara tiba-tiba dan tidak wajar",
-        explanation: "Surutnya air laut secara drastis adalah fenomena khas yang terjadi karena air laut terhisap ke arah pusat gempa sebelum kembali sebagai gelombang raksasa.",
+        correctAnswer: "The sea water recedes suddenly and unusually",
+        explanation: "The drastic receding of the sea is a typical phenomenon that occurs because the sea water is pulled towards the earthquake's epicenter before returning as a giant wave.",
         icon: 'Waves',
         themeColor: 'oklch(60% 0.15 200)', // Cyan
     },
     {
         id: 'quiz-2',
         layout: 'quiz-card',
-        category: 'Tindakan Saat Gempa',
-        question: "Apa singkatan dari tindakan yang harus dilakukan saat gempa terjadi?",
+        category: 'Earthquake Action',
+        question: "What is the acronym for the action to be taken during an earthquake?",
         options: [
-            "Lari, Lompat, Sembunyi",
-            "Berdiri, Lihat, Tunggu",
-            "Merunduk, Berlindung, Bertahan (Drop, Cover, Hold On)",
-            "Telepon, Rekam, Bagikan"
+            "Run, Jump, Hide",
+            "Stand, Look, Wait",
+            "Drop, Cover, Hold On",
+            "Call, Record, Share"
         ],
-        correctAnswer: "Merunduk, Berlindung, Bertahan (Drop, Cover, Hold On)",
-        explanation: "Metode 'Drop, Cover, Hold On' adalah standar internasional untuk melindungi diri dari reruntuhan saat terjadi gempa bumi.",
+        correctAnswer: "Drop, Cover, Hold On",
+        explanation: "The 'Drop, Cover, Hold On' method is the international standard for protecting yourself from debris during an earthquake.",
         icon: 'ShieldAlert',
         themeColor: 'oklch(60% 0.25 0)', // Red
     },
     {
         id: 'quiz-3',
         layout: 'quiz-card',
-        category: 'Tas Siaga Bencana',
-        question: "Barang apa yang TIDAK perlu ada di dalam Tas Siaga Bencana?",
+        category: 'Go-Bag',
+        question: "What item is NOT necessary in a Go-Bag?",
         options: [
-            "P3K dan obat-obatan pribadi",
-            "Senter dan baterai cadangan",
-            "Konsol game portabel",
-            "Salinan dokumen penting"
+            "First aid kit and personal medications",
+            "Flashlight and spare batteries",
+            "Portable game console",
+            "Copies of important documents"
         ],
-        correctAnswer: "Konsol game portabel",
-        explanation: "Tas Siaga Bencana berfokus pada kebutuhan bertahan hidup esensial. Hiburan seperti konsol game bukanlah prioritas utama.",
+        correctAnswer: "Portable game console",
+        explanation: "A Go-Bag focuses on essential survival needs. Entertainment like a game console is not a priority.",
         icon: 'ListChecks',
         themeColor: 'oklch(60% 0.18 150)', // Green
     }
@@ -346,53 +346,53 @@ export interface PrintableContentData {
 export const printableContentTemplate: PrintableContentData = {
     id: 'printable-tsunami-01',
     layout: 'printable-a4',
-    mainTitle: 'Panduan Kesiapsiagaan Tsunami',
+    mainTitle: 'Tsunami Preparedness Guide',
     mainIcon: 'ShieldAlert',
     themeColor: 'oklch(55% 0.15 240)', // Blue
     intro: {
-        title: 'Apa itu Tsunami?',
-        text: 'Tsunami adalah serangkaian gelombang laut raksasa yang disebabkan oleh gangguan di dasar laut, seperti gempa bumi, yang dapat menyebabkan kerusakan parah di wilayah pesisir.'
+        title: 'What is a Tsunami?',
+        text: 'A tsunami is a series of giant ocean waves caused by disturbances on the seabed, such as earthquakes, which can cause severe damage in coastal areas.'
     },
     sections: [
         {
-            title: 'Tanda-Tanda Peringatan',
+            title: 'Warning Signs',
             icon: 'AlertTriangle',
             points: [
-                'Gempa bumi kuat yang membuat sulit berdiri.',
-                'Air laut surut secara tiba-tiba dan tidak wajar.',
-                'Suara gemuruh aneh dari arah lautan.'
+                'A strong earthquake that makes it difficult to stand.',
+                'The sea water recedes suddenly and unusually.',
+                'A strange rumbling sound from the ocean.'
             ]
         },
         {
-            title: 'Saat Terjadi Gempa',
+            title: 'During an Earthquake',
             icon: 'GanttChartSquare',
             points: [
-                'MERUNDUK (Drop) di bawah meja yang kokoh.',
-                'BERLINDUNG (Cover) melindungi kepala dan leher.',
-                'BERTAHAN (Hold On) hingga guncangan berhenti.'
+                'DROP under a sturdy table.',
+                'COVER your head and neck.',
+                'HOLD ON until the shaking stops.'
             ]
         },
         {
-            title: 'Segera Evakuasi',
+            title: 'Evacuate Immediately',
             icon: 'Goal',
             points: [
-                'Setelah gempa berhenti, segera lari ke tempat tinggi.',
-                'Jangan menunggu peringatan resmi jika Anda merasakan tanda-tanda alam.',
-                'Ikuti jalur evakuasi yang telah ditentukan.'
+                'After the shaking stops, run to high ground immediately.',
+                'Do not wait for an official warning if you feel the natural signs.',
+                'Follow the designated evacuation routes.'
             ]
         },
         {
-            title: 'Tas Siaga Bencana',
+            title: 'Go-Bag',
             icon: 'ListChecks',
             points: [
-                'Siapkan tas berisi: air, makanan ringan, P3K, senter, peluit, dan dokumen penting.',
-                'Satu tas untuk setiap anggota keluarga.',
+                'Prepare a bag with: water, snacks, first aid, flashlight, whistle, and important documents.',
+                'One bag for each family member.',
             ]
         }
     ],
     quote: {
-        text: 'Enggel mon sao suru, linon bak, mae oek suruik. (Jika gempa kuat diikuti surutnya air laut, segeralah lari ke tempat tinggi).',
-        author: 'Kearifan Lokal "Smong", Simeulue'
+        text: 'Enggel mon sao suru, linon bak, mae oek suruik. (If a strong earthquake is followed by the receding of the sea, run immediately to high ground).',
+        author: '"Smong" Local Wisdom, Simeulue'
     },
     qrCodeUrl: 'https://waveofvoice.com/explore'
 }

@@ -106,10 +106,10 @@ export default function QuizCardSlide({ slide, onAnswered, isLastCard }: QuizCar
                     <CardFooter className="flex-col items-start gap-3 border-t p-6">
                         <h4 className="font-semibold flex items-center gap-2">
                            <Lightbulb className="h-5 w-5 text-yellow-500"/> 
-                           Penjelasan
+                           Explanation
                         </h4>
                         <p className="text-sm text-muted-foreground">
-                            {isCorrect ? 'Tepat sekali! ' : `Jawaban yang benar adalah "${slide.correctAnswer}". `}
+                            {isCorrect ? 'That\'s right! ' : `The correct answer is "${slide.correctAnswer}". `}
                             {slide.explanation}
                         </p>
                     </CardFooter>

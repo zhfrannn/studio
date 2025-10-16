@@ -124,7 +124,7 @@ export default function WaveOfSchoolProfilePage() {
                   </Avatar>
                   <div className="flex-grow">
                     <div className="flex flex-wrap items-center gap-2">
-                       <h1 className="font-headline text-2xl font-bold">{user.displayName || 'Ibu Guru'}</h1>
+                       <h1 className="font-headline text-2xl font-bold">{user.displayName || 'Teacher'}</h1>
                        <Badge variant="outline">Teacher</Badge>
                        <Badge className="bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300">🟢 Active Educator</Badge>
                        <Badge className="bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300">🟣 Partner School</Badge>

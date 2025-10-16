@@ -46,7 +46,7 @@ import RelatedStoryCarousel from '@/components/related-story-carousel';
 export default function StoryDetailPage({ params }: { params: { id: string } }) {
   // This is a workaround for server components. In a real app, you'd
   // likely get the language from params or cookies.
-  const lang = 'id'; // Defaulting to 'id' for demonstration
+  const lang = 'en'; // Defaulting to 'en' for demonstration
   const dictionary = lang === 'id' ? idDict : enDict;
   const allStories = getTranslatedStories({ lang });
 
@@ -112,11 +112,11 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
                   <PlayCircle className="h-8 w-8 flex-shrink-0 text-yellow-500" />
                   <div>
                     <CardTitle className="text-2xl font-bold">
-                      {content?.video.title || 'Video Edukasi'}
+                      {content?.video.title || 'Educational Video'}
                     </CardTitle>
                     <CardDescription>
                       {content?.video.description ||
-                        'Temukan pelajaran berharga dari kisah ini melalui format video.'}
+                        'Discover valuable lessons from this story in video format.'}
                     </CardDescription>
                   </div>
                 </div>
@@ -141,7 +141,7 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
                 ) : (
                   <div className="flex aspect-video items-center justify-center rounded-lg bg-muted">
                     <p className="text-muted-foreground">
-                      Video untuk cerita ini akan segera hadir.
+                      A video for this story is coming soon.
                     </p>
                   </div>
                 )}
@@ -167,7 +167,7 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
 
           <MotionWrapper as="section" delay={0.3}>
             <h2 className="mb-4 flex items-center gap-2 font-headline text-2xl font-bold">
-              <BookOpenText /> Narasi Lengkap
+              <BookOpenText /> Full Narrative
             </h2>
             <Card>
               <CardContent className="p-6">
@@ -186,12 +186,12 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
             ) : (
               <>
                 <h2 className="mb-4 flex items-center gap-2 font-headline text-2xl font-bold">
-                  <Puzzle /> Kuis Interaktif
+                  <Puzzle /> Interactive Quiz
                 </h2>
                 <Card>
                   <CardContent className="p-6 text-center">
                     <p className="text-muted-foreground">
-                      Kuis untuk cerita ini akan segera hadir.
+                      A quiz for this story is coming soon.
                     </p>
                   </CardContent>
                 </Card>
@@ -205,7 +205,7 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
      <section className="bg-muted/50 py-16 md:py-24">
         <div className="container mx-auto px-4">
           <h2 className="mb-12 text-center font-headline text-3xl font-bold">
-            Jelajahi Cerita Lainnya
+            Explore Other Stories
           </h2>
           <RelatedStoryCarousel stories={otherStories} />
         </div>

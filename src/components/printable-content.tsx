@@ -50,10 +50,10 @@ export default function PrintableContent() {
     <div className="w-full max-w-4xl mx-auto">
         <div className="mb-8 text-center">
             <h1 className="font-headline text-3xl md:text-4xl">
-            Pratinjau Konten Printable (A4)
+            Printable Content Preview (A4)
             </h1>
             <p className="mx-auto mt-2 max-w-2xl text-muted-foreground">
-                Ini adalah pratinjau bagaimana infografis akan terlihat. Konten ini dirancang untuk dicetak dalam kertas ukuran A4.
+                This is a preview of how the infographic will look. This content is designed to be printed on A4 paper.
             </p>
       </div>
 
@@ -98,7 +98,7 @@ export default function PrintableContent() {
             <section>
                 <h3 className="font-semibold text-lg flex items-center gap-2 mb-2" style={{ color: data.themeColor }}>
                     <BookCopy className="h-5 w-5"/>
-                    Kearifan Lokal
+                    Local Wisdom
                 </h3>
                 <blockquote className="border-l-4 pl-4 italic" style={{ borderColor: data.themeColor }}>
                     <p className="text-sm">"{data.quote.text}"</p>
@@ -106,11 +106,11 @@ export default function PrintableContent() {
                 </blockquote>
             </section>
             <section className="text-center">
-                <h3 className="font-semibold text-lg mb-2">Pelajari Lebih Lanjut</h3>
+                <h3 className="font-semibold text-lg mb-2">Learn More</h3>
                 <div className="w-32 h-32 mx-auto bg-gray-200 rounded-lg flex items-center justify-center">
                   <QrCode className="h-24 w-24 text-gray-400"/>
                 </div>
-                <p className="text-xs text-muted-foreground mt-2">Pindai QR Code untuk mengakses semua cerita dan konten interaktif.</p>
+                <p className="text-xs text-muted-foreground mt-2">Scan the QR Code to access all stories and interactive content.</p>
             </section>
           </aside>
         </main>

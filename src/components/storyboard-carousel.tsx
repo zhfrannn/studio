@@ -46,10 +46,10 @@ export default function StoryboardCarousel() {
     <div className="w-full max-w-lg mx-auto">
       <div className="mb-8 text-center">
         <h1 className="font-headline text-3xl md:text-4xl">
-          Pratinjau Storyboard
+          Storyboard Preview
         </h1>
         <p className="mx-auto mt-2 max-w-2xl text-muted-foreground">
-            Format vertikal yang dirancang untuk narasi visual yang padat.
+            A vertical format designed for dense visual narratives.
         </p>
       </div>
 

@@ -108,11 +108,11 @@ export default function ShareStoryPage() {
 
   function onFormSubmit(data: FormValues) {
     const { name, location, storyType, story } = data;
-    const message = `Halo, saya ingin berbagi cerita.
-Nama: ${name || 'Anonim'}
-Lokasi: ${location}
-Jenis Cerita: ${storyType.join(', ')}
-Cerita:
+    const message = `Hello, I want to share a story.
+Name: ${name || 'Anonymous'}
+Location: ${location}
+Story Type: ${storyType.join(', ')}
+Story:
 ${story}`;
 
     const telegramUrl = `https://t.me/WaveOfVoice_Bot?text=${encodeURIComponent(

@@ -50,18 +50,18 @@ import {
 } from '@/components/ui/form';
 
 const signInSchema = z.object({
-  email: z.string().email({ message: 'Email tidak valid.' }),
+  email: z.string().email({ message: 'Invalid email.' }),
   password: z
     .string()
-    .min(6, { message: 'Password minimal 6 karakter.' }),
+    .min(6, { message: 'Password must be at least 6 characters.' }),
 });
 
 const signUpSchema = z.object({
-  displayName: z.string().min(2, { message: 'Nama minimal 2 karakter.' }),
-  email: z.string().email({ message: 'Email tidak valid.' }),
+  displayName: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
+  email: z.string().email({ message: 'Invalid email.' }),
   password: z
     .string()
-    .min(6, { message: 'Password minimal 6 karakter.' }),
+    .min(6, { message: 'Password must be at least 6 characters.' }),
 });
 
 type SignInFormValues = z.infer<typeof signInSchema>;
@@ -100,7 +100,7 @@ function AuthForm() {
       const result = await signInWithEmail(values.email, values.password);
       if (!result) {
         throw new Error(
-          'Email atau password salah. Silakan coba lagi.'
+          'Incorrect email or password. Please try again.'
         );
       }
     } catch (e: any) {
@@ -125,8 +125,8 @@ function AuthForm() {
   return (
     <Tabs defaultValue="signin" className="w-full">
       <TabsList className="grid w-full grid-cols-2">
-        <TabsTrigger value="signin">Masuk</TabsTrigger>
-        <TabsTrigger value="signup">Daftar</TabsTrigger>
+        <TabsTrigger value="signin">Sign In</TabsTrigger>
+        <TabsTrigger value="signup">Sign Up</TabsTrigger>
       </TabsList>
       <TabsContent value="signin">
         <div className="flex flex-col gap-4 py-4">
@@ -169,7 +169,7 @@ function AuthForm() {
                 {authLoading ? (
                   <Loader2 className="animate-spin" />
                 ) : (
-                  'Masuk'
+                  'Sign In'
                 )}
               </Button>
             </form>
@@ -181,7 +181,7 @@ function AuthForm() {
             </div>
             <div className="relative flex justify-center text-xs uppercase">
               <span className="bg-background px-2 text-muted-foreground">
-                Atau lanjut dengan
+                Or continue with
               </span>
             </div>
           </div>
@@ -210,7 +210,7 @@ function AuthForm() {
                 ></path>
               </svg>
             )}
-            Masuk dengan Google
+            Sign In with Google
           </Button>
 
           {error && <p className="text-center text-sm text-red-500">{error}</p>}
@@ -228,8 +228,8 @@ function AuthForm() {
                 name="displayName"
                 render={({ field }) => (
                   <FormItem>
-                    <Label htmlFor="displayName-signup">Nama</Label>
-                    <Input id="displayName-signup" placeholder="Nama Lengkap" {...field} />
+                    <Label htmlFor="displayName-signup">Name</Label>
+                    <Input id="displayName-signup" placeholder="Full Name" {...field} />
                     <FormMessage />
                   </FormItem>
                 )}
@@ -268,7 +268,7 @@ function AuthForm() {
                 {authLoading ? (
                   <Loader2 className="animate-spin" />
                 ) : (
-                  'Daftar'
+                  'Sign Up'
                 )}
               </Button>
             </form>
@@ -330,12 +330,12 @@ export default function AuthButton() {
           <DropdownMenuItem asChild>
             <Link href="/profile">
               <UserIcon className="mr-2 h-4 w-4" />
-              <span>Profil</span>
+              <span>Profile</span>
             </Link>
           </DropdownMenuItem>
           <DropdownMenuItem onClick={handleSignOut}>
             <LogOut className="mr-2 h-4 w-4" />
-            <span>Keluar</span>
+            <span>Sign Out</span>
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
@@ -346,16 +346,16 @@ export default function AuthButton() {
     <>
       <Button onClick={() => setOpen(true)}>
         <LogIn className="mr-2 h-4 w-4" />
-        Masuk
+        Sign In
       </Button>
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
             <DialogTitle className="text-center text-2xl font-bold">
-              Selamat Datang
+              Welcome
             </DialogTitle>
             <DialogDescription className="text-center">
-              Masuk atau daftar untuk mulai berbagi cerita.
+              Sign in or sign up to start sharing your story.
             </DialogDescription>
           </DialogHeader>
           <AuthForm />

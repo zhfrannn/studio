@@ -115,7 +115,7 @@ export default function ProfilePage() {
                     <CardTitle className="font-headline text-2xl">
                       {user.displayName || 'Edu-Creator'}
                     </CardTitle>
-                    <Badge variant="secondary">Guru</Badge>
+                    <Badge variant="secondary">Teacher</Badge>
                     <Badge className="bg-purple-100 text-purple-800 dark:bg-purple-900/50 dark:text-purple-300">
                       School Partner
                     </Badge>
@@ -430,7 +430,7 @@ export default function ProfilePage() {
                   </Avatar>
                   <p className="text-sm">
                     <span className="font-semibold">Event:</span> Workshop EduAI
-                    di Banda Aceh -{' '}
+                    in Banda Aceh -{' '}
                     <a href="#" className="text-primary hover:underline">
                       Join Now
                     </a>
@@ -452,8 +452,8 @@ export default function ProfilePage() {
               </CardHeader>
               <CardContent className="space-y-3">
                  <div className="rounded-lg border p-3 italic">
-                    <p className="text-sm">"Saya baru tahu bahwa gotong royong juga bisa mencegah bencana."</p>
-                    <p className="text-xs text-right mt-1 text-muted-foreground">- Siswa (Anonim)</p>
+                    <p className="text-sm">"I just learned that community work can also prevent disasters."</p>
+                    <p className="text-xs text-right mt-1 text-muted-foreground">- Student (Anonymous)</p>
                  </div>
                  <Button variant="secondary" className="w-full">
                     <PieChart className="mr-2"/> View Impact Report

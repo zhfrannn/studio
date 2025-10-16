@@ -79,7 +79,7 @@ function ShareStorySection() {
     ...new Set(allStories.map(s => s.location?.name).filter(Boolean)),
   ] as string[];
 
-  // Schema untuk form
+  // Schema for the form
   const formSchema = z.object({
     name: z.string().optional(),
     location: z
@@ -137,11 +137,11 @@ function ShareStorySection() {
 
   function onFormSubmit(data: FormValues) {
     const { name, location, storyType, story } = data;
-    const message = `Halo, saya ingin berbagi cerita.
-Nama: ${name || 'Anonim'}
-Lokasi: ${location}
-Jenis Cerita: ${storyType.join(', ')}
-Cerita:
+    const message = `Hello, I want to share a story.
+Name: ${name || 'Anonymous'}
+Location: ${location}
+Story Type: ${storyType.join(', ')}
+Story:
 ${story}`;
 
     const telegramUrl = `https://t.me/WaveOfVoice_Bot?text=${encodeURIComponent(
@@ -749,33 +749,33 @@ export default function Home() {
           <div className="relative grid items-center gap-12 p-8 md:grid-cols-2 md:p-16">
             <MotionWrapper className="z-10" delay={0.1}>
               <Badge variant="secondary" className="mb-4">
-                Untuk Guru & Sekolah
+                For Teachers & Schools
               </Badge>
               <h2 className="font-headline text-3xl font-bold md:text-4xl">
-                Wave of School: Ciptakan Masa Depan Pendidikan
+                Wave of School: Create the Future of Education
               </h2>
               <p className="mt-4 text-gray-300">
-                Ubah cerita lokal menjadi konten pembelajaran interaktif dengan
-                kekuatan AI. Berdayakan siswa dan berkolaborasi dengan pendidik
-                lainnya.
+                Transform local stories into interactive learning content with
+                the power of AI. Empower students and collaborate with other
+                educators.
               </p>
               <div className="mt-6 space-y-3">
                 <div className="flex items-center gap-3">
                   <BrainCircuit className="h-5 w-5 text-primary" />
-                  <span>Konten Pembelajaran Berbasis AI</span>
+                  <span>AI-Powered Learning Content</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <GraduationCap className="h-5 w-5 text-primary" />
-                  <span>Kurikulum Adaptif & Kultural</span>
+                  <span>Adaptive & Cultural Curriculum</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Users2 className="h-5 w-5 text-primary" />
-                  <span>Ekosistem Kolaborasi Pendidik</span>
+                  <span>Educator Collaboration Ecosystem</span>
                 </div>
               </div>
               <Button variant="secondary" asChild className="mt-8">
                 <Link href="/wave-of-school">
-                  Jelajahi Wave of School{' '}
+                  Explore Wave of School{' '}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>

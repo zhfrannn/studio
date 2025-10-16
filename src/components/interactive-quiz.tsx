@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState } from 'react';
@@ -55,7 +54,7 @@ export default function InteractiveQuiz({ quiz }: InteractiveQuizProps) {
     setIsCorrect(null);
     setScore(0);
     setQuizFinished(false);
-    setQuizStarted(true); // Langsung mulai lagi
+    setQuizStarted(true); // Start again immediately
   };
   
   const handleStartQuiz = () => {
@@ -86,7 +85,7 @@ export default function InteractiveQuiz({ quiz }: InteractiveQuizProps) {
           <CardContent className="p-8 pt-0">
             <Button onClick={handleStartQuiz} size="lg">
               <PlayCircle className="mr-2 h-5 w-5" />
-              Mulai Kuis
+              Start Quiz
             </Button>
           </CardContent>
         </Card>
@@ -100,27 +99,27 @@ export default function InteractiveQuiz({ quiz }: InteractiveQuizProps) {
         <Card className="w-full overflow-hidden">
           <CardHeader className="bg-muted/30 p-8 text-center">
             <Trophy className="mx-auto h-16 w-16 text-yellow-500" />
-            <h2 className="mt-4 font-headline text-3xl font-bold">Kuis Selesai!</h2>
+            <h2 className="mt-4 font-headline text-3xl font-bold">Quiz Complete!</h2>
             <p className="text-muted-foreground">{title}</p>
           </CardHeader>
           <CardContent className="p-8 text-center">
-            <p className="text-lg text-muted-foreground">Skor Akhir Anda:</p>
+            <p className="text-lg text-muted-foreground">Your Final Score:</p>
             <p className="my-2 font-bold text-6xl text-primary">
               {score}
               <span className="text-3xl text-muted-foreground">/{totalPoints}</span>
             </p>
             <p className="mt-4 mb-6">
               {score === totalPoints
-                ? 'Luar biasa! Anda adalah seorang ahli.'
-                : 'Kerja bagus! Selalu ada ruang untuk belajar.'}
+                ? 'Excellent! You are an expert.'
+                : 'Good job! There is always room to learn.'}
             </p>
             <div className="flex justify-center gap-4">
               <Button onClick={handleRestartQuiz} size="lg">
                 <RefreshCw className="mr-2 h-4 w-4" />
-                Ulangi Kuis
+                Restart Quiz
               </Button>
                <Button onClick={() => setQuizStarted(false)} size="lg" variant="outline">
-                Kembali
+                Back
               </Button>
             </div>
           </CardContent>
@@ -147,11 +146,11 @@ export default function InteractiveQuiz({ quiz }: InteractiveQuizProps) {
           <div>
             <div className="mb-2 flex items-center justify-between">
               <p className="text-lg font-semibold">
-                Pertanyaan {currentQuestionIndex + 1} dari {questions.length}
+                Question {currentQuestionIndex + 1} of {questions.length}
               </p>
               <div className="flex items-center gap-2">
                 <span className="text-xs text-muted-foreground">
-                  Progres: {Math.round(progress)}%
+                  Progress: {Math.round(progress)}%
                 </span>
                 <Progress value={progress} className="h-2 w-24" />
               </div>
@@ -211,18 +210,18 @@ export default function InteractiveQuiz({ quiz }: InteractiveQuizProps) {
                 <div className="flex items-center gap-2 text-green-600">
                   <CheckCircle className="h-5 w-5" />
                   <p className="font-semibold">
-                    Benar! Anda mendapatkan {currentQuestion.points} poin.
+                    Correct! You earned {currentQuestion.points} points.
                   </p>
                 </div>
               ) : (
                 <p className="font-semibold text-red-600">
-                  Kurang tepat. Jawaban yang benar adalah: {currentQuestion.correctAnswer}
+                  Not quite. The correct answer is: {currentQuestion.correctAnswer}
                 </p>
               )}
               <Button onClick={handleNextQuestion} className="w-full sm:w-auto">
                 {currentQuestionIndex < questions.length - 1
-                  ? 'Pertanyaan Selanjutnya'
-                  : 'Selesaikan Kuis'}
+                  ? 'Next Question'
+                  : 'Finish Quiz'}
               </Button>
             </MotionWrapper>
           )}

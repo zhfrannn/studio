@@ -47,8 +47,8 @@ const OnboardingScreen = ({
         EduBoard AI Editor
       </h1>
       <p className="mx-auto mt-2 max-w-2xl text-muted-foreground">
-        Pilih jenis konten yang ingin Anda buat atau pratinjau. AI akan membantu
-        mengisi konten berdasarkan template yang Anda pilih.
+        Choose the type of content you want to create or preview. The AI will
+        help fill the content based on the template you choose.
       </p>
     </div>
     <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -57,10 +57,10 @@ const OnboardingScreen = ({
         onClick={() => setMode('slide')}
       >
         <Presentation className="mx-auto mb-4 h-16 w-16 text-primary" />
-        <h2 className="font-headline text-2xl font-bold">Slide Presentasi</h2>
+        <h2 className="font-headline text-2xl font-bold">Presentation Slides</h2>
         <p className="mt-2 text-muted-foreground">
-          Buat presentasi edukasi terstruktur dengan 10 slide tentang topik
-          seperti kesiapsiagaan bencana.
+          Create a structured 10-slide educational presentation on topics like
+          disaster preparedness.
         </p>
       </div>
       <div
@@ -68,10 +68,10 @@ const OnboardingScreen = ({
         onClick={() => setMode('storyboard')}
       >
         <Instagram className="mx-auto mb-4 h-16 w-16 text-primary" />
-        <h2 className="font-headline text-2xl font-bold">Konten Storyboard</h2>
+        <h2 className="font-headline text-2xl font-bold">Storyboard Content</h2>
         <p className="mt-2 text-muted-foreground">
-          Rancang narasi visual 4-slide dalam format vertikal seperti Instagram
-          Story, padat dengan gambar dan teks.
+          Design a 4-slide visual narrative in a vertical format like an
+          Instagram Story, packed with images and text.
         </p>
       </div>
       <div
@@ -79,10 +79,10 @@ const OnboardingScreen = ({
         onClick={() => setMode('quiz')}
       >
         <Puzzle className="mx-auto mb-4 h-16 w-16 text-primary" />
-        <h2 className="font-headline text-2xl font-bold">Quiz Card Interaktif</h2>
+        <h2 className="font-headline text-2xl font-bold">Interactive Quiz Cards</h2>
         <p className="mt-2 text-muted-foreground">
-          Buat kartu kuis interaktif untuk menguji pemahaman dengan umpan balik
-          langsung.
+          Create interactive quiz cards to test understanding with instant
+          feedback.
         </p>
       </div>
       <div
@@ -90,10 +90,10 @@ const OnboardingScreen = ({
         onClick={() => setMode('printable')}
       >
         <Printer className="mx-auto mb-4 h-16 w-16 text-primary" />
-        <h2 className="font-headline text-2xl font-bold">Infografis A4</h2>
+        <h2 className="font-headline text-2xl font-bold">A4 Infographic</h2>
         <p className="mt-2 text-muted-foreground">
-          Hasilkan infografis satu halaman format A4 yang padat informasi dan
-          siap untuk dicetak.
+          Generate a single-page, information-dense A4 infographic ready for
+          printing.
         </p>
       </div>
     </div>
@@ -103,7 +103,7 @@ const OnboardingScreen = ({
         <div>
             <h2 className="font-headline text-2xl font-bold text-amber-600 dark:text-amber-400">Premium Content: Mini Game</h2>
             <p className="mt-2 text-muted-foreground">
-            Bangun skenario game tanggap bencana interaktif yang kontennya dapat digerakkan oleh AI.
+            Build interactive disaster response game scenarios with AI-driven content.
             </p>
         </div>
        </div>
@@ -118,11 +118,11 @@ export default function EduBoardPage() {
     <div className="container mx-auto px-4 py-12">
       <div className="mb-12 text-center">
         <h1 className="font-headline text-4xl font-bold md:text-5xl">
-          EduBoard Fisik
+          Physical EduBoard
         </h1>
         <p className="mx-auto mt-2 max-w-3xl text-muted-foreground">
-          Menjembatani dunia digital dan fisik untuk pembelajaran komunitas yang
-          inklusif dan berkelanjutan.
+          Bridging the digital and physical worlds for inclusive and sustainable
+          community learning.
         </p>
       </div>
 
@@ -141,14 +141,14 @@ export default function EduBoardPage() {
           <Card>
             <CardContent className="space-y-4 p-6">
               <h2 className="font-headline text-2xl font-bold">
-                Apa itu EduBoard?
+                What is an EduBoard?
               </h2>
               <p className="text-muted-foreground">
-                EduBoard adalah papan informasi fisik yang dirancang untuk
-                ditempatkan di ruang publik seperti sekolah, kantor desa, atau
-                pusat komunitas. Papan ini menampilkan ringkasan cerita, QR code
-                yang mengarah ke konten digital interaktif (video, komik,
-                kuis), dan informasi penting tentang kesiapsiagaan bencana.
+                EduBoard is a physical information board designed for public
+                spaces like schools, village offices, or community centers. It
+                displays story summaries, QR codes leading to interactive
+                digital content (videos, comics, quizzes), and essential
+                disaster preparedness information.
               </p>
             </CardContent>
           </Card>
@@ -156,24 +156,24 @@ export default function EduBoardPage() {
           <Card>
             <CardContent className="space-y-4 p-6">
               <h2 className="font-headline text-2xl font-bold">
-                Gunakan di Komunitas Anda
+                Use It in Your Community
               </h2>
               <p className="text-muted-foreground">
-                Kami mendorong sekolah, komunitas, dan relawan untuk menggunakan
-                EduBoard. Unduh aset desain kami secara gratis dan ikuti panduan
-                untuk memasangnya di lingkungan Anda.
+                We encourage schools, communities, and volunteers to use the
+                EduBoard. Download our design assets for free and follow the
+                guide to set it up in your environment.
               </p>
               <div className="flex flex-col gap-4 pt-2 sm:flex-row">
                 <Button size="lg" asChild>
                   <a href="#" download>
                     <Download className="mr-2 h-4 w-4" />
-                    Unduh Aset Poster
+                    Download Poster Assets
                   </a>
                 </Button>
                 <Button size="lg" variant="secondary" asChild>
                   <a href="#">
                     <Book className="mr-2 h-4 w-4" />
-                    Lihat Panduan
+                    View Guide
                   </a>
                 </Button>
               </div>
@@ -205,7 +205,7 @@ export default function EduBoardPage() {
                 className="mb-8"
               >
                 <ArrowLeft className="mr-2 h-4 w-4" />
-                Kembali ke Pilihan
+                Back to Selection
               </Button>
 
               {mode === 'slide' && <SlideCarousel />}
