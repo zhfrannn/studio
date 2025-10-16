@@ -1,8 +1,7 @@
-
 'use client';
 
 import { notFound } from 'next/navigation';
-import { stories as staticStories, getTranslatedStories } from '@/lib/data';
+import { getTranslatedStories } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
 import {
   Card,
@@ -19,9 +18,6 @@ import {
   PlayCircle,
   Info,
   Puzzle,
-  ArrowRight,
-  ChevronLeft,
-  ChevronRight,
 } from 'lucide-react';
 import InteractiveQuiz from '@/components/interactive-quiz';
 import {
@@ -31,25 +27,20 @@ import {
 import MotionWrapper from '@/components/motion-wrapper';
 import ScrollReveal from '@/components/ui/scroll-reveal';
 import { useLanguage } from '@/context/language-context';
-import type { Story } from '@/lib/types';
 import DigitalComic from '@/components/digital-comic';
-import Link from 'next/link';
-import Image from 'next/image';
 import RelatedStoryCarousel from '@/components/related-story-carousel';
 
 export default function StoryDetailPage({ params }: { params: { id: string } }) {
   const { language, dictionary } = useLanguage();
   const allStories = getTranslatedStories({ lang: language });
-  const storyId = params.id;
 
-  const story = allStories.find(s => s.id === storyId);
+  const story = allStories.find(s => s.id === params.id);
   
   if (!story) {
     notFound();
   }
   
-  const interactiveContent = getInteractiveContent(dictionary);
-  const content: InteractiveContent | undefined = interactiveContent[storyId];
+  const content: InteractiveContent | undefined = getInteractiveContent(dictionary)[story.id];
 
   const otherStories = allStories
     .filter(s => s.id !== story.id);
