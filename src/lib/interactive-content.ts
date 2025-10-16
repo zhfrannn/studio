@@ -40,42 +40,42 @@ export interface InteractiveContent {
 }
 
 const smongComic: Comic = {
-    title: 'Komik Digital: Kearifan Smong',
-    description: 'Ikuti kisah bagaimana kearifan lokal Smong menyelamatkan ribuan nyawa dalam format komik strip yang menarik.',
+    title: 'Digital Comic: The Wisdom of Smong',
+    description: 'Follow the story of how the local wisdom of Smong saved thousands of lives in an engaging comic strip format.',
     panels: [
         {
-            title: 'Di Bawah Pohon Beringin',
-            text: '“Nenek mengajarkan kami peringatan kuno di bawah pohon beringin tua...”',
+            title: 'Under the Banyan Tree',
+            text: '"Grandmother taught us the ancient warning under the old banyan tree..."',
             imageUrl: 'https://i.ibb.co/7dWp6cGz/Gemini-Generated-Image-y3jausy3jausy3ja.png',
             imageHint: 'elder teaching children'
         },
         {
-            title: 'Gempa Mengguncang',
-            text: '“Tiba-tiba, tanah bergetar hebat. Kami tahu ini bukan gempa biasa.”',
+            title: 'The Earth Shakes',
+            text: '"Suddenly, the ground shook violently. We knew this was no ordinary earthquake."',
             imageUrl: 'https://i.ibb.co/sv2Mhw6F/Gemini-Generated-Image-ubwgstubwgstubwg.png',
             imageHint: 'earthquake shaking village'
         },
         {
-            title: 'Lari! Jangan Kembali!',
-            text: '“Orang-orang berteriak, ‘Smong! Smong!’ sambil menunjuk ke arah laut yang surut.”',
+            title: 'Run! Don\'t Go Back!',
+            text: '"People screamed, \'Smong! Smong!\' while pointing towards the receding sea."',
             imageUrl: 'https://i.ibb.co/d4Zc2dW2/Gemini-Generated-Image-nep5q4nep5q4nep5.png',
             imageHint: 'people running uphill'
         },
         {
-            title: 'Menuju Bukit',
-            text: '“Kami semua berlari sekuat tenaga menuju perbukitan, meninggalkan segalanya.”',
+            title: 'Towards the Hills',
+            text: '"We all ran as fast as we could towards the hills, leaving everything behind."',
             imageUrl: 'https://i.ibb.co/0yrct9db/Gemini-Generated-Image-o3lyr0o3lyr0o3ly.png',
             imageHint: 'crowd climbing hill'
         },
         {
-            title: 'Lautan yang Murka',
-            text: '“Dari atas bukit, kami melihat gelombang raksasa menerjang desa kami.”',
+            title: 'The Raging Ocean',
+            text: '"From the top of the hill, we saw a giant wave crash into our village."',
             imageUrl: 'https://i.ibb.co/GQSD4TWr/Gemini-Generated-Image-muisyomuisyomuis.png',
             imageHint: 'tsunami wave hitting coast'
         },
         {
-            title: 'Syukur & Pelajaran',
-            text: '“Kami selamat karena mendengarkan nasihat leluhur. Smong adalah penyelamat kami.”',
+            title: 'Gratitude & Lessons',
+            text: '"We survived because we listened to our ancestors. Smong was our savior."',
             imageUrl: 'https://i.ibb.co/N2td66Hx/Gemini-Generated-Image-vpirzivpirzivpir.png',
             imageHint: 'survivors watching sunrise'
         },
@@ -83,42 +83,42 @@ const smongComic: Comic = {
 };
 
 const bakauComic: Comic = {
-    title: 'Komik: Hutan Bakau Penjaga Pantai',
-    description: 'Kisah inspiratif tentang bagaimana komunitas bersatu menanam kembali benteng alami mereka.',
+    title: 'Comic: Mangrove Forest, Guardian of the Coast',
+    description: 'An inspiring story of how a community united to replant their natural fortress.',
     panels: [
         {
-            title: 'Pantai yang Terkikis',
-            text: 'Dulu, pantai kami terus menerus terkikis oleh badai. Rumah-rumah di dekat pantai perlahan hancur.',
+            title: 'The Eroding Coastline',
+            text: 'In the past, our coast was constantly being eroded by storms. Houses near the beach were slowly destroyed.',
             imageUrl: 'https://i.ibb.co/PZHd26b4/Gemini-Generated-Image-421pmy421pmy421p.png',
             imageHint: 'eroded coastline storm'
         },
         {
-            title: 'Mengingat Nasihat Tetua',
-            text: 'Kami teringat cerita orang tua dulu, bahwa hutan bakau adalah benteng alami kami yang telah hilang.',
+            title: 'Remembering the Elders\' Advice',
+            text: 'We remembered the stories of our elders, that the mangrove forest was our lost natural fortress.',
             imageUrl: 'https://i.ibb.co/JWpk16NX/Gemini-Generated-Image-rsvte8rsvte8rsvt.png',
             imageHint: 'village elder storytelling'
         },
         {
-            title: 'Menanam Bibit Harapan',
-            text: 'Bersama-sama, para pemuda dan orang tua, kami mulai menanam kembali bibit bakau di sepanjang pesisir.',
+            title: 'Planting Seeds of Hope',
+            text: 'Together, the youth and the elderly, we began to replant mangrove seedlings along the coast.',
             imageUrl: 'https://i.ibb.co/qLMNkxFd/Gemini-Generated-Image-2b2mqh2b2mqh2b2m.png',
             imageHint: 'community planting mangroves'
         },
         {
-            title: 'Tantangan & Kegagalan',
-            text: 'Awalnya sulit, banyak bibit yang gagal tumbuh. Tapi kami tidak menyerah dan terus mencoba.',
+            title: 'Challenges & Failures',
+            text: 'It was difficult at first, many seedlings failed to grow. But we did not give up and kept trying.',
             imageUrl: 'https://i.ibb.co/fVtfWBkG/Gemini-Generated-Image-6n753u6n753u6n75.png',
             imageHint: 'failed mangrove sapling'
         },
         {
-            title: 'Benteng Alami Tumbuh Kuat',
-            text: 'Kini, hutan bakau telah tumbuh lebat. Akarnya yang kokoh mencengkeram tanah, menahan laju ombak.',
+            title: 'The Natural Fortress Grows Strong',
+            text: 'Now, the mangrove forest has grown dense. Its strong roots grip the soil, holding back the waves.',
             imageUrl: 'https://i.ibb.co/cKZnnyh5/Gemini-Generated-Image-t9i448t9i448t9i4.png',
             imageHint: 'dense mangrove forest'
         },
         {
-            title: 'Kehidupan Kembali',
-            text: 'Hutan ini tidak hanya melindungi desa, tapi juga menjadi rumah bagi ikan dan kepiting, memberi kami sumber penghidupan baru.',
+            title: 'Life Returns',
+            text: 'This forest not only protects the village, but also becomes a home for fish and crabs, providing us with a new livelihood.',
             imageUrl: 'https://i.ibb.co/bRz9Qck7/Gemini-Generated-Image-4rapqm4rapqm4rap.png',
             imageHint: 'fish crabs mangroves'
         },
@@ -126,42 +126,42 @@ const bakauComic: Comic = {
 };
 
 const dapurUmumComic: Comic = {
-    title: 'Komik: Dapur Umum Perdamaian',
-    description: 'Bagaimana sebuah dapur sederhana merajut kembali tali persaudaraan yang sempat terkoyak.',
+    title: 'Comic: The Community Kitchen of Peace',
+    description: 'How a simple kitchen re-wove the threads of brotherhood that were once torn.',
     panels: [
         {
-            title: 'Luka Pasca-Konflik',
-            text: 'Setelah konflik berakhir, masih ada banyak luka dan ketidakpercayaan di antara kami. Sulit untuk memulai kembali.',
+            title: 'Post-Conflict Wounds',
+            text: 'After the conflict ended, there were still many wounds and distrust among us. It was difficult to start over.',
             imageUrl: 'https://i.ibb.co/JWCgC8W2/Gemini-Generated-Image-higpgmhigpgmhigp.png',
             imageHint: 'sad village atmosphere'
         },
         {
-            title: 'Ide Sederhana: Makanan',
-            text: 'Beberapa dari kami, para ibu, berpikir: semua orang butuh makan, dan makanan bisa menyatukan.',
+            title: 'A Simple Idea: Food',
+            text: 'Some of us, the mothers, thought: everyone needs to eat, and food can unite.',
             imageUrl: 'https://i.ibb.co/zWHC2Vf7/Gemini-Generated-Image-6ohms66ohms66ohm.png',
             imageHint: 'women discussing plan'
         },
         {
-            title: 'Memulai Dapur Umum',
-            text: 'Kami mendirikan dapur sederhana. Siapapun boleh datang untuk makan, dan siapapun boleh membantu memasak.',
+            title: 'Starting the Community Kitchen',
+            text: 'We set up a simple kitchen. Anyone could come to eat, and anyone could help cook.',
             imageUrl: 'https://i.ibb.co/FLFgPs27/Gemini-Generated-Image-etuhnbetuhnbetuh.png',
             imageHint: 'setting up community kitchen'
         },
         {
-            title: 'Merajut Cerita di Atas Tungku',
-            text: 'Sambil memotong sayur dan mengaduk gulai, kami mulai berbicara, berbagi cerita, tawa, dan air mata.',
+            title: 'Weaving Stories Over the Stove',
+            text: 'While cutting vegetables and stirring curry, we began to talk, sharing stories, laughter, and tears.',
             imageUrl: 'https://i.ibb.co/gZymfGtt/Gemini-Generated-Image-p1tl3p1tl3p1tl3p.png',
             imageHint: 'community kitchen cooking'
         },
         {
-            title: 'Ruang Rekonsiliasi',
-            text: 'Dapur ini menjadi lebih dari tempat makan; ia menjadi ruang rekonsiliasi di mana dinding pemisah runtuh.',
+            title: 'A Space for Reconciliation',
+            text: 'This kitchen became more than a place to eat; it became a reconciliation space where dividing walls collapsed.',
             imageUrl: 'https://i.ibb.co/4ntNZGTH/Gemini-Generated-Image-5y1cbj5y1cbj5y1c.png',
             imageHint: 'people talking laughing'
         },
         {
-            title: 'Perdamaian dari Sepiring Nasi',
-            text: 'Kami belajar bahwa perdamaian bisa dimulai dari hal yang paling sederhana: sepiring nasi hangat dan hati yang terbuka.',
+            title: 'Peace from a Plate of Rice',
+            text: 'We learned that peace can start from the simplest thing: a plate of warm rice and an open heart.',
             imageUrl: 'https://i.ibb.co/T3f302F/Gemini-Generated-Image-rmhvlgrmhvlgrmhv.png',
             imageHint: 'people eating together happily'
         },
@@ -169,30 +169,30 @@ const dapurUmumComic: Comic = {
 };
 
 const lumbungPadiComic: Comic = {
-    title: 'Komik: Lumbung Padi Komunal',
-    description: 'Cerita tentang gotong royong masyarakat Gayo dalam menghadapi musim paceklik.',
+    title: 'Comic: Communal Rice Barn',
+    description: 'A story about the mutual help of the Gayo community in facing the lean season.',
     panels: [
         {
-            title: 'Panen Tak Menentu',
-            text: 'Di dataran tinggi Gayo, cuaca tidak selalu bisa ditebak. Kadang panen melimpah, kadang gagal total.',
+            title: 'Uncertain Harvests',
+            text: 'In the Gayo highlands, the weather is not always predictable. Sometimes the harvest is abundant, sometimes it fails completely.',
             imageUrl: 'https://i.ibb.co/XrSWCszM/Gemini-Generated-Image-mfguf9mfguf9mfgu.png',
             imageHint: 'gayo highlands farming'
         },
         {
-            title: 'Menghidupkan Tradisi',
-            text: 'Kami menghidupkan kembali tradisi lumbung bersama. Setiap keluarga menyisihkan sebagian panennya.',
+            title: 'Reviving Tradition',
+            text: 'We revived the tradition of a communal barn. Every family sets aside a portion of their harvest.',
             imageUrl: 'https://i.ibb.co/TxLMKmZd/Gemini-Generated-Image-o6m8b8o6m8b8o6m8.png',
             imageHint: 'putting rice into communal barn'
         },
         {
-            title: 'Jaring Pengaman Sosial',
-            text: 'Saat ada keluarga yang gagal panen, mereka bisa mengambil dari lumbung ini tanpa bunga atau utang.',
+            title: 'Social Safety Net',
+            text: 'When a family faces crop failure, they can take from this barn without interest or debt.',
             imageUrl: 'https://i.ibb.co/N2Hcz9Q6/Gemini-Generated-Image-nzlk8inzlk8inzlk.png',
             imageHint: 'sharing food community'
         },
         {
-            title: 'Kaya dalam Persaudaraan',
-            text: 'Lumbung ini adalah simbol persatuan kami. Dengan berbagi, kita semua menjadi lebih kuat.',
+            title: 'Rich in Brotherhood',
+            text: 'This barn is a symbol of our unity. By sharing, we all become stronger.',
             imageUrl: 'https://i.ibb.co/s9nftm6k/Gemini-Generated-Image-2yb53r2yb53r2yb5.png',
             imageHint: 'happy farming community'
         },
@@ -200,42 +200,42 @@ const lumbungPadiComic: Comic = {
 };
 
 const bahTangseComic: Comic = {
-    title: 'Komik: Bah Tangse, Sungai Murka',
-    description: 'Pelajaran pahit dari Tangse tentang pentingnya menjaga alam.',
+    title: 'Comic: Bah Tangse, The Raging River',
+    description: 'A bitter lesson from Tangse about the importance of protecting nature.',
     panels: [
         {
-            title: 'Malam yang Mencekam',
-            text: 'Hujan turun tanpa henti. Tiba-tiba, kami mendengar suara gemuruh yang bukan dari guntur.',
+            title: 'The Tense Night',
+            text: 'The rain fell relentlessly. Suddenly, we heard a rumbling sound that was not from thunder.',
             imageUrl: 'https://i.ibb.co/8gC04Tds/Gemini-Generated-Image-tzd2r9tzd2r9tzd2.png',
             imageHint: 'dark stormy night village'
         },
         {
-            title: 'Air Bah Datang',
-            text: 'Air sungai meluap dengan liar, warnanya hitam pekat, membawa puluhan pohon gelondongan raksasa.',
+            title: 'The Flash Flood Arrives',
+            text: 'The river water overflowed wildly, its color pitch black, carrying dozens of giant logs.',
             imageUrl: 'https://i.ibb.co/MxDVKgQ8/Gemini-Generated-Image-ptyvfqptyvfqptyv.png',
             imageHint: 'raging flash flood logs'
         },
         {
-            title: 'Teriakan Peringatan',
-            text: 'Kepala desa berteriak melalui pengeras suara masjid, "Air naik! Selamatkan diri! Lari ke tempat tinggi!"',
+            title: 'The Warning Cry',
+            text: 'The village head shouted through the mosque\'s loudspeaker, "The water is rising! Save yourselves! Run to high ground!"',
             imageUrl: 'https://i.ibb.co/Q31hqKRj/Gemini-Generated-Image-mbv9yumbv9yumbv9.png',
             imageHint: 'mosque speaker warning'
         },
         {
-            title: 'Lari ke Tempat Tinggi',
-            text: 'Dalam gelap gulita, kami berlari sekuat tenaga ke perbukitan, hanya membawa pakaian di badan.',
+            title: 'Running to High Ground',
+            text: 'In the pitch dark, we ran as fast as we could to the hills, with only the clothes on our backs.',
             imageUrl: 'https://i.ibb.co/8gvn36Hj/Gemini-Generated-Image-xbiewaxbiewaxbie.png',
             imageHint: 'people running uphill dark'
         },
         {
-            title: 'Pagi Penuh Lumpur',
-            text: 'Pagi harinya, yang tersisa hanyalah lumpur tebal dan puing-puing. Kami sadar, ini akibat penebangan liar.',
+            title: 'The Muddy Morning',
+            text: 'The next morning, only thick mud and debris remained. We realized this was the result of illegal logging.',
             imageUrl: 'https://i.ibb.co/gMTdhPdj/Gemini-Generated-Image-diwjbbdiwjbbdiwj.png',
             imageHint: 'village destroyed mud'
         },
         {
-            title: 'Pelajaran & Sumpah',
-            text: 'Bah Tangse adalah pelajaran pahit. Sejak saat itu, kami bersumpah untuk menjaga dan menanam kembali hutan kami.',
+            title: 'The Lesson & The Vow',
+            text: 'Bah Tangse was a bitter lesson. Since then, we have vowed to protect and replant our forests.',
             imageUrl: 'https://i.ibb.co/gMvs88K7/Gemini-Generated-Image-6ijxun6ijxun6ijx.png',
             imageHint: 'community planting trees'
         }
@@ -243,42 +243,42 @@ const bahTangseComic: Comic = {
 };
 
 const apiBukitComic: Comic = {
-  title: 'Komik: Api di Bukit Barisan',
-  description: 'Perjuangan Masyarakat Peduli Api melindungi hutan Gayo.',
+  title: 'Comic: Fire on the Barisan Hills',
+  description: 'The struggle of the Fire-Care Community to protect the Gayo forests.',
   panels: [
     {
-      title: 'Ancaman Musim Kering',
-      text: 'Setiap musim kemarau, hutan pinus yang indah ini menjadi sangat rentan terbakar. Sedikit percikan bisa menjadi bencana.',
+      title: 'The Dry Season Threat',
+      text: 'Every dry season, this beautiful pine forest becomes very vulnerable to fire. A small spark can be a disaster.',
       imageUrl: 'https://i.ibb.co/Nd4BCwnh/Gemini-Generated-Image-mx2j89mx2j89mx2j.png',
       imageHint: 'dry pine forest'
     },
     {
-      title: 'Patroli Sukarela',
-      text: 'Kami membentuk kelompok Masyarakat Peduli Api, berpatroli secara sukarela untuk mencegah kebakaran.',
+      title: 'Voluntary Patrols',
+      text: 'We formed the Fire-Care Community, patrolling voluntarily to prevent fires.',
       imageUrl: 'https://i.ibb.co/xQ84Wh9/Gemini-Generated-Image-fttc78fttc78fttc.png',
       imageHint: 'community patrolling forest'
     },
     {
-        title: 'Edukasi Warga',
-        text: 'Yang terpenting, kami memberikan penyuluhan kepada warga agar tidak membuka lahan dengan cara membakar.',
+        title: 'Educating Residents',
+        text: 'Most importantly, we educate residents not to clear land by burning.',
         imageUrl: 'https://i.ibb.co/YwZvdXm/Gemini-Generated-Image-k3ov2dk3ov2dk3ov.png',
         imageHint: 'community meeting education'
     },
     {
-      title: 'Memadamkan Api',
-      text: 'Saat api muncul, kami bekerja sama dengan peralatan seadanya untuk memadamkannya sebelum membesar.',
+      title: 'Extinguishing the Fire',
+      text: 'When a fire starts, we work together with whatever equipment we have to extinguish it before it grows.',
       imageUrl: 'https://i.ibb.co/wrwhkWjG/Gemini-Generated-Image-1tus9y1tus9y1tus.png',
       imageHint: 'people fighting forest fire'
     },
     {
-        title: 'Tanggung Jawab Bersama',
-        text: 'Ini bukan pekerjaan pemerintah, ini adalah tanggung jawab kami bersama. Hutan ini adalah sumber air kami.',
+        title: 'A Shared Responsibility',
+        text: 'This is not the government\'s job; it is our shared responsibility. This forest is our water source.',
         imageUrl: 'https://i.ibb.co/yFC19D6y/Gemini-Generated-Image-icr3a2icr3a2icr3.png',
         imageHint: 'community shaking hands'
     },
     {
-      title: 'Damai dengan Alam',
-      text: 'Menjaga hutan ini adalah cara kami membangun perdamaian dengan alam, demi masa depan anak cucu.',
+      title: 'Peace with Nature',
+      text: 'Protecting this forest is our way of making peace with nature, for the future of our children.',
       imageUrl: 'https://i.ibb.co/39bW7xJz/Gemini-Generated-Image-x2zpffx2zpffx2zp.png',
       imageHint: 'green forest sunrise'
     }
@@ -286,42 +286,42 @@ const apiBukitComic: Comic = {
 };
 
 const kopiGayoComic: Comic = {
-  title: 'Komik: Kopi Gayo, Aroma Perdamaian',
-  description: 'Kisah bangkitnya petani kopi Gayo pasca-konflik.',
+  title: 'Comic: Gayo Coffee, The Aroma of Peace',
+  description: 'The story of the revival of Gayo coffee farmers post-conflict.',
   panels: [
     {
-      title: 'Kebun yang Terlantar',
-      text: 'Selama konflik, banyak kebun kopi kami yang telantar dan ditumbuhi semak belukar.',
+      title: 'The Abandoned Plantations',
+      text: 'During the conflict, many of our coffee plantations were abandoned and overgrown with weeds.',
       imageUrl: 'https://i.ibb.co/N612z0S8/Gemini-Generated-Image-fc3gznfc3gznfc3g.png',
       imageHint: 'abandoned coffee plantation'
     },
     {
-      title: 'Kembali dari Nol',
-      text: 'Setelah damai, kami kembali. Memulainya lagi dari nol sangat berat, namun kami melihat harapan.',
+      title: 'Returning from Scratch',
+      text: 'After peace, we returned. Starting again from scratch was very hard, but we saw hope.',
       imageUrl: 'https://i.ibb.co/qYDz7XHx/Gemini-Generated-Image-72mog772mog772mo.png',
       imageHint: 'farmer looking at overgrown field'
     },
     {
-      title: 'Harapan di Biji Kopi',
-      text: 'Kami bekerja keras, belajar teknik bertani yang lebih baik, melihat harapan baru di setiap biji kopi.',
+      title: 'Hope in a Coffee Bean',
+      text: 'We worked hard, learned better farming techniques, seeing new hope in every coffee bean.',
       imageUrl: 'https://i.ibb.co/Gr8hPCK/Gemini-Generated-Image-a3lug5a3lug5a3lu.png',
       imageHint: 'farmer holding coffee beans'
     },
     {
-      title: 'Membangun Koperasi',
-      text: 'Kami membentuk koperasi untuk saling menguatkan, belajar teknik baru, dan memasarkan kopi bersama.',
+      title: 'Building a Cooperative',
+      text: 'We formed a cooperative to support each other, learn new techniques, and market the coffee together.',
       imageUrl: 'https://i.ibb.co/gL1dyvWm/Gemini-Generated-Image-wneukxwneukxwneu.png',
       imageHint: 'farmers meeting cooperative'
     },
     {
-        title: 'Menjadi Dikenal Dunia',
-        text: 'Perlahan tapi pasti, kopi Gayo mulai dikenal dunia, membawa nama baik bagi daerah kami.',
+        title: 'Becoming Known to the World',
+        text: 'Slowly but surely, Gayo coffee became known to the world, bringing a good name to our region.',
         imageUrl: 'https://i.ibb.co/BxTrr9y/Gemini-Generated-Image-ntsba2ntsba2ntsb.png',
         imageHint: 'coffee export shipping'
     },
     {
-      title: 'Aroma Perdamaian',
-      text: 'Kini, aroma kopi Gayo yang mendunia adalah aroma kerja keras, harapan, dan perdamaian yang telah kami raih.',
+      title: 'The Aroma of Peace',
+      text: 'Now, the world-renowned aroma of Gayo coffee is the aroma of hard work, hope, and the peace we have achieved.',
       imageUrl: 'https://i.ibb.co/65QLYw8/Gemini-Generated-Image-xp78xcxp78xcxp78.png',
       imageHint: 'cup of steaming gayo coffee'
     }
@@ -329,42 +329,42 @@ const kopiGayoComic: Comic = {
 };
 
 const pemudaAdatComic: Comic = {
-  title: 'Komik: Pemuda Penjaga Adat',
-  description: 'Menghidupkan kembali tari Seudati untuk menjauhkan pemuda dari kekerasan.',
+  title: 'Comic: The Youth Guardians of Custom',
+  description: 'Reviving the Seudati dance to keep youth away from violence.',
   panels: [
     {
-      title: 'Energi yang Hilang Arah',
-      text: 'Pasca-konflik, banyak pemuda kehilangan arah. Energi mereka yang besar terkadang tersalurkan ke hal negatif.',
+      title: 'Misdirected Energy',
+      text: 'Post-conflict, many young people lost their way. Their great energy was sometimes channeled into negative things.',
       imageUrl: 'https://i.ibb.co/GvdSwzQf/Gemini-Generated-Image-3pu65m3pu65m3pu6.png',
       imageHint: 'disaffected youth group'
     },
     {
-      title: 'Sebuah Panggilan',
-      text: 'Kami, beberapa pemuda yang lebih tua, merasa harus melakukan sesuatu untuk komunitas.',
+      title: 'A Calling',
+      text: 'We, some of the older youth, felt we had to do something for the community.',
       imageUrl: 'https://i.ibb.co/hFpC4fNv/Gemini-Generated-Image-2ct3h82ct3h82ct3.png',
       imageHint: 'youth leaders discussing'
     },
     {
-      title: 'Menghidupkan Sanggar',
-      text: 'Kami memutuskan untuk menghidupkan kembali sanggar tari Seudati, tarian yang mengajarkan disiplin dan kerja sama.',
+      title: 'Reviving the Studio',
+      text: 'We decided to revive the Seudati dance troupe, a dance that teaches discipline and cooperation.',
       imageUrl: 'https://i.ibb.co/FqH0xKx3/Gemini-Generated-Image-qq18guqq18guqq18.png',
       imageHint: 'reopening old building'
     },
     {
-      title: 'Berlatih Bersama',
-      text: 'Awalnya sulit, tapi perlahan sanggar kami mulai ramai. Para pemuda menyalurkan energi mereka ke dalam tarian.',
+      title: 'Practicing Together',
+      text: 'It was difficult at first, but slowly our troupe began to grow. The youth channeled their energy into the dance.',
       imageUrl: 'https://i.ibb.co/d05SD259/Gemini-Generated-Image-esu33aesu33aesu3.png',
       imageHint: 'youth practicing seudati dance'
     },
     {
-        title: 'Ekspresi Positif',
-        text: 'Sanggar menjadi ruang aman bagi pemuda untuk berekspresi secara positif dan belajar nilai-nilai luhur.',
+        title: 'Positive Expression',
+        text: 'The studio became a safe space for youth to express themselves positively and learn noble values.',
         imageUrl: 'https://i.ibb.co/NgQtKFvQ/Gemini-Generated-Image-9kobq9kobq9kobq9.png',
         imageHint: 'young dancers smiling'
     },
     {
-      title: 'Jembatan Antar Desa',
-      text: 'Melalui tarian, kami membangun jembatan antar desa dan menciptakan ikatan komunitas yang lebih kuat.',
+      title: 'A Bridge Between Villages',
+      text: 'Through dance, we build bridges between villages and create a stronger community bond.',
       imageUrl: 'https://i.ibb.co/MDmNGYvr/Gemini-Generated-Image-sqvrxesqvrxesqvr.png',
       imageHint: 'seudati dance performance'
     }
@@ -372,42 +372,42 @@ const pemudaAdatComic: Comic = {
 };
 
 const perempuanPenganyamComic: Comic = {
-  title: 'Komik: Perempuan Penganyam Harapan',
-  description: 'Kisah janda korban tsunami yang bangkit dengan membentuk kelompok kerajinan anyaman.',
+  title: 'Comic: The Women Weavers of Hope',
+  description: 'The story of tsunami widows who rose up by forming a weaving craft group.',
   panels: [
     {
-      title: 'Duka dan Ketidakpastian',
-      text: 'Tsunami merenggut suami dan rumah kami, meninggalkan kami dalam duka dan ketidakpastian.',
+      title: 'Grief and Uncertainty',
+      text: 'The tsunami took our husbands and our homes, leaving us in grief and uncertainty.',
       imageUrl: 'https://i.ibb.co/JwwT5gf9/Gemini-Generated-Image-d4jht0d4jht0d4jh.png',
       imageHint: 'sad woman looking at ocean'
     },
     {
-      title: 'Menganyam sebagai Terapi',
-      text: 'Kami berkumpul dan mulai menganyam dengan daun pandan. Sambil menganyam, kami saling berbagi cerita dan menguatkan.',
+      title: 'Weaving as Therapy',
+      text: 'We gathered and began weaving with pandan leaves. While weaving, we shared stories and strengthened each other.',
       imageUrl: 'https://i.ibb.co/N2shQ8zW/Gemini-Generated-Image-lt0y0glt0y0glt0y.png',
       imageHint: 'women weaving together'
     },
     {
-        title: 'Karya dari Hati',
-        text: 'Anyaman ini bukan sekadar tikar atau tas, ini adalah terapi dan curahan hati kami.',
+        title: 'Creations from the Heart',
+        text: 'This weaving is not just a mat or a bag; it is our therapy and the outpouring of our hearts.',
         imageUrl: 'https://i.ibb.co/9m56wN9M/Gemini-Generated-Image-6hbsja6hbsja6hbs.png',
         imageHint: 'closeup hands weaving'
     },
     {
-      title: 'Kemandirian Ekonomi',
-      text: 'Perlahan, produk kami mulai dikenal dan pesanan datang. Kami mendapatkan penghasilan sendiri.',
+      title: 'Economic Independence',
+      text: 'Slowly, our products became known and orders came in. We earned our own income.',
       imageUrl: 'https://i.ibb.co/DDGWWjDV/Gemini-Generated-Image-2onqdx2onqdx2onq.png',
       imageHint: 'woven bags and mats market'
     },
     {
-        title: 'Menjadi Berdaya',
-        text: 'Kami tidak lagi hanya korban, kami adalah penyintas yang berdaya, yang bisa menghidupi keluarga.',
+        title: 'Becoming Empowered',
+        text: 'We are no longer just victims; we are empowered survivors who can support our families.',
         imageUrl: 'https://i.ibb.co/RkGvwjR8/Gemini-Generated-Image-pucmhfpucmhfpucm.png',
         imageHint: 'woman proudly holding woven bag'
     },
     {
-      title: 'Keluarga Baru',
-      text: 'Kelompok ini menjadi keluarga baru kami, tempat kami menenun kembali harapan untuk masa depan.',
+      title: 'A New Family',
+      text: 'This group became our new family, a place where we weave back hope for the future.',
       imageUrl: 'https://i.ibb.co/846HCc3H/Gemini-Generated-Image-sh6lbush6lbush6l.png',
       imageHint: 'group of happy women smiling'
     }
@@ -415,42 +415,42 @@ const perempuanPenganyamComic: Comic = {
 };
 
 const arsitekturComic: Comic = {
-  title: 'Komik: Arsitektur Rumah Panggung',
-  description: 'Menggali kembali kearifan Rumoh Aceh sebagai inspirasi bangunan tahan gempa.',
+  title: 'Comic: Stilt House Architecture',
+  description: 'Rediscovering the wisdom of Rumoh Aceh as inspiration for earthquake-resistant buildings.',
   panels: [
     {
-      title: 'Rumoh Aceh yang Bertahan',
-      text: 'Saat gempa dan tsunami merobohkan banyak bangunan modern, kami melihat banyak Rumoh Aceh yang masih berdiri kokoh.',
+      title: 'The Enduring Rumoh Aceh',
+      text: 'When the earthquake and tsunami destroyed many modern buildings, we saw many Rumoh Aceh still standing strong.',
       imageUrl: 'https://i.ibb.co/ycjpYJDF/Gemini-Generated-Image-k7l0glk7l0glk7l0.png',
       imageHint: 'aceh house after tsunami'
     },
     {
-      title: 'Konstruksi yang Fleksibel',
-      text: 'Struktur panggung dengan konstruksi kayu yang fleksibel terbukti mampu meredam guncangan gempa.',
+      title: 'A Flexible Construction',
+      text: 'The stilt structure with its flexible wooden construction proved capable of absorbing earthquake shocks.',
       imageUrl: 'https://i.ibb.co/Q7VdjXBn/Gemini-Generated-Image-c9fxgzc9fxgzc9fx.png',
       imageHint: 'diagram of stilt house structure'
     },
     {
-      title: 'Adaptif Terhadap Lingkungan',
-      text: 'Kolong di bawah rumah tidak hanya serbaguna, tapi juga memberi jalan bagi air saat terjadi banjir atau genangan.',
+      title: 'Adaptive to the Environment',
+      text: 'The space underneath the house is not only versatile but also provides a path for water in case of floods.',
       imageUrl: 'https://i.ibb.co/KdDRNDF/Gemini-Generated-Image-imaeuhimaeuhimae.png',
       imageHint: 'water flowing under stilt house'
     },
     {
-        title: 'Membuka Mata',
-        text: 'Ini membuka mata kami. Arsitektur nenek moyang kita ternyata luar biasa dan sangat relevan.',
+        title: 'An Eye-Opener',
+        text: 'This opened our eyes. The architecture of our ancestors is extraordinary and highly relevant.',
         imageUrl: 'https://i.ibb.co/PG545YGD/Gemini-Generated-Image-iof1g5iof1g5iof1.png',
         imageHint: 'people studying old house'
     },
     {
-        title: 'Inspirasi untuk Masa Depan',
-        text: 'Kami mulai mengadvokasikan dan membangun kembali rumah dengan mengadaptasi prinsip-prinsip Rumoh Aceh.',
+        title: 'Inspiration for the Future',
+        text: 'We began to advocate for and rebuild houses by adapting the principles of Rumoh Aceh.',
         imageUrl: 'https://i.ibb.co/wrZyYXVc/Gemini-Generated-Image-ywlmvrywlmvrywlm.png',
         imageHint: 'architect drawing new house plan'
     },
     {
-      title: 'Membangun Masa Depan',
-      text: 'Ini bukan kembali ke masa lalu, tapi mengambil pelajaran terbaik dari masa lalu untuk membangun masa depan yang lebih aman.',
+      title: 'Building the Future',
+      text: 'This is not about returning to the past, but taking the best lessons from the past to build a safer future.',
       imageUrl: 'https://i.ibb.co/JfnLPtj/Gemini-Generated-Image-wo8rv7wo8rv7wo8r.png',
       imageHint: 'modern house with traditional aceh design'
     }
@@ -458,42 +458,42 @@ const arsitekturComic: Comic = {
 };
 
 const seniTraumaComic: Comic = {
-  title: 'Komik: Seni Melawan Trauma',
-  description: 'Bagaimana seniman muda Banda Aceh menggunakan mural untuk memulihkan kota.',
+  title: 'Comic: Art Against Trauma',
+  description: 'How young Banda Aceh artists use murals to heal the city.',
   panels: [
     {
-      title: 'Dinding Bisu Pasca-Tsunami',
-      text: 'Banda Aceh pasca-tsunami penuh dengan dinding-dinding bisu yang menjadi saksi tragedi. Suasananya terasa berat.',
+      title: 'The Silent Walls Post-Tsunami',
+      text: 'Post-tsunami Banda Aceh was full of silent walls that witnessed the tragedy. The atmosphere felt heavy.',
       imageUrl: 'https://i.ibb.co/PZFB87MM/Gemini-Generated-Image-yr5r75yr5r75yr5r.png',
       imageHint: 'ruined city wall'
     },
     {
-      title: 'Panggilan untuk Seniman',
-      text: 'Sebagai seniman, kami merasa terpanggil untuk melakukan sesuatu, untuk menyembuhkan luka kota dengan cara kami.',
+      title: 'A Call for Artists',
+      text: 'As artists, we felt called to do something, to heal the city\'s wounds in our own way.',
       imageUrl: 'https://i.ibb.co/qMvHYSfd/Gemini-Generated-Image-9zglxq9zglxq9zgl.png',
       imageHint: 'group of artists planning'
     },
     {
-      title: 'Memberi Warna Baru',
-      text: 'Kami mulai melukis mural di dinding publik, bukan untuk melupakan, tapi untuk memberi warna baru pada ingatan.',
+      title: 'Giving New Color',
+      text: 'We started painting murals on public walls, not to forget, but to give new color to memory.',
       imageUrl: 'https://i.ibb.co/5XGSLv5c/Gemini-Generated-Image-d5p172d5p172d5p1.png',
       imageHint: 'artist painting mural on wall'
     },
     {
-        title: 'Terapi Melalui Seni',
-        text: 'Proses melukis bersama ini menjadi terapi bagi kami dan komunitas. Dinding yang suram menjadi galeri terbuka.',
+        title: 'Therapy Through Art',
+        text: 'This process of painting together became therapy for us and the community. The gloomy walls became an open gallery.',
         imageUrl: 'https://i.ibb.co/1GzKfrWz/Gemini-Generated-Image-2hh0ld2hh0ld2hh0.png',
         imageHint: 'colorful community mural'
     },
     {
-        title: 'Harapan di Setiap Goresan',
-        text: 'Kami melukis tentang harapan, ketahanan, kebersamaan, dan keindahan Aceh yang tak pernah padam.',
+        title: 'Hope in Every Stroke',
+        text: 'We painted about hope, resilience, togetherness, and the undying beauty of Aceh.',
         imageUrl: 'https://i.ibb.co/3ymkCsBm/Gemini-Generated-Image-363z96363z96363z.png',
         imageHint: 'closeup mural painting hope'
     },
     {
-      title: 'Menyembuhkan Luka Kota',
-      text: 'Seni menjadi cara kami menyembuhkan luka kota dan jiwa kami, mengubah trauma menjadi harapan.',
+      title: 'Healing the City\'s Wounds',
+      text: 'Art became our way of healing the city\'s wounds and our own souls, transforming trauma into hope.',
       imageUrl: 'https://i.ibb.co/pjr6h7s0/Gemini-Generated-Image-ikoughikoughikou.png',
       imageHint: 'children interacting with mural'
     }
@@ -501,42 +501,42 @@ const seniTraumaComic: Comic = {
 };
 
 const nelayanComic: Comic = {
-  title: 'Komik: Kearifan Nelayan',
-  description: 'Kisah nelayan tradisional yang membaca tanda alam untuk melaut.',
+  title: 'Comic: The Wisdom of Fishermen',
+  description: 'The story of traditional fishermen who read the signs of nature to sail.',
   panels: [
     {
-      title: 'Kompas Langit dan Laut',
-      text: 'Kami para nelayan tidak punya GPS canggih. Kompas kami adalah langit dan laut itu sendiri.',
+      title: 'The Sky and Sea Compass',
+      text: 'We fishermen don\'t have fancy GPS. Our compass is the sky and the sea itself.',
       imageUrl: 'https://i.ibb.co/zhj5vRfQ/Gemini-Generated-Image-yz9meiyz9meiyz9m.png',
       imageHint: 'fisherman at night starry sky'
     },
     {
-      title: 'Membaca Rasi Bintang',
-      text: 'Ayah mengajari cara membaca rasi bintang Orion, atau Bintang Tiga, untuk mengetahui arah pulang.',
+      title: 'Reading the Constellations',
+      text: 'My father taught me how to read the Orion constellation, or \'Bintang Tiga\', to know the way home.',
       imageUrl: 'https://i.ibb.co/NgbyjjMf/Gemini-Generated-Image-ped9eaped9eaped9.png',
       imageHint: 'orion constellation over sea'
     },
     {
-      title: 'Tanda dari Satwa',
-      text: 'Jika lumba-lumba berenang mendekati pantai, itu adalah pertanda cuaca akan buruk. Kami belajar dari perilaku hewan.',
+      title: 'Signs from Animals',
+      text: 'If dolphins swim close to the shore, it is a sign the weather will be bad. We learn from animal behavior.',
       imageUrl: 'https://i.ibb.co/XZQgHWxH/Gemini-Generated-Image-a8gbcxa8gbcxa8gb.png',
       imageHint: 'dolphins swimming near coast'
     },
     {
-        title: 'Warna Air dan Ikan',
-        text: 'Kami tahu kapan ikan berkumpul hanya dengan melihat warna air dan jenis burung yang terbang di atasnya.',
+        title: 'The Color of Water and Fish',
+        text: 'We know when fish gather just by looking at the color of the water and the type of birds flying above.',
         imageUrl: 'https://i.ibb.co/gCpZCzB/Gemini-Generated-Image-4mvuio4mvuio4mvu.png',
         imageHint: 'seabirds diving for fish'
     },
     {
-        title: 'Warisan Generasi',
-        text: 'Pengetahuan ini tidak ada di buku, ini diwariskan dari ayah ke anak, dari satu generasi nelayan ke generasi berikutnya.',
+        title: 'Generational Heritage',
+        text: 'This knowledge is not in books; it is passed down from father to son, from one generation of fishermen to the next.',
         imageUrl: 'https://i.ibb.co/kVgdrTbg/Gemini-Generated-Image-h9xlylh9xlylh9xl.png',
         imageHint: 'father teaching son on boat'
     },
     {
-      title: 'Ilmu Kehidupan',
-      text: 'Ini adalah ilmu kehidupan yang membuat kami bisa bersahabat dengan lautan dan pulang dengan selamat.',
+      title: 'The Science of Life',
+      text: 'This is the science of life that allows us to be friends with the ocean and return home safely.',
       imageUrl: 'https://i.ibb.co/4wvv5KV3/Gemini-Generated-Image-lrl3ielrl3ielrl3.png',
       imageHint: 'fishing boat returning at sunrise'
     }
@@ -544,42 +544,42 @@ const nelayanComic: Comic = {
 };
 
 const sumurTuaComic: Comic = {
-  title: 'Komik: Sumur Tua Sumber Kehidupan',
-  description: 'Bagaimana sumur kuno menyelamatkan desa dari kekeringan.',
+  title: 'Comic: The Old Well, Source of Life',
+  description: 'How an ancient well saved a village from drought.',
   panels: [
     {
-      title: 'Kekeringan Panjang',
-      text: 'Musim kemarau tahun itu sangat panjang. Sungai dan sumur modern kami mengering. Kami mulai putus asa.',
+      title: 'The Long Drought',
+      text: 'The dry season that year was very long. Our rivers and modern wells dried up. We began to despair.',
       imageUrl: 'https://i.ibb.co/6JJCYJZw/Gemini-Generated-Image-48cp6g48cp6g48cp.png',
       imageHint: 'cracked dry earth'
     },
     {
-      title: 'Mengingat Warisan',
-      text: 'Seorang tetua teringat akan sebuah sumur tua di pinggir hutan yang sudah lama tak terpakai.',
+      title: 'Remembering a Legacy',
+      text: 'A village elder remembered an old well on the edge of the forest that had long been unused.',
       imageUrl: 'https://i.ibb.co/1tC6SMg3/Gemini-Generated-Image-as3nydas3nydas3n.png',
       imageHint: 'old man pointing towards forest'
     },
     {
-      title: 'Membersihkan Sumur',
-      text: 'Dengan ragu, kami membersihkan sumur yang dibangun dengan cincin batu dan ditutupi pohon besar itu.',
+      title: 'Cleaning the Well',
+      text: 'Hesitantly, we cleaned the well, which was built with stone rings and covered by a large tree.',
       imageUrl: 'https://i.ibb.co/RG9HYJVM/Gemini-Generated-Image-1uj5031uj5031uj5.png',
       imageHint: 'community cleaning old well'
     },
     {
-      title: 'Mata Air yang Ajaib',
-      text: 'Ajaib! Di dasarnya masih ada air jernih yang tak pernah kering. Leluhur kami membangunnya tepat di atas mata air.',
+      title: 'A Miraculous Spring',
+      text: 'Miraculously! At the bottom, there was still clear water that never ran out. Our ancestors built it right on a large spring.',
       imageUrl: 'https://i.ibb.co/N2DZQFsc/Gemini-Generated-Image-4o62wj4o62wj4o62.png',
       imageHint: 'clear water in old well'
     },
     {
-        title: 'Sumber Kehidupan',
-        text: 'Sumur tua itu menjadi satu-satunya sumber air bersih bagi seluruh desa selama sisa musim kemarau.',
+        title: 'Source of Life',
+        text: 'That old well became the only source of clean water for the entire village for the rest of the dry season.',
         imageUrl: 'https://i.ibb.co/BKNPTWgd/Gemini-Generated-Image-279br9279br9279b.png',
         imageHint: 'people queuing for water'
     },
     {
-        title: 'Pelajaran Berharga',
-        text: 'Kami belajar bahwa ada kearifan dalam peninggalan masa lalu yang harus kami jaga dan lestarikan.',
+        title: 'A Valuable Lesson',
+        text: 'We learned that there is wisdom in the relics of the past that we must preserve.',
         imageUrl: 'https://i.ibb.co/FLhZFwvy/Gemini-Generated-Image-t1ww3it1ww3it1ww.png',
         imageHint: 'community gathered around old well'
     }
@@ -587,42 +587,42 @@ const sumurTuaComic: Comic = {
 };
 
 const ilmuFalakComic: Comic = {
-  title: 'Komik: Ilmu Falak di Dayah',
-  description: 'Mengungkap peran dayah dalam mengajarkan astronomi untuk kehidupan.',
+  title: 'Comic: Astronomy in the Dayah',
+  description: 'Revealing the role of dayahs in teaching astronomy for life.',
   panels: [
     {
-      title: 'Belajar di Dayah',
-      text: 'Banyak yang mengira dayah hanya tempat belajar Al-Quran, tapi kami juga mempelajari Ilmu Falak (astronomi).',
+      title: 'Studying in a Dayah',
+      text: 'Many think a dayah is only a place to study the Quran, but we also study Ilmu Falak (astronomy).',
       imageUrl: 'https://i.ibb.co/Rk9pNtJp/Gemini-Generated-Image-8m38498m38498m38.png',
       imageHint: 'students studying in dayah'
     },
     {
-      title: 'Menghitung Posisi Bintang',
-      text: 'Kami menghitung posisi bintang untuk menentukan awal bulan puasa, arah kiblat, dan waktu shalat.',
+      title: 'Calculating Star Positions',
+      text: 'We calculate the position of the stars to determine the beginning of the fasting month, the qibla direction, and prayer times.',
       imageUrl: 'https://i.ibb.co/DHNkQTGn/Gemini-Generated-Image-lr9x50lr9x50lr9x.png',
       imageHint: 'teacher pointing at stars map'
     },
     {
-      title: 'Ilmu untuk Nelayan',
-      text: 'Ilmu yang sama ternyata juga bermanfaat bagi nelayan di pesisir untuk navigasi dan menentukan pasang surut.',
+      title: 'Knowledge for Fishermen',
+      text: 'The same science is also useful for fishermen on the coast for navigation and determining tides.',
       imageUrl: 'https://i.ibb.co/d0dtbX3X/Gemini-Generated-Image-168pi168pi168pi1.png',
       imageHint: 'scholar talking to fisherman'
     },
     {
-        title: 'Rujukan Masyarakat',
-        text: 'Para santri yang pulang ke kampungnya sering menjadi rujukan, memberitahu arah bintang utara atau kapan pasang tertinggi.',
+        title: 'Community Reference',
+        text: 'Students returning to their villages often become a reference, telling the position of the north star or when the highest tide is.',
         imageUrl: 'https://i.ibb.co/FLygk1L4/Gemini-Generated-Image-50j9v650j9v650j9.png',
         imageHint: 'student helping community'
     },
     {
-        title: 'Ilmu Agama dan Kehidupan',
-        text: 'Ada hubungan erat antara langit dan laut, antara ilmu agama dan ilmu kehidupan.',
+        title: 'Religious and Life Sciences',
+        text: 'There is a close relationship between the sky and the sea, between religious knowledge and the science of life.',
         imageUrl: 'https://i.ibb.co/xS91Wwgz/Gemini-Generated-Image-j2fi8xj2fi8xj2fi.png',
         imageHint: 'mosque against starry sky'
     },
     {
-      title: 'Untuk Kebaikan Bersama',
-      text: 'Kami belajar bahwa semua ilmu berasal dari Tuhan dan bisa dimanfaatkan untuk kebaikan bersama, di darat maupun di lautan.',
+      title: 'For the Common Good',
+      text: 'We learn that all knowledge comes from God and can be used for the common good, on land and at sea.',
       imageUrl: 'https://i.ibb.co/0VfjNWDg/Gemini-Generated-Image-z7pvrxz7pvrxz7pv.png',
       imageHint: 'night sky over fishing village'
     }
@@ -630,42 +630,42 @@ const ilmuFalakComic: Comic = {
 };
 
 const pasarComic: Comic = {
-  title: 'Komik: Pasar sebagai Ruang Sosial',
-  description: 'Pasar tradisional bukan hanya tempat jual beli, tapi jantung komunitas.',
+  title: 'Comic: The Market as a Social Space',
+  description: 'The traditional market is not just for buying and selling, but the heart of the community.',
   panels: [
     {
-      title: 'Jantung Komunitas',
-      text: 'Bagi kami, pasar bukan hanya tempat mencari uang, tapi tempat kami bertemu teman dan bertukar kabar.',
+      title: 'The Heart of the Community',
+      text: 'For us, the market is not just a place to make money, but a place where we meet friends and exchange news.',
       imageUrl: 'https://i.ibb.co/Lz42QxHm/Gemini-Generated-Image-k208uik208uik208.png',
       imageHint: 'bustling traditional market'
     },
     {
-      title: 'Pusat Informasi',
-      text: 'Jika ada berita penting, lowongan kerja, atau isu meresahkan, informasi menyebar cepat di pasar.',
+      title: 'Information Hub',
+      text: 'If there is important news, job vacancies, or unsettling issues, the information spreads quickly in the market.',
       imageUrl: 'https://i.ibb.co/CspnwtQT/Gemini-Generated-Image-dsjhqbdsjhqbdsjh.png',
       imageHint: 'people talking at coffee stall'
     },
     {
-      title: 'Barometer Sosial',
-      text: 'Dari obrolan di warung kopi pasar, kita bisa tahu apa yang sedang dirasakan masyarakat.',
+      title: 'Social Barometer',
+      text: 'From the conversations in the market\'s coffee stalls, we can know what the community is feeling.',
       imageUrl: 'https://i.ibb.co/ch4DmBK8/Gemini-Generated-Image-o64ap4o64ap4o64a.png',
       imageHint: 'group of men drinking coffee'
     },
     {
-        title: 'Saling Menenangkan',
-        text: 'Bahkan ketika ada isu-isu yang meresahkan, kami bisa saling menenangkan dan mencari kebenaran di sini.',
+        title: 'Calming Each Other',
+        text: 'Even when there are unsettling issues, we can calm each other down and find the truth here.',
         imageUrl: 'https://i.ibb.co/5XxgpBFd/Gemini-Generated-Image-epyxelepyxelepyx.png',
         imageHint: 'two people having serious talk'
     },
     {
-        title: 'Denyut Nadi Komunitas',
-        text: 'Menjaga pasar tradisional tetap hidup sama dengan menjaga denyut nadi dan ikatan sosial komunitas kita.',
+        title: 'The Pulse of the Community',
+        text: 'Keeping the traditional market alive is the same as keeping the pulse and social bonds of our community.',
         imageUrl: 'https://i.ibb.co/LXQKySBZ/Gemini-Generated-Image-k6s3dck6s3dck6s3.png',
         imageHint: 'smiling market vendor'
     },
     {
-        title: 'Lebih dari Jual Beli',
-        text: 'Di sinilah persahabatan terjalin, masalah diselesaikan, dan komunitas terasa hidup.',
+        title: 'More Than Buying and Selling',
+        text: 'This is where friendships are forged, problems are solved, and the community feels alive.',
         imageUrl: 'https://i.ibb.co/V0hmJPM8/Gemini-Generated-Image-9lfrea9lfrea9lfr.png',
         imageHint: 'people laughing in market'
     }
@@ -673,42 +673,42 @@ const pasarComic: Comic = {
 };
 
 const kucingCerdasComic: Comic = {
-  title: 'Komik: Siaga, Si Kucing Cerdas',
-  description: 'Petualangan Siaga mengajarkan anak-anak tentang kesiapsiagaan bencana.',
+  title: 'Comic: Siaga, the Smart Cat',
+  description: 'Siaga\'s adventure teaches children about disaster preparedness.',
   panels: [
     {
-      title: 'Kucing yang Berbeda',
-      text: 'Siaga suka mendengarkan cerita para tetua tentang gempa dan tsunami, tidak seperti teman-temannya yang suka tidur.',
+      title: 'A Different Cat',
+      text: 'Siaga loved listening to the elders\' stories about earthquakes and tsunamis, unlike his friends who loved to sleep.',
       imageUrl: 'https://i.ibb.co/cSb6HNbk/Gemini-Generated-Image-yka8lryka8lryka8.png',
       imageHint: 'cute cat listening to old man'
     },
     {
-      title: 'Tanah Bergoyang!',
-      text: 'Saat tanah bergoyang, Siaga langsung berteriak, "Gempa! Ingat tiga langkah: Merunduk, Berlindung, dan Bertahan!"',
+      title: 'The Ground Shakes!',
+      text: 'When the ground shook, Siaga shouted, "Earthquake! Remember the three steps: Drop, Cover, and Hold On!"',
       imageUrl: 'https://i.ibb.co/spP9SMTt/Gemini-Generated-Image-qxxmruqxxmruqxxm.png',
       imageHint: 'cartoon earthquake cat under table'
     },
     {
-      title: 'Mengikuti si Ahli',
-      text: 'Teman-temannya yang bingung melihat apa yang dilakukan Siaga dan langsung mengikutinya.',
+      title: 'Following the Expert',
+      text: 'His confused friends saw what Siaga was doing and immediately followed his lead.',
       imageUrl: 'https://i.ibb.co/CpKGCDBf/Gemini-Generated-Image-5ku3hs5ku3hs5ku3.png',
       imageHint: 'other cats hiding under furniture'
     },
     {
-      title: 'Menuju Tempat Aman',
-      text: 'Setelah guncangan berhenti, Siaga dengan tenang mengajak teman-temannya ke lapangan terbuka yang aman.',
+      title: 'To a Safe Place',
+      text: 'After the shaking stopped, Siaga calmly led his friends to a safe open field.',
       imageUrl: 'https://i.ibb.co/Kj8wXcd1/Gemini-Generated-Image-rm690krm690krm69.png',
       imageHint: 'cats walking to open field'
     },
     {
-        title: 'Peringatan Tsunami',
-        text: '"Kita harus ke tempat tinggi," kata Siaga, "siapa tahu air laut surut!" Ia ingat cerita Smong.',
+        title: 'Tsunami Warning',
+        text: '"We have to go to high ground," said Siaga, "just in case the sea recedes!" He remembered the Smong story.',
         imageUrl: 'https://i.ibb.co/YB6z4MkN/Gemini-Generated-Image-cw22b0cw22b0cw22.png',
         imageHint: 'cat pointing to hill'
     },
     {
-        title: 'Semua Selamat',
-        text: 'Karena Siaga, semua temannya selamat dan belajar cara melindungi diri saat bencana.',
+        title: 'Everyone is Safe',
+        text: 'Because of Siaga, all his friends were safe and learned how to protect themselves during a disaster.',
         imageUrl: 'https://i.ibb.co/TGNn2hy/Gemini-Generated-Image-spdth3spdth3spdt.png',
         imageHint: 'happy cats playing on hill'
     }
@@ -717,677 +717,677 @@ const kucingCerdasComic: Comic = {
 
 
 const smongQuiz: Quiz = {
-  title: 'Kuis Kearifan Smong',
+  title: 'Smong Wisdom Quiz',
   description:
-    'Uji pemahaman Anda tentang Smong dan sistem pengetahuan tradisional untuk kesiapsiagaan bencana.',
+    'Test your understanding of Smong and traditional knowledge systems for disaster preparedness.',
   questions: [
     {
       question:
-        "Apa arti kata 'Smong' dalam bahasa lokal Pulau Simeulue?",
-      options: ['Gempa Bumi', 'Tsunami', 'Peringatan', 'Lautan'],
+        "What does the word 'Smong' mean in the local language of Simeulue Island?",
+      options: ['Earthquake', 'Tsunami', 'Warning', 'Ocean'],
       correctAnswer: 'Tsunami',
       points: 10,
     },
     {
       question:
-        'Apa dua tanda dalam syair Smong yang menunjukkan akan datangnya tsunami?',
+        'What are the two signs in the Smong poem that indicate an impending tsunami?',
       options: [
-        'Angin kencang dan hujan lebat',
-        'Gempa kuat diikuti surutnya air laut',
-        'Awan gelap dan petir',
-        'Suara sirene yang keras',
+        'Strong wind and heavy rain',
+        'A strong earthquake followed by the receding of the sea',
+        'Dark clouds and lightning',
+        'A loud siren sound',
       ],
-      correctAnswer: 'Gempa kuat diikuti surutnya air laut',
+      correctAnswer: 'A strong earthquake followed by the receding of the sea',
       points: 10,
     },
     {
       question:
-        'Tindakan apa yang disarankan oleh kearifan Smong segera setelah melihat tanda-tanda tersebut?',
+        'What action is advised by the wisdom of Smong immediately after seeing these signs?',
       options: [
-        'Pergi ke pantai untuk melihat',
-        'Menunggu instruksi resmi',
-        'Lari ke tempat yang lebih tinggi',
-        'Bersembunyi di dalam rumah',
+        'Go to the beach to see',
+        'Wait for official instructions',
+        'Run to higher ground',
+        'Hide inside the house',
       ],
-      correctAnswer: 'Lari ke tempat yang lebih tinggi',
+      correctAnswer: 'Run to higher ground',
       points: 10,
     },
   ],
 };
 
 const bahTangseQuiz: Quiz = {
-  title: 'Kuis Siaga Banjir Tangse',
+  title: 'Tangse Flood Awareness Quiz',
   description:
-    'Uji pemahamanmu tentang penyebab dan dampak dari banjir bandang "Bah Tangse".',
+    'Test your understanding of the causes and impacts of the "Bah Tangse" flash flood.',
   questions: [
     {
       question:
-        'Apa akar penyebab utama dari bencana "Bah Tangse" menurut cerita?',
+        'What was the main root cause of the "Bah Tangse" disaster according to the story?',
       options: [
-        'Gempa bumi',
-        'Bendungan yang jebol',
-        'Penebangan hutan liar di hulu sungai',
-        'Hujan es',
+        'An earthquake',
+        'A collapsed dam',
+        'Illegal logging in the upstream forest',
+        'A hailstorm',
       ],
-      correctAnswer: 'Penebangan hutan liar di hulu sungai',
+      correctAnswer: 'Illegal logging in the upstream forest',
       points: 10,
     },
     {
       question:
-        'Ke mana warga menyelamatkan diri saat banjir bandang terjadi?',
+        'Where did the residents evacuate to when the flash flood occurred?',
       options: [
-        'Ke atap rumah',
-        'Ke dalam bunker bawah tanah',
-        'Ke perbukitan atau tempat yang lebih tinggi',
-        'Ke tengah lapangan',
+        'To the rooftops',
+        'Into an underground bunker',
+        'To the hills or higher ground',
+        'To the middle of the field',
       ],
-      correctAnswer: 'Ke perbukitan atau tempat yang lebih tinggi',
+      correctAnswer: 'To the hills or higher ground',
       points: 10,
     },
     {
-        question: 'Apa yang dibawa oleh air bah selain air yang meluap?',
+        question: 'What did the floodwater carry besides the overflowing water?',
         options: [
-            'Ikan-ikan besar',
-            'Sampah plastik',
-            'Puluhan pohon gelondongan raksasa',
-            'Pasir pantai',
+            'Large fish',
+            'Plastic waste',
+            'Dozens of giant logs',
+            'Beach sand',
         ],
-        correctAnswer: 'Puluhan pohon gelondongan raksasa',
+        correctAnswer: 'Dozens of giant logs',
         points: 10,
     }
   ],
 };
 
 const kopiGayoQuiz: Quiz = {
-  title: 'Kuis Aroma Perdamaian',
+  title: 'Aroma of Peace Quiz',
   description:
-    'Seberapa jauh Anda tahu tentang peran kopi Gayo dalam pemulihan pasca-konflik?',
+    'How much do you know about the role of Gayo coffee in post-conflict recovery?',
   questions: [
     {
       question:
-        'Mengapa para petani kopi Gayo memutuskan untuk membentuk koperasi?',
+        'Why did the Gayo coffee farmers decide to form a cooperative?',
       options: [
-        'Karena diwajibkan oleh pemerintah',
-        'Untuk bersaing satu sama lain',
-        'Untuk saling menguatkan dan memiliki posisi tawar yang lebih baik',
-        'Untuk mendapatkan pinjaman bank',
+        'Because it was required by the government',
+        'To compete with each other',
+        'To support each other and have better bargaining power',
+        'To get bank loans',
       ],
       correctAnswer:
-        'Untuk saling menguatkan dan memiliki posisi tawar yang lebih baik',
+        'To support each other and have better bargaining power',
       points: 10,
     },
     {
       question:
-        'Apa dampak positif utama dari bangkitnya industri kopi Gayo bagi masyarakat?',
+        'What was the main positive impact of the revival of the Gayo coffee industry for the community?',
       options: [
-        'Meningkatnya jumlah wisatawan',
-        'Masyarakat bisa menyekolahkan anak-anak mereka',
-        'Berkurangnya populasi hama',
-        'Harga tanah menjadi mahal',
+        'An increase in tourists',
+        'The community could send their children to school',
+        'A decrease in pest population',
+        'Land prices became expensive',
       ],
-      correctAnswer: 'Masyarakat bisa menyekolahkan anak-anak mereka',
+      correctAnswer: 'The community could send their children to school',
       points: 10,
     },
     {
-        question: 'Menurut cerita, apa yang menjadi "aroma perdamaian"?',
+        question: 'According to the story, what is the "aroma of peace"?',
         options: [
-            'Aroma masakan di dapur umum',
-            'Aroma bunga-bunga di taman',
-            'Aroma kopi yang diolah setiap pagi',
-            'Aroma laut setelah badai',
+            'The aroma of food in the community kitchen',
+            'The aroma of flowers in the garden',
+            'The aroma of coffee being processed every morning',
+            'The aroma of the sea after a storm',
         ],
-        correctAnswer: 'Aroma kopi yang diolah setiap pagi',
+        correctAnswer: 'The aroma of coffee being processed every morning',
         points: 10,
     }
   ],
 };
 
 const bakauQuiz: Quiz = {
-    title: 'Kuis Penjaga Pantai',
+    title: 'Guardian of the Coast Quiz',
     description:
-      'Seberapa baik Anda memahami fungsi dan manfaat hutan bakau?',
+      'How well do you understand the function and benefits of mangrove forests?',
     questions: [
         {
           question:
-            'Selain sebagai pelindung pantai dari abrasi dan badai, apa manfaat ekologis lain dari hutan bakau?',
+            'Besides protecting the coast from abrasion and storms, what is another ecological benefit of mangrove forests?',
           options: [
-            'Menghasilkan buah-buahan yang bisa dimakan',
-            'Menjadi habitat bagi biota laut seperti ikan dan kepiting',
-            'Menyaring polusi udara di kota',
-            'Membuat air laut menjadi tawar',
+            'Producing edible fruits',
+            'Becoming a habitat for marine life like fish and crabs',
+            'Filtering air pollution in the city',
+            'Making seawater fresh',
           ],
           correctAnswer:
-            'Menjadi habitat bagi biota laut seperti ikan dan kepiting',
+            'Becoming a habitat for marine life like fish and crabs',
           points: 10,
         },
         {
-            question: 'Apa tantangan awal yang dihadapi komunitas saat menanam kembali hutan bakau?',
+            question: 'What was the initial challenge the community faced when replanting the mangrove forest?',
             options: [
-                'Banyak bibit yang gagal tumbuh',
-                'Kekurangan dana dari pemerintah',
-                'Konflik dengan perusahaan sawit',
-                'Larangan dari tetua adat',
+                'Many seedlings failed to grow',
+                'Lack of government funding',
+                'Conflict with palm oil companies',
+                'Prohibition from village elders',
             ],
-            correctAnswer: 'Banyak bibit yang gagal tumbuh',
+            correctAnswer: 'Many seedlings failed to grow',
             points: 10,
         },
         {
-            question: 'Bagaimana cara hutan bakau melindungi pantai?',
+            question: 'How do mangrove forests protect the coastline?',
             options: [
-                'Dengan mengeluarkan zat kimia yang memecah ombak',
-                'Dengan membuat dinding tak terlihat',
-                'Dengan akarnya yang kokoh mencengkeram tanah dan menahan laju ombak',
-                'Dengan menarik burung-burung besar untuk melawan badai',
+                'By releasing a chemical that breaks the waves',
+                'By creating an invisible wall',
+                'With their strong roots that grip the soil and hold back the waves',
+                'By attracting large birds to fight the storm',
             ],
-            correctAnswer: 'Dengan akarnya yang kokoh mencengkeram tanah dan menahan laju ombak',
+            correctAnswer: 'With their strong roots that grip the soil and hold back the waves',
             points: 10,
         }
     ]
 };
 
 const dapurUmumQuiz: Quiz = {
-    title: 'Kuis Dapur Perdamaian',
-    description: 'Uji pemahaman Anda tentang peran inisiatif lokal dalam membangun perdamaian.',
+    title: 'Peace Kitchen Quiz',
+    description: 'Test your understanding of the role of local initiatives in peacebuilding.',
     questions: [
         {
           question:
-            'Apa hasil akhir yang paling penting dari inisiatif Dapur Umum Perdamaian?',
+            'What was the most important final outcome of the Community Kitchen of Peace initiative?',
           options: [
-            'Warga menjadi kenyang',
-            'Mendapat penghargaan dari pemerintah',
-            'Runtuhnya dinding ketidakpercayaan dan terjalinnya kembali persaudaraan',
-            'Menjadi tujuan wisata kuliner',
+            'Residents were full',
+            'Receiving an award from the government',
+            'The collapse of the walls of mistrust and the re-establishment of brotherhood',
+            'Becoming a culinary tourist destination',
           ],
           correctAnswer:
-            'Runtuhnya dinding ketidakpercayaan dan terjalinnya kembali persaudaraan',
+            'The collapse of the walls of mistrust and the re-establishment of brotherhood',
           points: 10,
         },
         {
-            question: 'Di mana keajaiban rekonsiliasi terjadi menurut cerita?',
+            question: 'Where did the magic of reconciliation happen according to the story?',
             options: [
-                'Di balai desa saat rapat resmi',
-                'Di media sosial melalui grup diskusi',
-                'Saat memotong sayur dan mengaduk gulai di dapur',
-                'Di lapangan olahraga saat kompetisi',
+                'At the village hall during official meetings',
+                'On social media through discussion groups',
+                'While cutting vegetables and stirring curry in the kitchen',
+                'On the sports field during competitions',
             ],
-            correctAnswer: 'Saat memotong sayur dan mengaduk gulai di dapur',
+            correctAnswer: 'While cutting vegetables and stirring curry in the kitchen',
             points: 10,
         },
         {
-            question: 'Apa ide dasar yang memicu terbentuknya dapur umum ini?',
+            question: 'What was the basic idea that triggered the formation of this community kitchen?',
             options: [
-                'Perintah dari kepala desa',
-                'Adanya bantuan bahan makanan dari LSM',
-                'Semua orang butuh makan, dan makanan bisa menyatukan',
-                'Untuk membuka bisnis restoran',
+                'An order from the village head',
+                'The availability of food aid from NGOs',
+                'Everyone needs to eat, and food can unite',
+                'To open a restaurant business',
             ],
-            correctAnswer: 'Semua orang butuh makan, dan makanan bisa menyatukan',
+            correctAnswer: 'Everyone needs to eat, and food can unite',
             points: 10,
         }
     ]
 };
 
 const lumbungPadiQuiz: Quiz = {
-    title: 'Kuis Lumbung Komunal',
+    title: 'Communal Barn Quiz',
     description:
-      'Uji pemahaman Anda tentang gotong royong dan ketahanan pangan.',
+      'Test your understanding of mutual help and food security.',
     questions: [
         {
             question:
-              'Apa prinsip dasar yang mendasari sistem lumbung bersama ini?',
+              'What is the basic principle underlying this communal barn system?',
             options: [
-              'Prinsip untung-rugi',
-              'Prinsip utang-piutang dengan bunga',
-              'Semangat gotong royong dan kepedulian',
-              'Prinsip kompetisi',
+              'The principle of profit and loss',
+              'The principle of debt with interest',
+              'The spirit of mutual cooperation and care',
+              'The principle of competition',
             ],
-            correctAnswer: 'Semangat gotong royong dan kepedulian',
+            correctAnswer: 'The spirit of mutual cooperation and care',
             points: 10,
           },
           {
-            question: 'Kapan seseorang boleh mengambil dari lumbung komunal?',
+            question: 'When can someone take from the communal barn?',
             options: [
-                'Kapan saja mereka mau',
-                'Saat ada perayaan desa',
-                'Ketika mengalami kesulitan atau gagal panen',
-                'Hanya jika mereka sudah menyumbang lebih banyak',
+                'Whenever they want',
+                'During village celebrations',
+                'When experiencing hardship or crop failure',
+                'Only if they have contributed more',
             ],
-            correctAnswer: 'Ketika mengalami kesulitan atau gagal panen',
+            correctAnswer: 'When experiencing hardship or crop failure',
             points: 10,
           },
           {
-              question: 'Selain sebagai cadangan makanan, apa fungsi lumbung padi bagi komunitas?',
+              question: 'Besides being a food reserve, what is the function of the rice barn for the community?',
               options: [
-                  'Sebagai tempat wisata',
-                  'Sebagai simbol persatuan dan kekuatan bersama',
-                  'Sebagai tempat penyimpanan barang antik',
-                  'Sebagai tempat pemungutan suara',
+                  'As a tourist attraction',
+                  'As a symbol of unity and collective strength',
+                  'As a storage place for antiques',
+                  'As a polling place',
               ],
-              correctAnswer: 'Sebagai simbol persatuan dan kekuatan bersama',
+              correctAnswer: 'As a symbol of unity and collective strength',
               points: 10,
           }
     ]
 };
 
 const apiBukitQuiz: Quiz = {
-    title: 'Kuis Jaga Hutan',
+    title: 'Forest Guardian Quiz',
     description:
-      'Uji pengetahuan Anda tentang pencegahan dan penanggulangan kebakaran hutan.',
+      'Test your knowledge on forest fire prevention and response.',
     questions: [
         {
-            question: 'Menurut cerita, apa penyebab umum kebakaran hutan di Gayo?',
+            question: 'According to the story, what is a common cause of forest fires in Gayo?',
             options: [
-              'Sambaran petir',
-              'Panas matahari yang ekstrem',
-              'Kelalaian manusia seperti membuka lahan dengan membakar',
-              'Letusan gunung berapi',
+              'Lightning strikes',
+              'Extreme sun heat',
+              'Human negligence such as clearing land by burning',
+              'Volcanic eruptions',
             ],
             correctAnswer:
-              'Kelalaian manusia seperti membuka lahan dengan membakar',
+              'Human negligence such as clearing land by burning',
             points: 10,
           },
           {
-              question: 'Apa nama kelompok sukarela yang dibentuk warga untuk mengatasi kebakaran hutan?',
+              question: 'What is the name of the volunteer group formed by residents to tackle forest fires?',
               options: [
-                  'Tim Pemadam Gayo',
-                  'Masyarakat Peduli Api',
-                  'Aliansi Penjaga Hutan',
-                  'Komunitas Bukit Barisan',
+                  'Gayo Firefighting Team',
+                  'Fire-Care Community',
+                  'Forest Guardian Alliance',
+                  'Barisan Hills Community',
               ],
-              correctAnswer: 'Masyarakat Peduli Api',
+              correctAnswer: 'Fire-Care Community',
               points: 10,
           },
           {
-              question: 'Selain memadamkan api, apa kegiatan penting lain yang dilakukan kelompok ini?',
+              question: 'Besides extinguishing fires, what other important activity does this group do?',
               options: [
-                  'Menjual kayu hasil tebangan',
-                  'Berburu hewan liar',
-                  'Memberikan penyuluhan kepada warga agar tidak membakar lahan',
-                  'Membangun villa di hutan',
+                  'Selling timber',
+                  'Hunting wild animals',
+                  'Educating residents not to burn land',
+                  'Building villas in the forest',
               ],
-              correctAnswer: 'Memberikan penyuluhan kepada warga agar tidak membakar lahan',
+              correctAnswer: 'Educating residents not to burn land',
               points: 10,
           }
     ]
 };
 
 const pemudaAdatQuiz: Quiz = {
-    title: 'Kuis Penjaga Adat',
+    title: 'Guardians of Custom Quiz',
     description:
-      'Uji pemahamanmu tentang peran budaya dalam pembangunan perdamaian.',
+      'Test your understanding of the role of culture in peacebuilding.',
     questions: [
         {
             question:
-              'Inisiatif ini menunjukkan bahwa seni dan budaya dapat menjadi alat yang efektif untuk...',
+              'This initiative shows that art and culture can be effective tools for...',
             options: [
-              'Menghasilkan seniman terkenal',
-              'Pembangunan perdamaian dan penguatan komunitas',
-              'Menarik wisatawan',
-              'Melupakan masa lalu',
+              'Producing famous artists',
+              'Peacebuilding and community strengthening',
+              'Attracting tourists',
+              'Forgetting the past',
             ],
-            correctAnswer: 'Pembangunan perdamaian dan penguatan komunitas',
+            correctAnswer: 'Peacebuilding and community strengthening',
             points: 10,
           },
           {
-              question: 'Tarian apa yang dihidupkan kembali oleh para pemuda dalam cerita?',
+              question: 'What dance was revived by the youth in the story?',
               options: [
-                  'Tari Saman',
-                  'Tari Seudati',
-                  'Tari Piring',
-                  'Tari Kecak',
+                  'Saman Dance',
+                  'Seudati Dance',
+                  'Piring Dance',
+                  'Kecak Dance',
               ],
-              correctAnswer: 'Tari Seudati',
+              correctAnswer: 'Seudati Dance',
               points: 10,
           },
           {
-              question: 'Selain gerakan, apa yang diajarkan oleh tarian tersebut kepada para pemuda?',
+              question: 'Besides movement, what does the dance teach the youth?',
               options: [
-                  'Cara bertarung',
-                  'Sejarah kerajaan Aceh',
-                  'Disiplin, kerja sama tim, dan syair nasihat',
-                  'Teknik vokal untuk bernyanyi',
+                  'How to fight',
+                  'The history of the Aceh kingdom',
+                  'Discipline, teamwork, and advisory poems',
+                  'Vocal techniques for singing',
               ],
-              correctAnswer: 'Disiplin, kerja sama tim, dan syair nasihat',
+              correctAnswer: 'Discipline, teamwork, and advisory poems',
               points: 10,
           }
     ]
 };
 
 const perempuanPenganyamQuiz: Quiz = {
-    title: 'Kuis Anyaman Harapan',
+    title: 'Weavers of Hope Quiz',
     description:
-      'Uji pemahamanmu tentang pemberdayaan perempuan dan pemulihan pasca-bencana.',
+      'Test your understanding of women\'s empowerment and post-disaster recovery.',
     questions: [
         {
             question:
-              'Apa transformasi utama yang dialami oleh para perempuan ini?',
+              'What was the main transformation experienced by these women?',
             options: [
-              'Dari petani menjadi pengrajin',
-              'Dari ibu rumah tangga menjadi politisi',
-              'Dari korban menjadi penyintas yang berdaya',
-              'Dari pedagang menjadi guru',
+              'From farmers to artisans',
+              'From housewives to politicians',
+              'From victims to empowered survivors',
+              'From traders to teachers',
             ],
-            correctAnswer: 'Dari korban menjadi penyintas yang berdaya',
+            correctAnswer: 'From victims to empowered survivors',
             points: 10,
           },
           {
-              question: 'Bahan utama apa yang mereka gunakan untuk membuat kerajinan anyaman?',
+              question: 'What is the main material they use to make woven crafts?',
               options: [
-                  'Rotan',
-                  'Bambu',
-                  'Daun Pandan',
-                  'Plastik daur ulang',
+                  'Rattan',
+                  'Bamboo',
+                  'Pandan Leaves',
+                  'Recycled plastic',
               ],
-              correctAnswer: 'Daun Pandan',
+              correctAnswer: 'Pandan Leaves',
               points: 10,
           },
           {
-              question: 'Selain sebagai sumber ekonomi, apa fungsi lain dari kegiatan menganyam bersama bagi mereka?',
+              question: 'Besides being a source of income, what other function did the weaving activity have for them?',
               options: [
-                  'Sebagai kompetisi tahunan',
-                  'Sebagai terapi dan ruang untuk saling menguatkan',
-                  'Sebagai cara untuk melestarikan bahasa daerah',
-                  'Sebagai syarat untuk mendapatkan bantuan pemerintah',
+                  'As an annual competition',
+                  'As therapy and a space to support each other',
+                  'As a way to preserve the local language',
+                  'As a requirement to receive government aid',
               ],
-              correctAnswer: 'Sebagai terapi dan ruang untuk saling menguatkan',
+              correctAnswer: 'As therapy and a space to support each other',
               points: 10,
           }
     ]
 };
 
 const arsitekturQuiz: Quiz = {
-    title: 'Kuis Arsitektur Bijak',
+    title: 'Wise Architecture Quiz',
     description:
-      'Uji pemahamanmu tentang kearifan di balik arsitektur Rumoh Aceh.',
+      'Test your understanding of the wisdom behind Rumoh Aceh architecture.',
     questions: [
         {
             question:
-              'Apa pelajaran utama yang bisa diambil dari kearifan arsitektur Rumoh Aceh?',
+              'What is the main lesson that can be learned from the wisdom of Rumoh Aceh architecture?',
             options: [
-              'Kita harus membangun rumah dari kayu saja',
-              'Teknologi modern tidak berguna',
-              'Desain tradisional seringkali memiliki solusi yang adaptif terhadap lingkungan',
-              'Rumah panggung tidak aman',
+              'We should only build houses from wood',
+              'Modern technology is useless',
+              'Traditional designs often have solutions that are adaptive to the environment',
+              'Stilt houses are unsafe',
             ],
             correctAnswer:
-              'Desain tradisional seringkali memiliki solusi yang adaptif terhadap lingkungan',
+              'Traditional designs often have solutions that are adaptive to the environment',
             points: 10,
           },
           {
-              question: 'Fitur utama apa dari Rumoh Aceh yang membuatnya tahan terhadap gempa?',
+              question: 'What key feature of Rumoh Aceh makes it earthquake-resistant?',
               options: [
-                  'Dinding beton yang tebal',
-                  'Konstruksi kayu yang fleksibel',
-                  'Atap dari daun rumbia',
-                  'Pondasi yang sangat dalam',
+                  'Thick concrete walls',
+                  'Flexible wooden construction',
+                  'A roof made of palm leaves',
+                  'A very deep foundation',
               ],
-              correctAnswer: 'Konstruksi kayu yang fleksibel',
+              correctAnswer: 'Flexible wooden construction',
               points: 10,
           },
           {
-              question: 'Apa fungsi dari "kolong" atau ruang di bawah rumah panggung?',
+              question: 'What is the function of the "kolong" or space under the stilt house?',
               options: [
-                  'Hanya sebagai hiasan',
-                  'Sebagai garasi mobil',
-                  'Sebagai ruang serbaguna dan jalan bagi air saat banjir',
-                  'Sebagai tempat membuang sampah',
+                  'Only as decoration',
+                  'As a car garage',
+                  'As a multipurpose space and a path for water during floods',
+                  'As a place to dispose of trash',
               ],
-              correctAnswer: 'Sebagai ruang serbaguna dan jalan bagi air saat banjir',
+              correctAnswer: 'As a multipurpose space and a path for water during floods',
               points: 10,
           }
     ]
 };
 
 const seniTraumaQuiz: Quiz = {
-    title: 'Kuis Kanvas Harapan',
+    title: 'Canvas of Hope Quiz',
     description:
-      'Uji pemahamanmu tentang kekuatan seni dalam proses pemulihan sosial.',
+      'Test your understanding of the power of art in the social recovery process.',
     questions: [
         {
             question:
-              'Apa tema yang sering diangkat dalam mural-mural mereka?',
+              'What themes were often depicted in their murals?',
             options: [
-              'Kemarahan dan kesedihan',
-              'Pemandangan abstrak',
-              'Harapan, ketahanan, dan kebersamaan',
-              'Potret para seniman',
+              'Anger and sadness',
+              'Abstract landscapes',
+              'Hope, resilience, and togetherness',
+              'Portraits of the artists',
             ],
-            correctAnswer: 'Harapan, ketahanan, dan kebersamaan',
+            correctAnswer: 'Hope, resilience, and togetherness',
             points: 10,
           },
           {
-              question: 'Apa tujuan utama para seniman melukis di dinding-dinding publik?',
+              question: 'What was the main goal of the artists painting on public walls?',
               options: [
-                  'Untuk menjual lukisan mereka',
-                  'Untuk menyembuhkan luka kota dan jiwa melalui seni',
-                  'Untuk memprotes pemerintah',
-                  'Untuk memenangkan kompetisi seni',
+                  'To sell their paintings',
+                  'To heal the city\'s and their own wounds through art',
+                  'To protest against the government',
+                  'To win an art competition',
               ],
-              correctAnswer: 'Untuk menyembuhkan luka kota dan jiwa melalui seni',
+              correctAnswer: 'To heal the city\'s and their own wounds through art',
               points: 10,
           },
           {
-              question: 'Bagaimana reaksi komunitas terhadap kegiatan mural ini?',
+              question: 'How did the community react to this mural activity?',
               options: [
-                  'Komunitas marah karena dindingnya dicoret-coret',
-                  'Komunitas tidak peduli',
-                  'Komunitas, termasuk anak-anak, ikut bergabung dalam proses melukis',
-                  'Komunitas melaporkannya ke polisi',
+                  'The community was angry because their walls were painted',
+                  'The community did not care',
+                  'The community, including children, joined in the painting process',
+                  'The community reported them to the police',
               ],
-              correctAnswer: 'Komunitas, termasuk anak-anak, ikut bergabung dalam proses melukis',
+              correctAnswer: 'The community, including children, joined in the painting process',
               points: 10,
           }
     ]
 };
 
 const nelayanQuiz: Quiz = {
-    title: 'Kuis Navigasi Tradisional',
+    title: 'Traditional Navigation Quiz',
     description:
-      'Uji pengetahuanmu tentang cara nelayan tradisional membaca tanda-tanda alam.',
+      'Test your knowledge of how traditional fishermen read the signs of nature.',
     questions: [
         {
-            question: 'Rasi bintang apa yang disebut "Bintang Tiga" dan digunakan oleh nelayan Aceh untuk penunjuk arah?',
-            options: ['Scorpio', 'Orion', 'Big Dipper', 'Crux (Salib Selatan)'],
+            question: 'What constellation is called "Bintang Tiga" and is used by Acehnese fishermen for direction?',
+            options: ['Scorpio', 'Orion', 'Big Dipper', 'Crux (Southern Cross)'],
             correctAnswer: 'Orion',
             points: 10,
         },
         {
-            question: 'Perilaku hewan apa yang menjadi pertanda cuaca buruk bagi para nelayan?',
+            question: 'What animal behavior is a sign of bad weather for fishermen?',
             options: [
-                'Kucing tidur di dalam rumah',
-                'Burung-burung terbang tinggi di langit',
-                'Lumba-lumba berenang mendekati pantai',
-                'Ayam berkokok di pagi hari',
+                'A cat sleeping inside the house',
+                'Birds flying high in the sky',
+                'Dolphins swimming close to the shore',
+                'A rooster crowing in the morning',
             ],
-            correctAnswer: 'Lumba-lumba berenang mendekati pantai',
+            correctAnswer: 'Dolphins swimming close to the shore',
             points: 10,
         },
         {
-            question: 'Bagaimana para nelayan mengetahui lokasi berkumpulnya ikan?',
+            question: 'How do fishermen know where fish gather?',
             options: [
-                'Menggunakan sonar canggih',
-                'Dengan melihat warna air dan jenis burung yang terbang di atasnya',
-                'Mengikuti kapal nelayan lain',
-                'Melempar jaring secara acak',
+                'Using advanced sonar',
+                'By observing the color of the water and the type of birds flying above',
+                'Following other fishing boats',
+                'Casting nets randomly',
             ],
-            correctAnswer: 'Dengan melihat warna air dan jenis burung yang terbang di atasnya',
+            correctAnswer: 'By observing the color of the water and the type of birds flying above',
             points: 10,
         }
     ]
 };
 
 const sumurTuaQuiz: Quiz = {
-    title: 'Kuis Sumber Kehidupan',
+    title: 'Source of Life Quiz',
     description:
-      'Uji pemahamanmu tentang manajemen sumber daya air tradisional.',
+      'Test your understanding of traditional water resource management.',
     questions: [
         {
-            question: 'Mengapa sumur tua tersebut tidak pernah kering saat sumur modern lainnya kering?',
+            question: 'Why did the old well never dry up when other modern wells did?',
             options: [
-              'Karena sangat dalam',
-              'Karena dibangun tepat di atas mata air besar',
-              'Karena jarang digunakan',
-              'Karena terbuat dari batu ajaib',
+              'Because it was very deep',
+              'Because it was built directly on a large spring',
+              'Because it was rarely used',
+              'Because it was made of magical stone',
             ],
-            correctAnswer: 'Karena dibangun tepat di atas mata air besar',
+            correctAnswer: 'Because it was built directly on a large spring',
             points: 10,
           },
           {
-              question: 'Apa yang mendorong warga untuk mencari dan membersihkan sumur tua tersebut?',
+              question: 'What prompted the villagers to find and clean the old well?',
               options: [
-                  'Perintah dari pemerintah',
-                  'Rasa penasaran dan ingin berpetualang',
-                  'Kekeringan panjang yang membuat sumber air modern kering',
-                  'Mimpi seorang warga desa',
+                  'An order from the government',
+                  'Curiosity and a sense of adventure',
+                  'A long drought that dried up modern water sources',
+                  'A dream one of the villagers had',
               ],
-              correctAnswer: 'Kekeringan panjang yang membuat sumber air modern kering',
+              correctAnswer: 'A long drought that dried up modern water sources',
               points: 10,
           },
           {
-              question: 'Pelajaran apa yang didapat warga dari peristiwa ini?',
+              question: 'What lesson did the villagers learn from this event?',
               options: [
-                  'Teknologi modern selalu lebih unggul',
-                  'Air tidak akan pernah habis',
-                  'Kearifan dalam peninggalan masa lalu harus dijaga dan dilestarikan',
-                  'Hutan tidak ada hubungannya dengan sumber air',
+                  'Modern technology is always superior',
+                  'Water will never run out',
+                  'The wisdom in past relics must be preserved',
+                  'Forests have no connection to water sources',
               ],
-              correctAnswer: 'Kearifan dalam peninggalan masa lalu harus dijaga dan dilestarikan',
+              correctAnswer: 'The wisdom in past relics must be preserved',
               points: 10,
           }
     ]
 };
 
 const ilmuFalakQuiz: Quiz = {
-    title: 'Kuis Ilmu Falak',
+    title: 'Ilmu Falak Quiz',
     description:
-      'Uji pengetahuanmu tentang penerapan astronomi tradisional di Aceh.',
+      'Test your knowledge of the application of traditional astronomy in Aceh.',
     questions: [
         {
             question:
-              'Kisah ini menunjukkan bahwa di Aceh, ilmu agama dan ilmu pengetahuan (sains)...',
+              'This story shows that in Aceh, religious knowledge and science...',
             options: [
-              'Selalu bertentangan',
-              'Tidak ada hubungannya sama sekali',
-              'Dapat saling melengkapi dan bermanfaat bagi kehidupan',
-              'Hanya dipelajari oleh kalangan bangsawan',
+              'Are always in conflict',
+              'Have no connection at all',
+              'Can complement each other and be beneficial for life',
+              'Are only studied by the nobility',
             ],
             correctAnswer:
-              'Dapat saling melengkapi dan bermanfaat bagi kehidupan',
+              'Can complement each other and be beneficial for life',
             points: 10,
           },
           {
-              question: 'Selain untuk menentukan awal bulan puasa dan arah kiblat, untuk apa lagi Ilmu Falak digunakan dalam cerita?',
+              question: 'Besides determining the start of the fasting month and the qibla direction, what else is Ilmu Falak used for in the story?',
               options: [
-                  'Untuk meramal nasib seseorang',
-                  'Untuk navigasi bagi para nelayan',
-                  'Untuk menentukan tanggal pernikahan',
-                  'Untuk menemukan harta karun',
+                  'To predict someone\'s fate',
+                  'For navigation for fishermen',
+                  'To determine wedding dates',
+                  'To find hidden treasure',
               ],
-              correctAnswer: 'Untuk navigasi bagi para nelayan',
+              correctAnswer: 'For navigation for fishermen',
               points: 10,
           },
           {
-              question: 'Di mana Ilmu Falak ini diajarkan secara turun-temurun menurut cerita?',
+              question: 'Where is this Ilmu Falak taught from generation to generation according to the story?',
               options: [
-                  'Di universitas modern',
-                  'Di sekolah pelayaran',
-                  'Di balai desa',
-                  'Di pesantren (dayah)',
+                  'In modern universities',
+                  'In navigation schools',
+                  'In the village hall',
+                  'In Islamic boarding schools (dayah)',
               ],
-              correctAnswer: 'Di pesantren (dayah)',
+              correctAnswer: 'In Islamic boarding schools (dayah)',
               points: 10,
           }
     ]
 };
 
 const pasarQuiz: Quiz = {
-    title: 'Kuis Jantung Komunitas',
-    description: 'Uji pemahamanmu tentang peran sosial pasar tradisional.',
+    title: 'Heart of the Community Quiz',
+    description: 'Test your understanding of the social role of traditional markets.',
     questions: [
         {
-            question: 'Selain sebagai tempat jual beli, apa fungsi utama pasar tradisional menurut cerita?',
+            question: 'Besides being a place for buying and selling, what is the main function of the traditional market according to the story?',
             options: [
-              'Sebagai tempat parkir kendaraan',
-              'Sebagai pusat penyebaran informasi dan penguatan ikatan sosial',
-              'Sebagai lokasi syuting film',
-              'Sebagai museum terbuka',
+              'As a parking lot',
+              'As a center for information dissemination and strengthening social bonds',
+              'As a film shooting location',
+              'As an open-air museum',
             ],
             correctAnswer:
-              'Sebagai pusat penyebaran informasi dan penguatan ikatan sosial',
+              'As a center for information dissemination and strengthening social bonds',
             points: 10,
           },
           {
-              question: 'Tempat apa di dalam pasar yang disebut sebagai "barometer sosial"?',
+              question: 'What place within the market is referred to as a "social barometer"?',
               options: [
-                  'Toko emas',
-                  'Kios penjahit',
-                  'Warung kopi pasar',
-                  'Lapak penjual ikan',
+                  'The gold shop',
+                  'The tailor\'s stall',
+                  'The market\'s coffee stall',
+                  'The fish vendor\'s stall',
               ],
-              correctAnswer: 'Warung kopi pasar',
+              correctAnswer: 'The market\'s coffee stall',
               points: 10,
           },
           {
-              question: 'Menurut cerita, mengapa menjaga pasar tradisional tetap hidup itu penting?',
+              question: 'According to the story, why is it important to keep traditional markets alive?',
               options: [
-                  'Karena bangunannya antik dan bersejarah',
-                  'Karena sama dengan menjaga denyut nadi komunitas',
-                  'Karena pajaknya lebih murah daripada pasar modern',
-                  'Karena hanya di sana menjual bahan makanan langka',
+                  'Because the buildings are antique and historic',
+                  'Because it is the same as keeping the pulse of the community',
+                  'Because the taxes are cheaper than modern markets',
+                  'Because only there can you find rare ingredients',
               ],
-              correctAnswer: 'Karena sama dengan menjaga denyut nadi komunitas',
+              correctAnswer: 'Because it is the same as keeping the pulse of the community',
               points: 10,
           }
     ]
 };
 
 const kucingCerdasQuiz: Quiz = {
-  title: 'Kuis Kucing Cerdas',
-  description: 'Uji pemahamanmu tentang kesiapsiagaan bencana gempa bersama Siaga!',
+  title: 'Smart Cat Quiz',
+  description: 'Test your understanding of earthquake preparedness with Siaga!',
   questions: [
       {
           question:
-            'Apa tiga langkah yang diajarkan Siaga saat terjadi gempa?',
+            'What are the three steps Siaga teaches to do during an earthquake?',
           options: [
-            'Lari, berteriak, dan melompat',
-            'Merunduk, berlindung, dan bertahan',
-            'Berdiri, melihat, dan menunggu',
-            'Makan, minum, dan tidur',
+            'Run, scream, and jump',
+            'Drop, cover, and hold on',
+            'Stand, look, and wait',
+            'Eat, drink, and sleep',
           ],
           correctAnswer:
-            'Merunduk, berlindung, dan bertahan',
+            'Drop, cover, and hold on',
           points: 10,
         },
         {
           question:
-            'Ke mana Siaga mengajak teman-temannya setelah guncangan gempa berhenti?',
+            'Where did Siaga take his friends after the earthquake shaking stopped?',
           options: [
-            'Kembali ke dalam rumah',
-            'Ke pinggir pantai',
-            'Ke lapangan terbuka yang jauh dari bangunan',
-            'Naik ke atas pohon',
+            'Back inside the house',
+            'To the beach',
+            'To an open field far from buildings',
+            'Up a tree',
           ],
           correctAnswer:
-            'Ke lapangan terbuka yang jauh dari bangunan',
+            'To an open field far from buildings',
           points: 10,
         },
         {
-            question: 'Kearifan lokal apa yang diingat Siaga setelah gempa berhenti?',
+            question: 'What local wisdom did Siaga remember after the earthquake stopped?',
             options: [
-                'Kisah tentang Kopi Gayo',
-                'Syair Smong tentang air laut surut',
-                'Cara membangun Rumoh Aceh',
-                'Pantangan menanam pohon di tepi pantai',
+                'The story of Gayo Coffee',
+                'The Smong poem about the receding sea',
+                'How to build a Rumoh Aceh',
+                'The taboo of planting trees on the coast',
             ],
-            correctAnswer: 'Syair Smong tentang air laut surut',
+            correctAnswer: 'The Smong poem about the receding sea',
             points: 10,
         }
   ]
 };
 
 export const masterQuiz: Quiz = {
-    title: 'Kuis Pengetahuan Aceh',
-    description: 'Uji wawasan Anda tentang kearifan lokal, kesiapsiagaan bencana, dan perdamaian di Aceh melalui pertanyaan-pertanyaan dari berbagai cerita.',
+    title: 'Aceh Knowledge Challenge',
+    description: 'Test your knowledge of Aceh\'s local wisdom, disaster preparedness, and peace through questions from various stories.',
     questions: [
         ...smongQuiz.questions,
         ...bahTangseQuiz.questions,
@@ -1405,187 +1405,187 @@ export const masterQuiz: Quiz = {
         ...ilmuFalakQuiz.questions,
         ...pasarQuiz.questions,
         ...kucingCerdasQuiz.questions,
-    ].sort(() => 0.5 - Math.random()).slice(0, 10) // Ambil 10 pertanyaan acak
+    ].sort(() => 0.5 - Math.random()).slice(0, 10) // Take 10 random questions
 }
 
 
 export const interactiveContent: { [key: string]: InteractiveContent } = {
   'smong-selamat-dari-lautan': {
     video: {
-      title: 'Video Edukasi: Sistem Pengetahuan Tradisional',
+      title: 'Educational Video: Traditional Knowledge Systems',
       description:
-        'Temukan bagaimana sistem pengetahuan adat melengkapi ilmu pengetahuan modern dalam kesiapsiagaan bencana.',
+        'Discover how indigenous knowledge systems complement modern science in disaster preparedness.',
       embedUrl:
         'https://www.canva.com/design/DAGy2A4uKKg/oKxoc_2wvJT-q7amzHQQWA/watch?embed',
-      info: 'Video ini mengeksplorasi bagaimana sistem pengetahuan tradisional seperti Smong bekerja bersama sistem peringatan dini modern untuk melindungi masyarakat.',
+      info: 'This video explores how traditional knowledge systems like Smong work in tandem with modern early warning systems to protect communities.',
     },
     quiz: smongQuiz,
     comic: smongComic,
   },
   'hutan-bakau-penjaga-pantai': {
     video: {
-      title: 'Video Edukasi: Hutan Bakau, Benteng Alami Kita',
+      title: 'Educational Video: Mangrove Forest, Our Natural Fortress',
       description:
-        'Pelajari pentingnya ekosistem mangrove sebagai pelindung alami dari abrasi, badai, bahkan tsunami.',
+        'Learn the importance of mangrove ecosystems as a natural protection against abrasion, storms, and even tsunamis.',
       embedUrl:
         'https://www.canva.com/design/DAG05xtxObw/lwH2TnsBk2C8fsfxXhThXw/watch?embed',
-      info: 'Video ini menjelaskan bagaimana komunitas di Aceh Jaya berhasil memulihkan garis pantai mereka melalui penanaman kembali hutan bakau.',
+      info: 'This video explains how a community in Aceh Jaya successfully restored their coastline through mangrove replanting.',
     },
     quiz: bakauQuiz,
     comic: bakauComic,
   },
   'dapur-umum-perdamaian': {
     video: {
-      title: 'Video Edukasi: Memasak Perdamaian',
+      title: 'Educational Video: Cooking Peace',
       description:
-        'Saksikan bagaimana Dapur Umum di Bireuen menjadi ruang untuk merajut kembali persaudaraan pasca-konflik.',
+        'Witness how the Community Kitchen in Bireuen became a space to re-weave brotherhood post-conflict.',
       embedUrl:
         'https://www.canva.com/design/DAG058Re3lE/fIjzr5r35dMT83HRBGlMfw/watch?embed',
-      info: 'Video dokumenter singkat ini akan meliput kegiatan sehari-hari di Dapur Umum Perdamaian di Bireuen dan wawancara dengan para inisiatornya.',
+      info: 'This short documentary covers the daily activities at the Peace Kitchen in Bireuen and interviews with its initiators.',
     },
     quiz: dapurUmumQuiz,
     comic: dapurUmumComic,
   },
     'lumbung-padi-komunal': {
     video: {
-      title: 'Video Edukasi: Lumbung Padi, Jaring Pengaman Sosial',
+      title: 'Educational Video: Rice Barn, Social Safety Net',
       description:
-        'Pelajari bagaimana lumbung padi komunal menjadi fondasi ketahanan pangan dan gotong royong di Gayo.',
+        'Learn how a communal rice barn became the foundation of food security and mutual help in Gayo.',
       embedUrl:
         'https://www.canva.com/design/DAG062E6zns/ZlMWr3u5a6HfVicIQx5qNQ/watch?embed',
-      info: 'Video ini menjelaskan cara kerja lumbung padi komunal sebagai jaring pengaman sosial yang efektif di tingkat masyarakat.',
+      info: 'This video explains how the communal rice barn works as an effective social safety net at the community level.',
     },
     quiz: lumbungPadiQuiz,
     comic: lumbungPadiComic,
   },
   'bah-tangse-sungai-murka': {
     video: {
-      title: 'Video Dokumenter: Dahsyatnya Bah Tangse 2011',
+      title: 'Documentary Video: The Devastation of Bah Tangse 2011',
       description:
-        'Saksikan liputan berita nyata mengenai banjir bandang yang menghancurkan Tangse, Pidie pada 10 Maret 2011.',
+        'Watch real news footage of the flash flood that destroyed Tangse, Pidie on March 10, 2011.',
       embedUrl: 'https://www.canva.com/design/DAG1Gsxv32g/oEZ8pFfT0nK2UZJACt_RWw/watch?embed',
-      info: 'Video ini berisi rekaman aktual dari lokasi bencana dan wawancara dengan korban, memberikan gambaran nyata tentang dampak kerusakan akibat perambahan hutan.',
+      info: 'This video contains actual footage from the disaster site and interviews with victims, providing a real picture of the impact of deforestation.',
     },
     quiz: bahTangseQuiz,
     comic: bahTangseComic,
   },
   'kopi-gayo-aroma-perdamaian': {
     video: {
-      title: 'Video Edukasi: Kopi Gayo, Aroma Perdamaian',
+      title: 'Educational Video: Gayo Coffee, The Aroma of Peace',
       description:
-        'Saksikan kisah inspiratif para petani kopi Gayo yang bangkit dari keterpurukan pasca-konflik untuk membangun kembali kehidupan mereka.',
+        'Witness the inspiring story of Gayo coffee farmers rising from post-conflict adversity to rebuild their lives.',
       embedUrl:
         'https://www.canva.com/design/DAG1HC5cT1A/5pCeQTue043ynhFySg1WcQ/watch?embed',
-      info: 'Video ini menampilkan wawancara dengan petani kopi Gayo yang menceritakan perjalanan mereka dari masa konflik hingga membangun kembali kehidupan melalui kebun kopi.',
+      info: 'This video features interviews with Gayo coffee farmers who share their journey from the conflict era to rebuilding their lives through coffee plantations.',
     },
     quiz: kopiGayoQuiz,
     comic: kopiGayoComic,
   },
   'api-di-bukit-barisan': {
     video: {
-      title: 'Video Edukasi: Masyarakat Peduli Api',
+      title: 'Educational Video: Fire-Care Community',
       description:
-        'Lihat bagaimana Masyarakat Peduli Api berjuang melindungi hutan dari kebakaran.',
+        'See how the Fire-Care Community fights to protect the forest from fires.',
       embedUrl: 'https://www.canva.com/design/DAG1GsSgV9M/ju7Vt8gVq1yDMj2-4DKklg/watch?embed',
-      info: 'Video ini akan menyoroti pentingnya pencegahan dan peran aktif masyarakat dalam mitigasi bencana kebakaran hutan.',
+      info: 'This video will highlight the importance of prevention and the active role of the community in mitigating forest fire disasters.',
     },
     quiz: apiBukitQuiz,
     comic: apiBukitComic,
   },
   'pemuda-penjaga-adat': {
     video: {
-      title: 'Video Edukasi: Tari Seudati, Perekat Komunitas',
+      title: 'Educational Video: Seudati Dance, Community Binder',
       description:
-        'Saksikan bagaimana para pemuda di Pidie melestarikan budaya dan memperkuat ikatan sosial melalui tari Seudati.',
+        'Witness how the youth in Pidie preserve culture and strengthen social bonds through the Seudati dance.',
       embedUrl:
-        'https://wwwcanva.com/design/DAG1OM98Yrw/nyuZ9I8l9VuDI6AAdSYbCw/watch?embed',
-      info: 'Video ini akan mendokumentasikan kegiatan sanggar Seudati dan dampaknya terhadap kaum muda di Pidie.',
+        'https://www.canva.com/design/DAG1OM98Yrw/nyuZ9I8l9VuDI6AAdSYbCw/watch?embed',
+      info: 'This video will document the activities of the Seudati troupe and its impact on the youth in Pidie.',
     },
     quiz: pemudaAdatQuiz,
     comic: pemudaAdatComic,
   },
   'perempuan-penganyam-harapan': {
     video: {
-      title: 'Video Edukasi: Perempuan Penganyam Harapan',
+      title: 'Educational Video: Women Weavers of Hope',
       description:
-        'Saksikan bagaimana para janda korban tsunami bangkit dari keterpurukan dengan membentuk kelompok kerajinan anyaman.',
+        'Witness how tsunami widows rise from adversity by forming a weaving craft group.',
       embedUrl: 'https://www.canva.com/design/DAG1VaVt0qc/Gi6ESi-KQgWt1fEoZtG_NA/watch?embed',
-      info: 'Film dokumenter pendek ini akan mengikuti perjalanan kelompok penganyam dari duka menjadi berdaya.',
+      info: 'This short documentary will follow the journey of the weaving group from grief to empowerment.',
     },
     quiz: perempuanPenganyamQuiz,
     comic: perempuanPenganyamComic,
   },
   'arsitektur-rumah-panggung': {
     video: {
-      title: 'Video Edukasi: Kearifan Rumoh Aceh',
+      title: 'Educational Video: The Wisdom of Rumoh Aceh',
       description:
-        'Pelajari bagaimana arsitektur tradisional Rumoh Aceh yang berbentuk panggung terbukti tahan gempa dan adaptif terhadap lingkungan.',
+        'Learn how the traditional stilt house architecture of Rumoh Aceh is proven to be earthquake-resistant and environmentally adaptive.',
       embedUrl:
         'https://www.canva.com/design/DAG1ml1mW5M/P8bGYXOvuob1i0iTT9TQhg/watch?embed',
-      info: 'Video ini akan membandingkan desain Rumoh Aceh dengan bangunan modern dan menyoroti prinsip-prinsip rekayasa jenius di dalamnya.',
+      info: 'This video will compare the design of Rumoh Aceh with modern buildings and highlight the ingenious engineering principles within it.',
     },
     quiz: arsitekturQuiz,
     comic: arsitekturComic,
   },
   'seni-melawan-trauma': {
     video: {
-      title: 'Video Edukasi: Seni Melawan Trauma',
-      description: 'Saksikan bagaimana para seniman menggunakan mural untuk menyembuhkan luka kota dan jiwa pasca-bencana.',
+      title: 'Educational Video: Art Against Trauma',
+      description: 'Witness how artists use murals to heal the wounds of the city and soul post-disaster.',
       embedUrl: 'https://www.canva.com/design/DAG1oFpnXaM/1AYF38ldBYM-z4jiL58VMg/watch?embed',
-      info: 'Video ini akan menampilkan karya-karya seniman mural di Banda Aceh dan wawancara tentang kekuatan seni sebagai media terapi.',
+      info: 'This video will feature the works of mural artists in Banda Aceh and interviews on the power of art as a therapeutic medium.',
     },
     quiz: seniTraumaQuiz,
     comic: seniTraumaComic,
   },
   'nelayan-dan-tanda-alam': {
     video: {
-      title: 'Video Edukasi: Navigasi Langit dan Laut',
+      title: 'Educational Video: Sky and Sea Navigation',
       description:
-        'Pelajari bagaimana nelayan tradisional Aceh menggunakan bintang dan tanda alam untuk bernavigasi di lautan luas.',
+        'Learn how traditional Acehnese fishermen use stars and natural signs to navigate the vast ocean.',
       embedUrl: 'https://www.canva.com/design/DAG1sApRGB8/Kynmeiy6S-0u7YVxRG11qw/watch?embed',
-      info: 'Video ini mendokumentasikan pengetahuan para nelayan tentang rasi bintang, angin, dan perilaku biota laut sebagai pemandu mereka.',
+      info: 'This video documents the fishermen\'s knowledge of constellations, winds, and marine life behavior as their guide.',
     },
     quiz: nelayanQuiz,
     comic: nelayanComic,
   },
   'sumur-tua-sumber-kehidupan': {
     video: {
-      title: 'Video Edukasi: Sumur Tua, Sumber Kehidupan',
+      title: 'Educational Video: The Old Well, Source of Life',
       description:
-        'Pelajari bagaimana sebuah sumur tua warisan leluhur menjadi penyelamat saat desa dilanda kekeringan.',
+        'Learn how an ancient ancestral well became a lifesaver when a village was hit by drought.',
       embedUrl: 'https://www.canva.com/design/DAG1sCoVdCc/ZIARnG8HuYWaqhyO4QlzfA/watch?embed',
-      info: 'Video ini akan mengeksplorasi pentingnya menjaga sumber-sumber air tradisional dan kearifan leluhur dalam menentukan lokasinya.',
+      info: 'This video will explore the importance of preserving traditional water sources and the wisdom of ancestors in locating them.',
     },
     quiz: sumurTuaQuiz,
     comic: sumurTuaComic,
   },
   'ilmu-falak-di-pesantren': {
     video: {
-      title: 'Video Edukasi: Ilmu Falak, Navigasi Langit dan Laut',
-      description: 'Pelajari bagaimana dayah di Aceh mengajarkan astronomi (Ilmu Falak) yang digunakan nelayan untuk navigasi.',
+      title: 'Educational Video: Ilmu Falak, Navigating Sky and Sea',
+      description: 'Learn how dayahs in Aceh teach astronomy (Ilmu Falak) which is used by fishermen for navigation.',
       embedUrl: 'https://www.canva.com/design/DAG1sLRnb6M/mPY87WGVdMwVfMQqdpi2cQ/watch?embed',
-      info: 'Video ini akan menjelaskan bagaimana ilmu agama dan sains saling melengkapi dalam tradisi intelektual Aceh.',
+      info: 'This video will explain how religious knowledge and science complement each other in the intellectual tradition of Aceh.',
     },
     quiz: ilmuFalakQuiz,
     comic: ilmuFalakComic,
   },
   'pasar-sebagai-ruang-sosial': {
     video: {
-      title: 'Video Edukasi: Pasar, Jantung Komunitas',
+      title: 'Educational Video: The Market, Heart of the Community',
       description:
-        'Lihat bagaimana pasar tradisional berfungsi sebagai ruang sosial yang penting, lebih dari sekadar tempat jual beli.',
+        'See how a traditional market functions as an important social space, more than just a place for trade.',
       embedUrl: 'https://www.canva.com/design/DAG14RO1hQc/5heno25dXGGw6tKD2MrbhA/watch?embed',
-      info: 'Video ini akan menangkap suasana dan interaksi sosial di Pasar Peunayong, menunjukkan bagaimana informasi dan kohesi sosial terjalin.',
+      info: 'This video will capture the atmosphere and social interactions at Peunayong Market, showing how information and social cohesion are woven.',
     },
     quiz: pasarQuiz,
     comic: pasarComic,
   },
   'siaga-si-kucing-cerdas': {
     video: {
-      title: 'Video Animasi: Petualangan Siaga',
-      description: 'Saksikan petualangan Siaga si kucing cerdas dalam video animasi yang mengajarkan anak-anak langkah-langkah penting saat terjadi gempa.',
+      title: 'Animated Video: The Adventures of Siaga',
+      description: 'Watch the adventure of Siaga the smart cat in an animated video that teaches children important steps during an earthquake.',
       embedUrl: 'https://www.canva.com/design/DAG18l97wYc/kwO9aaQIufH-t5cDC_36Ag/watch?embed',
-      info: 'Video ini menggunakan visual yang ceria dan lagu yang mudah diingat untuk membantu anak-anak memahami konsep kesiapsiagaan bencana.',
+      info: 'This video uses cheerful visuals and a catchy song to help children understand the concept of disaster preparedness.',
     },
     quiz: kucingCerdasQuiz,
     comic: kucingCerdasComic,
@@ -1609,6 +1609,7 @@ export const interactiveContent: { [key: string]: InteractiveContent } = {
     
 
     
+
 
 
 
