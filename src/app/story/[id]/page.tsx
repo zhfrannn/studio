@@ -185,10 +185,9 @@ function StoryDetailClient({ story }: { story: Story }) {
 // This is the main page component, now a Server Component
 export default function StoryDetailPage({ params }: { params: { id: string } }) {
   // Data fetching happens here on the server
-  const storyId = params.id;
   // We fetch with 'en' first to find the story, language context will apply on the client
   const allStories = getTranslatedStories({ lang: 'en' }); 
-  const story = allStories.find(s => s.id === storyId);
+  const story = allStories.find(s => s.id === params.id);
 
   if (!story) {
     notFound();
