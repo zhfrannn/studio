@@ -28,7 +28,7 @@ import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Separator } from '@/components/ui/separator';
 import { getTranslatedStories } from '@/lib/data';
-import { interactiveContent, masterQuiz } from '@/lib/interactive-content';
+import { getInteractiveContent, getMasterQuiz } from '@/lib/interactive-content';
 import Image from 'next/image';
 import Link from 'next/link';
 import WaveIcon from '@/components/icons/wave-icon';
@@ -80,6 +80,8 @@ export default function InteractiveLearningHub() {
   const { dictionary, language } = useLanguage();
   const dict = dictionary.interactive;
   const stories = getTranslatedStories({ lang: language });
+  const interactiveContent = getInteractiveContent(dictionary);
+  const masterQuiz = getMasterQuiz(dictionary);
   
   const leaderboardData = [
     { name: dict.tsunamiExpert, score: '30/30', rank: 1, initial: 'TE' },
@@ -118,11 +120,7 @@ export default function InteractiveLearningHub() {
           <main className="col-span-1 space-y-8 lg:col-span-2">
             {/* Master Quiz */}
             <MotionWrapper>
-               <InteractiveQuiz quiz={{
-                 title: dict.masterQuiz,
-                 description: dict.masterQuizDescription,
-                 questions: masterQuiz.questions
-               }} />
+               <InteractiveQuiz quiz={masterQuiz} />
             </MotionWrapper>
 
             {/* Educational Videos */}
@@ -369,5 +367,7 @@ export default function InteractiveLearningHub() {
     </div>
   );
 }
+
+    
 
     

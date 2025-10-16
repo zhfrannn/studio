@@ -23,7 +23,7 @@
       "description": "Arsitektur tiga lapis yang mengubah cerita pribadi menjadi alat edukasi yang kuat.",
       "step1": {
         "title": "1. Pengumpulan Cerita",
-        "description": "Warga berbagi pengalaman melalui WhatsApp. Duta muda membantu merekam cerita dari para tetua."
+        "description": "Warga berbagi pengalaman melalui Telegram. Duta muda membantu merekam cerita dari para tetua."
       },
       "step2": {
         "title": "2. Pemrosesan AI",
@@ -54,7 +54,7 @@
       "cardTitle": "Kuis, Komik & Video",
       "cardDescription": "Uji pengetahuan Anda dengan kuis, selami narasi visual dengan komik, dan tonton kisah nyata yang menjadi hidup.",
       "cardBody": "Setiap cerita di platform kami dilengkapi dengan serangkaian alat pembelajaran interaktif. Ini bukan hanya tentang membaca; ini tentang mengalami.",
-      "cta": "Masuk ke Learning Hub"
+      "cta": "Masuk ke Pusat Pembelajaran"
     },
     "eduboard": {
       "title": "Community EduBoards",
@@ -139,7 +139,10 @@
     "readMore": "Baca Selengkapnya"
   },
   "storyDetail": {
-    "otherStories": "Jelajahi Cerita Lain"
+    "otherStories": "Jelajahi Cerita Lain",
+    "fullNarrative": "Narasi Lengkap",
+    "interactiveQuiz": "Kuis Interaktif",
+    "quizComingSoon": "Kuis untuk cerita ini akan segera hadir."
   },
   "languageToggle": {
     "label": "Ganti Bahasa"
@@ -161,6 +164,18 @@
     "masterQuiz": "Tantangan Pengetahuan Aceh",
     "masterQuizDescription": "Uji pengetahuan umum Anda tentang budaya, sejarah, dan ketahanan Aceh.",
     "startQuiz": "Mulai Kuis",
+    "quizComplete": "Kuis Selesai!",
+    "finalScore": "Skor Akhir Anda:",
+    "excellentScore": "Luar biasa! Anda seorang ahli.",
+    "goodScore": "Kerja bagus! Selalu ada ruang untuk belajar.",
+    "restartQuiz": "Ulangi Kuis",
+    "back": "Kembali",
+    "questionOf": "Pertanyaan {current} dari {total}",
+    "progress": "Progres",
+    "correct": "Benar! Anda mendapatkan {points} poin.",
+    "incorrect": "Kurang tepat. Jawaban yang benar adalah: {correctAnswer}",
+    "nextQuestion": "Pertanyaan Berikutnya",
+    "finishQuiz": "Selesaikan Kuis",
     "videosTitle": "Video Edukasi",
     "videosDescription": "Tonton video edukasi dari koleksi cerita kami untuk memperdalam pemahaman.",
     "watch": "Tonton",
@@ -428,6 +443,454 @@
       "title": "Siaga, Si Kucing Cerdas",
       "summary": "Sebuah cerita untuk anak-anak SD tentang kesiapsiagaan bencana, dikisahkan melalui petualangan seekor kucing pintar bernama Siaga yang mengajari teman-temannya apa yang harus dilakukan saat gempa.",
       "fullText": "Di sebuah desa kecil, hiduplah seekor kucing cerdas bernama Siaga. Ia berbeda dari kucing lainnya. Saat teman-temannya suka tidur seharian, Siaga suka mendengarkan cerita dari para tetua desa tentang gempa dan tsunami. Suatu hari, saat Siaga sedang bermain bersama teman-temannya, tiba-tiba tanah bergoyang. 'Gempa!' teriak Siaga. 'Ingat tiga langkah: Merunduk, Berlindung, dan Bertahan!' Siaga langsung merunduk, berlindung di bawah meja yang kokoh, dan berpegangan pada kakinya. Teman-temannya yang awalnya takut dan bingung, melihat apa yang dilakukan Siaga dan langsung mengikutinya. Setelah guncangan berhenti, Siaga dengan tenang mengajak teman-temannya ke lapangan terbuka, jauh dari gedung dan pohon tinggi. 'Kita harus ke tempat tinggi, siapa tahu air laut surut,' katanya, mengingat cerita Smong yang pernah ia dengar. Kisah Siaga mengajarkan pada anak-anak bahwa dengan tahu apa yang harus dilakukan, kita tidak perlu panik saat bencana datang. Kita bisa melindungi diri sendiri dan teman-teman."
+    }
+  },
+  "interactiveContent": {
+    "smong": {
+        "video": {
+            "title": "Video Edukasi: Sistem Pengetahuan Tradisional",
+            "description": "Temukan bagaimana sistem pengetahuan asli melengkapi ilmu pengetahuan modern dalam kesiapsiagaan bencana.",
+            "info": "Video ini mengeksplorasi bagaimana sistem pengetahuan tradisional seperti Smong bekerja bersama sistem peringatan dini modern untuk melindungi masyarakat."
+        },
+        "quiz": {
+            "title": "Kuis Kearifan Smong",
+            "description": "Uji pemahaman Anda tentang Smong dan sistem pengetahuan tradisional untuk kesiapsiagaan bencana.",
+            "questions": [
+                { "question": "Apa arti kata 'Smong' dalam bahasa lokal Pulau Simeulue?", "options": ["Gempa Bumi", "Tsunami", "Peringatan", "Lautan"], "correctAnswer": "Tsunami", "points": 10 },
+                { "question": "Apa dua tanda dalam syair Smong yang menunjukkan tsunami akan datang?", "options": ["Angin kencang dan hujan deras", "Gempa kuat diikuti surutnya air laut", "Awan gelap dan petir", "Suara sirene yang keras"], "correctAnswer": "Gempa kuat diikuti surutnya air laut", "points": 10 },
+                { "question": "Tindakan apa yang disarankan oleh kearifan Smong segera setelah melihat tanda-tanda ini?", "options": ["Pergi ke pantai untuk melihat", "Menunggu instruksi resmi", "Lari ke tempat yang lebih tinggi", "Bersembunyi di dalam rumah"], "correctAnswer": "Lari ke tempat yang lebih tinggi", "points": 10 }
+            ]
+        },
+        "comic": {
+            "title": "Komik Digital: Kearifan Smong",
+            "description": "Ikuti kisah bagaimana kearifan lokal Smong menyelamatkan ribuan nyawa dalam format komik strip yang menarik.",
+            "panels": [
+                { "title": "Di Bawah Pohon Beringin", "text": "\"Nenek mengajarkan kami peringatan kuno di bawah pohon beringin tua...\"" },
+                { "title": "Bumi Berguncang", "text": "\"Tiba-tiba, tanah berguncang hebat. Kami tahu ini bukan gempa biasa.\"" },
+                { "title": "Lari! Jangan Kembali!", "text": "\"Orang-orang berteriak, 'Smong! Smong!' sambil menunjuk ke arah laut yang surut.\"" },
+                { "title": "Menuju Perbukitan", "text": "\"Kami semua berlari secepat mungkin menuju perbukitan, meninggalkan segalanya.\"" },
+                { "title": "Lautan yang Murka", "text": "\"Dari puncak bukit, kami melihat gelombang raksasa menghantam desa kami.\"" },
+                { "title": "Syukur & Pelajaran", "text": "\"Kami selamat karena kami mendengarkan leluhur kami. Smong adalah penyelamat kami.\"" }
+            ]
+        }
+    },
+    "bakau": {
+        "video": {
+            "title": "Video Edukasi: Hutan Bakau, Benteng Alam Kita",
+            "description": "Pelajari pentingnya ekosistem bakau sebagai perlindungan alami terhadap abrasi, badai, dan bahkan tsunami.",
+            "info": "Video ini menjelaskan bagaimana sebuah komunitas di Aceh Jaya berhasil memulihkan garis pantai mereka melalui penanaman kembali bakau."
+        },
+        "quiz": {
+            "title": "Kuis Penjaga Pantai",
+            "description": "Seberapa baik Anda memahami fungsi dan manfaat hutan bakau?",
+            "questions": [
+                { "question": "Selain melindungi pantai dari abrasi dan badai, apa manfaat ekologis lain dari hutan bakau?", "options": ["Menghasilkan buah yang bisa dimakan", "Menjadi habitat bagi biota laut seperti ikan dan kepiting", "Menyaring polusi udara di kota", "Membuat air laut menjadi tawar"], "correctAnswer": "Menjadi habitat bagi biota laut seperti ikan dan kepiting", "points": 10 },
+                { "question": "Apa tantangan awal yang dihadapi masyarakat saat menanam kembali hutan bakau?", "options": ["Banyak bibit yang gagal tumbuh", "Kurangnya dana dari pemerintah", "Konflik dengan perusahaan kelapa sawit", "Larangan dari tetua desa"], "correctAnswer": "Banyak bibit yang gagal tumbuh", "points": 10 },
+                { "question": "Bagaimana hutan bakau melindungi garis pantai?", "options": ["Dengan melepaskan zat kimia yang memecah ombak", "Dengan menciptakan dinding tak terlihat", "Dengan akarnya yang kuat yang mencengkeram tanah dan menahan ombak", "Dengan menarik burung-burung besar untuk melawan badai"], "correctAnswer": "Dengan akarnya yang kuat yang mencengkeram tanah dan menahan ombak", "points": 10 }
+            ]
+        },
+        "comic": {
+            "title": "Komik: Hutan Bakau, Penjaga Pantai",
+            "description": "Kisah inspiratif tentang bagaimana sebuah komunitas bersatu untuk menanam kembali benteng alami mereka.",
+            "panels": [
+                { "title": "Garis Pantai yang Terkikis", "text": "Dulu, pantai kami terus-menerus terkikis oleh badai. Rumah-rumah di dekat pantai perlahan hancur." },
+                { "title": "Mengingat Nasihat Tetua", "text": "Kami teringat cerita para tetua kami, bahwa hutan bakau adalah benteng alami kami yang hilang." },
+                { "title": "Menanam Benih Harapan", "text": "Bersama-sama, para pemuda dan orang tua, kami mulai menanam kembali bibit bakau di sepanjang pantai." },
+                { "title": "Tantangan & Kegagalan", "text": "Awalnya sulit, banyak bibit yang gagal tumbuh. Tapi kami tidak menyerah dan terus mencoba." },
+                { "title": "Benteng Alam Tumbuh Kuat", "text": "Sekarang, hutan bakau telah tumbuh lebat. Akarnya yang kuat mencengkeram tanah, menahan laju ombak." },
+                { "title": "Kehidupan Kembali", "text": "Hutan ini tidak hanya melindungi desa, tetapi juga menjadi rumah bagi ikan dan kepiting, memberi kami mata pencaharian baru." }
+            ]
+        }
+    },
+    "dapurUmum": {
+        "video": {
+            "title": "Video Edukasi: Memasak Perdamaian",
+            "description": "Saksikan bagaimana Dapur Umum di Bireuen menjadi ruang untuk merajut kembali persaudaraan pasca-konflik.",
+            "info": "Dokumenter pendek ini meliput kegiatan sehari-hari di Dapur Damai di Bireuen dan wawancara dengan para penggagasnya."
+        },
+        "quiz": {
+            "title": "Kuis Dapur Perdamaian",
+            "description": "Uji pemahaman Anda tentang peran inisiatif lokal dalam pembangunan perdamaian.",
+            "questions": [
+                { "question": "Apa hasil akhir terpenting dari inisiatif Dapur Umum Perdamaian?", "options": ["Warga menjadi kenyang", "Menerima penghargaan dari pemerintah", "Runtuhnya dinding ketidakpercayaan dan terjalinnya kembali persaudaraan", "Menjadi tujuan wisata kuliner"], "correctAnswer": "Runtuhnya dinding ketidakpercayaan dan terjalinnya kembali persaudaraan", "points": 10 },
+                { "question": "Di mana keajaiban rekonsiliasi terjadi menurut cerita?", "options": ["Di balai desa saat rapat resmi", "Di media sosial melalui grup diskusi", "Sambil memotong sayur dan mengaduk gulai di dapur", "Di lapangan olahraga saat kompetisi"], "correctAnswer": "Sambil memotong sayur dan mengaduk gulai di dapur", "points": 10 },
+                { "question": "Apa ide dasar yang memicu terbentuknya dapur umum ini?", "options": ["Perintah dari kepala desa", "Adanya bantuan makanan dari LSM", "Semua orang butuh makan, dan makanan bisa menyatukan", "Untuk membuka bisnis restoran"], "correctAnswer": "Semua orang butuh makan, dan makanan bisa menyatukan", "points": 10 }
+            ]
+        },
+        "comic": {
+            "title": "Komik: Dapur Umum Perdamaian",
+            "description": "Bagaimana sebuah dapur sederhana merajut kembali benang persaudaraan yang pernah terkoyak.",
+            "panels": [
+                { "title": "Luka Pasca-Konflik", "text": "Setelah konflik berakhir, masih ada banyak luka dan ketidakpercayaan di antara kami. Sulit untuk memulai kembali." },
+                { "title": "Sebuah Ide Sederhana: Makanan", "text": "Beberapa dari kami, para ibu, berpikir: semua orang butuh makan, dan makanan bisa menyatukan." },
+                { "title": "Memulai Dapur Umum", "text": "Kami mendirikan sebuah dapur sederhana. Siapapun boleh datang untuk makan, dan siapapun boleh membantu memasak." },
+                { "title": "Merajut Cerita di Atas Kompor", "text": "Sambil memotong sayur dan mengaduk gulai, kami mulai berbicara, berbagi cerita, tawa, dan air mata." },
+                { "title": "Ruang untuk Rekonsiliasi", "text": "Dapur ini menjadi lebih dari tempat makan; ia menjadi ruang rekonsiliasi di mana dinding pemisah runtuh." },
+                { "title": "Damai dari Sepiring Nasi", "text": "Kami belajar bahwa perdamaian bisa dimulai dari hal yang paling sederhana: sepiring nasi hangat dan hati yang terbuka." }
+            ]
+        }
+    },
+    "lumbungPadi": {
+        "video": {
+            "title": "Video Edukasi: Lumbung Padi, Jaring Pengaman Sosial",
+            "description": "Pelajari bagaimana lumbung komunal menjadi fondasi ketahanan pangan dan gotong royong di Gayo.",
+            "info": "Video ini menjelaskan cara kerja lumbung komunal sebagai jaring pengaman sosial yang efektif di tingkat komunitas."
+        },
+        "quiz": {
+            "title": "Kuis Lumbung Komunal",
+            "description": "Uji pemahaman Anda tentang gotong royong dan ketahanan pangan.",
+            "questions": [
+                { "question": "Prinsip dasar apa yang mendasari sistem lumbung komunal ini?", "options": ["Prinsip untung rugi", "Prinsip utang dengan bunga", "Semangat gotong royong dan kepedulian", "Prinsip kompetisi"], "correctAnswer": "Semangat gotong royong dan kepedulian", "points": 10 },
+                { "question": "Kapan seseorang bisa mengambil dari lumbung komunal?", "options": ["Kapan saja mereka mau", "Saat perayaan desa", "Saat mengalami kesulitan atau gagal panen", "Hanya jika mereka telah berkontribusi lebih banyak"], "correctAnswer": "Saat mengalami kesulitan atau gagal panen", "points": 10 },
+                { "question": "Selain sebagai cadangan makanan, apa fungsi lumbung padi bagi masyarakat?", "options": ["Sebagai objek wisata", "Sebagai simbol persatuan dan kekuatan kolektif", "Sebagai tempat penyimpanan barang antik", "Sebagai tempat pemungutan suara"], "correctAnswer": "Sebagai simbol persatuan dan kekuatan kolektif", "points": 10 }
+            ]
+        },
+        "comic": {
+            "title": "Komik: Lumbung Padi Komunal",
+            "description": "Sebuah kisah tentang gotong royong masyarakat Gayo dalam menghadapi musim paceklik.",
+            "panels": [
+                { "title": "Panen yang Tak Pasti", "text": "Di dataran tinggi Gayo, cuaca tidak selalu bisa ditebak. Terkadang panen melimpah, terkadang gagal total." },
+                { "title": "Menghidupkan Kembali Tradisi", "text": "Kami menghidupkan kembali tradisi lumbung komunal. Setiap keluarga menyisihkan sebagian dari hasil panen mereka." },
+                { "title": "Jaring Pengaman Sosial", "text": "Ketika sebuah keluarga menghadapi gagal panen, mereka dapat mengambil dari lumbung ini tanpa bunga atau utang." },
+                { "title": "Kaya dalam Persaudaraan", "text": "Lumbung ini adalah simbol persatuan kami. Dengan berbagi, kita semua menjadi lebih kuat." }
+            ]
+        }
+    },
+    "bahTangse": {
+        "video": {
+            "title": "Video Dokumenter: Kehancuran Bah Tangse 2011",
+            "description": "Tonton cuplikan berita nyata dari banjir bandang yang menghancurkan Tangse, Pidie pada 10 Maret 2011.",
+            "info": "Video ini berisi rekaman aktual dari lokasi bencana dan wawancara dengan para korban, memberikan gambaran nyata tentang dampak penggundulan hutan."
+        },
+        "quiz": {
+            "title": "Kuis Kesadaran Banjir Tangse",
+            "description": "Uji pemahaman Anda tentang penyebab dan dampak banjir bandang \"Bah Tangse\".",
+            "questions": [
+                { "question": "Apa penyebab utama dari bencana \"Bah Tangse\" menurut cerita?", "options": ["Gempa bumi", "Bendungan yang runtuh", "Penebangan liar di hutan hulu", "Hujan es"], "correctAnswer": "Penebangan liar di hutan hulu", "points": 10 },
+                { "question": "Ke mana penduduk mengungsi saat banjir bandang terjadi?", "options": ["Ke atap rumah", "Ke dalam bungker bawah tanah", "Ke perbukitan atau dataran tinggi", "Ke tengah lapangan"], "correctAnswer": "Ke perbukitan atau dataran tinggi", "points": 10 },
+                { "question": "Apa yang dibawa oleh air bah selain air yang meluap?", "options": ["Ikan-ikan besar", "Sampah plastik", "Puluhan batang kayu raksasa", "Pasir pantai"], "correctAnswer": "Puluhan batang kayu raksasa", "points": 10 }
+            ]
+        },
+        "comic": {
+            "title": "Komik: Bah Tangse, Sungai yang Murka",
+            "description": "Pelajaran pahit dari Tangse tentang pentingnya menjaga alam.",
+            "panels": [
+                { "title": "Malam yang Mencekam", "text": "Hujan turun tanpa henti. Tiba-tiba, kami mendengar suara gemuruh yang bukan dari guntur." },
+                { "title": "Air Bah Datang", "text": "Air sungai meluap dengan liar, warnanya hitam pekat, membawa puluhan batang kayu raksasa." },
+                { "title": "Seruan Peringatan", "text": "Kepala desa berteriak melalui pengeras suara masjid, \"Air naik! Selamatkan diri! Lari ke tempat tinggi!\"" },
+                { "title": "Berlari ke Tempat Tinggi", "text": "Dalam gelap gulita, kami berlari sekuat tenaga ke perbukitan, hanya dengan pakaian di badan." },
+                { "title": "Pagi yang Berlumpur", "text": "Keesokan paginya, hanya lumpur tebal dan puing-puing yang tersisa. Kami sadar ini adalah akibat dari penebangan liar." },
+                { "title": "Pelajaran & Sumpah", "text": "Bah Tangse adalah pelajaran pahit. Sejak itu, kami bersumpah untuk melindungi dan menanam kembali hutan kami." }
+            ]
+        }
+    },
+    "kopiGayo": {
+        "video": {
+            "title": "Video Edukasi: Kopi Gayo, Aroma Perdamaian",
+            "description": "Saksikan kisah inspiratif para petani kopi Gayo bangkit dari keterpurukan pasca-konflik untuk membangun kembali kehidupan mereka.",
+            "info": "Video ini menampilkan wawancara dengan para petani kopi Gayo yang berbagi perjalanan mereka dari era konflik hingga membangun kembali kehidupan mereka melalui perkebunan kopi."
+        },
+        "quiz": {
+            "title": "Kuis Aroma Perdamaian",
+            "description": "Seberapa banyak yang Anda ketahui tentang peran kopi Gayo dalam pemulihan pasca-konflik?",
+            "questions": [
+                { "question": "Mengapa para petani kopi Gayo memutuskan untuk membentuk koperasi?", "options": ["Karena diwajibkan oleh pemerintah", "Untuk bersaing satu sama lain", "Untuk saling mendukung dan memiliki daya tawar yang lebih baik", "Untuk mendapatkan pinjaman bank"], "correctAnswer": "Untuk saling mendukung dan memiliki daya tawar yang lebih baik", "points": 10 },
+                { "question": "Apa dampak positif utama dari kebangkitan industri kopi Gayo bagi masyarakat?", "options": ["Peningkatan jumlah wisatawan", "Masyarakat bisa menyekolahkan anak-anak mereka", "Penurunan populasi hama", "Harga tanah menjadi mahal"], "correctAnswer": "Masyarakat bisa menyekolahkan anak-anak mereka", "points": 10 },
+                { "question": "Menurut cerita, apa itu \"aroma perdamaian\"?", "options": ["Aroma makanan di dapur umum", "Aroma bunga di taman", "Aroma kopi yang diolah setiap pagi", "Aroma laut setelah badai"], "correctAnswer": "Aroma kopi yang diolah setiap pagi", "points": 10 }
+            ]
+        },
+        "comic": {
+            "title": "Komik: Kopi Gayo, Aroma Perdamaian",
+            "description": "Kisah kebangkitan petani kopi Gayo pasca-konflik.",
+            "panels": [
+                { "title": "Perkebunan yang Terbengkalai", "text": "Selama konflik, banyak perkebunan kopi kami yang terbengkalai dan ditumbuhi semak belukar." },
+                { "title": "Kembali dari Awal", "text": "Setelah damai, kami kembali. Memulai lagi dari awal sangat berat, tapi kami melihat harapan." },
+                { "title": "Harapan dalam Biji Kopi", "text": "Kami bekerja keras, belajar teknik bertani yang lebih baik, melihat harapan baru di setiap biji kopi." },
+                { "title": "Membangun Koperasi", "text": "Kami membentuk koperasi untuk saling mendukung, belajar teknik baru, dan memasarkan kopi bersama." },
+                { "title": "Dikenal Dunia", "text": "Perlahan tapi pasti, kopi Gayo dikenal dunia, membawa nama baik bagi daerah kami." },
+                { "title": "Aroma Perdamaian", "text": "Kini, aroma kopi Gayo yang terkenal di dunia adalah aroma kerja keras, harapan, dan perdamaian yang telah kami raih." }
+            ]
+        }
+    },
+    "apiBukit": {
+        "video": {
+            "title": "Video Edukasi: Masyarakat Peduli Api",
+            "description": "Lihat bagaimana Masyarakat Peduli Api berjuang melindungi hutan dari kebakaran.",
+            "info": "Video ini akan menyoroti pentingnya pencegahan dan peran aktif masyarakat dalam mitigasi bencana kebakaran hutan."
+        },
+        "quiz": {
+            "title": "Kuis Penjaga Hutan",
+            "description": "Uji pengetahuan Anda tentang pencegahan dan penanggulangan kebakaran hutan.",
+            "questions": [
+                { "question": "Menurut cerita, apa penyebab umum kebakaran hutan di Gayo?", "options": ["Sambaran petir", "Panas matahari yang ekstrim", "Kelalaian manusia seperti membuka lahan dengan cara membakar", "Letusan gunung berapi"], "correctAnswer": "Kelalaian manusia seperti membuka lahan dengan cara membakar", "points": 10 },
+                { "question": "Apa nama kelompok sukarelawan yang dibentuk warga untuk mengatasi kebakaran hutan?", "options": ["Tim Pemadam Gayo", "Masyarakat Peduli Api", "Aliansi Penjaga Hutan", "Komunitas Bukit Barisan"], "correctAnswer": "Masyarakat Peduli Api", "points": 10 },
+                { "question": "Selain memadamkan api, kegiatan penting apa lagi yang dilakukan kelompok ini?", "options": ["Menjual kayu", "Berburu hewan liar", "Memberi penyuluhan kepada warga agar tidak membakar lahan", "Membangun vila di hutan"], "correctAnswer": "Memberi penyuluhan kepada warga agar tidak membakar lahan", "points": 10 }
+            ]
+        },
+        "comic": {
+            "title": "Komik: Api di Bukit Barisan",
+            "description": "Perjuangan Masyarakat Peduli Api untuk melindungi hutan Gayo.",
+            "panels": [
+                { "title": "Ancaman Musim Kemarau", "text": "Setiap musim kemarau, hutan pinus yang indah ini menjadi sangat rentan terhadap kebakaran. Sedikit percikan bisa menjadi bencana." },
+                { "title": "Patroli Sukarela", "text": "Kami membentuk Masyarakat Peduli Api, berpatroli secara sukarela untuk mencegah kebakaran." },
+                { "title": "Edukasi Warga", "text": "Yang terpenting, kami mengedukasi warga agar tidak membuka lahan dengan cara membakar." },
+                { "title": "Memadamkan Api", "text": "Ketika api muncul, kami bekerja sama dengan peralatan seadanya untuk memadamkannya sebelum membesar." },
+                { "title": "Tanggung Jawab Bersama", "text": "Ini bukan pekerjaan pemerintah; ini adalah tanggung jawab kita bersama. Hutan ini adalah sumber air kita." },
+                { "title": "Damai dengan Alam", "text": "Melindungi hutan ini adalah cara kami berdamai dengan alam, untuk masa depan anak-anak kami." }
+            ]
+        }
+    },
+    "pemudaAdat": {
+        "video": {
+            "title": "Video Edukasi: Tari Seudati, Pengikat Komunitas",
+            "description": "Saksikan bagaimana para pemuda di Pidie melestarikan budaya dan memperkuat ikatan sosial melalui tari Seudati.",
+            "info": "Video ini akan mendokumentasikan kegiatan sanggar Seudati dan dampaknya bagi para pemuda di Pidie."
+        },
+        "quiz": {
+            "title": "Kuis Penjaga Adat",
+            "description": "Uji pemahaman Anda tentang peran budaya dalam pembangunan perdamaian.",
+            "questions": [
+                { "question": "Inisiatif ini menunjukkan bahwa seni dan budaya bisa menjadi alat yang efektif untuk...", "options": ["Menghasilkan seniman terkenal", "Pembangunan perdamaian dan penguatan komunitas", "Menarik wisatawan", "Melupakan masa lalu"], "correctAnswer": "Pembangunan perdamaian dan penguatan komunitas", "points": 10 },
+                { "question": "Tarian apa yang dihidupkan kembali oleh para pemuda dalam cerita?", "options": ["Tari Saman", "Tari Seudati", "Tari Piring", "Tari Kecak"], "correctAnswer": "Tari Seudati", "points": 10 },
+                { "question": "Selain gerakan, apa yang diajarkan tarian tersebut kepada para pemuda?", "options": ["Cara bertarung", "Sejarah kerajaan Aceh", "Disiplin, kerja sama tim, dan syair nasihat", "Teknik vokal untuk menyanyi"], "correctAnswer": "Disiplin, kerja sama tim, dan syair nasihat", "points": 10 }
+            ]
+        },
+        "comic": {
+            "title": "Komik: Pemuda Penjaga Adat",
+            "description": "Menghidupkan kembali tari Seudati untuk menjauhkan pemuda dari kekerasan.",
+            "panels": [
+                { "title": "Energi yang Salah Arah", "text": "Pasca-konflik, banyak anak muda kehilangan arah. Energi besar mereka terkadang tersalurkan ke hal-hal negatif." },
+                { "title": "Sebuah Panggilan", "text": "Kami, beberapa pemuda yang lebih tua, merasa harus melakukan sesuatu untuk komunitas." },
+                { "title": "Menghidupkan Kembali Sanggar", "text": "Kami memutuskan untuk menghidupkan kembali sanggar tari Seudati, tarian yang mengajarkan disiplin dan kerja sama." },
+                { "title": "Berlatih Bersama", "text": "Awalnya sulit, tapi perlahan sanggar kami mulai ramai. Para pemuda menyalurkan energi mereka ke dalam tarian." },
+                { "title": "Ekspresi Positif", "text": "Sanggar menjadi ruang aman bagi pemuda untuk berekspresi secara positif dan mempelajari nilai-nilai luhur." },
+                { "title": "Jembatan Antar Desa", "text": "Melalui tarian, kami membangun jembatan antar desa dan menciptakan ikatan komunitas yang lebih kuat." }
+            ]
+        }
+    },
+    "perempuanPenganyam": {
+        "video": {
+            "title": "Video Edukasi: Perempuan Penganyam Harapan",
+            "description": "Saksikan bagaimana para janda korban tsunami bangkit dari keterpurukan dengan membentuk kelompok kerajinan anyaman.",
+            "info": "Dokumenter pendek ini akan mengikuti perjalanan kelompok anyam dari duka menjadi berdaya."
+        },
+        "quiz": {
+            "title": "Kuis Penganyam Harapan",
+            "description": "Uji pemahaman Anda tentang pemberdayaan perempuan dan pemulihan pasca-bencana.",
+            "questions": [
+                { "question": "Transformasi utama apa yang dialami oleh para perempuan ini?", "options": ["Dari petani menjadi pengrajin", "Dari ibu rumah tangga menjadi politisi", "Dari korban menjadi penyintas yang berdaya", "Dari pedagang menjadi guru"], "correctAnswer": "Dari korban menjadi penyintas yang berdaya", "points": 10 },
+                { "question": "Bahan utama apa yang mereka gunakan untuk membuat kerajinan anyaman?", "options": ["Rotan", "Bambu", "Daun Pandan", "Plastik daur ulang"], "correctAnswer": "Daun Pandan", "points": 10 },
+                { "question": "Selain sebagai sumber pendapatan, fungsi lain apa yang dimiliki kegiatan menganyam bagi mereka?", "options": ["Sebagai kompetisi tahunan", "Sebagai terapi dan ruang untuk saling mendukung", "Sebagai cara melestarikan bahasa daerah", "Sebagai syarat untuk menerima bantuan pemerintah"], "correctAnswer": "Sebagai terapi dan ruang untuk saling mendukung", "points": 10 }
+            ]
+        },
+        "comic": {
+            "title": "Komik: Perempuan Penganyam Harapan",
+            "description": "Kisah para janda korban tsunami yang bangkit dengan membentuk kelompok kerajinan anyaman.",
+            "panels": [
+                { "title": "Duka dan Ketidakpastian", "text": "Tsunami merenggut suami dan rumah kami, meninggalkan kami dalam duka dan ketidakpastian." },
+                { "title": "Menganyam sebagai Terapi", "text": "Kami berkumpul dan mulai menganyam dengan daun pandan. Sambil menganyam, kami berbagi cerita dan saling menguatkan." },
+                { "title": "Ciptaan dari Hati", "text": "Anyaman ini bukan sekadar tikar atau tas; ini adalah terapi dan curahan hati kami." },
+                { "title": "Kemandirian Ekonomi", "text": "Perlahan, produk kami dikenal dan pesanan datang. Kami mendapatkan penghasilan sendiri." },
+                { "title": "Menjadi Berdaya", "text": "Kami bukan lagi hanya korban; kami adalah penyintas yang berdaya yang dapat menafkahi keluarga kami." },
+                { "title": "Keluarga Baru", "text": "Kelompok ini menjadi keluarga baru kami, tempat kami menenun kembali harapan untuk masa depan." }
+            ]
+        }
+    },
+    "arsitektur": {
+        "video": {
+            "title": "Video Edukasi: Kearifan Rumoh Aceh",
+            "description": "Pelajari bagaimana arsitektur rumah panggung tradisional Rumoh Aceh terbukti tahan gempa dan adaptif terhadap lingkungan.",
+            "info": "Video ini akan membandingkan desain Rumoh Aceh dengan bangunan modern dan menyoroti prinsip-prinsip rekayasa cerdik di dalamnya."
+        },
+        "quiz": {
+            "title": "Kuis Arsitektur Bijak",
+            "description": "Uji pemahaman Anda tentang kearifan di balik arsitektur Rumoh Aceh.",
+            "questions": [
+                { "question": "Pelajaran utama apa yang dapat dipetik dari kearifan arsitektur Rumoh Aceh?", "options": ["Kita harus hanya membangun rumah dari kayu", "Teknologi modern tidak berguna", "Desain tradisional seringkali memiliki solusi yang adaptif terhadap lingkungan", "Rumah panggung tidak aman"], "correctAnswer": "Desain tradisional seringkali memiliki solusi yang adaptif terhadap lingkungan", "points": 10 },
+                { "question": "Fitur utama apa dari Rumoh Aceh yang membuatnya tahan gempa?", "options": ["Dinding beton yang tebal", "Konstruksi kayu yang fleksibel", "Atap dari daun rumbia", "Fondasi yang sangat dalam"], "correctAnswer": "Konstruksi kayu yang fleksibel", "points": 10 },
+                { "question": "Apa fungsi dari \"kolong\" atau ruang di bawah rumah panggung?", "options": ["Hanya sebagai hiasan", "Sebagai garasi mobil", "Sebagai ruang serbaguna dan jalan bagi air saat banjir", "Sebagai tempat membuang sampah"], "correctAnswer": "Sebagai ruang serbaguna dan jalan bagi air saat banjir", "points": 10 }
+            ]
+        },
+        "comic": {
+            "title": "Komik: Arsitektur Rumah Panggung",
+            "description": "Menemukan kembali kearifan Rumoh Aceh sebagai inspirasi untuk bangunan tahan gempa.",
+            "panels": [
+                { "title": "Rumoh Aceh yang Bertahan", "text": "Ketika gempa dan tsunami menghancurkan banyak bangunan modern, kami melihat banyak Rumoh Aceh masih berdiri kokoh." },
+                { "title": "Konstruksi yang Fleksibel", "text": "Struktur panggung dengan konstruksi kayu yang fleksibel terbukti mampu menyerap guncangan gempa." },
+                { "title": "Adaptif terhadap Lingkungan", "text": "Ruang di bawah rumah tidak hanya serbaguna tetapi juga menyediakan jalan bagi air jika terjadi banjir." },
+                { "title": "Sebuah Pencerahan", "text": "Ini membuka mata kami. Arsitektur leluhur kita luar biasa dan sangat relevan." },
+                { "title": "Inspirasi untuk Masa Depan", "text": "Kami mulai mengadvokasikan dan membangun kembali rumah dengan mengadaptasi prinsip-prinsip Rumoh Aceh." },
+                { "title": "Membangun Masa Depan", "text": "Ini bukan tentang kembali ke masa lalu, tapi mengambil pelajaran terbaik dari masa lalu untuk membangun masa depan yang lebih aman." }
+            ]
+        }
+    },
+    "seniTrauma": {
+        "video": {
+            "title": "Video Edukasi: Seni Melawan Trauma",
+            "description": "Saksikan bagaimana para seniman menggunakan mural untuk menyembuhkan luka kota dan jiwa pasca-bencana.",
+            "info": "Video ini akan menampilkan karya-karya seniman mural di Banda Aceh dan wawancara tentang kekuatan seni sebagai media terapi."
+        },
+        "quiz": {
+            "title": "Kuis Kanvas Harapan",
+            "description": "Uji pemahaman Anda tentang kekuatan seni dalam proses pemulihan sosial.",
+            "questions": [
+                { "question": "Tema apa yang sering digambarkan dalam mural mereka?", "options": ["Kemarahan dan kesedihan", "Pemandangan abstrak", "Harapan, ketahanan, dan kebersamaan", "Potret para seniman"], "correctAnswer": "Harapan, ketahanan, dan kebersamaan", "points": 10 },
+                { "question": "Apa tujuan utama para seniman melukis di dinding publik?", "options": ["Untuk menjual lukisan mereka", "Untuk menyembuhkan luka kota dan jiwa mereka melalui seni", "Untuk memprotes pemerintah", "Untuk memenangkan kompetisi seni"], "correctAnswer": "Untuk menyembuhkan luka kota dan jiwa mereka melalui seni", "points": 10 },
+                { "question": "Bagaimana reaksi masyarakat terhadap kegiatan mural ini?", "options": ["Masyarakat marah karena dinding mereka dicat", "Masyarakat tidak peduli", "Masyarakat, termasuk anak-anak, ikut bergabung dalam proses melukis", "Masyarakat melaporkan mereka ke polisi"], "correctAnswer": "Masyarakat, termasuk anak-anak, ikut bergabung dalam proses melukis", "points": 10 }
+            ]
+        },
+        "comic": {
+            "title": "Komik: Seni Melawan Trauma",
+            "description": "Bagaimana seniman muda Banda Aceh menggunakan mural untuk menyembuhkan kota.",
+            "panels": [
+                { "title": "Dinding Bisu Pasca-Tsunami", "text": "Banda Aceh pasca-tsunami penuh dengan dinding bisu yang menjadi saksi tragedi. Suasananya terasa berat." },
+                { "title": "Panggilan untuk Seniman", "text": "Sebagai seniman, kami merasa terpanggil untuk melakukan sesuatu, untuk menyembuhkan luka kota dengan cara kami sendiri." },
+                { "title": "Memberi Warna Baru", "text": "Kami mulai melukis mural di dinding publik, bukan untuk melupakan, tapi untuk memberi warna baru pada ingatan." },
+                { "title": "Terapi Melalui Seni", "text": "Proses melukis bersama ini menjadi terapi bagi kami dan masyarakat. Dinding yang suram menjadi galeri terbuka." },
+                { "title": "Harapan di Setiap Goresan", "text": "Kami melukis tentang harapan, ketahanan, kebersamaan, dan keindahan Aceh yang tak pernah padam." },
+                { "title": "Menyembuhkan Luka Kota", "text": "Seni menjadi cara kami menyembuhkan luka kota dan jiwa kami sendiri, mengubah trauma menjadi harapan." }
+            ]
+        }
+    },
+    "nelayan": {
+        "video": {
+            "title": "Video Edukasi: Navigasi Langit dan Laut",
+            "description": "Pelajari bagaimana nelayan tradisional Aceh menggunakan bintang dan tanda alam untuk menavigasi lautan luas.",
+            "info": "Video ini mendokumentasikan pengetahuan nelayan tentang rasi bintang, angin, dan perilaku biota laut sebagai pemandu mereka."
+        },
+        "quiz": {
+            "title": "Kuis Navigasi Tradisional",
+            "description": "Uji pengetahuan Anda tentang bagaimana nelayan tradisional membaca tanda-tanda alam.",
+            "questions": [
+                { "question": "Rasi bintang apa yang disebut \"Bintang Tiga\" dan digunakan oleh nelayan Aceh sebagai penunjuk arah?", "options": ["Scorpio", "Orion", "Biduk", "Salib Selatan"], "correctAnswer": "Orion", "points": 10 },
+                { "question": "Perilaku hewan apa yang menjadi pertanda cuaca buruk bagi nelayan?", "options": ["Kucing tidur di dalam rumah", "Burung terbang tinggi di langit", "Lumba-lumba berenang mendekati pantai", "Ayam jantan berkokok di pagi hari"], "correctAnswer": "Lumba-lumba berenang mendekati pantai", "points": 10 },
+                { "question": "Bagaimana nelayan mengetahui di mana ikan berkumpul?", "options": ["Menggunakan sonar canggih", "Dengan mengamati warna air dan jenis burung yang terbang di atasnya", "Mengikuti kapal nelayan lain", "Menebar jaring secara acak"], "correctAnswer": "Dengan mengamati warna air dan jenis burung yang terbang di atasnya", "points": 10 }
+            ]
+        },
+        "comic": {
+            "title": "Komik: Kearifan Nelayan",
+            "description": "Kisah nelayan tradisional yang membaca tanda-tanda alam untuk berlayar.",
+            "panels": [
+                { "title": "Kompas Langit dan Laut", "text": "Kami nelayan tidak punya GPS canggih. Kompas kami adalah langit dan laut itu sendiri." },
+                { "title": "Membaca Rasi Bintang", "text": "Ayah saya mengajari saya cara membaca rasi bintang Orion, atau 'Bintang Tiga', untuk mengetahui arah pulang." },
+                { "title": "Tanda dari Hewan", "text": "Jika lumba-lumba berenang mendekati pantai, itu adalah pertanda cuaca akan buruk. Kami belajar dari perilaku hewan." },
+                { "title": "Warna Air dan Ikan", "text": "Kami tahu kapan ikan berkumpul hanya dengan melihat warna air dan jenis burung yang terbang di atasnya." },
+                { "title": "Warisan Generasi", "text": "Pengetahuan ini tidak ada di buku; diwariskan dari ayah ke anak, dari satu generasi nelayan ke generasi berikutnya." },
+                { "title": "Ilmu Kehidupan", "text": "Ini adalah ilmu kehidupan yang memungkinkan kami bersahabat dengan lautan dan pulang dengan selamat." }
+            ]
+        }
+    },
+    "sumurTua": {
+        "video": {
+            "title": "Video Edukasi: Sumur Tua, Sumber Kehidupan",
+            "description": "Pelajari bagaimana sebuah sumur kuno leluhur menjadi penyelamat saat sebuah desa dilanda kekeringan.",
+            "info": "Video ini akan mengeksplorasi pentingnya melestarikan sumber air tradisional dan kearifan leluhur dalam menempatkannya."
+        },
+        "quiz": {
+            "title": "Kuis Sumber Kehidupan",
+            "description": "Uji pemahaman Anda tentang pengelolaan sumber daya air tradisional.",
+            "questions": [
+                { "question": "Mengapa sumur tua itu tidak pernah kering saat sumur modern lainnya kering?", "options": ["Karena sangat dalam", "Karena dibangun tepat di atas mata air besar", "Karena jarang digunakan", "Karena terbuat dari batu ajaib"], "correctAnswer": "Karena dibangun tepat di atas mata air besar", "points": 10 },
+                { "question": "Apa yang mendorong penduduk desa untuk mencari dan membersihkan sumur tua tersebut?", "options": ["Perintah dari pemerintah", "Rasa penasaran dan petualangan", "Kekeringan panjang yang mengeringkan sumber air modern", "Mimpi salah satu warga"], "correctAnswer": "Kekeringan panjang yang mengeringkan sumber air modern", "points": 10 },
+                { "question": "Pelajaran apa yang dipetik oleh penduduk desa dari peristiwa ini?", "options": ["Teknologi modern selalu lebih unggul", "Air tidak akan pernah habis", "Kearifan dalam peninggalan masa lalu harus dilestarikan", "Hutan tidak memiliki hubungan dengan sumber air"], "correctAnswer": "Kearifan dalam peninggalan masa lalu harus dilestarikan", "points": 10 }
+            ]
+        },
+        "comic": {
+            "title": "Komik: Sumur Tua, Sumber Kehidupan",
+            "description": "Bagaimana sebuah sumur kuno menyelamatkan sebuah desa dari kekeringan.",
+            "panels": [
+                { "title": "Kekeringan Panjang", "text": "Musim kemarau tahun itu sangat panjang. Sungai dan sumur modern kami mengering. Kami mulai putus asa." },
+                { "title": "Mengingat Warisan", "text": "Seorang tetua desa teringat akan sebuah sumur tua di tepi hutan yang sudah lama tidak digunakan." },
+                { "title": "Membersihkan Sumur", "text": "Dengan ragu, kami membersihkan sumur itu, yang dibangun dengan cincin batu dan ditutupi oleh pohon besar." },
+                { "title": "Mata Air Ajaib", "text": "Ajaib! Di dasarnya, masih ada air jernih yang tidak pernah kering. Leluhur kami membangunnya tepat di atas mata air besar." },
+                { "title": "Sumber Kehidupan", "text": "Sumur tua itu menjadi satu-satunya sumber air bersih bagi seluruh desa selama sisa musim kemarau." },
+                { "title": "Pelajaran Berharga", "text": "Kami belajar bahwa ada kearifan dalam peninggalan masa lalu yang harus kami lestarikan." }
+            ]
+        }
+    },
+    "ilmuFalak": {
+        "video": {
+            "title": "Video Edukasi: Ilmu Falak, Navigasi Langit dan Laut",
+            "description": "Pelajari bagaimana dayah di Aceh mengajarkan astronomi (Ilmu Falak) yang digunakan oleh nelayan untuk navigasi.",
+            "info": "Video ini akan menjelaskan bagaimana pengetahuan agama dan sains saling melengkapi dalam tradisi intelektual Aceh."
+        },
+        "quiz": {
+            "title": "Kuis Ilmu Falak",
+            "description": "Uji pengetahuan Anda tentang penerapan astronomi tradisional di Aceh.",
+            "questions": [
+                { "question": "Cerita ini menunjukkan bahwa di Aceh, ilmu agama dan sains...", "options": ["Selalu bertentangan", "Tidak memiliki hubungan sama sekali", "Dapat saling melengkapi dan bermanfaat bagi kehidupan", "Hanya dipelajari oleh kaum bangsawan"], "correctAnswer": "Dapat saling melengkapi dan bermanfaat bagi kehidupan", "points": 10 },
+                { "question": "Selain menentukan awal bulan puasa dan arah kiblat, untuk apa lagi Ilmu Falak digunakan dalam cerita?", "options": ["Untuk meramal nasib seseorang", "Untuk navigasi bagi nelayan", "Untuk menentukan tanggal pernikahan", "Untuk menemukan harta karun"], "correctAnswer": "Untuk navigasi bagi nelayan", "points": 10 },
+                { "question": "Di mana Ilmu Falak ini diajarkan secara turun-temurun menurut cerita?", "options": ["Di universitas modern", "Di sekolah navigasi", "Di balai desa", "Di pesantren (dayah)"], "correctAnswer": "Di pesantren (dayah)", "points": 10 }
+            ]
+        },
+        "comic": {
+            "title": "Komik: Ilmu Falak di Dayah",
+            "description": "Mengungkap peran dayah dalam mengajarkan astronomi untuk kehidupan.",
+            "panels": [
+                { "title": "Belajar di Dayah", "text": "Banyak yang mengira dayah hanya tempat belajar Al-Quran, tapi kami juga mempelajari Ilmu Falak (astronomi)." },
+                { "title": "Menghitung Posisi Bintang", "text": "Kami menghitung posisi bintang untuk menentukan awal bulan puasa, arah kiblat, dan waktu shalat." },
+                { "title": "Pengetahuan untuk Nelayan", "text": "Ilmu yang sama juga bermanfaat bagi nelayan di pesisir untuk navigasi dan menentukan pasang surut." },
+                { "title": "Rujukan Komunitas", "text": "Santri yang pulang ke kampung sering menjadi rujukan, memberitahu posisi bintang utara atau kapan pasang tertinggi." },
+                { "title": "Ilmu Agama dan Kehidupan", "text": "Ada hubungan erat antara langit dan laut, antara ilmu agama dan ilmu kehidupan." },
+                { "title": "Untuk Kebaikan Bersama", "text": "Kami belajar bahwa semua ilmu berasal dari Tuhan dan bisa dimanfaatkan untuk kebaikan bersama, di darat dan di lautan." }
+            ]
+        }
+    },
+    "pasar": {
+        "video": {
+            "title": "Video Edukasi: Pasar, Jantung Komunitas",
+            "description": "Lihat bagaimana sebuah pasar tradisional berfungsi sebagai ruang sosial yang penting, lebih dari sekadar tempat berdagang.",
+            "info": "Video ini akan menangkap atmosfer dan interaksi sosial di Pasar Peunayong, menunjukkan bagaimana informasi dan kohesi sosial terjalin."
+        },
+        "quiz": {
+            "title": "Kuis Jantung Komunitas",
+            "description": "Uji pemahaman Anda tentang peran sosial pasar tradisional.",
+            "questions": [
+                { "question": "Selain sebagai tempat jual beli, apa fungsi utama pasar tradisional menurut cerita?", "options": ["Sebagai tempat parkir", "Sebagai pusat penyebaran informasi dan penguatan ikatan sosial", "Sebagai lokasi syuting film", "Sebagai museum terbuka"], "correctAnswer": "Sebagai pusat penyebaran informasi dan penguatan ikatan sosial", "points": 10 },
+                { "question": "Tempat apa di dalam pasar yang disebut sebagai \"barometer sosial\"?", "options": ["Toko emas", "Kios penjahit", "Warung kopi pasar", "Lapak penjual ikan"], "correctAnswer": "Warung kopi pasar", "points": 10 },
+                { "question": "Menurut cerita, mengapa penting untuk menjaga pasar tradisional tetap hidup?", "options": ["Karena bangunannya antik dan bersejarah", "Karena sama dengan menjaga denyut nadi komunitas", "Karena pajaknya lebih murah dari pasar modern", "Karena hanya di sana bisa ditemukan bahan langka"], "correctAnswer": "Karena sama dengan menjaga denyut nadi komunitas", "points": 10 }
+            ]
+        },
+        "comic": {
+            "title": "Komik: Pasar sebagai Ruang Sosial",
+            "description": "Pasar tradisional bukan hanya untuk jual beli, melainkan jantung komunitas.",
+            "panels": [
+                { "title": "Jantung Komunitas", "text": "Bagi kami, pasar bukan hanya tempat mencari uang, tapi tempat kami bertemu teman dan bertukar kabar." },
+                { "title": "Pusat Informasi", "text": "Jika ada berita penting, lowongan kerja, atau isu meresahkan, informasi menyebar cepat di pasar." },
+                { "title": "Barometer Sosial", "text": "Dari obrolan di warung kopi pasar, kita bisa tahu apa yang sedang dirasakan masyarakat." },
+                { "title": "Saling Menenangkan", "text": "Bahkan saat ada isu meresahkan, kami bisa saling menenangkan dan mencari kebenaran di sini." },
+                { "title": "Denyut Nadi Komunitas", "text": "Menjaga pasar tradisional tetap hidup sama dengan menjaga denyut nadi dan ikatan sosial komunitas kami." },
+                { "title": "Lebih dari Jual Beli", "text": "Di sinilah persahabatan terjalin, masalah terpecahkan, dan komunitas terasa hidup." }
+            ]
+        }
+    },
+    "kucingCerdas": {
+        "video": {
+            "title": "Video Animasi: Petualangan Siaga",
+            "description": "Tonton petualangan Siaga si kucing cerdas dalam video animasi yang mengajarkan anak-anak langkah-langkah penting saat gempa.",
+            "info": "Video ini menggunakan visual yang ceria dan lagu yang menarik untuk membantu anak-anak memahami konsep kesiapsiagaan bencana."
+        },
+        "quiz": {
+            "title": "Kuis Kucing Cerdas",
+            "description": "Uji pemahamanmu tentang kesiapsiagaan gempa bersama Siaga!",
+            "questions": [
+                { "question": "Apa tiga langkah yang diajarkan Siaga saat terjadi gempa?", "options": ["Lari, teriak, dan lompat", "Merunduk, berlindung, dan bertahan", "Berdiri, lihat, dan tunggu", "Makan, minum, dan tidur"], "correctAnswer": "Merunduk, berlindung, dan bertahan", "points": 10 },
+                { "question": "Ke mana Siaga mengajak teman-temannya setelah guncangan gempa berhenti?", "options": ["Kembali ke dalam rumah", "Ke pantai", "Ke lapangan terbuka yang jauh dari bangunan", "Naik ke atas pohon"], "correctAnswer": "Ke lapangan terbuka yang jauh dari bangunan", "points": 10 },
+                { "question": "Kearifan lokal apa yang diingat Siaga setelah gempa berhenti?", "options": ["Cerita Kopi Gayo", "Syair Smong tentang laut yang surut", "Cara membangun Rumoh Aceh", "Pantangan menanam pohon di pantai"], "correctAnswer": "Syair Smong tentang laut yang surut", "points": 10 }
+            ]
+        },
+        "comic": {
+            "title": "Komik: Siaga, Si Kucing Cerdas",
+            "description": "Petualangan Siaga mengajarkan anak-anak tentang kesiapsiagaan bencana.",
+            "panels": [
+                { "title": "Kucing yang Berbeda", "text": "Siaga suka mendengarkan cerita para tetua tentang gempa dan tsunami, tidak seperti teman-temannya yang suka tidur." },
+                { "title": "Tanah Berguncang!", "text": "Saat tanah berguncang, Siaga berteriak, \"Gempa! Ingat tiga langkah: Merunduk, Berlindung, dan Bertahan!\"" },
+                { "title": "Mengikuti Sang Ahli", "text": "Teman-temannya yang bingung melihat apa yang dilakukan Siaga dan segera mengikutinya." },
+                { "title": "Ke Tempat Aman", "text": "Setelah guncangan berhenti, Siaga dengan tenang memimpin teman-temannya ke lapangan terbuka yang aman." },
+                { "title": "Peringatan Tsunami", "text": "\"Kita harus ke tempat tinggi,\" kata Siaga, \"siapa tahu laut surut!\" Ia ingat cerita Smong." },
+                { "title": "Semua Selamat", "text": "Karena Siaga, semua temannya selamat dan belajar cara melindungi diri saat bencana." }
+            ]
+        }
     }
   }
 }

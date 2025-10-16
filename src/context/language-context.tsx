@@ -7,7 +7,7 @@ import en from '@/lib/i18n/en.json';
 
 type Language = 'id' | 'en';
 
-type Dictionary = typeof id;
+export type Dictionary = typeof en;
 
 interface LanguageContextType {
   language: Language;
@@ -37,3 +37,5 @@ export function useLanguage() {
   }
   return context;
 }
+
+    

@@ -1,4 +1,6 @@
 
+'use client';
+
 import { notFound } from 'next/navigation';
 import { stories as staticStories, getTranslatedStories } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
@@ -23,50 +25,29 @@ import {
 } from 'lucide-react';
 import InteractiveQuiz from '@/components/interactive-quiz';
 import {
-  interactiveContent,
+  getInteractiveContent,
   InteractiveContent,
 } from '@/lib/interactive-content';
 import MotionWrapper from '@/components/motion-wrapper';
 import ScrollReveal from '@/components/ui/scroll-reveal';
 import { useLanguage } from '@/context/language-context';
 import type { Story } from '@/lib/types';
-import idDict from '@/lib/i18n/id.json';
-import enDict from '@/lib/i18n/en.json';
 import DigitalComic from '@/components/digital-comic';
 import Link from 'next/link';
 import Image from 'next/image';
 import RelatedStoryCarousel from '@/components/related-story-carousel';
 
-// This is a server component, so we can't use the hook directly.
-// We'll simulate language selection for static generation if needed,
-// but for client-side navigation, the context will work.
-// For simplicity in this fix, we'll fetch both and decide.
-// A more robust solution might involve middleware.
-
 export default function StoryDetailPage({ params }: { params: { id: string } }) {
-  // This is a workaround for server components. In a real app, you'd
-  // likely get the language from params or cookies.
-  const lang = 'en'; // Defaulting to 'en' for demonstration
-  const dictionary = lang === 'id' ? idDict : enDict;
-  const allStories = getTranslatedStories({ lang });
+  const { language, dictionary } = useLanguage();
+  const allStories = getTranslatedStories({ lang: language });
 
-  const staticStoryData = staticStories.find(s => s.id === params.id);
+  const story = allStories.find(s => s.id === params.id);
   
-  if (!staticStoryData) {
+  if (!story) {
     notFound();
   }
   
-  const translatedContent = dictionary.stories[staticStoryData.id as keyof typeof dictionary.stories];
-
-  if (!translatedContent) {
-      notFound();
-  }
-
-  const story: Story = {
-      ...staticStoryData,
-      ...translatedContent
-  }
-
+  const interactiveContent = getInteractiveContent(dictionary);
   const content: InteractiveContent | undefined = interactiveContent[params.id];
 
   const otherStories = allStories
@@ -112,11 +93,10 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
                   <PlayCircle className="h-8 w-8 flex-shrink-0 text-yellow-500" />
                   <div>
                     <CardTitle className="text-2xl font-bold">
-                      {content?.video.title || 'Educational Video'}
+                      {content?.video.title}
                     </CardTitle>
                     <CardDescription>
-                      {content?.video.description ||
-                        'Discover valuable lessons from this story in video format.'}
+                      {content?.video.description}
                     </CardDescription>
                   </div>
                 </div>
@@ -167,7 +147,7 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
 
           <MotionWrapper as="section" delay={0.3}>
             <h2 className="mb-4 flex items-center gap-2 font-headline text-2xl font-bold">
-              <BookOpenText /> Full Narrative
+              <BookOpenText /> {dictionary.storyDetail.fullNarrative}
             </h2>
             <Card>
               <CardContent className="p-6">
@@ -186,12 +166,12 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
             ) : (
               <>
                 <h2 className="mb-4 flex items-center gap-2 font-headline text-2xl font-bold">
-                  <Puzzle /> Interactive Quiz
+                  <Puzzle /> {dictionary.storyDetail.interactiveQuiz}
                 </h2>
                 <Card>
                   <CardContent className="p-6 text-center">
                     <p className="text-muted-foreground">
-                      A quiz for this story is coming soon.
+                      {dictionary.storyDetail.quizComingSoon}
                     </p>
                   </CardContent>
                 </Card>
@@ -212,14 +192,6 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
       </section>
     </>
   );
-}
-
-// Since this is a server component, we need to handle static generation
-// for all possible story IDs.
-export async function generateStaticParams() {
-  return staticStories.map(story => ({
-    id: story.id,
-  }));
 }
 
     
