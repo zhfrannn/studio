@@ -12,7 +12,7 @@
   },
   "home": {
     "hero": {
-      "pill": "Lebih dari 100+ cerita terkumpul",
+      "pill": "Lebih dari 20+ cerita terkumpul",
       "title": "Suara Ketahanan, Gema Kebijaksanaan",
       "description": "Jelajahi kearifan lokal, kesiapsiagaan bencana, dan perdamaian di Aceh melalui cerita yang dihidupkan oleh teknologi AI.",
       "ctaExplore": "Jelajahi Cerita",
@@ -743,7 +743,7 @@
             "title": "Komik: Seni Melawan Trauma",
             "description": "Bagaimana seniman muda Banda Aceh menggunakan mural untuk menyembuhkan kota.",
             "panels": [
-                { "title": "Dinding Bisu Pasca-Tsunami", "text": "Banda Aceh pasca-tsunami penuh dengan dinding bisu yang menjadi saksi tragedi. Suasananya terasa berat." },
+                { "title": "Dinding Bisu Pasca-Tsunami", "text": "Banda Aceh pasca-tsunami penuh dengan dinding-dinding bisu yang menjadi saksi tragedi. Suasananya terasa berat." },
                 { "title": "Panggilan untuk Seniman", "text": "Sebagai seniman, kami merasa terpanggil untuk melakukan sesuatu, untuk menyembuhkan luka kota dengan cara kami sendiri." },
                 { "title": "Memberi Warna Baru", "text": "Kami mulai melukis mural di dinding publik, bukan untuk melupakan, tapi untuk memberi warna baru pada ingatan." },
                 { "title": "Terapi Melalui Seni", "text": "Proses melukis bersama ini menjadi terapi bagi kami dan masyarakat. Dinding yang suram menjadi galeri terbuka." },
@@ -894,5 +894,3 @@
     }
   }
 }
-
-    

@@ -12,7 +12,7 @@
   },
   "home": {
     "hero": {
-      "pill": "Over 100+ stories collected",
+      "pill": "oVER 20+ STORIES cOLLECTED",
       "title": "Voices of Resilience, Echoes of Wisdom",
       "description": "Explore local wisdom, disaster preparedness, and peacebuilding in Aceh through stories brought to life by AI technology.",
       "ctaExplore": "Explore Stories",
@@ -717,7 +717,7 @@
         "panels": [
           { "title": "The Enduring Rumoh Aceh", "text": "When the earthquake and tsunami destroyed many modern buildings, we saw many Rumoh Aceh still standing strong." },
           { "title": "A Flexible Construction", "text": "The stilt structure with its flexible wooden construction proved capable of absorbing earthquake shocks." },
-          { "title": "Adaptive to the Environment", "text": "The space underneath the house is not only versatile but also provides a path for water in case of floods." },
+          { "title": "Adaptive to the Environment", "text": "The space underneath the house is not only versatile but also provides a path for water if it floods." },
           { "title": "An Eye-Opener", "text": "This opened our eyes. The architecture of our ancestors is extraordinary and highly relevant." },
           { "title": "Inspiration for the Future", "text": "We began to advocate for and rebuild houses by adapting the principles of Rumoh Aceh." },
           { "title": "Building the Future", "text": "This is not about returning to the past, but taking the best lessons from the past to build a safer future." }
@@ -894,5 +894,3 @@
     }
   }
 }
-
-    
