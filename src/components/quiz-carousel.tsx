@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
@@ -10,6 +11,7 @@ import QuizCardSlide from '@/components/quiz-card-slide';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, ArrowRight, RefreshCw } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
+import { useLanguage } from '@/context/language-context';
 
 const OPTIONS: EmblaOptionsType = { loop: false, draggable: false };
 
@@ -19,6 +21,8 @@ export default function QuizCarousel() {
   const [nextBtnDisabled, setNextBtnDisabled] = useState(true);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [key, setKey] = useState(0); // Key to force re-render
+  const { dictionary } = useLanguage();
+  const dict = dictionary.eduboard;
 
   const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [
     emblaApi,
@@ -51,10 +55,10 @@ export default function QuizCarousel() {
     <div className="w-full max-w-2xl mx-auto">
        <div className="mb-8 text-center">
         <h1 className="font-headline text-3xl md:text-4xl">
-          Quiz Card Preview
+          {dict.quizPreviewTitle}
         </h1>
         <p className="mx-auto mt-2 max-w-2xl text-muted-foreground">
-            Answer the question to proceed. Use the arrow buttons to navigate if already answered.
+            {dict.quizPreviewDescription}
         </p>
       </div>
       
@@ -99,7 +103,7 @@ export default function QuizCarousel() {
               variant="secondary"
             >
               <RefreshCw className="mr-2 h-4 w-4" />
-              Restart Quiz
+              {dict.restartQuiz}
             </Button>
         </div>
 
@@ -116,3 +120,5 @@ export default function QuizCarousel() {
     </div>
   );
 }
+
+    

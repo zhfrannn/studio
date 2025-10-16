@@ -205,7 +205,7 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
      <section className="bg-muted/50 py-16 md:py-24">
         <div className="container mx-auto px-4">
           <h2 className="mb-12 text-center font-headline text-3xl font-bold">
-            Explore Other Stories
+            {dictionary.storyDetail.otherStories}
           </h2>
           <RelatedStoryCarousel stories={otherStories} />
         </div>
@@ -221,3 +221,5 @@ export async function generateStaticParams() {
     id: story.id,
   }));
 }
+
+    

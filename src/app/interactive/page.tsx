@@ -1,4 +1,5 @@
 
+'use client';
 import {
   Award,
   BookOpen,
@@ -35,23 +36,6 @@ import { cn } from '@/lib/utils';
 import MotionWrapper from '@/components/motion-wrapper';
 import InteractiveQuiz from '@/components/interactive-quiz';
 import { useLanguage } from '@/context/language-context';
-
-const leaderboardData = [
-  { name: 'Tsunami Expert', score: '30/30', rank: 1, initial: 'TE' },
-  { name: 'Disaster Prepared', score: '28/30', rank: 2, initial: 'DP' },
-  { name: 'Community Helper', score: '25/30', rank: 3, initial: 'CH' },
-  { name: 'Peace Builder', score: '23/30', rank: 4, initial: 'PB' },
-  { name: 'Wisdom Keeper', score: '20/30', rank: 5, initial: 'WK' },
-];
-
-const achievementBadges = [
-  { name: 'Tsunami', icon: <BookOpen /> },
-  { name: 'Community Builder', icon: <Trophy /> },
-  { name: 'Wisdom Keeper', icon: <Award /> },
-  { name: 'Peace Maker', icon: <Film /> },
-  { name: 'Emergency Ready', icon: <ClipboardList /> },
-  { name: 'Educator', icon: <BookOpen /> },
-];
 
 const getThemeMeta = (theme: string) => {
   if (theme.includes('Disaster')) {
@@ -93,10 +77,27 @@ const getThemeMeta = (theme: string) => {
 
 
 export default function InteractiveLearningHub() {
-  // We can't use the hook here directly, so we'll just default to 'id' for now.
-  // The LanguageProvider will handle the client-side changes.
-  const stories = getTranslatedStories({ lang: 'id' });
+  const { dictionary, language } = useLanguage();
+  const dict = dictionary.interactive;
+  const stories = getTranslatedStories({ lang: language });
   
+  const leaderboardData = [
+    { name: dict.tsunamiExpert, score: '30/30', rank: 1, initial: 'TE' },
+    { name: dict.disasterPrepared, score: '28/30', rank: 2, initial: 'DP' },
+    { name: dict.communityHelper, score: '25/30', rank: 3, initial: 'CH' },
+    { name: dict.peaceBuilder, score: '23/30', rank: 4, initial: 'PB' },
+    { name: dict.wisdomKeeper, score: '20/30', rank: 5, initial: 'WK' },
+  ];
+
+  const achievementBadges = [
+    { name: dict.tsunamiBadge, icon: <BookOpen /> },
+    { name: dict.communityBuilderBadge, icon: <Trophy /> },
+    { name: dict.wisdomKeeperBadge, icon: <Award /> },
+    { name: dict.peaceMakerBadge, icon: <Film /> },
+    { name: dict.emergencyReadyBadge, icon: <ClipboardList /> },
+    { name: dict.educatorBadge, icon: <BookOpen /> },
+  ];
+
   const quickAccessStories = stories.slice(0, 5);
   const videosToShow = stories.filter(s => interactiveContent[s.id]?.video?.embedUrl).slice(0, 2);
   const comicsToShow = stories.filter(s => interactiveContent[s.id]?.comic).slice(0, 2);
@@ -106,11 +107,10 @@ export default function InteractiveLearningHub() {
       <MotionWrapper className="container mx-auto px-4 rounded-2xl">
         <div className="mb-12 text-center">
           <h1 className="font-headline text-4xl font-bold md:text-5xl">
-            Interactive Learning Hub
+            {dict.title}
           </h1>
           <p className="mx-auto mt-2 max-w-2xl text-muted-foreground">
-            Explore Aceh's stories through gamified quizzes, educational videos,
-            and interactive comics
+            {dict.description}
           </p>
         </div>
 
@@ -118,7 +118,11 @@ export default function InteractiveLearningHub() {
           <main className="col-span-1 space-y-8 lg:col-span-2">
             {/* Master Quiz */}
             <MotionWrapper>
-               <InteractiveQuiz quiz={masterQuiz} />
+               <InteractiveQuiz quiz={{
+                 title: dict.masterQuiz,
+                 description: dict.masterQuizDescription,
+                 questions: masterQuiz.questions
+               }} />
             </MotionWrapper>
 
             {/* Educational Videos */}
@@ -126,11 +130,10 @@ export default function InteractiveLearningHub() {
               <div className="mb-6">
                 <h2 className="flex items-center gap-3 font-headline text-3xl font-bold">
                   <Film className="h-8 w-8 text-red-500" />
-                  Educational Videos
+                  {dict.videosTitle}
                 </h2>
                 <p className="mt-1 text-muted-foreground">
-                  Watch educational videos from our story collection to deepen
-                  your understanding
+                  {dict.videosDescription}
                 </p>
               </div>
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -168,7 +171,7 @@ export default function InteractiveLearningHub() {
                       <CardFooter className="flex justify-between text-xs text-muted-foreground">
                         <p>5 min</p>
                         <Button variant="secondary" size="sm" asChild>
-                          <Link href={`/story/${story.id}`}>Watch</Link>
+                          <Link href={`/story/${story.id}`}>{dict.watch}</Link>
                         </Button>
                       </CardFooter>
                     </Card>
@@ -179,12 +182,12 @@ export default function InteractiveLearningHub() {
                     <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-muted">
                       <Plus className="h-8 w-8 text-muted-foreground" />
                     </div>
-                    <h3 className="mb-1 font-semibold">View All Videos</h3>
+                    <h3 className="mb-1 font-semibold">{dict.viewAllVideos}</h3>
                     <p className="mb-4 text-sm text-muted-foreground">
                       Explore our complete collection of educational content
                     </p>
                     <Button variant="outline" asChild>
-                      <Link href="/explore">Browse All</Link>
+                      <Link href="/explore">{dict.exploreAll}</Link>
                     </Button>
                   </Card>
                 </MotionWrapper>
@@ -196,10 +199,10 @@ export default function InteractiveLearningHub() {
                 <div className="mb-6">
                   <h2 className="flex items-center gap-3 font-headline text-3xl font-bold">
                     <Newspaper className="h-8 w-8 text-orange-500" />
-                    Interactive Digital Comics
+                    {dict.comicsTitle}
                   </h2>
                   <p className="mt-1 text-muted-foreground">
-                    Experience stories in a visually engaging comic strip format.
+                    {dict.comicsDescription}
                   </p>
                 </div>
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -231,7 +234,7 @@ export default function InteractiveLearningHub() {
                         </CardHeader>
                         <CardFooter>
                            <Button variant="secondary" size="sm" asChild className="w-full">
-                              <Link href={`/story/${story.id}`}>Read Comic</Link>
+                              <Link href={`/story/${story.id}`}>{dict.readComic}</Link>
                            </Button>
                         </CardFooter>
                       </Card>
@@ -249,7 +252,7 @@ export default function InteractiveLearningHub() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2 font-bold">
                     <Trophy className="h-5 w-5 text-yellow-500" />
-                    Leaderboard
+                    {dict.leaderboard}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
@@ -277,7 +280,7 @@ export default function InteractiveLearningHub() {
                   ))}
                   <Separator />
                   <Button variant="outline" className="w-full">
-                    View Full Leaderboard
+                    {dict.viewFullLeaderboard}
                   </Button>
                 </CardContent>
               </Card>
@@ -289,7 +292,7 @@ export default function InteractiveLearningHub() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2 font-bold">
                     <Award className="h-5 w-5 text-green-500" />
-                    Achievement Badges
+                    {dict.achievements}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="grid grid-cols-3 gap-4">
@@ -315,10 +318,10 @@ export default function InteractiveLearningHub() {
         <div className="mb-12 text-center">
           <h2 className="flex items-center justify-center gap-3 font-headline text-3xl font-bold md:text-4xl">
             <ClipboardList className="h-8 w-8 text-primary" />
-            Quick Access to Stories
+            {dict.quickAccess}
           </h2>
           <p className="mx-auto mt-2 max-w-2xl text-muted-foreground">
-            Jump directly to full story experiences with all educational content.
+            {dict.quickAccessDescription}
           </p>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -341,7 +344,7 @@ export default function InteractiveLearningHub() {
                   href={`/story/${story.id}`}
                   className="group flex items-center text-sm font-semibold text-primary"
                 >
-                  View Full Story{' '}
+                  {dict.viewFullStory}{' '}
                   <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Card>
@@ -352,12 +355,12 @@ export default function InteractiveLearningHub() {
               <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-muted">
                 <Plus className="h-8 w-8 text-muted-foreground" />
               </div>
-              <h3 className="mb-1 font-semibold">Explore All Stories</h3>
+              <h3 className="mb-1 font-semibold">{dict.exploreAllStories}</h3>
               <p className="mb-4 text-sm text-muted-foreground">
                 Discover more stories from Aceh's journey of resilience.
               </p>
               <Button variant="outline" asChild>
-                <Link href="/explore">View All Stories</Link>
+                <Link href="/explore">{dict.viewAllStories}</Link>
               </Button>
             </Card>
           </MotionWrapper>
@@ -366,3 +369,5 @@ export default function InteractiveLearningHub() {
     </div>
   );
 }
+
+    

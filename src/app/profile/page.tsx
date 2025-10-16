@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useUser } from '@/firebase';
@@ -49,6 +50,7 @@ import {
 import { ChartContainer, ChartTooltipContent } from '@/components/ui/chart';
 import MotionWrapper from '@/components/motion-wrapper';
 import { signOut } from '@/firebase/auth/auth';
+import { useLanguage } from '@/context/language-context';
 
 const engagementData = [
   { week: 'W1', engagement: 45 },
@@ -67,6 +69,8 @@ const chartConfig = {
 export default function ProfilePage() {
   const { user, isLoading } = useUser();
   const router = useRouter();
+  const { dictionary } = useLanguage();
+  const dict = dictionary.profile;
 
   const handleSignOut = async () => {
     await signOut();
@@ -87,7 +91,7 @@ export default function ProfilePage() {
     }
     return (
       <div className="flex min-h-[80vh] items-center justify-center">
-        <p>Redirecting to login...</p>
+        <p>{dict.redirecting}</p>
       </div>
     );
   }
@@ -115,14 +119,13 @@ export default function ProfilePage() {
                     <CardTitle className="font-headline text-2xl">
                       {user.displayName || 'Edu-Creator'}
                     </CardTitle>
-                    <Badge variant="secondary">Teacher</Badge>
+                    <Badge variant="secondary">{dict.teacher}</Badge>
                     <Badge className="bg-purple-100 text-purple-800 dark:bg-purple-900/50 dark:text-purple-300">
-                      School Partner
+                      {dict.schoolPartner}
                     </Badge>
                   </div>
                   <CardDescription className="mt-1 italic text-muted-foreground">
-                    "Today's wisdom becomes tomorrow's lesson. Let's create
-                    together."
+                    {dict.quote}
                   </CardDescription>
                 </div>
                 <Button onClick={handleSignOut} variant="outline" size="icon" className="ml-auto">
@@ -135,7 +138,7 @@ export default function ProfilePage() {
                     12
                   </p>
                   <p className="text-xs text-muted-foreground">
-                    AI Lessons Created
+                    {dict.lessonsCreated}
                   </p>
                 </div>
                 <div className="rounded-lg border p-4 text-center">
@@ -143,7 +146,7 @@ export default function ProfilePage() {
                     230
                   </p>
                   <p className="text-xs text-muted-foreground">
-                    Students Reached
+                    {dict.studentsReached}
                   </p>
                 </div>
                 <div className="rounded-lg border p-4 text-center">
@@ -151,7 +154,7 @@ export default function ProfilePage() {
                     87
                   </p>
                   <p className="text-xs text-muted-foreground">
-                    Story Impact Score
+                    {dict.storyImpact}
                   </p>
                 </div>
                 <div className="rounded-lg border p-4 text-center">
@@ -159,7 +162,7 @@ export default function ProfilePage() {
                     45
                   </p>
                   <p className="text-xs text-muted-foreground">
-                    Reflections Collected
+                    {dict.reflectionsCollected}
                   </p>
                 </div>
               </CardContent>
@@ -172,21 +175,20 @@ export default function ProfilePage() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 font-headline text-2xl">
                   <Sparkles className="text-primary" />
-                  AI Studio: Create New Content
+                  {dict.aiStudioTitle}
                 </CardTitle>
                 <CardDescription>
-                  Transform stories or your own ideas into engaging learning
-                  materials in just a few clicks.
+                  {dict.aiStudioDescription}
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="grid grid-cols-2 gap-4 md:grid-cols-5">
                   {[
-                    'Lesson',
-                    'Quiz',
-                    'Comic',
-                    'Reflection',
-                    'EduPoster',
+                    dict.lesson,
+                    dict.quiz,
+                    dict.comic,
+                    dict.reflection,
+                    dict.eduPoster,
                   ].map(type => (
                     <Button
                       key={type}
@@ -200,18 +202,18 @@ export default function ProfilePage() {
                 </div>
                 <div className="rounded-lg border bg-muted/50 p-4">
                   <p className="font-semibold">
-                    Start with a story from Wave of Voice:
+                    {dict.startWithStory}
                   </p>
                   <div className="mt-2 flex gap-2">
                     <div className="relative flex-grow">
                       <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
                       <input
-                        placeholder="Search for a story (e.g. 'Smong')"
+                        placeholder={dict.searchStoryPlaceholder}
                         className="w-full rounded-md border bg-background py-2 pl-9 pr-3 text-sm"
                       />
                     </div>
                     <Button>
-                      <Sparkles className="mr-2" /> Generate
+                      <Sparkles className="mr-2" /> {dict.generateButton}
                     </Button>
                   </div>
                 </div>
@@ -223,9 +225,9 @@ export default function ProfilePage() {
           <MotionWrapper delay={0.2}>
             <Tabs defaultValue="my-content">
               <TabsList className="grid w-full grid-cols-2">
-                <TabsTrigger value="my-content">My AI Content</TabsTrigger>
+                <TabsTrigger value="my-content">{dict.myContentTab}</TabsTrigger>
                 <TabsTrigger value="learning-library">
-                  Learning Library
+                  {dict.libraryTab}
                 </TabsTrigger>
               </TabsList>
               <TabsContent value="my-content" className="mt-4">
@@ -233,9 +235,9 @@ export default function ProfilePage() {
                   <CardHeader>
                     <Tabs defaultValue="lessons">
                       <TabsList>
-                        <TabsTrigger value="lessons">Lessons</TabsTrigger>
-                        <TabsTrigger value="quizzes">Quizzes</TabsTrigger>
-                        <TabsTrigger value="comics">Comics</TabsTrigger>
+                        <TabsTrigger value="lessons">{dict.lessonsTab}</TabsTrigger>
+                        <TabsTrigger value="quizzes">{dict.quizzesTab}</TabsTrigger>
+                        <TabsTrigger value="comics">{dict.comicsTab}</TabsTrigger>
                       </TabsList>
                     </Tabs>
                   </CardHeader>
@@ -244,25 +246,25 @@ export default function ProfilePage() {
                     <Card className="group">
                       <CardHeader>
                         <CardTitle className="text-base">
-                          Interactive Quiz: Smong & Science
+                          {dict.quizExampleTitle}
                         </CardTitle>
                         <CardDescription className="text-xs">
-                          Based on: Smong Story
+                          {dict.quizExampleDescription}
                         </CardDescription>
                       </CardHeader>
                       <CardFooter className="flex justify-between">
                         <Button variant="ghost" size="sm">
-                          <BrainCircuit className="mr-2" /> Edit
+                          <BrainCircuit className="mr-2" /> {dict.editButton}
                         </Button>
                         <Button variant="secondary" size="sm">
-                          Preview
+                          {dict.previewButton}
                         </Button>
                       </CardFooter>
                     </Card>
                     <Card className="flex min-h-[150px] flex-col items-center justify-center border-2 border-dashed bg-transparent">
                       <Plus className="mb-2 h-8 w-8 text-muted-foreground" />
                       <p className="text-sm font-semibold text-muted-foreground">
-                        Create New Content
+                        {dict.createNewContent}
                       </p>
                     </Card>
                   </CardContent>
@@ -271,14 +273,14 @@ export default function ProfilePage() {
               <TabsContent value="learning-library" className="mt-4">
                 <Card>
                   <CardHeader>
-                    <CardTitle>Inspiration Hub</CardTitle>
+                    <CardTitle>{dict.inspirationHubTitle}</CardTitle>
                     <CardDescription>
-                      Discover and remix lessons from other educators.
+                      {dict.inspirationHubDescription}
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-muted-foreground">
-                      Learning library content will be displayed here.
+                      {dict.libraryPlaceholder}
                     </p>
                   </CardContent>
                 </Card>
@@ -290,27 +292,27 @@ export default function ProfilePage() {
           <MotionWrapper delay={0.3}>
             <Card>
               <CardHeader>
-                <CardTitle className="font-headline">School Hub</CardTitle>
+                <CardTitle className="font-headline">{dict.schoolHubTitle}</CardTitle>
                 <CardDescription>
-                  Monitor activity and manage teachers in your organization.
+                  {dict.schoolHubDescription}
                 </CardDescription>
               </CardHeader>
               <CardContent className="grid gap-6 md:grid-cols-3">
                 <div className="space-y-4">
                   <div className="rounded-lg border p-4">
                     <p className="text-sm font-medium text-muted-foreground">
-                      Teachers Joined
+                      {dict.teachersJoined}
                     </p>
                     <p className="text-2xl font-bold">12</p>
                   </div>
                   <div className="rounded-lg border p-4">
                     <p className="text-sm font-medium text-muted-foreground">
-                      Total Lessons Created
+                      {dict.totalLessons}
                     </p>
                     <p className="text-2xl font-bold">75</p>
                   </div>
                   <Button className="w-full">
-                    <Users className="mr-2" /> Manage Teachers
+                    <Users className="mr-2" /> {dict.manageTeachers}
                   </Button>
                 </div>
                 <div className="h-48 md:col-span-2">
@@ -381,14 +383,14 @@ export default function ProfilePage() {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Award /> Achievements
+                  <Award /> {dict.achievementsTitle}
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
                 {[
-                  'First AI Lesson Created',
-                  'Local Wisdom Integrator',
-                  'Top 10 EduBoard Contributor',
+                  dict.achievement1,
+                  dict.achievement2,
+                  dict.achievement3,
                 ].map(ach => (
                   <div
                     key={ach}
@@ -409,7 +411,7 @@ export default function ProfilePage() {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <MessageCircle /> Community Feed
+                  <MessageCircle /> {dict.communityFeedTitle}
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -419,8 +421,7 @@ export default function ProfilePage() {
                     <AvatarFallback>PB</AvatarFallback>
                   </Avatar>
                   <p className="text-sm">
-                    <span className="font-semibold">Pak Budi</span> just uploaded a
-                    new quiz: 'Smong & Science'.
+                    <span className="font-semibold">{dict.communityFeedExample1_part1}</span>{dict.communityFeedExample1_part2}
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
@@ -429,15 +430,14 @@ export default function ProfilePage() {
                     <AvatarFallback>W</AvatarFallback>
                   </Avatar>
                   <p className="text-sm">
-                    <span className="font-semibold">Event:</span> Workshop EduAI
-                    in Banda Aceh -{' '}
+                    <span className="font-semibold">{dict.communityFeedExample2_part1}</span>{dict.communityFeedExample2_part2}
                     <a href="#" className="text-primary hover:underline">
-                      Join Now
+                      {dict.communityFeedExample2_part3}
                     </a>
                     .
                   </p>
                 </div>
-                <Button variant="outline" className="w-full">View All</Button>
+                <Button variant="outline" className="w-full">{dict.viewAll}</Button>
               </CardContent>
             </Card>
           </MotionWrapper>
@@ -447,16 +447,16 @@ export default function ProfilePage() {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Lightbulb /> Student Reflections
+                  <Lightbulb /> {dict.reflectionsTitle}
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
                  <div className="rounded-lg border p-3 italic">
-                    <p className="text-sm">"I just learned that community work can also prevent disasters."</p>
-                    <p className="text-xs text-right mt-1 text-muted-foreground">- Student (Anonymous)</p>
+                    <p className="text-sm">{dict.reflectionExample}</p>
+                    <p className="text-xs text-right mt-1 text-muted-foreground">{dict.reflectionAuthor}</p>
                  </div>
                  <Button variant="secondary" className="w-full">
-                    <PieChart className="mr-2"/> View Impact Report
+                    <PieChart className="mr-2"/> {dict.impactReport}
                  </Button>
               </CardContent>
             </Card>

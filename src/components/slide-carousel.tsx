@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
@@ -9,6 +10,7 @@ import { eduboardSlidesTemplate } from '@/lib/eduboard-templates';
 import EduBoardSlide from '@/components/eduboard-slide';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { useLanguage } from '@/context/language-context';
 
 const OPTIONS: EmblaOptionsType = { loop: false };
 
@@ -17,6 +19,8 @@ export default function SlideCarousel() {
   const [prevBtnDisabled, setPrevBtnDisabled] = useState(true);
   const [nextBtnDisabled, setNextBtnDisabled] = useState(true);
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const { dictionary } = useLanguage();
+  const dict = dictionary.eduboard;
 
   const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [
     emblaApi,
@@ -46,10 +50,10 @@ export default function SlideCarousel() {
     <div className="w-full max-w-6xl mx-auto">
        <div className="mb-8 text-center">
         <h1 className="font-headline text-3xl md:text-4xl">
-          Presentation Slide Preview
+          {dict.slidePreviewTitle}
         </h1>
         <p className="mx-auto mt-2 max-w-2xl text-muted-foreground">
-          Use the arrow buttons or the dots below to navigate the slides.
+          {dict.slidePreviewDescription}
         </p>
       </div>
 
@@ -107,3 +111,5 @@ export default function SlideCarousel() {
     </div>
   );
 }
+
+    

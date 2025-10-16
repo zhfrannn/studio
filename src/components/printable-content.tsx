@@ -1,3 +1,4 @@
+
 'use client';
 
 import { printableContentTemplate } from '@/lib/eduboard-templates';
@@ -20,6 +21,7 @@ import {
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import WaveMascot from './icons/wave-mascot';
+import { useLanguage } from '@/context/language-context';
 
 const iconMapping: { [key: string]: React.ElementType } = {
   Lightbulb,
@@ -40,6 +42,8 @@ const iconMapping: { [key: string]: React.ElementType } = {
 export default function PrintableContent() {
   const data = printableContentTemplate;
   const MainIcon = iconMapping[data.mainIcon] || ShieldAlert;
+  const { dictionary } = useLanguage();
+  const dict = dictionary.eduboard;
 
   const headerStyle = {
     backgroundColor: data.themeColor,
@@ -50,10 +54,10 @@ export default function PrintableContent() {
     <div className="w-full max-w-4xl mx-auto">
         <div className="mb-8 text-center">
             <h1 className="font-headline text-3xl md:text-4xl">
-            Printable Content Preview (A4)
+            {dict.printablePreviewTitle}
             </h1>
             <p className="mx-auto mt-2 max-w-2xl text-muted-foreground">
-                This is a preview of how the infographic will look. This content is designed to be printed on A4 paper.
+                {dict.printablePreviewDescription}
             </p>
       </div>
 
@@ -106,11 +110,11 @@ export default function PrintableContent() {
                 </blockquote>
             </section>
             <section className="text-center">
-                <h3 className="font-semibold text-lg mb-2">Learn More</h3>
+                <h3 className="font-semibold text-lg mb-2">{dict.learnMore}</h3>
                 <div className="w-32 h-32 mx-auto bg-gray-200 rounded-lg flex items-center justify-center">
                   <QrCode className="h-24 w-24 text-gray-400"/>
                 </div>
-                <p className="text-xs text-muted-foreground mt-2">Scan the QR Code to access all stories and interactive content.</p>
+                <p className="text-xs text-muted-foreground mt-2">{dict.scanQr}</p>
             </section>
           </aside>
         </main>
@@ -128,3 +132,5 @@ export default function PrintableContent() {
     </div>
   );
 }
+
+    

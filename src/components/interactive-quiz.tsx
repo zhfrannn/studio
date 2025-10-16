@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -8,6 +9,7 @@ import { CheckCircle, HelpCircle, RefreshCw, Trophy, PlayCircle } from 'lucide-r
 import { cn } from '@/lib/utils';
 import MotionWrapper from './motion-wrapper';
 import { Quiz } from '@/lib/interactive-content';
+import { useLanguage } from '@/context/language-context';
 
 interface InteractiveQuizProps {
   quiz: Quiz;
@@ -20,6 +22,8 @@ export default function InteractiveQuiz({ quiz }: InteractiveQuizProps) {
   const [score, setScore] = useState(0);
   const [quizStarted, setQuizStarted] = useState(false);
   const [quizFinished, setQuizFinished] = useState(false);
+  const { dictionary } = useLanguage();
+  const dict = dictionary.interactive;
 
   const { questions, title, description } = quiz;
   const totalPoints = questions.reduce((sum, q) => sum + q.points, 0);
@@ -85,7 +89,7 @@ export default function InteractiveQuiz({ quiz }: InteractiveQuizProps) {
           <CardContent className="p-8 pt-0">
             <Button onClick={handleStartQuiz} size="lg">
               <PlayCircle className="mr-2 h-5 w-5" />
-              Start Quiz
+              {dict.startQuiz}
             </Button>
           </CardContent>
         </Card>
@@ -230,3 +234,5 @@ export default function InteractiveQuiz({ quiz }: InteractiveQuizProps) {
     </MotionWrapper>
   );
 }
+
+    

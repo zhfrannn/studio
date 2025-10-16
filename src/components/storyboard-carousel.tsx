@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
@@ -9,6 +10,7 @@ import { storyboardTemplate } from '@/lib/eduboard-templates';
 import StoryboardSlide from '@/components/storyboard-slide';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { useLanguage } from '@/context/language-context';
 
 const OPTIONS: EmblaOptionsType = { loop: false };
 
@@ -17,6 +19,8 @@ export default function StoryboardCarousel() {
   const [prevBtnDisabled, setPrevBtnDisabled] = useState(true);
   const [nextBtnDisabled, setNextBtnDisabled] = useState(true);
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const { dictionary } = useLanguage();
+  const dict = dictionary.eduboard;
 
   const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [
     emblaApi,
@@ -46,10 +50,10 @@ export default function StoryboardCarousel() {
     <div className="w-full max-w-lg mx-auto">
       <div className="mb-8 text-center">
         <h1 className="font-headline text-3xl md:text-4xl">
-          Storyboard Preview
+          {dict.storyboardPreviewTitle}
         </h1>
         <p className="mx-auto mt-2 max-w-2xl text-muted-foreground">
-            A vertical format designed for dense visual narratives.
+            {dict.storyboardPreviewDescription}
         </p>
       </div>
 
@@ -107,3 +111,5 @@ export default function StoryboardCarousel() {
     </div>
   );
 }
+
+    

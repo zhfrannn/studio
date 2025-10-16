@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
@@ -20,6 +21,7 @@ import {
   RefreshCw,
 } from 'lucide-react';
 import Image from 'next/image';
+import { useLanguage } from '@/context/language-context';
 
 interface MiniGameEngineProps {
   scenario: GameScenario;
@@ -36,6 +38,9 @@ const MiniGameEngine: React.FC<MiniGameEngineProps> = ({ scenario }) => {
     text: string;
     result: 'correct' | 'wrong' | 'neutral';
   } | null>(null);
+  const { dictionary } = useLanguage();
+  const dict = dictionary.eduboard;
+
 
   const startGame = useCallback(() => {
     const firstLevel = scenario.levels.find(
@@ -109,13 +114,13 @@ const MiniGameEngine: React.FC<MiniGameEngineProps> = ({ scenario }) => {
             className="text-center"
           >
             <Sparkles className="mx-auto h-16 w-16 text-amber-500" />
-            <h1 className="mt-4 font-headline text-4xl">{scenario.title}</h1>
+            <h1 className="mt-4 font-headline text-4xl">{dict.minigameIntroTitle}</h1>
             <p className="mx-auto mt-2 max-w-xl text-lg text-muted-foreground">
-              {scenario.description}
+              {dict.minigameIntroDescription}
             </p>
             <Button onClick={startGame} size="lg" className="mt-8">
               <Play className="mr-2 h-5 w-5" />
-              Start Scenario
+              {dict.minigameStart}
             </Button>
           </motion.div>
         );
@@ -149,7 +154,7 @@ const MiniGameEngine: React.FC<MiniGameEngineProps> = ({ scenario }) => {
             <div className="absolute top-4 left-4 z-10 w-[calc(100%-2rem)]">
               <div className="flex items-center justify-between gap-4">
                 <div className="rounded-full bg-black/50 px-4 py-2 text-white">
-                  Score: <span className="font-bold">{score}</span>
+                  {dict.minigameScore} <span className="font-bold">{score}</span>
                 </div>
                 <div className="flex flex-grow items-center gap-2">
                   <Clock className="h-5 w-5 text-white" />
@@ -214,16 +219,16 @@ const MiniGameEngine: React.FC<MiniGameEngineProps> = ({ scenario }) => {
             className="p-8 text-center"
           >
             <Trophy className="mx-auto h-16 w-16 text-yellow-500" />
-            <h1 className="mt-4 font-headline text-4xl">Scenario Complete!</h1>
+            <h1 className="mt-4 font-headline text-4xl">{dict.minigameComplete}</h1>
             <p className="mt-2 text-2xl font-semibold text-primary">
-              Final Score: {score}
+              {dict.minigameFinalScore} {score}
             </p>
             <p className="mx-auto mt-4 max-w-xl text-lg text-muted-foreground">
               {getEndingMessage()}
             </p>
             <Button onClick={startGame} size="lg" className="mt-8">
               <RefreshCw className="mr-2 h-5 w-5" />
-              Play Again
+              {dict.minigamePlayAgain}
             </Button>
           </motion.div>
         );
@@ -243,3 +248,5 @@ const MiniGameEngine: React.FC<MiniGameEngineProps> = ({ scenario }) => {
 };
 
 export default MiniGameEngine;
+
+    

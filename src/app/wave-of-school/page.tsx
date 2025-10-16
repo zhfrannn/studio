@@ -26,6 +26,7 @@ import SplitText from '@/components/ui/split-text';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Separator } from '@/components/ui/separator';
+import { useLanguage } from '@/context/language-context';
 
 const StatCard = ({
   value,
@@ -41,6 +42,8 @@ const StatCard = ({
 );
 
 export default function WaveOfSchoolPage() {
+  const { dictionary } = useLanguage();
+  const dict = dictionary.waveOfSchool;
   return (
     <div className="overflow-x-hidden">
       {/* 1. Hero Section */}
@@ -60,23 +63,22 @@ export default function WaveOfSchoolPage() {
 
         <MotionWrapper className="container relative z-10 mx-auto px-4">
           <SplitText
-            text="Wave of School: When Culture Meets AI, Teachers Become Creators"
+            text={dict.heroTitle}
             className="font-headline text-4xl font-bold md:text-6xl"
             as="h1"
           />
           <p className="mx-auto mt-6 max-w-3xl text-lg text-white/90 md:text-xl">
-            Empowering teachers and schools with AI to create, adapt, and share
-            interactive learning content rooted in local wisdom.
+            {dict.heroDescription}
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Button size="lg" variant="secondary" asChild>
               <Link href="#join">
-                <School className="mr-2" /> Join as School
+                <School className="mr-2" /> {dict.joinAsSchool}
               </Link>
             </Button>
             <Button size="lg" className="shiny-button" asChild>
               <Link href="#ai-hub">
-                <BrainCircuit className="mr-2" /> Try AI Content Generator
+                <BrainCircuit className="mr-2" /> {dict.tryAIGenerator}
               </Link>
             </Button>
           </div>
@@ -90,29 +92,26 @@ export default function WaveOfSchoolPage() {
       >
         <div className="container mx-auto px-4">
           <h2 className="font-headline text-3xl font-bold md:text-4xl">
-            Education That Remembers, Learns, and Evolves
+            {dict.visionTitle}
           </h2>
           <div className="mx-auto mt-8 max-w-4xl space-y-6 text-lg text-muted-foreground">
             <p>
-              From disaster education to peacebuilding, Wave of School
-              transforms stories into smart, adaptive learning modules powered
-              by AI.
+              {dict.visionDescription1}
             </p>
             <p className="font-semibold text-foreground">
-              Teachers don’t start from zero — they co-create with culture,
-              community, and technology.
+              {dict.visionDescription2}
             </p>
-            <p className="italic">It’s how Aceh teaches the world to learn differently.</p>
+            <p className="italic">{dict.visionDescription3}</p>
           </div>
           <div className="relative mt-12 flex items-center justify-center gap-4 md:gap-8">
             <div className="text-center">
-              <p className="font-bold">Wave of Voice</p>
-              <p className="text-sm text-muted-foreground">Stories</p>
+              <p className="font-bold">{dict.visionWoV}</p>
+              <p className="text-sm text-muted-foreground">{dict.visionWoVSub}</p>
             </div>
             <ArrowRight className="h-8 w-8 flex-shrink-0 animate-pulse text-primary" />
             <div className="text-center">
-              <p className="font-bold">Wave of School</p>
-              <p className="text-sm text-muted-foreground">Learning Content</p>
+              <p className="font-bold">{dict.visionWoS}</p>
+              <p className="text-sm text-muted-foreground">{dict.visionWoSSub}</p>
             </div>
           </div>
         </div>
@@ -123,11 +122,10 @@ export default function WaveOfSchoolPage() {
         <div className="container mx-auto px-4">
           <div className="mx-auto mb-16 max-w-2xl text-center">
             <h2 className="font-headline text-3xl font-bold md:text-4xl">
-              From Story to Smart Lesson
+              {dict.howItWorksTitle}
             </h2>
             <p className="mt-4 text-muted-foreground">
-              The AI content generation process simplifies lesson creation,
-              allowing teachers to focus on what they do best: teaching.
+              {dict.howItWorksDescription}
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-3">
@@ -137,12 +135,11 @@ export default function WaveOfSchoolPage() {
                   <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
                     <UploadCloud className="h-8 w-8 text-primary" />
                   </div>
-                  <CardTitle>1. Input</CardTitle>
+                  <CardTitle>{dict.step1Title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p>
-                    Teachers select a theme, upload a local story, or a short
-                    interview video.
+                    {dict.step1Description}
                   </p>
                 </CardContent>
               </Card>
@@ -153,12 +150,11 @@ export default function WaveOfSchoolPage() {
                   <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
                     <Sparkles className="h-8 w-8 text-primary" />
                   </div>
-                  <CardTitle>2. AI Generation</CardTitle>
+                  <CardTitle>{dict.step2Title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p>
-                    The system transforms the input into quizzes, comics,
-                    posters, or interactive modules.
+                    {dict.step2Description}
                   </p>
                 </CardContent>
               </Card>
@@ -169,12 +165,11 @@ export default function WaveOfSchoolPage() {
                   <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
                     <Users className="h-8 w-8 text-primary" />
                   </div>
-                  <CardTitle>3. Output & Share</CardTitle>
+                  <CardTitle>{dict.step3Title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p>
-                    Teachers can use it directly in class or upload it to the
-                    EduBoard Hub to share.
+                    {dict.step3Description}
                   </p>
                 </CardContent>
               </Card>
@@ -182,7 +177,7 @@ export default function WaveOfSchoolPage() {
           </div>
           <div className="mt-12 text-center">
             <Button size="lg" variant="outline">
-              Generate Free Demo
+              {dict.demoButton}
             </Button>
           </div>
         </div>
@@ -193,11 +188,10 @@ export default function WaveOfSchoolPage() {
         <div className="container mx-auto px-4">
           <div className="mx-auto mb-16 max-w-2xl text-center">
             <h2 className="font-headline text-3xl font-bold md:text-4xl">
-              AI Content Hub: Discover, Remix, Teach
+              {dict.aiHubTitle}
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Explore an ever-growing ecosystem of ready-to-use content,
-              created by AI and curated by educators.
+              {dict.aiHubDescription}
             </p>
           </div>
 
@@ -240,7 +234,7 @@ export default function WaveOfSchoolPage() {
 
           <div className="mt-12 text-center">
             <Button size="lg">
-              Browse 100+ AI-Learning Modules <ArrowRight className="ml-2" />
+              {dict.browseModules} <ArrowRight className="ml-2" />
             </Button>
           </div>
         </div>
@@ -251,18 +245,17 @@ export default function WaveOfSchoolPage() {
         <div className="container mx-auto grid items-center gap-12 px-4 md:grid-cols-2">
           <MotionWrapper>
             <h2 className="font-headline text-3xl font-bold text-primary md:text-4xl">
-              For Schools: Join the Wave
+              {dict.forSchoolsTitle}
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Become a pioneering partner school and get exclusive access to our
-              AI learning ecosystem.
+              {dict.forSchoolsDescription}
             </p>
             <ul className="mt-6 space-y-4">
               {[
-                'Access to 100+ AI-based lesson plans.',
-                'Dashboard for tracking student activity & interaction.',
-                'Co-creation features with other schools.',
-                'Digital branding: “Wave of School Certified Partner”.',
+                dict.forSchoolsPoint1,
+                dict.forSchoolsPoint2,
+                dict.forSchoolsPoint3,
+                dict.forSchoolsPoint4,
               ].map(item => (
                 <li key={item} className="flex items-start gap-3">
                   <div className="mt-1 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary">
@@ -273,9 +266,9 @@ export default function WaveOfSchoolPage() {
               ))}
             </ul>
             <div className="mt-8 flex gap-4">
-              <Button size="lg">Apply as Partner School</Button>
+              <Button size="lg">{dict.applyButton}</Button>
               <Button size="lg" variant="outline">
-                Book a Live Demo
+                {dict.bookDemoButton}
               </Button>
             </div>
           </MotionWrapper>
@@ -311,16 +304,16 @@ export default function WaveOfSchoolPage() {
           </MotionWrapper>
           <MotionWrapper>
             <h2 className="font-headline text-3xl font-bold text-primary md:text-4xl">
-              For Teachers: Your Voice, Your Lesson
+              {dict.forTeachersTitle}
             </h2>
              <p className="mt-4 text-lg italic text-muted-foreground">
-                “Every teacher has a story. Every story can teach the world.”
+                {dict.forTeachersQuote}
               </p>
             <ul className="mt-6 space-y-4">
               {[
-                'Get automatic templates (PPT, comics, quizzes).',
-                'Get an AI Teaching Assistant (generates ideas & questions).',
-                'Share your results with the teacher community across Aceh.',
+                dict.forTeachersPoint1,
+                dict.forTeachersPoint2,
+                dict.forTeachersPoint3,
               ].map(item => (
                 <li key={item} className="flex items-start gap-3">
                   <div className="mt-1 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary">
@@ -331,7 +324,7 @@ export default function WaveOfSchoolPage() {
               ))}
             </ul>
             <div className="mt-8">
-              <Button size="lg">Start Creating with AI</Button>
+              <Button size="lg">{dict.startCreatingButton}</Button>
             </div>
           </MotionWrapper>
         </div>
@@ -340,8 +333,8 @@ export default function WaveOfSchoolPage() {
       {/* 7. Showcase Section */}
         <section className="bg-muted/30 py-20 md:py-28">
             <div className="container mx-auto text-center">
-            <h2 className="font-headline text-3xl font-bold md:text-4xl">AI in Action</h2>
-            <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">See how Wave of School is being used in the classroom to create unforgettable learning experiences.</p>
+            <h2 className="font-headline text-3xl font-bold md:text-4xl">{dict.showcaseTitle}</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">{dict.showcaseDescription}</p>
             <MotionWrapper className="relative mx-auto mt-12 aspect-video max-w-4xl overflow-hidden rounded-2xl border-8 border-background shadow-2xl">
                  <Image
                     src="https://cdn.dribbble.com/userupload/32707329/file/original-01992760209b192c3d12d849dc7ee6d4.jpeg"
@@ -366,25 +359,23 @@ export default function WaveOfSchoolPage() {
           <div className="grid gap-8 md:grid-cols-2 md:items-center">
             <div>
               <h2 className="font-headline text-3xl font-bold md:text-4xl">
-                Our Impact, In Numbers
+                {dict.impactTitle}
               </h2>
               <p className="mt-4 text-muted-foreground">
-                Driving real change in the local education ecosystem through
-                technology adoption and community participation.
+                {dict.impactDescription}
               </p>
               <div className="mt-8 grid grid-cols-2 gap-6">
-                <StatCard value="50+" label="Schools Joined" />
-                <StatCard value="1000+" label="AI Lessons Generated" />
-                <StatCard value="5000+" label="Students Engaged" />
-                <StatCard value="95%" label="Teacher Satisfaction" />
+                <StatCard value="50+" label={dict.impactSchools} />
+                <StatCard value="1000+" label={dict.impactLessons} />
+                <StatCard value="5000+" label={dict.impactStudents} />
+                <StatCard value="95%" label={dict.impactSatisfaction} />
               </div>
             </div>
             <MotionWrapper delay={0.2}>
               <Card className="bg-muted/50">
                 <CardContent className="p-8">
                   <p className="text-xl font-medium italic">
-                    “With Wave of School, I turned my tsunami story into a
-                    digital lesson that my students love.”
+                    {dict.testimonial}
                   </p>
                   <div className="mt-6 flex items-center gap-4">
                     <Avatar>
@@ -392,9 +383,9 @@ export default function WaveOfSchoolPage() {
                       <AvatarFallback>IN</AvatarFallback>
                     </Avatar>
                     <div>
-                      <p className="font-semibold">Ibu Nurdiani</p>
+                      <p className="font-semibold">{dict.testimonialAuthor}</p>
                       <p className="text-sm text-muted-foreground">
-                        Teacher, SDN Simeulue Barat
+                        {dict.testimonialRole}
                       </p>
                     </div>
                   </div>
@@ -409,39 +400,38 @@ export default function WaveOfSchoolPage() {
       <section className="bg-muted/50 py-20 md:py-28">
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-headline text-3xl font-bold md:text-4xl">
-            Be the Next Wave
+            {dict.joinMovementTitle}
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-            Let's collaborate for the future of education in Aceh. Whatever
-            your role, you can be part of the change.
+            {dict.joinMovementDescription}
           </p>
           <div className="mx-auto mt-12 grid max-w-5xl gap-6 md:grid-cols-3">
             <Card className="p-8 text-center">
               <PenSquare className="mx-auto h-12 w-12 text-primary" />
-              <h3 className="mt-4 font-headline text-2xl">For Teachers</h3>
+              <h3 className="mt-4 font-headline text-2xl">{dict.joinForTeachers}</h3>
               <p className="mt-2 text-sm text-muted-foreground">
-                Start creating content and get access to the AI Assistant.
+                {dict.joinForTeachersDesc}
               </p>
               <Button variant="outline" className="mt-6">
-                Start Creating
+                {dict.startCreatingButton}
               </Button>
             </Card>
             <Card className="p-8 text-center ring-2 ring-primary">
               <School className="mx-auto h-12 w-12 text-primary" />
-              <h3 className="mt-4 font-headline text-2xl">For Schools</h3>
+              <h3 className="mt-4 font-headline text-2xl">{dict.joinForSchools}</h3>
               <p className="mt-2 text-sm text-muted-foreground">
-                Register your school as a pioneering partner.
+                {dict.joinForSchoolsDesc}
               </p>
-              <Button className="mt-6">Become a Partner</Button>
+              <Button className="mt-6">{dict.becomePartnerButton}</Button>
             </Card>
             <Card className="p-8 text-center">
               <Users className="mx-auto h-12 w-12 text-primary" />
-              <h3 className="mt-4 font-headline text-2xl">For Organizations</h3>
+              <h3 className="mt-4 font-headline text-2xl">{dict.joinForOrgs}</h3>
               <p className="mt-2 text-sm text-muted-foreground">
-                Explore collaboration opportunities for a broader impact.
+                {dict.joinForOrgsDesc}
               </p>
               <Button variant="outline" className="mt-6">
-                Collaborate with Us
+                {dict.collaborateButton}
               </Button>
             </Card>
           </div>
@@ -463,3 +453,5 @@ export default function WaveOfSchoolPage() {
     </div>
   );
 }
+
+    
