@@ -40,15 +40,16 @@ import RelatedStoryCarousel from '@/components/related-story-carousel';
 export default function StoryDetailPage({ params }: { params: { id: string } }) {
   const { language, dictionary } = useLanguage();
   const allStories = getTranslatedStories({ lang: language });
+  const storyId = params.id;
 
-  const story = allStories.find(s => s.id === params.id);
+  const story = allStories.find(s => s.id === storyId);
   
   if (!story) {
     notFound();
   }
   
   const interactiveContent = getInteractiveContent(dictionary);
-  const content: InteractiveContent | undefined = interactiveContent[params.id];
+  const content: InteractiveContent | undefined = interactiveContent[storyId];
 
   const otherStories = allStories
     .filter(s => s.id !== story.id);
@@ -193,5 +194,3 @@ export default function StoryDetailPage({ params }: { params: { id: string } }) 
     </>
   );
 }
-
-    
