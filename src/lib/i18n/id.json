@@ -95,7 +95,7 @@
         "peace": "Pembangunan Perdamaian",
         "wisdom": "Kearifan Lokal"
       },
-      "submitButton": "Kirim via WhatsApp",
+      "submitButton": "Kirim via Telegram",
       "aiHelper": {
         "title": "Siaga-Bot",
         "description": "Asisten AI edukasi kebencanaan Anda.",
@@ -240,3 +240,5 @@
     }
   }
 }
+
+    

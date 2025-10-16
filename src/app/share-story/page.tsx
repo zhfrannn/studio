@@ -115,10 +115,10 @@ Jenis Cerita: ${storyType.join(', ')}
 Cerita:
 ${story}`;
 
-    const whatsappUrl = `https://wa.me/6285296443101?text=${encodeURIComponent(
+    const telegramUrl = `https://t.me/WaveOfVoice_Bot?text=${encodeURIComponent(
       message
     )}`;
-    window.open(whatsappUrl, '_blank');
+    window.open(telegramUrl, '_blank');
   }
 
   const handleChatSend = async () => {
@@ -307,7 +307,7 @@ ${story}`;
 
                   <Button type="submit" size="lg" className="w-full">
                     <MessageSquareText className="mr-2 h-5 w-5" />
-                    {shareStoryDict.submitButton}
+                    {shareStoryDict.submitButton.replace('WhatsApp', 'Telegram')}
                   </Button>
                 </form>
               </Form>
@@ -416,3 +416,5 @@ ${story}`;
     </div>
   );
 }
+
+    
