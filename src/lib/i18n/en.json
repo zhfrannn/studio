@@ -453,6 +453,11 @@
       "title": "Beware the Tornado",
       "summary": "A story of how residents of Gentle Wind Village learned to anticipate and prepare for a tornado, turning fear into preparedness.",
       "fullText": "One afternoon in Gentle Wind Village, the sky suddenly darkened and clouds swirled into a large vortex—a sign of an approaching tornado! In the past, residents would watch from outside, but now they knew better: get inside immediately, lock doors and windows tightly, stay away from glass, unplug electrical cords, and take shelter in the safest room, like a windowless room or under a sturdy table. Mrs. Rina had also prepared a go-bag with a flashlight, batteries, drinking water, snacks, medicine, and important documents. After the storm passed, residents helped each other clean up the debris, check the condition of their homes, and ensure no power lines were down. The children learned that tornadoes are not curses or mysteries, but natural phenomena that can be anticipated with knowledge, alertness, and cooperation. The message was clear: know the signs, prepare yourself, and don't panic—because preparedness is the best protection."
+    },
+    "likuifaksi-palu": {
+      "title": "Palu Liquefaction: When the Ground Becomes Mud",
+      "summary": "The story of Lala who survived the earthquake and tsunami in Palu, and learned about the terrifying phenomenon of liquefaction that turns solid ground into mud.",
+      "fullText": "Afternoon in Palu, Lala was doing her homework when suddenly the ground shook violently. The cupboard almost fell over, and her father immediately shouted, “Drop, Cover, Hold!” Lala quickly took shelter under the table, holding her breath and protecting her head. After the shaking stopped, they immediately left the house, not using the elevator, and moved away from tall buildings. Not long after, the sea receded quickly, making some curious people approach. But her father immediately said, “That’s a sign of a tsunami! Get to high ground quickly, don’t wait for the siren!”\n\nThey ran to the hill behind their house, out of breath but not stopping until they were safe. From there, they watched the big waves hit the city, swallowing roads and houses. Lala was trembling, but grateful they were safe because they knew what to do. A few days later, her father explained about liquefaction, the ground that turns into mud due to a major earthquake. Since then, Lala has been determined to always be prepared, know the evacuation routes, and participate in disaster drills, because she knows—being prepared is not being afraid, but being wise in facing nature."
     }
   },
   "interactiveContent": {
@@ -508,7 +513,7 @@
                 { "title": "Planting Seeds of Hope", "text": "Together, the youth and the elderly, we began to replant mangrove seedlings along the coast." },
                 { "title": "Challenges & Failures", "text": "It was difficult at first, many seedlings failed to grow. But we did not give up and kept trying." },
                 { "title": "The Natural Fortress Grows Strong", "text": "Now, the mangrove forest has grown dense. Its strong roots grip the soil, holding back the waves." },
-                { "title": "Life Returns", "text": "This forest not only protects the village, but also becomes a home for fish and crabs, providing us with a new livelihood." }
+                { "title": "Life Returns", "text": "This forest not only protects the village, but also becomes a home for fish and crabs, giving us a new livelihood." }
             ]
         }
     },
@@ -955,6 +960,34 @@
           { "title": "Mrs. Rina's Go-Bag", "text": "Mrs. Rina had already prepared a go-bag with all the emergency necessities, keeping her family calm." },
           { "title": "Mutual Help After the Storm", "text": "After the storm passed, residents came out and helped each other, cleaning up debris and ensuring the area was safe." },
           { "title": "Knowledge Against Fear", "text": "The children now understand that a tornado is a natural phenomenon that can be faced with knowledge and preparedness." }
+        ]
+      }
+    },
+    "likuifaksiPalu": {
+      "video": {
+        "title": "Educational Video: Earthquake and Liquefaction in Palu",
+        "description": "Understand the dual threat of earthquake, tsunami, and liquefaction through Lala's story in Palu.",
+        "info": "This video simply explains what liquefaction is and why it is important to evacuate immediately after an earthquake in a coastal area."
+      },
+      "quiz": {
+        "title": "Palu Earthquake Preparedness Quiz",
+        "description": "Test your knowledge of earthquake, tsunami, and liquefaction preparedness.",
+        "questions": [
+          { "question": "What was the first action Lala took when the earthquake struck?", "options": ["Ran out of the house", "Screamed for help", "Took cover under a table", "Recorded the event"], "correctAnswer": "Took cover under a table", "points": 10 },
+          { "question": "What natural sign indicated a potential tsunami after the earthquake?", "options": ["Heavy rain", "The sea receding quickly", "The appearance of a rainbow", "Strong winds"], "correctAnswer": "The sea receding quickly", "points": 10 },
+          { "question": "What is liquefaction as explained in the story?", "options": ["A swirling wind", "The ground turning into mud due to the earthquake's shaking", "A very large ocean wave", "A landslide from a mountain"], "correctAnswer": "The ground turning into mud due to the earthquake's shaking", "points": 10 }
+        ]
+      },
+      "comic": {
+        "title": "Comic: Lala and the Mystery of the Shaking Ground",
+        "description": "Learn about earthquakes, tsunamis, and liquefaction with Lala from Palu.",
+        "panels": [
+          { "title": "Sudden Shake", "text": "While studying, the ground shook violently. Lala remembered the lesson at school: 'Drop, Cover, Hold!'" },
+          { "title": "A Sign from the Sea", "text": "After the earthquake, the sea receded unnaturally. Lala's father knew it was a tsunami danger sign." },
+          { "title": "Run for High Ground", "text": "Without waiting for a siren, they ran to the hill. Safety was the priority." },
+          { "title": "The Crashing Wave", "text": "From the top of the hill, Lala saw a huge wave hit the city. She was grateful to have evacuated." },
+          { "title": "The Mystery of Liquefaction", "text": "Her father explained that the earthquake had turned the ground in some places into mud, swallowing buildings." },
+          { "title": "Ready to Survive", "text": "Lala now knows the importance of preparedness. Being ready is being wise, not afraid." }
         ]
       }
     }

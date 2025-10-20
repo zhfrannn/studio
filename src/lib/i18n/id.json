@@ -453,6 +453,11 @@
       "title": "Waspada Angin Puting Beliung",
       "summary": "Kisah bagaimana warga Desa Angin Lembut belajar mengantisipasi dan bersiap menghadapi datangnya angin puting beliung, mengubah ketakutan menjadi kesiapsiagaan.",
       "fullText": "Suatu sore di Desa Angin Lembut, langit tiba-tiba menggelap dan awan berputar seperti pusaran besar—tanda datangnya angin puting beliung! Dulu warga suka menonton dari luar, tapi sekarang mereka sudah tahu: segera masuk ke rumah, kunci pintu dan jendela rapat, jauhkan diri dari kaca, cabut kabel listrik, dan berlindung di ruangan paling aman, seperti kamar tanpa jendela atau bawah meja yang kokoh. Ibu Rina juga sudah menyiapkan tas siaga berisi senter, baterai, air minum, makanan ringan, obat-obatan, dan dokumen penting. Setelah badai reda, warga saling membantu membersihkan puing-puing, memeriksa kondisi rumah, dan memastikan tidak ada kabel listrik yang putus. Anak-anak belajar bahwa angin puting beliung bukan kutukan atau misteri, tapi fenomena alam yang bisa diantisipasi dengan ilmu, kesigapan, dan kerja sama. Pesannya jelas: kenali tanda-tandanya, siapkan diri, dan jangan panik—karena kesiapsiagaan adalah pelindung terbaik."
+    },
+    "likuifaksi-palu": {
+      "title": "Likuifaksi Palu: Ketika Tanah Menjadi Lumpur",
+      "summary": "Kisah Lala yang selamat dari gempa dan tsunami di Palu, dan belajar tentang fenomena mengerikan likuifaksi yang mengubah tanah padat menjadi lumpur.",
+      "fullText": "Sore di Palu, Lala sedang mengerjakan PR ketika tiba-tiba tanah berguncang keras. Lemari hampir tumbang, dan ayah langsung berteriak, “Drop, Cover, Hold!” Lala cepat berlindung di bawah meja sambil menahan napas dan melindungi kepala. Setelah guncangan berhenti, mereka segera keluar rumah, tidak pakai lift, dan menjauh dari bangunan tinggi. Tak lama kemudian, laut surut dengan cepat, membuat beberapa orang penasaran mendekat. Tapi ayah segera berkata, “Itu tanda tsunami! Cepat ke tempat tinggi, jangan tunggu sirine!”\n\nMereka berlari ke bukit di belakang rumah, napas terengah tapi tak berhenti sampai aman. Dari sana, mereka menyaksikan ombak besar menghantam kota, menelan jalan dan rumah. Lala gemetar, tapi bersyukur mereka selamat karena tahu apa yang harus dilakukan. Beberapa hari kemudian, ayah menjelaskan tentang likuifaksi, tanah yang berubah jadi lumpur karena gempa besar. Sejak itu, Lala bertekad untuk selalu siap, tahu jalur evakuasi, dan ikut latihan bencana, karena ia tahu—siap itu bukan takut, tapi bijak menghadapi alam."
     }
   },
   "interactiveContent": {
@@ -955,6 +960,34 @@
           { "title": "Tas Siaga Ibu Rina", "text": "Ibu Rina sudah menyiapkan tas siaga dengan semua kebutuhan darurat, membuat keluarganya tenang." },
           { "title": "Gotong Royong Pasca-Badai", "text": "Setelah badai reda, warga keluar dan saling membantu, membersihkan puing dan memastikan lingkungan aman." },
           { "title": "Ilmu Melawan Rasa Takut", "text": "Anak-anak kini paham, puting beliung adalah fenomena alam yang bisa dihadapi dengan pengetahuan dan kesiapsiagaan." }
+        ]
+      }
+    },
+    "likuifaksiPalu": {
+      "video": {
+        "title": "Video Edukasi: Gempa dan Likuifaksi di Palu",
+        "description": "Pahami ancaman ganda gempa bumi, tsunami, dan likuifaksi melalui kisah Lala di Palu.",
+        "info": "Video ini menjelaskan secara sederhana apa itu likuifaksi dan mengapa penting untuk segera mengungsi setelah gempa di daerah pesisir."
+      },
+      "quiz": {
+        "title": "Kuis Siaga Gempa Palu",
+        "description": "Uji pengetahuanmu tentang kesiapsiagaan gempa, tsunami, dan likuifaksi.",
+        "questions": [
+          { "question": "Apa tindakan pertama yang dilakukan Lala saat gempa terjadi?", "options": ["Berlari keluar rumah", "Berteriak minta tolong", "Berlindung di bawah meja", "Merekam kejadian"], "correctAnswer": "Berlindung di bawah meja", "points": 10 },
+          { "question": "Tanda alam apa yang menunjukkan potensi tsunami setelah gempa?", "options": ["Hujan deras", "Laut yang surut dengan cepat", "Munculnya pelangi", "Angin kencang"], "correctAnswer": "Laut yang surut dengan cepat", "points": 10 },
+          { "question": "Apa itu likuifaksi yang dijelaskan dalam cerita?", "options": ["Angin kencang yang memutar", "Tanah yang berubah menjadi lumpur akibat guncangan gempa", "Gelombang laut yang sangat besar", "Tanah longsor dari gunung"], "correctAnswer": "Tanah yang berubah menjadi lumpur akibat guncangan gempa", "points": 10 }
+        ]
+      },
+      "comic": {
+        "title": "Komik: Lala dan Misteri Tanah Bergoyang",
+        "description": "Belajar tentang gempa, tsunami, dan likuifaksi bersama Lala dari Palu.",
+        "panels": [
+          { "title": "Guncangan Tiba-tiba", "text": "Saat sedang belajar, tanah berguncang hebat. Lala ingat pelajaran di sekolah: 'Drop, Cover, Hold!'" },
+          { "title": "Tanda dari Laut", "text": "Setelah gempa, laut surut secara tidak wajar. Ayah Lala tahu itu adalah tanda bahaya tsunami." },
+          { "title": "Lari ke Tempat Tinggi", "text": "Tanpa menunggu sirine, mereka berlari ke bukit. Keselamatan adalah yang utama." },
+          { "title": "Ombak yang Menerjang", "text": "Dari atas bukit, Lala melihat ombak besar menghantam kota. Ia bersyukur telah mengungsi." },
+          { "title": "Misteri Likuifaksi", "text": "Ayah menjelaskan bahwa gempa membuat tanah di beberapa tempat menjadi seperti lumpur, menelan bangunan." },
+          { "title": "Siap untuk Selamat", "text": "Lala kini tahu pentingnya kesiapsiagaan. Siap berarti bijak, bukan takut." }
         ]
       }
     }

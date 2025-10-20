@@ -401,6 +401,26 @@ export const getInteractiveContent = (dict: Dictionary): { [key: string]: Intera
                     { ...contentDict.anginPutingBeliung.comic.panels[5], imageUrl: 'https://i.ibb.co/M5x6GHsX/Gemini-Generated-Image-jxn6b6jxn6b6jxn6.png', imageHint: 'children learning from adult' },
                 ]
             },
+        },
+        'likuifaksi-palu': {
+            video: {
+                title: contentDict.likuifaksiPalu.video.title,
+                description: contentDict.likuifaksiPalu.video.description,
+                embedUrl: '',
+                info: contentDict.likuifaksiPalu.video.info,
+            },
+            quiz: contentDict.likuifaksiPalu.quiz,
+            comic: {
+                ...contentDict.likuifaksiPalu.comic,
+                panels: [
+                    { ...contentDict.likuifaksiPalu.comic.panels[0], imageUrl: 'https://picsum.photos/seed/palu-comic-1/800/600', imageHint: 'girl studying earthquake shaking' },
+                    { ...contentDict.likuifaksiPalu.comic.panels[1], imageUrl: 'https://picsum.photos/seed/palu-comic-2/800/600', imageHint: 'receding sea ocean floor' },
+                    { ...contentDict.likuifaksiPalu.comic.panels[2], imageUrl: 'https://picsum.photos/seed/palu-comic-3/800/600', imageHint: 'family running uphill' },
+                    { ...contentDict.likuifaksiPalu.comic.panels[3], imageUrl: 'https://picsum.photos/seed/palu-comic-4/800/600', imageHint: 'tsunami wave hitting city view from hill' },
+                    { ...contentDict.likuifaksiPalu.comic.panels[4], imageUrl: 'https://picsum.photos/seed/palu-comic-5/800/600', imageHint: 'ground turning to mud liquefaction' },
+                    { ...contentDict.likuifaksiPalu.comic.panels[5], imageUrl: 'https://picsum.photos/seed/palu-comic-6/800/600', imageHint: 'girl looking at evacuation route map' },
+                ]
+            },
         }
     };
 };

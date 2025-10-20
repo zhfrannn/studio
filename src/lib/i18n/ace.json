@@ -453,6 +453,11 @@
       "title": "Waspada Angen Puténg Biliông",
       "summary": "Calitra kiban ureuëng Gampông Angen Leumbôt geumeurunoe cara antisipasi dan siap siaga hadapi teuka angen puténg biliông, geuubah rasa teumakot jeuët ke kesiapsiagaan.",
       "fullText": "Bak siuroe sore di Gampông Angen Leumbôt, langèt hana teugah jeuët seupôt dan awan meupusông lagee pusaran rayeuk—tanda teuka angen puténg biliông! Awai, ureuëng gampông galak geukalön dari luwa, tapi jinoe awaknyan ka geuturi: sigra tamöng u rumoh, gunci pintô dan jeundéla beu-rapat, peujioh droe dari kaca, cabut kabel listrik, dan meulindông di ruweuëng paléng aman, lagee kamar hana jeundéla atau di bawah méja nyang köng. Mak Rina pih ka geupeusiap tas siaga nyang na senter, batré, ië jép, makanan ubit, ubat-ubatan, dan surat-surat penténg. 'Oh ka leupah badè, ureuëng gampông saling bantu peugléh puing-puing, periksa kondisi rumoh, dan pastikan hana kabel listrik nyang putôh. Aneuk-aneuk meurunoe bahwa angen puténg biliông kon kutukan atau misteri, tapi fenomena alam nyang jeuët geu-antisipasi ngön èleumèe, kesigapan, dan kerja sama. Peusan jih jelas: turi tanda-tanda jih, peusiap droe, dan bék panik—karena kesiapsiagaan nyan keuh pelindung paléng göt."
+    },
+    "likuifaksi-palu": {
+      "title": "Likuifaksi Palu: Watee Tanoh Jeut ke Leuhop",
+      "summary": "Calitra Lala nyang seulamat dari geumpa ngon tsunami di Palu, dan geumeurunoe tentang likuifaksi nyang ubah tanoh kong jeut lagee leuhop.",
+      "fullText": "Wate sore di Palu, Lala teungoh geupeugot PR watee tiba-tiba tanoh meugeuncang brat. Lemari rab reubah, dan ayah jih langsong geuhoih, “Drop, Cover, Hold!” Lala sigra geumeulindong di yup meja sira geutheun napah ngon geulindong ulee. Lheuh geuncangan seuleusoe, awaknyan sigra geuteubiet dari rumoh, kon geungui lift, dan geupeujioh droe dari bangunan manyang. Hana trep lheuhnyan, laot sigra surut, peuget padum droe ureung penasaran geujak keudeh. Tapi ayah jih sigra geupeugah, “Nyan tanda tsunami! Sigra u tempat manyang, bek preh sirine!”\n\nAwaknyan geuplueng u buket di likot rumoh, napah meungah-ngah tapi hana geupioh sampoe aman. Dari ateuh nyan, awaknyan geukalon umbak rayeuk geuhantam kota, geutelan jalan ngon rumoh. Lala meugeutar, tapi syuko awaknyan seulamat karena geuturi peu nyang harus geupeugot. Padum uroe lheuhnyan, ayah jih geupeugah tentang likuifaksi, tanoh nyang berubah jeut lagee leuhop karena geumpa rayeuk. Sejak nyan, Lala meu-azam untuk sabe siap, geuturi jalur evakuasi, dan geuikot latihan bencana, karena jih geuturi—siap nyan kon teumakot, tapi bijak hadapi alam."
     }
   },
   "interactiveContent": {
@@ -955,6 +960,34 @@
           { "title": "Tas Siaga Mak Rina", "text": "Mak Rina ka geupeusiap tas siaga ngön mandum keubeutuhan darurat, peuget keluargajih tenang." },
           { "title": "Gotong Royong 'Oh Ka Leupah Badè", "text": "'Oh ka leupah badè, ureuëng gampông teubiet dan saling bantu, peugléh puing dan pastikan lingkungan aman." },
           { "title": "Èleumèe Lawan Rasa Teumakot", "text": "Aneuk-aneuk jinoe paham, puténg biliông nyan fenomena alam nyang jeuët dihadapi ngön èleumèe dan kesiapsiagaan." }
+        ]
+      }
+    },
+    "likuifaksiPalu": {
+      "video": {
+        "title": "Video Edukasi: Geumpa ngon Likuifaksi di Palu",
+        "description": "Pahami ancaman ganda geumpa bumoe, tsunami, ngon likuifaksi melalui kisah Lala di Palu.",
+        "info": "Video nyoe geupeugah secara sederhana peu nyan likuifaksi ngon pakon penteng untuk sigra meungungsi lheuh geumpa di daerah pante."
+      },
+      "quiz": {
+        "title": "Kuis Siaga Geumpa Palu",
+        "description": "Uji pengetahuan gata tentang siaga geumpa, tsunami, ngon likuifaksi.",
+        "questions": [
+          { "question": "Tindakan peu nyang phôn that geupeulaku lé Lala watee geumpa teujadi?", "options": ["Geuplueng u luwa rumoh", "Geuhoih lakee tulong", "Geumeulindong di yup meja", "Geurekam keujadian"], "correctAnswer": "Geumeulindong di yup meja", "points": 10 },
+          { "question": "Tanda alam peu nyang tunyok potensi tsunami lheuh geumpa?", "options": ["Ujeun brat", "Laot nyang sigra surut", "Meudeun pelangi", "Angen kreueng"], "correctAnswer": "Laot nyang sigra surut", "points": 10 },
+          { "question": "Peu nyan likuifaksi nyang geupeugah dalam calitra?", "options": ["Angen kreueng nyang meupuseng", "Tanoh nyang meutuka jeut ke leuhop karena geuncangan geumpa", "Umbak laot nyang raya that", "Tanoh runtuh dari gunong"], "correctAnswer": "Tanoh nyang meutuka jeut ke leuhop karena geuncangan geumpa", "points": 10 }
+        ]
+      },
+      "comic": {
+        "title": "Komik: Lala ngon Misteri Tanoh Meugeuncang",
+        "description": "Meurunoe tentang geumpa, tsunami, ngon likuifaksi sareng Lala dari Palu.",
+        "panels": [
+          { "title": "Geuncangan Tiba-tiba", "text": "Watee teungoh meurunoe, tanoh meugeuncang brat. Lala teuingat pelajaran di sikula: 'Drop, Cover, Hold!'" },
+          { "title": "Tanda dari Laot", "text": "Lheuh geumpa, laot surut hana lagee biasa. Ayah Lala geuturi nyan tanda bahaya tsunami." },
+          { "title": "Plueng u Tempat Manyang", "text": "Hana geupreh sirine, awaknyan geuplueng u buket. Keuseulamatan nyan nyang utama." },
+          { "title": "Umbak Nyang Geuhantam", "text": "Dari ateuh buket, Lala geukalon umbak rayeuk geuhantam kota. Jih syuko ka geumeungungsi." },
+          { "title": "Misteri Likuifaksi", "text": "Ayah geupeugah bahwa geumpa ka peuget tanoh di padum-padum tempat jeut lagee leuhop, geutelan bangunan." },
+          { "title": "Siap untuk Seulamat", "text": "Lala jinoe geuturi penteng jih kesiapsiagaan. Siap nyan bijak, kon teumakot." }
         ]
       }
     }

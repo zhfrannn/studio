@@ -29,7 +29,7 @@
       "location": { "name": "Bireuen", "lat": 5.2, "lng": 96.7 },
       "aiThemes": ["Peacebuilding", "Local Wisdom"],
       "media": {
-        "featuredImage": "https://i.ibb.co.com/T3f302F/Gemini-Generated-Image-rmhvlgrmhvlgrmhv.png",
+        "featuredImage": "https://i.ibb.co/T3f302F/Gemini-Generated-Image-rmhvlgrmhvlgrmhv.png",
         "featuredImageHint": "people eating together happily"
       },
       "status": "published"
@@ -51,7 +51,7 @@
       "location": { "name": "Pidie", "lat": 5.37, "lng": 95.96 },
       "aiThemes": ["Disaster Preparedness", "Local Wisdom"],
       "media": {
-        "featuredImage": "https://i.ibb.co.com/MxDVKgQ8/Gemini-Generated-Image-ptyvfqptyvfqptyv.png",
+        "featuredImage": "https://i.ibb.co/MxDVKgQ8/Gemini-Generated-Image-ptyvfqptyvfqptyv.png",
         "featuredImageHint": "raging flash flood logs"
       },
       "status": "published"
@@ -62,7 +62,7 @@
       "location": { "name": "Aceh Tengah", "lat": 4.62, "lng": 96.85 },
       "aiThemes": ["Disaster Preparedness", "Peacebuilding"],
       "media": {
-        "featuredImage": "https://i.ibb.co.com/wrwhkWjG/Gemini-Generated-Image-1tus9y1tus9y1tus.png",
+        "featuredImage": "https://i.ibb.co/wrwhkWjG/Gemini-Generated-Image-1tus9y1tus9y1tus.png",
         "featuredImageHint": "people fighting forest fire"
       },
       "status": "published"
@@ -73,7 +73,7 @@
       "location": { "name": "Bener Meriah", "lat": 4.72, "lng": 96.86 },
       "aiThemes": ["Peacebuilding", "Local Wisdom"],
       "media": {
-        "featuredImage": "https://i.ibb.co.com/65QLYw8/Gemini-Generated-Image-xp78xcxp78xcxp78.png",
+        "featuredImage": "https://i.ibb.co/65QLYw8/Gemini-Generated-Image-xp78xcxp78xcxp78.png",
         "featuredImageHint": "cup of steaming gayo coffee"
       },
       "status": "published"
@@ -84,7 +84,7 @@
       "location": { "name": "Pidie", "lat": 5.37, "lng": 95.96 },
       "aiThemes": ["Peacebuilding", "Local Wisdom"],
       "media": {
-        "featuredImage": "https://i.ibb.co.com/MDmNGYvr/Gemini-Generated-Image-sqvrxesqvrxesqvr.png",
+        "featuredImage": "https://i.ibb.co/MDmNGYvr/Gemini-Generated-Image-sqvrxesqvrxesqvr.png",
         "featuredImageHint": "seudati dance performance"
       },
       "status": "published"
@@ -95,7 +95,7 @@
       "location": { "name": "Aceh Besar", "lat": 5.37, "lng": 95.52 },
       "aiThemes": ["Peacebuilding", "Local Wisdom"],
       "media": {
-        "featuredImage": "https://i.ibb.co.com/RkGvwjR8/Gemini-Generated-Image-pucmhfpucmhfpucm.png",
+        "featuredImage": "https://i.ibb.co/RkGvwjR8/Gemini-Generated-Image-pucmhfpucmhfpucm.png",
         "featuredImageHint": "woman proudly holding woven bag"
       },
       "status": "published"
@@ -117,7 +117,7 @@
       "location": { "name": "Banda Aceh", "lat": 5.55, "lng": 95.32 },
       "aiThemes": ["Peacebuilding"],
       "media": {
-        "featuredImage": "https://i.ibb.co.com/pjr6h7s0/Gemini-Generated-Image-ikoughikoughikou.png",
+        "featuredImage": "https://i.ibb.co/pjr6h7s0/Gemini-Generated-Image-ikoughikoughikou.png",
         "featuredImageHint": "children interacting with mural"
       },
       "status": "published"
@@ -128,7 +128,7 @@
       "location": { "name": "Banda Aceh", "lat": 5.55, "lng": 95.32 },
       "aiThemes": ["Local Wisdom"],
       "media": {
-        "featuredImage": "https://i.ibb.co.com/zhj5vRfQ/Gemini-Generated-Image-yz9meiyz9meiyz9m.png",
+        "featuredImage": "https://i.ibb.co/zhj5vRfQ/Gemini-Generated-Image-yz9meiyz9meiyz9m.png",
         "featuredImageHint": "fisherman at night starry sky"
       },
       "status": "published"
@@ -196,6 +196,17 @@
       "media": {
         "featuredImage": "https://i.ibb.co/hR2wMXyx/Gemini-Generated-Image-91p8ky91p8ky91p8.png",
         "featuredImageHint": "tornado dark clouds village"
+      },
+      "status": "published"
+    },
+    {
+      "id": "likuifaksi-palu",
+      "author": "Lala, Penyintas Gempa Palu",
+      "location": { "name": "Palu", "lat": -0.89, "lng": 119.87 },
+      "aiThemes": ["Disaster Preparedness"],
+      "media": {
+        "featuredImage": "https://i.ibb.co.com/Ld2PZfX/Gemini-Generated-Image-z4f1jvz4f1jvz4f1.png",
+        "featuredImageHint": "girl looking at destroyed city"
       },
       "status": "published"
     }
