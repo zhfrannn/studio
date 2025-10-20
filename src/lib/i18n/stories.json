@@ -187,6 +187,17 @@
         "featuredImageHint": "boy looking at smoking volcano"
       },
       "status": "published"
+    },
+    {
+      "id": "angin-puting-beliung",
+      "author": "Warga Desa Angin Lembut",
+      "location": { "name": "Aceh Tamiang", "lat": 4.27, "lng": 98.05 },
+      "aiThemes": ["Disaster Preparedness"],
+      "media": {
+        "featuredImage": "https://i.ibb.co.com/m4LTT98/Gemini-Generated-Image-2-sxk7g72-sxk7g72-sxk.png",
+        "featuredImageHint": "tornado dark clouds village"
+      },
+      "status": "published"
     }
   ]
 }

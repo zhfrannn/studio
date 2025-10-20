@@ -448,6 +448,11 @@
       "title": "Gunung Aruna: Siap Siaga Bencana",
       "summary": "Kisah Rafi yang menerapkan pelajaran mitigasi bencana saat Gunung Aruna menunjukkan tanda-tanda erupsi, berhasil memandu neneknya dan komunitas ke tempat yang aman.",
       "fullText": "Saat Gunung Aruna mulai berasap, Rafi teringat pesan Bu Sinta di sekolah: jangan panik, tapi bersiap. Ia segera mengambil Tas Siaga Aruna berisi senter, air, makanan, dan masker, lalu membantu neneknya menuju titik evakuasi. Di sepanjang jalan, ia melihat warga lain juga menuntun anak-anak dan membantu lansia. Petugas desa membunyikan sirene, memberi arahan, dan semua mengikuti dengan tertib. Malam itu, di tempat evakuasi, mereka duduk bersama sambil berbagi makanan dan cerita, menenangkan yang ketakutan. Ketika fajar datang dan Gunung Aruna kembali tenang, Rafi melihat kampungnya masih utuh, meski tertutup abu. Ia tersenyum lega—mereka semua selamat karena sudah siap. Dari hari itu, Rafi paham bahwa mitigasi bencana bukan sekadar tahu teori, tapi soal kepedulian, kerja sama, dan kesiapan untuk melindungi diri dan orang lain sebelum bahaya datang."
+    },
+    "angin-puting-beliung": {
+      "title": "Waspada Angin Puting Beliung",
+      "summary": "Kisah bagaimana warga Desa Angin Lembut belajar mengantisipasi dan bersiap menghadapi datangnya angin puting beliung, mengubah ketakutan menjadi kesiapsiagaan.",
+      "fullText": "Suatu sore di Desa Angin Lembut, langit tiba-tiba menggelap dan awan berputar seperti pusaran besar—tanda datangnya angin puting beliung! Dulu warga suka menonton dari luar, tapi sekarang mereka sudah tahu: segera masuk ke rumah, kunci pintu dan jendela rapat, jauhkan diri dari kaca, cabut kabel listrik, dan berlindung di ruangan paling aman, seperti kamar tanpa jendela atau bawah meja yang kokoh. Ibu Rina juga sudah menyiapkan tas siaga berisi senter, baterai, air minum, makanan ringan, obat-obatan, dan dokumen penting. Setelah badai reda, warga saling membantu membersihkan puing-puing, memeriksa kondisi rumah, dan memastikan tidak ada kabel listrik yang putus. Anak-anak belajar bahwa angin puting beliung bukan kutukan atau misteri, tapi fenomena alam yang bisa diantisipasi dengan ilmu, kesigapan, dan kerja sama. Pesannya jelas: kenali tanda-tandanya, siapkan diri, dan jangan panik—karena kesiapsiagaan adalah pelindung terbaik."
     }
   },
   "interactiveContent": {
@@ -905,7 +910,7 @@
       },
       "quiz": {
         "title": "Kuis Siaga Gunung Berapi",
-        "description": "Apakah kamu siap menghadapi letusan gunung berapi? Uji pengetahuanmu!",
+        "description": "Siapkah kamu menghadapi letusan gunung berapi? Uji pengetahuanmu!",
         "questions": [
           { "question": "Tindakan pertama apa yang paling penting yang Rafi lakukan saat gunung mulai berasap?", "options": ["Mengambil foto", "Mengambil Tas Siaga", "Menelepon teman-temannya", "Terus bermain"], "correctAnswer": "Mengambil Tas Siaga", "points": 10 },
           { "question": "Mengapa masker adalah barang penting dalam Tas Siaga untuk letusan gunung berapi?", "options": ["Agar terlihat keren", "Untuk melindungi dari hujan", "Untuk menyaring abu vulkanik dari udara", "Untuk menjaga wajah tetap hangat"], "correctAnswer": "Untuk menyaring abu vulkanik dari udara", "points": 10 },
@@ -922,6 +927,34 @@
           { "title": "Komunitas Beraksi", "text": "Di jalan, ia melihat tetangganya saling membantu, mengikuti arahan petugas dengan tertib." },
           { "title": "Bersama di Pengungsian", "text": "Di tempat evakuasi, semua orang berbagi makanan dan cerita, menciptakan rasa tenang dan kebersamaan." },
           { "title": "Aman Saat Fajar", "text": "Keesokan paginya, desa aman, tertutup abu tapi utuh. Rafi tersenyum, tahu mereka selamat karena mereka siap." }
+        ]
+      }
+    },
+    "anginPutingBeliung": {
+      "video": {
+        "title": "Video Animasi: Waspada Angin Puting Beliung",
+        "description": "Pelajari tanda-tanda datangnya angin puting beliung dan cara melindungi diri melalui animasi pendek ini.",
+        "info": "Video ini dirancang untuk semua umur agar mudah mengenali bahaya dan mengambil tindakan yang tepat."
+      },
+      "quiz": {
+        "title": "Kuis Kesiapsiagaan Puting Beliung",
+        "description": "Uji pengetahuan Anda tentang cara menghadapi ancaman angin puting beliung.",
+        "questions": [
+          { "question": "Apa tanda visual utama datangnya angin puting beliung?", "options": ["Pelangi ganda", "Langit yang cerah tanpa awan", "Awan berputar seperti pusaran besar", "Bintang jatuh di siang hari"], "correctAnswer": "Awan berputar seperti pusaran besar", "points": 10 },
+          { "question": "Manakah tindakan yang paling aman saat angin puting beliung mendekat?", "options": ["Menonton dari teras rumah", "Berlindung di bawah pohon besar", "Masuk ke dalam rumah dan menjauhi jendela", "Merekam video dari tempat terbuka"], "correctAnswer": "Masuk ke dalam rumah dan menjauhi jendela", "points": 10 },
+          { "question": "Barang apa yang TIDAK termasuk dalam tas siaga bencana untuk angin puting beliung?", "options": ["Obat-obatan pribadi", "Senter dan baterai", "Payung besar", "Dokumen penting"], "correctAnswer": "Payung besar", "points": 10 }
+        ]
+      },
+      "comic": {
+        "title": "Komik: Desa Angin Lembut Siaga",
+        "description": "Ikuti kisah warga Desa Angin Lembut yang belajar menjadi siaga menghadapi angin puting beliung.",
+        "panels": [
+          { "title": "Tanda di Langit", "text": "Sore itu, langit tiba-tiba gelap dan awan mulai berputar. Warga tahu ini bukan pertanda baik." },
+          { "title": "Masuk dan Berlindung!", "text": "Tidak seperti dulu, mereka tidak lagi menonton. Semua orang segera masuk ke rumah dan mengunci pintu." },
+          { "title": "Jauhi Kaca, Cabut Listrik", "text": "Di dalam rumah, mereka menjauhi jendela kaca dan mencabut semua peralatan listrik untuk menghindari bahaya." },
+          { "title": "Tas Siaga Ibu Rina", "text": "Ibu Rina sudah menyiapkan tas siaga dengan semua kebutuhan darurat, membuat keluarganya tenang." },
+          { "title": "Gotong Royong Pasca-Badai", "text": "Setelah badai reda, warga keluar dan saling membantu, membersihkan puing dan memastikan lingkungan aman." },
+          { "title": "Ilmu Melawan Rasa Takut", "text": "Anak-anak kini paham, puting beliung adalah fenomena alam yang bisa dihadapi dengan pengetahuan dan kesiapsiagaan." }
         ]
       }
     }

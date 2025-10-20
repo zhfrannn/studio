@@ -448,6 +448,11 @@
       "title": "Gunong Aruna: Siap Siaga Bencana",
       "summary": "Calitra Rafi nyang geupeuseulamat droe ngön ureung la'én watee Gunong Aruna meletus, nyan keuh bukti bahwa kesiapan nyan penténg that.",
       "fullText": "Watee Gunong Aruna ka mulai meukaboih, Rafi teuingat peu yang geupeugah le Bu Sinta di sikula: bek panik, tapi harus siap. Jih sigra geucok 'Tas Siaga Aruna' nyang na senter, ie, makanan, ngön masker, lheuhnyan geubantu nek jih u tempat evakuasi. Di jalan, jih geukalon ureung la'én pih geubantu aneuk-aneuk ngön ureung tuha. Petugas gampong geupeunyi sirene, geujok arahan, dan mandum ureung geuikot ngön tertib. Malam nyan, di tempat evakuasi, awaknyan geuduek sama-sama sira geupajoh makanan dan geucalitra, geupeutenang nyang teumakot. Watee suboh teuka dan Gunong Aruna ka tenang lom, Rafi geukalon gampong jih mantong na, meunan pih ka geutop le abee. Jih meukhem lega—awaknyan mandum seulamat karena ka siap. Dari uroe nyan, Rafi paham bahwa mitigasi bencana nyan kon cuma teori, tapi tentang peduli, kerja sama, dan kesiapan untuk lindungi droe ngön ureung la'én seugolom bahaya teuka."
+    },
+    "angin-puting-beliung": {
+      "title": "Waspada Angen Puténg Biliông",
+      "summary": "Calitra kiban ureuëng Gampông Angen Leumbôt geumeurunoe cara antisipasi dan siap siaga hadapi teuka angen puténg biliông, geuubah rasa teumakot jeuët ke kesiapsiagaan.",
+      "fullText": "Bak siuroe sore di Gampông Angen Leumbôt, langèt hana teugah jeuët seupôt dan awan meupusông lagee pusaran rayeuk—tanda teuka angen puténg biliông! Awai, ureuëng gampông galak geukalön dari luwa, tapi jinoe awaknyan ka geuturi: sigra tamöng u rumoh, gunci pintô dan jeundéla beu-rapat, peujioh droe dari kaca, cabut kabel listrik, dan meulindông di ruweuëng paléng aman, lagee kamar hana jeundéla atau di bawah méja nyang köng. Mak Rina pih ka geupeusiap tas siaga nyang na senter, batré, ië jép, makanan ubit, ubat-ubatan, dan surat-surat penténg. 'Oh ka leupah badè, ureuëng gampông saling bantu peugléh puing-puing, periksa kondisi rumoh, dan pastikan hana kabel listrik nyang putôh. Aneuk-aneuk meurunoe bahwa angen puténg biliông kon kutukan atau misteri, tapi fenomena alam nyang jeuët geu-antisipasi ngön èleumèe, kesigapan, dan kerja sama. Peusan jih jelas: turi tanda-tanda jih, peusiap droe, dan bék panik—karena kesiapsiagaan nyan keuh pelindung paléng göt."
     }
   },
   "interactiveContent": {
@@ -676,7 +681,7 @@
     "perempuanPenganyam": {
       "video": {
         "title": "Video Edukasi: Inong Penganyam Harapan",
-        "description": "Saksikan kiban para janda korban tsunami bangket dari keterpurukan dengan peuget kelompok kerajinan anyaman.",
+        "description": "Saksikan kiban para janda korban tsunami bangket dari keterpurukan dengan peudong kelompok kerajinan anyaman.",
         "info": "Dokumenter paneuk nyoe akan ikuti perjalanan kelompok anyam dari duka jeut ke berdaya."
       },
       "quiz": {
@@ -748,7 +753,7 @@
         "title": "Komik: Seni Lawan Trauma",
         "description": "Kiban seniman muda Banda Aceh geunguy mural untuk peupuleh kota.",
         "panels": [
-          { "title": "Dinding Bisu Pasca-Tsunami", "text": "Banda Aceh pasca-tsunami penoh dengan dinding bisu yang jeut ke saksi tragedi. Suasana terasa brat." },
+          { "title": "Dinding Bisu Pasca-Tsunami", "text": "Banda Aceh pasca-tsunami penoh dengan dinding-dinding bisu yang jeut ke saksi tragedi. Suasana terasa brat." },
           { "title": "Panggilan untuk Seniman", "text": "Sebagai seniman, kamoe merasa terpanggil untuk peuget sesuatu, untuk peupuleh luka kota dengan cara kamoe sendiri." },
           { "title": "Jok Warna Baro", "text": "Kamoe mulai lukis mural di dinding publik, kon untuk tuwo, tapi untuk jok warna baro bak ingatan." },
           { "title": "Terapi Melalui Seni", "text": "Proses melukis bersama nyoe jeut ke terapi bagi kamoe dan masyarakat. Dinding suram jeut ke galeri tebuka." },
@@ -759,7 +764,7 @@
     },
     "nelayan": {
       "video": {
-        "title": "Video Edukasi: Navigasi Langet dan La'ôt",
+        "title": "Video Edukasi: Navigasi La'ôt dan Langet",
         "description": "Meurunoe kiban nelayan tradisional Aceh geunguy bintang dan tanda alam untuk navigasi la'ôt luah.",
         "info": "Video nyoe dokumentasikan pengetahuan nelayan tentang rasi bintang, angen, dan perilaku biota la'ôt sebagai pemandu awaknyan."
       },
@@ -797,7 +802,7 @@
         "questions": [
           { "question": "Ken sumur tuha nyan hana pernah kho watee sumur modern la'en kho?", "options": ["Karena dalam that", "Karena geupeuget tepat di ateuh mata ie rayeuk", "Karena jarang geunguy", "Karena geupeuget dari bato ajaib"], "correctAnswer": "Karena geupeuget tepat di ateuh mata ie rayeuk", "points": 10 },
           { "question": "Peu yang dorong warga gampong untuk mita dan peugleh sumur tuha nyan?", "options": ["Perintah dari pemerintah", "Rasa ingin tuhoe dan petualangan", "Thon meukho panyang yang peukho sumber ie modern", "Lumpo sidroe warga"], "correctAnswer": "Thon meukho panyang yang peukho sumber ie modern", "points": 10 },
-          { "question": "Pelajaran peu yang geucok le warga gampong dari kejadian nyoe?", "options": ["Teknologi modern sabe leubeh unggul", "Ie hana akan pernah abéh", "Keurifan dalam peninggalan masa lalu harus geupeuteun", "Uteuen hana hubungan dengan sumber ie"], "correctAnswer": "Keurifan dalam peninggalan masa lalu harus geupeuteun", "points": 10 }
+          { "question": "Pelajaran peu yang geucok le warga gampong dari kejadian nyoe?", "options": ["Teknologi modern hana sabe leubeh get", "Ie hana akan pernah abéh", "Keurifan dalam peninggalan masa lalu harus geupeuteun", "Uteuen hana hubungan dengan sumber ie"], "correctAnswer": "Keurifan dalam peninggalan masa lalu harus geupeuteun", "points": 10 }
         ]
       },
       "comic": {
@@ -922,6 +927,34 @@
           { "title": "Komunitas Bergerak", "text": "Di jalan, jih geukalon tetangga jih saling bantu, geuikot arahan petugas ngön tertib." },
           { "title": "Sabe-sabe di Pengungsian", "text": "Di tempat evakuasi, mandum ureung geupajoh makanan dan geucalitra, geupeugöt rasa tenang dan kebersamaan." },
           { "title": "Aman Watee Suboh", "text": "Singoh paginyan, gampong aman, geutop le abee tapi utuh. Rafi meukhem, geuthee awaknyan seulamat karena siap." }
+        ]
+      }
+    },
+    "anginPutingBeliung": {
+      "video": {
+        "title": "Video Animasi: Waspada Angen Puténg Biliông",
+        "description": "Meurunoe tanda-tanda teuka angen puténg biliông dan cara lindông droe melalui animasi paneuk nyoe.",
+        "info": "Video nyoe geurancang untuk mandum umu mangat mudah turi bahaya dan cok tindakan nyang teupat."
+      },
+      "quiz": {
+        "title": "Kuis Kesiapsiagaan Puténg Biliông",
+        "description": "Uji pengetahuan droeneuh tentang cara hadapi ancaman angen puténg biliông.",
+        "questions": [
+          { "question": "Peu tanda visual utama teuka angen puténg biliông?", "options": ["Reumbông ganda", "Langèt nyang ceurah hana awan", "Awan meupusông lagee pusaran rayeuk", "Bintang rhot watee uroe"], "correctAnswer": "Awan meupusông lagee pusaran rayeuk", "points": 10 },
+          { "question": "Tindakan peu nyang paléng aman watee angen puténg biliông ka toë?", "options": ["Kalon dari teras rumoh", "Meulindông di bawah bak kayèe rayeuk", "Tamöng u dalam rumoh dan peujioh dari jeundéla", "Rekam video dari tempat teubuka"], "correctAnswer": "Tamöng u dalam rumoh dan peujioh dari jeundéla", "points": 10 },
+          { "question": "Barang peu nyang Kon rôh dalam tas siaga bencana untuk angen puténg biliông?", "options": ["Ubat-ubatan pribadi", "Senter dan batré", "Payông rayeuk", "Surat-surat penténg"], "correctAnswer": "Payông rayeuk", "points": 10 }
+        ]
+      },
+      "comic": {
+        "title": "Komik: Gampông Angen Leumbôt Siaga",
+        "description": "Ikuti calitra ureuëng Gampông Angen Leumbôt nyang meurunoe siaga hadapi angen puténg biliông.",
+        "panels": [
+          { "title": "Tanda di Langèt", "text": "Sore nyan, langèt hana teugah seupôt dan awan mulai meupusông. Ureuëng gampông turi nyoe kon pertanda göt." },
+          { "title": "Tamöng dan Meulindông!", "text": "Hana lagee awai, awaknyan hana lé geukalön. Mandum ureuëng sigra tamöng u rumoh dan gunci pintô." },
+          { "title": "Jioh dari Kaca, Cabut Listrik", "text": "Di dalam rumoh, awaknyan geupeujioh droe dari jeundéla kaca dan geucabut mandum alat listrik untuk hindari bahaya." },
+          { "title": "Tas Siaga Mak Rina", "text": "Mak Rina ka geupeusiap tas siaga ngön mandum keubeutuhan darurat, peuget keluargajih tenang." },
+          { "title": "Gotong Royong 'Oh Ka Leupah Badè", "text": "'Oh ka leupah badè, ureuëng gampông teubiet dan saling bantu, peugléh puing dan pastikan lingkungan aman." },
+          { "title": "Èleumèe Lawan Rasa Teumakot", "text": "Aneuk-aneuk jinoe paham, puténg biliông nyan fenomena alam nyang jeuët dihadapi ngön èleumèe dan kesiapsiagaan." }
         ]
       }
     }

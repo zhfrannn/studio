@@ -381,6 +381,26 @@ export const getInteractiveContent = (dict: Dictionary): { [key: string]: Intera
                     { ...contentDict.gunungAruna.comic.panels[5], imageUrl: 'https://i.ibb.co/sJFV0tf2/Gemini-Generated-Image-vx0qqgvx0qqgvx0q.png', imageHint: 'boy smiling at village covered in ash' },
                 ]
             },
+        },
+        'angin-puting-beliung': {
+            video: {
+                title: contentDict.anginPutingBeliung.video.title,
+                description: contentDict.anginPutingBeliung.video.description,
+                embedUrl: '',
+                info: contentDict.anginPutingBeliung.video.info,
+            },
+            quiz: contentDict.anginPutingBeliung.quiz,
+            comic: {
+                ...contentDict.anginPutingBeliung.comic,
+                panels: [
+                    { ...contentDict.anginPutingBeliung.comic.panels[0], imageUrl: 'https://i.ibb.co/vDBWKm8/Gemini-Generated-Image-1gvyyqg1gvyyqg1gv.png', imageHint: 'dark swirling clouds village' },
+                    { ...contentDict.anginPutingBeliung.comic.panels[1], imageUrl: 'https://i.ibb.co/Y0Y67Wb/Gemini-Generated-Image-1-j6h3qa1j6h3qa1j6.png', imageHint: 'family running indoors' },
+                    { ...contentDict.anginPutingBeliung.comic.panels[2], imageUrl: 'https://i.ibb.co/GcLv53v/Gemini-Generated-Image-1-y9g0571y9g0571y9.png', imageHint: 'person unplugging tv' },
+                    { ...contentDict.anginPutingBeliung.comic.panels[3], imageUrl: 'https://i.ibb.co/DffSj0N/Gemini-Generated-Image-2-a1f9fe2a1f9fe2a1.png', imageHint: 'woman holding go-bag' },
+                    { ...contentDict.anginPutingBeliung.comic.panels[4], imageUrl: 'https://i.ibb.co/fnyxN6s/Gemini-Generated-Image-2s8dbm12s8dbm12s8.png', imageHint: 'community cleaning debris' },
+                    { ...contentDict.anginPutingBeliung.comic.panels[5], imageUrl: 'https://i.ibb.co/tCgHCLZ/Gemini-Generated-Image-529gdrx529gdrx529.png', imageHint: 'children learning from adult' },
+                ]
+            },
         }
     };
 };
@@ -405,6 +425,7 @@ export const getMasterQuiz = (dict: Dictionary): Quiz => {
         ...getInteractiveContent(dict)['pasar-sebagai-ruang-sosial'].quiz!.questions,
         ...getInteractiveContent(dict)['siaga-si-kucing-cerdas'].quiz!.questions,
         ...getInteractiveContent(dict)['gunung-aruna-siap-siaga'].quiz!.questions,
+        ...getInteractiveContent(dict)['angin-puting-beliung'].quiz!.questions,
     ];
 
     const shuffled = allQuestions.sort(() => 0.5 - Math.random());
