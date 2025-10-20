@@ -393,12 +393,12 @@ export const getInteractiveContent = (dict: Dictionary): { [key: string]: Intera
             comic: {
                 ...contentDict.anginPutingBeliung.comic,
                 panels: [
-                    { ...contentDict.anginPutingBeliung.comic.panels[0], imageUrl: 'https://i.ibb.co/vDBWKm8/Gemini-Generated-Image-1gvyyqg1gvyyqg1gv.png', imageHint: 'dark swirling clouds village' },
-                    { ...contentDict.anginPutingBeliung.comic.panels[1], imageUrl: 'https://i.ibb.co/Y0Y67Wb/Gemini-Generated-Image-1-j6h3qa1j6h3qa1j6.png', imageHint: 'family running indoors' },
-                    { ...contentDict.anginPutingBeliung.comic.panels[2], imageUrl: 'https://i.ibb.co/GcLv53v/Gemini-Generated-Image-1-y9g0571y9g0571y9.png', imageHint: 'person unplugging tv' },
-                    { ...contentDict.anginPutingBeliung.comic.panels[3], imageUrl: 'https://i.ibb.co/DffSj0N/Gemini-Generated-Image-2-a1f9fe2a1f9fe2a1.png', imageHint: 'woman holding go-bag' },
-                    { ...contentDict.anginPutingBeliung.comic.panels[4], imageUrl: 'https://i.ibb.co/fnyxN6s/Gemini-Generated-Image-2s8dbm12s8dbm12s8.png', imageHint: 'community cleaning debris' },
-                    { ...contentDict.anginPutingBeliung.comic.panels[5], imageUrl: 'https://i.ibb.co/tCgHCLZ/Gemini-Generated-Image-529gdrx529gdrx529.png', imageHint: 'children learning from adult' },
+                    { ...contentDict.anginPutingBeliung.comic.panels[0], imageUrl: 'https://i.ibb.co/hR2wMXyx/Gemini-Generated-Image-91p8ky91p8ky91p8.png', imageHint: 'dark swirling clouds village' },
+                    { ...contentDict.anginPutingBeliung.comic.panels[1], imageUrl: 'https://i.ibb.co/M5GnkqHr/Gemini-Generated-Image-11nkp911nkp911nk.png', imageHint: 'family running indoors' },
+                    { ...contentDict.anginPutingBeliung.comic.panels[2], imageUrl: 'https://i.ibb.co/HLgXmSf1/Gemini-Generated-Image-22sohy22sohy22so.png', imageHint: 'person unplugging tv' },
+                    { ...contentDict.anginPutingBeliung.comic.panels[3], imageUrl: 'https://i.ibb.co/7JWn81nK/Gemini-Generated-Image-sxr4t1sxr4t1sxr4.png', imageHint: 'woman holding go-bag' },
+                    { ...contentDict.anginPutingBeliung.comic.panels[4], imageUrl: 'https://i.ibb.co/Ng9pxhZZ/Gemini-Generated-Image-lfqodrlfqodrlfqo.png', imageHint: 'community cleaning debris' },
+                    { ...contentDict.anginPutingBeliung.comic.panels[5], imageUrl: 'https://i.ibb.co/M5x6GHsX/Gemini-Generated-Image-jxn6b6jxn6b6jxn6.png', imageHint: 'children learning from adult' },
                 ]
             },
         }
