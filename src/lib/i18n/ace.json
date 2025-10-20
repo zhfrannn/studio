@@ -443,6 +443,11 @@
       "title": "Siaga, Si Meong Cerdik",
       "summary": "Saboh calitra untuk aneuk mit SD tentang siaga bencana, geucalitrakan melalui petualangan sidroe meong cerdik nan jih Siaga yang peurunoe kawan-kawan jih peu yang harus geupeuget watee gempa.",
       "fullText": "Di saboh gampong ubit, hiduplah sidroe meong cerdik nan jih Siaga. Jih la'en dari meong la'en. Watee kawan-kawan jih suka eéh siuroe suntok, Siaga suka deungo calitra dari ureung tuha gampong tentang gempa dan tsunami. Saboh uroe, watee Siaga sedang ma'en bersama kawan-kawan jih, tiba-tiba tanoh meugoyang. 'Gempa!' geuhoih Siaga. 'Ingat lhee langkah: Merunduk, Berlindung, dan Bertahan!' Siaga langsung merunduk, berlindung di bawah meja yang kong, dan peugang bak gaki jih. Kawan-kawan jih yang awalnya teumakot dan bingung, kalon peu yang Siaga peuget dan langsung ikot. Setelah goyangan berhenti, Siaga dengan tenang ajak kawan-kawan jih u lapangan tebuka, jioh dari bangunan dan bak kayee manyang. 'Geutanyoe harus u tempat manyang, siapa tuhoe ie la'ôt surôt,' katanya, teuingat calitra Smong yang pernah jih deungo. Kisah Siaga peurunoe aneuk-aneuk bahwa dengan tuhoe peu yang harus geupeuget, geutanyoe hana perlu panik watee bencana teuka. Geutanyoe jeut lindungi droe dan kawan-kawan."
+    },
+    "gunung-aruna-siap-siaga": {
+      "title": "Gunong Aruna: Siap Siaga Bencana",
+      "summary": "Calitra Rafi nyang geupeuseulamat droe ngön ureung la'én watee Gunong Aruna meletus, nyan keuh bukti bahwa kesiapan nyan penténg that.",
+      "fullText": "Watee Gunong Aruna ka mulai meukaboih, Rafi teuingat peu yang geupeugah le Bu Sinta di sikula: bek panik, tapi harus siap. Jih sigra geucok 'Tas Siaga Aruna' nyang na senter, ie, makanan, ngön masker, lheuhnyan geubantu nek jih u tempat evakuasi. Di jalan, jih geukalon ureung la'én pih geubantu aneuk-aneuk ngön ureung tuha. Petugas gampong geupeunyi sirene, geujok arahan, dan mandum ureung geuikot ngön tertib. Malam nyan, di tempat evakuasi, awaknyan geuduek sama-sama sira geupajoh makanan dan geucalitra, geupeutenang nyang teumakot. Watee suboh teuka dan Gunong Aruna ka tenang lom, Rafi geukalon gampong jih mantong na, meunan pih ka geutop le abee. Jih meukhem lega—awaknyan mandum seulamat karena ka siap. Dari uroe nyan, Rafi paham bahwa mitigasi bencana nyan kon cuma teori, tapi tentang peduli, kerja sama, dan kesiapan untuk lindungi droe ngön ureung la'én seugolom bahaya teuka."
     }
   },
   "interactiveContent": {
@@ -889,6 +894,34 @@
           { "title": "U Tempat Aman", "text": "Setelah goyangan berhenti, Siaga dengan tenang pimpin kawan-kawan jih u lapangan tebuka yang aman." },
           { "title": "Peringatan Tsunami", "text": "\"Geutanyoe harus u tempat manyang,\" kata Siaga, \"siapa tuhoe la'ôt surôt!\" Jih ingat calitra Smong." },
           { "title": "Mandum Seulamat", "text": "Karena Siaga, mandum kawan jih seulamat dan meurunoe cara lindungi droe watee bencana." }
+        ]
+      }
+    },
+    "gunungAruna": {
+      "video": {
+        "title": "Video Animasi: Tas Siaga Aruna",
+        "description": "Ikuti petualangan Rafi dalam sebuah animasi seru yang menunjukkan pentingnya persiapan menghadapi letusan gunung berapi.",
+        "info": "Video ini dirancang untuk anak-anak agar dapat mempelajari barang-barang penting dalam tas siaga bencana dengan cara yang menyenangkan dan mudah diingat."
+      },
+      "quiz": {
+        "title": "Kuis Siap Gunung Meulumpo",
+        "description": "Siap keu letusan gunong meulumpo? Uji pengetahuan gata!",
+        "questions": [
+          { "question": "Tindakan peu nyang paling penténg phôn-phôn geulakukan lé Rafi watee gunong ka mulai meukaboih?", "options": ["Cok foto", "Cok Tas Siaga", "Tawök kawan-kawan jih", "Terus meuen"], "correctAnswer": "Cok Tas Siaga", "points": 10 },
+          { "question": "Pakon masker nyan barang penténg dalam Tas Siaga untuk letusan gunong meulumpo?", "options": ["Mangat gagah", "Untuk lindông dari ujeun", "Untuk saring abee vulkanik dari udara", "Untuk peuhangat muka"], "correctAnswer": "Untuk saring abee vulkanik dari udara", "points": 10 },
+          { "question": "Peu nyang geupeurunoe lé calitra nyoe tentang mitigasi bencana?", "options": ["Nyan cuma soal teori", "Nyan tentang peduli, kerja sama, ngön kesiapan", "Cuma tim penyelamat nyang jeut bertindak", "Gata harus sabe panik"], "correctAnswer": "Nyan tentang peduli, kerja sama, ngön kesiapan", "points": 10 }
+        ]
+      },
+      "comic": {
+        "title": "Komik: Rafi ngön Gunong Aruna",
+        "description": "Saboh calitra visual tentang kiban sidroe aneuk agam nyang siap siaga geubantu komunitas jih hadapi ancaman gunong meulumpo.",
+        "panels": [
+          { "title": "Gunong Nyang Meukaboih", "text": "Rafi geukalon Gunong Aruna meukaboih. Jih teuingat kata-kata gurunyoe: 'Bék panik, tapi beu siap.'" },
+          { "title": "Tas Siaga Aruna", "text": "Jih sigra geucok 'Tas Siaga Aruna' jih, nyang na senter, makanan, ie, ngön masker." },
+          { "title": "Bantu Nek", "text": "Rafi ngön tenang geubantu nek jih dan geupeutunyok jalan u tempat evakuasi nyang ka geupeuteuntè." },
+          { "title": "Komunitas Bergerak", "text": "Di jalan, jih geukalon tetangga jih saling bantu, geuikot arahan petugas ngön tertib." },
+          { "title": "Sabe-sabe di Pengungsian", "text": "Di tempat evakuasi, mandum ureung geupajoh makanan dan geucalitra, geupeugöt rasa tenang dan kebersamaan." },
+          { "title": "Aman Watee Suboh", "text": "Singoh paginyan, gampong aman, geutop le abee tapi utuh. Rafi meukhem, geuthee awaknyan seulamat karena siap." }
         ]
       }
     }

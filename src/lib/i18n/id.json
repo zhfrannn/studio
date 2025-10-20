@@ -443,6 +443,11 @@
       "title": "Siaga, Si Kucing Cerdas",
       "summary": "Sebuah cerita untuk anak-anak SD tentang kesiapsiagaan bencana, dikisahkan melalui petualangan seekor kucing pintar bernama Siaga yang mengajari teman-temannya apa yang harus dilakukan saat gempa.",
       "fullText": "Di sebuah desa kecil, hiduplah seekor kucing cerdas bernama Siaga. Ia berbeda dari kucing lainnya. Saat teman-temannya suka tidur seharian, Siaga suka mendengarkan cerita dari para tetua desa tentang gempa dan tsunami. Suatu hari, saat Siaga sedang bermain bersama teman-temannya, tiba-tiba tanah bergoyang. 'Gempa!' teriak Siaga. 'Ingat tiga langkah: Merunduk, Berlindung, dan Bertahan!' Siaga langsung merunduk, berlindung di bawah meja yang kokoh, dan berpegangan pada kakinya. Teman-temannya yang awalnya takut dan bingung, melihat apa yang dilakukan Siaga dan langsung mengikutinya. Setelah guncangan berhenti, Siaga dengan tenang mengajak teman-temannya ke lapangan terbuka, jauh dari gedung dan pohon tinggi. 'Kita harus ke tempat tinggi, siapa tahu air laut surut,' katanya, mengingat cerita Smong yang pernah ia dengar. Kisah Siaga mengajarkan pada anak-anak bahwa dengan tahu apa yang harus dilakukan, kita tidak perlu panik saat bencana datang. Kita bisa melindungi diri sendiri dan teman-teman."
+    },
+    "gunung-aruna-siap-siaga": {
+      "title": "Gunung Aruna: Siap Siaga Bencana",
+      "summary": "Kisah Rafi yang menerapkan pelajaran mitigasi bencana saat Gunung Aruna menunjukkan tanda-tanda erupsi, berhasil memandu neneknya dan komunitas ke tempat yang aman.",
+      "fullText": "Saat Gunung Aruna mulai berasap, Rafi teringat pesan Bu Sinta di sekolah: jangan panik, tapi bersiap. Ia segera mengambil Tas Siaga Aruna berisi senter, air, makanan, dan masker, lalu membantu neneknya menuju titik evakuasi. Di sepanjang jalan, ia melihat warga lain juga menuntun anak-anak dan membantu lansia. Petugas desa membunyikan sirene, memberi arahan, dan semua mengikuti dengan tertib. Malam itu, di tempat evakuasi, mereka duduk bersama sambil berbagi makanan dan cerita, menenangkan yang ketakutan. Ketika fajar datang dan Gunung Aruna kembali tenang, Rafi melihat kampungnya masih utuh, meski tertutup abu. Ia tersenyum lega—mereka semua selamat karena sudah siap. Dari hari itu, Rafi paham bahwa mitigasi bencana bukan sekadar tahu teori, tapi soal kepedulian, kerja sama, dan kesiapan untuk melindungi diri dan orang lain sebelum bahaya datang."
     }
   },
   "interactiveContent": {
@@ -891,6 +896,34 @@
                 { "title": "Semua Selamat", "text": "Karena Siaga, semua temannya selamat dan belajar cara melindungi diri saat bencana." }
             ]
         }
+    },
+    "gunungAruna": {
+      "video": {
+        "title": "Video Animasi: Tas Siaga Aruna",
+        "description": "Ikuti petualangan Rafi dalam sebuah animasi seru yang menunjukkan pentingnya persiapan menghadapi letusan gunung berapi.",
+        "info": "Video ini dirancang untuk anak-anak agar dapat mempelajari barang-barang penting dalam tas siaga bencana dengan cara yang menyenangkan dan mudah diingat."
+      },
+      "quiz": {
+        "title": "Kuis Siaga Gunung Berapi",
+        "description": "Apakah kamu siap menghadapi letusan gunung berapi? Uji pengetahuanmu!",
+        "questions": [
+          { "question": "Tindakan pertama apa yang paling penting yang Rafi lakukan saat gunung mulai berasap?", "options": ["Mengambil foto", "Mengambil Tas Siaga", "Menelepon teman-temannya", "Terus bermain"], "correctAnswer": "Mengambil Tas Siaga", "points": 10 },
+          { "question": "Mengapa masker adalah barang penting dalam Tas Siaga untuk letusan gunung berapi?", "options": ["Agar terlihat keren", "Untuk melindungi dari hujan", "Untuk menyaring abu vulkanik dari udara", "Untuk menjaga wajah tetap hangat"], "correctAnswer": "Untuk menyaring abu vulkanik dari udara", "points": 10 },
+          { "question": "Apa yang diajarkan cerita ini tentang mitigasi bencana?", "options": ["Ini hanya soal teori", "Ini tentang kepedulian, kerja sama, dan kesiapan", "Hanya tim penyelamat yang boleh bertindak", "Anda harus selalu panik"], "correctAnswer": "Ini tentang kepedulian, kerja sama, dan kesiapan", "points": 10 }
+        ]
+      },
+      "comic": {
+        "title": "Komik: Rafi dan Gunung Aruna",
+        "description": "Sebuah cerita visual tentang bagaimana seorang anak laki-laki yang siap siaga membantu komunitasnya menghadapi ancaman gunung berapi.",
+        "panels": [
+          { "title": "Gunung yang Berasap", "text": "Rafi melihat Gunung Aruna berasap. Ia teringat kata-kata gurunya: 'Jangan panik, tapi bersiaplah.'" },
+          { "title": "Tas Siaga Aruna", "text": "Ia dengan cepat mengambil 'Tas Siaga Aruna' miliknya, yang berisi senter, makanan, air, dan masker." },
+          { "title": "Membantu Nenek", "text": "Rafi dengan tenang membantu neneknya dan menuntunnya menuju titik evakuasi yang telah ditentukan." },
+          { "title": "Komunitas Beraksi", "text": "Di jalan, ia melihat tetangganya saling membantu, mengikuti arahan petugas dengan tertib." },
+          { "title": "Bersama di Pengungsian", "text": "Di tempat evakuasi, semua orang berbagi makanan dan cerita, menciptakan rasa tenang dan kebersamaan." },
+          { "title": "Aman Saat Fajar", "text": "Keesokan paginya, desa aman, tertutup abu tapi utuh. Rafi tersenyum, tahu mereka selamat karena mereka siap." }
+        ]
+      }
     }
   }
 }

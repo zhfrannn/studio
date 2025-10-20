@@ -362,6 +362,26 @@ export const getInteractiveContent = (dict: Dictionary): { [key: string]: Intera
                 ]
             },
         },
+        'gunung-aruna-siap-siaga': {
+            video: {
+                title: contentDict.gunungAruna.video.title,
+                description: contentDict.gunungAruna.video.description,
+                embedUrl: 'https://www.canva.com/design/DAG1-z4-Q4A/view',
+                info: contentDict.gunungAruna.video.info,
+            },
+            quiz: contentDict.gunungAruna.quiz,
+            comic: {
+                ...contentDict.gunungAruna.comic,
+                panels: [
+                    { ...contentDict.gunungAruna.comic.panels[0], imageUrl: 'https://i.ibb.co/hKj91fM/Gemini-Generated-Image-1.png', imageHint: 'boy looking at smoking volcano' },
+                    { ...contentDict.gunungAruna.comic.panels[1], imageUrl: 'https://i.ibb.co/3k8Wz3t/Gemini-Generated-Image.png', imageHint: 'boy grabbing go-bag' },
+                    { ...contentDict.gunungAruna.comic.panels[2], imageUrl: 'https://i.ibb.co/8mjyvGP/Gemini-Generated-Image-2.png', imageHint: 'boy helping grandmother' },
+                    { ...contentDict.gunungAruna.comic.panels[3], imageUrl: 'https://i.ibb.co/MPr8R3T/Gemini-Generated-Image-3.png', imageHint: 'community evacuating orderly' },
+                    { ...contentDict.gunungAruna.comic.panels[4], imageUrl: 'https://i.ibb.co/k0n7s2t/Gemini-Generated-Image-5.png', imageHint: 'people sharing food at evacuation center' },
+                    { ...contentDict.gunungAruna.comic.panels[5], imageUrl: 'https://i.ibb.co/bF9P8b7/Gemini-Generated-Image-6.png', imageHint: 'boy smiling at village covered in ash' },
+                ]
+            },
+        }
     };
 };
 
@@ -384,6 +404,7 @@ export const getMasterQuiz = (dict: Dictionary): Quiz => {
         ...getInteractiveContent(dict)['ilmu-falak-di-pesantren'].quiz!.questions,
         ...getInteractiveContent(dict)['pasar-sebagai-ruang-sosial'].quiz!.questions,
         ...getInteractiveContent(dict)['siaga-si-kucing-cerdas'].quiz!.questions,
+        ...getInteractiveContent(dict)['gunung-aruna-siap-siaga'].quiz!.questions,
     ];
 
     const shuffled = allQuestions.sort(() => 0.5 - Math.random());

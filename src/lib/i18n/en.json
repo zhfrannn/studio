@@ -12,7 +12,7 @@
   },
   "home": {
     "hero": {
-      "pill": "oVER 20+ STORIES cOLLECTED",
+      "pill": "Over 20+ stories collected",
       "title": "Voices of Resilience, Echoes of Wisdom",
       "description": "Explore local wisdom, disaster preparedness, and peacebuilding in Aceh through stories brought to life by AI technology.",
       "ctaExplore": "Explore Stories",
@@ -443,452 +443,485 @@
       "title": "Siaga, the Smart Cat",
       "summary": "A story for elementary school children about disaster preparedness, told through the adventure of a smart cat named Siaga who teaches his friends what to do during an earthquake.",
       "fullText": "In a small village, lived a smart cat named Siaga. He was different from other cats. While his friends loved to nap all day, Siaga loved listening to stories from the village elders about earthquakes and tsunamis. One day, while Siaga was playing with his friends, the ground suddenly started to shake. 'Earthquake!' shouted Siaga. 'Remember the three steps: Drop, Cover, and Hold On!' Siaga immediately dropped to the ground, took cover under a sturdy table, and held on to its leg. His friends, who were initially scared and confused, saw what Siaga was doing and immediately followed suit. After the shaking stopped, Siaga calmly led his friends to an open field, away from buildings and tall trees. 'We have to go to a high place, just in case the sea water recedes,' he said, remembering the Smong story he had heard. Siaga's story teaches children that by knowing what to do, we don't need to panic when a disaster strikes. We can protect ourselves and our friends."
+    },
+    "gunung-aruna-siap-siaga": {
+      "title": "Mount Aruna: Disaster Ready",
+      "summary": "The story of Rafi who applies disaster mitigation lessons when Mount Aruna shows signs of erupting, successfully guiding his grandmother and community to safety.",
+      "fullText": "When Mount Aruna started to smoke, Rafi remembered Mrs. Sinta's message at school: don't panic, but be prepared. He immediately grabbed the Aruna Go-Bag containing a flashlight, water, food, and a mask, then helped his grandmother to the evacuation point. Along the way, he saw other residents also guiding children and assisting the elderly. The village officials sounded the siren, giving directions, and everyone followed in an orderly manner. That night, at the evacuation site, they sat together sharing food and stories, calming those who were frightened. When dawn came and Mount Aruna was calm again, Rafi saw his village was still intact, although covered in ash. He smiled with relief—they were all safe because they were prepared. From that day on, Rafi understood that disaster mitigation is not just about knowing the theory, but about caring, cooperation, and readiness to protect oneself and others before danger arrives."
     }
   },
   "interactiveContent": {
     "smong": {
-      "video": {
-        "title": "Educational Video: Traditional Knowledge Systems",
-        "description": "Discover how indigenous knowledge systems complement modern science in disaster preparedness.",
-        "info": "This video explores how traditional knowledge systems like Smong work in tandem with modern early warning systems to protect communities."
-      },
-      "quiz": {
-        "title": "Smong Wisdom Quiz",
-        "description": "Test your understanding of Smong and traditional knowledge systems for disaster preparedness.",
-        "questions": [
-          { "question": "What does the word 'Smong' mean in the local language of Simeulue Island?", "options": ["Earthquake", "Tsunami", "Warning", "Ocean"], "correctAnswer": "Tsunami", "points": 10 },
-          { "question": "What are the two signs in the Smong poem that indicate an impending tsunami?", "options": ["Strong wind and heavy rain", "A strong earthquake followed by the receding of the sea", "Dark clouds and lightning", "A loud siren sound"], "correctAnswer": "A strong earthquake followed by the receding of the sea", "points": 10 },
-          { "question": "What action is advised by the wisdom of Smong immediately after seeing these signs?", "options": ["Go to the beach to see", "Wait for official instructions", "Run to higher ground", "Hide inside the house"], "correctAnswer": "Run to higher ground", "points": 10 }
-        ]
-      },
-      "comic": {
-        "title": "Digital Comic: The Wisdom of Smong",
-        "description": "Follow the story of how the local wisdom of Smong saved thousands of lives in an engaging comic strip format.",
-        "panels": [
-          { "title": "Under the Banyan Tree", "text": "\"Grandmother taught us the ancient warning under the old banyan tree...\"" },
-          { "title": "The Earth Shakes", "text": "\"Suddenly, the ground shook violently. We knew this was no ordinary earthquake.\"" },
-          { "title": "Run! Don't Go Back!", "text": "\"People screamed, 'Smong! Smong!' while pointing towards the receding sea.\"" },
-          { "title": "Towards the Hills", "text": "\"We all ran as fast as we could towards the hills, leaving everything behind.\"" },
-          { "title": "The Raging Ocean", "text": "\"From the top of the hill, we saw a giant wave crash into our village.\"" },
-          { "title": "Gratitude & Lessons", "text": "\"We survived because we listened to our ancestors. Smong was our savior.\"" }
-        ]
-      }
+        "video": {
+            "title": "Educational Video: Traditional Knowledge Systems",
+            "description": "Discover how indigenous knowledge systems complement modern science in disaster preparedness.",
+            "info": "This video explores how traditional knowledge systems like Smong work in tandem with modern early warning systems to protect communities."
+        },
+        "quiz": {
+            "title": "Smong Wisdom Quiz",
+            "description": "Test your understanding of Smong and traditional knowledge systems for disaster preparedness.",
+            "questions": [
+                { "question": "What does the word 'Smong' mean in the local language of Simeulue Island?", "options": ["Earthquake", "Tsunami", "Warning", "Ocean"], "correctAnswer": "Tsunami", "points": 10 },
+                { "question": "What are the two signs in the Smong poem that indicate an impending tsunami?", "options": ["Strong wind and heavy rain", "A strong earthquake followed by the receding of the sea", "Dark clouds and lightning", "A loud siren sound"], "correctAnswer": "A strong earthquake followed by the receding of the sea", "points": 10 },
+                { "question": "What action is advised by the wisdom of Smong immediately after seeing these signs?", "options": ["Go to the beach to see", "Wait for official instructions", "Run to higher ground", "Hide inside the house"], "correctAnswer": "Run to higher ground", "points": 10 }
+            ]
+        },
+        "comic": {
+            "title": "Digital Comic: The Wisdom of Smong",
+            "description": "Follow the story of how the local wisdom of Smong saved thousands of lives in an engaging comic strip format.",
+            "panels": [
+                { "title": "Under the Banyan Tree", "text": "\"Grandmother taught us the ancient warning under the old banyan tree...\"" },
+                { "title": "The Earth Shakes", "text": "\"Suddenly, the ground shook violently. We knew this was no ordinary earthquake.\"" },
+                { "title": "Run! Don't Go Back!", "text": "\"People screamed, 'Smong! Smong!' while pointing towards the receding sea.\"" },
+                { "title": "Towards the Hills", "text": "\"We all ran as fast as we could towards the hills, leaving everything behind.\"" },
+                { "title": "The Raging Ocean", "text": "\"From the top of the hill, we saw a giant wave crash into our village.\"" },
+                { "title": "Gratitude & Lessons", "text": "\"We survived because we listened to our ancestors. Smong was our savior.\"" }
+            ]
+        }
     },
     "bakau": {
-      "video": {
-        "title": "Educational Video: Mangrove Forest, Our Natural Fortress",
-        "description": "Learn the importance of mangrove ecosystems as a natural protection against abrasion, storms, and even tsunamis.",
-        "info": "This video explains how a community in Aceh Jaya successfully restored their coastline through mangrove replanting."
-      },
-      "quiz": {
-        "title": "Guardian of the Coast Quiz",
-        "description": "How well do you understand the function and benefits of mangrove forests?",
-        "questions": [
-          { "question": "Besides protecting the coast from abrasion and storms, what is another ecological benefit of mangrove forests?", "options": ["Producing edible fruits", "Becoming a habitat for marine life like fish and crabs", "Filtering air pollution in the city", "Making seawater fresh"], "correctAnswer": "Becoming a habitat for marine life like fish and crabs", "points": 10 },
-          { "question": "What was the initial challenge the community faced when replanting the mangrove forest?", "options": ["Many seedlings failed to grow", "Lack of government funding", "Conflict with palm oil companies", "Prohibition from village elders"], "correctAnswer": "Many seedlings failed to grow", "points": 10 },
-          { "question": "How do mangrove forests protect the coastline?", "options": ["By releasing a chemical that breaks the waves", "By creating an invisible wall", "With their strong roots that grip the soil and hold back the waves", "By attracting large birds to fight the storm"], "correctAnswer": "With their strong roots that grip the soil and hold back the waves", "points": 10 }
-        ]
-      },
-      "comic": {
-        "title": "Comic: Mangrove Forest, Guardian of the Coast",
-        "description": "An inspiring story of how a community united to replant their natural fortress.",
-        "panels": [
-          { "title": "The Eroding Coastline", "text": "In the past, our coast was constantly being eroded by storms. Houses near the beach were slowly destroyed." },
-          { "title": "Remembering the Elders' Advice", "text": "We remembered the stories of our elders, that the mangrove forest was our lost natural fortress." },
-          { "title": "Planting Seeds of Hope", "text": "Together, the youth and the elderly, we began to replant mangrove seedlings along the coast." },
-          { "title": "Challenges & Failures", "text": "It was difficult at first, many seedlings failed to grow. But we did not give up and kept trying." },
-          { "title": "The Natural Fortress Grows Strong", "text": "Now, the mangrove forest has grown dense. Its strong roots grip the soil, holding back the waves." },
-          { "title": "Life Returns", "text": "This forest not only protects the village, but also becomes a home for fish and crabs, providing us with a new livelihood." }
-        ]
-      }
+        "video": {
+            "title": "Educational Video: Mangrove Forest, Our Natural Fortress",
+            "description": "Learn the importance of mangrove ecosystems as a natural protection against abrasion, storms, and even tsunamis.",
+            "info": "This video explains how a community in Aceh Jaya successfully restored their coastline through mangrove replanting."
+        },
+        "quiz": {
+            "title": "Guardian of the Coast Quiz",
+            "description": "How well do you understand the function and benefits of mangrove forests?",
+            "questions": [
+                { "question": "Besides protecting the coast from abrasion and storms, what is another ecological benefit of mangrove forests?", "options": ["Producing edible fruits", "Becoming a habitat for marine life like fish and crabs", "Filtering air pollution in the city", "Making seawater fresh"], "correctAnswer": "Becoming a habitat for marine life like fish and crabs", "points": 10 },
+                { "question": "What was the initial challenge the community faced when replanting the mangrove forest?", "options": ["Many seedlings failed to grow", "Lack of government funding", "Conflict with palm oil companies", "Prohibition from village elders"], "correctAnswer": "Many seedlings failed to grow", "points": 10 },
+                { "question": "How do mangrove forests protect the coastline?", "options": ["By releasing a chemical that breaks the waves", "By creating an invisible wall", "With their strong roots that grip the soil and hold back the waves", "By attracting large birds to fight the storm"], "correctAnswer": "With their strong roots that grip the soil and hold back the waves", "points": 10 }
+            ]
+        },
+        "comic": {
+            "title": "Comic: Mangrove Forest, Guardian of the Coast",
+            "description": "An inspiring story of how a community united to replant their natural fortress.",
+            "panels": [
+                { "title": "The Eroding Coastline", "text": "In the past, our coast was constantly being eroded by storms. Houses near the beach were slowly destroyed." },
+                { "title": "Remembering the Elders' Advice", "text": "We remembered the stories of our elders, that the mangrove forest was our lost natural fortress." },
+                { "title": "Planting Seeds of Hope", "text": "Together, the youth and the elderly, we began to replant mangrove seedlings along the coast." },
+                { "title": "Challenges & Failures", "text": "It was difficult at first, many seedlings failed to grow. But we did not give up and kept trying." },
+                { "title": "The Natural Fortress Grows Strong", "text": "Now, the mangrove forest has grown dense. Its strong roots grip the soil, holding back the waves." },
+                { "title": "Life Returns", "text": "This forest not only protects the village, but also becomes a home for fish and crabs, providing us with a new livelihood." }
+            ]
+        }
     },
     "dapurUmum": {
-      "video": {
-        "title": "Educational Video: Cooking Peace",
-        "description": "Witness how the Community Kitchen in Bireuen became a space to re-weave brotherhood post-conflict.",
-        "info": "This short documentary covers the daily activities at the Peace Kitchen in Bireuen and interviews with its initiators."
-      },
-      "quiz": {
-        "title": "Peace Kitchen Quiz",
-        "description": "Test your understanding of the role of local initiatives in peacebuilding.",
-        "questions": [
-          { "question": "What was the most important final outcome of the Community Kitchen of Peace initiative?", "options": ["Residents were full", "Receiving an award from the government", "The collapse of the walls of mistrust and the re-establishment of brotherhood", "Becoming a culinary tourist destination"], "correctAnswer": "The collapse of the walls of mistrust and the re-establishment of brotherhood", "points": 10 },
-          { "question": "Where did the magic of reconciliation happen according to the story?", "options": ["At the village hall during official meetings", "On social media through discussion groups", "While cutting vegetables and stirring curry in the kitchen", "On the sports field during competitions"], "correctAnswer": "While cutting vegetables and stirring curry in the kitchen", "points": 10 },
-          { "question": "What was the basic idea that triggered the formation of this community kitchen?", "options": ["An order from the village head", "The availability of food aid from NGOs", "Everyone needs to eat, and food can unite", "To open a restaurant business"], "correctAnswer": "Everyone needs to eat, and food can unite", "points": 10 }
-        ]
-      },
-      "comic": {
-        "title": "Comic: The Community Kitchen of Peace",
-        "description": "How a simple kitchen re-wove the threads of brotherhood that were once torn.",
-        "panels": [
-          { "title": "Post-Conflict Wounds", "text": "After the conflict ended, there were still many wounds and distrust among us. It was difficult to start over." },
-          { "title": "A Simple Idea: Food", "text": "Some of us, the mothers, thought: everyone needs to eat, and food can unite." },
-          { "title": "Starting the Community Kitchen", "text": "We set up a simple kitchen. Anyone could come to eat, and anyone could help cook." },
-          { "title": "Weaving Stories Over the Stove", "text": "While cutting vegetables and stirring curry, we began to talk, sharing stories, laughter, and tears." },
-          { "title": "A Space for Reconciliation", "text": "This kitchen became more than a place to eat; it became a reconciliation space where dividing walls collapsed." },
-          { "title": "Peace from a Plate of Rice", "text": "We learned that peace can start from the simplest thing: a plate of warm rice and an open heart." }
-        ]
-      }
+        "video": {
+            "title": "Educational Video: Cooking Peace",
+            "description": "Witness how the Community Kitchen in Bireuen became a space to re-weave brotherhood post-conflict.",
+            "info": "This short documentary covers the daily activities at the Peace Kitchen in Bireuen and interviews with its initiators."
+        },
+        "quiz": {
+            "title": "Peace Kitchen Quiz",
+            "description": "Test your understanding of the role of local initiatives in peacebuilding.",
+            "questions": [
+                { "question": "What was the most important final outcome of the Community Kitchen of Peace initiative?", "options": ["Residents were full", "Receiving an award from the government", "The collapse of the walls of mistrust and the re-establishment of brotherhood", "Becoming a culinary tourist destination"], "correctAnswer": "The collapse of the walls of mistrust and the re-establishment of brotherhood", "points": 10 },
+                { "question": "Where did the magic of reconciliation happen according to the story?", "options": ["At the village hall during official meetings", "On social media through discussion groups", "While cutting vegetables and stirring curry in the kitchen", "On the sports field during competitions"], "correctAnswer": "While cutting vegetables and stirring curry in the kitchen", "points": 10 },
+                { "question": "What was the basic idea that triggered the formation of this community kitchen?", "options": ["An order from the village head", "The availability of food aid from NGOs", "Everyone needs to eat, and food can unite", "To open a restaurant business"], "correctAnswer": "Everyone needs to eat, and food can unite", "points": 10 }
+            ]
+        },
+        "comic": {
+            "title": "Comic: The Community Kitchen of Peace",
+            "description": "How a simple kitchen re-wove the threads of brotherhood that were once torn.",
+            "panels": [
+                { "title": "Post-Conflict Wounds", "text": "After the conflict ended, there were still many wounds and distrust among us. It was difficult to start over." },
+                { "title": "A Simple Idea: Food", "text": "Some of us, the mothers, thought: everyone needs to eat, and food can unite." },
+                { "title": "Starting the Community Kitchen", "text": "We set up a simple kitchen. Anyone could come to eat, and anyone could help cook." },
+                { "title": "Weaving Stories Over the Stove", "text": "While cutting vegetables and stirring curry, we began to talk, sharing stories, laughter, and tears." },
+                { "title": "A Space for Reconciliation", "text": "This kitchen became more than a place to eat; it became a reconciliation space where dividing walls collapsed." },
+                { "title": "Peace from a Plate of Rice", "text": "We learned that peace can start from the simplest thing: a plate of warm rice and an open heart." }
+            ]
+        }
     },
     "lumbungPadi": {
-      "video": {
-        "title": "Educational Video: Rice Barn, Social Safety Net",
-        "description": "Learn how a communal rice barn became the foundation of food security and mutual help in Gayo.",
-        "info": "This video explains how the communal rice barn works as an effective social safety net at the community level."
-      },
-      "quiz": {
-        "title": "Communal Barn Quiz",
-        "description": "Test your understanding of mutual help and food security.",
-        "questions": [
-          { "question": "What is the basic principle underlying this communal barn system?", "options": ["The principle of profit and loss", "The principle of debt with interest", "The spirit of mutual cooperation and care", "The principle of competition"], "correctAnswer": "The spirit of mutual cooperation and care", "points": 10 },
-          { "question": "When can someone take from the communal barn?", "options": ["Whenever they want", "During village celebrations", "When experiencing hardship or crop failure", "Only if they have contributed more"], "correctAnswer": "When experiencing hardship or crop failure", "points": 10 },
-          { "question": "Besides being a food reserve, what is the function of the rice barn for the community?", "options": ["As a tourist attraction", "As a symbol of unity and collective strength", "As a storage place for antiques", "As a polling place"], "correctAnswer": "As a symbol of unity and collective strength", "points": 10 }
-        ]
-      },
-      "comic": {
-        "title": "Comic: Communal Rice Barn",
-        "description": "A story about the mutual help of the Gayo community in facing the lean season.",
-        "panels": [
-          { "title": "Uncertain Harvests", "text": "In the Gayo highlands, the weather is not always predictable. Sometimes the harvest is abundant, sometimes it fails completely." },
-          { "title": "Reviving Tradition", "text": "We revived the tradition of a communal barn. Every family sets aside a portion of their harvest." },
-          { "title": "Social Safety Net", "text": "When a family faces crop failure, they can take from this barn without interest or debt." },
-          { "title": "Rich in Brotherhood", "text": "This barn is a symbol of our unity. By sharing, we all become stronger." }
-        ]
-      }
+        "video": {
+            "title": "Educational Video: Rice Barn, Social Safety Net",
+            "description": "Learn how a communal rice barn became the foundation of food security and mutual help in Gayo.",
+            "info": "This video explains how the communal rice barn works as an effective social safety net at the community level."
+        },
+        "quiz": {
+            "title": "Communal Barn Quiz",
+            "description": "Test your understanding of mutual help and food security.",
+            "questions": [
+                { "question": "What is the basic principle underlying this communal barn system?", "options": ["The principle of profit and loss", "The principle of debt with interest", "The spirit of mutual cooperation and care", "The principle of competition"], "correctAnswer": "The spirit of mutual cooperation and care", "points": 10 },
+                { "question": "When can someone take from the communal barn?", "options": ["Whenever they want", "During village celebrations", "When experiencing hardship or crop failure", "Only if they have contributed more"], "correctAnswer": "When experiencing hardship or crop failure", "points": 10 },
+                { "question": "Besides being a food reserve, what is the function of the rice barn for the community?", "options": ["As a tourist attraction", "As a symbol of unity and collective strength", "As a storage place for antiques", "As a polling place"], "correctAnswer": "As a symbol of unity and collective strength", "points": 10 }
+            ]
+        },
+        "comic": {
+            "title": "Comic: Communal Rice Barn",
+            "description": "A story about the mutual help of the Gayo community in facing the lean season.",
+            "panels": [
+                { "title": "Uncertain Harvests", "text": "In the Gayo highlands, the weather is not always predictable. Sometimes the harvest is abundant, sometimes it fails completely." },
+                { "title": "Reviving Tradition", "text": "We revived the tradition of a communal barn. Every family sets aside a portion of their harvest." },
+                { "title": "Social Safety Net", "text": "When a family faces crop failure, they can take from this barn without interest or debt." },
+                { "title": "Rich in Brotherhood", "text": "This barn is a symbol of our unity. By sharing, we all become stronger." }
+            ]
+        }
     },
     "bahTangse": {
-      "video": {
-        "title": "Documentary Video: The Devastation of Bah Tangse 2011",
-        "description": "Watch real news footage of the flash flood that destroyed Tangse, Pidie on March 10, 2011.",
-        "info": "This video contains actual footage from the disaster site and interviews with victims, providing a real picture of the impact of deforestation."
-      },
-      "quiz": {
-        "title": "Tangse Flood Awareness Quiz",
-        "description": "Test your understanding of the causes and impacts of the \"Bah Tangse\" flash flood.",
-        "questions": [
-          { "question": "What was the main root cause of the \"Bah Tangse\" disaster according to the story?", "options": ["An earthquake", "A collapsed dam", "Illegal logging in the upstream forest", "A hailstorm"], "correctAnswer": "Illegal logging in the upstream forest", "points": 10 },
-          { "question": "Where did the residents evacuate to when the flash flood occurred?", "options": ["To the rooftops", "Into an underground bunker", "To the hills or higher ground", "To the middle of the field"], "correctAnswer": "To the hills or higher ground", "points": 10 },
-          { "question": "What did the floodwater carry besides the overflowing water?", "options": ["Large fish", "Plastic waste", "Dozens of giant logs", "Beach sand"], "correctAnswer": "Dozens of giant logs", "points": 10 }
-        ]
-      },
-      "comic": {
-        "title": "Comic: Bah Tangse, The Raging River",
-        "description": "A bitter lesson from Tangse about the importance of protecting nature.",
-        "panels": [
-          { "title": "The Tense Night", "text": "The rain fell relentlessly. Suddenly, we heard a rumbling sound that was not from thunder." },
-          { "title": "The Flash Flood Arrives", "text": "The river water overflowed wildly, its color pitch black, carrying dozens of giant logs." },
-          { "title": "The Warning Cry", "text": "The village head shouted through the mosque's loudspeaker, \"The water is rising! Save yourselves! Run to high ground!\"" },
-          { "title": "Running to High Ground", "text": "In the pitch dark, we ran as fast as we could to the hills, with only the clothes on our backs." },
-          { "title": "The Muddy Morning", "text": "The next morning, only thick mud and debris remained. We realized this was the result of illegal logging." },
-          { "title": "The Lesson & The Vow", "text": "Bah Tangse was a bitter lesson. Since then, we have vowed to protect and replant our forests." }
-        ]
-      }
+        "video": {
+            "title": "Documentary Video: The Devastation of Bah Tangse 2011",
+            "description": "Watch real news footage of the flash flood that destroyed Tangse, Pidie on March 10, 2011.",
+            "info": "This video contains actual footage from the disaster site and interviews with victims, providing a real picture of the impact of deforestation."
+        },
+        "quiz": {
+            "title": "Tangse Flood Awareness Quiz",
+            "description": "Test your understanding of the causes and impacts of the \"Bah Tangse\" flash flood.",
+            "questions": [
+                { "question": "What was the main root cause of the \"Bah Tangse\" disaster according to the story?", "options": ["An earthquake", "A collapsed dam", "Illegal logging in the upstream forest", "A hailstorm"], "correctAnswer": "Illegal logging in the upstream forest", "points": 10 },
+                { "question": "Where did the residents evacuate to when the flash flood occurred?", "options": ["To the rooftops", "Into an underground bunker", "To the hills or higher ground", "To the middle of the field"], "correctAnswer": "To the hills or higher ground", "points": 10 },
+                { "question": "What did the floodwater carry besides the overflowing water?", "options": ["Large fish", "Plastic waste", "Dozens of giant logs", "Beach sand"], "correctAnswer": "Dozens of giant logs", "points": 10 }
+            ]
+        },
+        "comic": {
+            "title": "Comic: Bah Tangse, The Raging River",
+            "description": "A bitter lesson from Tangse about the importance of protecting nature.",
+            "panels": [
+                { "title": "The Tense Night", "text": "The rain fell relentlessly. Suddenly, we heard a rumbling sound that was not from thunder." },
+                { "title": "The Flash Flood Arrives", "text": "The river water overflowed wildly, its color pitch black, carrying dozens of giant logs." },
+                { "title": "The Warning Cry", "text": "The village head shouted through the mosque's loudspeaker, \"The water is rising! Save yourselves! Run to high ground!\"" },
+                { "title": "Running to High Ground", "text": "In the pitch dark, we ran as fast as we could to the hills, with only the clothes on our backs." },
+                { "title": "The Muddy Morning", "text": "The next morning, only thick mud and debris remained. We realized this was the result of illegal logging." },
+                { "title": "The Lesson & The Vow", "text": "Bah Tangse was a bitter lesson. Since then, we have vowed to protect and replant our forests." }
+            ]
+        }
     },
     "kopiGayo": {
-      "video": {
-        "title": "Educational Video: Gayo Coffee, The Aroma of Peace",
-        "description": "Witness the inspiring story of Gayo coffee farmers rising from post-conflict adversity to rebuild their lives.",
-        "info": "This video features interviews with Gayo coffee farmers who share their journey from the conflict era to rebuilding their lives through coffee plantations."
-      },
-      "quiz": {
-        "title": "Aroma of Peace Quiz",
-        "description": "How much do you know about the role of Gayo coffee in post-conflict recovery?",
-        "questions": [
-          { "question": "Why did the Gayo coffee farmers decide to form a cooperative?", "options": ["Because it was required by the government", "To compete with each other", "To support each other and have better bargaining power", "To get bank loans"], "correctAnswer": "To support each other and have better bargaining power", "points": 10 },
-          { "question": "What was the main positive impact of the revival of the Gayo coffee industry for the community?", "options": ["An increase in tourists", "The community could send their children to school", "A decrease in pest population", "Land prices became expensive"], "correctAnswer": "The community could send their children to school", "points": 10 },
-          { "question": "According to the story, what is the \"aroma of peace\"?", "options": ["The aroma of food in the community kitchen", "The aroma of flowers in the garden", "The aroma of coffee being processed every morning", "The aroma of the sea after a storm"], "correctAnswer": "The aroma of coffee being processed every morning", "points": 10 }
-        ]
-      },
-      "comic": {
-        "title": "Comic: Gayo Coffee, The Aroma of Peace",
-        "description": "The story of the revival of Gayo coffee farmers post-conflict.",
-        "panels": [
-          { "title": "The Abandoned Plantations", "text": "During the conflict, many of our coffee plantations were abandoned and overgrown with weeds." },
-          { "title": "Returning from Scratch", "text": "After peace, we returned. Starting again from scratch was very hard, but we saw hope." },
-          { "title": "Hope in a Coffee Bean", "text": "We worked hard, learned better farming techniques, seeing new hope in every coffee bean." },
-          { "title": "Building a Cooperative", "text": "We formed a cooperative to support each other, learn new techniques, and market the coffee together." },
-          { "title": "Becoming Known to the World", "text": "Slowly but surely, Gayo coffee became known to the world, bringing a good name to our region." },
-          { "title": "The Aroma of Peace", "text": "Now, the world-renowned aroma of Gayo coffee is the aroma of hard work, hope, and the peace we have achieved." }
-        ]
-      }
+        "video": {
+            "title": "Educational Video: Gayo Coffee, The Aroma of Peace",
+            "description": "Witness the inspiring story of Gayo coffee farmers rising from post-conflict adversity to rebuild their lives.",
+            "info": "This video features interviews with Gayo coffee farmers who share their journey from the conflict era to rebuilding their lives through coffee plantations."
+        },
+        "quiz": {
+            "title": "Aroma of Peace Quiz",
+            "description": "How much do you know about the role of Gayo coffee in post-conflict recovery?",
+            "questions": [
+                { "question": "Why did the Gayo coffee farmers decide to form a cooperative?", "options": ["Because it was required by the government", "To compete with each other", "To support each other and have better bargaining power", "To get bank loans"], "correctAnswer": "To support each other and have better bargaining power", "points": 10 },
+                { "question": "What was the main positive impact of the revival of the Gayo coffee industry for the community?", "options": ["An increase in tourists", "The community could send their children to school", "A decrease in pest population", "Land prices became expensive"], "correctAnswer": "The community could send their children to school", "points": 10 },
+                { "question": "According to the story, what is the \"aroma of peace\"?", "options": ["The aroma of food in the community kitchen", "The aroma of flowers in the garden", "The aroma of coffee being processed every morning", "The aroma of the sea after a storm"], "correctAnswer": "The aroma of coffee being processed every morning", "points": 10 }
+            ]
+        },
+        "comic": {
+            "title": "Comic: Gayo Coffee, The Aroma of Peace",
+            "description": "The story of the revival of Gayo coffee farmers post-conflict.",
+            "panels": [
+                { "title": "The Abandoned Plantations", "text": "During the conflict, many of our coffee plantations were abandoned and overgrown with weeds." },
+                { "title": "Returning from Scratch", "text": "After peace, we returned. Starting again from scratch was very hard, but we saw hope." },
+                { "title": "Hope in a Coffee Bean", "text": "We worked hard, learned better farming techniques, seeing new hope in every coffee bean." },
+                { "title": "Building a Cooperative", "text": "We formed a cooperative to support each other, learn new techniques, and market the coffee together." },
+                { "title": "Becoming Known to the World", "text": "Slowly but surely, Gayo coffee became known to the world, bringing a good name to our region." },
+                { "title": "The Aroma of Peace", "text": "Now, the world-renowned aroma of Gayo coffee is the aroma of hard work, hope, and the peace we have achieved." }
+            ]
+        }
     },
     "apiBukit": {
-      "video": {
-        "title": "Educational Video: Fire-Care Community",
-        "description": "See how the Fire-Care Community fights to protect the forest from fires.",
-        "info": "This video will highlight the importance of prevention and the active role of the community in mitigating forest fire disasters."
-      },
-      "quiz": {
-        "title": "Forest Guardian Quiz",
-        "description": "Test your knowledge on forest fire prevention and response.",
-        "questions": [
-          { "question": "According to the story, what is a common cause of forest fires in Gayo?", "options": ["Lightning strikes", "Extreme sun heat", "Human negligence such as clearing land by burning", "Volcanic eruptions"], "correctAnswer": "Human negligence such as clearing land by burning", "points": 10 },
-          { "question": "What is the name of the volunteer group formed by residents to tackle forest fires?", "options": ["Gayo Firefighting Team", "Fire-Care Community", "Forest Guardian Alliance", "Barisan Hills Community"], "correctAnswer": "Fire-Care Community", "points": 10 },
-          { "question": "Besides extinguishing fires, what other important activity does this group do?", "options": ["Selling timber", "Hunting wild animals", "Educating residents not to burn land", "Building villas in the forest"], "correctAnswer": "Educating residents not to burn land", "points": 10 }
-        ]
-      },
-      "comic": {
-        "title": "Comic: Fire on the Barisan Hills",
-        "description": "The struggle of the Fire-Care Community to protect the Gayo forests.",
-        "panels": [
-          { "title": "The Dry Season Threat", "text": "Every dry season, this beautiful pine forest becomes very vulnerable to fire. A small spark can be a disaster." },
-          { "title": "Voluntary Patrols", "text": "We formed the Fire-Care Community, patrolling voluntarily to prevent fires." },
-          { "title": "Educating Residents", "text": "Most importantly, we educate residents not to clear land by burning." },
-          { "title": "Extinguishing the Fire", "text": "When a fire starts, we work together with whatever equipment we have to extinguish it before it grows." },
-          { "title": "A Shared Responsibility", "text": "This is not the government's job; it is our shared responsibility. This forest is our water source." },
-          { "title": "Peace with Nature", "text": "Protecting this forest is our way of making peace with nature, for the future of our children." }
-        ]
-      }
+        "video": {
+            "title": "Educational Video: Fire-Care Community",
+            "description": "See how the Fire-Care Community fights to protect the forest from fires.",
+            "info": "This video will highlight the importance of prevention and the active role of the community in mitigating forest fire disasters."
+        },
+        "quiz": {
+            "title": "Forest Guardian Quiz",
+            "description": "Test your knowledge on forest fire prevention and response.",
+            "questions": [
+                { "question": "According to the story, what is a common cause of forest fires in Gayo?", "options": ["Lightning strikes", "Extreme sun heat", "Human negligence such as clearing land by burning", "Volcanic eruptions"], "correctAnswer": "Human negligence such as clearing land by burning", "points": 10 },
+                { "question": "What is the name of the volunteer group formed by residents to tackle forest fires?", "options": ["Gayo Firefighting Team", "Fire-Care Community", "Forest Guardian Alliance", "Barisan Hills Community"], "correctAnswer": "Fire-Care Community", "points": 10 },
+                { "question": "Besides extinguishing fires, what other important activity does this group do?", "options": ["Selling timber", "Hunting wild animals", "Educating residents not to burn land", "Building villas in the forest"], "correctAnswer": "Educating residents not to burn land", "points": 10 }
+            ]
+        },
+        "comic": {
+            "title": "Comic: Fire on the Barisan Hills",
+            "description": "The struggle of the Fire-Care Community to protect the Gayo forests.",
+            "panels": [
+                { "title": "The Dry Season Threat", "text": "Every dry season, this beautiful pine forest becomes very vulnerable to fire. A small spark can be a disaster." },
+                { "title": "Voluntary Patrols", "text": "We formed the Fire-Care Community, patrolling voluntarily to prevent fires." },
+                { "title": "Educating Residents", "text": "Most importantly, we educate residents not to clear land by burning." },
+                { "title": "Extinguishing the Fire", "text": "When a fire starts, we work together with whatever equipment we have to extinguish it before it grows." },
+                { "title": "A Shared Responsibility", "text": "This is not the government's job; it is our shared responsibility. This forest is our water source." },
+                { "title": "Peace with Nature", "text": "Protecting this forest is our way of making peace with nature, for the future of our children." }
+            ]
+        }
     },
     "pemudaAdat": {
-      "video": {
-        "title": "Educational Video: Seudati Dance, Community Binder",
-        "description": "Witness how the youth in Pidie preserve culture and strengthen social bonds through the Seudati dance.",
-        "info": "This video will document the activities of the Seudati troupe and its impact on the youth in Pidie."
-      },
-      "quiz": {
-        "title": "Guardians of Custom Quiz",
-        "description": "Test your understanding of the role of culture in peacebuilding.",
-        "questions": [
-          { "question": "This initiative shows that art and culture can be effective tools for...", "options": ["Producing famous artists", "Peacebuilding and community strengthening", "Attracting tourists", "Forgetting the past"], "correctAnswer": "Peacebuilding and community strengthening", "points": 10 },
-          { "question": "What dance was revived by the youth in the story?", "options": ["Saman Dance", "Seudati Dance", "Piring Dance", "Kecak Dance"], "correctAnswer": "Seudati Dance", "points": 10 },
-          { "question": "Besides movement, what does the dance teach the youth?", "options": ["How to fight", "The history of the Aceh kingdom", "Discipline, teamwork, and advisory poems", "Vocal techniques for singing"], "correctAnswer": "Discipline, teamwork, and advisory poems", "points": 10 }
-        ]
-      },
-      "comic": {
-        "title": "Comic: The Youth Guardians of Custom",
-        "description": "Reviving the Seudati dance to keep youth away from violence.",
-        "panels": [
-          { "title": "Misdirected Energy", "text": "Post-conflict, many young people lost their way. Their great energy was sometimes channeled into negative things." },
-          { "title": "A Calling", "text": "We, some of the older youth, felt we had to do something for the community." },
-          { "title": "Reviving the Studio", "text": "We decided to revive the Seudati dance troupe, a dance that teaches discipline and cooperation." },
-          { "title": "Practicing Together", "text": "It was difficult at first, but slowly our troupe began to grow. The youth channeled their energy into the dance." },
-          { "title": "Positive Expression", "text": "The studio became a safe space for youth to express themselves positively and learn noble values." },
-          { "title": "A Bridge Between Villages", "text": "Through dance, we build bridges between villages and create a stronger community bond." }
-        ]
-      }
+        "video": {
+            "title": "Educational Video: Seudati Dance, Community Binder",
+            "description": "Witness how the youth in Pidie preserve culture and strengthen social bonds through the Seudati dance.",
+            "info": "This video will document the activities of the Seudati troupe and its impact on the youth in Pidie."
+        },
+        "quiz": {
+            "title": "Guardians of Custom Quiz",
+            "description": "Test your understanding of the role of culture in peacebuilding.",
+            "questions": [
+                { "question": "This initiative shows that art and culture can be effective tools for...", "options": ["Producing famous artists", "Peacebuilding and community strengthening", "Attracting tourists", "Forgetting the past"], "correctAnswer": "Peacebuilding and community strengthening", "points": 10 },
+                { "question": "What dance was revived by the youth in the story?", "options": ["Saman Dance", "Seudati Dance", "Piring Dance", "Kecak Dance"], "correctAnswer": "Seudati Dance", "points": 10 },
+                { "question": "Besides movement, what does the dance teach the youth?", "options": ["How to fight", "The history of the Aceh kingdom", "Discipline, teamwork, and advisory poems", "Vocal techniques for singing"], "correctAnswer": "Discipline, teamwork, and advisory poems", "points": 10 }
+            ]
+        },
+        "comic": {
+            "title": "Comic: The Youth Guardians of Custom",
+            "description": "Reviving the Seudati dance to keep youth away from violence.",
+            "panels": [
+                { "title": "Misdirected Energy", "text": "Post-conflict, many young people lost their way. Their great energy was sometimes channeled into negative things." },
+                { "title": "A Calling", "text": "We, some of the older youth, felt we had to do something for the community." },
+                { "title": "Reviving the Studio", "text": "We decided to revive the Seudati dance troupe, a dance that teaches discipline and cooperation." },
+                { "title": "Practicing Together", "text": "It was difficult at first, but slowly our troupe began to grow. The youth channeled their energy into the dance." },
+                { "title": "Positive Expression", "text": "The studio became a safe space for youth to express themselves positively and learn noble values." },
+                { "title": "A Bridge Between Villages", "text": "Through dance, we build bridges between villages and create a stronger community bond." }
+            ]
+        }
     },
     "perempuanPenganyam": {
-      "video": {
-        "title": "Educational Video: Women Weavers of Hope",
-        "description": "Witness how tsunami widows rise from adversity by forming a weaving craft group.",
-        "info": "This short documentary will follow the journey of the weaving group from grief to empowerment."
-      },
-      "quiz": {
-        "title": "Weavers of Hope Quiz",
-        "description": "Test your understanding of women's empowerment and post-disaster recovery.",
-        "questions": [
-          { "question": "What was the main transformation experienced by these women?", "options": ["From farmers to artisans", "From housewives to politicians", "From victims to empowered survivors", "From traders to teachers"], "correctAnswer": "From victims to empowered survivors", "points": 10 },
-          { "question": "What is the main material they use to make woven crafts?", "options": ["Rattan", "Bamboo", "Pandan Leaves", "Recycled plastic"], "correctAnswer": "Pandan Leaves", "points": 10 },
-          { "question": "Besides being a source of income, what other function did the weaving activity have for them?", "options": ["As an annual competition", "As therapy and a space to support each other", "As a way to preserve the local language", "As a requirement to receive government aid"], "correctAnswer": "As therapy and a space to support each other", "points": 10 }
-        ]
-      },
-      "comic": {
-        "title": "Comic: The Women Weavers of Hope",
-        "description": "The story of tsunami widows who rose up by forming a weaving craft group.",
-        "panels": [
-          { "title": "Grief and Uncertainty", "text": "The tsunami took our husbands and our homes, leaving us in grief and uncertainty." },
-          { "title": "Weaving as Therapy", "text": "We gathered and began weaving with pandan leaves. While weaving, we shared stories and strengthened each other." },
-          { "title": "Creations from the Heart", "text": "This weaving is not just a mat or a bag; it is our therapy and the outpouring of our hearts." },
-          { "title": "Economic Independence", "text": "Slowly, our products became known and orders came in. We earned our own income." },
-          { "title": "Becoming Empowered", "text": "We are no longer just victims; we are empowered survivors who can support our families." },
-          { "title": "A New Family", "text": "This group became our new family, a place where we weave back hope for the future." }
-        ]
-      }
+        "video": {
+            "title": "Educational Video: Women Weavers of Hope",
+            "description": "Witness how tsunami widows rise from adversity by forming a weaving craft group.",
+            "info": "This short documentary will follow the journey of the weaving group from grief to empowerment."
+        },
+        "quiz": {
+            "title": "Weavers of Hope Quiz",
+            "description": "Test your understanding of women's empowerment and post-disaster recovery.",
+            "questions": [
+                { "question": "What was the main transformation experienced by these women?", "options": ["From farmers to artisans", "From housewives to politicians", "From victims to empowered survivors", "From traders to teachers"], "correctAnswer": "From victims to empowered survivors", "points": 10 },
+                { "question": "What is the main material they use to make woven crafts?", "options": ["Rattan", "Bamboo", "Pandan Leaves", "Recycled plastic"], "correctAnswer": "Pandan Leaves", "points": 10 },
+                { "question": "Besides being a source of income, what other function did the weaving activity have for them?", "options": ["As an annual competition", "As therapy and a space to support each other", "As a way to preserve the local language", "As a requirement to receive government aid"], "correctAnswer": "As therapy and a space to support each other", "points": 10 }
+            ]
+        },
+        "comic": {
+            "title": "Comic: The Women Weavers of Hope",
+            "description": "The story of tsunami widows who rose up by forming a weaving craft group.",
+            "panels": [
+                { "title": "Grief and Uncertainty", "text": "The tsunami took our husbands and our homes, leaving us in grief and uncertainty." },
+                { "title": "Weaving as Therapy", "text": "We gathered and began weaving with pandan leaves. While weaving, we shared stories and strengthened each other." },
+                { "title": "Creations from the Heart", "text": "This weaving is not just a mat or a bag; it is our therapy and the outpouring of our hearts." },
+                { "title": "Economic Independence", "text": "Slowly, our products became known and orders came in. We earned our own income." },
+                { "title": "Becoming Empowered", "text": "We are no longer just victims; we are empowered survivors who can support our families." },
+                { "title": "A New Family", "text": "This group became our new family, a place where we weave back hope for the future." }
+            ]
+        }
     },
     "arsitektur": {
-      "video": {
-        "title": "Educational Video: The Wisdom of Rumoh Aceh",
-        "description": "Learn how the traditional stilt house architecture of Rumoh Aceh is proven to be earthquake-resistant and environmentally adaptive.",
-        "info": "This video will compare the design of Rumoh Aceh with modern buildings and highlight the ingenious engineering principles within it."
-      },
-      "quiz": {
-        "title": "Wise Architecture Quiz",
-        "description": "Test your understanding of the wisdom behind Rumoh Aceh architecture.",
-        "questions": [
-          { "question": "What is the main lesson that can be learned from the wisdom of Rumoh Aceh architecture?", "options": ["We should only build houses from wood", "Modern technology is useless", "Traditional designs often have solutions that are adaptive to the environment", "Stilt houses are unsafe"], "correctAnswer": "Traditional designs often have solutions that are adaptive to the environment", "points": 10 },
-          { "question": "What key feature of Rumoh Aceh makes it earthquake-resistant?", "options": ["Thick concrete walls", "Flexible wooden construction", "A roof made of palm leaves", "A very deep foundation"], "correctAnswer": "Flexible wooden construction", "points": 10 },
-          { "question": "What is the function of the \"kolong\" or space under the stilt house?", "options": ["Only as decoration", "As a car garage", "As a multipurpose space and a path for water during floods", "As a place to dispose of trash"], "correctAnswer": "As a multipurpose space and a path for water during floods", "points": 10 }
-        ]
-      },
-      "comic": {
-        "title": "Comic: Stilt House Architecture",
-        "description": "Rediscovering the wisdom of Rumoh Aceh as inspiration for earthquake-resistant buildings.",
-        "panels": [
-          { "title": "The Enduring Rumoh Aceh", "text": "When the earthquake and tsunami destroyed many modern buildings, we saw many Rumoh Aceh still standing strong." },
-          { "title": "A Flexible Construction", "text": "The stilt structure with its flexible wooden construction proved capable of absorbing earthquake shocks." },
-          { "title": "Adaptive to the Environment", "text": "The space underneath the house is not only versatile but also provides a path for water if it floods." },
-          { "title": "An Eye-Opener", "text": "This opened our eyes. The architecture of our ancestors is extraordinary and highly relevant." },
-          { "title": "Inspiration for the Future", "text": "We began to advocate for and rebuild houses by adapting the principles of Rumoh Aceh." },
-          { "title": "Building the Future", "text": "This is not about returning to the past, but taking the best lessons from the past to build a safer future." }
-        ]
-      }
+        "video": {
+            "title": "Educational Video: The Wisdom of Rumoh Aceh",
+            "description": "Learn how the traditional stilt house architecture of Rumoh Aceh is proven to be earthquake-resistant and environmentally adaptive.",
+            "info": "This video will compare the design of Rumoh Aceh with modern buildings and highlight the ingenious engineering principles within it."
+        },
+        "quiz": {
+            "title": "Wise Architecture Quiz",
+            "description": "Test your understanding of the wisdom behind Rumoh Aceh architecture.",
+            "questions": [
+                { "question": "What is the main lesson that can be learned from the wisdom of Rumoh Aceh architecture?", "options": ["We should only build houses from wood", "Modern technology is useless", "Traditional designs often have solutions that are adaptive to the environment", "Stilt houses are unsafe"], "correctAnswer": "Traditional designs often have solutions that are adaptive to the environment", "points": 10 },
+                { "question": "What key feature of Rumoh Aceh makes it earthquake-resistant?", "options": ["Thick concrete walls", "Flexible wooden construction", "A roof made of palm leaves", "A very deep foundation"], "correctAnswer": "Flexible wooden construction", "points": 10 },
+                { "question": "What is the function of the \"kolong\" or space under the stilt house?", "options": ["Only as decoration", "As a car garage", "As a multipurpose space and a path for water during floods", "As a place to dispose of trash"], "correctAnswer": "As a multipurpose space and a path for water during floods", "points": 10 }
+            ]
+        },
+        "comic": {
+            "title": "Comic: Stilt House Architecture",
+            "description": "Rediscovering the wisdom of Rumoh Aceh as inspiration for earthquake-resistant buildings.",
+            "panels": [
+                { "title": "The Enduring Rumoh Aceh", "text": "When the earthquake and tsunami destroyed many modern buildings, we saw many Rumoh Aceh still standing strong." },
+                { "title": "A Flexible Construction", "text": "The stilt structure with its flexible wooden construction proved capable of absorbing earthquake shocks." },
+                { "title": "Adaptive to the Environment", "text": "The space underneath the house is not only versatile but also provides a path for water if it floods." },
+                { "title": "An Eye-Opener", "text": "This opened our eyes. The architecture of our ancestors is extraordinary and highly relevant." },
+                { "title": "Inspiration for the Future", "text": "We began to advocate for and rebuild houses by adapting the principles of Rumoh Aceh." },
+                { "title": "Building the Future", "text": "This is not about returning to the past, but taking the best lessons from the past to build a safer future." }
+            ]
+        }
     },
     "seniTrauma": {
-      "video": {
-        "title": "Educational Video: Art Against Trauma",
-        "description": "Witness how artists use murals to heal the wounds of the city and soul post-disaster.",
-        "info": "This video will feature the works of mural artists in Banda Aceh and interviews on the power of art as a therapeutic medium."
-      },
-      "quiz": {
-        "title": "Canvas of Hope Quiz",
-        "description": "Test your understanding of the power of art in the social recovery process.",
-        "questions": [
-          { "question": "What themes were often depicted in their murals?", "options": ["Anger and sadness", "Abstract landscapes", "Hope, resilience, and togetherness", "Portraits of the artists"], "correctAnswer": "Hope, resilience, and togetherness", "points": 10 },
-          { "question": "What was the main goal of the artists painting on public walls?", "options": ["To sell their paintings", "To heal the city's and their own wounds through art", "To protest against the government", "To win an art competition"], "correctAnswer": "To heal the city's and their own wounds through art", "points": 10 },
-          { "question": "How did the community react to this mural activity?", "options": ["The community was angry because their walls were painted", "The community did not care", "The community, including children, joined in the painting process", "The community reported them to the police"], "correctAnswer": "The community, including children, joined in the painting process", "points": 10 }
-        ]
-      },
-      "comic": {
-        "title": "Comic: Art Against Trauma",
-        "description": "How young Banda Aceh artists use murals to heal the city.",
-        "panels": [
-          { "title": "The Silent Walls Post-Tsunami", "text": "Post-tsunami Banda Aceh was full of silent walls that witnessed the tragedy. The atmosphere felt heavy." },
-          { "title": "A Call for Artists", "text": "As artists, we felt called to do something, to heal the city's wounds in our own way." },
-          { "title": "Giving New Color", "text": "We started painting murals on public walls, not to forget, but to give new color to memory." },
-          { "title": "Therapy Through Art", "text": "This process of painting together became therapy for us and the community. The gloomy walls became an open gallery." },
-          { "title": "Hope in Every Stroke", "text": "We painted about hope, resilience, togetherness, and the undying beauty of Aceh." },
-          { "title": "Healing the City's Wounds", "text": "Art became our way of healing the city's wounds and our own souls, transforming trauma into hope." }
-        ]
-      }
+        "video": {
+            "title": "Educational Video: Art Against Trauma",
+            "description": "Witness how artists use murals to heal the wounds of the city and soul post-disaster.",
+            "info": "This video will feature the works of mural artists in Banda Aceh and interviews on the power of art as a therapeutic medium."
+        },
+        "quiz": {
+            "title": "Canvas of Hope Quiz",
+            "description": "Test your understanding of the power of art in the social recovery process.",
+            "questions": [
+                { "question": "What themes were often depicted in their murals?", "options": ["Anger and sadness", "Abstract landscapes", "Hope, resilience, and togetherness", "Portraits of the artists"], "correctAnswer": "Hope, resilience, and togetherness", "points": 10 },
+                { "question": "What was the main goal of the artists painting on public walls?", "options": ["To sell their paintings", "To heal the city's and their own wounds through art", "To protest against the government", "To win an art competition"], "correctAnswer": "To heal the city's and their own wounds through art", "points": 10 },
+                { "question": "How did the community react to this mural activity?", "options": ["The community was angry because their walls were painted", "The community did not care", "The community, including children, joined in the painting process", "The community reported them to the police"], "correctAnswer": "The community, including children, joined in the painting process", "points": 10 }
+            ]
+        },
+        "comic": {
+            "title": "Comic: Art Against Trauma",
+            "description": "How young Banda Aceh artists use murals to heal the city.",
+            "panels": [
+                { "title": "The Silent Walls Post-Tsunami", "text": "Post-tsunami Banda Aceh was full of silent walls that witnessed the tragedy. The atmosphere felt heavy." },
+                { "title": "A Call for Artists", "text": "As artists, we felt called to do something, to heal the city's wounds in our own way." },
+                { "title": "Giving New Color", "text": "We started painting murals on public walls, not to forget, but to give new color to memory." },
+                { "title": "Therapy Through Art", "text": "This process of painting together became therapy for us and the community. The gloomy walls became an open gallery." },
+                { "title": "Hope in Every Stroke", "text": "We painted about hope, resilience, togetherness, and the undying beauty of Aceh." },
+                { "title": "Healing the City's Wounds", "text": "Art became our way of healing the city's wounds and our own souls, transforming trauma into hope." }
+            ]
+        }
     },
     "nelayan": {
-      "video": {
-        "title": "Educational Video: Sky and Sea Navigation",
-        "description": "Learn how traditional Acehnese fishermen use stars and natural signs to navigate the vast ocean.",
-        "info": "This video documents the fishermen's knowledge of constellations, winds, and marine life behavior as their guide."
-      },
-      "quiz": {
-        "title": "Traditional Navigation Quiz",
-        "description": "Test your knowledge of how traditional fishermen read the signs of nature.",
-        "questions": [
-          { "question": "What constellation is called \"Bintang Tiga\" and is used by Acehnese fishermen for direction?", "options": ["Scorpio", "Orion", "Big Dipper", "Crux (Southern Cross)"], "correctAnswer": "Orion", "points": 10 },
-          { "question": "What animal behavior is a sign of bad weather for fishermen?", "options": ["A cat sleeping inside the house", "Birds flying high in the sky", "Dolphins swimming close to the shore", "A rooster crowing in the morning"], "correctAnswer": "Dolphins swimming close to the shore", "points": 10 },
-          { "question": "How do fishermen know where fish gather?", "options": ["Using advanced sonar", "By observing the color of the water and the type of birds flying above", "Following other fishing boats", "Casting nets randomly"], "correctAnswer": "By observing the color of the water and the type of birds flying above", "points": 10 }
-        ]
-      },
-      "comic": {
-        "title": "Comic: The Wisdom of Fishermen",
-        "description": "The story of traditional fishermen who read the signs of nature to sail.",
-        "panels": [
-          { "title": "The Sky and Sea Compass", "text": "We fishermen don't have fancy GPS. Our compass is the sky and the sea itself." },
-          { "title": "Reading the Constellations", "text": "My father taught me how to read the Orion constellation, or 'Bintang Tiga', to know the way home." },
-          { "title": "Signs from Animals", "text": "If dolphins swim close to the shore, it is a sign the weather will be bad. We learn from animal behavior." },
-          { "title": "The Color of Water and Fish", "text": "We know when fish gather just by looking at the color of the water and the type of birds flying above." },
-          { "title": "Generational Heritage", "text": "This knowledge is not in books; it is passed down from father to son, from one generation of fishermen to the next." },
-          { "title": "The Science of Life", "text": "This is the science of life that allows us to be friends with the ocean and return home safely." }
-        ]
-      }
+        "video": {
+            "title": "Educational Video: Sky and Sea Navigation",
+            "description": "Learn how traditional Acehnese fishermen use stars and natural signs to navigate the vast ocean.",
+            "info": "This video documents the fishermen's knowledge of constellations, winds, and marine life behavior as their guide."
+        },
+        "quiz": {
+            "title": "Traditional Navigation Quiz",
+            "description": "Test your knowledge of how traditional fishermen read the signs of nature.",
+            "questions": [
+                { "question": "What constellation is called \"Bintang Tiga\" and is used by Acehnese fishermen for direction?", "options": ["Scorpio", "Orion", "Big Dipper", "Crux (Southern Cross)"], "correctAnswer": "Orion", "points": 10 },
+                { "question": "What animal behavior is a sign of bad weather for fishermen?", "options": ["A cat sleeping inside the house", "Birds flying high in the sky", "Dolphins swimming close to the shore", "A rooster crowing in the morning"], "correctAnswer": "Dolphins swimming close to the shore", "points": 10 },
+                { "question": "How do fishermen know where fish gather?", "options": ["Using advanced sonar", "By observing the color of the water and the type of birds flying above", "Following other fishing boats", "Casting nets randomly"], "correctAnswer": "By observing the color of the water and the type of birds flying above", "points": 10 }
+            ]
+        },
+        "comic": {
+            "title": "Comic: The Wisdom of Fishermen",
+            "description": "The story of traditional fishermen who read the signs of nature to sail.",
+            "panels": [
+                { "title": "The Sky and Sea Compass", "text": "We fishermen don't have fancy GPS. Our compass is the sky and the sea itself." },
+                { "title": "Reading the Constellations", "text": "My father taught me how to read the Orion constellation, or 'Bintang Tiga', to know the way home." },
+                { "title": "Signs from Animals", "text": "If dolphins swim close to the shore, it is a sign the weather will be bad. We learn from animal behavior." },
+                { "title": "The Color of Water and Fish", "text": "We know when fish gather just by looking at the color of the water and the type of birds flying above." },
+                { "title": "Generational Heritage", "text": "This knowledge is not in books; it is passed down from father to son, from one generation of fishermen to the next." },
+                { "title": "The Science of Life", "text": "This is the science of life that allows us to be friends with the ocean and return home safely." }
+            ]
+        }
     },
     "sumurTua": {
-      "video": {
-        "title": "Educational Video: The Old Well, Source of Life",
-        "description": "Learn how an ancient ancestral well became a lifesaver when a village was hit by drought.",
-        "info": "This video will explore the importance of preserving traditional water sources and the wisdom of ancestors in locating them."
-      },
-      "quiz": {
-        "title": "Source of Life Quiz",
-        "description": "Test your understanding of traditional water resource management.",
-        "questions": [
-          { "question": "Why did the old well never dry up when other modern wells did?", "options": ["Because it was very deep", "Because it was built directly on a large spring", "Because it was rarely used", "Because it was made of magical stone"], "correctAnswer": "Because it was built directly on a large spring", "points": 10 },
-          { "question": "What prompted the villagers to find and clean the old well?", "options": ["An order from the government", "Curiosity and a sense of adventure", "A long drought that dried up modern water sources", "A dream one of the villagers had"], "correctAnswer": "A long drought that dried up modern water sources", "points": 10 },
-          { "question": "What lesson did the villagers learn from this event?", "options": ["Modern technology is always superior", "Water will never run out", "The wisdom in past relics must be preserved", "Forests have no connection to water sources"], "correctAnswer": "The wisdom in past relics must be preserved", "points": 10 }
-        ]
-      },
-      "comic": {
-        "title": "Comic: The Old Well, Source of Life",
-        "description": "How an ancient well saved a village from drought.",
-        "panels": [
-          { "title": "The Long Drought", "text": "The dry season that year was very long. Our rivers and modern wells dried up. We began to despair." },
-          { "title": "Remembering a Legacy", "text": "A village elder remembered an old well on the edge of the forest that had long been unused." },
-          { "title": "Cleaning the Well", "text": "Hesitantly, we cleaned the well, which was built with stone rings and covered by a large tree." },
-          { "title": "A Miraculous Spring", "text": "Miraculously! At the bottom, there was still clear water that never ran out. Our ancestors built it right on a large spring." },
-          { "title": "Source of Life", "text": "That old well became the only source of clean water for the entire village for the rest of the dry season." },
-          { "title": "A Valuable Lesson", "text": "We learned that there is wisdom in the relics of the past that we must preserve." }
-        ]
-      }
+        "video": {
+            "title": "Educational Video: The Old Well, Source of Life",
+            "description": "Learn how an ancient ancestral well became a lifesaver when a village was hit by drought.",
+            "info": "This video will explore the importance of preserving traditional water sources and the wisdom of ancestors in locating them."
+        },
+        "quiz": {
+            "title": "Source of Life Quiz",
+            "description": "Test your understanding of traditional water resource management.",
+            "questions": [
+                { "question": "Why did the old well never dry up when other modern wells did?", "options": ["Because it was very deep", "Because it was built directly on a large spring", "Because it was rarely used", "Because it was made of magical stone"], "correctAnswer": "Because it was built directly on a large spring", "points": 10 },
+                { "question": "What prompted the villagers to find and clean the old well?", "options": ["An order from the government", "Curiosity and a sense of adventure", "A long drought that dried up modern water sources", "A dream one of the villagers had"], "correctAnswer": "A long drought that dried up modern water sources", "points": 10 },
+                { "question": "What lesson did the villagers learn from this event?", "options": ["Modern technology is always superior", "Water will never run out", "The wisdom in past relics must be preserved", "Forests have no connection to water sources"], "correctAnswer": "The wisdom in past relics must be preserved", "points": 10 }
+            ]
+        },
+        "comic": {
+            "title": "Comic: The Old Well, Source of Life",
+            "description": "How an ancient well saved a village from drought.",
+            "panels": [
+                { "title": "The Long Drought", "text": "The dry season that year was very long. Our rivers and modern wells dried up. We began to despair." },
+                { "title": "Remembering a Legacy", "text": "A village elder remembered an old well on the edge of the forest that had long been unused." },
+                { "title": "Cleaning the Well", "text": "Hesitantly, we cleaned the well, which was built with stone rings and covered by a large tree." },
+                { "title": "A Miraculous Spring", "text": "Miraculously! At the bottom, there was still clear water that never ran out. Our ancestors built it right on a large spring." },
+                { "title": "Source of Life", "text": "That old well became the only source of clean water for the entire village for the rest of the dry season." },
+                { "title": "A Valuable Lesson", "text": "We learned that there is wisdom in the relics of the past that we must preserve." }
+            ]
+        }
     },
     "ilmuFalak": {
-      "video": {
-        "title": "Educational Video: Ilmu Falak, Navigating Sky and Sea",
-        "description": "Learn how dayahs in Aceh teach astronomy (Ilmu Falak) which is used by fishermen for navigation.",
-        "info": "This video will explain how religious knowledge and science complement each other in the intellectual tradition of Aceh."
-      },
-      "quiz": {
-        "title": "Ilmu Falak Quiz",
-        "description": "Test your knowledge of the application of traditional astronomy in Aceh.",
-        "questions": [
-          { "question": "This story shows that in Aceh, religious knowledge and science...", "options": ["Are always in conflict", "Have no connection at all", "Can complement each other and be beneficial for life", "Are only studied by the nobility"], "correctAnswer": "Can complement each other and be beneficial for life", "points": 10 },
-          { "question": "Besides determining the start of the fasting month and the qibla direction, what else is Ilmu Falak used for in the story?", "options": ["To predict someone's fate", "For navigation for fishermen", "To determine wedding dates", "To find hidden treasure"], "correctAnswer": "For navigation for fishermen", "points": 10 },
-          { "question": "Where is this Ilmu Falak taught from generation to generation according to the story?", "options": ["In modern universities", "In navigation schools", "In the village hall", "In Islamic boarding schools (dayah)"], "correctAnswer": "In Islamic boarding schools (dayah)", "points": 10 }
-        ]
-      },
-      "comic": {
-        "title": "Comic: Ilmu Falak in the Dayah",
-        "description": "Revealing the role of dayahs in teaching astronomy for life.",
-        "panels": [
-          { "title": "Studying in a Dayah", "text": "Many think a dayah is only a place to study the Quran, but we also study Ilmu Falak (astronomy)." },
-          { "title": "Calculating Star Positions", "text": "We calculate the position of the stars to determine the beginning of the fasting month, the qibla direction, and prayer times." },
-          { "title": "Knowledge for Fishermen", "text": "The same science is also useful for fishermen on the coast for navigation and determining tides." },
-          { "title": "Community Reference", "text": "Students returning to their villages often become a reference, telling the position of the north star or when the highest tide is." },
-          { "title": "Religious and Life Sciences", "text": "There is a close relationship between the sky and the sea, between religious knowledge and the science of life." },
-          { "title": "For the Common Good", "text": "We learn that all knowledge comes from God and can be used for the common good, on land and at sea." }
-        ]
-      }
+        "video": {
+            "title": "Educational Video: Ilmu Falak, Navigating Sky and Sea",
+            "description": "Learn how dayahs in Aceh teach astronomy (Ilmu Falak) which is used by fishermen for navigation.",
+            "info": "This video will explain how religious knowledge and science complement each other in the intellectual tradition of Aceh."
+        },
+        "quiz": {
+            "title": "Ilmu Falak Quiz",
+            "description": "Test your knowledge of the application of traditional astronomy in Aceh.",
+            "questions": [
+                { "question": "This story shows that in Aceh, religious knowledge and science...", "options": ["Are always in conflict", "Have no connection at all", "Can complement each other and be beneficial for life", "Are only studied by the nobility"], "correctAnswer": "Can complement each other and be beneficial for life", "points": 10 },
+                { "question": "Besides determining the start of the fasting month and the qibla direction, what else is Ilmu Falak used for in the story?", "options": ["To predict someone's fate", "For navigation for fishermen", "To determine wedding dates", "To find hidden treasure"], "correctAnswer": "For navigation for fishermen", "points": 10 },
+                { "question": "Where is this Ilmu Falak taught from generation to generation according to the story?", "options": ["In modern universities", "In navigation schools", "In the village hall", "In Islamic boarding schools (dayah)"], "correctAnswer": "In Islamic boarding schools (dayah)", "points": 10 }
+            ]
+        },
+        "comic": {
+            "title": "Comic: Ilmu Falak in the Dayah",
+            "description": "Revealing the role of dayahs in teaching astronomy for life.",
+            "panels": [
+                { "title": "Studying in a Dayah", "text": "Many think a dayah is only a place to study the Quran, but we also study Ilmu Falak (astronomy)." },
+                { "title": "Calculating Star Positions", "text": "We calculate the position of the stars to determine the beginning of the fasting month, the qibla direction, and prayer times." },
+                { "title": "Knowledge for Fishermen", "text": "The same science is also useful for fishermen on the coast for navigation and determining tides." },
+                { "title": "Community Reference", "text": "Students returning to their villages often become a reference, telling the position of the north star or when the highest tide is." },
+                { "title": "Religious and Life Sciences", "text": "There is a close relationship between the sky and the sea, between religious knowledge and the science of life." },
+                { "title": "For the Common Good", "text": "We learn that all knowledge comes from God and can be used for the common good, on land and at sea." }
+            ]
+        }
     },
     "pasar": {
-      "video": {
-        "title": "Educational Video: The Market, Heart of the Community",
-        "description": "See how a traditional market functions as an important social space, more than just a place for trade.",
-        "info": "This video will capture the atmosphere and social interactions at Peunayong Market, showing how information and social cohesion are woven."
-      },
-      "quiz": {
-        "title": "Heart of the Community Quiz",
-        "description": "Test your understanding of the social role of traditional markets.",
-        "questions": [
-          { "question": "Besides being a place for buying and selling, what is the main function of the traditional market according to the story?", "options": ["As a parking lot", "As a center for information dissemination and strengthening social bonds", "As a film shooting location", "As an open-air museum"], "correctAnswer": "As a center for information dissemination and strengthening social bonds", "points": 10 },
-          { "question": "What place within the market is referred to as a \"social barometer\"?", "options": ["The gold shop", "The tailor's stall", "The market's coffee stall", "The fish vendor's stall"], "correctAnswer": "The market's coffee stall", "points": 10 },
-          { "question": "According to the story, why is it important to keep traditional markets alive?", "options": ["Because the buildings are antique and historic", "Because it is the same as keeping the pulse of the community", "Because the taxes are cheaper than modern markets", "Because only there can you find rare ingredients"], "correctAnswer": "Because it is the same as keeping the pulse of the community", "points": 10 }
-        ]
-      },
-      "comic": {
-        "title": "Comic: The Market as a Social Space",
-        "description": "The traditional market is not just for buying and selling, but the heart of the community.",
-        "panels": [
-          { "title": "The Heart of the Community", "text": "For us, the market is not just a place to make money, but a place where we meet friends and exchange news." },
-          { "title": "Information Hub", "text": "If there is important news, job vacancies, or unsettling issues, the information spreads quickly in the market." },
-          { "title": "Social Barometer", "text": "From the conversations in the market's coffee stalls, we can know what the community is feeling." },
-          { "title": "Calming Each Other", "text": "Even when there are unsettling issues, we can calm each other down and find the truth here." },
-          { "title": "The Pulse of the Community", "text": "Keeping the traditional market alive is the same as keeping the pulse and social bonds of our community." },
-          { "title": "More Than Buying and Selling", "text": "This is where friendships are forged, problems are solved, and the community feels alive." }
-        ]
-      }
+        "video": {
+            "title": "Educational Video: The Market, Heart of the Community",
+            "description": "See how a traditional market functions as an important social space, more than just a place for trade.",
+            "info": "This video will capture the atmosphere and social interactions at Peunayong Market, showing how information and social cohesion are woven."
+        },
+        "quiz": {
+            "title": "Heart of the Community Quiz",
+            "description": "Test your understanding of the social role of traditional markets.",
+            "questions": [
+                { "question": "Besides being a place for buying and selling, what is the main function of the traditional market according to the story?", "options": ["As a parking lot", "As a center for information dissemination and strengthening social bonds", "As a film shooting location", "As an open-air museum"], "correctAnswer": "As a center for information dissemination and strengthening social bonds", "points": 10 },
+                { "question": "What place within the market is referred to as a \"social barometer\"?", "options": ["The gold shop", "The tailor's stall", "The market's coffee stall", "The fish vendor's stall"], "correctAnswer": "The market's coffee stall", "points": 10 },
+                { "question": "According to the story, why is it important to keep traditional markets alive?", "options": ["Because the buildings are antique and historic", "Because it is the same as keeping the pulse of the community", "Because the taxes are cheaper than modern markets", "Because only there can you find rare ingredients"], "correctAnswer": "Because it is the same as keeping the pulse of the community", "points": 10 }
+            ]
+        },
+        "comic": {
+            "title": "Comic: The Market as a Social Space",
+            "description": "The traditional market is not just for buying and selling, but the heart of the community.",
+            "panels": [
+                { "title": "The Heart of the Community", "text": "For us, the market is not just a place to make money, but a place where we meet friends and exchange news." },
+                { "title": "Information Hub", "text": "If there is important news, job vacancies, or unsettling issues, the information spreads quickly in the market." },
+                { "title": "Social Barometer", "text": "From the conversations in the market's coffee stalls, we can know what the community is feeling." },
+                { "title": "Calming Each Other", "text": "Even when there are unsettling issues, we can calm each other down and find the truth here." },
+                { "title": "The Pulse of the Community", "text": "Keeping the traditional market alive is the same as keeping the pulse and social bonds of our community." },
+                { "title": "More Than Buying and Selling", "text": "This is where friendships are forged, problems are solved, and the community feels alive." }
+            ]
+        }
     },
     "kucingCerdas": {
+        "video": {
+            "title": "Animated Video: The Adventures of Siaga",
+            "description": "Watch the adventure of Siaga the smart cat in an animated video that teaches children important steps during an earthquake.",
+            "info": "This video uses cheerful visuals and a catchy song to help children understand the concept of disaster preparedness."
+        },
+        "quiz": {
+            "title": "Smart Cat Quiz",
+            "description": "Test your understanding of earthquake preparedness with Siaga!",
+            "questions": [
+                { "question": "What are the three steps Siaga teaches to do during an earthquake?", "options": ["Run, scream, and jump", "Drop, cover, and hold on", "Stand, look, and wait", "Eat, drink, and sleep"], "correctAnswer": "Drop, cover, and hold on", "points": 10 },
+                { "question": "Where did Siaga take his friends after the earthquake shaking stopped?", "options": ["Back inside the house", "To the beach", "To an open field far from buildings", "Up a tree"], "correctAnswer": "To an open field far from buildings", "points": 10 },
+                { "question": "What local wisdom did Siaga remember after the earthquake stopped?", "options": ["The story of Gayo Coffee", "The Smong poem about the receding sea", "How to build a Rumoh Aceh", "The taboo of planting trees on the coast"], "correctAnswer": "The Smong poem about the receding sea", "points": 10 }
+            ]
+        },
+        "comic": {
+            "title": "Comic: Siaga, the Smart Cat",
+            "description": "Siaga's adventure teaches children about disaster preparedness.",
+            "panels": [
+                { "title": "A Different Cat", "text": "Siaga loved listening to the elders' stories about earthquakes and tsunamis, unlike his friends who loved to sleep." },
+                { "title": "The Ground Shakes!", "text": "When the ground shook, Siaga shouted, \"Earthquake! Remember the three steps: Drop, Cover, and Hold On!\"" },
+                { "title": "Following the Expert", "text": "His confused friends saw what Siaga was doing and immediately followed his lead." },
+                { "title": "To a Safe Place", "text": "After the shaking stopped, Siaga calmly led his friends to a safe open field." },
+                { "title": "Tsunami Warning", "text": "\"We have to go to high ground,\" said Siaga, \"just in case the sea recedes!\" He remembered the Smong story." },
+                { "title": "Everyone is Safe", "text": "Because of Siaga, all his friends were safe and learned how to protect themselves during a disaster." }
+            ]
+        }
+    },
+    "gunungAruna": {
       "video": {
-        "title": "Animated Video: The Adventures of Siaga",
-        "description": "Watch the adventure of Siaga the smart cat in an animated video that teaches children important steps during an earthquake.",
-        "info": "This video uses cheerful visuals and a catchy song to help children understand the concept of disaster preparedness."
+        "title": "Animated Video: The Aruna Go-Bag",
+        "description": "Join Rafi in an animated adventure showing the importance of being prepared for a volcanic eruption.",
+        "info": "This video is designed for children to learn the essential items of a disaster go-bag in a fun and memorable way."
       },
       "quiz": {
-        "title": "Smart Cat Quiz",
-        "description": "Test your understanding of earthquake preparedness with Siaga!",
+        "title": "Volcano Ready Quiz",
+        "description": "Are you prepared for a volcanic eruption? Test your knowledge!",
         "questions": [
-          { "question": "What are the three steps Siaga teaches to do during an earthquake?", "options": ["Run, scream, and jump", "Drop, cover, and hold on", "Stand, look, and wait", "Eat, drink, and sleep"], "correctAnswer": "Drop, cover, and hold on", "points": 10 },
-          { "question": "Where did Siaga take his friends after the earthquake shaking stopped?", "options": ["Back inside the house", "To the beach", "To an open field far from buildings", "Up a tree"], "correctAnswer": "To an open field far from buildings", "points": 10 },
-          { "question": "What local wisdom did Siaga remember after the earthquake stopped?", "options": ["The story of Gayo Coffee", "The Smong poem about the receding sea", "How to build a Rumoh Aceh", "The taboo of planting trees on the coast"], "correctAnswer": "The Smong poem about the receding sea", "points": 10 }
+          { "question": "What was the most important first action Rafi took when the mountain started smoking?", "options": ["Took a photo", "Grabbed his Go-Bag", "Called his friends", "Continued playing"], "correctAnswer": "Grabbed his Go-Bag", "points": 10 },
+          { "question": "Why is a mask an important item in a volcanic eruption Go-Bag?", "options": ["To look cool", "To protect from rain", "To filter volcanic ash from the air", "To keep your face warm"], "correctAnswer": "To filter volcanic ash from the air", "points": 10 },
+          { "question": "What does this story teach about disaster mitigation?", "options": ["It's only about theory", "It's about caring, cooperation, and readiness", "Only rescue teams should act", "You should always panic"], "correctAnswer": "It's about caring, cooperation, and readiness", "points": 10 }
         ]
       },
       "comic": {
-        "title": "Comic: Siaga, the Smart Cat",
-        "description": "Siaga's adventure teaches children about disaster preparedness.",
+        "title": "Comic: Rafi and Mount Aruna",
+        "description": "A visual story of how a prepared young boy helps his community face a volcanic threat.",
         "panels": [
-          { "title": "A Different Cat", "text": "Siaga loved listening to the elders' stories about earthquakes and tsunamis, unlike his friends who loved to sleep." },
-          { "title": "The Ground Shakes!", "text": "When the ground shook, Siaga shouted, \"Earthquake! Remember the three steps: Drop, Cover, and Hold On!\"" },
-          { "title": "Following the Expert", "text": "His confused friends saw what Siaga was doing and immediately followed his lead." },
-          { "title": "To a Safe Place", "text": "After the shaking stopped, Siaga calmly led his friends to a safe open field." },
-          { "title": "Tsunami Warning", "text": "\"We have to go to high ground,\" said Siaga, \"just in case the sea recedes!\" He remembered the Smong story." },
-          { "title": "Everyone is Safe", "text": "Because of Siaga, all his friends were safe and learned how to protect themselves during a disaster." }
+          { "title": "The Smoking Mountain", "text": "Rafi saw Mount Aruna smoking. He remembered his teacher's words: 'Don't panic, but be prepared.'" },
+          { "title": "The Aruna Go-Bag", "text": "He quickly grabbed his 'Aruna Go-Bag', which contained a flashlight, food, water, and a mask." },
+          { "title": "Helping Grandmother", "text": "Rafi calmly helped his grandmother and guided her towards the designated evacuation point." },
+          { "title": "A Community in Action", "text": "On the way, he saw his neighbors helping each other, following the officials' directions in an orderly manner." },
+          { "title": "Together at Evacuation", "text": "At the evacuation site, everyone shared food and stories, creating a sense of calm and togetherness." },
+          { "title": "Safe at Dawn", "text": "The next morning, the village was safe, covered in ash but intact. Rafi smiled, knowing they were safe because they were prepared." }
         ]
       }
     }
