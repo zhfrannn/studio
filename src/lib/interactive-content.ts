@@ -413,12 +413,12 @@ export const getInteractiveContent = (dict: Dictionary): { [key: string]: Intera
             comic: {
                 ...contentDict.likuifaksiPalu.comic,
                 panels: [
-                    { ...contentDict.likuifaksiPalu.comic.panels[0], imageUrl: 'https://picsum.photos/seed/palu-comic-1/800/600', imageHint: 'girl studying earthquake shaking' },
-                    { ...contentDict.likuifaksiPalu.comic.panels[1], imageUrl: 'https://picsum.photos/seed/palu-comic-2/800/600', imageHint: 'receding sea ocean floor' },
-                    { ...contentDict.likuifaksiPalu.comic.panels[2], imageUrl: 'https://picsum.photos/seed/palu-comic-3/800/600', imageHint: 'family running uphill' },
-                    { ...contentDict.likuifaksiPalu.comic.panels[3], imageUrl: 'https://picsum.photos/seed/palu-comic-4/800/600', imageHint: 'tsunami wave hitting city view from hill' },
-                    { ...contentDict.likuifaksiPalu.comic.panels[4], imageUrl: 'https://picsum.photos/seed/palu-comic-5/800/600', imageHint: 'ground turning to mud liquefaction' },
-                    { ...contentDict.likuifaksiPalu.comic.panels[5], imageUrl: 'https://picsum.photos/seed/palu-comic-6/800/600', imageHint: 'girl looking at evacuation route map' },
+                    { ...contentDict.likuifaksiPalu.comic.panels[0], imageUrl: 'https://i.ibb.co/zV44g8Dk/Gemini-Generated-Image-h7i01nh7i01nh7i0.png', imageHint: 'girl studying earthquake shaking' },
+                    { ...contentDict.likuifaksiPalu.comic.panels[1], imageUrl: 'https://i.ibb.co/XZTGJDYT/Gemini-Generated-Image-q17tfuq17tfuq17t.png', imageHint: 'receding sea ocean floor' },
+                    { ...contentDict.likuifaksiPalu.comic.panels[2], imageUrl: 'https://i.ibb.co/C3ChpdFv/Gemini-Generated-Image-27psyz27psyz27ps.png', imageHint: 'family running uphill' },
+                    { ...contentDict.likuifaksiPalu.comic.panels[3], imageUrl: 'https://i.ibb.co/fGL6wzzw/Gemini-Generated-Image-odapizodapizodap.png', imageHint: 'tsunami wave hitting city view from hill' },
+                    { ...contentDict.likuifaksiPalu.comic.panels[4], imageUrl: 'https://i.ibb.co/spJdByRz/Gemini-Generated-Image-pjmczopjmczopjmc.png', imageHint: 'ground turning to mud liquefaction' },
+                    { ...contentDict.likuifaksiPalu.comic.panels[5], imageUrl: 'https://i.ibb.co/Pvswyk53/Gemini-Generated-Image-z5j73ez5j73ez5j7.png', imageHint: 'girl looking at evacuation route map' },
                 ]
             },
         }
@@ -446,6 +446,7 @@ export const getMasterQuiz = (dict: Dictionary): Quiz => {
         ...getInteractiveContent(dict)['siaga-si-kucing-cerdas'].quiz!.questions,
         ...getInteractiveContent(dict)['gunung-aruna-siap-siaga'].quiz!.questions,
         ...getInteractiveContent(dict)['angin-puting-beliung'].quiz!.questions,
+        ...getInteractiveContent(dict)['likuifaksi-palu'].quiz!.questions,
     ];
 
     const shuffled = allQuestions.sort(() => 0.5 - Math.random());
