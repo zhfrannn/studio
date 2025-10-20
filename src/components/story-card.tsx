@@ -24,7 +24,7 @@ interface StoryCardProps {
 }
 
 const StoryCard = ({ story }: StoryCardProps) => {
-  const [stats, setStats] = useState({ views: 0, likes: 0 });
+  const [stats, setStats] = useState<{ views: number; likes: number } | null>(null);
   const { dictionary } = useLanguage();
   const storyGridDict = dictionary.storyGrid;
 
@@ -81,11 +81,11 @@ const StoryCard = ({ story }: StoryCardProps) => {
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-1.5">
                 <Eye className="h-4 w-4" />
-                <span>{stats.views}</span>
+                <span>{stats ? stats.views : '...'}</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <Heart className="h-4 w-4" />
-                <span>{stats.likes}</span>
+                <span>{stats ? stats.likes : '...'}</span>
               </div>
             </div>
             <Button
