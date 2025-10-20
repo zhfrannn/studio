@@ -366,7 +366,7 @@ export const getInteractiveContent = (dict: Dictionary): { [key: string]: Intera
             video: {
                 title: contentDict.gunungAruna.video.title,
                 description: contentDict.gunungAruna.video.description,
-                embedUrl: 'https://www.canva.com/design/DAG1-z4-Q4A/view',
+                embedUrl: 'https://www.canva.com/design/DAG2Ub_f4fM/Cmj-UjmwjsjdsMgHp_VIwg/watch?embed',
                 info: contentDict.gunungAruna.video.info,
             },
             quiz: contentDict.gunungAruna.quiz,
