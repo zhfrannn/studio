@@ -373,12 +373,12 @@ export const getInteractiveContent = (dict: Dictionary): { [key: string]: Intera
             comic: {
                 ...contentDict.gunungAruna.comic,
                 panels: [
-                    { ...contentDict.gunungAruna.comic.panels[0], imageUrl: 'https://i.ibb.co/hKj91fM/Gemini-Generated-Image-1.png', imageHint: 'boy looking at smoking volcano' },
-                    { ...contentDict.gunungAruna.comic.panels[1], imageUrl: 'https://i.ibb.co/3k8Wz3t/Gemini-Generated-Image.png', imageHint: 'boy grabbing go-bag' },
-                    { ...contentDict.gunungAruna.comic.panels[2], imageUrl: 'https://i.ibb.co/8mjyvGP/Gemini-Generated-Image-2.png', imageHint: 'boy helping grandmother' },
-                    { ...contentDict.gunungAruna.comic.panels[3], imageUrl: 'https://i.ibb.co/MPr8R3T/Gemini-Generated-Image-3.png', imageHint: 'community evacuating orderly' },
-                    { ...contentDict.gunungAruna.comic.panels[4], imageUrl: 'https://i.ibb.co/k0n7s2t/Gemini-Generated-Image-5.png', imageHint: 'people sharing food at evacuation center' },
-                    { ...contentDict.gunungAruna.comic.panels[5], imageUrl: 'https://i.ibb.co/bF9P8b7/Gemini-Generated-Image-6.png', imageHint: 'boy smiling at village covered in ash' },
+                    { ...contentDict.gunungAruna.comic.panels[0], imageUrl: 'https://i.ibb.co/99CGxdNp/Gemini-Generated-Image-70jw6w70jw6w70jw.png', imageHint: 'boy looking at smoking volcano' },
+                    { ...contentDict.gunungAruna.comic.panels[1], imageUrl: 'https://i.ibb.co/gZXbsvYD/Gemini-Generated-Image-btt46gbtt46gbtt4.png', imageHint: 'boy grabbing go-bag' },
+                    { ...contentDict.gunungAruna.comic.panels[2], imageUrl: 'https://i.ibb.co/3yDzK0xQ/Gemini-Generated-Image-1tzczx1tzczx1tzc.png', imageHint: 'boy helping grandmother' },
+                    { ...contentDict.gunungAruna.comic.panels[3], imageUrl: 'https://i.ibb.co/Df1hFg0Y/Gemini-Generated-Image-7p5r3p7p5r3p7p5r.png', imageHint: 'community evacuating orderly' },
+                    { ...contentDict.gunungAruna.comic.panels[4], imageUrl: 'https://i.ibb.co/99RRdFs0/Gemini-Generated-Image-67opkp67opkp67op.png', imageHint: 'people sharing food at evacuation center' },
+                    { ...contentDict.gunungAruna.comic.panels[5], imageUrl: 'https://i.ibb.co/sJFV0tf2/Gemini-Generated-Image-vx0qqgvx0qqgvx0q.png', imageHint: 'boy smiling at village covered in ash' },
                 ]
             },
         }
