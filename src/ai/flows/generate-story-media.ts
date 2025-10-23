@@ -1,14 +1,6 @@
 'use server';
 
-/**
- * @fileOverview This file defines a Genkit flow for generating interactive media (video, comic, quiz) from a given story using AI.
- *
- * - generateStoryMedia - A function that takes a story as input and returns generated media URLs.
- * - GenerateStoryMediaInput - The input type for the generateStoryMedia function.
- * - GenerateStoryMediaOutput - The return type for the generateStoryMedia function.
- */
-
-import { ai } from '@/ai/genkit';
+import { ai } from '@/ai/genkit'; // <-- Cukup impor 'ai'
 import { z } from 'genkit';
 
 const GenerateStoryMediaInputSchema = z.object({
@@ -27,6 +19,14 @@ const GenerateStoryMediaOutputSchema = z.object({
 
 export type GenerateStoryMediaOutput = z.infer<typeof GenerateStoryMediaOutputSchema>;
 
+const generateStoryMediaPrompt = ai.definePrompt({
+  name: 'generateStoryMediaPrompt',
+  input: {schema: GenerateStoryMediaInputSchema},
+  output: {schema: GenerateStoryMediaOutputSchema},
+  prompt: `You are a creative AI assistant. Based on the following story, you would normally generate media. For now, just acknowledge the request.
+
+  Story Text: {{{storyText}}}`
+});
 
 const generateStoryMediaFlow = ai.defineFlow(
   {
@@ -35,16 +35,11 @@ const generateStoryMediaFlow = ai.defineFlow(
     outputSchema: GenerateStoryMediaOutputSchema,
   },
   async input => {
-    // This is a placeholder for the actual media generation logic.
-    // In a real implementation, you would call AI models here to:
-    // 1. Generate a script for a video.
-    // 2. Generate video scenes using a text-to-video model.
-    // 3. Generate comic panels using a text-to-image model.
-    // 4. Generate quiz questions and answers.
-
-    console.log(`Generating media for story: ${input.storyText.substring(0, 50)}...`);
-
-    // Placeholder logic returns undefined URLs.
+    // Tidak perlu lagi parameter { model: ... } karena sudah diatur secara global
+    // const { output } = await generateStoryMediaPrompt(input);
+    // return output!;
+    
+    console.log(`Placeholder: Media generation requested for story: ${input.storyText.substring(0, 50)}...`);
     return {
       videoUrl: undefined,
       comicUrl: undefined,
@@ -52,7 +47,6 @@ const generateStoryMediaFlow = ai.defineFlow(
     };
   }
 );
-
 
 export async function generateStoryMedia(
   input: GenerateStoryMediaInput

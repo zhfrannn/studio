@@ -1,14 +1,6 @@
 'use server';
 
-/**
- * @fileOverview This file defines a Genkit flow for automatically tagging stories with relevant themes using AI.
- *
- * - tagStoriesWithThemes - A function that triggers the AI theme tagging process.
- * - TagStoriesWithThemesInput - The input type for the tagStoriesWithThemes function, which includes the story text.
- * - TagStoriesWithThemesOutput - The return type for the tagStoriesWithThemes function, which is an array of themes.
- */
-
-import {ai} from '@/ai/genkit';
+import {ai} from '@/ai/genkit'; // <-- Cukup impor 'ai'
 import {z} from 'zod';
 
 const TagStoriesWithThemesInputSchema = z.object({
@@ -54,6 +46,7 @@ const tagStoriesWithThemesFlow = ai.defineFlow(
     outputSchema: TagStoriesWithThemesOutputSchema,
   },
   async input => {
+    // Tidak perlu lagi parameter { model: ... } karena sudah diatur secara global
     const {output} = await tagStoriesWithThemesPrompt(input);
     return output!;
   }
