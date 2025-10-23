@@ -1,3 +1,4 @@
+
 'use client';
 import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
@@ -10,11 +11,27 @@ import {
 } from '@/ai/flows/generate-slides';
 import SlideCarousel from '@/components/slide-carousel';
 import { type Slide } from '@/lib/eduboard-templates';
+import { useLanguage } from '@/context/language-context';
+
+const imagePlaceholders = [
+    'https://cdn.dribbble.com/userupload/26382361/file/original-a94049296846fa5218859ac34ea57b23.png',
+    'https://cdn.dribbble.com/userupload/27796411/file/original-992aa78e02707e86da76830a224a2f2d.png',
+    'https://cdn.dribbble.com/userupload/32247153/file/original-1fe677ceff3cabb6bf2037dc808ace4d.jpg',
+    'https://cdn.dribbble.com/userupload/16865134/file/original-ac6d283eaa706824abed43da7e901dd2.jpeg',
+    'https://cdn.dribbble.com/userupload/16865092/file/original-286765ae0de4074597bfb6584a571c60.jpeg',
+    'https://cdn.dribbble.com/userupload/32707329/file/original-01992760209b192c3d12d849dc7ee6d4.jpeg',
+    'https://cdn.dribbble.com/userupload/13448080/file/original-e275af77b98be7d7d015e61704339958.png',
+    'https://cdn.dribbble.com/userupload/29829998/file/original-94b1514fe3d528f62a84cf250c5efc1f.png',
+];
+
 
 const PresentationGenerator = () => {
   const [storyText, setStoryText] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [generatedSlides, setGeneratedSlides] = useState<Slide[] | null>(null);
+  const { dictionary } = useLanguage();
+  const dict = dictionary.eduboard;
+
 
   const handleGenerate = async () => {
     if (!storyText.trim()) return;
@@ -30,10 +47,11 @@ const PresentationGenerator = () => {
         title: slide.title,
         description: slide.description,
         points: slide.points,
-        imageUrl: `https://picsum.photos/seed/${index}/1280/720`,
-        themeColor: 'oklch(60% 0.15 240)',
+        imageUrl: imagePlaceholders[index % imagePlaceholders.length],
+        themeColor: `oklch(60% 0.15 ${200 + index * 20})`, // Varying color
         metadata: {
           source: slide.imagePrompt,
+          author: slide.metadata?.author,
         },
       }));
       setGeneratedSlides(formattedSlides);
@@ -51,7 +69,7 @@ const PresentationGenerator = () => {
           AI Presentation Generator
         </h2>
         <p className="mt-2 max-w-2xl text-muted-foreground">
-          Provide your story, and the AI will structure it into a 5-slide
+          Provide your story, and the AI will structure it into an 8-slide
           presentation, complete with titles, content, and image ideas.
         </p>
       </div>
@@ -96,7 +114,7 @@ const PresentationGenerator = () => {
         {generatedSlides && (
           <div className="w-full">
             <h3 className="mb-4 text-center font-headline text-2xl font-bold">
-              Your Presentation is Ready!
+              {dict.slidePreviewTitle}
             </h3>
             <SlideCarousel slides={generatedSlides} />
           </div>
