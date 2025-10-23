@@ -30,6 +30,8 @@ import {
   BrainCircuit,
   GraduationCap,
   Users2,
+  HeartHandshake,
+  School,
 } from 'lucide-react';
 import InteractiveMap from '@/components/interactive-map';
 import { Badge } from '@/components/ui/badge';
@@ -524,6 +526,32 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <MotionWrapper
+        as="section"
+        className="container relative z-20 mx-auto -mt-16 px-4"
+      >
+        <div className="rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 p-8 text-white shadow-2xl">
+          <div className="grid items-center gap-6 text-center md:grid-cols-3 md:text-left">
+            <div className="flex justify-center md:justify-start">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/20">
+                <HeartHandshake className="h-8 w-8" />
+              </div>
+            </div>
+            <div className="md:col-span-2">
+              <h2 className="font-headline text-2xl font-bold md:text-3xl">
+                Free Forever for Schools, NGOs, & Communities
+              </h2>
+              <p className="mt-2 opacity-90">
+                We are committed to empowering change. Our platform and its
+                tools are freely accessible for all educational and
+                non-profit organizations dedicated to building a better, more
+                resilient future.
+              </p>
+            </div>
+          </div>
+        </div>
+      </MotionWrapper>
 
       <MotionWrapper
         as="section"
