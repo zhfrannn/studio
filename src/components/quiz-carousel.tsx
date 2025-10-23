@@ -6,23 +6,30 @@ import useEmblaCarousel, {
   type EmblaCarouselType,
   type EmblaOptionsType,
 } from 'embla-carousel-react';
-import { quizCardTemplate } from '@/lib/eduboard-templates';
+import { QuizCardData } from '@/lib/eduboard-templates';
 import QuizCardSlide from '@/components/quiz-card-slide';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, ArrowRight, RefreshCw } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 import { useLanguage } from '@/context/language-context';
 
+interface QuizCarouselProps {
+    quiz: QuizCardData[];
+}
+
 const OPTIONS: EmblaOptionsType = { loop: false, draggable: false };
 
-export default function QuizCarousel() {
+export default function QuizCarousel({ quiz }: QuizCarouselProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS);
   const [prevBtnDisabled, setPrevBtnDisabled] = useState(true);
   const [nextBtnDisabled, setNextBtnDisabled] = useState(true);
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [key, setKey] = useState(0); // Key to force re-render
+  const [key, setKey] = useState(Date.now()); // Key to force re-render
   const { dictionary } = useLanguage();
   const dict = dictionary.eduboard;
+  const [totalScore, setTotalScore] = useState(0);
+  const [answeredCount, setAnsweredCount] = useState(0);
+
 
   const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [
     emblaApi,
@@ -33,8 +40,18 @@ export default function QuizCarousel() {
   
   const restartQuiz = useCallback(() => {
     emblaApi?.scrollTo(0);
-    setKey(prevKey => prevKey + 1); // Increment key to re-render children
+    setKey(Date.now()); 
+    setTotalScore(0);
+    setAnsweredCount(0);
   },[emblaApi]);
+
+  const handleAnswered = (points: number) => {
+    setTotalScore(prev => prev + points);
+    setAnsweredCount(prev => prev + 1);
+    if (selectedIndex < quiz.length - 1) {
+        setTimeout(() => scrollNext(), 1500);
+    }
+  };
 
   const onSelect = useCallback((emblaApi: EmblaCarouselType) => {
     setSelectedIndex(emblaApi.selectedScrollSnap());
@@ -49,36 +66,32 @@ export default function QuizCarousel() {
     emblaApi.on('select', onSelect);
   }, [emblaApi, onSelect]);
   
-  const progress = ((selectedIndex + 1) / quizCardTemplate.length) * 100;
+  const progress = ((selectedIndex + (answeredCount > selectedIndex ? 1 : 0)) / quiz.length) * 100;
+  const quizFinished = answeredCount === quiz.length;
+
 
   return (
     <div className="w-full max-w-2xl mx-auto">
-       <div className="mb-8 text-center">
-        <h1 className="font-headline text-3xl md:text-4xl">
-          {dict.quizPreviewTitle}
-        </h1>
-        <p className="mx-auto mt-2 max-w-2xl text-muted-foreground">
-            {dict.quizPreviewDescription}
-        </p>
-      </div>
-      
       <div className="mb-4 space-y-2">
         <Progress value={progress} className="h-2"/>
-        <p className="text-sm text-center text-muted-foreground">Card {selectedIndex + 1} of {quizCardTemplate.length}</p>
+        <div className="flex justify-between text-sm text-muted-foreground">
+            <span>Card {selectedIndex + 1} of {quiz.length}</span>
+            <span>Score: {totalScore}</span>
+        </div>
       </div>
 
       <div className="overflow-hidden" ref={emblaRef} key={key}>
         <div className="flex">
-          {quizCardTemplate.map((slide, index) => (
+          {quiz.map((slide, index) => (
             <div
               className="relative min-w-0 flex-shrink-0 flex-grow-0 basis-full"
-              key={slide.id}
+              key={`${slide.id}-${key}`}
             >
               <div className="p-1">
                 <QuizCardSlide 
                   slide={slide} 
-                  onAnswered={scrollNext}
-                  isLastCard={index === quizCardTemplate.length - 1}
+                  onAnswered={handleAnswered}
+                  isLastCard={index === quiz.length - 1}
                 />
               </div>
             </div>
@@ -86,39 +99,16 @@ export default function QuizCarousel() {
         </div>
       </div>
 
-      <div className="mt-4 grid grid-cols-[auto_1fr_auto] items-center gap-4">
-        <Button
-          onClick={scrollPrev}
-          disabled={prevBtnDisabled}
-          variant="outline"
-          size="icon"
-        >
-          <ArrowLeft className="h-4 w-4" />
-          <span className="sr-only">Previous slide</span>
-        </Button>
-
-        <div className="flex justify-center">
-           <Button
-              onClick={restartQuiz}
-              variant="secondary"
-            >
+      <div className="mt-4 flex justify-center items-center gap-4">
+        {quizFinished ? (
+            <Button onClick={restartQuiz} variant="secondary">
               <RefreshCw className="mr-2 h-4 w-4" />
               {dict.restartQuiz}
             </Button>
-        </div>
-
-        <Button
-          onClick={scrollNext}
-          disabled={nextBtnDisabled}
-          variant="outline"
-          size="icon"
-        >
-          <ArrowRight className="h-4 w-4" />
-          <span className="sr-only">Next slide</span>
-        </Button>
+        ) : (
+            <div className='text-sm text-muted-foreground'>Answer the question to proceed</div>
+        )}
       </div>
     </div>
   );
 }
-
-    

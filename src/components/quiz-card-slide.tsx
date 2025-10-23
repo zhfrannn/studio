@@ -1,16 +1,17 @@
+
 'use client';
 
 import { useState } from 'react';
 import { QuizCardData } from '@/lib/eduboard-templates';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { CheckCircle, XCircle, Lightbulb, Waves, ShieldAlert, ListChecks } from 'lucide-react';
+import { CheckCircle, XCircle, Lightbulb, Waves, ShieldAlert, ListChecks, HeartHandshake } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface QuizCardSlideProps {
   slide: QuizCardData;
-  onAnswered: () => void;
+  onAnswered: (points: number) => void;
   isLastCard: boolean;
 }
 
@@ -19,6 +20,7 @@ const iconMapping: { [key: string]: React.ElementType } = {
   ShieldAlert,
   ListChecks,
   Lightbulb,
+  HeartHandshake,
 };
 
 export default function QuizCardSlide({ slide, onAnswered, isLastCard }: QuizCardSlideProps) {
@@ -26,18 +28,13 @@ export default function QuizCardSlide({ slide, onAnswered, isLastCard }: QuizCar
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
 
   const handleSelectAnswer = (option: string) => {
-    if (selectedAnswer !== null) return; // Prevent changing answer
+    if (selectedAnswer !== null) return; 
 
     const correct = option === slide.correctAnswer;
     setSelectedAnswer(option);
     setIsCorrect(correct);
     
-    // Automatically move to next card after a delay
-    setTimeout(() => {
-        if (!isLastCard) {
-            onAnswered();
-        }
-    }, 2000);
+    onAnswered(correct ? slide.points : 0);
   };
   
   const IconComponent = iconMapping[slide.icon] || Lightbulb;

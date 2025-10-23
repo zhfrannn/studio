@@ -268,6 +268,7 @@ export interface QuizCardData {
     explanation: string;
     icon: string;
     themeColor: string;
+    points: number;
 }
 
 export const quizCardTemplate: QuizCardData[] = [
@@ -286,6 +287,7 @@ export const quizCardTemplate: QuizCardData[] = [
         explanation: "The drastic receding of the sea is a typical phenomenon that occurs because the sea water is pulled towards the earthquake's epicenter before returning as a giant wave.",
         icon: 'Waves',
         themeColor: 'oklch(60% 0.15 200)', // Cyan
+        points: 10,
     },
     {
         id: 'quiz-2',
@@ -302,6 +304,7 @@ export const quizCardTemplate: QuizCardData[] = [
         explanation: "The 'Drop, Cover, Hold On' method is the international standard for protecting yourself from debris during an earthquake.",
         icon: 'ShieldAlert',
         themeColor: 'oklch(60% 0.25 0)', // Red
+        points: 10,
     },
     {
         id: 'quiz-3',
@@ -318,6 +321,7 @@ export const quizCardTemplate: QuizCardData[] = [
         explanation: "A Go-Bag focuses on essential survival needs. Entertainment like a game console is not a priority.",
         icon: 'ListChecks',
         themeColor: 'oklch(60% 0.18 150)', // Green
+        points: 10,
     }
 ];
 

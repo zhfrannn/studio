@@ -6,3 +6,5 @@ config();
 import '@/ai/flows/tag-stories-with-themes';
 import '@/ai/flows/generate-story-recommendation';
 import '@/ai/flows/generate-story-media';
+import '@/ai/flows/generate-slides';
+import '@/ai/flows/generate-quiz';
