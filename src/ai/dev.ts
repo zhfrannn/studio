@@ -9,3 +9,4 @@ import '@/ai/flows/generate-story-media';
 import '@/ai/flows/generate-slides';
 import '@/ai/flows/generate-quiz';
 import '@/ai/flows/generate-infographic';
+import '@/ai/flows/generate-minigame';

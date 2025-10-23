@@ -15,6 +15,7 @@ import PresentationGenerator from '@/components/eduboard/presentation-generator'
 import QuizGenerator from '@/components/eduboard/quiz-generator';
 import PrintableContent from '@/components/printable-content';
 import { Button } from '@/components/ui/button';
+import MiniGameGenerator from '@/components/minigame/minigame-generator';
 
 // 1. UPDATE EDITOR MODES
 type EditorMode =
@@ -120,8 +121,9 @@ export default function EduBoardPage() {
         return <QuizGenerator />;
       case 'printable':
         return <PrintableContent />;
-      case 'storyboard':
       case 'minigame':
+        return <MiniGameGenerator />;
+      case 'storyboard':
       default:
         return (
           <div className="py-12 text-center text-muted-foreground">
