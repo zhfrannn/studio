@@ -1,7 +1,7 @@
 
 'use client';
 
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -38,7 +38,6 @@ import {
   Loader2,
   Bot,
   Send,
-  User,
   Upload,
   Download,
 } from 'lucide-react';
@@ -501,12 +500,12 @@ function AiHelper() {
   const { dictionary, language } = useLanguage();
   const helperDict = dictionary.home.shareStory.aiHelper;
 
-  const [messages, setMessages] = useState<AiHelperMessage[]>([
+  const [messages, setMessages] = React.useState<AiHelperMessage[]>([
     { role: 'bot', text: helperDict.initialMessage },
   ]);
-  const [input, setInput] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-  const scrollAreaRef = useRef<HTMLDivElement>(null);
+  const [input, setInput] = React.useState('');
+  const [isLoading, setIsLoading] = React.useState(false);
+  const scrollAreaRef = React.useRef<HTMLDivElement>(null);
 
   const handleSend = async () => {
     if (input.trim() === '' || isLoading) return;
@@ -517,7 +516,10 @@ function AiHelper() {
     setIsLoading(true);
 
     try {
-      const result = await generateStoryRecommendation({ query: input, language });
+      const result = await generateStoryRecommendation({
+        query: input,
+        language,
+      });
       const botMessage: AiHelperMessage = {
         role: 'bot',
         text: result.response,
@@ -618,7 +620,11 @@ function AiHelper() {
             placeholder={helperDict.placeholder}
             disabled={isLoading}
           />
-          <Button type="submit" size="icon" disabled={isLoading || !input.trim()}>
+          <Button
+            type="submit"
+            size="icon"
+            disabled={isLoading || !input.trim()}
+          >
             <Send className="h-4 w-4" />
           </Button>
         </form>
