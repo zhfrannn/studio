@@ -27,7 +27,6 @@ import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Separator } from '@/components/ui/separator';
-import { getTranslatedStories } from '@/lib/data';
 import { getInteractiveContent, getMasterQuiz } from '@/lib/interactive-content';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -36,6 +35,7 @@ import { cn } from '@/lib/utils';
 import MotionWrapper from '@/components/motion-wrapper';
 import InteractiveQuiz from '@/components/interactive-quiz';
 import { useLanguage } from '@/context/language-context';
+import { useStories } from '@/context/story-context';
 
 const getThemeMeta = (theme: string) => {
   if (theme.includes('Disaster')) {
@@ -75,14 +75,13 @@ const getThemeMeta = (theme: string) => {
   };
 };
 
-
 export default function InteractiveLearningHub() {
-  const { dictionary, language } = useLanguage();
+  const { dictionary } = useLanguage();
   const dict = dictionary.interactive;
-  const stories = getTranslatedStories({ lang: language });
+  const { stories } = useStories();
   const interactiveContent = getInteractiveContent(dictionary);
   const masterQuiz = getMasterQuiz(dictionary);
-  
+
   const leaderboardData = [
     { name: dict.tsunamiExpert, score: '30/30', rank: 1, initial: 'TE' },
     { name: dict.disasterPrepared, score: '28/30', rank: 2, initial: 'DP' },
@@ -101,12 +100,16 @@ export default function InteractiveLearningHub() {
   ];
 
   const quickAccessStories = stories.slice(0, 5);
-  const videosToShow = stories.filter(s => interactiveContent[s.id]?.video?.embedUrl).slice(0, 2);
-  const comicsToShow = stories.filter(s => interactiveContent[s.id]?.comic).slice(0, 2);
+  const videosToShow = stories
+    .filter(s => interactiveContent[s.id]?.video?.embedUrl)
+    .slice(0, 2);
+  const comicsToShow = stories
+    .filter(s => interactiveContent[s.id]?.comic)
+    .slice(0, 2);
 
   return (
     <div className="space-y-16 py-12 md:space-y-24">
-      <MotionWrapper className="container mx-auto px-4 rounded-2xl">
+      <MotionWrapper className="container mx-auto rounded-2xl px-4">
         <div className="mb-12 text-center">
           <h1 className="font-headline text-4xl font-bold md:text-5xl">
             {dict.title}
@@ -120,7 +123,7 @@ export default function InteractiveLearningHub() {
           <main className="col-span-1 space-y-8 lg:col-span-2">
             {/* Master Quiz */}
             <MotionWrapper>
-               <InteractiveQuiz quiz={masterQuiz} />
+              <InteractiveQuiz quiz={masterQuiz} />
             </MotionWrapper>
 
             {/* Educational Videos */}
@@ -146,12 +149,17 @@ export default function InteractiveLearningHub() {
                           className="object-cover"
                           data-ai-hint={story.media.featuredImageHint}
                         />
-                         <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-                           <Button asChild variant="ghost" size="icon" className="h-12 w-12 rounded-full bg-white/80 text-primary shadow-lg hover:bg-white">
-                              <Link href={`/story/${story.id}`}>
-                                <Film className="h-6 w-6" />
-                              </Link>
-                           </Button>
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+                          <Button
+                            asChild
+                            variant="ghost"
+                            size="icon"
+                            className="h-12 w-12 rounded-full bg-white/80 text-primary shadow-lg hover:bg-white"
+                          >
+                            <Link href={`/story/${story.id}`}>
+                              <Film className="h-6 w-6" />
+                            </Link>
+                          </Button>
                         </div>
                         <Badge
                           variant="secondary"
@@ -161,7 +169,9 @@ export default function InteractiveLearningHub() {
                         </Badge>
                       </div>
                       <CardHeader>
-                        <CardTitle className="text-lg font-bold">{story.title}</CardTitle>
+                        <CardTitle className="text-lg font-bold">
+                          {story.title}
+                        </CardTitle>
                         <CardDescription className="line-clamp-2">
                           {story.summary}
                         </CardDescription>
@@ -192,55 +202,73 @@ export default function InteractiveLearningHub() {
               </div>
             </MotionWrapper>
 
-             {/* Interactive Comics Section */}
-             <MotionWrapper as="section">
-                <div className="mb-6">
-                  <h2 className="flex items-center gap-3 font-headline text-3xl font-bold">
-                    <Newspaper className="h-8 w-8 text-orange-500" />
-                    {dict.comicsTitle}
-                  </h2>
-                  <p className="mt-1 text-muted-foreground">
-                    {dict.comicsDescription}
-                  </p>
-                </div>
-                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                  {comicsToShow.map((story, i) => (
-                    <MotionWrapper key={story.id} delay={i * 0.1}>
-                      <Card className="overflow-hidden">
-                        <div className="relative aspect-video bg-muted">
-                          <Image
-                            src={story.media.featuredImage}
-                            alt={story.title}
-                            fill
-                            className="object-cover"
-                            data-ai-hint={story.media.featuredImageHint}
-                          />
-                          <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-                           <Button asChild variant="ghost" size="icon" className="h-12 w-12 rounded-full bg-white/80 text-primary shadow-lg hover:bg-white">
-                              <Link href={`/story/${story.id}`}>
-                                <Newspaper className="h-6 w-6" />
-                              </Link>
-                           </Button>
-                          </div>
-                          <Badge variant="secondary" className="absolute left-2 top-2">
-                            {story.aiThemes[0]}
-                          </Badge>
+            {/* Interactive Comics Section */}
+            <MotionWrapper as="section">
+              <div className="mb-6">
+                <h2 className="flex items-center gap-3 font-headline text-3xl font-bold">
+                  <Newspaper className="h-8 w-8 text-orange-500" />
+                  {dict.comicsTitle}
+                </h2>
+                <p className="mt-1 text-muted-foreground">
+                  {dict.comicsDescription}
+                </p>
+              </div>
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                {comicsToShow.map((story, i) => (
+                  <MotionWrapper key={story.id} delay={i * 0.1}>
+                    <Card className="overflow-hidden">
+                      <div className="relative aspect-video bg-muted">
+                        <Image
+                          src={story.media.featuredImage}
+                          alt={story.title}
+                          fill
+                          className="object-cover"
+                          data-ai-hint={story.media.featuredImageHint}
+                        />
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+                          <Button
+                            asChild
+                            variant="ghost"
+                            size="icon"
+                            className="h-12 w-12 rounded-full bg-white/80 text-primary shadow-lg hover:bg-white"
+                          >
+                            <Link href={`/story/${story.id}`}>
+                              <Newspaper className="h-6 w-6" />
+                            </Link>
+                          </Button>
                         </div>
-                        <CardHeader>
-                          <CardTitle className="text-lg font-bold">{story.title}</CardTitle>
-                          <CardDescription className="line-clamp-2">{story.summary}</CardDescription>
-                        </CardHeader>
-                        <CardFooter>
-                           <Button variant="secondary" size="sm" asChild className="w-full">
-                              <Link href={`/story/${story.id}`}>{dict.readComic}</Link>
-                           </Button>
-                        </CardFooter>
-                      </Card>
-                    </MotionWrapper>
-                  ))}
-                </div>
+                        <Badge
+                          variant="secondary"
+                          className="absolute left-2 top-2"
+                        >
+                          {story.aiThemes[0]}
+                        </Badge>
+                      </div>
+                      <CardHeader>
+                        <CardTitle className="text-lg font-bold">
+                          {story.title}
+                        </CardTitle>
+                        <CardDescription className="line-clamp-2">
+                          {story.summary}
+                        </CardDescription>
+                      </CardHeader>
+                      <CardFooter>
+                        <Button
+                          variant="secondary"
+                          size="sm"
+                          asChild
+                          className="w-full"
+                        >
+                          <Link href={`/story/${story.id}`}>
+                            {dict.readComic}
+                          </Link>
+                        </Button>
+                      </CardFooter>
+                    </Card>
+                  </MotionWrapper>
+                ))}
+              </div>
             </MotionWrapper>
-
           </main>
 
           <aside className="col-span-1 space-y-8">
@@ -257,9 +285,12 @@ export default function InteractiveLearningHub() {
                   {leaderboardData.map((item, index) => (
                     <div
                       key={item.name}
-                      className={`flex items-center gap-4 rounded-lg p-2 ${
-                        index === 0 ? 'bg-yellow-100/50 dark:bg-yellow-900/20' : ''
-                      }`}
+                      className={cn(
+                        'flex items-center gap-4 rounded-lg p-2',
+                        index === 0
+                          ? 'bg-yellow-100/50 dark:bg-yellow-900/20'
+                          : ''
+                      )}
                     >
                       <Avatar className="h-8 w-8 text-xs">
                         <AvatarFallback
@@ -311,8 +342,8 @@ export default function InteractiveLearningHub() {
           </aside>
         </div>
       </MotionWrapper>
-      
-      <MotionWrapper as="section" className="container mx-auto px-4 rounded-2xl">
+
+      <MotionWrapper as="section" className="container mx-auto rounded-2xl px-4">
         <div className="mb-12 text-center">
           <h2 className="flex items-center justify-center gap-3 font-headline text-3xl font-bold md:text-4xl">
             <ClipboardList className="h-8 w-8 text-primary" />
@@ -367,7 +398,3 @@ export default function InteractiveLearningHub() {
     </div>
   );
 }
-
-    
-
-    

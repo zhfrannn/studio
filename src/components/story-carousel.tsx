@@ -1,7 +1,7 @@
 
 'use client';
 
-import { useCallback } from 'react';
+import { useCallback, useMemo } from 'react';
 import type { EmblaOptionsType } from 'embla-carousel-react';
 import useEmblaCarousel from 'embla-carousel-react';
 import type { Story } from '@/lib/types';
@@ -12,6 +12,7 @@ import { Badge } from '@/components/ui/badge';
 import { useLanguage } from '@/context/language-context';
 import { Button } from '@/components/ui/button';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useStories } from '@/context/story-context';
 
 const CAROUSEL_OPTIONS: EmblaOptionsType = { loop: true };
 
@@ -49,14 +50,22 @@ const HeroStoryCard = ({ story }: { story: Story }) => {
 };
 
 export default function StoryCarousel({ stories }: { stories: Story[] }) {
-    const highlightedStories = stories.filter(s => [
-        'smong-selamat-dari-lautan',
-        'dapur-umum-perdamaian',
-        'hutan-bakau-penjaga-pantai',
-        'perempuan-penganyam-harapan',
-        'kopi-gayo-aroma-perdamaian',
-        'arsitektur-rumah-panggung',
-      ].includes(s.id));
+  const highlightedStoryIds = useMemo(
+    () => [
+      'smong-selamat-dari-lautan',
+      'dapur-umum-perdamaian',
+      'hutan-bakau-penjaga-pantai',
+      'perempuan-penganyam-harapan',
+      'kopi-gayo-aroma-perdamaian',
+      'arsitektur-rumah-panggung',
+    ],
+    []
+  );
+
+  const highlightedStories = useMemo(
+    () => stories.filter(s => highlightedStoryIds.includes(s.id)),
+    [stories, highlightedStoryIds]
+  );
 
   const [emblaRef, emblaApi] = useEmblaCarousel(CAROUSEL_OPTIONS);
 
@@ -67,7 +76,7 @@ export default function StoryCarousel({ stories }: { stories: Story[] }) {
   const scrollNext = useCallback(() => {
     if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
-  
+
   if (highlightedStories.length === 0) {
     return null;
   }
@@ -75,7 +84,7 @@ export default function StoryCarousel({ stories }: { stories: Story[] }) {
   return (
     <div className="relative mx-auto w-full max-w-7xl">
       <div className="overflow-hidden" ref={emblaRef}>
-        <div className="flex -ml-4">
+        <div className="-ml-4 flex">
           {highlightedStories.map(story => (
             <div
               className="basis-full flex-grow-0 flex-shrink-0 pl-4 md:basis-1/2 lg:basis-1/3"
@@ -92,7 +101,7 @@ export default function StoryCarousel({ stories }: { stories: Story[] }) {
         onClick={scrollPrev}
         variant="outline"
         size="icon"
-        className="absolute top-1/2 -left-4 z-10 h-12 w-12 -translate-y-1/2 rounded-full hidden sm:flex"
+        className="absolute -left-4 top-1/2 z-10 hidden h-12 w-12 -translate-y-1/2 rounded-full sm:flex"
       >
         <ChevronLeft />
       </Button>
@@ -100,12 +109,10 @@ export default function StoryCarousel({ stories }: { stories: Story[] }) {
         onClick={scrollNext}
         variant="outline"
         size="icon"
-        className="absolute top-1/2 -right-4 z-10 h-12 w-12 -translate-y-1/2 rounded-full hidden sm:flex"
+        className="absolute -right-4 top-1/2 z-10 hidden h-12 w-12 -translate-y-1/2 rounded-full sm:flex"
       >
         <ChevronRight />
       </Button>
     </div>
   );
-};
-
-    
+}

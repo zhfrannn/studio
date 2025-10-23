@@ -37,9 +37,11 @@ export default function StoryPreviewCard({ story }: StoryPreviewCardProps) {
       </div>
       <CardHeader className="p-6">
         <div className="flex flex-wrap gap-2 mb-2">
-            {story.aiThemes.map(theme => (
-                <Badge key={theme} variant="outline">{theme}</Badge>
-            ))}
+          {story.aiThemes.map(theme => (
+            <Badge key={theme} variant="outline">
+              {theme}
+            </Badge>
+          ))}
         </div>
         <CardTitle className="font-headline text-2xl font-bold leading-tight">
           {story.title}
@@ -52,12 +54,14 @@ export default function StoryPreviewCard({ story }: StoryPreviewCardProps) {
         <p className="line-clamp-4 text-muted-foreground">{story.summary}</p>
       </CardContent>
       <div className="p-6 pt-0">
-        <Button asChild className="w-full">
+        <Button asChild className="w-full" disabled>
           <Link href={`/story/${story.id}`}>
             <BookOpen className="mr-2 h-4 w-4" /> Read Full Story (Preview)
           </Link>
         </Button>
-        <p className="text-xs text-center mt-2 text-muted-foreground">Note: This is a preview. The story is not saved to the database yet.</p>
+        <p className="text-xs text-center mt-2 text-muted-foreground">
+          Publish the story to make it publicly available.
+        </p>
       </div>
     </Card>
   );
