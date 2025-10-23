@@ -20,44 +20,44 @@ const GenerateMiniGameInputSchema = z.object({
 
 const GameOptionSchema = z.object({
   id: z.enum(['A', 'B', 'C']),
-  text: z.string(),
-  result: z.enum(['correct', 'wrong', 'neutral']),
-  feedback: z.string(),
-  score: z.number().int(),
+  text: z.string().describe('The text for the choice button, describing the action.'),
+  result: z.enum(['correct', 'wrong', 'neutral']).describe('The outcome category of this choice.'),
+  feedback: z.string().describe('A clear, impactful feedback message for the player after making this choice.'),
+  score: z.number().int().describe('The score change. Positive for correct, negative for wrong, zero for neutral.'),
 });
 
 const GameLevelSchema = z.object({
-  level_id: z.string(),
-  scene_text: z.string(),
-  timer_seconds: z.number().int().min(5).max(15),
-  background_image_hint: z.string(),
-  sound_effect: z.string(),
-  options: z.tuple([GameOptionSchema, GameOptionSchema, GameOptionSchema]),
+  level_id: z.string().describe("A unique ID for the level (e.g., 'level_1', 'level_2')."),
+  scene_text: z.string().describe('The narrative text describing the situation the player is in.'),
+  timer_seconds: z.number().int().min(5).max(15).describe('The time in seconds the player has to choose, between 5 and 15.'),
+  background_image_hint: z.string().describe("A 2-4 word hint for an AI image generator (e.g., 'school hallway flood')."),
+  sound_effect: z.string().describe("A relevant sound effect hint (e.g., 'rain_heavy.mp3')."),
+  options: z.tuple([GameOptionSchema, GameOptionSchema, GameOptionSchema]).describe('An array of exactly THREE choices for the player.'),
   next_level_map: z.object({
-    correct: z.string(),
-    wrong: z.string(),
-    neutral: z.string(),
+    correct: z.string().describe("The ID of the next level if the 'correct' option is chosen. 'end' for the last level."),
+    wrong: z.string().describe("The ID of the next level if the 'wrong' option is chosen. 'end' for the last level."),
+    neutral: z.string().describe("The ID of the next level if the 'neutral' option is chosen. 'end' for the last level."),
   }),
 });
 
 const GenerateMiniGameOutputSchema = z.object({
-  scenario_id: z.string(),
-  title: z.string(),
-  description: z.string(),
+  scenario_id: z.string().describe('A unique ID for the game scenario, based on the topic.'),
+  title: z.string().describe('A catchy title for the mini-game.'),
+  description: z.string().describe("A short, engaging description for the game's intro screen."),
   levels: z
     .array(GameLevelSchema)
     .min(3)
     .max(4)
     .describe('An array of 3 to 4 game levels.'),
-  starting_level_id: z.string(),
+  starting_level_id: z.string().describe('The ID of the first level in the game.'),
   ending_messages: z.object({
-    high: z.string(),
-    medium: z.string(),
-    low: z.string(),
+    high: z.string().describe('A concluding message for a high score.'),
+    medium: z.string().describe('A concluding message for a medium score.'),
+    low: z.string().describe('A concluding message for a low score.'),
   }),
   score_thresholds: z.object({
-    high: z.number().int(),
-    medium: z.number().int(),
+    high: z.number().int().describe('The score threshold to get the "high" ending message.'),
+    medium: z.number().int().describe('The score threshold to get the "medium" ending message.'),
   }),
 });
 
