@@ -27,6 +27,7 @@ import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Separator } from '@/components/ui/separator';
 import { useLanguage } from '@/context/language-context';
+import SchoolPartnerDirectory from '@/components/school-partner-directory';
 
 const StatCard = ({
   value,
@@ -77,7 +78,7 @@ export default function WaveOfSchoolPage() {
               </Link>
             </Button>
             <Button size="lg" className="shiny-button" asChild>
-              <Link href="#ai-hub">
+              <Link href="/eduboard">
                 <BrainCircuit className="mr-2" /> {dict.tryAIGenerator}
               </Link>
             </Button>
@@ -176,8 +177,10 @@ export default function WaveOfSchoolPage() {
             </MotionWrapper>
           </div>
           <div className="mt-12 text-center">
-            <Button size="lg" variant="outline">
-              {dict.demoButton}
+            <Button size="lg" variant="outline" asChild>
+              <Link href="/eduboard">
+                {dict.demoButton}
+              </Link>
             </Button>
           </div>
         </div>
@@ -233,8 +236,10 @@ export default function WaveOfSchoolPage() {
           </div>
 
           <div className="mt-12 text-center">
-            <Button size="lg">
-              {dict.browseModules} <ArrowRight className="ml-2" />
+            <Button size="lg" asChild>
+              <Link href="/interactive">
+                {dict.browseModules} <ArrowRight className="ml-2" />
+              </Link>
             </Button>
           </div>
         </div>
@@ -324,7 +329,11 @@ export default function WaveOfSchoolPage() {
               ))}
             </ul>
             <div className="mt-8">
-              <Button size="lg">{dict.startCreatingButton}</Button>
+              <Button size="lg" asChild>
+                <Link href="/profile">
+                  {dict.startCreatingButton}
+                </Link>
+              </Button>
             </div>
           </MotionWrapper>
         </div>
@@ -396,7 +405,22 @@ export default function WaveOfSchoolPage() {
         </div>
       </section>
 
-      {/* 9. Join the Movement */}
+      {/* 9. Our Partners Section (NEW) */}
+      <section className="py-20 md:py-28 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto mb-16 max-w-2xl text-center">
+            <h2 className="font-headline text-3xl font-bold md:text-4xl">
+              Our Partners in Resilience
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              We are proud to collaborate with schools, NGOs, and communities dedicated to building a better future for Aceh.
+            </p>
+          </div>
+          <SchoolPartnerDirectory />
+        </div>
+      </section>
+
+      {/* 10. Join the Movement */}
       <section className="bg-muted/50 py-20 md:py-28">
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-headline text-3xl font-bold md:text-4xl">
@@ -412,8 +436,10 @@ export default function WaveOfSchoolPage() {
               <p className="mt-2 text-sm text-muted-foreground">
                 {dict.joinForTeachersDesc}
               </p>
-              <Button variant="outline" className="mt-6">
-                {dict.startCreatingButton}
+              <Button variant="outline" className="mt-6" asChild>
+                <Link href="/profile">
+                  {dict.startCreatingButton}
+                </Link>
               </Button>
             </Card>
             <Card className="p-8 text-center ring-2 ring-primary">
@@ -453,5 +479,3 @@ export default function WaveOfSchoolPage() {
     </div>
   );
 }
-
-    
