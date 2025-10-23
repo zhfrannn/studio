@@ -1,7 +1,7 @@
+
 'use server';
 
-import { ai } from '@/ai/genkit'; 
-import { googleAI } from '@genkit-ai/google-genai'; // Impor googleAI untuk menentukan model
+import { ai } from '@/ai/genkit';
 import { z } from 'zod';
 
 const GenerateSlidesInputSchema = z.object({
@@ -54,10 +54,8 @@ const generateSlidesFlow = ai.defineFlow(
     outputSchema: GenerateSlidesOutputSchema,
   },
   async (input) => {
-    // Secara eksplisit menentukan model 'pro' di sini, sesuai instruksi.
-    const { output } = await slidesPrompt(input, {
-      model: googleAI.model('gemini-1.5-pro')
-    }); 
+    // ✅ GA USAH specify model - otomatis pake default dari genkit.ts
+    const { output } = await slidesPrompt(input);
     return output!;
   }
 );

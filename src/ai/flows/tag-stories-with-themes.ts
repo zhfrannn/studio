@@ -1,7 +1,7 @@
+
 'use server';
 
 import {ai} from '@/ai/genkit';
-import { googleAI } from '@genkit-ai/google-genai'; // Impor googleAI untuk menentukan model
 import {z} from 'zod';
 
 const TagStoriesWithThemesInputSchema = z.object({
@@ -47,10 +47,8 @@ const tagStoriesWithThemesFlow = ai.defineFlow(
     outputSchema: TagStoriesWithThemesOutputSchema,
   },
   async input => {
-    // Secara eksplisit menentukan model 'pro' di sini, sesuai instruksi.
-    const {output} = await tagStoriesWithThemesPrompt(input, {
-      model: googleAI.model('gemini-1.5-pro')
-    });
+    // ✅ GA USAH specify model - otomatis pake default
+    const {output} = await tagStoriesWithThemesPrompt(input);
     return output!;
   }
 );

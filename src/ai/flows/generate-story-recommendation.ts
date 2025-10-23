@@ -1,7 +1,7 @@
+
 'use server';
 
-import { ai } from '@/ai/genkit'; 
-import { googleAI } from '@genkit-ai/google-genai'; // Impor googleAI untuk menentukan model
+import { ai } from '@/ai/genkit';
 import { getTranslatedStories } from '@/lib/data';
 import { z } from 'zod';
 import {
@@ -63,10 +63,8 @@ const recommendationFlow = ai.defineFlow(
     outputSchema: GenerateStoryRecommendationOutputSchema,
   },
   async (input) => {
-    // Secara eksplisit menentukan model 'pro' di sini, sesuai instruksi.
-    const { output } = await recommendationPrompt(input, {
-      model: googleAI.model('gemini-1.5-pro')
-    });
+    // ✅ GA USAH specify model - otomatis pake default
+    const { output } = await recommendationPrompt(input);
     return output!;
   }
 );
