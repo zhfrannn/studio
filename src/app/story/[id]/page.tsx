@@ -31,6 +31,7 @@ import DigitalComic from '@/components/digital-comic';
 import RelatedStoryCarousel from '@/components/related-story-carousel';
 import { Story } from '@/lib/types';
 import { useStories } from '@/context/story-context';
+import { getTranslatedStories } from '@/lib/data';
 
 function StoryDetailClient({ storyId }: { storyId: string }) {
   const { language, dictionary } = useLanguage();
