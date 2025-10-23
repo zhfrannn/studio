@@ -166,7 +166,15 @@ export default function PrintableContent() {
       const result: GenerateInfographicOutput = await generateInfographic({
         topic,
       });
-      setGeneratedContent(result);
+      // Set default values here if they are missing from the AI response
+      const finalContent: PrintableContentData = {
+        ...result,
+        id: result.id || 'ai-printable-01',
+        layout: 'printable-a4',
+        themeColor: result.themeColor || 'oklch(55% 0.15 240)',
+        qrCodeUrl: result.qrCodeUrl || 'https://waveofvoice.com',
+      };
+      setGeneratedContent(finalContent);
     } catch (error) {
       console.error('Infographic generation failed:', error);
       // Optionally set an error state here to show in the UI

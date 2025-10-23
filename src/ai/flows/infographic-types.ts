@@ -13,8 +13,8 @@ export type GenerateInfographicInput = z.infer<
 
 // This schema mirrors the PrintableContentData interface.
 export const GenerateInfographicOutputSchema = z.object({
-  id: z.string().default('ai-printable-01'),
-  layout: z.literal('printable-a4').default('printable-a4'),
+  id: z.string().describe('A unique ID for the printable content, e.g., "ai-printable-01".'),
+  layout: z.string().describe('The layout type, which should be "printable-a4".'),
   mainTitle: z
     .string()
     .describe('A catchy, main headline for the infographic. Max 5 words.'),
@@ -31,7 +31,6 @@ export const GenerateInfographicOutputSchema = z.object({
     ),
   themeColor: z
     .string()
-    .default('oklch(55% 0.15 240)')
     .describe(
       'An OKLCH color value that fits the theme. Example: oklch(55% 0.15 240) for blue.'
     ),
@@ -73,7 +72,7 @@ export const GenerateInfographicOutputSchema = z.object({
       .string()
       .describe('The author or source of the quote, e.g., "Local Wisdom".'),
   }),
-  qrCodeUrl: z.string().default('https://waveofvoice.com'),
+  qrCodeUrl: z.string().describe('A URL to be encoded in the QR code, e.g., "https://waveofvoice.com".'),
 });
 export type GenerateInfographicOutput = z.infer<
   typeof GenerateInfographicOutputSchema
