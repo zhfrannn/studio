@@ -25,6 +25,7 @@ import SlideCarousel from '@/components/slide-carousel';
 import { type Slide, type QuizCardData } from '@/lib/eduboard-templates';
 import { generateQuiz, type GenerateQuizOutput } from '@/ai/flows/generate-quiz';
 import QuizCarousel from '@/components/quiz-carousel';
+import PrintableContent from '@/components/printable-content';
 
 
 // 1. UPDATE EDITOR MODES
@@ -128,7 +129,7 @@ const PresentationGenerator = () => {
 };
 
 
-// 3. NEW: QUIZ GENERATOR
+// 3. QUIZ GENERATOR
 const QuizGenerator = () => {
     const [storyText, setStoryText] = useState('');
     const [isLoading, setIsLoading] = useState(false);
@@ -220,7 +221,7 @@ const QuizGenerator = () => {
   };
 
 
-// 4. UPDATE ONBOARDING SCREEN
+// 4. ONBOARDING SCREEN
 const OnboardingScreen = ({ setMode }: { setMode: (mode: EditorMode) => void; }) => {
   const { dictionary } = useLanguage();
   const dict = dictionary.eduboard;
@@ -235,7 +236,7 @@ const OnboardingScreen = ({ setMode }: { setMode: (mode: EditorMode) => void; })
         <h1 className="font-headline text-4xl font-bold md:text-5xl">{dict.editorTitle}</h1>
         <p className="mx-auto mt-2 max-w-2xl text-muted-foreground">{dict.editorDescription}</p>
       </div>
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
         
         <div className="cursor-pointer rounded-xl border-2 bg-card p-8 text-center transition-all hover:border-primary hover:shadow-2xl" onClick={() => setMode('presentation')}>
           <Presentation className="mx-auto mb-4 h-16 w-16 text-primary" />
@@ -247,6 +248,12 @@ const OnboardingScreen = ({ setMode }: { setMode: (mode: EditorMode) => void; })
             <Puzzle className="mx-auto mb-4 h-16 w-16 text-primary" />
             <h2 className="font-headline text-2xl font-bold">AI Quiz</h2>
             <p className="mt-2 text-muted-foreground">Generate an interactive quiz from your story.</p>
+        </div>
+
+        <div className="cursor-pointer rounded-xl border-2 bg-card p-8 text-center transition-all hover:border-primary hover:shadow-2xl" onClick={() => setMode('printable')}>
+            <Printer className="mx-auto mb-4 h-16 w-16 text-primary" />
+            <h2 className="font-headline text-2xl font-bold">AI Printable</h2>
+            <p className="mt-2 text-muted-foreground">Generate a print-ready A4 infographic from a topic.</p>
         </div>
         
         <div className="cursor-pointer rounded-xl border-2 bg-card p-8 text-center transition-all hover:border-primary hover:shadow-2xl" onClick={() => alert('This is a placeholder for the AI Media Generator.')}>
@@ -261,7 +268,7 @@ const OnboardingScreen = ({ setMode }: { setMode: (mode: EditorMode) => void; })
 };
 
 
-// 5. UPDATE MAIN EDUBOARD PAGE
+// 5. MAIN EDUBOARD PAGE
 export default function EduBoardPage() {
   const [mode, setMode] = useState<EditorMode>('selection');
   const { dictionary } = useLanguage();
@@ -273,6 +280,8 @@ export default function EduBoardPage() {
             return <PresentationGenerator />;
         case 'quiz':
             return <QuizGenerator />;
+        case 'printable':
+            return <PrintableContent />;
         case 'storyboard':
         default:
             return (
