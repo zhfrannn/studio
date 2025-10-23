@@ -191,7 +191,7 @@ function StoryDetailClient({ storyId }: { storyId: string }) {
 
 // This is the main page component, which can remain a server component for initial data fetching.
 export default function StoryDetailPage({ params }: { params: { id: string } }) {
-  const { stories } = getTranslatedStories({ lang: 'en' }); // Fetch initial list for validation
+  const stories = getTranslatedStories({ lang: 'en' }); // Fetch initial list for validation
   const storyExists = stories.some(s => s.id === params.id);
 
   if (!storyExists) {
