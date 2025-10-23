@@ -7,6 +7,11 @@ import {
   Puzzle,
   Printer,
   Gamepad2,
+  Film,
+  Camera,
+  Users,
+  MicVocal,
+  Lightbulb,
 } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -16,6 +21,16 @@ import QuizGenerator from '@/components/eduboard/quiz-generator';
 import PrintableContent from '@/components/printable-content';
 import { Button } from '@/components/ui/button';
 import MiniGameGenerator from '@/components/minigame/minigame-generator';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from '@/components/ui/alert-dialog';
+import { Badge } from '@/components/ui/badge';
 
 type EditorMode =
   | 'selection'
@@ -26,17 +41,48 @@ type EditorMode =
 
 const OnboardingScreen = ({
   setMode,
+  setShowComingSoon,
 }: {
   setMode: (mode: EditorMode) => void;
+  setShowComingSoon: (show: boolean) => void;
 }) => {
   const { dictionary } = useLanguage();
   const dict = dictionary.eduboard;
+
+  const futureFeatures = [
+    {
+      icon: <Film className="mx-auto mb-4 h-16 w-16 text-muted-foreground" />,
+      title: 'AI Storyboard Generator',
+      description: 'Turn any story into a vertical video storyboard.',
+    },
+    {
+      icon: <Camera className="mx-auto mb-4 h-16 w-16 text-muted-foreground" />,
+      title: 'AR Learning Modules',
+      description: 'Bring learning to life with augmented reality.',
+    },
+    {
+      icon: <Users className="mx-auto mb-4 h-16 w-16 text-muted-foreground" />,
+      title: 'Community Challenges',
+      description: 'Create and participate in collaborative learning challenges.',
+    },
+    {
+      icon: <MicVocal className="mx-auto mb-4 h-16 w-16 text-muted-foreground" />,
+      title: 'AI Voiceover Tool',
+      description: 'Generate automatic voiceovers for your presentations.',
+    },
+    {
+      icon: <Lightbulb className="mx-auto mb-4 h-16 w-16 text-muted_foreground" />,
+      title: 'Live Workshop Hub',
+      description: 'Host and join live, interactive educational workshops.',
+    },
+  ];
+
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.95 }}
-      className="w-full max-w-5xl text-center"
+      className="w-full max-w-7xl text-center"
     >
       <div className="mb-12">
         <h1 className="font-headline text-4xl font-bold md:text-5xl">
@@ -46,7 +92,8 @@ const OnboardingScreen = ({
           {dict.editorDescription}
         </p>
       </div>
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+        {/* Existing Features */}
         <div
           className="cursor-pointer rounded-xl border-2 bg-card p-8 text-center transition-all hover:border-primary hover:shadow-2xl"
           onClick={() => setMode('presentation')}
@@ -84,20 +131,41 @@ const OnboardingScreen = ({
           </p>
         </div>
 
-        <div className="col-span-1 md:col-span-2 lg:col-span-3">
-          <div
-            className="cursor-pointer rounded-xl border-2 bg-card p-8 text-center transition-all hover:border-primary hover:shadow-2xl"
-            onClick={() => setMode('minigame')}
-          >
-            <Gamepad2 className="mx-auto mb-4 h-16 w-16 text-primary" />
-            <h2 className="font-headline text-2xl font-bold">
-              {dict.minigameTitle}
-            </h2>
-            <p className="mt-2 text-muted-foreground">
-              {dict.minigameDescription}
-            </p>
-          </div>
+        <div
+          className="cursor-pointer rounded-xl border-2 bg-card p-8 text-center transition-all hover:border-primary hover:shadow-2xl"
+          onClick={() => setMode('minigame')}
+        >
+          <Gamepad2 className="mx-auto mb-4 h-16 w-16 text-primary" />
+          <h2 className="font-headline text-2xl font-bold">
+            {dict.minigameTitle}
+          </h2>
+          <p className="mt-2 text-muted-foreground">
+            {dict.minigameDescription}
+          </p>
         </div>
+
+        {/* Dummy "Coming Soon" Features */}
+        {futureFeatures.map((feature, index) => (
+          <div
+            key={index}
+            className="group relative cursor-pointer rounded-xl border-2 border-dashed bg-card/50 p-8 text-center transition-all hover:border-dashed hover:border-primary/50 hover:bg-card/80"
+            onClick={() => setShowComingSoon(true)}
+          >
+            <div className="opacity-50 transition-opacity group-hover:opacity-100">
+              {feature.icon}
+              <h2 className="font-headline text-2xl font-bold text-muted-foreground group-hover:text-primary">
+                {feature.title}
+              </h2>
+              <p className="mt-2 text-muted-foreground">{feature.description}</p>
+            </div>
+            <Badge
+              variant="secondary"
+              className="absolute right-3 top-3 -rotate-12"
+            >
+              Coming Soon
+            </Badge>
+          </div>
+        ))}
       </div>
     </motion.div>
   );
@@ -105,6 +173,7 @@ const OnboardingScreen = ({
 
 export default function EduBoardPage() {
   const [mode, setMode] = useState<EditorMode>('selection');
+  const [showComingSoon, setShowComingSoon] = useState(false);
   const { dictionary } = useLanguage();
   const dict = dictionary.eduboard;
 
@@ -143,7 +212,11 @@ export default function EduBoardPage() {
       <div className="flex min-h-[calc(70vh)] flex-col items-center justify-center">
         <AnimatePresence mode="wait">
           {mode === 'selection' && (
-            <OnboardingScreen key="selection" setMode={setMode} />
+            <OnboardingScreen
+              key="selection"
+              setMode={setMode}
+              setShowComingSoon={setShowComingSoon}
+            />
           )}
 
           {mode !== 'selection' && (
@@ -168,6 +241,23 @@ export default function EduBoardPage() {
           )}
         </AnimatePresence>
       </div>
+      <AlertDialog open={showComingSoon} onOpenChange={setShowComingSoon}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Feature in Development</AlertDialogTitle>
+            <AlertDialogDescription>
+              This feature is currently under active development. We are
+              working hard to bring it to you soon. Thank you for your support
+              as we continue to improve Wave of Voice!
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogAction onClick={() => setShowComingSoon(false)}>
+              Got it!
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 }
