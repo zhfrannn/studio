@@ -92,7 +92,7 @@ export default function StoryCarousel({ stories }: { stories: Story[] }) {
         onClick={scrollPrev}
         variant="outline"
         size="icon"
-        className="absolute top-1/2 -left-4 z-10 h-12 w-12 -translate-y-1/2 rounded-full flex sm:-left-6"
+        className="absolute top-1/2 -left-4 z-10 h-12 w-12 -translate-y-1/2 rounded-full hidden sm:flex"
       >
         <ChevronLeft />
       </Button>
@@ -100,10 +100,12 @@ export default function StoryCarousel({ stories }: { stories: Story[] }) {
         onClick={scrollNext}
         variant="outline"
         size="icon"
-        className="absolute top-1/2 -right-4 z-10 h-12 w-12 -translate-y-1/2 rounded-full flex sm:-right-6"
+        className="absolute top-1/2 -right-4 z-10 h-12 w-12 -translate-y-1/2 rounded-full hidden sm:flex"
       >
         <ChevronRight />
       </Button>
     </div>
   );
 };
+
+    

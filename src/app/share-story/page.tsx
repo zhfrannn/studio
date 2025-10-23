@@ -26,7 +26,7 @@ import {
 import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { MessageSquareText, Sparkles, Loader2 } from 'lucide-react';
+import { MessageSquareText, Sparkles, Loader2, Bot, Send, User } from 'lucide-react';
 import { getTranslatedStories } from '@/lib/data';
 import MotionWrapper from '@/components/motion-wrapper';
 import { useLanguage } from '@/context/language-context';
@@ -34,6 +34,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { generateFullStory } from '@/ai/flows/generate-full-story';
 import type { Story } from '@/lib/types';
 import StoryPreviewCard from '@/components/story-preview-card';
+import { ScrollArea } from '@/components/ui/scroll-area';
+import { cn } from '@/lib/utils';
+import { generateStoryRecommendation } from '@/ai/flows/generate-story-recommendation';
+import type { GenerateStoryRecommendationOutput } from '@/ai/flows/story-recommendation-types';
+
 
 // Manual submission form component
 function ManualStoryForm() {
@@ -317,6 +322,106 @@ function AiStoryGenerator() {
   );
 }
 
+type AiHelperMessage = {
+  role: 'user' | 'bot';
+  text: string;
+  recommendedStory?: GenerateStoryRecommendationOutput['recommendedStory'];
+};
+
+// AI Helper Chatbot component
+function AiHelper() {
+  const { dictionary, language } = useLanguage();
+  const helperDict = dictionary.home.shareStory.aiHelper;
+
+  const [messages, setMessages] = useState<AiHelperMessage[]>([
+    { role: 'bot', text: helperDict.initialMessage },
+  ]);
+  const [input, setInput] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const scrollAreaRef = React.useRef<HTMLDivElement>(null);
+
+  const handleSend = async () => {
+    if (input.trim() === '' || isLoading) return;
+
+    const userMessage: AiHelperMessage = { role: 'user', text: input };
+    setMessages(prev => [...prev, userMessage]);
+    setInput('');
+    setIsLoading(true);
+
+    try {
+      const result = await generateStoryRecommendation({ query: input, language });
+      const botMessage: AiHelperMessage = {
+        role: 'bot',
+        text: result.response,
+        recommendedStory: result.recommendedStory,
+      };
+      setMessages(prev => [...prev, botMessage]);
+    } catch (error) {
+      const errorMessage: AiHelperMessage = {
+        role: 'bot',
+        text: helperDict.errorMessage,
+      };
+      setMessages(prev => [...prev, errorMessage]);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+  
+  React.useEffect(() => {
+    if (scrollAreaRef.current) {
+        const viewport = scrollAreaRef.current.querySelector('div');
+        if (viewport) {
+            viewport.scrollTop = viewport.scrollHeight;
+        }
+    }
+  }, [messages]);
+
+  return (
+    <Card className="h-full flex flex-col">
+      <CardHeader className="flex-row items-center gap-3 space-y-0">
+        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+          <Bot className="h-6 w-6" />
+        </div>
+        <div>
+          <CardTitle className="text-lg">{helperDict.title}</CardTitle>
+          <CardDescription>{helperDict.description}</CardDescription>
+        </div>
+      </CardHeader>
+      <CardContent className="flex-grow overflow-hidden">
+        <ScrollArea className="h-[400px] pr-4" ref={scrollAreaRef}>
+          <div className="space-y-4">
+            {messages.map((message, index) => (
+              <div key={index} className={cn('flex items-end gap-2', message.role === 'user' ? 'flex-row-reverse' : 'flex-row')}>
+                <div className={cn('p-3 rounded-lg max-w-[85%]', message.role === 'user' ? 'bg-primary text-primary-foreground' : 'bg-muted')}>
+                  <p className="text-sm">{message.text}</p>
+                   {message.recommendedStory && (
+                      <Button asChild variant="secondary" size="sm" className="mt-2">
+                        <a href={`/story/${message.recommendedStory.id}`} target="_blank" rel="noopener noreferrer">
+                          {helperDict.readStory}: {message.recommendedStory.title}
+                        </a>
+                      </Button>
+                    )}
+                </div>
+              </div>
+            ))}
+            {isLoading && (
+              <div className="flex items-end gap-2">
+                <div className="p-3 rounded-lg bg-muted"><Loader2 className="h-5 w-5 animate-spin" /></div>
+              </div>
+            )}
+          </div>
+        </ScrollArea>
+      </CardContent>
+      <div className="border-t p-4">
+        <form onSubmit={e => { e.preventDefault(); handleSend(); }} className="flex w-full items-center gap-2">
+          <Input value={input} onChange={e => setInput(e.target.value)} placeholder={helperDict.placeholder} disabled={isLoading} />
+          <Button type="submit" size="icon" disabled={isLoading || !input.trim()}><Send className="h-4 w-4" /></Button>
+        </form>
+      </div>
+    </Card>
+  );
+}
+
 
 // Main page component
 export default function ShareStoryPage() {
@@ -336,21 +441,28 @@ export default function ShareStoryPage() {
         </div>
       </MotionWrapper>
 
-      <div className="mx-auto max-w-4xl">
-        <Tabs defaultValue="manual" className="w-full">
-            <TabsList className="grid w-full grid-cols-2">
-                <TabsTrigger value="manual">Submit Manually</TabsTrigger>
-                <TabsTrigger value="ai">Generate with AI ✨</TabsTrigger>
-            </TabsList>
-            <TabsContent value="manual" className="mt-6">
-                <ManualStoryForm />
-            </TabsContent>
-            <TabsContent value="ai" className="mt-6">
-                <AiStoryGenerator />
-            </TabsContent>
-        </Tabs>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+        <div className="lg:col-span-2">
+            <Tabs defaultValue="manual" className="w-full">
+                <TabsList className="grid w-full grid-cols-2">
+                    <TabsTrigger value="manual">Submit Manually</TabsTrigger>
+                    <TabsTrigger value="ai">Generate with AI ✨</TabsTrigger>
+                </TabsList>
+                <TabsContent value="manual" className="mt-6">
+                    <ManualStoryForm />
+                </TabsContent>
+                <TabsContent value="ai" className="mt-6">
+                    <AiStoryGenerator />
+                </TabsContent>
+            </Tabs>
+        </div>
+        <div className="hidden lg:block sticky top-24">
+            <AiHelper />
+        </div>
       </div>
 
     </div>
   );
 }
+
+    

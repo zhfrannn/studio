@@ -310,7 +310,7 @@ export default function Home() {
 
       <MotionWrapper
         as="section"
-        className="container mx-auto space-y-12 px-4 rounded-2xl"
+        className="container mx-auto px-4 rounded-2xl"
       >
         <div className="mx-auto max-w-2xl space-y-2 text-center">
           <SplitText
@@ -552,3 +552,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
