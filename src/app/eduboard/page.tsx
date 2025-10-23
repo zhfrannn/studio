@@ -17,17 +17,13 @@ import PrintableContent from '@/components/printable-content';
 import { Button } from '@/components/ui/button';
 import MiniGameGenerator from '@/components/minigame/minigame-generator';
 
-// 1. UPDATE EDITOR MODES
 type EditorMode =
   | 'selection'
   | 'presentation'
   | 'quiz'
-  | 'storyboard'
   | 'printable'
   | 'minigame';
 
-
-// 4. ONBOARDING SCREEN
 const OnboardingScreen = ({
   setMode,
 }: {
@@ -107,7 +103,6 @@ const OnboardingScreen = ({
   );
 };
 
-// 5. MAIN EDUBOARD PAGE
 export default function EduBoardPage() {
   const [mode, setMode] = useState<EditorMode>('selection');
   const { dictionary } = useLanguage();
@@ -123,7 +118,6 @@ export default function EduBoardPage() {
         return <PrintableContent />;
       case 'minigame':
         return <MiniGameGenerator />;
-      case 'storyboard':
       default:
         return (
           <div className="py-12 text-center text-muted-foreground">

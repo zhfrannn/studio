@@ -1,4 +1,3 @@
-
 'use server';
 /**
  * @fileOverview An AI flow to generate a complete mini-game scenario.
@@ -32,7 +31,7 @@ const GameLevelSchema = z.object({
   timer_seconds: z.number().int().min(5).max(15).describe('The time in seconds the player has to choose, between 5 and 15.'),
   background_image_hint: z.string().describe("A 2-4 word hint for an AI image generator (e.g., 'school hallway flood')."),
   sound_effect: z.string().describe("A relevant sound effect hint (e.g., 'rain_heavy.mp3')."),
-  options: z.tuple([GameOptionSchema, GameOptionSchema, GameOptionSchema]).describe('An array of exactly THREE choices for the player.'),
+  options: z.array(GameOptionSchema).describe('An array of exactly THREE choices for the player.'),
   next_level_map: z.object({
     correct: z.string().describe("The ID of the next level if the 'correct' option is chosen. 'end' for the last level."),
     wrong: z.string().describe("The ID of the next level if the 'wrong' option is chosen. 'end' for the last level."),
@@ -90,7 +89,7 @@ const miniGamePrompt = ai.definePrompt({
         - **timer_seconds**: Set a timer between 8 and 12 seconds.
         - **background_image_hint**: A 2-4 word hint for an AI image generator (e.g., 'school hallway flood').
         - **sound_effect**: A relevant sound effect hint (e.g., 'rain_heavy.mp3').
-        - **options**: Create exactly THREE choices (A, B, C) using a tuple structure. One should be 'correct', one 'wrong', and one 'neutral'.
+        - **options**: Create an array of exactly THREE choices (A, B, C). One should be 'correct', one 'wrong', and one 'neutral'.
           - For each option, provide clear 'text', a 'result', impactful 'feedback', and a 'score' (positive for correct, negative for wrong, zero for neutral).
         - **next_level_map**: Define the branching logic. Map 'correct', 'wrong', and 'neutral' results to the next level's ID. The final level should map to 'end'.
     - **ending_messages**: Write three distinct outcomes (high, medium, low score).
