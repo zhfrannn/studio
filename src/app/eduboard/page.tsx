@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState } from 'react';
@@ -15,6 +16,7 @@ import {
   Video,
   MessageSquare,
   Music,
+  HeartHandshake,
 } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -224,6 +226,33 @@ export default function EduBoardPage() {
           {dict.description}
         </p>
       </div>
+
+       <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+        viewport={{ once: true, amount: 0.1 }}
+        className="mb-16"
+      >
+        <div className="rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 p-8 text-white shadow-2xl">
+           <div className="flex flex-col items-center justify-center gap-4 text-center">
+             <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/20">
+                <HeartHandshake className="h-8 w-8" />
+            </div>
+            <div>
+              <h2 className="font-headline text-2xl font-bold md:text-3xl">
+                Free Forever for Schools, NGOs, & Communities
+              </h2>
+              <p className="mt-2 max-w-2xl opacity-90">
+                We are committed to empowering change. Our platform and its
+                tools are freely accessible for all educational and
+                non-profit organizations dedicated to building a better, more
+                resilient future.
+              </p>
+            </div>
+          </div>
+        </div>
+      </motion.div>
 
       <Separator className="my-16" />
 
