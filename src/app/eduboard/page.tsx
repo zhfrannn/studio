@@ -12,6 +12,9 @@ import {
   Users,
   MicVocal,
   Lightbulb,
+  Video,
+  MessageSquare,
+  Music,
 } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -50,6 +53,21 @@ const OnboardingScreen = ({
   const dict = dictionary.eduboard;
 
   const futureFeatures = [
+    {
+      icon: <Video className="mx-auto mb-4 h-16 w-16 text-muted-foreground" />,
+      title: 'AI Video Scene Generator',
+      description: 'Turn a single sentence into a cinematic video clip.',
+    },
+     {
+      icon: <MessageSquare className="mx-auto mb-4 h-16 w-16 text-muted-foreground" />,
+      title: 'Interactive Dialogue Simulator',
+      description: 'Practice conversations with AI characters from a story.',
+    },
+     {
+      icon: <Music className="mx-auto mb-4 h-16 w-16 text-muted-foreground" />,
+      title: 'AI Music & Soundscape Creator',
+      description: 'Generate background music and sound effects for your story.',
+    },
     {
       icon: <Film className="mx-auto mb-4 h-16 w-16 text-muted-foreground" />,
       title: 'AI Storyboard Generator',
