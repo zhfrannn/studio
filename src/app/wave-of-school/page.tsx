@@ -19,6 +19,7 @@ import {
   UploadCloud,
   Users,
   Video,
+  HeartHandshake,
 } from 'lucide-react';
 import Link from 'next/link';
 import MotionWrapper from '@/components/motion-wrapper';
@@ -86,10 +87,32 @@ export default function WaveOfSchoolPage() {
         </MotionWrapper>
       </section>
 
+      {/* NEW Marketing Banner */}
+       <MotionWrapper
+        as="section"
+        className="container relative z-20 mx-auto -mt-16 px-4"
+      >
+        <div className="rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 p-8 text-white shadow-2xl">
+           <div className="flex flex-col items-center justify-center gap-4 text-center">
+             <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/20">
+                <HeartHandshake className="h-8 w-8" />
+            </div>
+            <div>
+              <h2 className="font-headline text-2xl font-bold md:text-3xl">
+                 Bring Game-Changing AI Tools to Your School
+              </h2>
+              <p className="mt-2 max-w-3xl opacity-90">
+                Empower your educators with interactive, culturally relevant, and forever-free learning tools. Transform local stories into unforgettable classroom experiences with the power of AI.
+              </p>
+            </div>
+          </div>
+        </div>
+      </MotionWrapper>
+
       {/* 2. The Vision Section */}
       <MotionWrapper
         as="section"
-        className="py-20 text-center md:py-28"
+        className="py-20 pt-28 text-center md:py-28"
       >
         <div className="container mx-auto px-4">
           <h2 className="font-headline text-3xl font-bold md:text-4xl">
