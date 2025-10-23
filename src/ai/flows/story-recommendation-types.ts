@@ -10,7 +10,7 @@ export type Story = z.infer<typeof StorySchema>;
 // Input schema for the main flow
 export const GenerateStoryRecommendationInputSchema = z.object({
   query: z.string().describe("The user's question or message to the bot."),
-  language: z.enum(['id', 'en']).describe('The language for the response.'),
+  language: z.enum(['id', 'en', 'ace']).describe('The language for the response.'),
 });
 export type GenerateStoryRecommendationInput = z.infer<
   typeof GenerateStoryRecommendationInputSchema

@@ -9,7 +9,7 @@
  */
 
 import {ai} from '@/ai/genkit';
-import {z} from 'genkit';
+import {z} from 'zod';
 
 const TagStoriesWithThemesInputSchema = z.object({
   storyText: z
@@ -41,11 +41,10 @@ const tagStoriesWithThemesPrompt = ai.definePrompt({
   output: {schema: TagStoriesWithThemesOutputSchema},
   prompt: `You are an AI assistant tasked with identifying key themes in user-submitted stories related to disaster preparedness, local wisdom, and peacebuilding in Aceh.
 
-  Based on the story text provided, generate a list of relevant themes. These themes should be concise and reflect the main topics discussed in the story.
+  Based on the story text provided, generate a list of relevant themes from the following allowed themes only: 'Disaster Preparedness', 'Local Wisdom', 'Peacebuilding'.
 
   Story Text: {{{storyText}}}
-
-  Themes:`, // Added a descriptive prompt to guide the model
+  `,
 });
 
 const tagStoriesWithThemesFlow = ai.defineFlow(
