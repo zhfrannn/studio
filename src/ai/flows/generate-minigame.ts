@@ -90,7 +90,7 @@ const miniGamePrompt = ai.definePrompt({
         - **timer_seconds**: Set a timer between 8 and 12 seconds.
         - **background_image_hint**: A 2-4 word hint for an AI image generator (e.g., 'school hallway flood').
         - **sound_effect**: A relevant sound effect hint (e.g., 'rain_heavy.mp3').
-        - **options**: Create exactly THREE choices (A, B, C). One should be 'correct', one 'wrong', and one 'neutral'.
+        - **options**: Create exactly THREE choices (A, B, C) using a tuple structure. One should be 'correct', one 'wrong', and one 'neutral'.
           - For each option, provide clear 'text', a 'result', impactful 'feedback', and a 'score' (positive for correct, negative for wrong, zero for neutral).
         - **next_level_map**: Define the branching logic. Map 'correct', 'wrong', and 'neutral' results to the next level's ID. The final level should map to 'end'.
     - **ending_messages**: Write three distinct outcomes (high, medium, low score).
