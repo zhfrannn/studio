@@ -52,6 +52,16 @@ import { cn } from '@/lib/utils';
 import { generateStoryRecommendation } from '@/ai/flows/generate-story-recommendation';
 import type { GenerateStoryRecommendationOutput } from '@/ai/flows/story-recommendation-types';
 import { useStories } from '@/context/story-context';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from '@/components/ui/alert-dialog';
+
 
 // Manual submission form component
 function ManualStoryForm() {
@@ -277,8 +287,7 @@ function ManualStoryForm() {
 function AiStoryGenerator() {
   const [isLoading, setIsLoading] = useState(false);
   const [generatedStory, setGeneratedStory] = useState<Story | null>(null);
-  const [isPublished, setIsPublished] = useState(false);
-  const { addStory } = useStories();
+  const [showConfirmation, setShowConfirmation] = useState(false);
 
   const formSchema = z.object({
     topic: z
@@ -298,7 +307,6 @@ function AiStoryGenerator() {
   async function onFormSubmit(data: FormValues) {
     setIsLoading(true);
     setGeneratedStory(null);
-    setIsPublished(false);
     try {
       const result = await generateFullStory(data);
       setGeneratedStory(result);
@@ -312,8 +320,7 @@ function AiStoryGenerator() {
 
   const handlePublish = () => {
     if (generatedStory) {
-      addStory(generatedStory);
-      setIsPublished(true);
+      setShowConfirmation(true);
     }
   };
 
@@ -330,6 +337,7 @@ function AiStoryGenerator() {
   };
 
   return (
+    <>
     <div className="space-y-8">
       <Card>
         <CardHeader>
@@ -466,26 +474,36 @@ function AiStoryGenerator() {
           <div className="mt-4 grid grid-cols-1 gap-2 md:grid-cols-2">
             <Button
               onClick={handlePublish}
-              disabled={isPublished}
               size="lg"
               variant="default"
             >
               <Upload className="mr-2 h-4 w-4" />
-              {isPublished ? 'Published!' : 'Publish Story'}
+              Publish Story
             </Button>
             <Button onClick={handleDownload} size="lg" variant="outline">
               <Download className="mr-2 h-4 w-4" />
               Download as .txt
             </Button>
           </div>
-          {isPublished && (
-            <p className="mt-2 text-center text-sm text-green-600">
-              Story successfully published! Check it out on the Explore page.
-            </p>
-          )}
         </MotionWrapper>
       )}
     </div>
+     <AlertDialog open={showConfirmation} onOpenChange={setShowConfirmation}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Thank You for Your Contribution!</AlertDialogTitle>
+            <AlertDialogDescription>
+              Your story has been submitted. Our team will review and validate it shortly before publishing. We appreciate you helping us build Aceh's collective memory.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogAction onClick={() => setShowConfirmation(false)}>
+              Great!
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
+    </>
   );
 }
 
