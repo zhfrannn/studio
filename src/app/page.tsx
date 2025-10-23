@@ -45,7 +45,7 @@ import { useLanguage } from '@/context/language-context';
 import type { Story } from '@/lib/types';
 import StoryCarousel from '@/components/story-carousel';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -79,7 +79,7 @@ import { useStories } from '@/context/story-context';
 
 // Manual submission form component
 function ManualStoryForm() {
-  const { dictionary, language } = useLanguage();
+  const { dictionary } = useLanguage();
   const shareStoryDict = dictionary.home.shareStory;
 
   const { stories } = useStories();
@@ -90,7 +90,7 @@ function ManualStoryForm() {
   const storyTypes = [
     { id: 'Disaster Preparedness', label: shareStoryDict.storyTypes.disaster },
     { id: 'Peacebuilding', label: shareStoryDict.storyTypes.peace },
-    { id: 'Local Wisdom', label: shareStoryDict.story-types.wisdom },
+    { id: 'Local Wisdom', label: shareStoryDict.storyTypes.wisdom },
   ];
 
   const formSchema = z.object({

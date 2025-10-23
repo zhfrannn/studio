@@ -7,6 +7,7 @@ import {
   useState,
   ReactNode,
   useCallback,
+  useEffect,
   useMemo,
 } from 'react';
 import { getTranslatedStories } from '@/lib/data';
@@ -22,11 +23,9 @@ const StoryContext = createContext<StoryContextType | undefined>(undefined);
 
 export function StoryProvider({ children }: { children: ReactNode }) {
   const { language } = useLanguage();
-  const initialStories = useMemo(
-    () => getTranslatedStories({ lang: language }),
-    [language]
-  );
-  const [stories, setStories] = useState<Story[]>(initialStories);
+  
+  // Initialize state with stories for the current language
+  const [stories, setStories] = useState<Story[]>(() => getTranslatedStories({ lang: language }));
 
   const addStory = useCallback((newStory: Story) => {
     // Prevent adding duplicates
@@ -34,18 +33,19 @@ export function StoryProvider({ children }: { children: ReactNode }) {
       if (prevStories.some(story => story.id === newStory.id)) {
         return prevStories;
       }
+      // Add the new story to the beginning of the array
       return [newStory, ...prevStories];
     });
   }, []);
 
-  // When language changes, we need to re-translate all stories
-  useState(() => {
+  // Effect to re-fetch and set stories when the language changes
+  useEffect(() => {
     setStories(getTranslatedStories({ lang: language }));
-  });
+  }, [language]);
 
   const value = useMemo(
     () => ({ stories, addStory }),
-    [stories, addStory, language]
+    [stories, addStory]
   );
 
   return (
