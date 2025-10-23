@@ -2,18 +2,16 @@
 import { genkit } from 'genkit';
 import { googleAI } from '@genkit-ai/google-genai';
 
-// Konfigurasi Genkit yang BENAR sesuai dokumentasi.
+// Konfigurasi Genkit tanpa model default, untuk fleksibilitas maksimal.
 export const ai = genkit({
   plugins: [
     googleAI({
       // Menggunakan API key yang kamu berikan.
       apiKey: 'AIzaSyAdXAiIHPCJQOB1aOesZVzjHCRqb4eUO6w',
-      apiVersion: 'v1beta',
     }),
   ],
-  // MENETAPKAN MODEL DEFAULT SECARA RESMI.
-  // Ini adalah kunci untuk menyelesaikan semua error.
-  model: googleAI.model('gemini-1.5-pro-latest'), 
+  // TIDAK ADA model default yang disetel di sini.
+  // Model akan ditentukan di setiap flow secara individual.
   logLevel: 'debug',
   enableTracingAndMetrics: true,
 });

@@ -1,6 +1,7 @@
 'use server';
 
-import { ai } from '@/ai/genkit'; // <-- Cukup impor 'ai'
+import { ai } from '@/ai/genkit';
+import { googleAI } from '@genkit-ai/google-genai'; // Impor googleAI untuk menentukan model
 import { z } from 'genkit';
 
 const GenerateStoryMediaInputSchema = z.object({
@@ -35,8 +36,10 @@ const generateStoryMediaFlow = ai.defineFlow(
     outputSchema: GenerateStoryMediaOutputSchema,
   },
   async input => {
-    // Tidak perlu lagi parameter { model: ... } karena sudah diatur secara global
-    // const { output } = await generateStoryMediaPrompt(input);
+    // Meskipun ini placeholder, model tetap didefinisikan untuk konsistensi.
+    // const { output } = await generateStoryMediaPrompt(input, {
+    //   model: googleAI.model('gemini-1.5-pro')
+    // }); 
     // return output!;
     
     console.log(`Placeholder: Media generation requested for story: ${input.storyText.substring(0, 50)}...`);
