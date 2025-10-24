@@ -32,7 +32,7 @@ import RelatedStoryCarousel from '@/components/related-story-carousel';
 import { Story } from '@/lib/types';
 import { useStories } from '@/context/story-context';
 import { getTranslatedStories } from '@/lib/data';
-import React from 'react';
+import React, { use } from 'react';
 
 function StoryDetailClient({ storyId }: { storyId: string }) {
   const { language, dictionary } = useLanguage();
@@ -191,8 +191,8 @@ function StoryDetailClient({ storyId }: { storyId: string }) {
 }
 
 // This is the main page component, which can remain a server component for initial data fetching.
-export default function StoryDetailPage({ params }: { params: { id: string } }) {
-  const storyId = params.id;
+export default async function StoryDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id: storyId } = await params;
   const stories = getTranslatedStories({ lang: 'en' }); // Fetch initial list for validation
   const storyExists = stories.some(s => s.id === storyId);
 
