@@ -35,7 +35,7 @@ const findRelevantStoryTool = ai.defineTool(
         story.title.toLowerCase().includes(query.toLowerCase()) ||
         story.summary.toLowerCase().includes(query.toLowerCase())
     );
-    return foundStory ? { id: foundStory.id, title: foundStory.title, summary: foundStory.summary } : null;
+    return foundStory ? { id: foundStory.id, title: foundStory.title, summary: foundStory.summary } : undefined;
   }
 );
 
