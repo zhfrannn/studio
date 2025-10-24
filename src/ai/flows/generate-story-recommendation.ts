@@ -21,11 +21,7 @@ const findRelevantStoryTool = ai.defineTool(
       query: z.string(),
       language: z.enum(['id', 'en', 'ace']),
     }),
-    outputSchema: z.object({
-      id: z.string(),
-      title: z.string(),
-      summary: z.string(),
-    }).optional(),
+    outputSchema: z.any(),
   },
   async ({ query, language }) => {
     console.log(`Tool: Searching for stories with query: "${query}" in ${language}`);
@@ -49,9 +45,9 @@ const recommendationPrompt = ai.definePrompt({
 
   1. First, understand the user's query: "{{{query}}}".
   2. If the query seems to be about a specific topic (like 'smong', 'kopi', 'bakau', 'tsunami', 'gempa', 'banjir', 'likuifaksi'), use the 'findRelevantStory' tool to search for a story about that topic.
-  3. Based on the user's query and any story you find, provide a direct, helpful answer in the 'response' field.
-  4. If you used the tool and it returned a relevant story, you MUST include its details in the 'recommendedStory' field of your response.
-  5. If the tool returns no result, or if the query is a general greeting (like 'halo', 'terima kasih', 'hi', 'thanks'), you MUST NOT include the 'recommendedStory' field. Just provide a friendly 'response'.`,
+  3. Based on the user's query and the tool's result, provide a helpful 'response'.
+  4. If the 'findRelevantStory' tool returns a story object, you MUST include its details in the 'recommendedStory' field of your JSON response.
+  5. If the 'findRelevantStory' tool returns no result (undefined), you MUST NOT include the 'recommendedStory' field in your JSON output. Just provide a friendly 'response'.`,
   tools: [findRelevantStoryTool]
 });
 
